@@ -1,14 +1,14 @@
 {
-  "name": "@jsonhero/ts-node-package-template",
+  "name": "@apihero/openapi-spec-generator",
   "version": "0.0.1",
   "description": "A template for creating a new TypeScript package",
-  "homepage": "https://github.com/jsonhero-io/ts-node-package-template",
+  "homepage": "https://github.com/jsonhero-io/apihero-openapi-generator",
   "bugs": {
-    "url": "https://github.com/jsonhero-io/ts-node-package-template/issues"
+    "url": "https://github.com/jsonhero-io/apihero-openapi-generator/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jsonhero-io/ts-node-package-template.git"
+    "url": "https://github.com/jsonhero-io/apihero-openapi-generator.git"
   },
   "exports": "./lib/index.js",
   "types": "lib/index.d.ts",
@@ -43,6 +43,7 @@
     "@rollup/plugin-node-resolve": "^13.1.2",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.7",
+    "@types/node-fetch": "2.6.x",
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
     "eslint": "^8.5.0",
@@ -50,10 +51,12 @@
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.3.1",
     "jest-coverage-badges": "^1.1.2",
-    "prettier": "^2.5.1",
+    "node-fetch": "2.6.x",
+    "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.62.0",
     "rollup-plugin-typescript2": "^0.31.1",
+    "tiny-invariant": "^1.2.0",
     "ts-jest": "^27.0.7",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
@@ -65,11 +68,19 @@
       "json-summary",
       "text",
       "lcov"
-    ]
+    ],
+    "moduleNameMapper": {
+      "^~/(.*)$": "<rootDir>/src/$1"
+    }
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run prettier-format && npm run lint"
     }
+  },
+  "dependencies": {
+    "change-case": "^4.1.2",
+    "json-schema-ref-parser": "git://github.com/APIDevTools/json-schema-ref-parser.git",
+    "openapi-types": "^12.0.0"
   }
 }
