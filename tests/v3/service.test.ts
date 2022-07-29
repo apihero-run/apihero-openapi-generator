@@ -18,6 +18,7 @@ test("getService with GitHub repos service", async () => {
 
   expect(service).toMatchInlineSnapshot(`
     Object {
+      "description": undefined,
       "imports": Array [
         "MinimalRepository",
         "Repository",
@@ -169,11 +170,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Lists repositories for the specified organization.",
           "errors": Array [],
+          "id": "repos/list-for-org",
           "imports": Array [
             "MinimalRepository",
           ],
           "method": "GET",
-          "name": "reposListForOrg",
+          "name": "listForOrg",
           "parameters": Array [
             Object {
               "base": "string",
@@ -839,11 +841,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/create-in-org",
           "imports": Array [
             "Repository",
           ],
           "method": "POST",
-          "name": "reposCreateInOrg",
+          "name": "createInOrg",
           "parameters": Array [
             Object {
               "base": "string",
@@ -960,9 +963,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -1676,9 +1679,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -2398,11 +2401,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get",
           "imports": Array [
             "FullRepository",
           ],
           "method": "GET",
-          "name": "reposGet",
+          "name": "getRepos",
           "parameters": Array [
             Object {
               "base": "string",
@@ -2603,9 +2607,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/delete",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDelete",
+          "name": "deleteRepos",
           "parameters": Array [
             Object {
               "base": "string",
@@ -2805,11 +2810,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/update",
           "imports": Array [
             "FullRepository",
           ],
           "method": "PATCH",
-          "name": "reposUpdate",
+          "name": "update",
           "parameters": Array [
             Object {
               "base": "string",
@@ -2962,9 +2968,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -3907,9 +3913,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -4883,11 +4889,12 @@ test("getService with GitHub repos service", async () => {
 
     Information about autolinks are only available to repository administrators.",
           "errors": Array [],
+          "id": "repos/list-autolinks",
           "imports": Array [
             "Autolink",
           ],
           "method": "GET",
-          "name": "reposListAutolinks",
+          "name": "listAutolinks",
           "parameters": Array [
             Object {
               "base": "string",
@@ -5164,11 +5171,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/create-autolink",
           "imports": Array [
             "Autolink",
           ],
           "method": "POST",
-          "name": "reposCreateAutolink",
+          "name": "createAutolink",
           "parameters": Array [
             Object {
               "base": "string",
@@ -5269,9 +5277,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -5370,9 +5378,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -5559,11 +5567,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-autolink",
           "imports": Array [
             "Autolink",
           ],
           "method": "GET",
-          "name": "reposGetAutolink",
+          "name": "getAutolink",
           "parameters": Array [
             Object {
               "base": "string",
@@ -5827,9 +5836,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/delete-autolink",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDeleteAutolink",
+          "name": "deleteAutolink",
           "parameters": Array [
             Object {
               "base": "string",
@@ -6084,9 +6094,10 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Enables automated security fixes for a repository. The authenticated user must have admin access to the repository. For more information, see \\"[Configuring automated security fixes](https://docs.github.com/en/articles/configuring-automated-security-fixes)\\".",
           "errors": Array [],
+          "id": "repos/enable-automated-security-fixes",
           "imports": Array [],
           "method": "PUT",
-          "name": "reposEnableAutomatedSecurityFixes",
+          "name": "enableAutomatedSecurityFixes",
           "parameters": Array [
             Object {
               "base": "string",
@@ -6269,9 +6280,10 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Disables automated security fixes for a repository. The authenticated user must have admin access to the repository. For more information, see \\"[Configuring automated security fixes](https://docs.github.com/en/articles/configuring-automated-security-fixes)\\".",
           "errors": Array [],
+          "id": "repos/disable-automated-security-fixes",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDisableAutomatedSecurityFixes",
+          "name": "disableAutomatedSecurityFixes",
           "parameters": Array [
             Object {
               "base": "string",
@@ -6459,11 +6471,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/list-branches",
           "imports": Array [
             "ShortBranch",
           ],
           "method": "GET",
-          "name": "reposListBranches",
+          "name": "listBranches",
           "parameters": Array [
             Object {
               "base": "string",
@@ -6888,11 +6901,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-branch",
           "imports": Array [
             "BranchWithProtection",
           ],
           "method": "GET",
-          "name": "reposGetBranch",
+          "name": "getBranch",
           "parameters": Array [
             Object {
               "base": "string",
@@ -7154,11 +7168,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-branch-protection",
           "imports": Array [
             "BranchProtection",
           ],
           "method": "GET",
-          "name": "reposGetBranchProtection",
+          "name": "getBranchProtection",
           "parameters": Array [
             Object {
               "base": "string",
@@ -7434,11 +7449,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/update-branch-protection",
           "imports": Array [
             "ProtectedBranch",
           ],
           "method": "PUT",
-          "name": "reposUpdateBranchProtection",
+          "name": "updateBranchProtection",
           "parameters": Array [
             Object {
               "base": "string",
@@ -7575,9 +7591,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "any",
@@ -8866,9 +8882,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "any",
@@ -10279,9 +10295,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Forbidden",
             },
           ],
+          "id": "repos/delete-branch-protection",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDeleteBranchProtection",
+          "name": "deleteBranchProtection",
           "parameters": Array [
             Object {
               "base": "string",
@@ -10536,11 +10553,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.",
           "errors": Array [],
+          "id": "repos/get-admin-branch-protection",
           "imports": Array [
             "ProtectedBranchAdminEnforced",
           ],
           "method": "GET",
-          "name": "reposGetAdminBranchProtection",
+          "name": "getAdminBranchProtection",
           "parameters": Array [
             Object {
               "base": "string",
@@ -10799,11 +10817,12 @@ test("getService with GitHub repos service", async () => {
 
     Adding admin enforcement requires admin or owner permissions to the repository and branch protection to be enabled.",
           "errors": Array [],
+          "id": "repos/set-admin-branch-protection",
           "imports": Array [
             "ProtectedBranchAdminEnforced",
           ],
           "method": "POST",
-          "name": "reposSetAdminBranchProtection",
+          "name": "setAdminBranchProtection",
           "parameters": Array [
             Object {
               "base": "string",
@@ -11067,9 +11086,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/delete-admin-branch-protection",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDeleteAdminBranchProtection",
+          "name": "deleteAdminBranchProtection",
           "parameters": Array [
             Object {
               "base": "string",
@@ -11324,11 +11344,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.",
           "errors": Array [],
+          "id": "repos/get-pull-request-review-protection",
           "imports": Array [
             "ProtectedBranchPullRequestReview",
           ],
           "method": "GET",
-          "name": "reposGetPullRequestReviewProtection",
+          "name": "getPullRequestReviewProtection",
           "parameters": Array [
             Object {
               "base": "string",
@@ -11590,9 +11611,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/delete-pull-request-review-protection",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDeletePullRequestReviewProtection",
+          "name": "deletePullRequestReviewProtection",
           "parameters": Array [
             Object {
               "base": "string",
@@ -11856,11 +11878,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/update-pull-request-review-protection",
           "imports": Array [
             "ProtectedBranchPullRequestReview",
           ],
           "method": "PATCH",
-          "name": "reposUpdatePullRequestReviewProtection",
+          "name": "updatePullRequestReviewProtection",
           "parameters": Array [
             Object {
               "base": "string",
@@ -11997,9 +12020,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "any",
@@ -12580,9 +12603,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "any",
@@ -13289,11 +13312,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-commit-signature-protection",
           "imports": Array [
             "ProtectedBranchAdminEnforced",
           ],
           "method": "GET",
-          "name": "reposGetCommitSignatureProtection",
+          "name": "getCommitSignatureProtection",
           "parameters": Array [
             Object {
               "base": "string",
@@ -13557,11 +13581,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/create-commit-signature-protection",
           "imports": Array [
             "ProtectedBranchAdminEnforced",
           ],
           "method": "POST",
-          "name": "reposCreateCommitSignatureProtection",
+          "name": "createCommitSignatureProtection",
           "parameters": Array [
             Object {
               "base": "string",
@@ -13825,9 +13850,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/delete-commit-signature-protection",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDeleteCommitSignatureProtection",
+          "name": "deleteCommitSignatureProtection",
           "parameters": Array [
             Object {
               "base": "string",
@@ -14087,11 +14113,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-status-checks-protection",
           "imports": Array [
             "StatusCheckPolicy",
           ],
           "method": "GET",
-          "name": "reposGetStatusChecksProtection",
+          "name": "getStatusChecksProtection",
           "parameters": Array [
             Object {
               "base": "string",
@@ -14348,9 +14375,10 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.",
           "errors": Array [],
+          "id": "repos/remove-status-check-protection",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposRemoveStatusCheckProtection",
+          "name": "removeStatusCheckProtection",
           "parameters": Array [
             Object {
               "base": "string",
@@ -14616,11 +14644,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/update-status-check-protection",
           "imports": Array [
             "StatusCheckPolicy",
           ],
           "method": "PATCH",
-          "name": "reposUpdateStatusCheckProtection",
+          "name": "updateStatusCheckProtection",
           "parameters": Array [
             Object {
               "base": "string",
@@ -14757,9 +14786,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "boolean",
@@ -15019,9 +15048,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "boolean",
@@ -15403,9 +15432,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-all-status-check-contexts",
           "imports": Array [],
           "method": "GET",
-          "name": "reposGetAllStatusCheckContexts",
+          "name": "getAllStatusCheckContexts",
           "parameters": Array [
             Object {
               "base": "string",
@@ -15719,9 +15749,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/add-status-check-contexts",
           "imports": Array [],
           "method": "POST",
-          "name": "reposAddStatusCheckContexts",
+          "name": "addStatusCheckContexts",
           "parameters": Array [
             Object {
               "base": "string",
@@ -15858,9 +15889,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "any",
@@ -16056,9 +16087,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "any",
@@ -16424,9 +16455,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/set-status-check-contexts",
           "imports": Array [],
           "method": "PUT",
-          "name": "reposSetStatusCheckContexts",
+          "name": "setStatusCheckContexts",
           "parameters": Array [
             Object {
               "base": "string",
@@ -16563,9 +16595,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "any",
@@ -16761,9 +16793,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "any",
@@ -17129,9 +17161,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/remove-status-check-contexts",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposRemoveStatusCheckContexts",
+          "name": "removeStatusCheckContexts",
           "parameters": Array [
             Object {
               "base": "string",
@@ -17268,9 +17301,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "any",
@@ -17466,9 +17499,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "any",
@@ -17834,11 +17867,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-access-restrictions",
           "imports": Array [
             "BranchRestrictionPolicy",
           ],
           "method": "GET",
-          "name": "reposGetAccessRestrictions",
+          "name": "getAccessRestrictions",
           "parameters": Array [
             Object {
               "base": "string",
@@ -18097,9 +18131,10 @@ test("getService with GitHub repos service", async () => {
 
     Disables the ability to restrict who can push to this branch.",
           "errors": Array [],
+          "id": "repos/delete-access-restrictions",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDeleteAccessRestrictions",
+          "name": "deleteAccessRestrictions",
           "parameters": Array [
             Object {
               "base": "string",
@@ -18361,11 +18396,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-apps-with-access-to-protected-branch",
           "imports": Array [
             "Integration",
           ],
           "method": "GET",
-          "name": "reposGetAppsWithAccessToProtectedBranch",
+          "name": "getAppsWithAccessToProtectedBranch",
           "parameters": Array [
             Object {
               "base": "string",
@@ -18647,11 +18683,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/add-app-access-restrictions",
           "imports": Array [
             "Integration",
           ],
           "method": "POST",
-          "name": "reposAddAppAccessRestrictions",
+          "name": "addAppAccessRestrictions",
           "parameters": Array [
             Object {
               "base": "string",
@@ -18788,9 +18825,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "any",
@@ -18986,9 +19023,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "any",
@@ -19326,11 +19363,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/set-app-access-restrictions",
           "imports": Array [
             "Integration",
           ],
           "method": "PUT",
-          "name": "reposSetAppAccessRestrictions",
+          "name": "setAppAccessRestrictions",
           "parameters": Array [
             Object {
               "base": "string",
@@ -19467,9 +19505,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "any",
@@ -19665,9 +19703,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "any",
@@ -20005,11 +20043,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/remove-app-access-restrictions",
           "imports": Array [
             "Integration",
           ],
           "method": "DELETE",
-          "name": "reposRemoveAppAccessRestrictions",
+          "name": "removeAppAccessRestrictions",
           "parameters": Array [
             Object {
               "base": "string",
@@ -20146,9 +20185,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "any",
@@ -20344,9 +20383,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "any",
@@ -20680,11 +20719,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-teams-with-access-to-protected-branch",
           "imports": Array [
             "Team",
           ],
           "method": "GET",
-          "name": "reposGetTeamsWithAccessToProtectedBranch",
+          "name": "getTeamsWithAccessToProtectedBranch",
           "parameters": Array [
             Object {
               "base": "string",
@@ -20966,11 +21006,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/add-team-access-restrictions",
           "imports": Array [
             "Team",
           ],
           "method": "POST",
-          "name": "reposAddTeamAccessRestrictions",
+          "name": "addTeamAccessRestrictions",
           "parameters": Array [
             Object {
               "base": "string",
@@ -21107,9 +21148,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "any",
@@ -21305,9 +21346,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "any",
@@ -21645,11 +21686,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/set-team-access-restrictions",
           "imports": Array [
             "Team",
           ],
           "method": "PUT",
-          "name": "reposSetTeamAccessRestrictions",
+          "name": "setTeamAccessRestrictions",
           "parameters": Array [
             Object {
               "base": "string",
@@ -21786,9 +21828,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "any",
@@ -21984,9 +22026,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "any",
@@ -22324,11 +22366,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/remove-team-access-restrictions",
           "imports": Array [
             "Team",
           ],
           "method": "DELETE",
-          "name": "reposRemoveTeamAccessRestrictions",
+          "name": "removeTeamAccessRestrictions",
           "parameters": Array [
             Object {
               "base": "string",
@@ -22465,9 +22508,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "any",
@@ -22663,9 +22706,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "any",
@@ -22999,11 +23042,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-users-with-access-to-protected-branch",
           "imports": Array [
             "SimpleUser",
           ],
           "method": "GET",
-          "name": "reposGetUsersWithAccessToProtectedBranch",
+          "name": "getUsersWithAccessToProtectedBranch",
           "parameters": Array [
             Object {
               "base": "string",
@@ -23285,11 +23329,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/add-user-access-restrictions",
           "imports": Array [
             "SimpleUser",
           ],
           "method": "POST",
-          "name": "reposAddUserAccessRestrictions",
+          "name": "addUserAccessRestrictions",
           "parameters": Array [
             Object {
               "base": "string",
@@ -23426,9 +23471,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "any",
@@ -23624,9 +23669,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "any",
@@ -23964,11 +24009,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/set-user-access-restrictions",
           "imports": Array [
             "SimpleUser",
           ],
           "method": "PUT",
-          "name": "reposSetUserAccessRestrictions",
+          "name": "setUserAccessRestrictions",
           "parameters": Array [
             Object {
               "base": "string",
@@ -24105,9 +24151,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "any",
@@ -24303,9 +24349,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "any",
@@ -24643,11 +24689,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/remove-user-access-restrictions",
           "imports": Array [
             "SimpleUser",
           ],
           "method": "DELETE",
-          "name": "reposRemoveUserAccessRestrictions",
+          "name": "removeUserAccessRestrictions",
           "parameters": Array [
             Object {
               "base": "string",
@@ -24784,9 +24831,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "any",
@@ -24982,9 +25029,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "any",
@@ -25338,11 +25385,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/rename-branch",
           "imports": Array [
             "BranchWithProtection",
           ],
           "method": "POST",
-          "name": "reposRenameBranch",
+          "name": "renameBranch",
           "parameters": Array [
             Object {
               "base": "string",
@@ -25479,9 +25527,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -25548,9 +25596,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -25743,11 +25791,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/codeowners-errors",
           "imports": Array [
             "CodeownersErrors",
           ],
           "method": "GET",
-          "name": "reposCodeownersErrors",
+          "name": "codeownersErrors",
           "parameters": Array [
             Object {
               "base": "string",
@@ -26017,11 +26066,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/list-collaborators",
           "imports": Array [
             "Collaborator",
           ],
           "method": "GET",
-          "name": "reposListCollaborators",
+          "name": "listCollaborators",
           "parameters": Array [
             Object {
               "base": "string",
@@ -26486,9 +26536,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Not Found if user is not a collaborator",
             },
           ],
+          "id": "repos/check-collaborator",
           "imports": Array [],
           "method": "GET",
-          "name": "reposCheckCollaborator",
+          "name": "checkCollaborator",
           "parameters": Array [
             Object {
               "base": "string",
@@ -26772,11 +26823,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/add-collaborator",
           "imports": Array [
             "RepositoryInvitation",
           ],
           "method": "PUT",
-          "name": "reposAddCollaborator",
+          "name": "addCollaborator",
           "parameters": Array [
             Object {
               "base": "string",
@@ -26977,9 +27029,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -27141,9 +27193,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -27358,9 +27410,10 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "id": "repos/remove-collaborator",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposRemoveCollaborator",
+          "name": "removeCollaborator",
           "parameters": Array [
             Object {
               "base": "string",
@@ -27620,11 +27673,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-collaborator-permission-level",
           "imports": Array [
             "RepositoryCollaboratorPermission",
           ],
           "method": "GET",
-          "name": "reposGetCollaboratorPermissionLevel",
+          "name": "getCollaboratorPermissionLevel",
           "parameters": Array [
             Object {
               "base": "string",
@@ -27883,11 +27937,12 @@ test("getService with GitHub repos service", async () => {
 
     Comments are ordered by ascending ID.",
           "errors": Array [],
+          "id": "repos/list-commit-comments-for-repo",
           "imports": Array [
             "CommitComment",
           ],
           "method": "GET",
-          "name": "reposListCommitCommentsForRepo",
+          "name": "listCommitCommentsForRepo",
           "parameters": Array [
             Object {
               "base": "string",
@@ -28236,11 +28291,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-commit-comment",
           "imports": Array [
             "CommitComment",
           ],
           "method": "GET",
-          "name": "reposGetCommitComment",
+          "name": "getCommitComment",
           "parameters": Array [
             Object {
               "base": "string",
@@ -28502,9 +28558,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/delete-commit-comment",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDeleteCommitComment",
+          "name": "deleteCommitComment",
           "parameters": Array [
             Object {
               "base": "string",
@@ -28764,11 +28821,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/update-commit-comment",
           "imports": Array [
             "CommitComment",
           ],
           "method": "PATCH",
-          "name": "reposUpdateCommitComment",
+          "name": "updateCommitComment",
           "parameters": Array [
             Object {
               "base": "string",
@@ -28905,9 +28963,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -28974,9 +29032,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -29204,11 +29262,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Internal Error",
             },
           ],
+          "id": "repos/list-commits",
           "imports": Array [
             "Commit",
           ],
           "method": "GET",
-          "name": "reposListCommits",
+          "name": "listCommits",
           "parameters": Array [
             Object {
               "base": "string",
@@ -29919,11 +29978,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/list-branches-for-head-commit",
           "imports": Array [
             "BranchShort",
           ],
           "method": "GET",
-          "name": "reposListBranchesForHeadCommit",
+          "name": "listBranchesForHeadCommit",
           "parameters": Array [
             Object {
               "base": "string",
@@ -30194,11 +30254,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Use the \`:commit_sha\` to specify the commit that will have its comments listed.",
           "errors": Array [],
+          "id": "repos/list-comments-for-commit",
           "imports": Array [
             "CommitComment",
           ],
           "method": "GET",
-          "name": "reposListCommentsForCommit",
+          "name": "listCommentsForCommit",
           "parameters": Array [
             Object {
               "base": "string",
@@ -30625,11 +30686,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/create-commit-comment",
           "imports": Array [
             "CommitComment",
           ],
           "method": "POST",
-          "name": "reposCreateCommitComment",
+          "name": "createCommitComment",
           "parameters": Array [
             Object {
               "base": "string",
@@ -30766,9 +30828,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -30931,9 +30993,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -31213,11 +31275,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Lists the merged pull request that introduced the commit to the repository. If the commit is not present in the default branch, additionally returns open pull requests associated with the commit. The results may include open and closed pull requests.",
           "errors": Array [],
+          "id": "repos/list-pull-requests-associated-with-commit",
           "imports": Array [
             "PullRequestSimple",
           ],
           "method": "GET",
-          "name": "reposListPullRequestsAssociatedWithCommit",
+          "name": "listPullRequestsAssociatedWithCommit",
           "parameters": Array [
             Object {
               "base": "string",
@@ -31681,11 +31744,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Internal Error",
             },
           ],
+          "id": "repos/get-commit",
           "imports": Array [
             "Commit",
           ],
           "method": "GET",
-          "name": "reposGetCommit",
+          "name": "getCommit",
           "parameters": Array [
             Object {
               "base": "string",
@@ -32099,11 +32163,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-combined-status-for-ref",
           "imports": Array [
             "CombinedCommitStatus",
           ],
           "method": "GET",
-          "name": "reposGetCombinedStatusForRef",
+          "name": "getCombinedStatusForRef",
           "parameters": Array [
             Object {
               "base": "string",
@@ -32512,11 +32577,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Moved permanently",
             },
           ],
+          "id": "repos/list-commit-statuses-for-ref",
           "imports": Array [
             "Status",
           ],
           "method": "GET",
-          "name": "reposListCommitStatusesForRef",
+          "name": "listCommitStatusesForRef",
           "parameters": Array [
             Object {
               "base": "string",
@@ -32943,11 +33009,12 @@ test("getService with GitHub repos service", async () => {
 
     \`content_reports_enabled\` is only returned for organization-owned repositories.",
           "errors": Array [],
+          "id": "repos/get-community-profile-metrics",
           "imports": Array [
             "CommunityProfile",
           ],
           "method": "GET",
-          "name": "reposGetCommunityProfileMetrics",
+          "name": "getCommunityProfileMetrics",
           "parameters": Array [
             Object {
               "base": "string",
@@ -33180,11 +33247,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Internal Error",
             },
           ],
+          "id": "repos/compare-commits",
           "imports": Array [
             "CommitComparison",
           ],
           "method": "GET",
-          "name": "reposCompareCommits",
+          "name": "compareCommits",
           "parameters": Array [
             Object {
               "base": "string",
@@ -33635,6 +33703,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-content",
           "imports": Array [
             "ContentDirectory",
             "ContentFile",
@@ -33642,7 +33711,7 @@ test("getService with GitHub repos service", async () => {
             "ContentSubmodule",
           ],
           "method": "GET",
-          "name": "reposGetContent",
+          "name": "getContent",
           "parameters": Array [
             Object {
               "base": "string",
@@ -34079,11 +34148,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/create-or-update-file-contents",
           "imports": Array [
             "FileCommit",
           ],
           "method": "PUT",
-          "name": "reposCreateOrUpdateFileContents",
+          "name": "createOrUpdateFileContents",
           "parameters": Array [
             Object {
               "base": "string",
@@ -34220,9 +34290,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -34643,9 +34713,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -35206,11 +35276,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Service unavailable",
             },
           ],
+          "id": "repos/delete-file",
           "imports": Array [
             "FileCommit",
           ],
           "method": "DELETE",
-          "name": "reposDeleteFile",
+          "name": "deleteFile",
           "parameters": Array [
             Object {
               "base": "string",
@@ -35347,9 +35418,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -35674,9 +35745,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -36129,11 +36200,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/list-contributors",
           "imports": Array [
             "Contributor",
           ],
           "method": "GET",
-          "name": "reposListContributors",
+          "name": "listContributors",
           "parameters": Array [
             Object {
               "base": "string",
@@ -36549,11 +36621,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Simple filtering of deployments is available via query parameters:",
           "errors": Array [],
+          "id": "repos/list-deployments",
           "imports": Array [
             "Deployment",
           ],
           "method": "GET",
-          "name": "reposListDeployments",
+          "name": "listDeployments",
           "parameters": Array [
             Object {
               "base": "string",
@@ -37238,11 +37311,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/create-deployment",
           "imports": Array [
             "Deployment",
           ],
           "method": "POST",
-          "name": "reposCreateDeployment",
+          "name": "createDeployment",
           "parameters": Array [
             Object {
               "base": "string",
@@ -37343,9 +37417,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -37734,9 +37808,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -38277,11 +38351,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-deployment",
           "imports": Array [
             "Deployment",
           ],
           "method": "GET",
-          "name": "reposGetDeployment",
+          "name": "getDeployment",
           "parameters": Array [
             Object {
               "base": "string",
@@ -38554,9 +38629,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/delete-deployment",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDeleteDeployment",
+          "name": "deleteDeployment",
           "parameters": Array [
             Object {
               "base": "string",
@@ -38816,11 +38892,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/list-deployment-statuses",
           "imports": Array [
             "DeploymentStatus",
           ],
           "method": "GET",
-          "name": "reposListDeploymentStatuses",
+          "name": "listDeploymentStatuses",
           "parameters": Array [
             Object {
               "base": "string",
@@ -39243,11 +39320,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/create-deployment-status",
           "imports": Array [
             "DeploymentStatus",
           ],
           "method": "POST",
-          "name": "reposCreateDeploymentStatus",
+          "name": "createDeploymentStatus",
           "parameters": Array [
             Object {
               "base": "string",
@@ -39511,9 +39589,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -39961,9 +40039,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -40406,11 +40484,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-deployment-status",
           "imports": Array [
             "DeploymentStatus",
           ],
           "method": "GET",
-          "name": "reposGetDeploymentStatus",
+          "name": "getDeploymentStatus",
           "parameters": Array [
             Object {
               "base": "string",
@@ -40753,9 +40832,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/create-dispatch-event",
           "imports": Array [],
           "method": "POST",
-          "name": "reposCreateDispatchEvent",
+          "name": "createDispatchEvent",
           "parameters": Array [
             Object {
               "base": "string",
@@ -40856,9 +40936,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -40957,9 +41037,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -41139,11 +41219,12 @@ test("getService with GitHub repos service", async () => {
 
     Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the \`repo\` scope. GitHub Apps must have the \`actions:read\` permission to use this endpoint.",
           "errors": Array [],
+          "id": "repos/get-all-environments",
           "imports": Array [
             "Environment",
           ],
           "method": "GET",
-          "name": "reposGetAllEnvironments",
+          "name": "getAllEnvironments",
           "parameters": Array [
             Object {
               "base": "string",
@@ -41554,11 +41635,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the \`repo\` scope. GitHub Apps must have the \`actions:read\` permission to use this endpoint.",
           "errors": Array [],
+          "id": "repos/get-environment",
           "imports": Array [
             "Environment",
           ],
           "method": "GET",
-          "name": "reposGetEnvironment",
+          "name": "getEnvironment",
           "parameters": Array [
             Object {
               "base": "string",
@@ -41826,6 +41908,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation error when the environment name is invalid or when \`protected_branches\` and \`custom_branch_policies\` in \`deployment_branch_policy\` are set to the same value",
             },
           ],
+          "id": "repos/create-or-update-environment",
           "imports": Array [
             "WaitTimer",
             "DeploymentReviewerType",
@@ -41833,7 +41916,7 @@ test("getService with GitHub repos service", async () => {
             "Environment",
           ],
           "method": "PUT",
-          "name": "reposCreateOrUpdateEnvironment",
+          "name": "createOrUpdateEnvironment",
           "parameters": Array [
             Object {
               "base": "string",
@@ -41974,9 +42057,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "WaitTimer",
@@ -42172,9 +42255,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "WaitTimer",
@@ -42483,9 +42566,10 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "You must authenticate using an access token with the repo scope to use this endpoint.",
           "errors": Array [],
+          "id": "repos/delete-an-environment",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDeleteAnEnvironment",
+          "name": "deleteAnEnvironment",
           "parameters": Array [
             Object {
               "base": "string",
@@ -42745,11 +42829,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Bad Request",
             },
           ],
+          "id": "repos/list-forks",
           "imports": Array [
             "MinimalRepository",
           ],
           "method": "GET",
-          "name": "reposListForks",
+          "name": "listForks",
           "parameters": Array [
             Object {
               "base": "string",
@@ -43234,11 +43319,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/create-fork",
           "imports": Array [
             "FullRepository",
           ],
           "method": "POST",
-          "name": "reposCreateFork",
+          "name": "createFork",
           "parameters": Array [
             Object {
               "base": "string",
@@ -43339,9 +43425,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -43440,9 +43526,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -43627,11 +43713,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/list-webhooks",
           "imports": Array [
             "Hook",
           ],
           "method": "GET",
-          "name": "reposListWebhooks",
+          "name": "listWebhooks",
           "parameters": Array [
             Object {
               "base": "string",
@@ -43989,6 +44076,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/create-webhook",
           "imports": Array [
             "WebhookConfigUrl",
             "WebhookConfigContentType",
@@ -43997,7 +44085,7 @@ test("getService with GitHub repos service", async () => {
             "Hook",
           ],
           "method": "POST",
-          "name": "reposCreateWebhook",
+          "name": "createWebhook",
           "parameters": Array [
             Object {
               "base": "string",
@@ -44103,9 +44191,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -44451,9 +44539,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -44880,11 +44968,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-webhook",
           "imports": Array [
             "Hook",
           ],
           "method": "GET",
-          "name": "reposGetWebhook",
+          "name": "getWebhook",
           "parameters": Array [
             Object {
               "base": "string",
@@ -45146,9 +45235,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/delete-webhook",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDeleteWebhook",
+          "name": "deleteWebhook",
           "parameters": Array [
             Object {
               "base": "string",
@@ -45412,6 +45502,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/update-webhook",
           "imports": Array [
             "WebhookConfigUrl",
             "WebhookConfigContentType",
@@ -45420,7 +45511,7 @@ test("getService with GitHub repos service", async () => {
             "Hook",
           ],
           "method": "PATCH",
-          "name": "reposUpdateWebhook",
+          "name": "updateWebhook",
           "parameters": Array [
             Object {
               "base": "string",
@@ -45562,9 +45653,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "any",
@@ -46006,9 +46097,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "any",
@@ -46564,11 +46655,12 @@ test("getService with GitHub repos service", async () => {
 
     Access tokens must have the \`read:repo_hook\` or \`repo\` scope, and GitHub Apps must have the \`repository_hooks:read\` permission.",
           "errors": Array [],
+          "id": "repos/get-webhook-config-for-repo",
           "imports": Array [
             "WebhookConfig",
           ],
           "method": "GET",
-          "name": "reposGetWebhookConfigForRepo",
+          "name": "getWebhookConfigForRepo",
           "parameters": Array [
             Object {
               "base": "string",
@@ -46827,6 +46919,7 @@ test("getService with GitHub repos service", async () => {
 
     Access tokens must have the \`write:repo_hook\` or \`repo\` scope, and GitHub Apps must have the \`repository_hooks:write\` permission.",
           "errors": Array [],
+          "id": "repos/update-webhook-config-for-repo",
           "imports": Array [
             "WebhookConfigUrl",
             "WebhookConfigContentType",
@@ -46835,7 +46928,7 @@ test("getService with GitHub repos service", async () => {
             "WebhookConfig",
           ],
           "method": "PATCH",
-          "name": "reposUpdateWebhookConfigForRepo",
+          "name": "updateWebhookConfigForRepo",
           "parameters": Array [
             Object {
               "base": "string",
@@ -46977,9 +47070,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "WebhookConfigUrl",
@@ -47095,9 +47188,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "WebhookConfigUrl",
@@ -47334,11 +47427,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/list-webhook-deliveries",
           "imports": Array [
             "HookDeliveryItem",
           ],
           "method": "GET",
-          "name": "reposListWebhookDeliveries",
+          "name": "listWebhookDeliveries",
           "parameters": Array [
             Object {
               "base": "string",
@@ -47763,11 +47857,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/get-webhook-delivery",
           "imports": Array [
             "HookDelivery",
           ],
           "method": "GET",
-          "name": "reposGetWebhookDelivery",
+          "name": "getWebhookDelivery",
           "parameters": Array [
             Object {
               "base": "string",
@@ -48105,9 +48200,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/redeliver-webhook-delivery",
           "imports": Array [],
           "method": "POST",
-          "name": "reposRedeliverWebhookDelivery",
+          "name": "redeliverWebhookDelivery",
           "parameters": Array [
             Object {
               "base": "string",
@@ -48453,9 +48549,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/ping-webhook",
           "imports": Array [],
           "method": "POST",
-          "name": "reposPingWebhook",
+          "name": "pingWebhook",
           "parameters": Array [
             Object {
               "base": "string",
@@ -48717,9 +48814,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/test-push-webhook",
           "imports": Array [],
           "method": "POST",
-          "name": "reposTestPushWebhook",
+          "name": "testPushWebhook",
           "parameters": Array [
             Object {
               "base": "string",
@@ -48974,11 +49072,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "When authenticating as a user with admin rights to a repository, this endpoint will list all currently open repository invitations.",
           "errors": Array [],
+          "id": "repos/list-invitations",
           "imports": Array [
             "RepositoryInvitation",
           ],
           "method": "GET",
-          "name": "reposListInvitations",
+          "name": "listInvitations",
           "parameters": Array [
             Object {
               "base": "string",
@@ -49322,9 +49421,10 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "id": "repos/delete-invitation",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDeleteInvitation",
+          "name": "deleteInvitation",
           "parameters": Array [
             Object {
               "base": "string",
@@ -49579,11 +49679,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "id": "repos/update-invitation",
           "imports": Array [
             "RepositoryInvitation",
           ],
           "method": "PATCH",
-          "name": "reposUpdateInvitation",
+          "name": "updateInvitation",
           "parameters": Array [
             Object {
               "base": "string",
@@ -49784,9 +49885,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -49948,9 +50049,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -50165,11 +50266,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "id": "repos/list-deploy-keys",
           "imports": Array [
             "DeployKey",
           ],
           "method": "GET",
-          "name": "reposListDeployKeys",
+          "name": "listDeployKeys",
           "parameters": Array [
             Object {
               "base": "string",
@@ -50518,11 +50620,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/create-deploy-key",
           "imports": Array [
             "DeployKey",
           ],
           "method": "POST",
-          "name": "reposCreateDeployKey",
+          "name": "createDeployKey",
           "parameters": Array [
             Object {
               "base": "string",
@@ -50623,9 +50726,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -50758,9 +50861,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -50979,11 +51082,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-deploy-key",
           "imports": Array [
             "DeployKey",
           ],
           "method": "GET",
-          "name": "reposGetDeployKey",
+          "name": "getDeployKey",
           "parameters": Array [
             Object {
               "base": "string",
@@ -51240,9 +51344,10 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Deploy keys are immutable. If you need to update a key, remove the key and create a new one instead.",
           "errors": Array [],
+          "id": "repos/delete-deploy-key",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDeleteDeployKey",
+          "name": "deleteDeployKey",
           "parameters": Array [
             Object {
               "base": "string",
@@ -51497,11 +51602,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Lists languages for the specified repository. The value shown for each language is the number of bytes of code written in that language.",
           "errors": Array [],
+          "id": "repos/list-languages",
           "imports": Array [
             "Language",
           ],
           "method": "GET",
-          "name": "reposListLanguages",
+          "name": "listLanguages",
           "parameters": Array [
             Object {
               "base": "string",
@@ -51695,9 +51801,10 @@ test("getService with GitHub repos service", async () => {
     - Git LFS support not enabled because Git LFS is disabled for <owner>.",
             },
           ],
+          "id": "repos/enable-lfs-for-repo",
           "imports": Array [],
           "method": "PUT",
-          "name": "reposEnableLfsForRepo",
+          "name": "enableLfsForRepo",
           "parameters": Array [
             Object {
               "base": "string",
@@ -51894,9 +52001,10 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "id": "repos/disable-lfs-for-repo",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDisableLfsForRepo",
+          "name": "disableLfsForRepo",
           "parameters": Array [
             Object {
               "base": "string",
@@ -52088,11 +52196,12 @@ test("getService with GitHub repos service", async () => {
               "description": "The branch could not be synced for some other reason",
             },
           ],
+          "id": "repos/merge-upstream",
           "imports": Array [
             "MergedUpstream",
           ],
           "method": "POST",
-          "name": "reposMergeUpstream",
+          "name": "mergeUpstream",
           "parameters": Array [
             Object {
               "base": "string",
@@ -52193,9 +52302,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -52262,9 +52371,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -52429,11 +52538,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/merge",
           "imports": Array [
             "Commit",
           ],
           "method": "POST",
-          "name": "reposMerge",
+          "name": "merge",
           "parameters": Array [
             Object {
               "base": "string",
@@ -52534,9 +52644,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -52667,9 +52777,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -52886,11 +52996,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-pages",
           "imports": Array [
             "Page",
           ],
           "method": "GET",
-          "name": "reposGetPages",
+          "name": "getPages",
           "parameters": Array [
             Object {
               "base": "string",
@@ -53084,11 +53195,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/create-pages-site",
           "imports": Array [
             "Page",
           ],
           "method": "POST",
-          "name": "reposCreatePagesSite",
+          "name": "createPagesSite",
           "parameters": Array [
             Object {
               "base": "string",
@@ -53235,9 +53347,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "any",
@@ -53492,9 +53604,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "any",
@@ -53793,9 +53905,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/update-information-about-pages-site",
           "imports": Array [],
           "method": "PUT",
-          "name": "reposUpdateInformationAboutPagesSite",
+          "name": "updateInformationAboutPagesSite",
           "parameters": Array [
             Object {
               "base": "string",
@@ -53942,9 +54055,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "any",
@@ -54425,9 +54538,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "any",
@@ -54950,9 +55063,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/delete-pages-site",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDeletePagesSite",
+          "name": "deletePagesSite",
           "parameters": Array [
             Object {
               "base": "string",
@@ -55135,11 +55249,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "id": "repos/list-pages-builds",
           "imports": Array [
             "PageBuild",
           ],
           "method": "GET",
-          "name": "reposListPagesBuilds",
+          "name": "listPagesBuilds",
           "parameters": Array [
             Object {
               "base": "string",
@@ -55485,11 +55600,12 @@ test("getService with GitHub repos service", async () => {
 
     Build requests are limited to one concurrent build per repository and one concurrent build per requester. If you request a build while another is still in progress, the second request will be queued until the first completes.",
           "errors": Array [],
+          "id": "repos/request-pages-build",
           "imports": Array [
             "PageBuildStatus",
           ],
           "method": "POST",
-          "name": "reposRequestPagesBuild",
+          "name": "requestPagesBuild",
           "parameters": Array [
             Object {
               "base": "string",
@@ -55674,11 +55790,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "id": "repos/get-latest-pages-build",
           "imports": Array [
             "PageBuild",
           ],
           "method": "GET",
-          "name": "reposGetLatestPagesBuild",
+          "name": "getLatestPagesBuild",
           "parameters": Array [
             Object {
               "base": "string",
@@ -55863,11 +55980,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "id": "repos/get-pages-build",
           "imports": Array [
             "PageBuild",
           ],
           "method": "GET",
-          "name": "reposGetPagesBuild",
+          "name": "getPagesBuild",
           "parameters": Array [
             Object {
               "base": "string",
@@ -56141,12 +56259,13 @@ test("getService with GitHub repos service", async () => {
               "description": "There isn't a CNAME for this page",
             },
           ],
+          "id": "repos/get-pages-health-check",
           "imports": Array [
             "PagesHealthCheck",
             "EmptyObject",
           ],
           "method": "GET",
-          "name": "reposGetPagesHealthCheck",
+          "name": "getPagesHealthCheck",
           "parameters": Array [
             Object {
               "base": "string",
@@ -56363,11 +56482,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/get-readme",
           "imports": Array [
             "ContentFile",
           ],
           "method": "GET",
-          "name": "reposGetReadme",
+          "name": "getReadme",
           "parameters": Array [
             Object {
               "base": "string",
@@ -56636,11 +56756,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/get-readme-in-directory",
           "imports": Array [
             "ContentFile",
           ],
           "method": "GET",
-          "name": "reposGetReadmeInDirectory",
+          "name": "getReadmeInDirectory",
           "parameters": Array [
             Object {
               "base": "string",
@@ -56977,11 +57098,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/list-releases",
           "imports": Array [
             "Release",
           ],
           "method": "GET",
-          "name": "reposListReleases",
+          "name": "listReleases",
           "parameters": Array [
             Object {
               "base": "string",
@@ -57336,11 +57458,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/create-release",
           "imports": Array [
             "Release",
           ],
           "method": "POST",
-          "name": "reposCreateRelease",
+          "name": "createRelease",
           "parameters": Array [
             Object {
               "base": "string",
@@ -57441,9 +57564,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -57734,9 +57857,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -58117,11 +58240,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-release-asset",
           "imports": Array [
             "ReleaseAsset",
           ],
           "method": "GET",
-          "name": "reposGetReleaseAsset",
+          "name": "getReleaseAsset",
           "parameters": Array [
             Object {
               "base": "string",
@@ -58378,9 +58502,10 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "id": "repos/delete-release-asset",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDeleteReleaseAsset",
+          "name": "deleteReleaseAsset",
           "parameters": Array [
             Object {
               "base": "string",
@@ -58635,11 +58760,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Users with push access to the repository can edit a release asset.",
           "errors": Array [],
+          "id": "repos/update-release-asset",
           "imports": Array [
             "ReleaseAsset",
           ],
           "method": "PATCH",
-          "name": "reposUpdateReleaseAsset",
+          "name": "updateReleaseAsset",
           "parameters": Array [
             Object {
               "base": "string",
@@ -58776,9 +58902,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -58909,9 +59035,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -59164,11 +59290,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/generate-release-notes",
           "imports": Array [
             "ReleaseNotesContent",
           ],
           "method": "POST",
-          "name": "reposGenerateReleaseNotes",
+          "name": "generateReleaseNotes",
           "parameters": Array [
             Object {
               "base": "string",
@@ -59269,9 +59396,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -59434,9 +59561,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -59682,11 +59809,12 @@ test("getService with GitHub repos service", async () => {
 
     The latest release is the most recent non-prerelease, non-draft release, sorted by the \`created_at\` attribute. The \`created_at\` attribute is the date of the commit used for the release, and not the date when the release was drafted or published.",
           "errors": Array [],
+          "id": "repos/get-latest-release",
           "imports": Array [
             "Release",
           ],
           "method": "GET",
-          "name": "reposGetLatestRelease",
+          "name": "getLatestRelease",
           "parameters": Array [
             Object {
               "base": "string",
@@ -59876,11 +60004,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-release-by-tag",
           "imports": Array [
             "Release",
           ],
           "method": "GET",
-          "name": "reposGetReleaseByTag",
+          "name": "getReleaseByTag",
           "parameters": Array [
             Object {
               "base": "string",
@@ -60142,11 +60271,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-release",
           "imports": Array [
             "Release",
           ],
           "method": "GET",
-          "name": "reposGetRelease",
+          "name": "getRelease",
           "parameters": Array [
             Object {
               "base": "string",
@@ -60403,9 +60533,10 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Users with push access to the repository can delete a release.",
           "errors": Array [],
+          "id": "repos/delete-release",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDeleteRelease",
+          "name": "deleteRelease",
           "parameters": Array [
             Object {
               "base": "string",
@@ -60665,11 +60796,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Not Found if the discussion category name is invalid",
             },
           ],
+          "id": "repos/update-release",
           "imports": Array [
             "Release",
           ],
           "method": "PATCH",
-          "name": "reposUpdateRelease",
+          "name": "updateRelease",
           "parameters": Array [
             Object {
               "base": "string",
@@ -60806,9 +60938,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -61067,9 +61199,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -61445,11 +61577,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "id": "repos/list-release-assets",
           "imports": Array [
             "ReleaseAsset",
           ],
           "method": "GET",
-          "name": "reposListReleaseAssets",
+          "name": "listReleaseAssets",
           "parameters": Array [
             Object {
               "base": "string",
@@ -61887,11 +62020,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Response if you upload an asset with the same filename as another uploaded asset",
             },
           ],
+          "id": "repos/upload-release-asset",
           "imports": Array [
             "ReleaseAsset",
           ],
           "method": "POST",
-          "name": "reposUploadReleaseAsset",
+          "name": "uploadReleaseAsset",
           "parameters": Array [
             Object {
               "base": "string",
@@ -62100,9 +62234,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [],
               "template": null,
               "type": "string",
@@ -62136,9 +62270,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [],
             "template": null,
             "type": "string",
@@ -62362,11 +62496,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Returns a weekly aggregate of the number of additions and deletions pushed to a repository.",
           "errors": Array [],
+          "id": "repos/get-code-frequency-stats",
           "imports": Array [
             "CodeFrequencyStat",
           ],
           "method": "GET",
-          "name": "reposGetCodeFrequencyStats",
+          "name": "getCodeFrequencyStats",
           "parameters": Array [
             Object {
               "base": "string",
@@ -62598,11 +62733,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Returns the last year of commit activity grouped by week. The \`days\` array is a group of commits per day, starting on \`Sunday\`.",
           "errors": Array [],
+          "id": "repos/get-commit-activity-stats",
           "imports": Array [
             "CommitActivity",
           ],
           "method": "GET",
-          "name": "reposGetCommitActivityStats",
+          "name": "getCommitActivityStats",
           "parameters": Array [
             Object {
               "base": "string",
@@ -62840,11 +62976,12 @@ test("getService with GitHub repos service", async () => {
     *   \`d\` - Number of deletions
     *   \`c\` - Number of commits",
           "errors": Array [],
+          "id": "repos/get-contributors-stats",
           "imports": Array [
             "ContributorActivity",
           ],
           "method": "GET",
-          "name": "reposGetContributorsStats",
+          "name": "getContributorsStats",
           "parameters": Array [
             Object {
               "base": "string",
@@ -63086,11 +63223,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-participation-stats",
           "imports": Array [
             "ParticipationStats",
           ],
           "method": "GET",
-          "name": "reposGetParticipationStats",
+          "name": "getParticipationStats",
           "parameters": Array [
             Object {
               "base": "string",
@@ -63281,11 +63419,12 @@ test("getService with GitHub repos service", async () => {
 
     For example, \`[2, 14, 25]\` indicates that there were 25 total commits, during the 2:00pm hour on Tuesdays. All times are based on the time zone of individual commits.",
           "errors": Array [],
+          "id": "repos/get-punch-card-stats",
           "imports": Array [
             "CodeFrequencyStat",
           ],
           "method": "GET",
-          "name": "reposGetPunchCardStats",
+          "name": "getPunchCardStats",
           "parameters": Array [
             Object {
               "base": "string",
@@ -63486,11 +63625,12 @@ test("getService with GitHub repos service", async () => {
 
     Note: there is a limit of 1000 statuses per \`sha\` and \`context\` within a repository. Attempts to create more than 1000 statuses will result in a validation error.",
           "errors": Array [],
+          "id": "repos/create-commit-status",
           "imports": Array [
             "Status",
           ],
           "method": "POST",
-          "name": "reposCreateCommitStatus",
+          "name": "createCommitStatus",
           "parameters": Array [
             Object {
               "base": "string",
@@ -63685,9 +63825,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -63935,9 +64075,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -64244,11 +64384,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "id": "repos/list-tags",
           "imports": Array [
             "Tag",
           ],
           "method": "GET",
-          "name": "reposListTags",
+          "name": "listTags",
           "parameters": Array [
             Object {
               "base": "string",
@@ -64603,11 +64744,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/list-tag-protection",
           "imports": Array [
             "TagProtection",
           ],
           "method": "GET",
-          "name": "reposListTagProtection",
+          "name": "listTagProtection",
           "parameters": Array [
             Object {
               "base": "string",
@@ -64816,11 +64958,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/create-tag-protection",
           "imports": Array [
             "TagProtection",
           ],
           "method": "POST",
-          "name": "reposCreateTagProtection",
+          "name": "createTagProtection",
           "parameters": Array [
             Object {
               "base": "string",
@@ -64921,9 +65064,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -64990,9 +65133,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -65150,9 +65293,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/delete-tag-protection",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDeleteTagProtection",
+          "name": "deleteTagProtection",
           "parameters": Array [
             Object {
               "base": "string",
@@ -65415,9 +65559,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Response",
             },
           ],
+          "id": "repos/download-tarball-archive",
           "imports": Array [],
           "method": "GET",
-          "name": "reposDownloadTarballArchive",
+          "name": "downloadTarballArchive",
           "parameters": Array [
             Object {
               "base": "string",
@@ -65672,11 +65817,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "id": "repos/list-teams",
           "imports": Array [
             "Team",
           ],
           "method": "GET",
-          "name": "reposListTeams",
+          "name": "listTeams",
           "parameters": Array [
             Object {
               "base": "string",
@@ -66025,11 +66171,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/get-all-topics",
           "imports": Array [
             "Topic",
           ],
           "method": "GET",
-          "name": "reposGetAllTopics",
+          "name": "getAllTopics",
           "parameters": Array [
             Object {
               "base": "string",
@@ -66368,11 +66515,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/replace-all-topics",
           "imports": Array [
             "Topic",
           ],
           "method": "PUT",
-          "name": "reposReplaceAllTopics",
+          "name": "replaceAllTopics",
           "parameters": Array [
             Object {
               "base": "string",
@@ -66473,9 +66621,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -66574,9 +66722,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -66761,11 +66909,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Forbidden",
             },
           ],
+          "id": "repos/get-clones",
           "imports": Array [
             "CloneTraffic",
           ],
           "method": "GET",
-          "name": "reposGetClones",
+          "name": "getClones",
           "parameters": Array [
             Object {
               "base": "string",
@@ -67066,11 +67215,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Forbidden",
             },
           ],
+          "id": "repos/get-top-paths",
           "imports": Array [
             "ContentTraffic",
           ],
           "method": "GET",
-          "name": "reposGetTopPaths",
+          "name": "getTopPaths",
           "parameters": Array [
             Object {
               "base": "string",
@@ -67274,11 +67424,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Forbidden",
             },
           ],
+          "id": "repos/get-top-referrers",
           "imports": Array [
             "ReferrerTraffic",
           ],
           "method": "GET",
-          "name": "reposGetTopReferrers",
+          "name": "getTopReferrers",
           "parameters": Array [
             Object {
               "base": "string",
@@ -67482,11 +67633,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Forbidden",
             },
           ],
+          "id": "repos/get-views",
           "imports": Array [
             "ViewTraffic",
           ],
           "method": "GET",
-          "name": "reposGetViews",
+          "name": "getViews",
           "parameters": Array [
             Object {
               "base": "string",
@@ -67782,11 +67934,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "A transfer request will need to be accepted by the new owner when transferring a personal repository to another user. The response will contain the original \`owner\`, and the transfer will continue asynchronously. For more details on the requirements to transfer personal and organization-owned repositories, see [about repository transfers](https://docs.github.com/articles/about-repository-transfers/).",
           "errors": Array [],
+          "id": "repos/transfer",
           "imports": Array [
             "MinimalRepository",
           ],
           "method": "POST",
-          "name": "reposTransfer",
+          "name": "transfer",
           "parameters": Array [
             Object {
               "base": "string",
@@ -67887,9 +68040,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -68020,9 +68173,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -68239,9 +68392,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Not Found if repository is not enabled with vulnerability alerts",
             },
           ],
+          "id": "repos/check-vulnerability-alerts",
           "imports": Array [],
           "method": "GET",
-          "name": "reposCheckVulnerabilityAlerts",
+          "name": "checkVulnerabilityAlerts",
           "parameters": Array [
             Object {
               "base": "string",
@@ -68424,9 +68578,10 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Enables dependency alerts and the dependency graph for a repository. The authenticated user must have admin access to the repository. For more information, see \\"[About security alerts for vulnerable dependencies](https://docs.github.com/en/articles/about-security-alerts-for-vulnerable-dependencies)\\".",
           "errors": Array [],
+          "id": "repos/enable-vulnerability-alerts",
           "imports": Array [],
           "method": "PUT",
-          "name": "reposEnableVulnerabilityAlerts",
+          "name": "enableVulnerabilityAlerts",
           "parameters": Array [
             Object {
               "base": "string",
@@ -68609,9 +68764,10 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Disables dependency alerts and the dependency graph for a repository. The authenticated user must have admin access to the repository. For more information, see \\"[About security alerts for vulnerable dependencies](https://docs.github.com/en/articles/about-security-alerts-for-vulnerable-dependencies)\\".",
           "errors": Array [],
+          "id": "repos/disable-vulnerability-alerts",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDisableVulnerabilityAlerts",
+          "name": "disableVulnerabilityAlerts",
           "parameters": Array [
             Object {
               "base": "string",
@@ -68802,9 +68958,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Response",
             },
           ],
+          "id": "repos/download-zipball-archive",
           "imports": Array [],
           "method": "GET",
-          "name": "reposDownloadZipballArchive",
+          "name": "downloadZipballArchive",
           "parameters": Array [
             Object {
               "base": "string",
@@ -69066,11 +69223,12 @@ test("getService with GitHub repos service", async () => {
     *   \`public_repo\` scope or \`repo\` scope to create a public repository. Note: For GitHub AE, use \`repo\` scope to create an internal repository.
     *   \`repo\` scope to create a private repository",
           "errors": Array [],
+          "id": "repos/create-using-template",
           "imports": Array [
             "Repository",
           ],
           "method": "POST",
-          "name": "reposCreateUsingTemplate",
+          "name": "createUsingTemplate",
           "parameters": Array [
             Object {
               "base": "string",
@@ -69171,9 +69329,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -69368,9 +69526,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -69659,11 +69817,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/list-public",
           "imports": Array [
             "MinimalRepository",
           ],
           "method": "GET",
-          "name": "reposListPublic",
+          "name": "listPublic",
           "parameters": Array [
             Object {
               "base": "number",
@@ -69809,11 +69968,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/list-for-authenticated-user",
           "imports": Array [
             "Repository",
           ],
           "method": "GET",
-          "name": "reposListForAuthenticatedUser",
+          "name": "listForAuthenticatedUser",
           "parameters": Array [
             Object {
               "base": "string",
@@ -70730,11 +70890,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "id": "repos/create-for-authenticated-user",
           "imports": Array [
             "Repository",
           ],
           "method": "POST",
-          "name": "reposCreateForAuthenticatedUser",
+          "name": "createForAuthenticatedUser",
           "parameters": Array [
             Object {
               "base": "any",
@@ -70763,9 +70924,9 @@ test("getService with GitHub repos service", async () => {
               "minProperties": undefined,
               "minimum": undefined,
               "multipleOf": undefined,
-              "name": "requestBody",
+              "name": "body",
               "pattern": undefined,
-              "prop": "requestBody",
+              "prop": "body",
               "properties": Array [
                 Object {
                   "base": "string",
@@ -71376,9 +71537,9 @@ test("getService with GitHub repos service", async () => {
             "minProperties": undefined,
             "minimum": undefined,
             "multipleOf": undefined,
-            "name": "requestBody",
+            "name": "body",
             "pattern": undefined,
-            "prop": "requestBody",
+            "prop": "body",
             "properties": Array [
               Object {
                 "base": "string",
@@ -72014,11 +72175,12 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "id": "repos/list-invitations-for-authenticated-user",
           "imports": Array [
             "RepositoryInvitation",
           ],
           "method": "GET",
-          "name": "reposListInvitationsForAuthenticatedUser",
+          "name": "listInvitationsForAuthenticatedUser",
           "parameters": Array [
             Object {
               "base": "number",
@@ -72234,9 +72396,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Conflict",
             },
           ],
+          "id": "repos/decline-invitation-for-authenticated-user",
           "imports": Array [],
           "method": "DELETE",
-          "name": "reposDeclineInvitationForAuthenticatedUser",
+          "name": "declineInvitationForAuthenticatedUser",
           "parameters": Array [
             Object {
               "base": "number",
@@ -72364,9 +72527,10 @@ test("getService with GitHub repos service", async () => {
               "description": "Conflict",
             },
           ],
+          "id": "repos/accept-invitation-for-authenticated-user",
           "imports": Array [],
           "method": "PATCH",
-          "name": "reposAcceptInvitationForAuthenticatedUser",
+          "name": "acceptInvitationForAuthenticatedUser",
           "parameters": Array [
             Object {
               "base": "number",
@@ -72477,11 +72641,12 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Lists public repositories for the specified user. Note: For GitHub AE, this endpoint will list internal repositories for the specified user.",
           "errors": Array [],
+          "id": "repos/list-for-user",
           "imports": Array [
             "MinimalRepository",
           ],
           "method": "GET",
-          "name": "reposListForUser",
+          "name": "listForUser",
           "parameters": Array [
             Object {
               "base": "string",

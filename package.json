@@ -14,7 +14,6 @@
   "types": "lib/index.d.ts",
   "main": "./lib/index.js",
   "type": "commonjs",
-  "module": "./lib/index.mjs",
   "files": [
     "/lib"
   ],
@@ -26,7 +25,7 @@
     "check-types": "tsc --noEmit",
     "test": "jest --runInBand --coverage",
     "test:badges": "npm t && jest-coverage-badges --output ./badges",
-    "build": "rollup -c",
+    "build": "tsc",
     "prepublishOnly": "npm run clean && npm run check-types && npm run format:check && npm run lint && npm test && npm run build",
     "lint": "eslint . --ext .ts",
     "lint-and-fix": "eslint . --ext .ts --fix",
@@ -37,7 +36,7 @@
     "node": "16"
   },
   "keywords": [],
-  "author": "Author Name",
+  "author": "Eric Allam",
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.1.2",
