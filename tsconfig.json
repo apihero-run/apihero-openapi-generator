@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2015",
     "preserveConstEnums": true,
     "outDir": "./lib",
     "declaration": true,
     "allowJs": true,
     "strict": true,
     "esModuleInterop": true,
+    "moduleResolution": "node",
     "baseUrl": "./",
     "paths": {
       "~/*": ["src/*"]

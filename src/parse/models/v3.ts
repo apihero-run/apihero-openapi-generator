@@ -1,6 +1,7 @@
 import { pascalCase } from "change-case";
 import { OpenAPIV3 } from "openapi-types";
 import { Enum, Model, ModelComposition, Type } from "~/@types";
+import { getRef } from "../common/v3";
 
 export function getModels(doc: OpenAPIV3.Document): Model[] {
   const models: Model[] = [];
@@ -428,38 +429,6 @@ export const getRequiredPropertiesFromComposition = (
         isRequired: true,
       };
     });
-};
-
-const ESCAPED_REF_SLASH = /~1/g;
-const ESCAPED_REF_TILDE = /~0/g;
-
-export const getRef = <T>(openApi: OpenAPIV3.Document, item: T & OpenAPIV3.ReferenceObject): T => {
-  if (item.$ref) {
-    // Fetch the paths to the definitions, this converts:
-    // "#/components/schemas/Form" to ["components", "schemas", "Form"]
-    const paths = item.$ref
-      .replace(/^#/g, "")
-      .split("/")
-      .filter((item) => item);
-
-    // Try to find the reference by walking down the path,
-    // if we cannot find it, then we throw an error.
-    let result: any = openApi;
-
-    paths.forEach((path) => {
-      const decodedPath = decodeURIComponent(
-        path.replace(ESCAPED_REF_SLASH, "/").replace(ESCAPED_REF_TILDE, "~"),
-      );
-      // eslint-disable-next-line no-prototype-builtins
-      if (result.hasOwnProperty(decodedPath)) {
-        result = result[decodedPath];
-      } else {
-        throw new Error(`Could not find reference: "${item.$ref}"`);
-      }
-    });
-    return result as T;
-  }
-  return item as T;
 };
 
 export const getModelProperties = (

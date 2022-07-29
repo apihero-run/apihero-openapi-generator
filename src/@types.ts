@@ -86,7 +86,7 @@ export type OperationResponse = Model & {
 };
 
 export type Operation = OperationParameters & {
-  service: string;
+  id: string;
   name: string;
   summary: string | null;
   description: string | null;
@@ -102,6 +102,7 @@ export type Service = {
   name: string;
   operations: Operation[];
   imports: string[];
+  description?: string;
 };
 
 export type Client = {

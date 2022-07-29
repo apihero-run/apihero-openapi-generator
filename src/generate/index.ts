@@ -1,10 +1,92 @@
-import { Client, Model } from "~/@types";
+import { Client, Model, Operation, Service } from "~/@types";
 
-export function generateFromClient(client: Client): string {
+export function generateFromClient(client: Client): Map<string, string> {
+  const files = new Map<string, string>();
+
   const modelCode = generateClientModels(client.models);
 
-  return `${modelCode}`;
+  files.set("models.ts", modelCode);
+
+  const servicesCode = generateClientServices(client.services);
+
+  for (const [name, code] of servicesCode) {
+    files.set(`${name}.ts`, code);
+  }
+
+  return files;
 }
+
+function generateClientServices(services: Client["services"]): Array<[string, string]> {
+  return services.map(generateClientService);
+}
+
+function generateClientService(service: Service): [string, string] {
+  const serviceCode = generateClientServiceCode(service);
+
+  return [service.name, serviceCode];
+}
+
+function generateClientServiceCode(service: Service): string {
+  const imports = generateServiceImports(service);
+
+  return `${imports}\n\n${service.operations
+    .map((operation) => generateOperation(service, operation))
+    .join("\n\n")}`;
+}
+
+function generateServiceImports(service: Service): string {
+  return `import { ${service.imports.join(", ")} } from "./models";`;
+}
+
+function generateOperation(service: Service, operation: Operation): string {
+  return `${generateOperationDocs(operation)}\n${generateOperationExport(operation)}`;
+}
+
+function generateOperationExport(operation: Operation): string {
+  const parameters = generateOperationParameters(operation);
+  const result = generateOperationResult(operation);
+
+  return `export const ${operation.name}: ApiHeroEndpoint<${parameters}, ${result}> = {
+    id: '${operation.id}',
+  }`;
+}
+
+function generateOperationResult(operation: Operation): string {
+  if (!operation.results) {
+    return "void";
+  }
+
+  return operation.results.map((result) => generateType(result)).join(" | ");
+}
+
+function generateOperationParameters(operation: Operation): string {
+  return `{ ${operation.parameters.map(generateOperationParameter)} }`;
+}
+
+function generateOperationParameter(parameter: Operation["parameters"][0]): string {
+  return `${parameter.name}: ${generateType(parameter)}`;
+}
+
+function generateOperationDocs(operation: Operation): string {
+  const summeryAndDescriptionEqual = operation.summary === operation.description;
+
+  if (summeryAndDescriptionEqual) {
+    return `/** ${operation.deprecated ? "* @deprecated\n" : "\n"}${
+      operation.summary ? " * " + escapeComment(operation.summary) + "\n" : ""
+    } */`;
+  }
+
+  return `/** ${operation.deprecated ? "* @deprecated\n" : "\n"}${
+    operation.summary ? " * " + escapeComment(operation.summary) + "\n" : ""
+  }${operation.description ? " * " + escapeComment(operation.description) + "\n" : ""} */`;
+}
+
+const escapeComment = (value: string): string => {
+  return value
+    .replace(/\*\//g, "*")
+    .replace(/\/\*/g, "*")
+    .replace(/\r?\n(.*)/g, (_, w) => `\n * ${w.trim()}`);
+};
 
 function generateClientModels(models: Client["models"]): string {
   return models.map(generateClientModel).join("\n\n");
@@ -57,20 +139,22 @@ function generateType(property: Model, parent?: Model) {
       return generateTypeDictionary(property, parent);
     case "one-of":
     case "any-of":
-      return generateTypeUnion(property, parent);
+      return generateCompositeType(property, "|", parent);
+    case "all-of":
+      return generateCompositeType(property, "&", parent);
     default:
       throw new Error(`Unknown export type: ${property.export}`);
   }
 }
 
-function generateTypeUnion(model: Model, parent?: Model): string {
+function generateCompositeType(model: Model, compositeType: "|" | "&", parent?: Model): string {
   const unique = <T>(val: T, index: number, arr: T[]): boolean => {
     return arr.indexOf(val) === index;
   };
 
   const types = model.properties.map((property) => generateType(property, parent));
   const uniqueTypes = types.filter(unique);
-  let uniqueTypesString = uniqueTypes.join(" | ");
+  let uniqueTypesString = uniqueTypes.join(` ${compositeType} `);
   if (uniqueTypes.length > 1) {
     uniqueTypesString = `(${uniqueTypesString})`;
   }
