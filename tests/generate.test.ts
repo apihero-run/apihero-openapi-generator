@@ -23,3 +23,11 @@ test("v3/github.json", async () => {
 
   expect(code).toMatchSnapshot();
 });
+
+test("v3_1/github.json", async () => {
+  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3_1/github.json");
+
+  const code = generateClientFiles(doc);
+
+  expect(code).toMatchSnapshot();
+});

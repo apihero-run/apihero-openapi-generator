@@ -44,9 +44,9 @@ export type Schema = {
   isNullable: boolean;
   format?: string;
   maximum?: number;
-  exclusiveMaximum?: boolean;
+  exclusiveMaximum?: boolean | number;
   minimum?: number;
-  exclusiveMinimum?: boolean;
+  exclusiveMinimum?: boolean | number;
   multipleOf?: number;
   maxLength?: number;
   minLength?: number;

@@ -7,7 +7,7 @@ test("getOpenApiSpec v3/petstore.json", async () => {
   expect(spec).toBeDefined();
 });
 
-test.only("getOpenApiSpec v3/github.json", async () => {
+test("getOpenApiSpec v3/github.json", async () => {
   const location = "./tests/fixtures/specs/v3/github.json";
   const spec = await getOpenAPISpec(location);
 
