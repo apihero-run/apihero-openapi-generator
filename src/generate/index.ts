@@ -1,3 +1,4 @@
+import { camelCase } from "camel-case";
 import { Client, Model, Operation, Service } from "../@types";
 
 export function generateFromClient(client: Client): Map<string, string> {
@@ -13,7 +14,21 @@ export function generateFromClient(client: Client): Map<string, string> {
     files.set(`${name}.ts`, code);
   }
 
+  const indexCode = generateClientIndex(servicesCode);
+
+  files.set("index.ts", indexCode);
+
   return files;
+}
+
+function generateClientIndex(servicesCode: ReturnType<typeof generateClientServices>): string {
+  const imports = servicesCode
+    .map(([name]) => `import * as ${camelCase(name)} from "./${name}";`)
+    .join("\n");
+
+  const exports = `export { ${servicesCode.map(([name]) => camelCase(name)).join(", ")} };`;
+
+  return `${imports}\n\n${exports}\n\nexport * from "./models";`;
 }
 
 function generateClientServices(services: Client["services"]): Array<[string, string]> {
