@@ -6,13 +6,7 @@
     "declaration": true,
     "allowJs": true,
     "strict": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "downlevelIteration": true,
-    "baseUrl": "./",
-    "paths": {
-      "~/*": ["src/*"]
-    }
+    "esModuleInterop": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]

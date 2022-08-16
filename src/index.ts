@@ -1,7 +1,7 @@
 import { OpenAPI } from "openapi-types";
-import { Client, Enum, Model, Operation, Service } from "~/@types";
-import { generateFromClient } from "~/generate";
-import { parseSpec } from "~/parse";
+import { Client, Enum, Model, Operation, Service } from "./@types";
+import { generateFromClient } from "./generate";
+import { parseSpec } from "./parse";
 import { format } from "prettier";
 
 export function generateClientFiles(doc: OpenAPI.Document): Map<string, string> {
@@ -14,7 +14,7 @@ export function generateClientCode(client: Client): Map<string, string> {
   const files = generateFromClient(client);
 
   // Format each file
-  for (const [name, code] of files.entries()) {
+  for (const [name, code] of Array.from(files)) {
     files.set(name, format(code, { parser: "typescript", printWidth: 100 }));
   }
 

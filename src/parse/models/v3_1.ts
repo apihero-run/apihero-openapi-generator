@@ -1,6 +1,6 @@
 import { pascalCase } from "change-case";
 import { OpenAPIV3_1 } from "openapi-types";
-import { Enum, Model, ModelComposition, Type } from "~/@types";
+import { Enum, Model, ModelComposition, Type } from "../../@types";
 import { getRef } from "../common/v3_1";
 
 export function getModels(doc: OpenAPIV3_1.Document): Model[] {

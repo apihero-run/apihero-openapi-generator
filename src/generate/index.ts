@@ -1,4 +1,4 @@
-import { Client, Model, Operation, Service } from "~/@types";
+import { Client, Model, Operation, Service } from "../@types";
 
 export function generateFromClient(client: Client): Map<string, string> {
   const files = new Map<string, string>();
