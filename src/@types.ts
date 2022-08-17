@@ -59,6 +59,7 @@ export type Schema = {
 };
 
 export type OperationParameter = Model & {
+  originalName?: string;
   in: "path" | "query" | "header" | "formData" | "body" | "cookie";
   prop: string;
   mediaType: string | null;

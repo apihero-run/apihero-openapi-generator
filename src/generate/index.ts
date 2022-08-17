@@ -1,14 +1,22 @@
 import { camelCase } from "camel-case";
 import { Client, Model, Operation, Service } from "../@types";
 
-export function generateFromClient(client: Client): Map<string, string> {
+export type GenerateClientOptions = {
+  additionalImports?: Array<{ imports: string[]; name: string }>;
+  additionalData?: Record<string, string | number>;
+};
+
+export function generateFromClient(
+  client: Client,
+  options?: GenerateClientOptions,
+): Map<string, string> {
   const files = new Map<string, string>();
 
   const modelCode = generateClientModels(client.models);
 
-  files.set("models.ts", modelCode);
+  files.set("@types.ts", modelCode);
 
-  const servicesCode = generateClientServices(client.services);
+  const servicesCode = generateClientServices(client.services, options);
 
   for (const [name, code] of servicesCode) {
     files.set(`${name}.ts`, code);
@@ -28,41 +36,78 @@ function generateClientIndex(servicesCode: ReturnType<typeof generateClientServi
 
   const exports = `export { ${servicesCode.map(([name]) => camelCase(name)).join(", ")} };`;
 
-  return `${imports}\n\n${exports}\n\nexport * from "./models";`;
+  return `${imports}\n\n${exports}\n\nexport * from "./@types";`;
 }
 
-function generateClientServices(services: Client["services"]): Array<[string, string]> {
-  return services.map(generateClientService);
+function generateClientServices(
+  services: Client["services"],
+  options?: GenerateClientOptions,
+): Array<[string, string]> {
+  return services.map((service) => generateClientService(service, options));
 }
 
-function generateClientService(service: Service): [string, string] {
-  const serviceCode = generateClientServiceCode(service);
+function generateClientService(
+  service: Service,
+  options?: GenerateClientOptions,
+): [string, string] {
+  const serviceCode = generateClientServiceCode(service, options);
 
   return [service.name, serviceCode];
 }
 
-function generateClientServiceCode(service: Service): string {
-  const imports = generateServiceImports(service);
+function generateClientServiceCode(service: Service, options?: GenerateClientOptions): string {
+  const imports = generateServiceImports(service, options?.additionalImports);
 
   return `${imports}\n\n${service.operations
-    .map((operation) => generateOperation(service, operation))
+    .map((operation) => generateOperation(service, operation, options?.additionalData))
     .join("\n\n")}`;
 }
 
-function generateServiceImports(service: Service): string {
-  return `import { ${service.imports.join(", ")} } from "./models";`;
+function generateServiceImports(
+  service: Service,
+  additionalImports?: GenerateClientOptions["additionalImports"],
+): string {
+  const additionalImportsCode = (additionalImports ?? [])
+    .map((additionalImport) => {
+      return `import { ${additionalImport.imports.join(", ")} } from "${additionalImport.name}";`;
+    })
+    .join("\n");
+
+  const serviceImportsCode =
+    service.imports.length > 0
+      ? `import { ${service.imports.join(", ")}, ApiHeroEndpoint } from "./@types";`
+      : "";
+
+  return `${additionalImportsCode}\n${serviceImportsCode}`;
 }
 
-function generateOperation(service: Service, operation: Operation): string {
-  return `${generateOperationDocs(operation)}\n${generateOperationExport(operation)}`;
+function generateOperation(
+  service: Service,
+  operation: Operation,
+  additionalData?: GenerateClientOptions["additionalData"],
+): string {
+  return `${generateOperationDocs(operation)}\n${generateOperationExport(
+    operation,
+    additionalData,
+  )}`;
 }
 
-function generateOperationExport(operation: Operation): string {
+function generateOperationExport(
+  operation: Operation,
+  additionalData?: GenerateClientOptions["additionalData"],
+): string {
   const parameters = generateOperationParameters(operation);
   const result = generateOperationResult(operation);
 
   return `export const ${operation.name}: ApiHeroEndpoint<${parameters}, ${result}> = {
     id: '${operation.id}',
+    ${
+      additionalData
+        ? `${Object.entries(additionalData)
+            .map(([key, value]) => `${key}: ${JSON.stringify(value)}`)
+            .join(",\n")},\n`
+        : ""
+    }
   }`;
 }
 
@@ -75,11 +120,15 @@ function generateOperationResult(operation: Operation): string {
 }
 
 function generateOperationParameters(operation: Operation): string {
+  if (!operation.parameters || operation.parameters.length === 0) {
+    return "never";
+  }
+
   return `{ ${operation.parameters.map(generateOperationParameter)} }`;
 }
 
 function generateOperationParameter(parameter: Operation["parameters"][0]): string {
-  return `${parameter.name}: ${generateType(parameter)}`;
+  return `${parameter.name}${parameter.isRequired ? "" : "?"}: ${generateType(parameter)}`;
 }
 
 function generateOperationDocs(operation: Operation): string {
@@ -104,7 +153,11 @@ const escapeComment = (value: string): string => {
 };
 
 function generateClientModels(models: Client["models"]): string {
-  return models.map(generateClientModel).join("\n\n");
+  const endpointGenericCode = `export type ApiHeroEndpoint<Params, ResponseData> = \n{ id: string;\n[key: string]: string | number;\n };`;
+
+  const modelsCode = models.map(generateClientModel).join("\n\n");
+
+  return `${endpointGenericCode}\n\n${modelsCode}`;
 }
 
 function generateClientModel(model: Model): string {
@@ -201,7 +254,11 @@ function generateTypeEnum(property: Model, parent?: Model): string {
 }
 
 function generateTypeGeneric(property: Model, parent?: Model): string {
-  return `${property.base}${generateIsNullable(property)}`;
+  return `${generateGenericBase(property.base)}${generateIsNullable(property)}`;
+}
+
+function generateGenericBase(base: string): string {
+  return base === "binary" ? "ReadableStream" : base;
 }
 
 function generateTypeInterface(property: Model, parent?: Model): string {

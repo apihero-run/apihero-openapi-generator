@@ -388,6 +388,13 @@ const getOperationRequestBody = (
     if (content) {
       requestBody.mediaType = content.mediaType;
       switch (requestBody.mediaType) {
+        case "application/octet-stream": {
+          requestBody.in = "body";
+          requestBody.name = "file";
+          requestBody.prop = "file";
+          requestBody.type = "ReadableStream";
+          break;
+        }
         case "application/x-www-form-urlencoded":
         case "multipart/form-data":
           requestBody.in = "formData";
@@ -684,6 +691,7 @@ export const getOperationParameter = (
     prop: parameter.name,
     export: "interface",
     name: getOperationParameterName(parameter.name),
+    originalName: parameter.name,
     type: "any",
     base: "any",
     template: null,

@@ -40,3 +40,5 @@ lib/**/*
 # ignore yarn.lock
 yarn.lock
 /tests/test.sqlite
+
+/tests/tmp

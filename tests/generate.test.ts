@@ -1,4 +1,4 @@
-import { generateClientFiles } from "../src";
+import { generateClientFiles, generatePackage } from "../src";
 import { OpenAPI } from "openapi-types";
 import { readFile } from "fs/promises";
 
@@ -12,6 +12,20 @@ test("v3/petstore.json", async () => {
   const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3/petstore.json");
 
   const code = generateClientFiles(doc);
+
+  expect(code).toMatchSnapshot();
+});
+
+test("v3/petstore.json with additional options", async () => {
+  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3/petstore.json");
+
+  const code = generateClientFiles(doc, {
+    additionalImports: [{ name: "@apihero/endpoint", imports: ["ApiHeroEndpoint"] }],
+    additionalData: {
+      clientId: "github",
+      count: 12,
+    },
+  });
 
   expect(code).toMatchSnapshot();
 });
@@ -30,4 +44,13 @@ test("v3_1/github.json", async () => {
   const code = generateClientFiles(doc);
 
   expect(code).toMatchSnapshot();
+});
+
+test("generatePackage", async () => {
+  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3/petstore.json");
+
+  await generatePackage(doc, "./tests/tmp/packages/petstore", {
+    name: "petstore",
+    version: { major: 1, minor: 0, patch: 0 },
+  });
 });

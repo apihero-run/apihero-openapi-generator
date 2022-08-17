@@ -11,7 +11,6 @@ import {
 import { getRef } from "../common/v3";
 import { getModel, getModelDefault, getPattern, getType } from "../models/v3";
 import camelCase from "camelcase";
-import { pascalCase } from "change-case";
 
 export function getServices(doc: OpenAPIV3.Document): Service[] {
   return (doc.tags || []).map((tag) => getService(doc, tag));
@@ -389,6 +388,13 @@ const getOperationRequestBody = (
     if (content) {
       requestBody.mediaType = content.mediaType;
       switch (requestBody.mediaType) {
+        case "application/octet-stream": {
+          requestBody.in = "body";
+          requestBody.name = "file";
+          requestBody.prop = "file";
+          requestBody.type = "ReadableStream";
+          break;
+        }
         case "application/x-www-form-urlencoded":
         case "multipart/form-data":
           requestBody.in = "formData";
@@ -685,6 +691,7 @@ export const getOperationParameter = (
     prop: parameter.name,
     export: "interface",
     name: getOperationParameterName(parameter.name),
+    originalName: parameter.name,
     type: "any",
     base: "any",
     template: null,

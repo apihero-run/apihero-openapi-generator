@@ -1,17 +1,41 @@
 import { OpenAPI } from "openapi-types";
 import { Client, Enum, Model, Operation, Service } from "./@types";
-import { generateFromClient } from "./generate";
+import { generateFromClient, GenerateClientOptions } from "./generate";
+import { generatePackageFromTypeScriptFiles, GeneratePackageOptions } from "./package";
 import { parseSpec } from "./parse";
 import { format } from "prettier";
 
-export function generateClientFiles(doc: OpenAPI.Document): Map<string, string> {
-  const client = generateClient(doc);
+export { GenerateClientOptions, GeneratePackageOptions };
 
-  return generateClientCode(client);
+export async function generatePackage(
+  doc: OpenAPI.Document,
+  destination: string,
+  options: GeneratePackageOptions,
+): Promise<void> {
+  const typescriptFiles = generateClientFiles(doc, {
+    additionalData: {
+      clientId: options.name,
+      version: `${options.version.major}.${options.version.minor}.${options.version.patch}`,
+    },
+  });
+
+  return generatePackageFromTypeScriptFiles(typescriptFiles, destination, options);
 }
 
-export function generateClientCode(client: Client): Map<string, string> {
-  const files = generateFromClient(client);
+export function generateClientFiles(
+  doc: OpenAPI.Document,
+  options?: GenerateClientOptions,
+): Map<string, string> {
+  const client = generateClient(doc);
+
+  return generateClientCode(client, options);
+}
+
+export function generateClientCode(
+  client: Client,
+  options?: GenerateClientOptions,
+): Map<string, string> {
+  const files = generateFromClient(client, options);
 
   // Format each file
   for (const [name, code] of Array.from(files)) {
