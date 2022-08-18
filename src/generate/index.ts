@@ -29,6 +29,31 @@ export function generateFromClient(
   return files;
 }
 
+export function generateOperationCodeFromClient(client: Client, operationId: string): string {
+  let operation: Operation | undefined;
+
+  for (const service of client.services) {
+    for (const op of service.operations) {
+      if (op.id === operationId) {
+        operation = op;
+        break;
+      }
+    }
+  }
+
+  if (!operation) {
+    throw new Error(`Operation with id ${operationId} not found`);
+  }
+
+  const models = getAllImportsRecursive(operation.imports, client.models);
+
+  const modelCode = generateClientModels(models);
+
+  const operationCode = generateOperation(operation);
+
+  return `${modelCode}\n\n${operationCode}`;
+}
+
 function generateClientIndex(servicesCode: ReturnType<typeof generateClientServices>): string {
   const imports = servicesCode
     .map(([name]) => `import * as ${camelCase(name)} from "./${name}";`)
@@ -59,7 +84,7 @@ function generateClientServiceCode(service: Service, options?: GenerateClientOpt
   const imports = generateServiceImports(service, options?.additionalImports);
 
   return `${imports}\n\n${service.operations
-    .map((operation) => generateOperation(service, operation, options?.additionalData))
+    .map((operation) => generateOperation(operation, options?.additionalData))
     .join("\n\n")}`;
 }
 
@@ -82,7 +107,6 @@ function generateServiceImports(
 }
 
 function generateOperation(
-  service: Service,
   operation: Operation,
   additionalData?: GenerateClientOptions["additionalData"],
 ): string {
@@ -284,3 +308,37 @@ function generateModelProperties(model: Model) {
 function generateIsNullable(property: Model): string {
   return property.isNullable ? " | null" : "";
 }
+
+function getAllImportsRecursive(
+  imports: string[],
+  allModels: Model[],
+  models: Model[] = [],
+): Model[] {
+  const newModels = imports
+    .map((i) => allModels.find((model) => model.name === i))
+    .filter((m) => m !== undefined) as Model[];
+
+  if (newModels.length === 0) {
+    return models;
+  }
+
+  const newImports = newModels
+    .flatMap((m) => m.imports)
+    .filter(unique)
+    .filter((i) => !imports.includes(i))
+    .filter((i) => !models.find((m) => m.name === i))
+    .filter((i) => !newModels.find((m) => m.name === i))
+    .sort(sort);
+
+  return getAllImportsRecursive(newImports, allModels, models.concat(newModels));
+}
+
+const unique = <T>(val: T, index: number, arr: T[]): boolean => {
+  return arr.indexOf(val) === index;
+};
+
+const sort = (a: string, b: string): number => {
+  const nameA = a.toLowerCase();
+  const nameB = b.toLowerCase();
+  return nameA.localeCompare(nameB, "en");
+};

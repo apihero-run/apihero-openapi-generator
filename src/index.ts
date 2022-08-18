@@ -1,6 +1,10 @@
 import { OpenAPI } from "openapi-types";
 import { Client, Enum, Model, Operation, Service } from "./@types";
-import { generateFromClient, GenerateClientOptions } from "./generate";
+import {
+  generateFromClient,
+  GenerateClientOptions,
+  generateOperationCodeFromClient,
+} from "./generate";
 import { generatePackageFromTypeScriptFiles, GeneratePackageOptions } from "./package";
 import { parseSpec } from "./parse";
 import { format } from "prettier";
@@ -45,6 +49,14 @@ export function generateClientCode(
   return files;
 }
 
+export function generateOperationCode(doc: OpenAPI.Document, operationId: string): string {
+  const client = generateClient(doc);
+
+  const code = generateOperationCodeFromClient(client, operationId);
+
+  return format(code, { parser: "typescript", printWidth: 100 });
+}
+
 export function generateClient(doc: OpenAPI.Document): Client {
   return postProcessClient(parseSpec(doc));
 }
@@ -85,12 +97,15 @@ export const postProcessServiceOperations = (service: Service): Operation[] => {
   const names = new Map<string, number>();
 
   return service.operations.map((operation) => {
-    const clone = { ...operation };
+    const clone = JSON.parse(JSON.stringify(operation)) as Operation;
 
     // Parse the service parameters and results, very similar to how we parse
     // properties of models. These methods will extend the type if needed.
     clone.imports.push(...flatMap(clone.parameters, (parameter) => parameter.imports));
     clone.imports.push(...flatMap(clone.results, (result) => result.imports));
+
+    // Make sure the imports are unique
+    clone.imports = clone.imports.filter(unique).sort(sort);
 
     // Check if the operation name is unique, if not then prefix this with a number
     const name = clone.name;

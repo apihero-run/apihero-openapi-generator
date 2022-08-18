@@ -1,4 +1,4 @@
-import { generateClientFiles, generatePackage } from "../src";
+import { generateClientFiles, generatePackage, generateOperationCode } from "../src";
 import { OpenAPI } from "openapi-types";
 import { readFile } from "fs/promises";
 
@@ -42,6 +42,14 @@ test("v3_1/github.json", async () => {
   const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3_1/github.json");
 
   const code = generateClientFiles(doc);
+
+  expect(code).toMatchSnapshot();
+});
+
+test("v3_1/github.json generateOperationCode", async () => {
+  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3_1/github.json");
+
+  const code = generateOperationCode(doc, "repos/get");
 
   expect(code).toMatchSnapshot();
 });
