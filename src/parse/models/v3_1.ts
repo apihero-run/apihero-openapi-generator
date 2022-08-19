@@ -103,7 +103,9 @@ function getSchemaModel(
     deprecated: schema.deprecated,
   };
 
-  if (schema.enum && schema.type !== "boolean") {
+  const schemaType = getSchemaType(schema.type);
+
+  if (schema.enum && schemaType !== "boolean") {
     const enumerators = getEnum(schema.enum);
     const extendedEnumerators = extendEnum(enumerators, schema as WithEnumExtension);
     if (extendedEnumerators.length) {
@@ -115,7 +117,7 @@ function getSchemaModel(
     }
   }
 
-  if (schema.type === "array" && schema.items) {
+  if (schemaType === "array" && "items" in schema && schema.items) {
     if ("$ref" in schema.items) {
       const arrayItems = getType(schema.items.$ref);
 
@@ -140,7 +142,7 @@ function getSchemaModel(
     }
   }
 
-  if (schema.type === "object" && typeof schema.additionalProperties === "object") {
+  if (schemaType === "object" && typeof schema.additionalProperties === "object") {
     if ("$ref" in schema.additionalProperties) {
       const additionalProperties = getType(schema.additionalProperties.$ref);
 
@@ -149,7 +151,7 @@ function getSchemaModel(
       model.base = additionalProperties.base;
       model.template = additionalProperties.template;
       model.imports.push(...additionalProperties.imports);
-      model.default = getModelDefault(schema, model);
+      model.default = getModelDefault(schema as OpenAPIV3_1.NonArraySchemaObject, model);
 
       return model;
     } else {
@@ -161,7 +163,7 @@ function getSchemaModel(
       model.template = additionalProperties.template;
       model.link = additionalProperties;
       model.imports.push(...additionalProperties.imports);
-      model.default = getModelDefault(schema, model);
+      model.default = getModelDefault(schema as OpenAPIV3_1.NonArraySchemaObject, model);
 
       return model;
     }
@@ -194,13 +196,13 @@ function getSchemaModel(
     return model;
   }
 
-  if (schema.type === "object") {
+  if (schemaType === "object") {
     model.export = "interface";
     model.type = "any";
     model.base = "any";
 
     if (schema.properties) {
-      const modelProperties = getModelProperties(doc, schema);
+      const modelProperties = getModelProperties(doc, schema as OpenAPIV3_1.NonArraySchemaObject);
 
       modelProperties.forEach((modelProperty) => {
         model.imports.push(...modelProperty.imports);
@@ -216,7 +218,7 @@ function getSchemaModel(
   }
 
   // If the schema has a type than it can be a basic or generic type.
-  if (schema.type) {
+  if (schemaType) {
     const definitionType = getType(schema.type, schema.format);
     model.export = "generic";
     model.type = definitionType.type;
@@ -558,6 +560,16 @@ export const getMappedType = (type: string, format?: string): string | undefined
   }
   return TYPE_MAPPINGS.get(type);
 };
+
+export function getSchemaType(
+  type: OpenAPIV3_1.SchemaObject["type"],
+): OpenAPIV3_1.ArraySchemaObjectType | OpenAPIV3_1.NonArraySchemaObjectType | undefined {
+  if (Array.isArray(type)) {
+    return type.find((t) => t !== "null");
+  }
+
+  return type;
+}
 
 export function getType(type: string | string[] = "any", format?: string): Type {
   const encode = (value: string): string => {

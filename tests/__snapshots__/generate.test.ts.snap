@@ -30223,7 +30223,7 @@ export type Issue = {
   assignee: null | SimpleUser;
   comments: number;
   html_url: string;
-  assignees?: any[];
+  assignees?: Array<SimpleUser>;
   body_html?: string;
   body_text?: string;
   closed_at: string;
@@ -30733,7 +30733,17 @@ export type Artifact = {
   created_at: string;
   expires_at: string;
   updated_at: string;
-  workflow_run?: any;
+  workflow_run?: {
+    id?: number;
+
+    head_sha?: string;
+
+    head_branch?: string;
+
+    repository_id?: number;
+
+    head_repository_id?: number;
+  };
 
   /**
    * The size in bytes of the artifact.
@@ -31045,7 +31055,9 @@ export type CheckRun = {
     | \\"action_required\\";
   deployment?: DeploymentSimple;
   started_at: string;
-  check_suite: any;
+  check_suite: {
+    id: number;
+  };
   details_url: string;
   external_id: string;
   completed_at: string;
@@ -31195,7 +31207,7 @@ export type Codespace = {
     /**
      * The privacy settings a user can select from when forwarding a port.
      */
-    allowed_port_privacy_settings?: any[];
+    allowed_port_privacy_settings?: Array<string>;
   };
 
   /**
@@ -31417,7 +31429,24 @@ export type TeamFull = {
 /**
  * The status of auto merging a pull request.
  */
-export type AutoMerge = any | null;
+export type AutoMerge = {
+  enabled_by: SimpleUser;
+
+  /**
+   * Title for the merge commit message.
+   */
+  commit_title: string;
+
+  /**
+   * The merge method to use.
+   */
+  merge_method: \\"merge\\" | \\"squash\\" | \\"rebase\\";
+
+  /**
+   * Commit message for the merge commit.
+   */
+  commit_message: string;
+};
 
 /**
  * A single package dependency.
@@ -31847,7 +31876,219 @@ export type Repository = {
    * Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
    */
   allow_update_branch?: boolean;
-  template_repository?: any;
+  template_repository?: {
+    id?: number;
+
+    url?: string;
+
+    fork?: boolean;
+
+    name?: string;
+
+    size?: number;
+
+    owner?: {
+      id?: number;
+
+      url?: string;
+
+      type?: string;
+
+      login?: string;
+
+      node_id?: string;
+
+      html_url?: string;
+
+      gists_url?: string;
+
+      repos_url?: string;
+
+      avatar_url?: string;
+
+      events_url?: string;
+
+      site_admin?: boolean;
+
+      gravatar_id?: string;
+
+      starred_url?: string;
+
+      followers_url?: string;
+
+      following_url?: string;
+
+      organizations_url?: string;
+
+      subscriptions_url?: string;
+
+      received_events_url?: string;
+    };
+
+    topics?: Array<string>;
+
+    git_url?: string;
+
+    node_id?: string;
+
+    private?: boolean;
+
+    ssh_url?: string;
+
+    svn_url?: string;
+
+    archived?: boolean;
+
+    disabled?: boolean;
+
+    has_wiki?: boolean;
+
+    homepage?: string;
+
+    html_url?: string;
+
+    keys_url?: string;
+
+    language?: string;
+
+    tags_url?: string;
+
+    blobs_url?: string;
+
+    clone_url?: string;
+
+    forks_url?: string;
+
+    full_name?: string;
+
+    has_pages?: boolean;
+
+    hooks_url?: string;
+
+    pulls_url?: string;
+
+    pushed_at?: string;
+
+    teams_url?: string;
+
+    trees_url?: string;
+
+    created_at?: string;
+
+    events_url?: string;
+
+    has_issues?: boolean;
+
+    issues_url?: string;
+
+    labels_url?: string;
+
+    merges_url?: string;
+
+    mirror_url?: string;
+
+    updated_at?: string;
+
+    visibility?: string;
+
+    archive_url?: string;
+
+    commits_url?: string;
+
+    compare_url?: string;
+
+    description?: string;
+
+    forks_count?: number;
+
+    is_template?: boolean;
+
+    permissions?: {
+      pull?: boolean;
+
+      push?: boolean;
+
+      admin?: boolean;
+
+      triage?: boolean;
+
+      maintain?: boolean;
+    };
+
+    branches_url?: string;
+
+    comments_url?: string;
+
+    contents_url?: string;
+
+    git_refs_url?: string;
+
+    git_tags_url?: string;
+
+    has_projects?: boolean;
+
+    releases_url?: string;
+
+    statuses_url?: string;
+
+    assignees_url?: string;
+
+    downloads_url?: string;
+
+    has_downloads?: boolean;
+
+    languages_url?: string;
+
+    network_count?: number;
+
+    default_branch?: string;
+
+    milestones_url?: string;
+
+    stargazers_url?: string;
+
+    watchers_count?: number;
+
+    deployments_url?: string;
+
+    git_commits_url?: string;
+
+    subscribers_url?: string;
+
+    allow_auto_merge?: boolean;
+
+    contributors_url?: string;
+
+    issue_events_url?: string;
+
+    stargazers_count?: number;
+
+    subscription_url?: string;
+
+    temp_clone_token?: string;
+
+    collaborators_url?: string;
+
+    issue_comment_url?: string;
+
+    notifications_url?: string;
+
+    open_issues_count?: number;
+
+    subscribers_count?: number;
+
+    allow_merge_commit?: boolean;
+
+    allow_rebase_merge?: boolean;
+
+    allow_squash_merge?: boolean;
+
+    allow_update_branch?: boolean;
+
+    delete_branch_on_merge?: boolean;
+
+    use_squash_pr_title_as_default?: boolean;
+  };
 
   /**
    * Whether to delete head branches when pull requests are merged
@@ -31924,7 +32165,7 @@ export type CheckSuite = {
   updated_at: string;
   head_branch: string;
   head_commit: SimpleCommit;
-  pull_requests: any[];
+  pull_requests: Array<PullRequestMinimal>;
   rerequestable?: boolean;
   check_runs_url: string;
   runs_rerequestable?: boolean;
@@ -32076,7 +32317,33 @@ export type FileCommit = {
       signature?: string;
     };
   };
-  content: any;
+  content: {
+    sha?: string;
+
+    url?: string;
+
+    name?: string;
+
+    path?: string;
+
+    size?: number;
+
+    type?: string;
+
+    _links?: {
+      git?: string;
+
+      html?: string;
+
+      self?: string;
+    };
+
+    git_url?: string;
+
+    html_url?: string;
+
+    download_url?: string;
+  };
 };
 
 /**
@@ -32103,24 +32370,104 @@ export type GistSimple = {
   id?: string;
   url?: string;
   user?: string;
-  files?: Record<string, any | null>;
+  files?: Record<
+    string,
+    {
+      size?: number;
+
+      type?: string;
+
+      content?: string;
+
+      raw_url?: string;
+
+      filename?: string;
+
+      language?: string;
+
+      truncated?: boolean;
+    } | null
+  >;
 
   /**
    * @deprecated
    */
-  forks?: any[];
+  forks?: Array<{
+    id?: string;
+
+    url?: string;
+
+    user?: PublicUser;
+
+    created_at?: string;
+
+    updated_at?: string;
+  }>;
   owner?: SimpleUser;
   public?: boolean;
 
   /**
    * Gist
    */
-  fork_of?: any;
+  fork_of?: {
+    id: string;
+
+    url: string;
+
+    user: null | SimpleUser;
+
+    files: Record<
+      string,
+      {
+        size?: number;
+
+        type?: string;
+
+        raw_url?: string;
+
+        filename?: string;
+
+        language?: string;
+      }
+    >;
+
+    forks?: Array<{}>;
+
+    owner?: null | SimpleUser;
+
+    public: boolean;
+
+    history?: Array<{}>;
+
+    node_id: string;
+
+    comments: number;
+
+    html_url: string;
+
+    forks_url: string;
+
+    truncated?: boolean;
+
+    created_at: string;
+
+    updated_at: string;
+
+    commits_url: string;
+
+    description: string;
+
+    comments_url: string;
+
+    git_pull_url: string;
+
+    git_push_url: string;
+  };
 
   /**
    * @deprecated
    */
-  history?: any[];
+  history?: Array<GistHistory>;
   node_id?: string;
   comments?: number;
   html_url?: string;
@@ -32926,7 +33273,232 @@ export type PullRequest = {
 
     sha: string;
 
-    repo: any;
+    repo: {
+      id: number;
+
+      url: string;
+
+      fork: boolean;
+
+      name: string;
+
+      size: number;
+
+      forks: number;
+
+      owner: {
+        id: number;
+
+        url: string;
+
+        type: string;
+
+        login: string;
+
+        node_id: string;
+
+        html_url: string;
+
+        gists_url: string;
+
+        repos_url: string;
+
+        avatar_url: string;
+
+        events_url: string;
+
+        site_admin: boolean;
+
+        gravatar_id: string;
+
+        starred_url: string;
+
+        followers_url: string;
+
+        following_url: string;
+
+        organizations_url: string;
+
+        subscriptions_url: string;
+
+        received_events_url: string;
+      };
+
+      topics?: Array<string>;
+
+      git_url: string;
+
+      license: {
+        key: string;
+
+        url: string;
+
+        name: string;
+
+        node_id: string;
+
+        spdx_id: string;
+      };
+
+      node_id: string;
+
+      private: boolean;
+
+      ssh_url: string;
+
+      svn_url: string;
+
+      archived: boolean;
+
+      disabled: boolean;
+
+      has_wiki: boolean;
+
+      homepage: string;
+
+      html_url: string;
+
+      keys_url: string;
+
+      language: string;
+
+      tags_url: string;
+
+      watchers: number;
+
+      blobs_url: string;
+
+      clone_url: string;
+
+      forks_url: string;
+
+      full_name: string;
+
+      has_pages: boolean;
+
+      hooks_url: string;
+
+      pulls_url: string;
+
+      pushed_at: string;
+
+      teams_url: string;
+
+      trees_url: string;
+
+      created_at: string;
+
+      events_url: string;
+
+      has_issues: boolean;
+
+      issues_url: string;
+
+      labels_url: string;
+
+      merges_url: string;
+
+      mirror_url: string;
+
+      updated_at: string;
+
+      /**
+       * The repository visibility: public, private, or internal.
+       */
+      visibility?: string;
+
+      archive_url: string;
+
+      commits_url: string;
+
+      compare_url: string;
+
+      description: string;
+
+      forks_count: number;
+
+      is_template?: boolean;
+
+      open_issues: number;
+
+      permissions?: {
+        pull: boolean;
+
+        push: boolean;
+
+        admin: boolean;
+
+        triage?: boolean;
+
+        maintain?: boolean;
+      };
+
+      branches_url: string;
+
+      comments_url: string;
+
+      contents_url: string;
+
+      git_refs_url: string;
+
+      git_tags_url: string;
+
+      has_projects: boolean;
+
+      releases_url: string;
+
+      statuses_url: string;
+
+      allow_forking?: boolean;
+
+      assignees_url: string;
+
+      downloads_url: string;
+
+      has_downloads: boolean;
+
+      languages_url: string;
+
+      master_branch?: string;
+
+      default_branch: string;
+
+      milestones_url: string;
+
+      stargazers_url: string;
+
+      watchers_count: number;
+
+      deployments_url: string;
+
+      git_commits_url: string;
+
+      subscribers_url: string;
+
+      contributors_url: string;
+
+      issue_events_url: string;
+
+      stargazers_count: number;
+
+      subscription_url: string;
+
+      temp_clone_token?: string;
+
+      collaborators_url: string;
+
+      issue_comment_url: string;
+
+      notifications_url: string;
+
+      open_issues_count: number;
+
+      allow_merge_commit?: boolean;
+
+      allow_rebase_merge?: boolean;
+
+      allow_squash_merge?: boolean;
+    };
 
     user: {
       id: number;
@@ -33030,7 +33602,7 @@ export type PullRequest = {
   diff_url: string;
   html_url: string;
   additions: number;
-  assignees?: any[];
+  assignees?: Array<SimpleUser>;
   closed_at: string;
   deletions: number;
   issue_url: string;
@@ -33048,13 +33620,13 @@ export type PullRequest = {
   statuses_url: string;
   changed_files: number;
   mergeable_state: string;
-  requested_teams?: any[];
+  requested_teams?: Array<TeamSimple>;
   review_comments: number;
   merge_commit_sha: string;
   active_lock_reason?: string;
   author_association: AuthorAssociation;
   review_comment_url: string;
-  requested_reviewers?: any[];
+  requested_reviewers?: Array<SimpleUser>;
   review_comments_url: string;
 
   /**
@@ -33234,7 +33806,7 @@ export type WorkflowRun = {
    * The URL to the artifacts for the workflow run.
    */
   artifacts_url: string;
-  pull_requests: any[];
+  pull_requests: Array<PullRequestMinimal>;
 
   /**
    * The ID of the associated check suite.
@@ -33263,7 +33835,7 @@ export type WorkflowRun = {
    * The URL to the previous attempted run of this workflow, if one exists.
    */
   previous_attempt_url?: string;
-  referenced_workflows?: any[];
+  referenced_workflows?: Array<ReferencedWorkflow>;
 };
 
 /**
@@ -33286,7 +33858,7 @@ export type Authorization = {
   /**
    * A list of scopes that this authorization is in.
    */
-  scopes: any[];
+  scopes: Array<string>;
   note_url: string;
   created_at: string;
   expires_at: string;
@@ -33378,12 +33950,12 @@ export type HookDelivery = {
     /**
      * The request headers sent with the webhook delivery.
      */
-    headers: any;
+    headers: {};
 
     /**
      * The webhook payload.
      */
-    payload: any;
+    payload: {};
   };
 
   /**
@@ -33394,7 +33966,7 @@ export type HookDelivery = {
     /**
      * The response headers received when the delivery was made.
      */
-    headers: any;
+    headers: {};
 
     /**
      * The response payload received.
@@ -33510,10 +34082,18 @@ export type ReleaseAsset = {
  */
 export type SimpleCommit = {
   id: string;
-  author: any;
+  author: {
+    name: string;
+
+    email: string;
+  };
   message: string;
   tree_id: string;
-  committer: any;
+  committer: {
+    name: string;
+
+    email: string;
+  };
   timestamp: string;
 };
 
@@ -34737,7 +35317,7 @@ export type ValidationError = {
 
     index?: number;
 
-    value?: string | null | number | null | any[] | null;
+    value?: string | null | number | null | Array<string> | null;
 
     message?: string;
 
@@ -35675,7 +36255,17 @@ export type MinimalRepository = {
   owner: SimpleUser;
   topics?: Array<string>;
   git_url?: string;
-  license?: any;
+  license?: {
+    key?: string;
+
+    url?: string;
+
+    name?: string;
+
+    node_id?: string;
+
+    spdx_id?: string;
+  };
   node_id: string;
   private: boolean;
   ssh_url?: string;
@@ -35824,7 +36414,63 @@ export type PagesHealthCheck = {
 
     is_cname_to_pages_dot_github_dot_com?: boolean;
   };
-  alt_domain?: any;
+  alt_domain?: {
+    uri?: string;
+
+    host?: string;
+
+    reason?: string;
+
+    is_valid?: boolean;
+
+    caa_error?: string;
+
+    is_proxied?: boolean;
+
+    https_error?: string;
+
+    is_a_record?: boolean;
+
+    nameservers?: string;
+
+    dns_resolves?: boolean;
+
+    is_fastly_ip?: boolean;
+
+    enforces_https?: boolean;
+
+    is_apex_domain?: boolean;
+
+    is_pages_domain?: boolean;
+
+    is_valid_domain?: boolean;
+
+    has_cname_record?: boolean;
+
+    is_cloudflare_ip?: boolean;
+
+    is_https_eligible?: boolean;
+
+    is_old_ip_address?: boolean;
+
+    responds_to_https?: boolean;
+
+    is_cname_to_fastly?: boolean;
+
+    is_served_by_pages?: boolean;
+
+    should_be_a_record?: boolean;
+
+    has_mx_records_present?: boolean;
+
+    is_pointed_to_github_pages_ip?: boolean;
+
+    is_cname_to_github_user_domain?: boolean;
+
+    is_non_github_pages_ip_present?: boolean;
+
+    is_cname_to_pages_dot_github_dot_com?: boolean;
+  };
 };
 
 /**
@@ -36140,7 +36786,7 @@ export type PullRequestSimple = {
   assignee: null | SimpleUser;
   diff_url: string;
   html_url: string;
-  assignees?: any[];
+  assignees?: Array<SimpleUser>;
   closed_at: string;
   issue_url: string;
   merged_at: string;
@@ -36152,12 +36798,12 @@ export type PullRequestSimple = {
   commits_url: string;
   comments_url: string;
   statuses_url: string;
-  requested_teams?: any[];
+  requested_teams?: Array<Team>;
   merge_commit_sha: string;
   active_lock_reason?: string;
   author_association: AuthorAssociation;
   review_comment_url: string;
-  requested_reviewers?: any[];
+  requested_reviewers?: Array<SimpleUser>;
   review_comments_url: string;
 };
 
@@ -36365,7 +37011,17 @@ export type MarketplacePurchase = {
 
     free_trial_ends_on?: string;
   };
-  marketplace_pending_change?: any;
+  marketplace_pending_change?: {
+    id?: number;
+
+    plan?: MarketplaceListingPlan;
+
+    unit_count?: number;
+
+    is_installed?: boolean;
+
+    effective_date?: string;
+  };
   organization_billing_email?: string;
 };
 
@@ -36808,7 +37464,17 @@ For a list of built-in patterns, see \\"[Secret scanning patterns](https://docs.
   push_protection_bypassed_by?: null | SimpleUser;
 };
 
-export type SecurityAndAnalysis = any | null;
+export type SecurityAndAnalysis = {
+  secret_scanning?: {
+    status?: \\"enabled\\" | \\"disabled\\";
+  };
+  advanced_security?: {
+    status?: \\"enabled\\" | \\"disabled\\";
+  };
+  secret_scanning_push_protection?: {
+    status?: \\"enabled\\" | \\"disabled\\";
+  };
+};
 
 /**
  * Timeline Event
@@ -37399,7 +38065,7 @@ export type CodeScanningAlertRule = {
   /**
    * A set of tags applicable for the rule.
    */
-  tags?: any[];
+  tags?: Array<string>;
 
   /**
    * The severity of the alert.
@@ -37544,7 +38210,17 @@ export type DemilestonedIssueEvent = {
 /**
  * The type of deployment branch policy for this environment. To allow all branches to deploy, set to \`null\`.
  */
-export type DeploymentBranchPolicy = any | null;
+export type DeploymentBranchPolicy = {
+  /**
+   * Whether only branches with branch protection rules can deploy to this environment. If \`protected_branches\` is \`true\`, \`custom_branch_policies\` must be \`false\`; if \`protected_branches\` is \`false\`, \`custom_branch_policies\` must be \`true\`.
+   */
+  protected_branches: boolean;
+
+  /**
+   * Whether only branches that match the specified name patterns can deploy to this environment.  If \`custom_branch_policies\` is \`true\`, \`protected_branches\` must be \`false\`; if \`custom_branch_policies\` is \`false\`, \`protected_branches\` must be \`true\`.
+   */
+  custom_branch_policies: boolean;
+};
 
 /**
  * The type of reviewer.
@@ -37596,7 +38272,7 @@ export type IssueSearchResultItem = {
   assignee: null | SimpleUser;
   comments: number;
   html_url: string;
-  assignees?: any[];
+  assignees?: Array<SimpleUser>;
   body_html?: string;
   body_text?: string;
   closed_at: string;
@@ -37803,9 +38479,29 @@ export type TimelineCommittedEvent = {
 export type TopicSearchResultItem = {
   name: string;
   score: number;
-  aliases?: any[];
+  aliases?: Array<{
+    topic_relation?: {
+      id?: number;
+
+      name?: string;
+
+      topic_id?: number;
+
+      relation_type?: string;
+    };
+  }>;
   curated: boolean;
-  related?: any[];
+  related?: Array<{
+    topic_relation?: {
+      id?: number;
+
+      name?: string;
+
+      topic_id?: number;
+
+      relation_type?: string;
+    };
+  }>;
   featured: boolean;
   logo_url?: string;
   released: string;
@@ -38199,7 +38895,7 @@ export type CodeScanningSarifsStatus = {
   /**
    * Any errors that ocurred during processing of the delivery.
    */
-  readonly errors?: any[];
+  readonly errors?: Array<string>;
 
   /**
    * The REST API URL for getting the analyses associated with the upload.
@@ -38744,7 +39440,7 @@ export type CodeScanningAlertRuleSummary = {
   /**
    * A set of tags applicable for the rule.
    */
-  tags?: any[];
+  tags?: Array<string>;
 
   /**
    * The severity of the alert.
@@ -40143,7 +40839,17 @@ export const getRepoPublicKey: ApiHeroEndpoint<{ owner: string; repo: string }, 
  * Re-run a job and its dependent jobs in a workflow run. You must authenticate using an access token with the \`repo\` scope to use this endpoint. GitHub Apps must have the \`actions:write\` permission to use this endpoint.
  */
 export const reRunJobForWorkflowRun: ApiHeroEndpoint<
-  { owner: string; repo: string; jobId: number; body?: any | null },
+  {
+    owner: string;
+    repo: string;
+    jobId: number;
+    body?: {
+      /**
+       * Whether to enable debug logging for the re-run.
+       */
+      enable_debug_logging?: boolean;
+    } | null;
+  },
   EmptyObject
 > = {
   id: \\"actions/re-run-job-for-workflow-run\\",
@@ -40182,7 +40888,17 @@ export const deleteSelfHostedRunnerFromRepo: ApiHeroEndpoint<
  * Re-runs your workflow run using its \`id\`. You must authenticate using an access token with the \`repo\` scope to use this endpoint. GitHub Apps must have the \`actions:write\` permission to use this endpoint.
  */
 export const reRunWorkflow: ApiHeroEndpoint<
-  { owner: string; repo: string; runId: number; body?: any | null },
+  {
+    owner: string;
+    repo: string;
+    runId: number;
+    body?: {
+      /**
+       * Whether to enable debug logging for the re-run.
+       */
+      enable_debug_logging?: boolean;
+    } | null;
+  },
   {}
 > = {
   id: \\"actions/re-run-workflow\\",
@@ -40944,7 +41660,17 @@ export const getWorkflowUsage: ApiHeroEndpoint<
  * Re-run all of the failed jobs and their dependent jobs in a workflow run using the \`id\` of the workflow run. You must authenticate using an access token with the \`repo\` scope to use this endpoint.
  */
 export const reRunWorkflowFailedJobs: ApiHeroEndpoint<
-  { owner: string; repo: string; runId: number; body?: any | null },
+  {
+    owner: string;
+    repo: string;
+    runId: number;
+    body?: {
+      /**
+       * Whether to enable debug logging for the re-run.
+       */
+      enable_debug_logging?: boolean;
+    } | null;
+  },
   EmptyObject
 > = {
   id: \\"actions/re-run-workflow-failed-jobs\\",
@@ -43709,7 +44435,61 @@ export const listInRepositoryForAuthenticatedUser: ApiHeroEndpoint<
  * GitHub Apps must have write access to the \`codespaces\` repository permission to use this endpoint.
  */
 export const createWithRepoForAuthenticatedUser: ApiHeroEndpoint<
-  { owner: string; repo: string; body: any | null },
+  {
+    owner: string;
+    repo: string;
+    body: {
+      /**
+       * Git ref (typically a branch name) for this codespace
+       */
+      ref?: string;
+
+      /**
+       * Machine type to use for this codespace
+       */
+      machine?: string;
+
+      /**
+       * Location for this codespace. Assigned by IP if not provided
+       */
+      location?: string;
+
+      /**
+       * IP for location auto-detection when proxying a request
+       */
+      client_ip?: string;
+
+      /**
+       * Display name for this codespace
+       */
+      display_name?: string;
+
+      /**
+       * Path to devcontainer.json config to use for this codespace
+       */
+      devcontainer_path?: string;
+
+      /**
+       * Working directory for this codespace
+       */
+      working_directory?: string;
+
+      /**
+       * Time in minutes before codespace stops from inactivity
+       */
+      idle_timeout_minutes?: number;
+
+      /**
+       * Duration in minutes after codespace has gone idle in which it will be deleted. Must be integer minutes between 0 and 43200 (30 days).
+       */
+      retention_period_minutes?: number;
+
+      /**
+       * Whether to authorize requested permissions from devcontainer.json
+       */
+      multi_repo_permissions_opt_out?: boolean;
+    } | null;
+  },
   Codespace
 > = {
   id: \\"codespaces/create-with-repo-for-authenticated-user\\",
@@ -44119,7 +44899,57 @@ export const setRepositoriesForSecretForAuthenticatedUser: ApiHeroEndpoint<
  * GitHub Apps must have write access to the \`codespaces\` repository permission to use this endpoint.
  */
 export const createWithPrForAuthenticatedUser: ApiHeroEndpoint<
-  { owner: string; repo: string; pullNumber: number; body: any | null },
+  {
+    owner: string;
+    repo: string;
+    pullNumber: number;
+    body: {
+      /**
+       * Machine type to use for this codespace
+       */
+      machine?: string;
+
+      /**
+       * Location for this codespace. Assigned by IP if not provided
+       */
+      location?: string;
+
+      /**
+       * IP for location auto-detection when proxying a request
+       */
+      client_ip?: string;
+
+      /**
+       * Display name for this codespace
+       */
+      display_name?: string;
+
+      /**
+       * Path to devcontainer.json config to use for this codespace
+       */
+      devcontainer_path?: string;
+
+      /**
+       * Working directory for this codespace
+       */
+      working_directory?: string;
+
+      /**
+       * Time in minutes before codespace stops from inactivity
+       */
+      idle_timeout_minutes?: number;
+
+      /**
+       * Duration in minutes after codespace has gone idle in which it will be deleted. Must be integer minutes between 0 and 43200 (30 days).
+       */
+      retention_period_minutes?: number;
+
+      /**
+       * Whether to authorize requested permissions from devcontainer.json
+       */
+      multi_repo_permissions_opt_out?: boolean;
+    } | null;
+  },
   Codespace
 > = {
   id: \\"codespaces/create-with-pr-for-authenticated-user\\",
@@ -47038,7 +47868,21 @@ export const getEvent: ApiHeroEndpoint<
  * Note that, if you choose not to pass any parameters, you'll need to set \`Content-Length\` to zero when calling out to this endpoint. For more information, see \\"[HTTP verbs](https://docs.github.com/rest/overview/resources-in-the-rest-api#http-verbs).\\"
  */
 export const lock: ApiHeroEndpoint<
-  { owner: string; repo: string; issueNumber: number; body?: any | null },
+  {
+    owner: string;
+    repo: string;
+    issueNumber: number;
+    body?: {
+      /** 
+* The reason for locking the issue or pull request conversation. Lock will fail if you don't use one of these reasons:  
+\\\\* \`off-topic\`  
+\\\\* \`too heated\`  
+\\\\* \`resolved\`  
+\\\\* \`spam\`
+*/
+      lock_reason?: \\"off-topic\\" | \\"too heated\\" | \\"resolved\\" | \\"spam\\";
+    } | null;
+  },
   void
 > = {
   id: \\"issues/lock\\",
@@ -47691,7 +48535,31 @@ export const cancelImport: ApiHeroEndpoint<{ owner: string; repo: string }, void
  * You can select the project to import by providing one of the objects in the \`project_choices\` array in the update request.
  */
 export const updateImport: ApiHeroEndpoint<
-  { owner: string; repo: string; body?: any | null },
+  {
+    owner: string;
+    repo: string;
+    body?: {
+      /**
+       * The type of version control system you are migrating from.
+       */
+      vcs?: \\"subversion\\" | \\"tfvc\\" | \\"git\\" | \\"mercurial\\";
+
+      /**
+       * For a tfvc import, the name of the project that is being imported.
+       */
+      tfvc_project?: string;
+
+      /**
+       * The password to provide to the originating repository.
+       */
+      vcs_password?: string;
+
+      /**
+       * The username to provide to the originating repository.
+       */
+      vcs_username?: string;
+    } | null;
+  },
   Import
 > = {
   id: \\"migrations/update-import\\",
@@ -47937,7 +48805,7 @@ export const createAuthorization: ApiHeroEndpoint<
       /**
        * A list of scopes that this authorization is in.
        */
-      scopes?: any[];
+      scopes?: Array<string>;
 
       /**
        * A URL to remind you what app the OAuth token is for.
@@ -48032,7 +48900,7 @@ export const updateAuthorization: ApiHeroEndpoint<
       /**
        * A list of scopes that this authorization is in.
        */
-      scopes?: any[];
+      scopes?: Array<string>;
 
       /**
        * A URL to remind you what app the OAuth token is for.
@@ -48084,7 +48952,7 @@ export const getOrCreateAuthorizationForApp: ApiHeroEndpoint<
       /**
        * A list of scopes that this authorization is in.
        */
-      scopes?: any[];
+      scopes?: Array<string>;
 
       /**
        * A URL to remind you what app the OAuth token is for.
@@ -48130,7 +48998,7 @@ export const getOrCreateAuthorizationForAppAndFingerprint: ApiHeroEndpoint<
       /**
        * A list of scopes that this authorization is in.
        */
-      scopes?: any[];
+      scopes?: Array<string>;
 
       /**
        * A URL to remind you what app the OAuth token is for.
@@ -49839,7 +50707,16 @@ export const moveCard: ApiHeroEndpoint<
  * Adds a collaborator to an organization project and sets their permission level. You must be an organization owner or a project \`admin\` to add a collaborator.
  */
 export const addCollaborator: ApiHeroEndpoint<
-  { username: string; projectId: number; body?: any | null },
+  {
+    username: string;
+    projectId: number;
+    body?: {
+      /**
+       * The permission to grant the collaborator.
+       */
+      permission?: \\"read\\" | \\"write\\" | \\"admin\\";
+    } | null;
+  },
   void
 > = {
   id: \\"projects/add-collaborator\\",
@@ -50064,7 +50941,32 @@ export const checkIfMerged: ApiHeroEndpoint<
  * This endpoint triggers [notifications](https://docs.github.com/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. See \\"[Secondary rate limits](https://docs.github.com/rest/overview/resources-in-the-rest-api#secondary-rate-limits)\\" and \\"[Dealing with secondary rate limits](https://docs.github.com/rest/guides/best-practices-for-integrators#dealing-with-secondary-rate-limits)\\" for details.
  */
 export const merge: ApiHeroEndpoint<
-  { owner: string; repo: string; pullNumber: number; body?: any | null },
+  {
+    owner: string;
+    repo: string;
+    pullNumber: number;
+    body?: {
+      /**
+       * SHA that pull request head must match to allow merge.
+       */
+      sha?: string;
+
+      /**
+       * Title for the automatic commit message.
+       */
+      commit_title?: string;
+
+      /**
+       * Merge method to use. Possible values are \`merge\`, \`squash\` or \`rebase\`. Default is \`merge\`.
+       */
+      merge_method?: \\"merge\\" | \\"squash\\" | \\"rebase\\";
+
+      /**
+       * Extra detail to append to automatic commit message.
+       */
+      commit_message?: string;
+    } | null;
+  },
   PullRequestMergeResult
 > = {
   id: \\"pulls/merge\\",
@@ -50294,7 +51196,17 @@ export const createReviewComment: ApiHeroEndpoint<
  * Updates the pull request branch with the latest upstream changes by merging HEAD from the base branch into the pull request branch.
  */
 export const updateBranch: ApiHeroEndpoint<
-  { owner: string; repo: string; pullNumber: number; body?: any | null },
+  {
+    owner: string;
+    repo: string;
+    pullNumber: number;
+    body?: {
+      /**
+       * The expected SHA of the pull request's HEAD ref. This is the most recent commit on the pull request's branch. If the expected SHA does not match the pull request's HEAD, you will receive a \`422 Unprocessable Entity\` status. You can use the \\"[List commits](https://docs.github.com/rest/reference/repos#list-commits)\\" endpoint to find the most recent commit SHA. Default: SHA of the pull request's current HEAD ref.
+       */
+      expected_head_sha?: string;
+    } | null;
+  },
   {
     url?: string;
 
@@ -51003,6 +51915,8 @@ export const deleteForTeamDiscussionComment: ApiHeroEndpoint<
   ContributorActivity,
   DeployKey,
   Deployment,
+  DeploymentBranchPolicy,
+  DeploymentReviewerType,
   DeploymentStatus,
   EmptyObject,
   Environment,
@@ -51041,6 +51955,7 @@ export const deleteForTeamDiscussionComment: ApiHeroEndpoint<
   Team,
   Topic,
   ViewTraffic,
+  WaitTimer,
   WebhookConfig,
   WebhookConfigContentType,
   WebhookConfigInsecureSsl,
@@ -51445,7 +52360,37 @@ export const update: ApiHeroEndpoint<
       /**
        * Specify which security and analysis features to enable or disable. For example, to enable GitHub Advanced Security, use this data in the body of the PATCH request: \`{\\"security_and_analysis\\": {\\"advanced_security\\": {\\"status\\": \\"enabled\\"}}}\`. If you have admin permissions for a private repository covered by an Advanced Security license, you can check which security and analysis features are currently enabled by using a \`GET /repos/{owner}/{repo}\` request.
        */
-      security_and_analysis?: any;
+      security_and_analysis?: {
+        /**
+         * Use the \`status\` property to enable or disable secret scanning for this repository. For more information, see \\"[About secret scanning](/code-security/secret-security/about-secret-scanning).\\"
+         */
+        secret_scanning?: {
+          /**
+           * Can be \`enabled\` or \`disabled\`.
+           */
+          status?: string;
+        };
+
+        /**
+         * Use the \`status\` property to enable or disable GitHub Advanced Security for this repository. For more information, see \\"[About GitHub Advanced Security](/github/getting-started-with-github/learning-about-github/about-github-advanced-security).\\"
+         */
+        advanced_security?: {
+          /**
+           * Can be \`enabled\` or \`disabled\`.
+           */
+          status?: string;
+        };
+
+        /**
+         * Use the \`status\` property to enable or disable secret scanning push protection for this repository. For more information, see \\"[Protecting pushes with secret scanning](/code-security/secret-scanning/protecting-pushes-with-secret-scanning).\\"
+         */
+        secret_scanning_push_protection?: {
+          /**
+           * Can be \`enabled\` or \`disabled\`.
+           */
+          status?: string;
+        };
+      };
 
       /**
        * Either \`true\` to allow automatically deleting head branches when pull requests are merged, or \`false\` to prevent automatic deletion.
@@ -51570,7 +52515,21 @@ export const listForks: ApiHeroEndpoint<
  * **Note**: Forking a Repository happens asynchronously. You may have to wait a short period of time before you can access the git objects. If this takes longer than 5 minutes, be sure to contact [GitHub Support](https://support.github.com/contact?tags=dotcom-rest-api).
  */
 export const createFork: ApiHeroEndpoint<
-  { owner: string; repo: string; body?: any | null },
+  {
+    owner: string;
+    repo: string;
+    body?: {
+      /**
+       * When forking from an existing repository, a new name for the fork.
+       */
+      name?: string;
+
+      /**
+       * Optional parameter to specify the organization name if forking into an organization.
+       */
+      organization?: string;
+    } | null;
+  },
   FullRepository
 > = {
   id: \\"repos/create-fork\\",
@@ -51592,7 +52551,43 @@ export const listWebhooks: ApiHeroEndpoint<
  * share the same \`config\` as long as those webhooks do not have any \`events\` that overlap.
  */
 export const createWebhook: ApiHeroEndpoint<
-  { owner: string; repo: string; body?: any | null },
+  {
+    owner: string;
+    repo: string;
+    body?: {
+      /**
+       * Use \`web\` to create a webhook. Default: \`web\`. This parameter only accepts the value \`web\`.
+       */
+      name?: string;
+
+      /**
+       * Determines if notifications are sent when the webhook is triggered. Set to \`true\` to send notifications.
+       */
+      active?: boolean;
+
+      /**
+       * Key/value pairs to provide settings for this webhook. [These are defined below](https://docs.github.com/rest/reference/repos#create-hook-config-params).
+       */
+      config?: {
+        url?: WebhookConfigUrl;
+
+        token?: string;
+
+        digest?: string;
+
+        secret?: WebhookConfigSecret;
+
+        content_type?: WebhookConfigContentType;
+
+        insecure_ssl?: WebhookConfigInsecureSsl;
+      };
+
+      /**
+       * Determines what [events](https://docs.github.com/webhooks/event-payloads) the hook is triggered for.
+       */
+      events?: Array<string>;
+    } | null;
+  },
   Hook
 > = {
   id: \\"repos/create-webhook\\",
@@ -53638,7 +54633,22 @@ export const updateBranchProtection: ApiHeroEndpoint<
       /**
        * Restrict who can push to the protected branch. User, app, and team \`restrictions\` are only available for organization-owned repositories. Set to \`null\` to disable.
        */
-      restrictions: any;
+      restrictions: {
+        /**
+         * The list of app \`slug\`s with push access
+         */
+        apps?: Array<string>;
+
+        /**
+         * The list of team \`slug\`s with push access
+         */
+        teams: Array<string>;
+
+        /**
+         * The list of user \`login\`s with push access
+         */
+        users: Array<string>;
+      };
 
       /**
        * Enforce all configured restrictions for administrators. Set to \`true\` to enforce required status checks for repository administrators. Set to \`null\` to disable.
@@ -53663,7 +54673,34 @@ export const updateBranchProtection: ApiHeroEndpoint<
       /**
        * Require status checks to pass before merging. Set to \`null\` to disable.
        */
-      required_status_checks: any;
+      required_status_checks: {
+        /**
+         * The list of status checks to require in order to merge into this branch.
+         */
+        checks?: Array<{
+          /**
+           * The ID of the GitHub App that must provide this check. Omit this field to automatically select the GitHub App that has recently provided this check, or any app if it was not set by a GitHub App. Pass -1 to explicitly allow any app to set the status.
+           */
+          app_id?: number;
+
+          /**
+           * The name of the required check
+           */
+          context: string;
+        }>;
+
+        /**
+         * Require branches to be up to date before merging.
+         */
+        strict: boolean;
+
+        /** 
+* **Deprecated**: The list of status checks to require in order to merge into this branch. If any of these checks have recently been set by a particular GitHub App, they will be required to come from that app in future for the branch to merge. Use \`checks\` instead of \`contexts\` for more fine-grained control.
+
+* @deprecated
+*/
+        contexts: Array<string>;
+      };
 
       /**
        * Enforces a linear commit Git history, which prevents anyone from pushing merge commits to a branch. Set to \`true\` to enforce a linear commit history. Set to \`false\` to disable a linear commit Git history. Your repository must allow squash merging or rebase merging before you can enable a linear commit history. Default: \`false\`. For more information, see \\"[Requiring a linear commit history](https://docs.github.com/github/administering-a-repository/requiring-a-linear-commit-history)\\" in the GitHub Help documentation.
@@ -53673,7 +54710,62 @@ export const updateBranchProtection: ApiHeroEndpoint<
       /**
        * Require at least one approving review on a pull request, before merging. Set to \`null\` to disable.
        */
-      required_pull_request_reviews: any;
+      required_pull_request_reviews: {
+        /**
+         * Set to \`true\` if you want to automatically dismiss approving reviews when someone pushes a new commit.
+         */
+        dismiss_stale_reviews?: boolean;
+
+        /**
+         * Specify which users, teams, and apps can dismiss pull request reviews. Pass an empty \`dismissal_restrictions\` object to disable. User and team \`dismissal_restrictions\` are only available for organization-owned repositories. Omit this parameter for personal repositories.
+         */
+        dismissal_restrictions?: {
+          /**
+           * The list of app \`slug\`s with dismissal access
+           */
+          apps?: Array<string>;
+
+          /**
+           * The list of team \`slug\`s with dismissal access
+           */
+          teams?: Array<string>;
+
+          /**
+           * The list of user \`login\`s with dismissal access
+           */
+          users?: Array<string>;
+        };
+
+        /**
+         * Blocks merging pull requests until [code owners](https://docs.github.com/articles/about-code-owners/) review them.
+         */
+        require_code_owner_reviews?: boolean;
+
+        /**
+         * Allow specific users, teams, or apps to bypass pull request requirements.
+         */
+        bypass_pull_request_allowances?: {
+          /**
+           * The list of app \`slug\`s allowed to bypass pull request requirements.
+           */
+          apps?: Array<string>;
+
+          /**
+           * The list of team \`slug\`s allowed to bypass pull request requirements.
+           */
+          teams?: Array<string>;
+
+          /**
+           * The list of user \`login\`s allowed to bypass pull request requirements.
+           */
+          users?: Array<string>;
+        };
+
+        /**
+         * Specify the number of reviewers required to approve pull requests. Use a number between 1 and 6 or 0 to not require reviewers.
+         */
+        required_approving_review_count?: number;
+      };
 
       /**
        * Requires all conversations on code to be resolved before a pull request can be merged into a branch that matches this rule. Set to \`false\` to disable. Default: \`false\`.
@@ -53806,7 +54898,28 @@ export const getEnvironment: ApiHeroEndpoint<
  * You must authenticate using an access token with the repo scope to use this endpoint.
  */
 export const createOrUpdateEnvironment: ApiHeroEndpoint<
-  { environmentName: string; owner: string; repo: string; body?: any | null },
+  {
+    environmentName: string;
+    owner: string;
+    repo: string;
+    body?: {
+      /**
+       * The people or teams that may review jobs that reference the environment. You can list up to six users or teams as reviewers. The reviewers must have at least read access to the repository. Only one of the required reviewers needs to approve the job for it to proceed.
+       */
+      reviewers?: Array<{
+        /**
+         * The id of the user or team who can review the deployment
+         */
+        id?: number;
+
+        type?: DeploymentReviewerType;
+      }>;
+
+      wait_timer?: WaitTimer;
+
+      deployment_branch_policy?: DeploymentBranchPolicy;
+    } | null;
+  },
   Environment
 > = {
   id: \\"repos/create-or-update-environment\\",
@@ -56163,7 +57276,17 @@ export const checkPermissionsForProjectInOrg: ApiHeroEndpoint<
  * **Note:** You can also specify a team by \`org_id\` and \`team_id\` using the route \`PUT /organizations/{org_id}/team/{team_id}/projects/{project_id}\`.
  */
 export const addOrUpdateProjectPermissionsInOrg: ApiHeroEndpoint<
-  { teamSlug: string; org: string; projectId: number; body?: any | null },
+  {
+    teamSlug: string;
+    org: string;
+    projectId: number;
+    body?: {
+      /**
+       * The permission to grant to the team for this project. Default: the team's \`permission\` attribute will be used to determine what permission to grant the team on this project. Note that, if you choose not to pass any parameters, you'll need to set \`Content-Length\` to zero when calling this endpoint. For more information, see \\"[HTTP verbs](https://docs.github.com/rest/overview/resources-in-the-rest-api#http-verbs).\\"
+       */
+      permission?: \\"read\\" | \\"write\\" | \\"admin\\";
+    } | null;
+  },
   void
 > = {
   id: \\"teams/add-or-update-project-permissions-in-org\\",
@@ -57382,7 +58505,219 @@ export type Repository = {
    * Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
    */
   allow_update_branch?: boolean;
-  template_repository?: any;
+  template_repository?: {
+    id?: number;
+
+    url?: string;
+
+    fork?: boolean;
+
+    name?: string;
+
+    size?: number;
+
+    owner?: {
+      id?: number;
+
+      url?: string;
+
+      type?: string;
+
+      login?: string;
+
+      node_id?: string;
+
+      html_url?: string;
+
+      gists_url?: string;
+
+      repos_url?: string;
+
+      avatar_url?: string;
+
+      events_url?: string;
+
+      site_admin?: boolean;
+
+      gravatar_id?: string;
+
+      starred_url?: string;
+
+      followers_url?: string;
+
+      following_url?: string;
+
+      organizations_url?: string;
+
+      subscriptions_url?: string;
+
+      received_events_url?: string;
+    };
+
+    topics?: Array<string>;
+
+    git_url?: string;
+
+    node_id?: string;
+
+    private?: boolean;
+
+    ssh_url?: string;
+
+    svn_url?: string;
+
+    archived?: boolean;
+
+    disabled?: boolean;
+
+    has_wiki?: boolean;
+
+    homepage?: string;
+
+    html_url?: string;
+
+    keys_url?: string;
+
+    language?: string;
+
+    tags_url?: string;
+
+    blobs_url?: string;
+
+    clone_url?: string;
+
+    forks_url?: string;
+
+    full_name?: string;
+
+    has_pages?: boolean;
+
+    hooks_url?: string;
+
+    pulls_url?: string;
+
+    pushed_at?: string;
+
+    teams_url?: string;
+
+    trees_url?: string;
+
+    created_at?: string;
+
+    events_url?: string;
+
+    has_issues?: boolean;
+
+    issues_url?: string;
+
+    labels_url?: string;
+
+    merges_url?: string;
+
+    mirror_url?: string;
+
+    updated_at?: string;
+
+    visibility?: string;
+
+    archive_url?: string;
+
+    commits_url?: string;
+
+    compare_url?: string;
+
+    description?: string;
+
+    forks_count?: number;
+
+    is_template?: boolean;
+
+    permissions?: {
+      pull?: boolean;
+
+      push?: boolean;
+
+      admin?: boolean;
+
+      triage?: boolean;
+
+      maintain?: boolean;
+    };
+
+    branches_url?: string;
+
+    comments_url?: string;
+
+    contents_url?: string;
+
+    git_refs_url?: string;
+
+    git_tags_url?: string;
+
+    has_projects?: boolean;
+
+    releases_url?: string;
+
+    statuses_url?: string;
+
+    assignees_url?: string;
+
+    downloads_url?: string;
+
+    has_downloads?: boolean;
+
+    languages_url?: string;
+
+    network_count?: number;
+
+    default_branch?: string;
+
+    milestones_url?: string;
+
+    stargazers_url?: string;
+
+    watchers_count?: number;
+
+    deployments_url?: string;
+
+    git_commits_url?: string;
+
+    subscribers_url?: string;
+
+    allow_auto_merge?: boolean;
+
+    contributors_url?: string;
+
+    issue_events_url?: string;
+
+    stargazers_count?: number;
+
+    subscription_url?: string;
+
+    temp_clone_token?: string;
+
+    collaborators_url?: string;
+
+    issue_comment_url?: string;
+
+    notifications_url?: string;
+
+    open_issues_count?: number;
+
+    subscribers_count?: number;
+
+    allow_merge_commit?: boolean;
+
+    allow_rebase_merge?: boolean;
+
+    allow_squash_merge?: boolean;
+
+    allow_update_branch?: boolean;
+
+    delete_branch_on_merge?: boolean;
+
+    use_squash_pr_title_as_default?: boolean;
+  };
 
   /**
    * Whether to delete head branches when pull requests are merged
@@ -57395,7 +58730,17 @@ export type Repository = {
   use_squash_pr_title_as_default?: boolean;
 };
 
-export type SecurityAndAnalysis = any | null;
+export type SecurityAndAnalysis = {
+  secret_scanning?: {
+    status?: \\"enabled\\" | \\"disabled\\";
+  };
+  advanced_security?: {
+    status?: \\"enabled\\" | \\"disabled\\";
+  };
+  secret_scanning_push_protection?: {
+    status?: \\"enabled\\" | \\"disabled\\";
+  };
+};
 
 /**
  * Simple User
