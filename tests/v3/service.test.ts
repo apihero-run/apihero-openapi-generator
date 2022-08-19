@@ -192,6 +192,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Lists repositories for the specified organization.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-organization-repositories",
           "id": "repos/list-for-org",
           "imports": Array [
             "Link",
@@ -899,6 +900,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#create-an-organization-repository",
           "id": "repos/create-in-org",
           "imports": Array [
             "Repository",
@@ -2535,6 +2537,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-a-repository",
           "id": "repos/get",
           "imports": Array [
             "FullRepository",
@@ -2746,6 +2749,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#delete-a-repository",
           "id": "repos/delete",
           "imports": Array [],
           "method": "DELETE",
@@ -2954,6 +2958,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos/#update-a-repository",
           "id": "repos/update",
           "imports": Array [
             "FullRepository",
@@ -5092,6 +5097,7 @@ test("getService with GitHub repos service", async () => {
 
     Information about autolinks are only available to repository administrators.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/v3/repos#list-autolinks",
           "id": "repos/list-autolinks",
           "imports": Array [
             "Autolink",
@@ -5381,6 +5387,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/v3/repos#create-an-autolink",
           "id": "repos/create-autolink",
           "imports": Array [
             "Autolink",
@@ -5819,6 +5826,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/v3/repos#get-autolink",
           "id": "repos/get-autolink",
           "imports": Array [
             "Autolink",
@@ -6095,6 +6103,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/v3/repos#delete-autolink",
           "id": "repos/delete-autolink",
           "imports": Array [],
           "method": "DELETE",
@@ -6360,6 +6369,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Enables automated security fixes for a repository. The authenticated user must have admin access to the repository. For more information, see \\"[Configuring automated security fixes](https://docs.github.com/en/articles/configuring-automated-security-fixes)\\".",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#enable-automated-security-fixes",
           "id": "repos/enable-automated-security-fixes",
           "imports": Array [],
           "method": "PUT",
@@ -6551,6 +6561,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Disables automated security fixes for a repository. The authenticated user must have admin access to the repository. For more information, see \\"[Configuring automated security fixes](https://docs.github.com/en/articles/configuring-automated-security-fixes)\\".",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#disable-automated-security-fixes",
           "id": "repos/disable-automated-security-fixes",
           "imports": Array [],
           "method": "DELETE",
@@ -6747,6 +6758,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-branches",
           "id": "repos/list-branches",
           "imports": Array [
             "Link",
@@ -7211,6 +7223,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-a-branch",
           "id": "repos/get-branch",
           "imports": Array [
             "BranchWithProtection",
@@ -7485,6 +7498,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-branch-protection",
           "id": "repos/get-branch-protection",
           "imports": Array [
             "BranchProtection",
@@ -7773,6 +7787,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#update-branch-protection",
           "id": "repos/update-branch-protection",
           "imports": Array [
             "ProtectedBranch",
@@ -10704,6 +10719,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Forbidden",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#delete-branch-protection",
           "id": "repos/delete-branch-protection",
           "imports": Array [],
           "method": "DELETE",
@@ -10969,6 +10985,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-admin-branch-protection",
           "id": "repos/get-admin-branch-protection",
           "imports": Array [
             "ProtectedBranchAdminEnforced",
@@ -11240,6 +11257,7 @@ test("getService with GitHub repos service", async () => {
 
     Adding admin enforcement requires admin or owner permissions to the repository and branch protection to be enabled.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#set-admin-branch-protection",
           "id": "repos/set-admin-branch-protection",
           "imports": Array [
             "ProtectedBranchAdminEnforced",
@@ -11516,6 +11534,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#delete-admin-branch-protection",
           "id": "repos/delete-admin-branch-protection",
           "imports": Array [],
           "method": "DELETE",
@@ -11781,6 +11800,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-pull-request-review-protection",
           "id": "repos/get-pull-request-review-protection",
           "imports": Array [
             "ProtectedBranchPullRequestReview",
@@ -12055,6 +12075,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#delete-pull-request-review-protection",
           "id": "repos/delete-pull-request-review-protection",
           "imports": Array [],
           "method": "DELETE",
@@ -12329,6 +12350,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#update-pull-request-review-protection",
           "id": "repos/update-pull-request-review-protection",
           "imports": Array [
             "ProtectedBranchPullRequestReview",
@@ -13804,6 +13826,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-commit-signature-protection",
           "id": "repos/get-commit-signature-protection",
           "imports": Array [
             "ProtectedBranchAdminEnforced",
@@ -14080,6 +14103,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#create-commit-signature-protection",
           "id": "repos/create-commit-signature-protection",
           "imports": Array [
             "ProtectedBranchAdminEnforced",
@@ -14356,6 +14380,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#delete-commit-signature-protection",
           "id": "repos/delete-commit-signature-protection",
           "imports": Array [],
           "method": "DELETE",
@@ -14626,6 +14651,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-status-checks-protection",
           "id": "repos/get-status-checks-protection",
           "imports": Array [
             "StatusCheckPolicy",
@@ -14895,6 +14921,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#remove-status-check-protection",
           "id": "repos/remove-status-check-protection",
           "imports": Array [],
           "method": "DELETE",
@@ -15171,6 +15198,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#update-status-check-protection",
           "id": "repos/update-status-check-protection",
           "imports": Array [
             "StatusCheckPolicy",
@@ -15980,6 +16008,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-all-status-check-contexts",
           "id": "repos/get-all-status-check-contexts",
           "imports": Array [],
           "method": "GET",
@@ -16305,6 +16334,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#add-status-check-contexts",
           "id": "repos/add-status-check-contexts",
           "imports": Array [],
           "method": "POST",
@@ -17041,6 +17071,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#set-status-check-contexts",
           "id": "repos/set-status-check-contexts",
           "imports": Array [],
           "method": "PUT",
@@ -17777,6 +17808,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#remove-status-check-contexts",
           "id": "repos/remove-status-check-contexts",
           "imports": Array [],
           "method": "DELETE",
@@ -18513,6 +18545,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-access-restrictions",
           "id": "repos/get-access-restrictions",
           "imports": Array [
             "BranchRestrictionPolicy",
@@ -18784,6 +18817,7 @@ test("getService with GitHub repos service", async () => {
 
     Disables the ability to restrict who can push to this branch.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#delete-access-restrictions",
           "id": "repos/delete-access-restrictions",
           "imports": Array [],
           "method": "DELETE",
@@ -19056,6 +19090,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-apps-with-access-to-the-protected-branch",
           "id": "repos/get-apps-with-access-to-protected-branch",
           "imports": Array [
             "Integration",
@@ -19350,6 +19385,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#add-app-access-restrictions",
           "id": "repos/add-app-access-restrictions",
           "imports": Array [
             "Integration",
@@ -20059,6 +20095,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#set-app-access-restrictions",
           "id": "repos/set-app-access-restrictions",
           "imports": Array [
             "Integration",
@@ -20768,6 +20805,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#remove-app-access-restrictions",
           "id": "repos/remove-app-access-restrictions",
           "imports": Array [
             "Integration",
@@ -21473,6 +21511,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-teams-with-access-to-the-protected-branch",
           "id": "repos/get-teams-with-access-to-protected-branch",
           "imports": Array [
             "Team",
@@ -21767,6 +21806,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#add-team-access-restrictions",
           "id": "repos/add-team-access-restrictions",
           "imports": Array [
             "Team",
@@ -22476,6 +22516,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#set-team-access-restrictions",
           "id": "repos/set-team-access-restrictions",
           "imports": Array [
             "Team",
@@ -23185,6 +23226,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#remove-team-access-restrictions",
           "id": "repos/remove-team-access-restrictions",
           "imports": Array [
             "Team",
@@ -23890,6 +23932,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-users-with-access-to-the-protected-branch",
           "id": "repos/get-users-with-access-to-protected-branch",
           "imports": Array [
             "SimpleUser",
@@ -24184,6 +24227,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#add-user-access-restrictions",
           "id": "repos/add-user-access-restrictions",
           "imports": Array [
             "SimpleUser",
@@ -24893,6 +24937,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#set-user-access-restrictions",
           "id": "repos/set-user-access-restrictions",
           "imports": Array [
             "SimpleUser",
@@ -25602,6 +25647,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#remove-user-access-restrictions",
           "id": "repos/remove-user-access-restrictions",
           "imports": Array [
             "SimpleUser",
@@ -26327,6 +26373,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#rename-a-branch",
           "id": "repos/rename-branch",
           "imports": Array [
             "BranchWithProtection",
@@ -26742,6 +26789,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-codeowners-errors",
           "id": "repos/codeowners-errors",
           "imports": Array [
             "CodeownersErrors",
@@ -27024,6 +27072,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-repository-collaborators",
           "id": "repos/list-collaborators",
           "imports": Array [
             "Link",
@@ -27528,6 +27577,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Not Found if user is not a collaborator",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#check-if-a-user-is-a-repository-collaborator",
           "id": "repos/check-collaborator",
           "imports": Array [],
           "method": "GET",
@@ -27822,6 +27872,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#add-a-repository-collaborator",
           "id": "repos/add-collaborator",
           "imports": Array [
             "RepositoryInvitation",
@@ -28420,6 +28471,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#remove-a-repository-collaborator",
           "id": "repos/remove-collaborator",
           "imports": Array [],
           "method": "DELETE",
@@ -28690,6 +28742,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-repository-permissions-for-a-user",
           "id": "repos/get-collaborator-permission-level",
           "imports": Array [
             "RepositoryCollaboratorPermission",
@@ -28961,6 +29014,7 @@ test("getService with GitHub repos service", async () => {
 
     Comments are ordered by ascending ID.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-commit-comments-for-a-repository",
           "id": "repos/list-commit-comments-for-repo",
           "imports": Array [
             "Link",
@@ -29347,6 +29401,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-a-commit-comment",
           "id": "repos/get-commit-comment",
           "imports": Array [
             "CommitComment",
@@ -29621,6 +29676,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#delete-a-commit-comment",
           "id": "repos/delete-commit-comment",
           "imports": Array [],
           "method": "DELETE",
@@ -29891,6 +29947,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#update-a-commit-comment",
           "id": "repos/update-commit-comment",
           "imports": Array [
             "CommitComment",
@@ -30341,6 +30398,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Internal Error",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-commits",
           "id": "repos/list-commits",
           "imports": Array [
             "Link",
@@ -31099,6 +31157,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-branches-for-head-commit",
           "id": "repos/list-branches-for-head-commit",
           "imports": Array [
             "BranchShort",
@@ -31382,6 +31441,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Use the \`:commit_sha\` to specify the commit that will have its comments listed.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-commit-comments",
           "id": "repos/list-comments-for-commit",
           "imports": Array [
             "Link",
@@ -31848,6 +31908,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#create-a-commit-comment",
           "id": "repos/create-commit-comment",
           "imports": Array [
             "CommitComment",
@@ -32485,6 +32546,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Lists the merged pull request that introduced the commit to the repository. If the commit is not present in the default branch, additionally returns open pull requests associated with the commit. The results may include open and closed pull requests.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-pull-requests-associated-with-a-commit",
           "id": "repos/list-pull-requests-associated-with-commit",
           "imports": Array [
             "Link",
@@ -32988,6 +33050,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Internal Error",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-a-commit",
           "id": "repos/get-commit",
           "imports": Array [
             "Commit",
@@ -33418,6 +33481,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-the-combined-status-for-a-specific-reference",
           "id": "repos/get-combined-status-for-ref",
           "imports": Array [
             "CombinedCommitStatus",
@@ -33843,6 +33907,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Moved permanently",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-commit-statuses-for-a-reference",
           "id": "repos/list-commit-statuses-for-ref",
           "imports": Array [
             "Link",
@@ -34309,6 +34374,7 @@ test("getService with GitHub repos service", async () => {
 
     \`content_reports_enabled\` is only returned for organization-owned repositories.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-community-profile-metrics",
           "id": "repos/get-community-profile-metrics",
           "imports": Array [
             "CommunityProfile",
@@ -34552,6 +34618,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Internal Error",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#compare-two-commits",
           "id": "repos/compare-commits",
           "imports": Array [
             "CommitComparison",
@@ -35019,6 +35086,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-repository-content",
           "id": "repos/get-content",
           "imports": Array [
             "ContentDirectory",
@@ -35473,6 +35541,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#create-or-update-file-contents",
           "id": "repos/create-or-update-file-contents",
           "imports": Array [
             "FileCommit",
@@ -36640,6 +36709,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Service unavailable",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#delete-a-file",
           "id": "repos/delete-file",
           "imports": Array [
             "FileCommit",
@@ -37589,6 +37659,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-repository-contributors",
           "id": "repos/list-contributors",
           "imports": Array [
             "Link",
@@ -38044,6 +38115,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Simple filtering of deployments is available via query parameters:",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-deployments",
           "id": "repos/list-deployments",
           "imports": Array [
             "Link",
@@ -38774,6 +38846,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#create-a-deployment",
           "id": "repos/create-deployment",
           "imports": Array [
             "Deployment",
@@ -39843,6 +39916,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-a-deployment",
           "id": "repos/get-deployment",
           "imports": Array [
             "Deployment",
@@ -40128,6 +40202,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#delete-a-deployment",
           "id": "repos/delete-deployment",
           "imports": Array [],
           "method": "DELETE",
@@ -40398,6 +40473,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-deployment-statuses",
           "id": "repos/list-deployment-statuses",
           "imports": Array [
             "Link",
@@ -40860,6 +40936,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#create-a-deployment-status",
           "id": "repos/create-deployment-status",
           "imports": Array [
             "DeploymentStatus",
@@ -42082,6 +42159,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-a-deployment-status",
           "id": "repos/get-deployment-status",
           "imports": Array [
             "DeploymentStatus",
@@ -42439,6 +42517,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#create-a-repository-dispatch-event",
           "id": "repos/create-dispatch-event",
           "imports": Array [],
           "method": "POST",
@@ -42835,6 +42914,7 @@ test("getService with GitHub repos service", async () => {
 
     Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the \`repo\` scope. GitHub Apps must have the \`actions:read\` permission to use this endpoint.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-all-environments",
           "id": "repos/get-all-environments",
           "imports": Array [
             "Environment",
@@ -43264,6 +43344,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the \`repo\` scope. GitHub Apps must have the \`actions:read\` permission to use this endpoint.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-an-environment",
           "id": "repos/get-environment",
           "imports": Array [
             "Environment",
@@ -43544,6 +43625,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation error when the environment name is invalid or when \`protected_branches\` and \`custom_branch_policies\` in \`deployment_branch_policy\` are set to the same value",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#create-or-update-an-environment",
           "id": "repos/create-or-update-environment",
           "imports": Array [
             "WaitTimer",
@@ -44219,6 +44301,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "You must authenticate using an access token with the repo scope to use this endpoint.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#delete-an-environment",
           "id": "repos/delete-an-environment",
           "imports": Array [],
           "method": "DELETE",
@@ -44489,6 +44572,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Bad Request",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-forks",
           "id": "repos/list-forks",
           "imports": Array [
             "Link",
@@ -45013,6 +45097,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#create-a-fork",
           "id": "repos/create-fork",
           "imports": Array [
             "FullRepository",
@@ -45416,6 +45501,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-repository-webhooks",
           "id": "repos/list-webhooks",
           "imports": Array [
             "Link",
@@ -45811,6 +45897,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#create-a-repository-webhook",
           "id": "repos/create-webhook",
           "imports": Array [
             "WebhookConfigUrl",
@@ -46763,6 +46850,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-a-repository-webhook",
           "id": "repos/get-webhook",
           "imports": Array [
             "Hook",
@@ -47037,6 +47125,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#delete-a-repository-webhook",
           "id": "repos/delete-webhook",
           "imports": Array [],
           "method": "DELETE",
@@ -47311,6 +47400,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#update-a-repository-webhook",
           "id": "repos/update-webhook",
           "imports": Array [
             "WebhookConfigUrl",
@@ -48499,6 +48589,7 @@ test("getService with GitHub repos service", async () => {
 
     Access tokens must have the \`read:repo_hook\` or \`repo\` scope, and GitHub Apps must have the \`repository_hooks:read\` permission.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-a-webhook-configuration-for-a-repository",
           "id": "repos/get-webhook-config-for-repo",
           "imports": Array [
             "WebhookConfig",
@@ -48770,6 +48861,7 @@ test("getService with GitHub repos service", async () => {
 
     Access tokens must have the \`write:repo_hook\` or \`repo\` scope, and GitHub Apps must have the \`repository_hooks:write\` permission.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#update-a-webhook-configuration-for-a-repository",
           "id": "repos/update-webhook-config-for-repo",
           "imports": Array [
             "WebhookConfigUrl",
@@ -49285,6 +49377,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-deliveries-for-a-repository-webhook",
           "id": "repos/list-webhook-deliveries",
           "imports": Array [
             "HookDeliveryItem",
@@ -49726,6 +49819,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-a-delivery-for-a-repository-webhook",
           "id": "repos/get-webhook-delivery",
           "imports": Array [
             "HookDelivery",
@@ -50078,6 +50172,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#redeliver-a-delivery-for-a-repository-webhook",
           "id": "repos/redeliver-webhook-delivery",
           "imports": Array [],
           "method": "POST",
@@ -50436,6 +50531,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#ping-a-repository-webhook",
           "id": "repos/ping-webhook",
           "imports": Array [],
           "method": "POST",
@@ -50708,6 +50804,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#test-the-push-repository-webhook",
           "id": "repos/test-push-webhook",
           "imports": Array [],
           "method": "POST",
@@ -50973,6 +51070,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "When authenticating as a user with admin rights to a repository, this endpoint will list all currently open repository invitations.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-repository-invitations",
           "id": "repos/list-invitations",
           "imports": Array [
             "Link",
@@ -51354,6 +51452,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#delete-a-repository-invitation",
           "id": "repos/delete-invitation",
           "imports": Array [],
           "method": "DELETE",
@@ -51619,6 +51718,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#update-a-repository-invitation",
           "id": "repos/update-invitation",
           "imports": Array [
             "RepositoryInvitation",
@@ -52217,6 +52317,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-deploy-keys",
           "id": "repos/list-deploy-keys",
           "imports": Array [
             "Link",
@@ -52603,6 +52704,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#create-a-deploy-key",
           "id": "repos/create-deploy-key",
           "imports": Array [
             "DeployKey",
@@ -53109,6 +53211,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-a-deploy-key",
           "id": "repos/get-deploy-key",
           "imports": Array [
             "DeployKey",
@@ -53378,6 +53481,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Deploy keys are immutable. If you need to update a key, remove the key and create a new one instead.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#delete-a-deploy-key",
           "id": "repos/delete-deploy-key",
           "imports": Array [],
           "method": "DELETE",
@@ -53643,6 +53747,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Lists languages for the specified repository. The value shown for each language is the number of bytes of code written in that language.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-repository-languages",
           "id": "repos/list-languages",
           "imports": Array [
             "Language",
@@ -53847,6 +53952,7 @@ test("getService with GitHub repos service", async () => {
     - Git LFS support not enabled because Git LFS is disabled for <owner>.",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#enable-git-lfs-for-a-repository",
           "id": "repos/enable-lfs-for-repo",
           "imports": Array [],
           "method": "PUT",
@@ -54052,6 +54158,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#disable-git-lfs-for-a-repository",
           "id": "repos/disable-lfs-for-repo",
           "imports": Array [],
           "method": "DELETE",
@@ -54252,6 +54359,7 @@ test("getService with GitHub repos service", async () => {
               "description": "The branch could not be synced for some other reason",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#sync-a-fork-branch-with-the-upstream-repository",
           "id": "repos/merge-upstream",
           "imports": Array [
             "MergedUpstream",
@@ -54601,6 +54709,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#merge-a-branch",
           "id": "repos/merge",
           "imports": Array [
             "Commit",
@@ -55070,6 +55179,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-a-github-pages-site",
           "id": "repos/get-pages",
           "imports": Array [
             "Page",
@@ -55274,6 +55384,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#create-a-github-pages-site",
           "id": "repos/create-pages-site",
           "imports": Array [
             "Page",
@@ -55999,6 +56110,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#update-information-about-a-github-pages-site",
           "id": "repos/update-information-about-pages-site",
           "imports": Array [],
           "method": "PUT",
@@ -57184,6 +57296,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#delete-a-github-pages-site",
           "id": "repos/delete-pages-site",
           "imports": Array [],
           "method": "DELETE",
@@ -57375,6 +57488,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-github-pages-builds",
           "id": "repos/list-pages-builds",
           "imports": Array [
             "Link",
@@ -57758,6 +57872,7 @@ test("getService with GitHub repos service", async () => {
 
     Build requests are limited to one concurrent build per repository and one concurrent build per requester. If you request a build while another is still in progress, the second request will be queued until the first completes.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#request-a-github-pages-build",
           "id": "repos/request-pages-build",
           "imports": Array [
             "PageBuildStatus",
@@ -57953,6 +58068,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-latest-pages-build",
           "id": "repos/get-latest-pages-build",
           "imports": Array [
             "PageBuild",
@@ -58148,6 +58264,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-github-pages-build",
           "id": "repos/get-pages-build",
           "imports": Array [
             "PageBuild",
@@ -58434,6 +58551,7 @@ test("getService with GitHub repos service", async () => {
               "description": "There isn't a CNAME for this page",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-a-dns-health-check-for-github-pages",
           "id": "repos/get-pages-health-check",
           "imports": Array [
             "PagesHealthCheck",
@@ -58663,6 +58781,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-a-repository-readme",
           "id": "repos/get-readme",
           "imports": Array [
             "ContentFile",
@@ -58944,6 +59063,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-a-repository-directory-readme",
           "id": "repos/get-readme-in-directory",
           "imports": Array [
             "ContentFile",
@@ -59295,6 +59415,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-releases",
           "id": "repos/list-releases",
           "imports": Array [
             "Link",
@@ -59687,6 +59808,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#create-a-release",
           "id": "repos/create-release",
           "imports": Array [
             "Release",
@@ -60523,6 +60645,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-a-release-asset",
           "id": "repos/get-release-asset",
           "imports": Array [
             "ReleaseAsset",
@@ -60792,6 +60915,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#delete-a-release-asset",
           "id": "repos/delete-release-asset",
           "imports": Array [],
           "method": "DELETE",
@@ -61057,6 +61181,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Users with push access to the repository can edit a release asset.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#update-a-release-asset",
           "id": "repos/update-release-asset",
           "imports": Array [
             "ReleaseAsset",
@@ -61604,6 +61729,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#generate-release-notes",
           "id": "repos/generate-release-notes",
           "imports": Array [
             "ReleaseNotesContent",
@@ -62136,6 +62262,7 @@ test("getService with GitHub repos service", async () => {
 
     The latest release is the most recent non-prerelease, non-draft release, sorted by the \`created_at\` attribute. The \`created_at\` attribute is the date of the commit used for the release, and not the date when the release was drafted or published.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-the-latest-release",
           "id": "repos/get-latest-release",
           "imports": Array [
             "Release",
@@ -62336,6 +62463,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-a-release-by-tag-name",
           "id": "repos/get-release-by-tag",
           "imports": Array [
             "Release",
@@ -62610,6 +62738,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-a-release",
           "id": "repos/get-release",
           "imports": Array [
             "Release",
@@ -62879,6 +63008,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Users with push access to the repository can delete a release.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#delete-a-release",
           "id": "repos/delete-release",
           "imports": Array [],
           "method": "DELETE",
@@ -63149,6 +63279,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Not Found if the discussion category name is invalid",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#update-a-release",
           "id": "repos/update-release",
           "imports": Array [
             "Release",
@@ -63951,6 +64082,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-release-assets",
           "id": "repos/list-release-assets",
           "imports": Array [
             "Link",
@@ -64428,6 +64560,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Response if you upload an asset with the same filename as another uploaded asset",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#upload-a-release-asset",
           "id": "repos/upload-release-asset",
           "imports": Array [
             "ReleaseAsset",
@@ -64915,6 +65048,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Returns a weekly aggregate of the number of additions and deletions pushed to a repository.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-the-weekly-commit-activity",
           "id": "repos/get-code-frequency-stats",
           "imports": Array [
             "CodeFrequencyStat",
@@ -65158,6 +65292,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Returns the last year of commit activity grouped by week. The \`days\` array is a group of commits per day, starting on \`Sunday\`.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-the-last-year-of-commit-activity",
           "id": "repos/get-commit-activity-stats",
           "imports": Array [
             "CommitActivity",
@@ -65407,6 +65542,7 @@ test("getService with GitHub repos service", async () => {
     *   \`d\` - Number of deletions
     *   \`c\` - Number of commits",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-all-contributor-commit-activity",
           "id": "repos/get-contributors-stats",
           "imports": Array [
             "ContributorActivity",
@@ -65660,6 +65796,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-the-weekly-commit-count",
           "id": "repos/get-participation-stats",
           "imports": Array [
             "ParticipationStats",
@@ -65861,6 +65998,7 @@ test("getService with GitHub repos service", async () => {
 
     For example, \`[2, 14, 25]\` indicates that there were 25 total commits, during the 2:00pm hour on Tuesdays. All times are based on the time zone of individual commits.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-the-hourly-commit-count-for-each-day",
           "id": "repos/get-punch-card-stats",
           "imports": Array [
             "CodeFrequencyStat",
@@ -66072,6 +66210,7 @@ test("getService with GitHub repos service", async () => {
 
     Note: there is a limit of 1000 statuses per \`sha\` and \`context\` within a repository. Attempts to create more than 1000 statuses will result in a validation error.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#create-a-commit-status",
           "id": "repos/create-commit-status",
           "imports": Array [
             "Status",
@@ -66881,6 +67020,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-repository-tags",
           "id": "repos/list-tags",
           "imports": Array [
             "Link",
@@ -67273,6 +67413,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-tag-protection-state-of-a-repository",
           "id": "repos/list-tag-protection",
           "imports": Array [
             "TagProtection",
@@ -67492,6 +67633,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#create-tag-protection-state-for-a-repository",
           "id": "repos/create-tag-protection",
           "imports": Array [
             "TagProtection",
@@ -67834,6 +67976,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#delete-tag-protection-state-for-a-repository",
           "id": "repos/delete-tag-protection",
           "imports": Array [],
           "method": "DELETE",
@@ -68107,6 +68250,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Response",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#download-a-repository-archive",
           "id": "repos/download-tarball-archive",
           "imports": Array [],
           "method": "GET",
@@ -68372,6 +68516,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": null,
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-repository-teams",
           "id": "repos/list-teams",
           "imports": Array [
             "Link",
@@ -68758,6 +68903,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-all-repository-topics",
           "id": "repos/get-all-topics",
           "imports": Array [
             "Topic",
@@ -69111,6 +69257,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#replace-all-repository-topics",
           "id": "repos/replace-all-topics",
           "imports": Array [
             "Topic",
@@ -69514,6 +69661,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Forbidden",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-repository-clones",
           "id": "repos/get-clones",
           "imports": Array [
             "CloneTraffic",
@@ -69827,6 +69975,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Forbidden",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-top-referral-paths",
           "id": "repos/get-top-paths",
           "imports": Array [
             "ContentTraffic",
@@ -70041,6 +70190,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Forbidden",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-top-referral-sources",
           "id": "repos/get-top-referrers",
           "imports": Array [
             "ReferrerTraffic",
@@ -70255,6 +70405,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Forbidden",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#get-page-views",
           "id": "repos/get-views",
           "imports": Array [
             "ViewTraffic",
@@ -70563,6 +70714,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "A transfer request will need to be accepted by the new owner when transferring a personal repository to another user. The response will contain the original \`owner\`, and the transfer will continue asynchronously. For more details on the requirements to transfer personal and organization-owned repositories, see [about repository transfers](https://docs.github.com/articles/about-repository-transfers/).",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#transfer-a-repository",
           "id": "repos/transfer",
           "imports": Array [
             "MinimalRepository",
@@ -71032,6 +71184,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Not Found if repository is not enabled with vulnerability alerts",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#check-if-vulnerability-alerts-are-enabled-for-a-repository",
           "id": "repos/check-vulnerability-alerts",
           "imports": Array [],
           "method": "GET",
@@ -71223,6 +71376,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Enables dependency alerts and the dependency graph for a repository. The authenticated user must have admin access to the repository. For more information, see \\"[About security alerts for vulnerable dependencies](https://docs.github.com/en/articles/about-security-alerts-for-vulnerable-dependencies)\\".",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#enable-vulnerability-alerts",
           "id": "repos/enable-vulnerability-alerts",
           "imports": Array [],
           "method": "PUT",
@@ -71414,6 +71568,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Disables dependency alerts and the dependency graph for a repository. The authenticated user must have admin access to the repository. For more information, see \\"[About security alerts for vulnerable dependencies](https://docs.github.com/en/articles/about-security-alerts-for-vulnerable-dependencies)\\".",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#disable-vulnerability-alerts",
           "id": "repos/disable-vulnerability-alerts",
           "imports": Array [],
           "method": "DELETE",
@@ -71613,6 +71768,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Response",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#download-a-repository-archive",
           "id": "repos/download-zipball-archive",
           "imports": Array [],
           "method": "GET",
@@ -71885,6 +72041,7 @@ test("getService with GitHub repos service", async () => {
     *   \`public_repo\` scope or \`repo\` scope to create a public repository. Note: For GitHub AE, use \`repo\` scope to create an internal repository.
     *   \`repo\` scope to create a private repository",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#create-a-repository-using-a-template",
           "id": "repos/create-using-template",
           "imports": Array [
             "Repository",
@@ -72527,6 +72684,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-public-repositories",
           "id": "repos/list-public",
           "imports": Array [
             "MinimalRepository",
@@ -72714,6 +72872,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-repositories-for-the-authenticated-user",
           "id": "repos/list-for-authenticated-user",
           "imports": Array [
             "Repository",
@@ -73655,6 +73814,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Validation failed",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#create-a-repository-for-the-authenticated-user",
           "id": "repos/create-for-authenticated-user",
           "imports": Array [
             "Repository",
@@ -75054,6 +75214,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Resource not found",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-repository-invitations-for-the-authenticated-user",
           "id": "repos/list-invitations-for-authenticated-user",
           "imports": Array [
             "Link",
@@ -75303,6 +75464,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Conflict",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#decline-a-repository-invitation",
           "id": "repos/decline-invitation-for-authenticated-user",
           "imports": Array [],
           "method": "DELETE",
@@ -75437,6 +75599,7 @@ test("getService with GitHub repos service", async () => {
               "description": "Conflict",
             },
           ],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#accept-a-repository-invitation",
           "id": "repos/accept-invitation-for-authenticated-user",
           "imports": Array [],
           "method": "PATCH",
@@ -75554,6 +75717,7 @@ test("getService with GitHub repos service", async () => {
           "deprecated": false,
           "description": "Lists public repositories for the specified user. Note: For GitHub AE, this endpoint will list internal repositories for the specified user.",
           "errors": Array [],
+          "externalDocs": "https://docs.github.com/rest/reference/repos#list-repositories-for-a-user",
           "id": "repos/list-for-user",
           "imports": Array [
             "Link",

@@ -86,6 +86,7 @@ const getOperation = (
     errors: [],
     results: [],
     responseHeader: null,
+    externalDocs: op.externalDocs?.url || undefined,
   };
 
   // Parse the operation parameters (path, query, body, etc).

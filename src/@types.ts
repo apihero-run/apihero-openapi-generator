@@ -107,6 +107,7 @@ export type Operation = OperationParameters & {
   errors: OperationError[];
   results: OperationResponse[];
   responseHeader: string | null;
+  externalDocs?: string;
 };
 
 export type Service = {

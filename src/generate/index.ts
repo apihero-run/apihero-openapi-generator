@@ -174,18 +174,38 @@ function generateOperationParameter(parameter: Operation["parameters"][0]): stri
   return `${parameter.name}${parameter.isRequired ? "" : "?"}: ${generateType(parameter)}`;
 }
 
+function generateOperationParameterComments(parameters: Model[], path: string[] = []): string {
+  if (!parameters || parameters.length === 0) {
+    return "";
+  }
+
+  return `\n\n${parameters
+    .map((parameter) => generateOperationParameterComment(parameter, path))
+    .join("\n")}`;
+}
+
+function generateOperationParameterComment(parameter: Model, path: string[] = []): string {
+  return `* @param ${[...path, parameter.name].join(".")} ${
+    parameter.description ? `- ${parameter.description}` : ""
+  }${generateOperationParameterComments(parameter.properties, [parameter.name])}`;
+}
+
 function generateOperationDocs(operation: Operation): string {
   const summeryAndDescriptionEqual = operation.summary === operation.description;
 
   if (summeryAndDescriptionEqual) {
-    return `/** ${operation.deprecated ? "* @deprecated\n" : "\n"}${
-      operation.summary ? " * " + escapeComment(operation.summary) + "\n" : ""
-    } */`;
+    return `/** ${operation.externalDocs ? `\n* @see ${operation.externalDocs}\n` : "\n"}${
+      operation.deprecated ? "\n* @deprecated\n" : "\n"
+    }${
+      operation.summary ? "\n* " + escapeComment(operation.summary) : ""
+    }${generateOperationParameterComments(operation.parameters)} \n*/`;
   }
 
-  return `/** ${operation.deprecated ? "* @deprecated\n" : "\n"}${
-    operation.summary ? " * " + escapeComment(operation.summary) + "\n" : ""
-  }${operation.description ? " * " + escapeComment(operation.description) + "\n" : ""} */`;
+  return `/** ${operation.externalDocs ? `\n* @see ${operation.externalDocs}\n` : "\n"}${
+    operation.deprecated ? "\n* @deprecated\n" : "\n"
+  }${operation.summary ? "\n* " + escapeComment(operation.summary) : ""}${
+    operation.description ? "\n* " + escapeComment(operation.description) : ""
+  }${generateOperationParameterComments(operation.parameters)} \n*/`;
 }
 
 const escapeComment = (value: string): string => {
