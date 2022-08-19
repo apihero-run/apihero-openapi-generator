@@ -46,10 +46,18 @@ test("v3_1/github.json", async () => {
   expect(code).toMatchSnapshot();
 });
 
-test("v3_1/github.json generateOperationCode", async () => {
+test("v3_1/github.json generateOperationCode repos/get", async () => {
   const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3_1/github.json");
 
   const code = generateOperationCode(doc, "repos/get");
+
+  expect(code).toMatchSnapshot();
+});
+
+test("v3_1/github.json generateOperationCode repos/list-for-org", async () => {
+  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3_1/github.json");
+
+  const code = generateOperationCode(doc, "repos/list-for-org");
 
   expect(code).toMatchSnapshot();
 });

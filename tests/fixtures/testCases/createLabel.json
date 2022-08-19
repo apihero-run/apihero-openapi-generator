@@ -1,0 +1,347 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "version": "1.0.0"
+  },
+  "tags": [
+    {
+      "name": "issues",
+      "description": "Interact with GitHub Issues."
+    }
+  ],
+  "paths": {
+    "/repos/{owner}/{repo}/labels": {
+      "post": {
+        "operationId": "issues/create-label",
+        "summary": "Create a label",
+        "description": "",
+        "deprecated": false,
+        "externalDocs": {
+          "url": "https://docs.github.com/rest/reference/issues#create-a-label",
+          "description": "API method documentation"
+        },
+        "tags": [
+          "issues"
+        ],
+        "security": [
+          {
+            "installationToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/repo",
+            "description": "The name of the repository. The name is not case sensitive."
+          },
+          {
+            "$ref": "#/components/parameters/owner",
+            "description": "The account owner of the repository. The name is not case sensitive."
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/label"
+                },
+                "examples": {
+                  "default": {
+                    "$ref": "#/components/examples/label"
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Location": {
+                "required": false,
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false,
+                "style": "simple",
+                "explode": false,
+                "example": "https://api.github.com/repos/octocat/Hello-World/labels/bug"
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/not_found",
+            "description": "Resource not found"
+          },
+          "422": {
+            "$ref": "#/components/responses/validation_failed",
+            "description": "Validation failed"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the label. Emoji can be added to label names, using either native emoji or colon-style markup. For example, typing `:strawberry:` will render the emoji ![:strawberry:](https://github.githubassets.com/images/icons/emoji/unicode/1f353.png \":strawberry:\"). For a full list of available emoji and codes, see \"[Emoji cheat sheet](https://github.com/ikatyang/emoji-cheat-sheet).\""
+                  },
+                  "color": {
+                    "type": "string",
+                    "description": "The [hexadecimal color code](http://www.color-hex.com/) for the label, without the leading `#`."
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "A short description of the label. Must be 100 characters or fewer."
+                  }
+                }
+              },
+              "examples": {
+                "default": {
+                  "value": {
+                    "name": "bug",
+                    "color": "f29513",
+                    "description": "Something isn't working"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-github": {
+          "category": "issues",
+          "subcategory": "labels",
+          "githubCloudOnly": false,
+          "enabledForGitHubApps": true
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "basic-error": {
+        "type": "object",
+        "title": "Basic Error",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "documentation_url": {
+            "type": "string"
+          }
+        },
+        "description": "Basic Error"
+      },
+      "validation-error": {
+        "type": "object",
+        "title": "Validation Error",
+        "required": [
+          "message",
+          "documentation_url"
+        ],
+        "properties": {
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "code"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "field": {
+                  "type": "string"
+                },
+                "index": {
+                  "type": "integer"
+                },
+                "value": {
+                  "oneOf": [
+                    {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    {
+                      "type": [
+                        "integer",
+                        "null"
+                      ]
+                    },
+                    {
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  ]
+                },
+                "message": {
+                  "type": "string"
+                },
+                "resource": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "message": {
+            "type": "string"
+          },
+          "documentation_url": {
+            "type": "string"
+          }
+        },
+        "description": "Validation Error"
+      },
+      "label": {
+        "type": "object",
+        "title": "Label",
+        "required": [
+          "id",
+          "node_id",
+          "url",
+          "name",
+          "description",
+          "color",
+          "default"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "examples": [
+              208045946
+            ]
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://api.github.com/repositories/42/labels/bug"
+            ],
+            "description": "URL for the label"
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "bug"
+            ],
+            "description": "The name of the label."
+          },
+          "color": {
+            "type": "string",
+            "examples": [
+              "FFFFFF"
+            ],
+            "description": "6-character hex code, without the leading #, identifying the color"
+          },
+          "default": {
+            "type": "boolean",
+            "examples": [
+              true
+            ]
+          },
+          "node_id": {
+            "type": "string",
+            "examples": [
+              "MDU6TGFiZWwyMDgwNDU5NDY="
+            ]
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "examples": [
+              "Something isn't working"
+            ]
+          }
+        },
+        "description": "Color-coded labels help you categorize and filter your issues (just like labels in Gmail)."
+      }
+    },
+    "responses": {
+      "not_found": {
+        "description": "Resource not found",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/basic-error"
+            }
+          }
+        }
+      },
+      "validation_failed": {
+        "description": "Validation failed",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/validation-error"
+            }
+          }
+        }
+      }
+    },
+    "examples": {
+      "label": {
+        "value": {
+          "id": 208045946,
+          "url": "https://api.github.com/repos/octocat/Hello-World/labels/bug",
+          "name": "bug",
+          "color": "f29513",
+          "default": true,
+          "node_id": "MDU6TGFiZWwyMDgwNDU5NDY=",
+          "description": "Something isn't working"
+        }
+      }
+    },
+    "parameters": {
+      "repo": {
+        "name": "repo",
+        "in": "path",
+        "description": "The name of the repository. The name is not case sensitive.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "deprecated": false,
+        "allowEmptyValue": false,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false
+      },
+      "owner": {
+        "name": "owner",
+        "in": "path",
+        "description": "The account owner of the repository. The name is not case sensitive.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "deprecated": false,
+        "allowEmptyValue": false,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false
+      }
+    },
+    "headers": {},
+    "requestBodies": {}
+  }
+}

@@ -2,7 +2,10 @@
 
 exports[`v3/github.json 1`] = `
 Map {
-  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseData> = { id: string; [key: string]: string | number };
+  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+  id: string;
+  [key: string]: string | number;
+};
 
 export type Root = {
   current_user_url: string;
@@ -10986,6 +10989,7 @@ export type KeySimple = {
   EnabledRepositories,
   EnvironmentApprovals,
   Job,
+  Link,
   MinimalRepository,
   OptOutOidcCustomSub,
   OrganizationActionsSecret,
@@ -11011,7 +11015,8 @@ export type KeySimple = {
  */
 export const getActionsCacheUsageForEnterprise: ApiHeroEndpoint<
   { enterprise: string },
-  ActionsCacheUsageOrgEnterprise
+  ActionsCacheUsageOrgEnterprise,
+  { Link: Link }
 > = {
   id: \\"actions/get-actions-cache-usage-for-enterprise\\",
 };
@@ -11069,7 +11074,8 @@ export const setGithubActionsDefaultWorkflowPermissionsEnterprise: ApiHeroEndpoi
  */
 export const getActionsCacheUsageForOrg: ApiHeroEndpoint<
   { org: string },
-  ActionsCacheUsageOrgEnterprise
+  ActionsCacheUsageOrgEnterprise,
+  { Link: Link }
 > = {
   id: \\"actions/get-actions-cache-usage-for-org\\",
 };
@@ -11086,7 +11092,8 @@ export const getActionsCacheUsageByRepoForOrg: ApiHeroEndpoint<
     total_count: number;
 
     repository_cache_usages: Array<ActionsCacheUsageByRepository>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/get-actions-cache-usage-by-repo-for-org\\",
 };
@@ -11483,7 +11490,8 @@ export const listSelfHostedRunnersInGroupForOrg: ApiHeroEndpoint<
     total_count: number;
 
     runners: Array<Runner>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-self-hosted-runners-in-group-for-org\\",
 };
@@ -11557,7 +11565,8 @@ export const listSelfHostedRunnersForOrg: ApiHeroEndpoint<
     total_count: number;
 
     runners: Array<Runner>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-self-hosted-runners-for-org\\",
 };
@@ -11756,7 +11765,8 @@ export const listOrgSecrets: ApiHeroEndpoint<
     total_count: number;
 
     secrets: Array<OrganizationActionsSecret>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-org-secrets\\",
 };
@@ -11964,7 +11974,8 @@ export const listArtifactsForRepo: ApiHeroEndpoint<
     total_count: number;
 
     artifacts: Array<Artifact>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-artifacts-for-repo\\",
 };
@@ -12035,7 +12046,8 @@ export const getActionsCacheList: ApiHeroEndpoint<
     sort?: \\"created_at\\" | \\"last_accessed_at\\" | \\"size_in_bytes\\";
     direction?: \\"asc\\" | \\"desc\\";
   },
-  ActionsCacheList
+  ActionsCacheList,
+  { Link: Link }
 > = {
   id: \\"actions/get-actions-cache-list\\",
 };
@@ -12278,7 +12290,8 @@ export const listSelfHostedRunnersForRepo: ApiHeroEndpoint<
     total_count: number;
 
     runners: Array<Runner>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-self-hosted-runners-for-repo\\",
 };
@@ -12517,7 +12530,8 @@ export const listWorkflowRunsForRepo: ApiHeroEndpoint<
     total_count: number;
 
     workflow_runs: Array<WorkflowRun>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-workflow-runs-for-repo\\",
 };
@@ -12580,7 +12594,8 @@ export const listWorkflowRunArtifacts: ApiHeroEndpoint<
     total_count: number;
 
     artifacts: Array<Artifact>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-workflow-run-artifacts\\",
 };
@@ -12622,7 +12637,8 @@ export const listJobsForWorkflowRunAttempt: ApiHeroEndpoint<
     total_count: number;
 
     jobs: Array<Job>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-jobs-for-workflow-run-attempt\\",
 };
@@ -12669,7 +12685,8 @@ export const listJobsForWorkflowRun: ApiHeroEndpoint<
     total_count: number;
 
     jobs: Array<Job>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-jobs-for-workflow-run\\",
 };
@@ -12810,7 +12827,8 @@ export const listRepoSecrets: ApiHeroEndpoint<
     total_count: number;
 
     secrets: Array<ActionsSecret>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-repo-secrets\\",
 };
@@ -12956,7 +12974,8 @@ export const listRepoWorkflows: ApiHeroEndpoint<
     total_count: number;
 
     workflows: Array<Workflow>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-repo-workflows\\",
 };
@@ -13066,7 +13085,8 @@ export const listWorkflowRuns: ApiHeroEndpoint<
     total_count: number;
 
     workflow_runs: Array<WorkflowRun>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-workflow-runs\\",
 };
@@ -13094,7 +13114,8 @@ export const listEnvironmentSecrets: ApiHeroEndpoint<
     total_count: number;
 
     secrets: Array<ActionsSecret>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-environment-secrets\\",
 };
@@ -13235,6 +13256,7 @@ export const deleteEnvironmentSecret: ApiHeroEndpoint<
   "activity.ts" => "import {
   Event,
   Feed,
+  Link,
   MinimalRepository,
   Repository,
   RepositorySubscription,
@@ -13298,7 +13320,8 @@ export const listNotificationsForAuthenticatedUser: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Thread>
+  Array<Thread>,
+  { Link: Link }
 > = {
   id: \\"activity/list-notifications-for-authenticated-user\\",
 };
@@ -13421,7 +13444,8 @@ export const listRepoNotificationsForAuthenticatedUser: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Thread>
+  Array<Thread>,
+  { Link: Link }
 > = {
   id: \\"activity/list-repo-notifications-for-authenticated-user\\",
 };
@@ -13458,7 +13482,8 @@ export const markRepoNotificationsAsRead: ApiHeroEndpoint<
  */
 export const listStargazersForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
-  Array<SimpleUser> | Array<Stargazer>
+  Array<SimpleUser> | Array<Stargazer>,
+  { Link: Link }
 > = {
   id: \\"activity/list-stargazers-for-repo\\",
 };
@@ -13469,7 +13494,8 @@ export const listStargazersForRepo: ApiHeroEndpoint<
  */
 export const listWatchersForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"activity/list-watchers-for-repo\\",
 };
@@ -13525,7 +13551,8 @@ export const deleteRepoSubscription: ApiHeroEndpoint<{ owner: string; repo: stri
  */
 export const listReposStarredByAuthenticatedUser: ApiHeroEndpoint<
   { sort?: \\"created\\" | \\"updated\\"; direction?: \\"asc\\" | \\"desc\\"; perPage?: number; page?: number },
-  Array<Repository>
+  Array<Repository>,
+  { Link: Link }
 > = {
   id: \\"activity/list-repos-starred-by-authenticated-user\\",
 };
@@ -13565,7 +13592,8 @@ export const unstarRepoForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listWatchedReposForAuthenticatedUser: ApiHeroEndpoint<
   { perPage?: number; page?: number },
-  Array<MinimalRepository>
+  Array<MinimalRepository>,
+  { Link: Link }
 > = {
   id: \\"activity/list-watched-repos-for-authenticated-user\\",
 };
@@ -13637,7 +13665,8 @@ export const listReposStarredByUser: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<StarredRepository> | Array<Repository>
+  Array<StarredRepository> | Array<Repository>,
+  { Link: Link }
 > = {
   id: \\"activity/list-repos-starred-by-user\\",
 };
@@ -13648,7 +13677,8 @@ export const listReposStarredByUser: ApiHeroEndpoint<
  */
 export const listReposWatchedByUser: ApiHeroEndpoint<
   { username: string; perPage?: number; page?: number },
-  Array<MinimalRepository>
+  Array<MinimalRepository>,
+  { Link: Link }
 > = {
   id: \\"activity/list-repos-watched-by-user\\",
 };
@@ -13661,6 +13691,7 @@ export const listReposWatchedByUser: ApiHeroEndpoint<
   Installation,
   InstallationToken,
   Integration,
+  Link,
   MarketplaceListingPlan,
   MarketplacePurchase,
   Repository,
@@ -13776,7 +13807,8 @@ export const redeliverWebhookDelivery: ApiHeroEndpoint<{ deliveryId: number }, {
  */
 export const listInstallations: ApiHeroEndpoint<
   { perPage?: number; page?: number; since?: string; outdated?: string },
-  Array<Installation>
+  Array<Installation>,
+  { Link: Link }
 > = {
   id: \\"apps/list-installations\\",
 };
@@ -13991,7 +14023,8 @@ export const listReposAccessibleToInstallation: ApiHeroEndpoint<
     repositories: Array<Repository>;
 
     repository_selection?: string;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"apps/list-repos-accessible-to-installation\\",
 };
@@ -14029,7 +14062,8 @@ export const getSubscriptionPlanForAccount: ApiHeroEndpoint<
  */
 export const listPlans: ApiHeroEndpoint<
   { perPage?: number; page?: number },
-  Array<MarketplaceListingPlan>
+  Array<MarketplaceListingPlan>,
+  { Link: Link }
 > = {
   id: \\"apps/list-plans\\",
 };
@@ -14048,7 +14082,8 @@ export const listAccountsForPlan: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<MarketplacePurchase>
+  Array<MarketplacePurchase>,
+  { Link: Link }
 > = {
   id: \\"apps/list-accounts-for-plan\\",
 };
@@ -14074,7 +14109,8 @@ export const getSubscriptionPlanForAccountStubbed: ApiHeroEndpoint<
  */
 export const listPlansStubbed: ApiHeroEndpoint<
   { perPage?: number; page?: number },
-  Array<MarketplaceListingPlan>
+  Array<MarketplaceListingPlan>,
+  { Link: Link }
 > = {
   id: \\"apps/list-plans-stubbed\\",
 };
@@ -14093,7 +14129,8 @@ export const listAccountsForPlanStubbed: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<MarketplacePurchase>
+  Array<MarketplacePurchase>,
+  { Link: Link }
 > = {
   id: \\"apps/list-accounts-for-plan-stubbed\\",
 };
@@ -14134,7 +14171,8 @@ export const listInstallationsForAuthenticatedUser: ApiHeroEndpoint<
     total_count: number;
 
     installations: Array<Installation>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"apps/list-installations-for-authenticated-user\\",
 };
@@ -14157,7 +14195,8 @@ export const listInstallationReposForAuthenticatedUser: ApiHeroEndpoint<
     repository_selection?: string;
 
     repositories: Array<Repository>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"apps/list-installation-repos-for-authenticated-user\\",
 };
@@ -14194,7 +14233,8 @@ export const removeRepoFromInstallationForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listSubscriptionsForAuthenticatedUser: ApiHeroEndpoint<
   { perPage?: number; page?: number },
-  Array<UserMarketplacePurchase>
+  Array<UserMarketplacePurchase>,
+  { Link: Link }
 > = {
   id: \\"apps/list-subscriptions-for-authenticated-user\\",
 };
@@ -14205,7 +14245,8 @@ export const listSubscriptionsForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listSubscriptionsForAuthenticatedUserStubbed: ApiHeroEndpoint<
   { perPage?: number; page?: number },
-  Array<UserMarketplacePurchase>
+  Array<UserMarketplacePurchase>,
+  { Link: Link }
 > = {
   id: \\"apps/list-subscriptions-for-authenticated-user-stubbed\\",
 };
@@ -14391,6 +14432,7 @@ export const getSharedStorageBillingUser: ApiHeroEndpoint<
   CheckRun,
   CheckSuite,
   CheckSuitePreference,
+  Link,
   ApiHeroEndpoint,
 } from \\"./@types\\";
 
@@ -14763,7 +14805,8 @@ export const update: ApiHeroEndpoint<
  */
 export const listAnnotations: ApiHeroEndpoint<
   { owner: string; repo: string; checkRunId: number; perPage?: number; page?: number },
-  Array<CheckAnnotation>
+  Array<CheckAnnotation>,
+  { Link: Link }
 > = {
   id: \\"checks/list-annotations\\",
 };
@@ -14867,7 +14910,8 @@ export const listForSuite: ApiHeroEndpoint<
     total_count: number;
 
     check_runs: Array<CheckRun>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"checks/list-for-suite\\",
 };
@@ -14907,7 +14951,8 @@ export const listForRef: ApiHeroEndpoint<
     total_count: number;
 
     check_runs: Array<CheckRun>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"checks/list-for-ref\\",
 };
@@ -14932,7 +14977,8 @@ export const listSuitesForRef: ApiHeroEndpoint<
     total_count: number;
 
     check_suites: Array<CheckSuite>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"checks/list-suites-for-ref\\",
 };
@@ -14957,6 +15003,7 @@ export const listSuitesForRef: ApiHeroEndpoint<
   CodeScanningRef,
   CodeScanningSarifsReceipt,
   CodeScanningSarifsStatus,
+  Link,
   ApiHeroEndpoint,
 } from \\"./@types\\";
 
@@ -14980,7 +15027,8 @@ export const listAlertsForEnterprise: ApiHeroEndpoint<
     state?: CodeScanningAlertState;
     sort?: \\"created\\" | \\"updated\\";
   },
-  Array<CodeScanningOrganizationAlertItems>
+  Array<CodeScanningOrganizationAlertItems>,
+  { Link: Link }
 > = {
   id: \\"code-scanning/list-alerts-for-enterprise\\",
 };
@@ -15006,7 +15054,8 @@ export const listAlertsForOrg: ApiHeroEndpoint<
     state?: CodeScanningAlertState;
     sort?: \\"created\\" | \\"updated\\";
   },
-  Array<CodeScanningOrganizationAlertItems>
+  Array<CodeScanningOrganizationAlertItems>,
+  { Link: Link }
 > = {
   id: \\"code-scanning/list-alerts-for-org\\",
 };
@@ -15327,6 +15376,7 @@ export const getConductCode: ApiHeroEndpoint<{ key: string }, CodeOfConduct> = {
   CodespacesPublicKey,
   CodespacesSecret,
   CodespacesUserPublicKey,
+  Link,
   MinimalRepository,
   RepoCodespacesSecret,
   SimpleUser,
@@ -15540,7 +15590,8 @@ export const listRepoSecrets: ApiHeroEndpoint<
     total_count: number;
 
     secrets: Array<RepoCodespacesSecret>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"codespaces/list-repo-secrets\\",
 };
@@ -15893,7 +15944,8 @@ export const listSecretsForAuthenticatedUser: ApiHeroEndpoint<
     total_count: number;
 
     secrets: Array<CodespacesSecret>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"codespaces/list-secrets-for-authenticated-user\\",
 };
@@ -16256,6 +16308,7 @@ export const getEmojis: ApiHeroEndpoint<never, Record<string, string>> = {
   AuditLogEvent,
   AuthenticationToken,
   EnabledOrganizations,
+  Link,
   OrganizationSimple,
   Runner,
   RunnerApplication,
@@ -16623,7 +16676,8 @@ export const listSelfHostedRunnersInGroupForEnterprise: ApiHeroEndpoint<
     total_count: number;
 
     runners: Array<Runner>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"enterprise-admin/list-self-hosted-runners-in-group-for-enterprise\\",
 };
@@ -16689,7 +16743,8 @@ export const listSelfHostedRunnersForEnterprise: ApiHeroEndpoint<
     total_count?: number;
 
     runners?: Array<Runner>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"enterprise-admin/list-self-hosted-runners-for-enterprise\\",
 };
@@ -17280,6 +17335,7 @@ export const updateAttributeForEnterpriseUser: ApiHeroEndpoint<
   DependabotPublicKey,
   DependabotSecret,
   EmptyObject,
+  Link,
   MinimalRepository,
   OrganizationDependabotSecret,
   ApiHeroEndpoint,
@@ -17295,7 +17351,8 @@ export const listOrgSecrets: ApiHeroEndpoint<
     total_count: number;
 
     secrets: Array<OrganizationDependabotSecret>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"dependabot/list-org-secrets\\",
 };
@@ -17503,7 +17560,8 @@ export const listRepoSecrets: ApiHeroEndpoint<
     total_count: number;
 
     secrets: Array<DependabotSecret>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"dependabot/list-repo-secrets\\",
 };
@@ -17641,7 +17699,7 @@ export const deleteRepoSecret: ApiHeroEndpoint<
   id: \\"dependabot/delete-repo-secret\\",
 };
 ",
-  "dependency-graph.ts" => "import { DependencyGraphDiff, Snapshot, ApiHeroEndpoint } from \\"./@types\\";
+  "dependency-graph.ts" => "import { DependencyGraphDiff, Link, Snapshot, ApiHeroEndpoint } from \\"./@types\\";
 
 /**
  * Get a diff of the dependencies between commits
@@ -17649,7 +17707,8 @@ export const deleteRepoSecret: ApiHeroEndpoint<
  */
 export const diffRange: ApiHeroEndpoint<
   { owner: string; repo: string; basehead: string; name?: string },
-  DependencyGraphDiff
+  DependencyGraphDiff,
+  { Link: Link }
 > = {
   id: \\"dependency-graph/diff-range\\",
 };
@@ -17685,7 +17744,7 @@ export const createRepositorySnapshot: ApiHeroEndpoint<
   id: \\"dependency-graph/create-repository-snapshot\\",
 };
 ",
-  "gists.ts" => "import { BaseGist, GistComment, GistCommit, GistSimple, ApiHeroEndpoint } from \\"./@types\\";
+  "gists.ts" => "import { BaseGist, GistComment, GistCommit, GistSimple, Link, ApiHeroEndpoint } from \\"./@types\\";
 
 /**
  * List gists for the authenticated user
@@ -17693,7 +17752,8 @@ export const createRepositorySnapshot: ApiHeroEndpoint<
  */
 export const list: ApiHeroEndpoint<
   { since?: string; perPage?: number; page?: number },
-  Array<BaseGist>
+  Array<BaseGist>,
+  { Link: Link }
 > = {
   id: \\"gists/list\\",
 };
@@ -17728,7 +17788,8 @@ export const create: ApiHeroEndpoint<
       public?: boolean | \\"true\\" | \\"false\\";
     };
   },
-  GistSimple
+  GistSimple,
+  { Location: string }
 > = {
   id: \\"gists/create\\",
 };
@@ -17741,7 +17802,8 @@ export const create: ApiHeroEndpoint<
  */
 export const listPublic: ApiHeroEndpoint<
   { since?: string; perPage?: number; page?: number },
-  Array<BaseGist>
+  Array<BaseGist>,
+  { Link: Link }
 > = {
   id: \\"gists/list-public\\",
 };
@@ -17752,7 +17814,8 @@ export const listPublic: ApiHeroEndpoint<
  */
 export const listStarred: ApiHeroEndpoint<
   { since?: string; perPage?: number; page?: number },
-  Array<BaseGist>
+  Array<BaseGist>,
+  { Link: Link }
 > = {
   id: \\"gists/list-starred\\",
 };
@@ -17813,7 +17876,8 @@ export const update: ApiHeroEndpoint<
  */
 export const listComments: ApiHeroEndpoint<
   { gistId: string; perPage?: number; page?: number },
-  Array<GistComment>
+  Array<GistComment>,
+  { Link: Link }
 > = {
   id: \\"gists/list-comments\\",
 };
@@ -17831,7 +17895,8 @@ export const createComment: ApiHeroEndpoint<
       body: string;
     };
   },
-  GistComment
+  GistComment,
+  { Location: string }
 > = {
   id: \\"gists/create-comment\\",
 };
@@ -17874,7 +17939,8 @@ export const updateComment: ApiHeroEndpoint<
  */
 export const listCommits: ApiHeroEndpoint<
   { gistId: string; perPage?: number; page?: number },
-  Array<GistCommit>
+  Array<GistCommit>,
+  { Link: string }
 > = {
   id: \\"gists/list-commits\\",
 };
@@ -17884,7 +17950,8 @@ export const listCommits: ApiHeroEndpoint<
  */
 export const listForks: ApiHeroEndpoint<
   { gistId: string; perPage?: number; page?: number },
-  Array<GistSimple>
+  Array<GistSimple>,
+  { Link: Link }
 > = {
   id: \\"gists/list-forks\\",
 };
@@ -17893,7 +17960,7 @@ export const listForks: ApiHeroEndpoint<
  * Fork a gist
  * **Note**: This was previously \`/gists/:gist_id/fork\`.
  */
-export const fork: ApiHeroEndpoint<{ gistId: string }, BaseGist> = {
+export const fork: ApiHeroEndpoint<{ gistId: string }, BaseGist, { Location: string }> = {
   id: \\"gists/fork\\",
 };
 
@@ -17932,12 +17999,22 @@ export const getRevision: ApiHeroEndpoint<{ gistId: string; sha: string }, GistS
  */
 export const listForUser: ApiHeroEndpoint<
   { username: string; since?: string; perPage?: number; page?: number },
-  Array<BaseGist>
+  Array<BaseGist>,
+  { Link: Link }
 > = {
   id: \\"gists/list-for-user\\",
 };
 ",
-  "git.ts" => "import { Blob, GitCommit, GitRef, GitTag, GitTree, ShortBlob, ApiHeroEndpoint } from \\"./@types\\";
+  "git.ts" => "import {
+  Blob,
+  GitCommit,
+  GitRef,
+  GitTag,
+  GitTree,
+  Link,
+  ShortBlob,
+  ApiHeroEndpoint,
+} from \\"./@types\\";
 
 /**
  * Create a blob
@@ -17958,7 +18035,8 @@ export const createBlob: ApiHeroEndpoint<
       encoding?: string;
     };
   },
-  ShortBlob
+  ShortBlob,
+  { Location: string }
 > = {
   id: \\"git/create-blob\\",
 };
@@ -18072,7 +18150,8 @@ export const createCommit: ApiHeroEndpoint<
       signature?: string;
     };
   },
-  GitCommit
+  GitCommit,
+  { Location: string }
 > = {
   id: \\"git/create-commit\\",
 };
@@ -18129,7 +18208,8 @@ export const getCommit: ApiHeroEndpoint<
  */
 export const listMatchingRefs: ApiHeroEndpoint<
   { owner: string; repo: string; ref: string; perPage?: number; page?: number },
-  Array<GitRef>
+  Array<GitRef>,
+  { Link: Link }
 > = {
   id: \\"git/list-matching-refs\\",
 };
@@ -18166,7 +18246,8 @@ export const createRef: ApiHeroEndpoint<
       key?: string;
     };
   },
-  GitRef
+  GitRef,
+  { Location: string }
 > = {
   id: \\"git/create-ref\\",
 };
@@ -18282,7 +18363,8 @@ export const createTag: ApiHeroEndpoint<
       };
     };
   },
-  GitTag
+  GitTag,
+  { Location: string }
 > = {
   id: \\"git/create-tag\\",
 };
@@ -18375,7 +18457,8 @@ If not provided, GitHub will create a new Git tree object from only the entries 
       base_tree?: string;
     };
   },
-  GitTree
+  GitTree,
+  { Location: string }
 > = {
   id: \\"git/create-tree\\",
 };
@@ -18505,6 +18588,7 @@ export const removeRestrictionsForAuthenticatedUser: ApiHeroEndpoint<never, void
   IssueEvent,
   IssueEventForIssue,
   Label,
+  Link,
   Milestone,
   SimpleUser,
   TimelineIssueEvents,
@@ -18538,7 +18622,8 @@ export const list: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Issue>
+  Array<Issue>,
+  { Link: Link }
 > = {
   id: \\"issues/list\\",
 };
@@ -18564,7 +18649,8 @@ export const listForOrg: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Issue>
+  Array<Issue>,
+  { Link: Link }
 > = {
   id: \\"issues/list-for-org\\",
 };
@@ -18575,7 +18661,8 @@ export const listForOrg: ApiHeroEndpoint<
  */
 export const listAssignees: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"issues/list-assignees\\",
 };
@@ -18620,7 +18707,8 @@ export const listForRepo: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Issue>
+  Array<Issue>,
+  { Link: Link }
 > = {
   id: \\"issues/list-for-repo\\",
 };
@@ -18675,7 +18763,8 @@ export const create: ApiHeroEndpoint<
       assignees?: Array<string>;
     };
   },
-  Issue
+  Issue,
+  { Location: string }
 > = {
   id: \\"issues/create\\",
 };
@@ -18694,7 +18783,8 @@ export const listCommentsForRepo: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<IssueComment>
+  Array<IssueComment>,
+  { Link: Link }
 > = {
   id: \\"issues/list-comments-for-repo\\",
 };
@@ -18744,7 +18834,8 @@ export const updateComment: ApiHeroEndpoint<
  */
 export const listEventsForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
-  Array<IssueEvent>
+  Array<IssueEvent>,
+  { Link: Link }
 > = {
   id: \\"issues/list-events-for-repo\\",
 };
@@ -18894,7 +18985,8 @@ export const listComments: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<IssueComment>
+  Array<IssueComment>,
+  { Link: Link }
 > = {
   id: \\"issues/list-comments\\",
 };
@@ -18915,7 +19007,8 @@ export const createComment: ApiHeroEndpoint<
       body: string;
     };
   },
-  IssueComment
+  IssueComment,
+  { Location: string }
 > = {
   id: \\"issues/create-comment\\",
 };
@@ -18925,7 +19018,8 @@ export const createComment: ApiHeroEndpoint<
  */
 export const listEvents: ApiHeroEndpoint<
   { owner: string; repo: string; issueNumber: number; perPage?: number; page?: number },
-  Array<IssueEventForIssue>
+  Array<IssueEventForIssue>,
+  { Link: Link }
 > = {
   id: \\"issues/list-events\\",
 };
@@ -18935,7 +19029,8 @@ export const listEvents: ApiHeroEndpoint<
  */
 export const listLabelsOnIssue: ApiHeroEndpoint<
   { owner: string; repo: string; issueNumber: number; perPage?: number; page?: number },
-  Array<Label>
+  Array<Label>,
+  { Link: Link }
 > = {
   id: \\"issues/list-labels-on-issue\\",
 };
@@ -19058,7 +19153,8 @@ export const unlock: ApiHeroEndpoint<{ owner: string; repo: string; issueNumber:
  */
 export const listEventsForTimeline: ApiHeroEndpoint<
   { owner: string; repo: string; issueNumber: number; perPage?: number; page?: number },
-  Array<TimelineIssueEvents>
+  Array<TimelineIssueEvents>,
+  { Link: Link }
 > = {
   id: \\"issues/list-events-for-timeline\\",
 };
@@ -19068,7 +19164,8 @@ export const listEventsForTimeline: ApiHeroEndpoint<
  */
 export const listLabelsForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
-  Array<Label>
+  Array<Label>,
+  { Link: Link }
 > = {
   id: \\"issues/list-labels-for-repo\\",
 };
@@ -19097,7 +19194,8 @@ export const createLabel: ApiHeroEndpoint<
       description?: string;
     };
   },
-  Label
+  Label,
+  { Location: string }
 > = {
   id: \\"issues/create-label\\",
 };
@@ -19159,7 +19257,8 @@ export const listMilestones: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Milestone>
+  Array<Milestone>,
+  { Link: Link }
 > = {
   id: \\"issues/list-milestones\\",
 };
@@ -19193,7 +19292,8 @@ export const createMilestone: ApiHeroEndpoint<
       due_on?: string;
     };
   },
-  Milestone
+  Milestone,
+  { Location: string }
 > = {
   id: \\"issues/create-milestone\\",
 };
@@ -19258,7 +19358,8 @@ export const updateMilestone: ApiHeroEndpoint<
  */
 export const listLabelsForMilestone: ApiHeroEndpoint<
   { owner: string; repo: string; milestoneNumber: number; perPage?: number; page?: number },
-  Array<Label>
+  Array<Label>,
+  { Link: Link }
 > = {
   id: \\"issues/list-labels-for-milestone\\",
 };
@@ -19283,7 +19384,8 @@ export const listForAuthenticatedUser: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Issue>
+  Array<Issue>,
+  { Link: Link }
 > = {
   id: \\"issues/list-for-authenticated-user\\",
 };
@@ -19317,7 +19419,9 @@ export const getForRepo: ApiHeroEndpoint<{ owner: string; repo: string }, Licens
   id: \\"licenses/get-for-repo\\",
 };
 ",
-  "markdown.ts" => "/**
+  "markdown.ts" => "import { ContentType, XCommonMarkerVersion, ApiHeroEndpoint } from \\"./@types\\";
+
+/**
  * Render a Markdown document
  */
 export const render: ApiHeroEndpoint<
@@ -19339,7 +19443,12 @@ export const render: ApiHeroEndpoint<
       context?: string;
     };
   },
-  string
+  string,
+  {
+    \\"Content-Type\\": ContentType;
+    \\"Content-Length\\": string;
+    \\"X-CommonMarker-Version\\": XCommonMarkerVersion;
+  }
 > = {
   id: \\"markdown/render\\",
 };
@@ -19348,7 +19457,11 @@ export const render: ApiHeroEndpoint<
  * Render a Markdown document in raw mode
  * You must send Markdown as plain text (using a \`Content-Type\` header of \`text/plain\` or \`text/x-markdown\`) to this endpoint, rather than using JSON format. In raw mode, [GitHub Flavored Markdown](https://github.github.com/gfm/) is not supported and Markdown will be rendered in plain format like a README.md file. Markdown content must be 400 KB or less.
  */
-export const renderRaw: ApiHeroEndpoint<{ body?: string }, string> = {
+export const renderRaw: ApiHeroEndpoint<
+  { body?: string },
+  string,
+  { \\"X-CommonMarker-Version\\": XCommonMarkerVersion }
+> = {
   id: \\"markdown/render-raw\\",
 };
 ",
@@ -19390,6 +19503,7 @@ export const getZen: ApiHeroEndpoint<never, string> = {
 ",
   "migrations.ts" => "import {
   Import,
+  Link,
   Migration,
   MinimalRepository,
   PorterAuthor,
@@ -19403,7 +19517,8 @@ export const getZen: ApiHeroEndpoint<never, string> = {
  */
 export const listForOrg: ApiHeroEndpoint<
   { org: string; perPage?: number; page?: number; exclude?: Array<\\"repositories\\"> },
-  Array<Migration>
+  Array<Migration>,
+  { Link: Link }
 > = {
   id: \\"migrations/list-for-org\\",
 };
@@ -19518,7 +19633,8 @@ export const unlockRepoForOrg: ApiHeroEndpoint<
  */
 export const listReposForOrg: ApiHeroEndpoint<
   { org: string; migrationId: number; perPage?: number; page?: number },
-  Array<MinimalRepository>
+  Array<MinimalRepository>,
+  { Link: Link }
 > = {
   id: \\"migrations/list-repos-for-org\\",
 };
@@ -19599,7 +19715,8 @@ export const startImport: ApiHeroEndpoint<
       tfvc_project?: string;
     };
   },
-  Import
+  Import,
+  { Location: string }
 > = {
   id: \\"migrations/start-import\\",
 };
@@ -19728,7 +19845,8 @@ export const setLfsPreference: ApiHeroEndpoint<
  */
 export const listForAuthenticatedUser: ApiHeroEndpoint<
   { perPage?: number; page?: number },
-  Array<Migration>
+  Array<Migration>,
+  { Link: Link }
 > = {
   id: \\"migrations/list-for-authenticated-user\\",
 };
@@ -19859,12 +19977,13 @@ export const unlockRepoForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listReposForAuthenticatedUser: ApiHeroEndpoint<
   { migrationId: number; perPage?: number; page?: number },
-  Array<MinimalRepository>
+  Array<MinimalRepository>,
+  { Link: Link }
 > = {
   id: \\"migrations/list-repos-for-authenticated-user\\",
 };
 ",
-  "oauth-authorizations.ts" => "import { ApplicationGrant, Authorization, ApiHeroEndpoint } from \\"./@types\\";
+  "oauth-authorizations.ts" => "import { ApplicationGrant, Authorization, Link, ApiHeroEndpoint } from \\"./@types\\";
 
 /** * @deprecated
  * List your grants
@@ -19874,7 +19993,8 @@ export const listReposForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listGrants: ApiHeroEndpoint<
   { perPage?: number; page?: number; clientId?: string },
-  Array<ApplicationGrant>
+  Array<ApplicationGrant>,
+  { Link: Link }
 > = {
   id: \\"oauth-authorizations/list-grants\\",
 };
@@ -19903,7 +20023,8 @@ export const deleteGrant: ApiHeroEndpoint<{ grantId: number }, void> = {
  */
 export const listAuthorizations: ApiHeroEndpoint<
   { perPage?: number; page?: number; clientId?: string },
-  Array<Authorization>
+  Array<Authorization>,
+  { Link: Link }
 > = {
   id: \\"oauth-authorizations/list-authorizations\\",
 };
@@ -19956,7 +20077,8 @@ export const createAuthorization: ApiHeroEndpoint<
       fingerprint?: string;
     };
   },
-  Authorization
+  Authorization,
+  { Location: string }
 > = {
   id: \\"oauth-authorizations/create-authorization\\",
 };
@@ -20003,7 +20125,8 @@ export const getOrCreateAuthorizationForApp: ApiHeroEndpoint<
       fingerprint?: string;
     };
   },
-  Authorization
+  Authorization,
+  { Location: string }
 > = {
   id: \\"oauth-authorizations/get-or-create-authorization-for-app\\",
 };
@@ -20044,7 +20167,8 @@ export const getOrCreateAuthorizationForAppAndFingerprint: ApiHeroEndpoint<
       note_url?: string;
     };
   },
-  Authorization
+  Authorization,
+  { Location: string }
 > = {
   id: \\"oauth-authorizations/get-or-create-authorization-for-app-and-fingerprint\\",
 };
@@ -20144,6 +20268,7 @@ export const updateOidcCustomSubTemplateForOrg: ApiHeroEndpoint<
   HookDelivery,
   HookDeliveryItem,
   Installation,
+  Link,
   OrganizationCustomRepositoryRole,
   OrganizationFull,
   OrganizationInvitation,
@@ -20168,7 +20293,8 @@ export const updateOidcCustomSubTemplateForOrg: ApiHeroEndpoint<
  */
 export const list: ApiHeroEndpoint<
   { since?: number; perPage?: number },
-  Array<OrganizationSimple>
+  Array<OrganizationSimple>,
+  { Link: string }
 > = {
   id: \\"orgs/list\\",
 };
@@ -20404,7 +20530,8 @@ export const removeSamlSsoAuthorization: ApiHeroEndpoint<
  */
 export const listFailedInvitations: ApiHeroEndpoint<
   { org: string; perPage?: number; page?: number },
-  Array<OrganizationInvitation>
+  Array<OrganizationInvitation>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-failed-invitations\\",
 };
@@ -20414,7 +20541,8 @@ export const listFailedInvitations: ApiHeroEndpoint<
  */
 export const listWebhooks: ApiHeroEndpoint<
   { org: string; perPage?: number; page?: number },
-  Array<OrgHook>
+  Array<OrgHook>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-webhooks\\",
 };
@@ -20460,7 +20588,8 @@ export const createWebhook: ApiHeroEndpoint<
       active?: boolean;
     };
   },
-  OrgHook
+  OrgHook,
+  { Location: string }
 > = {
   id: \\"orgs/create-webhook\\",
 };
@@ -20609,7 +20738,8 @@ export const listAppInstallations: ApiHeroEndpoint<
     total_count: number;
 
     installations: Array<Installation>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"orgs/list-app-installations\\",
 };
@@ -20620,7 +20750,8 @@ export const listAppInstallations: ApiHeroEndpoint<
  */
 export const listPendingInvitations: ApiHeroEndpoint<
   { org: string; perPage?: number; page?: number },
-  Array<OrganizationInvitation>
+  Array<OrganizationInvitation>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-pending-invitations\\",
 };
@@ -20680,7 +20811,8 @@ export const cancelInvitation: ApiHeroEndpoint<{ org: string; invitationId: numb
  */
 export const listInvitationTeams: ApiHeroEndpoint<
   { org: string; invitationId: number; perPage?: number; page?: number },
-  Array<Team>
+  Array<Team>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-invitation-teams\\",
 };
@@ -20697,7 +20829,8 @@ export const listMembers: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-members\\",
 };
@@ -20775,7 +20908,8 @@ export const removeMembershipForUser: ApiHeroEndpoint<{ org: string; username: s
  */
 export const listOutsideCollaborators: ApiHeroEndpoint<
   { org: string; filter?: \\"2fa_disabled\\" | \\"all\\"; perPage?: number; page?: number },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-outside-collaborators\\",
 };
@@ -20814,7 +20948,8 @@ export const removeOutsideCollaborator: ApiHeroEndpoint<{ org: string; username:
  */
 export const listPublicMembers: ApiHeroEndpoint<
   { org: string; perPage?: number; page?: number },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-public-members\\",
 };
@@ -20857,7 +20992,8 @@ export const removePublicMembershipForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listMembershipsForAuthenticatedUser: ApiHeroEndpoint<
   { state?: \\"active\\" | \\"pending\\"; perPage?: number; page?: number },
-  Array<OrgMembership>
+  Array<OrgMembership>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-memberships-for-authenticated-user\\",
 };
@@ -20897,7 +21033,8 @@ export const updateMembershipForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listForAuthenticatedUser: ApiHeroEndpoint<
   { perPage?: number; page?: number },
-  Array<OrganizationSimple>
+  Array<OrganizationSimple>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-for-authenticated-user\\",
 };
@@ -20910,7 +21047,8 @@ export const listForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listForUser: ApiHeroEndpoint<
   { username: string; perPage?: number; page?: number },
-  Array<OrganizationSimple>
+  Array<OrganizationSimple>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-for-user\\",
 };
@@ -21390,6 +21528,7 @@ export const restorePackageVersionForUser: ApiHeroEndpoint<
 };
 ",
   "projects.ts" => "import {
+  Link,
   Project,
   ProjectCard,
   ProjectCollaboratorPermission,
@@ -21404,7 +21543,8 @@ export const restorePackageVersionForUser: ApiHeroEndpoint<
  */
 export const listForOrg: ApiHeroEndpoint<
   { org: string; state?: \\"open\\" | \\"closed\\" | \\"all\\"; perPage?: number; page?: number },
-  Array<Project>
+  Array<Project>,
+  { Link: Link }
 > = {
   id: \\"projects/list-for-org\\",
 };
@@ -21535,7 +21675,8 @@ export const listCards: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<ProjectCard>
+  Array<ProjectCard>,
+  { Link: Link }
 > = {
   id: \\"projects/list-cards\\",
 };
@@ -21654,7 +21795,8 @@ export const listCollaborators: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"projects/list-collaborators\\",
 };
@@ -21703,7 +21845,8 @@ export const getPermissionForUser: ApiHeroEndpoint<
  */
 export const listColumns: ApiHeroEndpoint<
   { projectId: number; perPage?: number; page?: number },
-  Array<ProjectColumn>
+  Array<ProjectColumn>,
+  { Link: Link }
 > = {
   id: \\"projects/list-columns\\",
 };
@@ -21738,7 +21881,8 @@ export const listForRepo: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Project>
+  Array<Project>,
+  { Link: Link }
 > = {
   id: \\"projects/list-for-repo\\",
 };
@@ -21796,7 +21940,8 @@ export const createForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listForUser: ApiHeroEndpoint<
   { username: string; state?: \\"open\\" | \\"closed\\" | \\"all\\"; perPage?: number; page?: number },
-  Array<Project>
+  Array<Project>,
+  { Link: Link }
 > = {
   id: \\"projects/list-for-user\\",
 };
@@ -21804,6 +21949,7 @@ export const listForUser: ApiHeroEndpoint<
   "pulls.ts" => "import {
   Commit,
   DiffEntry,
+  Link,
   PullRequest,
   PullRequestMergeResult,
   PullRequestReview,
@@ -21830,7 +21976,8 @@ export const list: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<PullRequestSimple>
+  Array<PullRequestSimple>,
+  { Link: Link }
 > = {
   id: \\"pulls/list\\",
 };
@@ -21883,7 +22030,8 @@ export const create: ApiHeroEndpoint<
       issue?: number;
     };
   },
-  PullRequest
+  PullRequest,
+  { Location: string }
 > = {
   id: \\"pulls/create\\",
 };
@@ -21902,7 +22050,8 @@ export const listReviewCommentsForRepo: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<PullRequestReviewComment>
+  Array<PullRequestReviewComment>,
+  { Link: Link }
 > = {
   id: \\"pulls/list-review-comments-for-repo\\",
 };
@@ -22033,7 +22182,8 @@ export const listReviewComments: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<PullRequestReviewComment>
+  Array<PullRequestReviewComment>,
+  { Link: Link }
 > = {
   id: \\"pulls/list-review-comments\\",
 };
@@ -22102,7 +22252,8 @@ export const createReviewComment: ApiHeroEndpoint<
       in_reply_to?: number;
     };
   },
-  PullRequestReviewComment
+  PullRequestReviewComment,
+  { Location: string }
 > = {
   id: \\"pulls/create-review-comment\\",
 };
@@ -22126,7 +22277,8 @@ export const createReplyForReviewComment: ApiHeroEndpoint<
       body: string;
     };
   },
-  PullRequestReviewComment
+  PullRequestReviewComment,
+  { Location: string }
 > = {
   id: \\"pulls/create-reply-for-review-comment\\",
 };
@@ -22137,7 +22289,8 @@ export const createReplyForReviewComment: ApiHeroEndpoint<
  */
 export const listCommits: ApiHeroEndpoint<
   { owner: string; repo: string; pullNumber: number; perPage?: number; page?: number },
-  Array<Commit>
+  Array<Commit>,
+  { Link: Link }
 > = {
   id: \\"pulls/list-commits\\",
 };
@@ -22148,7 +22301,8 @@ export const listCommits: ApiHeroEndpoint<
  */
 export const listFiles: ApiHeroEndpoint<
   { owner: string; repo: string; pullNumber: number; perPage?: number; page?: number },
-  Array<DiffEntry>
+  Array<DiffEntry>,
+  { Link: Link }
 > = {
   id: \\"pulls/list-files\\",
 };
@@ -22205,7 +22359,8 @@ export const merge: ApiHeroEndpoint<
  */
 export const listRequestedReviewers: ApiHeroEndpoint<
   { owner: string; repo: string; pullNumber: number; perPage?: number; page?: number },
-  PullRequestReviewRequest
+  PullRequestReviewRequest,
+  { Link: Link }
 > = {
   id: \\"pulls/list-requested-reviewers\\",
 };
@@ -22267,7 +22422,8 @@ export const removeRequestedReviewers: ApiHeroEndpoint<
  */
 export const listReviews: ApiHeroEndpoint<
   { owner: string; repo: string; pullNumber: number; perPage?: number; page?: number },
-  Array<PullRequestReview>
+  Array<PullRequestReview>,
+  { Link: Link }
 > = {
   id: \\"pulls/list-reviews\\",
 };
@@ -22392,7 +22548,8 @@ export const listCommentsForReview: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<ReviewComment>
+  Array<ReviewComment>,
+  { Link: Link }
 > = {
   id: \\"pulls/list-comments-for-review\\",
 };
@@ -22472,7 +22629,13 @@ export const updateBranch: ApiHeroEndpoint<
   id: \\"pulls/update-branch\\",
 };
 ",
-  "rate-limit.ts" => "import { RateLimitOverview, ApiHeroEndpoint } from \\"./@types\\";
+  "rate-limit.ts" => "import {
+  RateLimitOverview,
+  XRateLimitLimit,
+  XRateLimitRemaining,
+  XRateLimitReset,
+  ApiHeroEndpoint,
+} from \\"./@types\\";
 
 /**
  * Get rate limit status for the authenticated user
@@ -22480,11 +22643,19 @@ export const updateBranch: ApiHeroEndpoint<
  *
  * **Note:** The \`rate\` object is deprecated. If you're writing new API client code or updating existing code, you should use the \`core\` object instead of the \`rate\` object. The \`core\` object contains the same information that is present in the \`rate\` object.
  */
-export const getRateLimit: ApiHeroEndpoint<never, RateLimitOverview> = {
+export const getRateLimit: ApiHeroEndpoint<
+  never,
+  RateLimitOverview,
+  {
+    \\"X-RateLimit-Limit\\": XRateLimitLimit;
+    \\"X-RateLimit-Remaining\\": XRateLimitRemaining;
+    \\"X-RateLimit-Reset\\": XRateLimitReset;
+  }
+> = {
   id: \\"rate-limit/get\\",
 };
 ",
-  "reactions.ts" => "import { Reaction, ApiHeroEndpoint } from \\"./@types\\";
+  "reactions.ts" => "import { Link, Reaction, ApiHeroEndpoint } from \\"./@types\\";
 
 /**
  * List reactions for a team discussion comment
@@ -22502,7 +22673,8 @@ export const listForTeamDiscussionCommentInOrg: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Reaction>
+  Array<Reaction>,
+  { Link: Link }
 > = {
   id: \\"reactions/list-for-team-discussion-comment-in-org\\",
 };
@@ -22565,7 +22737,8 @@ export const listForTeamDiscussionInOrg: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Reaction>
+  Array<Reaction>,
+  { Link: Link }
 > = {
   id: \\"reactions/list-for-team-discussion-in-org\\",
 };
@@ -22619,7 +22792,8 @@ export const listForCommitComment: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Reaction>
+  Array<Reaction>,
+  { Link: Link }
 > = {
   id: \\"reactions/list-for-commit-comment\\",
 };
@@ -22671,7 +22845,8 @@ export const listForIssueComment: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Reaction>
+  Array<Reaction>,
+  { Link: Link }
 > = {
   id: \\"reactions/list-for-issue-comment\\",
 };
@@ -22723,7 +22898,8 @@ export const listForIssue: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Reaction>
+  Array<Reaction>,
+  { Link: Link }
 > = {
   id: \\"reactions/list-for-issue\\",
 };
@@ -22775,7 +22951,8 @@ export const listForPullRequestReviewComment: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Reaction>
+  Array<Reaction>,
+  { Link: Link }
 > = {
   id: \\"reactions/list-for-pull-request-review-comment\\",
 };
@@ -22827,7 +23004,8 @@ export const listForRelease: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Reaction>
+  Array<Reaction>,
+  { Link: Link }
 > = {
   id: \\"reactions/list-for-release\\",
 };
@@ -22881,7 +23059,8 @@ export const listForTeamDiscussionCommentLegacy: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Reaction>
+  Array<Reaction>,
+  { Link: Link }
 > = {
   id: \\"reactions/list-for-team-discussion-comment-legacy\\",
 };
@@ -22923,7 +23102,8 @@ export const listForTeamDiscussionLegacy: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Reaction>
+  Array<Reaction>,
+  { Link: Link }
 > = {
   id: \\"reactions/list-for-team-discussion-legacy\\",
 };
@@ -22987,6 +23167,7 @@ export const createForTeamDiscussionLegacy: ApiHeroEndpoint<
   HookDeliveryItem,
   Integration,
   Language,
+  Link,
   MergedUpstream,
   MinimalRepository,
   Page,
@@ -23036,7 +23217,8 @@ export const listForOrg: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<MinimalRepository>
+  Array<MinimalRepository>,
+  { Link: Link }
 > = {
   id: \\"repos/list-for-org\\",
 };
@@ -23152,7 +23334,8 @@ export const createInOrg: ApiHeroEndpoint<
       use_squash_pr_title_as_default?: boolean;
     };
   },
-  Repository
+  Repository,
+  { Location: string }
 > = {
   id: \\"repos/create-in-org\\",
 };
@@ -23355,7 +23538,8 @@ export const createAutolink: ApiHeroEndpoint<
       url_template: string;
     };
   },
-  Autolink
+  Autolink,
+  { Location: string }
 > = {
   id: \\"repos/create-autolink\\",
 };
@@ -23409,7 +23593,8 @@ export const disableAutomatedSecurityFixes: ApiHeroEndpoint<{ owner: string; rep
  */
 export const listBranches: ApiHeroEndpoint<
   { owner: string; repo: string; _protected?: boolean; perPage?: number; page?: number },
-  Array<ShortBranch>
+  Array<ShortBranch>,
+  { Link: Link }
 > = {
   id: \\"repos/list-branches\\",
 };
@@ -24329,7 +24514,8 @@ export const listCollaborators: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Collaborator>
+  Array<Collaborator>,
+  { Link: Link }
 > = {
   id: \\"repos/list-collaborators\\",
 };
@@ -24421,7 +24607,8 @@ export const getCollaboratorPermissionLevel: ApiHeroEndpoint<
  */
 export const listCommitCommentsForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
-  Array<CommitComment>
+  Array<CommitComment>,
+  { Link: Link }
 > = {
   id: \\"repos/list-commit-comments-for-repo\\",
 };
@@ -24509,7 +24696,8 @@ export const listCommits: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Commit>
+  Array<Commit>,
+  { Link: Link }
 > = {
   id: \\"repos/list-commits\\",
 };
@@ -24533,7 +24721,8 @@ export const listBranchesForHeadCommit: ApiHeroEndpoint<
  */
 export const listCommentsForCommit: ApiHeroEndpoint<
   { owner: string; repo: string; commitSha: string; perPage?: number; page?: number },
-  Array<CommitComment>
+  Array<CommitComment>,
+  { Link: Link }
 > = {
   id: \\"repos/list-comments-for-commit\\",
 };
@@ -24571,7 +24760,8 @@ export const createCommitComment: ApiHeroEndpoint<
       line?: number;
     };
   },
-  CommitComment
+  CommitComment,
+  { Location: string }
 > = {
   id: \\"repos/create-commit-comment\\",
 };
@@ -24582,7 +24772,8 @@ export const createCommitComment: ApiHeroEndpoint<
  */
 export const listPullRequestsAssociatedWithCommit: ApiHeroEndpoint<
   { owner: string; repo: string; commitSha: string; perPage?: number; page?: number },
-  Array<PullRequestSimple>
+  Array<PullRequestSimple>,
+  { Link: Link }
 > = {
   id: \\"repos/list-pull-requests-associated-with-commit\\",
 };
@@ -24659,7 +24850,8 @@ export const getCombinedStatusForRef: ApiHeroEndpoint<
  */
 export const listCommitStatusesForRef: ApiHeroEndpoint<
   { owner: string; repo: string; ref: string; perPage?: number; page?: number },
-  Array<Status>
+  Array<Status>,
+  { Link: Link }
 > = {
   id: \\"repos/list-commit-statuses-for-ref\\",
 };
@@ -24928,7 +25120,8 @@ export const deleteFile: ApiHeroEndpoint<
  */
 export const listContributors: ApiHeroEndpoint<
   { owner: string; repo: string; anon?: string; perPage?: number; page?: number },
-  Array<Contributor>
+  Array<Contributor>,
+  { Link: Link }
 > = {
   id: \\"repos/list-contributors\\",
 };
@@ -24948,7 +25141,8 @@ export const listDeployments: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<Deployment>
+  Array<Deployment>,
+  { Link: Link }
 > = {
   id: \\"repos/list-deployments\\",
 };
@@ -25091,7 +25285,8 @@ export const deleteDeployment: ApiHeroEndpoint<
  */
 export const listDeploymentStatuses: ApiHeroEndpoint<
   { owner: string; repo: string; deploymentId: number; perPage?: number; page?: number },
-  Array<DeploymentStatus>
+  Array<DeploymentStatus>,
+  { Link: Link }
 > = {
   id: \\"repos/list-deployment-statuses\\",
 };
@@ -25144,7 +25339,8 @@ export const createDeploymentStatus: ApiHeroEndpoint<
       auto_inactive?: boolean;
     };
   },
-  DeploymentStatus
+  DeploymentStatus,
+  { Location: string }
 > = {
   id: \\"repos/create-deployment-status\\",
 };
@@ -25285,7 +25481,8 @@ export const listForks: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<MinimalRepository>
+  Array<MinimalRepository>,
+  { Link: Link }
 > = {
   id: \\"repos/list-forks\\",
 };
@@ -25322,7 +25519,8 @@ export const createFork: ApiHeroEndpoint<
  */
 export const listWebhooks: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
-  Array<Hook>
+  Array<Hook>,
+  { Link: Link }
 > = {
   id: \\"repos/list-webhooks\\",
 };
@@ -25370,7 +25568,8 @@ export const createWebhook: ApiHeroEndpoint<
       active?: boolean;
     } | null;
   },
-  Hook
+  Hook,
+  { Location: string }
 > = {
   id: \\"repos/create-webhook\\",
 };
@@ -25543,7 +25742,8 @@ export const testPushWebhook: ApiHeroEndpoint<
  */
 export const listInvitations: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
-  Array<RepositoryInvitation>
+  Array<RepositoryInvitation>,
+  { Link: Link }
 > = {
   id: \\"repos/list-invitations\\",
 };
@@ -25583,7 +25783,8 @@ export const updateInvitation: ApiHeroEndpoint<
  */
 export const listDeployKeys: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
-  Array<DeployKey>
+  Array<DeployKey>,
+  { Link: Link }
 > = {
   id: \\"repos/list-deploy-keys\\",
 };
@@ -25615,7 +25816,8 @@ Deploy keys with write access can perform the same actions as an organization me
       read_only?: boolean;
     };
   },
-  DeployKey
+  DeployKey,
+  { Location: string }
 > = {
   id: \\"repos/create-deploy-key\\",
 };
@@ -25807,7 +26009,8 @@ export const deletePagesSite: ApiHeroEndpoint<{ owner: string; repo: string }, v
  */
 export const listPagesBuilds: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
-  Array<PageBuild>
+  Array<PageBuild>,
+  { Link: Link }
 > = {
   id: \\"repos/list-pages-builds\\",
 };
@@ -25889,7 +26092,8 @@ export const getReadmeInDirectory: ApiHeroEndpoint<
  */
 export const listReleases: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
-  Array<Release>
+  Array<Release>,
+  { Link: Link }
 > = {
   id: \\"repos/list-releases\\",
 };
@@ -25946,7 +26150,8 @@ export const createRelease: ApiHeroEndpoint<
       generate_release_notes?: boolean;
     };
   },
-  Release
+  Release,
+  { Location: string }
 > = {
   id: \\"repos/create-release\\",
 };
@@ -26134,7 +26339,8 @@ export const updateRelease: ApiHeroEndpoint<
  */
 export const listReleaseAssets: ApiHeroEndpoint<
   { owner: string; repo: string; releaseId: number; perPage?: number; page?: number },
-  Array<ReleaseAsset>
+  Array<ReleaseAsset>,
+  { Link: Link }
 > = {
   id: \\"repos/list-release-assets\\",
 };
@@ -26271,7 +26477,8 @@ For example, if your continuous integration system is posting build status, you 
       context?: string;
     };
   },
-  Status
+  Status,
+  { Location: string }
 > = {
   id: \\"repos/create-commit-status\\",
 };
@@ -26281,7 +26488,8 @@ For example, if your continuous integration system is posting build status, you 
  */
 export const listTags: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
-  Array<Tag>
+  Array<Tag>,
+  { Link: Link }
 > = {
   id: \\"repos/list-tags\\",
 };
@@ -26351,7 +26559,8 @@ export const downloadTarballArchive: ApiHeroEndpoint<
  */
 export const listTeams: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
-  Array<Team>
+  Array<Team>,
+  { Link: Link }
 > = {
   id: \\"repos/list-teams\\",
 };
@@ -26534,7 +26743,8 @@ export const createUsingTemplate: ApiHeroEndpoint<
       private?: boolean;
     };
   },
-  Repository
+  Repository,
+  { Location: string }
 > = {
   id: \\"repos/create-using-template\\",
 };
@@ -26547,7 +26757,11 @@ export const createUsingTemplate: ApiHeroEndpoint<
  * - For GitHub Enterprise Server, this endpoint will only list repositories available to all users on the enterprise.
  * - Pagination is powered exclusively by the \`since\` parameter. Use the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header) to get the URL for the next page of repositories.
  */
-export const listPublic: ApiHeroEndpoint<{ since?: number }, Array<MinimalRepository>> = {
+export const listPublic: ApiHeroEndpoint<
+  { since?: number },
+  Array<MinimalRepository>,
+  { Link: string }
+> = {
   id: \\"repos/list-public\\",
 };
 
@@ -26679,7 +26893,8 @@ export const createForAuthenticatedUser: ApiHeroEndpoint<
       is_template?: boolean;
     };
   },
-  Repository
+  Repository,
+  { Location: string }
 > = {
   id: \\"repos/create-for-authenticated-user\\",
 };
@@ -26690,7 +26905,8 @@ export const createForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listInvitationsForAuthenticatedUser: ApiHeroEndpoint<
   { perPage?: number; page?: number },
-  Array<RepositoryInvitation>
+  Array<RepositoryInvitation>,
+  { Link: Link }
 > = {
   id: \\"repos/list-invitations-for-authenticated-user\\",
 };
@@ -26726,7 +26942,8 @@ export const listForUser: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<MinimalRepository>
+  Array<MinimalRepository>,
+  { Link: Link }
 > = {
   id: \\"repos/list-for-user\\",
 };
@@ -27179,6 +27396,7 @@ export const users: ApiHeroEndpoint<
 ",
   "secret-scanning.ts" => "import {
   AlertNumber,
+  Link,
   OrganizationSecretScanningAlert,
   SecretScanningAlert,
   SecretScanningAlertResolution,
@@ -27204,7 +27422,8 @@ export const listAlertsForEnterprise: ApiHeroEndpoint<
     before?: string;
     after?: string;
   },
-  Array<OrganizationSecretScanningAlert>
+  Array<OrganizationSecretScanningAlert>,
+  { Link: Link }
 > = {
   id: \\"secret-scanning/list-alerts-for-enterprise\\",
 };
@@ -27230,7 +27449,8 @@ export const listAlertsForOrg: ApiHeroEndpoint<
     before?: string;
     after?: string;
   },
-  Array<OrganizationSecretScanningAlert>
+  Array<OrganizationSecretScanningAlert>,
+  { Link: Link }
 > = {
   id: \\"secret-scanning/list-alerts-for-org\\",
 };
@@ -27311,7 +27531,8 @@ export const updateAlert: ApiHeroEndpoint<
  */
 export const listLocationsForAlert: ApiHeroEndpoint<
   { owner: string; repo: string; alertNumber: AlertNumber; page?: number; perPage?: number },
-  Array<SecretScanningLocation>
+  Array<SecretScanningLocation>,
+  { Link: Link }
 > = {
   id: \\"secret-scanning/list-locations-for-alert\\",
 };
@@ -27341,6 +27562,7 @@ export const getServerStatistics: ApiHeroEndpoint<
   ExternalGroup,
   ExternalGroups,
   GroupMapping,
+  Link,
   MinimalRepository,
   OrganizationInvitation,
   SimpleUser,
@@ -27375,7 +27597,8 @@ export const externalIdpGroupInfoForOrg: ApiHeroEndpoint<
  */
 export const listExternalIdpGroupsForOrg: ApiHeroEndpoint<
   { org: string; perPage?: number; page?: number; displayName?: string },
-  ExternalGroups
+  ExternalGroups,
+  { Link: string }
 > = {
   id: \\"teams/list-external-idp-groups-for-org\\",
 };
@@ -27388,7 +27611,8 @@ export const listExternalIdpGroupsForOrg: ApiHeroEndpoint<
  */
 export const listIdpGroupsForOrg: ApiHeroEndpoint<
   { org: string; perPage?: number; page?: string },
-  GroupMapping
+  GroupMapping,
+  { Link: string }
 > = {
   id: \\"teams/list-idp-groups-for-org\\",
 };
@@ -27399,7 +27623,8 @@ export const listIdpGroupsForOrg: ApiHeroEndpoint<
  */
 export const list: ApiHeroEndpoint<
   { org: string; perPage?: number; page?: number },
-  Array<Team>
+  Array<Team>,
+  { Link: Link }
 > = {
   id: \\"teams/list\\",
 };
@@ -27546,7 +27771,8 @@ export const listDiscussionsInOrg: ApiHeroEndpoint<
     page?: number;
     pinned?: string;
   },
-  Array<TeamDiscussion>
+  Array<TeamDiscussion>,
+  { Link: Link }
 > = {
   id: \\"teams/list-discussions-in-org\\",
 };
@@ -27654,7 +27880,8 @@ export const listDiscussionCommentsInOrg: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<TeamDiscussionComment>
+  Array<TeamDiscussionComment>,
+  { Link: Link }
 > = {
   id: \\"teams/list-discussion-comments-in-org\\",
 };
@@ -27790,7 +28017,8 @@ export const linkExternalIdpGroupToTeamForOrg: ApiHeroEndpoint<
  */
 export const listPendingInvitationsInOrg: ApiHeroEndpoint<
   { org: string; teamSlug: string; perPage?: number; page?: number },
-  Array<OrganizationInvitation>
+  Array<OrganizationInvitation>,
+  { Link: Link }
 > = {
   id: \\"teams/list-pending-invitations-in-org\\",
 };
@@ -27809,7 +28037,8 @@ export const listMembersInOrg: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"teams/list-members-in-org\\",
 };
@@ -27890,7 +28119,8 @@ export const removeMembershipForUserInOrg: ApiHeroEndpoint<
  */
 export const listProjectsInOrg: ApiHeroEndpoint<
   { org: string; teamSlug: string; perPage?: number; page?: number },
-  Array<TeamProject>
+  Array<TeamProject>,
+  { Link: Link }
 > = {
   id: \\"teams/list-projects-in-org\\",
 };
@@ -27952,7 +28182,8 @@ export const removeProjectInOrg: ApiHeroEndpoint<
  */
 export const listReposInOrg: ApiHeroEndpoint<
   { org: string; teamSlug: string; perPage?: number; page?: number },
-  Array<MinimalRepository>
+  Array<MinimalRepository>,
+  { Link: Link }
 > = {
   id: \\"teams/list-repos-in-org\\",
 };
@@ -28073,7 +28304,8 @@ export const createOrUpdateIdpGroupConnectionsInOrg: ApiHeroEndpoint<
  */
 export const listChildInOrg: ApiHeroEndpoint<
   { org: string; teamSlug: string; perPage?: number; page?: number },
-  Array<Team>
+  Array<Team>,
+  { Link: Link }
 > = {
   id: \\"teams/list-child-in-org\\",
 };
@@ -28154,7 +28386,8 @@ export const updateLegacy: ApiHeroEndpoint<
  */
 export const listDiscussionsLegacy: ApiHeroEndpoint<
   { teamId: number; direction?: \\"asc\\" | \\"desc\\"; perPage?: number; page?: number },
-  Array<TeamDiscussion>
+  Array<TeamDiscussion>,
+  { Link: Link }
 > = {
   id: \\"teams/list-discussions-legacy\\",
 };
@@ -28259,7 +28492,8 @@ export const listDiscussionCommentsLegacy: ApiHeroEndpoint<
     perPage?: number;
     page?: number;
   },
-  Array<TeamDiscussionComment>
+  Array<TeamDiscussionComment>,
+  { Link: Link }
 > = {
   id: \\"teams/list-discussion-comments-legacy\\",
 };
@@ -28345,7 +28579,8 @@ export const updateDiscussionCommentLegacy: ApiHeroEndpoint<
  */
 export const listPendingInvitationsLegacy: ApiHeroEndpoint<
   { teamId: number; perPage?: number; page?: number },
-  Array<OrganizationInvitation>
+  Array<OrganizationInvitation>,
+  { Link: Link }
 > = {
   id: \\"teams/list-pending-invitations-legacy\\",
 };
@@ -28358,7 +28593,8 @@ export const listPendingInvitationsLegacy: ApiHeroEndpoint<
  */
 export const listMembersLegacy: ApiHeroEndpoint<
   { teamId: number; role?: \\"member\\" | \\"maintainer\\" | \\"all\\"; perPage?: number; page?: number },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"teams/list-members-legacy\\",
 };
@@ -28484,7 +28720,8 @@ export const removeMembershipForUserLegacy: ApiHeroEndpoint<
  */
 export const listProjectsLegacy: ApiHeroEndpoint<
   { teamId: number; perPage?: number; page?: number },
-  Array<TeamProject>
+  Array<TeamProject>,
+  { Link: Link }
 > = {
   id: \\"teams/list-projects-legacy\\",
 };
@@ -28540,7 +28777,8 @@ export const removeProjectLegacy: ApiHeroEndpoint<{ teamId: number; projectId: n
  */
 export const listReposLegacy: ApiHeroEndpoint<
   { teamId: number; perPage?: number; page?: number },
-  Array<MinimalRepository>
+  Array<MinimalRepository>,
+  { Link: Link }
 > = {
   id: \\"teams/list-repos-legacy\\",
 };
@@ -28662,7 +28900,8 @@ export const createOrUpdateIdpGroupConnectionsLegacy: ApiHeroEndpoint<
  */
 export const listChildLegacy: ApiHeroEndpoint<
   { teamId: number; perPage?: number; page?: number },
-  Array<Team>
+  Array<Team>,
+  { Link: Link }
 > = {
   id: \\"teams/list-child-legacy\\",
 };
@@ -28673,7 +28912,8 @@ export const listChildLegacy: ApiHeroEndpoint<
  */
 export const listForAuthenticatedUser: ApiHeroEndpoint<
   { perPage?: number; page?: number },
-  Array<TeamFull>
+  Array<TeamFull>,
+  { Link: Link }
 > = {
   id: \\"teams/list-for-authenticated-user\\",
 };
@@ -28684,6 +28924,7 @@ export const listForAuthenticatedUser: ApiHeroEndpoint<
   Hovercard,
   Key,
   KeySimple,
+  Link,
   PrivateUser,
   PublicUser,
   SimpleUser,
@@ -28806,7 +29047,8 @@ export const setPrimaryEmailVisibilityForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listEmailsForAuthenticatedUser: ApiHeroEndpoint<
   { perPage?: number; page?: number },
-  Array<Email>
+  Array<Email>,
+  { Link: Link }
 > = {
   id: \\"users/list-emails-for-authenticated-user\\",
 };
@@ -28859,7 +29101,8 @@ export const deleteEmailForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listFollowersForAuthenticatedUser: ApiHeroEndpoint<
   { perPage?: number; page?: number },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"users/list-followers-for-authenticated-user\\",
 };
@@ -28870,7 +29113,8 @@ export const listFollowersForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listFollowedByAuthenticatedUser: ApiHeroEndpoint<
   { perPage?: number; page?: number },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"users/list-followed-by-authenticated-user\\",
 };
@@ -28906,7 +29150,8 @@ export const unfollow: ApiHeroEndpoint<{ username: string }, void> = {
  */
 export const listGpgKeysForAuthenticatedUser: ApiHeroEndpoint<
   { perPage?: number; page?: number },
-  Array<GpgKey>
+  Array<GpgKey>,
+  { Link: Link }
 > = {
   id: \\"users/list-gpg-keys-for-authenticated-user\\",
 };
@@ -28956,7 +29201,8 @@ export const deleteGpgKeyForAuthenticatedUser: ApiHeroEndpoint<{ gpgKeyId: numbe
  */
 export const listPublicSshKeysForAuthenticatedUser: ApiHeroEndpoint<
   { perPage?: number; page?: number },
-  Array<Key>
+  Array<Key>,
+  { Link: Link }
 > = {
   id: \\"users/list-public-ssh-keys-for-authenticated-user\\",
 };
@@ -29006,7 +29252,8 @@ export const deletePublicSshKeyForAuthenticatedUser: ApiHeroEndpoint<{ keyId: nu
  */
 export const listPublicEmailsForAuthenticatedUser: ApiHeroEndpoint<
   { perPage?: number; page?: number },
-  Array<Email>
+  Array<Email>,
+  { Link: Link }
 > = {
   id: \\"users/list-public-emails-for-authenticated-user\\",
 };
@@ -29017,7 +29264,11 @@ export const listPublicEmailsForAuthenticatedUser: ApiHeroEndpoint<
  *
  * Note: Pagination is powered exclusively by the \`since\` parameter. Use the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header) to get the URL for the next page of users.
  */
-export const list: ApiHeroEndpoint<{ since?: number; perPage?: number }, Array<SimpleUser>> = {
+export const list: ApiHeroEndpoint<
+  { since?: number; perPage?: number },
+  Array<SimpleUser>,
+  { Link: string }
+> = {
   id: \\"users/list\\",
 };
 
@@ -29041,7 +29292,8 @@ export const getByUsername: ApiHeroEndpoint<{ username: string }, PrivateUser | 
  */
 export const listFollowersForUser: ApiHeroEndpoint<
   { username: string; perPage?: number; page?: number },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"users/list-followers-for-user\\",
 };
@@ -29052,7 +29304,8 @@ export const listFollowersForUser: ApiHeroEndpoint<
  */
 export const listFollowingForUser: ApiHeroEndpoint<
   { username: string; perPage?: number; page?: number },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"users/list-following-for-user\\",
 };
@@ -29073,7 +29326,8 @@ export const checkFollowingForUser: ApiHeroEndpoint<
  */
 export const listGpgKeysForUser: ApiHeroEndpoint<
   { username: string; perPage?: number; page?: number },
-  Array<GpgKey>
+  Array<GpgKey>,
+  { Link: Link }
 > = {
   id: \\"users/list-gpg-keys-for-user\\",
 };
@@ -29106,7 +29360,8 @@ export const getContextForUser: ApiHeroEndpoint<
  */
 export const listPublicKeysForUser: ApiHeroEndpoint<
   { username: string; perPage?: number; page?: number },
-  Array<KeySimple>
+  Array<KeySimple>,
+  { Link: Link }
 > = {
   id: \\"users/list-public-keys-for-user\\",
 };
@@ -29194,7 +29449,10 @@ export * from \\"./@types\\";
 
 exports[`v3/petstore.json 1`] = `
 Map {
-  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseData> = { id: string; [key: string]: string | number };
+  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+  id: string;
+  [key: string]: string | number;
+};
 
 export type Order = {
   id?: number;
@@ -29396,7 +29654,11 @@ export const createUsersWithListInput: ApiHeroEndpoint<{ body?: Array<User> }, U
 /**
  * Logs user into the system
  */
-export const loginUser: ApiHeroEndpoint<{ username?: string; password?: string }, string> = {
+export const loginUser: ApiHeroEndpoint<
+  { username?: string; password?: string },
+  string,
+  { \\"X-Rate-Limit\\": number; \\"X-Expires-After\\": string }
+> = {
   id: \\"loginUser\\",
 };
 
@@ -29443,7 +29705,10 @@ export * from \\"./@types\\";
 
 exports[`v3/petstore.json with additional options 1`] = `
 Map {
-  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseData> = { id: string; [key: string]: string | number };
+  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+  id: string;
+  [key: string]: string | number;
+};
 
 export type Order = {
   id?: number;
@@ -29676,7 +29941,11 @@ export const createUsersWithListInput: ApiHeroEndpoint<{ body?: Array<User> }, U
 /**
  * Logs user into the system
  */
-export const loginUser: ApiHeroEndpoint<{ username?: string; password?: string }, string> = {
+export const loginUser: ApiHeroEndpoint<
+  { username?: string; password?: string },
+  string,
+  { \\"X-Rate-Limit\\": number; \\"X-Expires-After\\": string }
+> = {
   id: \\"loginUser\\",
   clientId: \\"github\\",
   count: 12,
@@ -29733,7 +30002,10 @@ export * from \\"./@types\\";
 
 exports[`v3_1/github.json 1`] = `
 Map {
-  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseData> = { id: string; [key: string]: string | number };
+  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+  id: string;
+  [key: string]: string | number;
+};
 
 /**
  * Information of a job execution in a workflow run
@@ -39890,6 +40162,7 @@ export type ActionsOidcCustomIssuerPolicyForEnterprise = {
   EnabledRepositories,
   EnvironmentApprovals,
   Job,
+  Link,
   MinimalRepository,
   OptOutOidcCustomSub,
   OrganizationActionsSecret,
@@ -39919,7 +40192,8 @@ export const listSelfHostedRunnersForOrg: ApiHeroEndpoint<
     runners: Array<Runner>;
 
     total_count: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-self-hosted-runners-for-org\\",
 };
@@ -39934,7 +40208,8 @@ export const listOrgSecrets: ApiHeroEndpoint<
     secrets: Array<OrganizationActionsSecret>;
 
     total_count: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-org-secrets\\",
 };
@@ -39947,7 +40222,8 @@ export const listOrgSecrets: ApiHeroEndpoint<
  */
 export const getActionsCacheUsageForOrg: ApiHeroEndpoint<
   { org: string },
-  ActionsCacheUsageOrgEnterprise
+  ActionsCacheUsageOrgEnterprise,
+  { Link: Link }
 > = {
   id: \\"actions/get-actions-cache-usage-for-org\\",
 };
@@ -40096,7 +40372,8 @@ export const listWorkflowRunsForRepo: ApiHeroEndpoint<
     total_count: number;
 
     workflow_runs: Array<WorkflowRun>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-workflow-runs-for-repo\\",
 };
@@ -40118,7 +40395,8 @@ export const getActionsCacheList: ApiHeroEndpoint<
     key?: string;
     ref?: CodeScanningRef;
   },
-  ActionsCacheList
+  ActionsCacheList,
+  { Link: Link }
 > = {
   id: \\"actions/get-actions-cache-list\\",
 };
@@ -40161,7 +40439,8 @@ export const listSelfHostedRunnersForRepo: ApiHeroEndpoint<
     runners: Array<Runner>;
 
     total_count: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-self-hosted-runners-for-repo\\",
 };
@@ -40176,7 +40455,8 @@ export const listRepoSecrets: ApiHeroEndpoint<
     secrets: Array<ActionsSecret>;
 
     total_count: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-repo-secrets\\",
 };
@@ -40223,7 +40503,8 @@ export const listArtifactsForRepo: ApiHeroEndpoint<
     artifacts: Array<Artifact>;
 
     total_count: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-artifacts-for-repo\\",
 };
@@ -40238,7 +40519,8 @@ export const listRepoWorkflows: ApiHeroEndpoint<
     workflows: Array<Workflow>;
 
     total_count: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-repo-workflows\\",
 };
@@ -40550,7 +40832,8 @@ export const setSelectedRepositoriesEnabledGithubActionsOrganization: ApiHeroEnd
  */
 export const getActionsCacheUsageForEnterprise: ApiHeroEndpoint<
   { enterprise: string },
-  ActionsCacheUsageOrgEnterprise
+  ActionsCacheUsageOrgEnterprise,
+  { Link: Link }
 > = {
   id: \\"actions/get-actions-cache-usage-for-enterprise\\",
 };
@@ -40567,7 +40850,8 @@ export const getActionsCacheUsageByRepoForOrg: ApiHeroEndpoint<
     total_count: number;
 
     repository_cache_usages: Array<ActionsCacheUsageByRepository>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/get-actions-cache-usage-by-repo-for-org\\",
 };
@@ -40795,7 +41079,8 @@ export const listJobsForWorkflowRun: ApiHeroEndpoint<
     jobs: Array<Job>;
 
     total_count: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-jobs-for-workflow-run\\",
 };
@@ -41277,7 +41562,8 @@ export const listWorkflowRunArtifacts: ApiHeroEndpoint<
     artifacts: Array<Artifact>;
 
     total_count: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-workflow-run-artifacts\\",
 };
@@ -41542,7 +41828,8 @@ export const listWorkflowRuns: ApiHeroEndpoint<
     total_count: number;
 
     workflow_runs: Array<WorkflowRun>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-workflow-runs\\",
 };
@@ -41574,7 +41861,8 @@ export const listSelfHostedRunnersInGroupForOrg: ApiHeroEndpoint<
     runners: Array<Runner>;
 
     total_count: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-self-hosted-runners-in-group-for-org\\",
 };
@@ -41860,7 +42148,8 @@ export const listEnvironmentSecrets: ApiHeroEndpoint<
     secrets: Array<ActionsSecret>;
 
     total_count: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-environment-secrets\\",
 };
@@ -41951,7 +42240,8 @@ export const listJobsForWorkflowRunAttempt: ApiHeroEndpoint<
     jobs: Array<Job>;
 
     total_count: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"actions/list-jobs-for-workflow-run-attempt\\",
 };
@@ -42139,6 +42429,7 @@ export const deleteEnvironmentSecret: ApiHeroEndpoint<
   "activity.ts" => "import {
   Event,
   Feed,
+  Link,
   MinimalRepository,
   Repository,
   RepositorySubscription,
@@ -42187,7 +42478,8 @@ export const listPublicEvents: ApiHeroEndpoint<
  */
 export const listReposStarredByAuthenticatedUser: ApiHeroEndpoint<
   { page?: number; direction?: \\"asc\\" | \\"desc\\"; perPage?: number; sort?: \\"created\\" | \\"updated\\" },
-  Array<Repository>
+  Array<Repository>,
+  { Link: Link }
 > = {
   id: \\"activity/list-repos-starred-by-authenticated-user\\",
 };
@@ -42205,7 +42497,8 @@ export const listNotificationsForAuthenticatedUser: ApiHeroEndpoint<
     participating?: boolean;
     all?: boolean;
   },
-  Array<Thread>
+  Array<Thread>,
+  { Link: Link }
 > = {
   id: \\"activity/list-notifications-for-authenticated-user\\",
 };
@@ -42251,7 +42544,8 @@ export const listPublicOrgEvents: ApiHeroEndpoint<
  */
 export const listWatchedReposForAuthenticatedUser: ApiHeroEndpoint<
   { page?: number; perPage?: number },
-  Array<MinimalRepository>
+  Array<MinimalRepository>,
+  { Link: Link }
 > = {
   id: \\"activity/list-watched-repos-for-authenticated-user\\",
 };
@@ -42281,7 +42575,8 @@ export const listReposStarredByUser: ApiHeroEndpoint<
     perPage?: number;
     sort?: \\"created\\" | \\"updated\\";
   },
-  Array<StarredRepository> | Array<Repository>
+  Array<StarredRepository> | Array<Repository>,
+  { Link: Link }
 > = {
   id: \\"activity/list-repos-starred-by-user\\",
 };
@@ -42351,7 +42646,8 @@ export const listPublicEventsForUser: ApiHeroEndpoint<
  */
 export const listReposWatchedByUser: ApiHeroEndpoint<
   { username: string; page?: number; perPage?: number },
-  Array<MinimalRepository>
+  Array<MinimalRepository>,
+  { Link: Link }
 > = {
   id: \\"activity/list-repos-watched-by-user\\",
 };
@@ -42364,7 +42660,8 @@ export const listReposWatchedByUser: ApiHeroEndpoint<
  */
 export const listStargazersForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
-  Array<SimpleUser> | Array<Stargazer>
+  Array<SimpleUser> | Array<Stargazer>,
+  { Link: Link }
 > = {
   id: \\"activity/list-stargazers-for-repo\\",
 };
@@ -42375,7 +42672,8 @@ export const listStargazersForRepo: ApiHeroEndpoint<
  */
 export const listWatchersForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"activity/list-watchers-for-repo\\",
 };
@@ -42463,7 +42761,8 @@ export const listRepoNotificationsForAuthenticatedUser: ApiHeroEndpoint<
     participating?: boolean;
     all?: boolean;
   },
-  Array<Thread>
+  Array<Thread>,
+  { Link: Link }
 > = {
   id: \\"activity/list-repo-notifications-for-authenticated-user\\",
 };
@@ -42565,6 +42864,7 @@ export const deleteThreadSubscription: ApiHeroEndpoint<{ threadId: number }, voi
   Installation,
   InstallationToken,
   Integration,
+  Link,
   MarketplaceListingPlan,
   MarketplacePurchase,
   Repository,
@@ -42638,7 +42938,8 @@ export const getBySlug: ApiHeroEndpoint<{ appSlug: string }, Integration> = {
  */
 export const listInstallations: ApiHeroEndpoint<
   { page?: number; since?: string; perPage?: number; outdated?: string },
-  Array<Installation>
+  Array<Installation>,
+  { Link: Link }
 > = {
   id: \\"apps/list-installations\\",
 };
@@ -42671,7 +42972,8 @@ export const listInstallationsForAuthenticatedUser: ApiHeroEndpoint<
     total_count: number;
 
     installations: Array<Installation>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"apps/list-installations-for-authenticated-user\\",
 };
@@ -42713,7 +43015,8 @@ export const listReposAccessibleToInstallation: ApiHeroEndpoint<
     repositories: Array<Repository>;
 
     repository_selection?: string;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"apps/list-repos-accessible-to-installation\\",
 };
@@ -42726,7 +43029,8 @@ export const listReposAccessibleToInstallation: ApiHeroEndpoint<
  */
 export const listPlans: ApiHeroEndpoint<
   { page?: number; perPage?: number },
-  Array<MarketplaceListingPlan>
+  Array<MarketplaceListingPlan>,
+  { Link: Link }
 > = {
   id: \\"apps/list-plans\\",
 };
@@ -42737,7 +43041,8 @@ export const listPlans: ApiHeroEndpoint<
  */
 export const listSubscriptionsForAuthenticatedUser: ApiHeroEndpoint<
   { page?: number; perPage?: number },
-  Array<UserMarketplacePurchase>
+  Array<UserMarketplacePurchase>,
+  { Link: Link }
 > = {
   id: \\"apps/list-subscriptions-for-authenticated-user\\",
 };
@@ -42866,7 +43171,8 @@ export const getWebhookDelivery: ApiHeroEndpoint<{ deliveryId: number }, HookDel
  */
 export const listPlansStubbed: ApiHeroEndpoint<
   { page?: number; perPage?: number },
-  Array<MarketplaceListingPlan>
+  Array<MarketplaceListingPlan>,
+  { Link: Link }
 > = {
   id: \\"apps/list-plans-stubbed\\",
 };
@@ -42887,7 +43193,8 @@ export const getRepoInstallation: ApiHeroEndpoint<{ owner: string; repo: string 
  */
 export const listSubscriptionsForAuthenticatedUserStubbed: ApiHeroEndpoint<
   { page?: number; perPage?: number },
-  Array<UserMarketplacePurchase>
+  Array<UserMarketplacePurchase>,
+  { Link: Link }
 > = {
   id: \\"apps/list-subscriptions-for-authenticated-user-stubbed\\",
 };
@@ -42990,7 +43297,8 @@ export const listAccountsForPlan: ApiHeroEndpoint<
     sort?: \\"created\\" | \\"updated\\";
     direction?: \\"asc\\" | \\"desc\\";
   },
-  Array<MarketplacePurchase>
+  Array<MarketplacePurchase>,
+  { Link: Link }
 > = {
   id: \\"apps/list-accounts-for-plan\\",
 };
@@ -43074,7 +43382,8 @@ export const listInstallationReposForAuthenticatedUser: ApiHeroEndpoint<
     repositories: Array<Repository>;
 
     repository_selection?: string;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"apps/list-installation-repos-for-authenticated-user\\",
 };
@@ -43093,7 +43402,8 @@ export const listAccountsForPlanStubbed: ApiHeroEndpoint<
     sort?: \\"created\\" | \\"updated\\";
     direction?: \\"asc\\" | \\"desc\\";
   },
-  Array<MarketplacePurchase>
+  Array<MarketplacePurchase>,
+  { Link: Link }
 > = {
   id: \\"apps/list-accounts-for-plan-stubbed\\",
 };
@@ -43295,6 +43605,7 @@ export const getGithubAdvancedSecurityBillingGhe: ApiHeroEndpoint<
   CheckRun,
   CheckSuite,
   CheckSuitePreference,
+  Link,
   ApiHeroEndpoint,
 } from \\"./@types\\";
 
@@ -43550,7 +43861,8 @@ export const listForRef: ApiHeroEndpoint<
     check_runs: Array<CheckRun>;
 
     total_count: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"checks/list-for-ref\\",
 };
@@ -43760,7 +44072,8 @@ export const listSuitesForRef: ApiHeroEndpoint<
     total_count: number;
 
     check_suites: Array<CheckSuite>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"checks/list-suites-for-ref\\",
 };
@@ -43797,7 +44110,8 @@ export const rerequestRun: ApiHeroEndpoint<
  */
 export const listAnnotations: ApiHeroEndpoint<
   { checkRunId: number; owner: string; repo: string; page?: number; perPage?: number },
-  Array<CheckAnnotation>
+  Array<CheckAnnotation>,
+  { Link: Link }
 > = {
   id: \\"checks/list-annotations\\",
 };
@@ -43836,7 +44150,8 @@ export const listForSuite: ApiHeroEndpoint<
     check_runs: Array<CheckRun>;
 
     total_count: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"checks/list-for-suite\\",
 };
@@ -43859,6 +44174,7 @@ export const listForSuite: ApiHeroEndpoint<
   CodeScanningRef,
   CodeScanningSarifsReceipt,
   CodeScanningSarifsStatus,
+  Link,
   ApiHeroEndpoint,
 } from \\"./@types\\";
 
@@ -43883,7 +44199,8 @@ export const listAlertsForOrg: ApiHeroEndpoint<
     state?: \\"open\\" | \\"closed\\" | \\"dismissed\\" | \\"fixed\\";
     after?: string;
   },
-  Array<CodeScanningOrganizationAlertItems>
+  Array<CodeScanningOrganizationAlertItems>,
+  { Link: Link }
 > = {
   id: \\"code-scanning/list-alerts-for-org\\",
 };
@@ -44028,7 +44345,8 @@ export const listAlertsForEnterprise: ApiHeroEndpoint<
     state?: \\"open\\" | \\"closed\\" | \\"dismissed\\" | \\"fixed\\";
     sort?: \\"created\\" | \\"updated\\";
   },
-  Array<CodeScanningOrganizationAlertItems>
+  Array<CodeScanningOrganizationAlertItems>,
+  { Link: Link }
 > = {
   id: \\"code-scanning/list-alerts-for-enterprise\\",
 };
@@ -44229,6 +44547,7 @@ export const getConductCode: ApiHeroEndpoint<{ key: string }, CodeOfConduct> = {
   CodespacesPublicKey,
   CodespacesSecret,
   CodespacesUserPublicKey,
+  Link,
   MinimalRepository,
   RepoCodespacesSecret,
   SimpleUser,
@@ -44402,7 +44721,8 @@ export const listSecretsForAuthenticatedUser: ApiHeroEndpoint<
     secrets: Array<CodespacesSecret>;
 
     total_count: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"codespaces/list-secrets-for-authenticated-user\\",
 };
@@ -44755,7 +45075,8 @@ export const listRepoSecrets: ApiHeroEndpoint<
     secrets: Array<RepoCodespacesSecret>;
 
     total_count: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"codespaces/list-repo-secrets\\",
 };
@@ -45158,6 +45479,7 @@ export const getEmojis: ApiHeroEndpoint<never, Record<string, string>> = {
   AuditLogEvent,
   AuthenticationToken,
   EnabledOrganizations,
+  Link,
   OrganizationSimple,
   Runner,
   RunnerApplication,
@@ -45349,7 +45671,8 @@ export const listSelfHostedRunnersForEnterprise: ApiHeroEndpoint<
     runners?: Array<Runner>;
 
     total_count?: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"enterprise-admin/list-self-hosted-runners-for-enterprise\\",
 };
@@ -46059,7 +46382,8 @@ export const listSelfHostedRunnersInGroupForEnterprise: ApiHeroEndpoint<
     runners: Array<Runner>;
 
     total_count: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"enterprise-admin/list-self-hosted-runners-in-group-for-enterprise\\",
 };
@@ -46182,6 +46506,7 @@ export const removeOrgAccessToSelfHostedRunnerGroupInEnterprise: ApiHeroEndpoint
   DependabotPublicKey,
   DependabotSecret,
   EmptyObject,
+  Link,
   MinimalRepository,
   OrganizationDependabotSecret,
   ApiHeroEndpoint,
@@ -46197,7 +46522,8 @@ export const listOrgSecrets: ApiHeroEndpoint<
     secrets: Array<OrganizationDependabotSecret>;
 
     total_count: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"dependabot/list-org-secrets\\",
 };
@@ -46212,7 +46538,8 @@ export const listRepoSecrets: ApiHeroEndpoint<
     secrets: Array<DependabotSecret>;
 
     total_count: number;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"dependabot/list-repo-secrets\\",
 };
@@ -46543,7 +46870,7 @@ export const removeSelectedRepoFromOrgSecret: ApiHeroEndpoint<
   id: \\"dependabot/remove-selected-repo-from-org-secret\\",
 };
 ",
-  "dependency-graph.ts" => "import { DependencyGraphDiff, Snapshot, ApiHeroEndpoint } from \\"./@types\\";
+  "dependency-graph.ts" => "import { DependencyGraphDiff, Link, Snapshot, ApiHeroEndpoint } from \\"./@types\\";
 
 /**
  * Create a snapshot of dependencies for a repository
@@ -46582,12 +46909,13 @@ export const createRepositorySnapshot: ApiHeroEndpoint<
  */
 export const diffRange: ApiHeroEndpoint<
   { owner: string; repo: string; basehead: string; name?: string },
-  DependencyGraphDiff
+  DependencyGraphDiff,
+  { Link: Link }
 > = {
   id: \\"dependency-graph/diff-range\\",
 };
 ",
-  "gists.ts" => "import { BaseGist, GistComment, GistCommit, GistSimple, ApiHeroEndpoint } from \\"./@types\\";
+  "gists.ts" => "import { BaseGist, GistComment, GistCommit, GistSimple, Link, ApiHeroEndpoint } from \\"./@types\\";
 
 /**
  * List gists for the authenticated user
@@ -46595,7 +46923,8 @@ export const diffRange: ApiHeroEndpoint<
  */
 export const list: ApiHeroEndpoint<
   { page?: number; since?: string; perPage?: number },
-  Array<BaseGist>
+  Array<BaseGist>,
+  { Link: Link }
 > = {
   id: \\"gists/list\\",
 };
@@ -46630,7 +46959,8 @@ export const create: ApiHeroEndpoint<
       description?: string;
     };
   },
-  GistSimple
+  GistSimple,
+  { Location: string }
 > = {
   id: \\"gists/create\\",
 };
@@ -46643,7 +46973,8 @@ export const create: ApiHeroEndpoint<
  */
 export const listPublic: ApiHeroEndpoint<
   { page?: number; since?: string; perPage?: number },
-  Array<BaseGist>
+  Array<BaseGist>,
+  { Link: Link }
 > = {
   id: \\"gists/list-public\\",
 };
@@ -46654,7 +46985,8 @@ export const listPublic: ApiHeroEndpoint<
  */
 export const listStarred: ApiHeroEndpoint<
   { page?: number; since?: string; perPage?: number },
-  Array<BaseGist>
+  Array<BaseGist>,
+  { Link: Link }
 > = {
   id: \\"gists/list-starred\\",
 };
@@ -46737,7 +47069,8 @@ export const unstar: ApiHeroEndpoint<{ gistId: string }, void> = {
  */
 export const listForks: ApiHeroEndpoint<
   { gistId: string; page?: number; perPage?: number },
-  Array<GistSimple>
+  Array<GistSimple>,
+  { Link: Link }
 > = {
   id: \\"gists/list-forks\\",
 };
@@ -46746,7 +47079,7 @@ export const listForks: ApiHeroEndpoint<
  * Fork a gist
  * **Note**: This was previously \`/gists/:gist_id/fork\`.
  */
-export const fork: ApiHeroEndpoint<{ gistId: string }, BaseGist> = {
+export const fork: ApiHeroEndpoint<{ gistId: string }, BaseGist, { Location: string }> = {
   id: \\"gists/fork\\",
 };
 
@@ -46763,7 +47096,8 @@ export const getRevision: ApiHeroEndpoint<{ gistId: string; sha: string }, GistS
  */
 export const listForUser: ApiHeroEndpoint<
   { username: string; page?: number; since?: string; perPage?: number },
-  Array<BaseGist>
+  Array<BaseGist>,
+  { Link: Link }
 > = {
   id: \\"gists/list-for-user\\",
 };
@@ -46773,7 +47107,8 @@ export const listForUser: ApiHeroEndpoint<
  */
 export const listCommits: ApiHeroEndpoint<
   { gistId: string; page?: number; perPage?: number },
-  Array<GistCommit>
+  Array<GistCommit>,
+  { Link: string }
 > = {
   id: \\"gists/list-commits\\",
 };
@@ -46783,7 +47118,8 @@ export const listCommits: ApiHeroEndpoint<
  */
 export const listComments: ApiHeroEndpoint<
   { gistId: string; page?: number; perPage?: number },
-  Array<GistComment>
+  Array<GistComment>,
+  { Link: Link }
 > = {
   id: \\"gists/list-comments\\",
 };
@@ -46801,7 +47137,8 @@ export const createComment: ApiHeroEndpoint<
       body: string;
     };
   },
-  GistComment
+  GistComment,
+  { Location: string }
 > = {
   id: \\"gists/create-comment\\",
 };
@@ -46839,7 +47176,16 @@ export const updateComment: ApiHeroEndpoint<
   id: \\"gists/update-comment\\",
 };
 ",
-  "git.ts" => "import { Blob, GitCommit, GitRef, GitTag, GitTree, ShortBlob, ApiHeroEndpoint } from \\"./@types\\";
+  "git.ts" => "import {
+  Blob,
+  GitCommit,
+  GitRef,
+  GitTag,
+  GitTree,
+  Link,
+  ShortBlob,
+  ApiHeroEndpoint,
+} from \\"./@types\\";
 
 /**
  * Create a reference
@@ -46863,7 +47209,8 @@ export const createRef: ApiHeroEndpoint<
       sha: string;
     };
   },
-  GitRef
+  GitRef,
+  { Location: string }
 > = {
   id: \\"git/create-ref\\",
 };
@@ -46947,7 +47294,8 @@ export const createTag: ApiHeroEndpoint<
       message: string;
     };
   },
-  GitTag
+  GitTag,
+  { Location: string }
 > = {
   id: \\"git/create-tag\\",
 };
@@ -46971,7 +47319,8 @@ export const createBlob: ApiHeroEndpoint<
       encoding?: string;
     };
   },
-  ShortBlob
+  ShortBlob,
+  { Location: string }
 > = {
   id: \\"git/create-blob\\",
 };
@@ -47029,7 +47378,8 @@ If not provided, GitHub will create a new Git tree object from only the entries 
       base_tree?: string;
     };
   },
-  GitTree
+  GitTree,
+  { Location: string }
 > = {
   id: \\"git/create-tree\\",
 };
@@ -47133,7 +47483,8 @@ export const createCommit: ApiHeroEndpoint<
       signature?: string;
     };
   },
-  GitCommit
+  GitCommit,
+  { Location: string }
 > = {
   id: \\"git/create-commit\\",
 };
@@ -47250,7 +47601,8 @@ export const getTree: ApiHeroEndpoint<
  */
 export const listMatchingRefs: ApiHeroEndpoint<
   { owner: string; ref: string; repo: string; page?: number; perPage?: number },
-  Array<GitRef>
+  Array<GitRef>,
+  { Link: Link }
 > = {
   id: \\"git/list-matching-refs\\",
 };
@@ -47407,6 +47759,7 @@ export const removeRestrictionsForRepo: ApiHeroEndpoint<{ owner: string; repo: s
   IssueEvent,
   IssueEventForIssue,
   Label,
+  Link,
   Milestone,
   SimpleUser,
   TimelineIssueEvents,
@@ -47440,7 +47793,8 @@ export const list: ApiHeroEndpoint<
     collab?: boolean;
     labels?: string;
   },
-  Array<Issue>
+  Array<Issue>,
+  { Link: Link }
 > = {
   id: \\"issues/list\\",
 };
@@ -47465,7 +47819,8 @@ export const listForAuthenticatedUser: ApiHeroEndpoint<
     labels?: string;
     state?: \\"open\\" | \\"closed\\" | \\"all\\";
   },
-  Array<Issue>
+  Array<Issue>,
+  { Link: Link }
 > = {
   id: \\"issues/list-for-authenticated-user\\",
 };
@@ -47491,7 +47846,8 @@ export const listForOrg: ApiHeroEndpoint<
     sort?: \\"created\\" | \\"updated\\" | \\"comments\\";
     labels?: string;
   },
-  Array<Issue>
+  Array<Issue>,
+  { Link: Link }
 > = {
   id: \\"issues/list-for-org\\",
 };
@@ -47521,7 +47877,8 @@ export const listForRepo: ApiHeroEndpoint<
     milestone?: string;
     state?: \\"open\\" | \\"closed\\" | \\"all\\";
   },
-  Array<Issue>
+  Array<Issue>,
+  { Link: Link }
 > = {
   id: \\"issues/list-for-repo\\",
 };
@@ -47576,7 +47933,8 @@ export const create: ApiHeroEndpoint<
       milestone?: string | number;
     };
   },
-  Issue
+  Issue,
+  { Location: string }
 > = {
   id: \\"issues/create\\",
 };
@@ -47586,7 +47944,8 @@ export const create: ApiHeroEndpoint<
  */
 export const listLabelsForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
-  Array<Label>
+  Array<Label>,
+  { Link: Link }
 > = {
   id: \\"issues/list-labels-for-repo\\",
 };
@@ -47615,7 +47974,8 @@ export const createLabel: ApiHeroEndpoint<
       description?: string;
     };
   },
-  Label
+  Label,
+  { Location: string }
 > = {
   id: \\"issues/create-label\\",
 };
@@ -47626,7 +47986,8 @@ export const createLabel: ApiHeroEndpoint<
  */
 export const listAssignees: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"issues/list-assignees\\",
 };
@@ -47644,7 +48005,8 @@ export const listMilestones: ApiHeroEndpoint<
     direction?: \\"asc\\" | \\"desc\\";
     state?: \\"open\\" | \\"closed\\" | \\"all\\";
   },
-  Array<Milestone>
+  Array<Milestone>,
+  { Link: Link }
 > = {
   id: \\"issues/list-milestones\\",
 };
@@ -47678,7 +48040,8 @@ export const createMilestone: ApiHeroEndpoint<
       description?: string;
     };
   },
-  Milestone
+  Milestone,
+  { Location: string }
 > = {
   id: \\"issues/create-milestone\\",
 };
@@ -47688,7 +48051,8 @@ export const createMilestone: ApiHeroEndpoint<
  */
 export const listEventsForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
-  Array<IssueEvent>
+  Array<IssueEvent>,
+  { Link: Link }
 > = {
   id: \\"issues/list-events-for-repo\\",
 };
@@ -47751,7 +48115,8 @@ export const listCommentsForRepo: ApiHeroEndpoint<
     sort?: \\"created\\" | \\"updated\\";
     direction?: \\"asc\\" | \\"desc\\";
   },
-  Array<IssueComment>
+  Array<IssueComment>,
+  { Link: Link }
 > = {
   id: \\"issues/list-comments-for-repo\\",
 };
@@ -47941,7 +48306,8 @@ export const updateComment: ApiHeroEndpoint<
  */
 export const listEvents: ApiHeroEndpoint<
   { owner: string; repo: string; issueNumber: number; page?: number; perPage?: number },
-  Array<IssueEventForIssue>
+  Array<IssueEventForIssue>,
+  { Link: Link }
 > = {
   id: \\"issues/list-events\\",
 };
@@ -47951,7 +48317,8 @@ export const listEvents: ApiHeroEndpoint<
  */
 export const listLabelsOnIssue: ApiHeroEndpoint<
   { owner: string; repo: string; issueNumber: number; page?: number; perPage?: number },
-  Array<Label>
+  Array<Label>,
+  { Link: Link }
 > = {
   id: \\"issues/list-labels-on-issue\\",
 };
@@ -48091,7 +48458,8 @@ export const listComments: ApiHeroEndpoint<
     since?: string;
     perPage?: number;
   },
-  Array<IssueComment>
+  Array<IssueComment>,
+  { Link: Link }
 > = {
   id: \\"issues/list-comments\\",
 };
@@ -48112,7 +48480,8 @@ export const createComment: ApiHeroEndpoint<
       body: string;
     };
   },
-  IssueComment
+  IssueComment,
+  { Location: string }
 > = {
   id: \\"issues/create-comment\\",
 };
@@ -48122,7 +48491,8 @@ export const createComment: ApiHeroEndpoint<
  */
 export const listEventsForTimeline: ApiHeroEndpoint<
   { owner: string; repo: string; issueNumber: number; page?: number; perPage?: number },
-  Array<TimelineIssueEvents>
+  Array<TimelineIssueEvents>,
+  { Link: Link }
 > = {
   id: \\"issues/list-events-for-timeline\\",
 };
@@ -48185,7 +48555,8 @@ export const removeLabel: ApiHeroEndpoint<
  */
 export const listLabelsForMilestone: ApiHeroEndpoint<
   { owner: string; repo: string; milestoneNumber: number; page?: number; perPage?: number },
-  Array<Label>
+  Array<Label>,
+  { Link: Link }
 > = {
   id: \\"issues/list-labels-for-milestone\\",
 };
@@ -48219,7 +48590,9 @@ export const getForRepo: ApiHeroEndpoint<{ owner: string; repo: string }, Licens
   id: \\"licenses/get-for-repo\\",
 };
 ",
-  "markdown.ts" => "/**
+  "markdown.ts" => "import { ContentType, XCommonMarkerVersion, ApiHeroEndpoint } from \\"./@types\\";
+
+/**
  * Render a Markdown document
  */
 export const render: ApiHeroEndpoint<
@@ -48241,7 +48614,12 @@ export const render: ApiHeroEndpoint<
       context?: string;
     };
   },
-  string
+  string,
+  {
+    \\"Content-Type\\": ContentType;
+    \\"Content-Length\\": string;
+    \\"X-CommonMarker-Version\\": XCommonMarkerVersion;
+  }
 > = {
   id: \\"markdown/render\\",
 };
@@ -48250,7 +48628,11 @@ export const render: ApiHeroEndpoint<
  * Render a Markdown document in raw mode
  * You must send Markdown as plain text (using a \`Content-Type\` header of \`text/plain\` or \`text/x-markdown\`) to this endpoint, rather than using JSON format. In raw mode, [GitHub Flavored Markdown](https://github.github.com/gfm/) is not supported and Markdown will be rendered in plain format like a README.md file. Markdown content must be 400 KB or less.
  */
-export const renderRaw: ApiHeroEndpoint<{ body?: string }, string> = {
+export const renderRaw: ApiHeroEndpoint<
+  { body?: string },
+  string,
+  { \\"X-CommonMarker-Version\\": XCommonMarkerVersion }
+> = {
   id: \\"markdown/render-raw\\",
 };
 ",
@@ -48293,6 +48675,7 @@ export const getOctocat: ApiHeroEndpoint<{ s?: string }, string> = {
 ",
   "migrations.ts" => "import {
   Import,
+  Link,
   Migration,
   MinimalRepository,
   PorterAuthor,
@@ -48306,7 +48689,8 @@ export const getOctocat: ApiHeroEndpoint<{ s?: string }, string> = {
  */
 export const listForAuthenticatedUser: ApiHeroEndpoint<
   { page?: number; perPage?: number },
-  Array<Migration>
+  Array<Migration>,
+  { Link: Link }
 > = {
   id: \\"migrations/list-for-authenticated-user\\",
 };
@@ -48372,7 +48756,8 @@ export const startForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listForOrg: ApiHeroEndpoint<
   { org: string; page?: number; perPage?: number; exclude?: Array<\\"repositories\\"> },
-  Array<Migration>
+  Array<Migration>,
+  { Link: Link }
 > = {
   id: \\"migrations/list-for-org\\",
 };
@@ -48512,7 +48897,8 @@ export const startImport: ApiHeroEndpoint<
       vcs_username?: string;
     };
   },
-  Import
+  Import,
+  { Location: string }
 > = {
   id: \\"migrations/start-import\\",
 };
@@ -48687,7 +49073,8 @@ export const getLargeFiles: ApiHeroEndpoint<
  */
 export const listReposForAuthenticatedUser: ApiHeroEndpoint<
   { migrationId: number; page?: number; perPage?: number },
-  Array<MinimalRepository>
+  Array<MinimalRepository>,
+  { Link: Link }
 > = {
   id: \\"migrations/list-repos-for-authenticated-user\\",
 };
@@ -48740,7 +49127,8 @@ export const mapCommitAuthor: ApiHeroEndpoint<
  */
 export const listReposForOrg: ApiHeroEndpoint<
   { org: string; migrationId: number; page?: number; perPage?: number },
-  Array<MinimalRepository>
+  Array<MinimalRepository>,
+  { Link: Link }
 > = {
   id: \\"migrations/list-repos-for-org\\",
 };
@@ -48767,7 +49155,7 @@ export const unlockRepoForOrg: ApiHeroEndpoint<
   id: \\"migrations/unlock-repo-for-org\\",
 };
 ",
-  "oauth-authorizations.ts" => "import { ApplicationGrant, Authorization, ApiHeroEndpoint } from \\"./@types\\";
+  "oauth-authorizations.ts" => "import { ApplicationGrant, Authorization, Link, ApiHeroEndpoint } from \\"./@types\\";
 
 /** * @deprecated
  * List your authorizations
@@ -48775,7 +49163,8 @@ export const unlockRepoForOrg: ApiHeroEndpoint<
  */
 export const listAuthorizations: ApiHeroEndpoint<
   { page?: number; perPage?: number; clientId?: string },
-  Array<Authorization>
+  Array<Authorization>,
+  { Link: Link }
 > = {
   id: \\"oauth-authorizations/list-authorizations\\",
 };
@@ -48828,7 +49217,8 @@ export const createAuthorization: ApiHeroEndpoint<
       client_secret?: string;
     };
   },
-  Authorization
+  Authorization,
+  { Location: string }
 > = {
   id: \\"oauth-authorizations/create-authorization\\",
 };
@@ -48841,7 +49231,8 @@ export const createAuthorization: ApiHeroEndpoint<
  */
 export const listGrants: ApiHeroEndpoint<
   { page?: number; clientId?: string; perPage?: number },
-  Array<ApplicationGrant>
+  Array<ApplicationGrant>,
+  { Link: Link }
 > = {
   id: \\"oauth-authorizations/list-grants\\",
 };
@@ -48970,7 +49361,8 @@ export const getOrCreateAuthorizationForApp: ApiHeroEndpoint<
       client_secret: string;
     };
   },
-  Authorization
+  Authorization,
+  { Location: string }
 > = {
   id: \\"oauth-authorizations/get-or-create-authorization-for-app\\",
 };
@@ -49011,7 +49403,8 @@ export const getOrCreateAuthorizationForAppAndFingerprint: ApiHeroEndpoint<
       client_secret: string;
     };
   },
-  Authorization
+  Authorization,
+  { Location: string }
 > = {
   id: \\"oauth-authorizations/get-or-create-authorization-for-app-and-fingerprint\\",
 };
@@ -49047,6 +49440,7 @@ export const updateOidcCustomSubTemplateForOrg: ApiHeroEndpoint<
   HookDelivery,
   HookDeliveryItem,
   Installation,
+  Link,
   OrganizationCustomRepositoryRole,
   OrganizationFull,
   OrganizationInvitation,
@@ -49074,7 +49468,8 @@ export const updateOidcCustomSubTemplateForOrg: ApiHeroEndpoint<
  */
 export const listForAuthenticatedUser: ApiHeroEndpoint<
   { page?: number; perPage?: number },
-  Array<OrganizationSimple>
+  Array<OrganizationSimple>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-for-authenticated-user\\",
 };
@@ -49211,7 +49606,8 @@ export const update: ApiHeroEndpoint<
  */
 export const list: ApiHeroEndpoint<
   { perPage?: number; since?: number },
-  Array<OrganizationSimple>
+  Array<OrganizationSimple>,
+  { Link: string }
 > = {
   id: \\"orgs/list\\",
 };
@@ -49221,7 +49617,8 @@ export const list: ApiHeroEndpoint<
  */
 export const listWebhooks: ApiHeroEndpoint<
   { org: string; page?: number; perPage?: number },
-  Array<OrgHook>
+  Array<OrgHook>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-webhooks\\",
 };
@@ -49267,7 +49664,8 @@ export const createWebhook: ApiHeroEndpoint<
       events?: Array<string>;
     };
   },
-  OrgHook
+  OrgHook,
+  { Location: string }
 > = {
   id: \\"orgs/create-webhook\\",
 };
@@ -49292,7 +49690,8 @@ export const listMembers: ApiHeroEndpoint<
     perPage?: number;
     role?: \\"all\\" | \\"admin\\" | \\"member\\";
   },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-members\\",
 };
@@ -49327,7 +49726,8 @@ export const getAuditLog: ApiHeroEndpoint<
  */
 export const listMembershipsForAuthenticatedUser: ApiHeroEndpoint<
   { page?: number; perPage?: number; state?: \\"active\\" | \\"pending\\" },
-  Array<OrgMembership>
+  Array<OrgMembership>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-memberships-for-authenticated-user\\",
 };
@@ -49340,7 +49740,8 @@ export const listMembershipsForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listForUser: ApiHeroEndpoint<
   { username: string; page?: number; perPage?: number },
-  Array<OrganizationSimple>
+  Array<OrganizationSimple>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-for-user\\",
 };
@@ -49351,7 +49752,8 @@ export const listForUser: ApiHeroEndpoint<
  */
 export const listPendingInvitations: ApiHeroEndpoint<
   { org: string; page?: number; perPage?: number },
-  Array<OrganizationInvitation>
+  Array<OrganizationInvitation>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-pending-invitations\\",
 };
@@ -49405,7 +49807,8 @@ export const listAppInstallations: ApiHeroEndpoint<
     total_count: number;
 
     installations: Array<Installation>;
-  }
+  },
+  { Link: Link }
 > = {
   id: \\"orgs/list-app-installations\\",
 };
@@ -49416,7 +49819,8 @@ export const listAppInstallations: ApiHeroEndpoint<
  */
 export const listPublicMembers: ApiHeroEndpoint<
   { org: string; page?: number; perPage?: number },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-public-members\\",
 };
@@ -49540,7 +49944,8 @@ export const listSecurityManagerTeams: ApiHeroEndpoint<{ org: string }, Array<Te
  */
 export const listFailedInvitations: ApiHeroEndpoint<
   { org: string; page?: number; perPage?: number },
-  Array<OrganizationInvitation>
+  Array<OrganizationInvitation>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-failed-invitations\\",
 };
@@ -49575,7 +49980,8 @@ export const pingWebhook: ApiHeroEndpoint<{ org: string; hookId: number }, void>
  */
 export const listOutsideCollaborators: ApiHeroEndpoint<
   { org: string; page?: number; perPage?: number; filter?: \\"2fa_disabled\\" | \\"all\\" },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-outside-collaborators\\",
 };
@@ -49791,7 +50197,8 @@ export const listCustomRoles: ApiHeroEndpoint<
  */
 export const listInvitationTeams: ApiHeroEndpoint<
   { org: string; invitationId: number; page?: number; perPage?: number },
-  Array<Team>
+  Array<Team>,
+  { Link: Link }
 > = {
   id: \\"orgs/list-invitation-teams\\",
 };
@@ -50330,6 +50737,7 @@ export const restorePackageVersionForUser: ApiHeroEndpoint<
 };
 ",
   "projects.ts" => "import {
+  Link,
   Project,
   ProjectCard,
   ProjectCollaboratorPermission,
@@ -50367,7 +50775,8 @@ export const createForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listForOrg: ApiHeroEndpoint<
   { org: string; page?: number; perPage?: number; state?: \\"open\\" | \\"closed\\" | \\"all\\" },
-  Array<Project>
+  Array<Project>,
+  { Link: Link }
 > = {
   id: \\"projects/list-for-org\\",
 };
@@ -50456,7 +50865,8 @@ export const update: ApiHeroEndpoint<
  */
 export const listForUser: ApiHeroEndpoint<
   { username: string; page?: number; perPage?: number; state?: \\"open\\" | \\"closed\\" | \\"all\\" },
-  Array<Project>
+  Array<Project>,
+  { Link: Link }
 > = {
   id: \\"projects/list-for-user\\",
 };
@@ -50498,7 +50908,8 @@ export const updateColumn: ApiHeroEndpoint<
  */
 export const listColumns: ApiHeroEndpoint<
   { projectId: number; page?: number; perPage?: number },
-  Array<ProjectColumn>
+  Array<ProjectColumn>,
+  { Link: Link }
 > = {
   id: \\"projects/list-columns\\",
 };
@@ -50533,7 +50944,8 @@ export const listForRepo: ApiHeroEndpoint<
     perPage?: number;
     state?: \\"open\\" | \\"closed\\" | \\"all\\";
   },
-  Array<Project>
+  Array<Project>,
+  { Link: Link }
 > = {
   id: \\"projects/list-for-repo\\",
 };
@@ -50610,7 +51022,8 @@ export const listCards: ApiHeroEndpoint<
     perPage?: number;
     archivedState?: \\"all\\" | \\"archived\\" | \\"not_archived\\";
   },
-  Array<ProjectCard>
+  Array<ProjectCard>,
+  { Link: Link }
 > = {
   id: \\"projects/list-cards\\",
 };
@@ -50674,7 +51087,8 @@ export const listCollaborators: ApiHeroEndpoint<
     perPage?: number;
     affiliation?: \\"outside\\" | \\"direct\\" | \\"all\\";
   },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"projects/list-collaborators\\",
 };
@@ -50744,6 +51158,7 @@ export const getPermissionForUser: ApiHeroEndpoint<
   "pulls.ts" => "import {
   Commit,
   DiffEntry,
+  Link,
   PullRequest,
   PullRequestMergeResult,
   PullRequestReview,
@@ -50770,7 +51185,8 @@ export const list: ApiHeroEndpoint<
     state?: \\"open\\" | \\"closed\\" | \\"all\\";
     base?: string;
   },
-  Array<PullRequestSimple>
+  Array<PullRequestSimple>,
+  { Link: Link }
 > = {
   id: \\"pulls/list\\",
 };
@@ -50823,7 +51239,8 @@ export const create: ApiHeroEndpoint<
       maintainer_can_modify?: boolean;
     };
   },
-  PullRequest
+  PullRequest,
+  { Location: string }
 > = {
   id: \\"pulls/create\\",
 };
@@ -50842,7 +51259,8 @@ export const listReviewCommentsForRepo: ApiHeroEndpoint<
     sort?: \\"created\\" | \\"updated\\" | \\"created_at\\";
     direction?: \\"asc\\" | \\"desc\\";
   },
-  Array<PullRequestReviewComment>
+  Array<PullRequestReviewComment>,
+  { Link: Link }
 > = {
   id: \\"pulls/list-review-comments-for-repo\\",
 };
@@ -50921,7 +51339,8 @@ export const update: ApiHeroEndpoint<
  */
 export const listFiles: ApiHeroEndpoint<
   { owner: string; repo: string; pullNumber: number; page?: number; perPage?: number },
-  Array<DiffEntry>
+  Array<DiffEntry>,
+  { Link: Link }
 > = {
   id: \\"pulls/list-files\\",
 };
@@ -51021,7 +51440,8 @@ export const updateReviewComment: ApiHeroEndpoint<
  */
 export const listCommits: ApiHeroEndpoint<
   { owner: string; repo: string; pullNumber: number; page?: number; perPage?: number },
-  Array<Commit>
+  Array<Commit>,
+  { Link: Link }
 > = {
   id: \\"pulls/list-commits\\",
 };
@@ -51032,7 +51452,8 @@ export const listCommits: ApiHeroEndpoint<
  */
 export const listReviews: ApiHeroEndpoint<
   { owner: string; repo: string; pullNumber: number; page?: number; perPage?: number },
-  Array<PullRequestReview>
+  Array<PullRequestReview>,
+  { Link: Link }
 > = {
   id: \\"pulls/list-reviews\\",
 };
@@ -51117,7 +51538,8 @@ export const listReviewComments: ApiHeroEndpoint<
     sort?: \\"created\\" | \\"updated\\";
     direction?: \\"asc\\" | \\"desc\\";
   },
-  Array<PullRequestReviewComment>
+  Array<PullRequestReviewComment>,
+  { Link: Link }
 > = {
   id: \\"pulls/list-review-comments\\",
 };
@@ -51186,7 +51608,8 @@ export const createReviewComment: ApiHeroEndpoint<
       in_reply_to?: number;
     };
   },
-  PullRequestReviewComment
+  PullRequestReviewComment,
+  { Location: string }
 > = {
   id: \\"pulls/create-review-comment\\",
 };
@@ -51222,7 +51645,8 @@ export const updateBranch: ApiHeroEndpoint<
  */
 export const listRequestedReviewers: ApiHeroEndpoint<
   { owner: string; repo: string; pullNumber: number; page?: number; perPage?: number },
-  PullRequestReviewRequest
+  PullRequestReviewRequest,
+  { Link: Link }
 > = {
   id: \\"pulls/list-requested-reviewers\\",
 };
@@ -51359,7 +51783,8 @@ export const listCommentsForReview: ApiHeroEndpoint<
     page?: number;
     perPage?: number;
   },
-  Array<ReviewComment>
+  Array<ReviewComment>,
+  { Link: Link }
 > = {
   id: \\"pulls/list-comments-for-review\\",
 };
@@ -51383,7 +51808,8 @@ export const createReplyForReviewComment: ApiHeroEndpoint<
       body: string;
     };
   },
-  PullRequestReviewComment
+  PullRequestReviewComment,
+  { Location: string }
 > = {
   id: \\"pulls/create-reply-for-review-comment\\",
 };
@@ -51412,7 +51838,13 @@ export const dismissReview: ApiHeroEndpoint<
   id: \\"pulls/dismiss-review\\",
 };
 ",
-  "rate-limit.ts" => "import { RateLimitOverview, ApiHeroEndpoint } from \\"./@types\\";
+  "rate-limit.ts" => "import {
+  RateLimitOverview,
+  XRateLimitLimit,
+  XRateLimitRemaining,
+  XRateLimitReset,
+  ApiHeroEndpoint,
+} from \\"./@types\\";
 
 /**
  * Get rate limit status for the authenticated user
@@ -51420,11 +51852,19 @@ export const dismissReview: ApiHeroEndpoint<
  *
  * **Note:** The \`rate\` object is deprecated. If you're writing new API client code or updating existing code, you should use the \`core\` object instead of the \`rate\` object. The \`core\` object contains the same information that is present in the \`rate\` object.
  */
-export const getRateLimit: ApiHeroEndpoint<never, RateLimitOverview> = {
+export const getRateLimit: ApiHeroEndpoint<
+  never,
+  RateLimitOverview,
+  {
+    \\"X-RateLimit-Limit\\": XRateLimitLimit;
+    \\"X-RateLimit-Reset\\": XRateLimitReset;
+    \\"X-RateLimit-Remaining\\": XRateLimitRemaining;
+  }
+> = {
   id: \\"rate-limit/get\\",
 };
 ",
-  "reactions.ts" => "import { Reaction, ApiHeroEndpoint } from \\"./@types\\";
+  "reactions.ts" => "import { Link, Reaction, ApiHeroEndpoint } from \\"./@types\\";
 
 /**
  * List reactions for a commit comment
@@ -51439,7 +51879,8 @@ export const listForCommitComment: ApiHeroEndpoint<
     perPage?: number;
     content?: \\"+1\\" | \\"-1\\" | \\"laugh\\" | \\"confused\\" | \\"heart\\" | \\"hooray\\" | \\"rocket\\" | \\"eyes\\";
   },
-  Array<Reaction>
+  Array<Reaction>,
+  { Link: Link }
 > = {
   id: \\"reactions/list-for-commit-comment\\",
 };
@@ -51478,7 +51919,8 @@ export const listForIssue: ApiHeroEndpoint<
     perPage?: number;
     content?: \\"+1\\" | \\"-1\\" | \\"laugh\\" | \\"confused\\" | \\"heart\\" | \\"hooray\\" | \\"rocket\\" | \\"eyes\\";
   },
-  Array<Reaction>
+  Array<Reaction>,
+  { Link: Link }
 > = {
   id: \\"reactions/list-for-issue\\",
 };
@@ -51517,7 +51959,8 @@ export const listForRelease: ApiHeroEndpoint<
     perPage?: number;
     content?: \\"+1\\" | \\"laugh\\" | \\"heart\\" | \\"hooray\\" | \\"rocket\\" | \\"eyes\\";
   },
-  Array<Reaction>
+  Array<Reaction>,
+  { Link: Link }
 > = {
   id: \\"reactions/list-for-release\\",
 };
@@ -51557,7 +52000,8 @@ export const listForTeamDiscussionLegacy: ApiHeroEndpoint<
     perPage?: number;
     content?: \\"+1\\" | \\"-1\\" | \\"laugh\\" | \\"confused\\" | \\"heart\\" | \\"hooray\\" | \\"rocket\\" | \\"eyes\\";
   },
-  Array<Reaction>
+  Array<Reaction>,
+  { Link: Link }
 > = {
   id: \\"reactions/list-for-team-discussion-legacy\\",
 };
@@ -51597,7 +52041,8 @@ export const listForPullRequestReviewComment: ApiHeroEndpoint<
     perPage?: number;
     content?: \\"+1\\" | \\"-1\\" | \\"laugh\\" | \\"confused\\" | \\"heart\\" | \\"hooray\\" | \\"rocket\\" | \\"eyes\\";
   },
-  Array<Reaction>
+  Array<Reaction>,
+  { Link: Link }
 > = {
   id: \\"reactions/list-for-pull-request-review-comment\\",
 };
@@ -51636,7 +52081,8 @@ export const listForIssueComment: ApiHeroEndpoint<
     perPage?: number;
     content?: \\"+1\\" | \\"-1\\" | \\"laugh\\" | \\"confused\\" | \\"heart\\" | \\"hooray\\" | \\"rocket\\" | \\"eyes\\";
   },
-  Array<Reaction>
+  Array<Reaction>,
+  { Link: Link }
 > = {
   id: \\"reactions/list-for-issue-comment\\",
 };
@@ -51716,7 +52162,8 @@ export const listForTeamDiscussionInOrg: ApiHeroEndpoint<
     perPage?: number;
     content?: \\"+1\\" | \\"-1\\" | \\"laugh\\" | \\"confused\\" | \\"heart\\" | \\"hooray\\" | \\"rocket\\" | \\"eyes\\";
   },
-  Array<Reaction>
+  Array<Reaction>,
+  { Link: Link }
 > = {
   id: \\"reactions/list-for-team-discussion-in-org\\",
 };
@@ -51785,7 +52232,8 @@ export const listForTeamDiscussionCommentLegacy: ApiHeroEndpoint<
     perPage?: number;
     content?: \\"+1\\" | \\"-1\\" | \\"laugh\\" | \\"confused\\" | \\"heart\\" | \\"hooray\\" | \\"rocket\\" | \\"eyes\\";
   },
-  Array<Reaction>
+  Array<Reaction>,
+  { Link: Link }
 > = {
   id: \\"reactions/list-for-team-discussion-comment-legacy\\",
 };
@@ -51842,7 +52290,8 @@ export const listForTeamDiscussionCommentInOrg: ApiHeroEndpoint<
     perPage?: number;
     content?: \\"+1\\" | \\"-1\\" | \\"laugh\\" | \\"confused\\" | \\"heart\\" | \\"hooray\\" | \\"rocket\\" | \\"eyes\\";
   },
-  Array<Reaction>
+  Array<Reaction>,
+  { Link: Link }
 > = {
   id: \\"reactions/list-for-team-discussion-comment-in-org\\",
 };
@@ -51927,6 +52376,7 @@ export const deleteForTeamDiscussionComment: ApiHeroEndpoint<
   HookDeliveryItem,
   Integration,
   Language,
+  Link,
   MergedUpstream,
   MinimalRepository,
   Page,
@@ -52092,7 +52542,8 @@ export const createForAuthenticatedUser: ApiHeroEndpoint<
       delete_branch_on_merge?: boolean;
     };
   },
-  Repository
+  Repository,
+  { Location: string }
 > = {
   id: \\"repos/create-for-authenticated-user\\",
 };
@@ -52105,7 +52556,11 @@ export const createForAuthenticatedUser: ApiHeroEndpoint<
  * - For GitHub Enterprise Server, this endpoint will only list repositories available to all users on the enterprise.
  * - Pagination is powered exclusively by the \`since\` parameter. Use the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header) to get the URL for the next page of repositories.
  */
-export const listPublic: ApiHeroEndpoint<{ since?: number }, Array<MinimalRepository>> = {
+export const listPublic: ApiHeroEndpoint<
+  { since?: number },
+  Array<MinimalRepository>,
+  { Link: string }
+> = {
   id: \\"repos/list-public\\",
 };
 
@@ -52122,7 +52577,8 @@ export const listForOrg: ApiHeroEndpoint<
     direction?: \\"asc\\" | \\"desc\\";
     sort?: \\"created\\" | \\"updated\\" | \\"pushed\\" | \\"full_name\\";
   },
-  Array<MinimalRepository>
+  Array<MinimalRepository>,
+  { Link: Link }
 > = {
   id: \\"repos/list-for-org\\",
 };
@@ -52238,7 +52694,8 @@ export const createInOrg: ApiHeroEndpoint<
       use_squash_pr_title_as_default?: boolean;
     };
   },
-  Repository
+  Repository,
+  { Location: string }
 > = {
   id: \\"repos/create-in-org\\",
 };
@@ -52421,7 +52878,8 @@ export const listForUser: ApiHeroEndpoint<
     sort?: \\"created\\" | \\"updated\\" | \\"pushed\\" | \\"full_name\\";
     type?: \\"all\\" | \\"owner\\" | \\"member\\";
   },
-  Array<MinimalRepository>
+  Array<MinimalRepository>,
+  { Link: Link }
 > = {
   id: \\"repos/list-for-user\\",
 };
@@ -52445,7 +52903,8 @@ export const disableLfsForRepo: ApiHeroEndpoint<{ owner: string; repo: string },
  */
 export const listDeployKeys: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
-  Array<DeployKey>
+  Array<DeployKey>,
+  { Link: Link }
 > = {
   id: \\"repos/list-deploy-keys\\",
 };
@@ -52477,7 +52936,8 @@ Deploy keys with write access can perform the same actions as an organization me
       read_only?: boolean;
     };
   },
-  DeployKey
+  DeployKey,
+  { Location: string }
 > = {
   id: \\"repos/create-deploy-key\\",
 };
@@ -52487,7 +52947,8 @@ Deploy keys with write access can perform the same actions as an organization me
  */
 export const listTags: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
-  Array<Tag>
+  Array<Tag>,
+  { Link: Link }
 > = {
   id: \\"repos/list-tags\\",
 };
@@ -52503,7 +52964,8 @@ export const listForks: ApiHeroEndpoint<
     perPage?: number;
     sort?: \\"newest\\" | \\"oldest\\" | \\"stargazers\\" | \\"watchers\\";
   },
-  Array<MinimalRepository>
+  Array<MinimalRepository>,
+  { Link: Link }
 > = {
   id: \\"repos/list-forks\\",
 };
@@ -52540,7 +53002,8 @@ export const createFork: ApiHeroEndpoint<
  */
 export const listWebhooks: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
-  Array<Hook>
+  Array<Hook>,
+  { Link: Link }
 > = {
   id: \\"repos/list-webhooks\\",
 };
@@ -52588,7 +53051,8 @@ export const createWebhook: ApiHeroEndpoint<
       events?: Array<string>;
     } | null;
   },
-  Hook
+  Hook,
+  { Location: string }
 > = {
   id: \\"repos/create-webhook\\",
 };
@@ -52698,7 +53162,8 @@ export const deletePagesSite: ApiHeroEndpoint<{ owner: string; repo: string }, v
  */
 export const listTeams: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
-  Array<Team>
+  Array<Team>,
+  { Link: Link }
 > = {
   id: \\"repos/list-teams\\",
 };
@@ -52780,7 +53245,8 @@ export const replaceAllTopics: ApiHeroEndpoint<
  */
 export const listInvitationsForAuthenticatedUser: ApiHeroEndpoint<
   { page?: number; perPage?: number },
-  Array<RepositoryInvitation>
+  Array<RepositoryInvitation>,
+  { Link: Link }
 > = {
   id: \\"repos/list-invitations-for-authenticated-user\\",
 };
@@ -52828,7 +53294,8 @@ export const listCommits: ApiHeroEndpoint<
     until?: string;
     path?: string;
   },
-  Array<Commit>
+  Array<Commit>,
+  { Link: Link }
 > = {
   id: \\"repos/list-commits\\",
 };
@@ -52838,7 +53305,8 @@ export const listCommits: ApiHeroEndpoint<
  */
 export const listBranches: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number; _protected?: boolean },
-  Array<ShortBranch>
+  Array<ShortBranch>,
+  { Link: Link }
 > = {
   id: \\"repos/list-branches\\",
 };
@@ -52851,7 +53319,8 @@ export const listBranches: ApiHeroEndpoint<
  */
 export const listCommitCommentsForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
-  Array<CommitComment>
+  Array<CommitComment>,
+  { Link: Link }
 > = {
   id: \\"repos/list-commit-comments-for-repo\\",
 };
@@ -52864,7 +53333,8 @@ export const listCommitCommentsForRepo: ApiHeroEndpoint<
  */
 export const listReleases: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
-  Array<Release>
+  Array<Release>,
+  { Link: Link }
 > = {
   id: \\"repos/list-releases\\",
 };
@@ -52921,7 +53391,8 @@ export const createRelease: ApiHeroEndpoint<
       discussion_category_name?: string;
     };
   },
-  Release
+  Release,
+  { Location: string }
 > = {
   id: \\"repos/create-release\\",
 };
@@ -52984,7 +53455,8 @@ export const createAutolink: ApiHeroEndpoint<
       url_template: string;
     };
   },
-  Autolink
+  Autolink,
+  { Location: string }
 > = {
   id: \\"repos/create-autolink\\",
 };
@@ -53046,7 +53518,8 @@ export const listDeployments: ApiHeroEndpoint<
     environment?: string | null;
     task?: string;
   },
-  Array<Deployment>
+  Array<Deployment>,
+  { Link: Link }
 > = {
   id: \\"repos/list-deployments\\",
 };
@@ -53161,7 +53634,8 @@ export const createDeployment: ApiHeroEndpoint<
  */
 export const listInvitations: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
-  Array<RepositoryInvitation>
+  Array<RepositoryInvitation>,
+  { Link: Link }
 > = {
   id: \\"repos/list-invitations\\",
 };
@@ -53174,7 +53648,8 @@ export const listInvitations: ApiHeroEndpoint<
  */
 export const listContributors: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number; anon?: string },
-  Array<Contributor>
+  Array<Contributor>,
+  { Link: Link }
 > = {
   id: \\"repos/list-contributors\\",
 };
@@ -53204,7 +53679,8 @@ export const getAllEnvironments: ApiHeroEndpoint<
  */
 export const listPagesBuilds: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
-  Array<PageBuild>
+  Array<PageBuild>,
+  { Link: Link }
 > = {
   id: \\"repos/list-pages-builds\\",
 };
@@ -53267,7 +53743,8 @@ export const listCollaborators: ApiHeroEndpoint<
     perPage?: number;
     affiliation?: \\"outside\\" | \\"direct\\" | \\"all\\";
   },
-  Array<Collaborator>
+  Array<Collaborator>,
+  { Link: Link }
 > = {
   id: \\"repos/list-collaborators\\",
 };
@@ -53433,7 +53910,8 @@ For example, if your continuous integration system is posting build status, you 
       description?: string;
     };
   },
-  Status
+  Status,
+  { Location: string }
 > = {
   id: \\"repos/create-commit-status\\",
 };
@@ -54162,7 +54640,8 @@ export const getTopPaths: ApiHeroEndpoint<
  */
 export const listCommitStatusesForRef: ApiHeroEndpoint<
   { owner: string; repo: string; ref: string; page?: number; perPage?: number },
-  Array<Status>
+  Array<Status>,
+  { Link: Link }
 > = {
   id: \\"repos/list-commit-statuses-for-ref\\",
 };
@@ -54433,7 +54912,8 @@ export const getTopReferrers: ApiHeroEndpoint<
  */
 export const listPullRequestsAssociatedWithCommit: ApiHeroEndpoint<
   { owner: string; repo: string; commitSha: string; page?: number; perPage?: number },
-  Array<PullRequestSimple>
+  Array<PullRequestSimple>,
+  { Link: Link }
 > = {
   id: \\"repos/list-pull-requests-associated-with-commit\\",
 };
@@ -54540,7 +55020,8 @@ export const createUsingTemplate: ApiHeroEndpoint<
       include_all_branches?: boolean;
     };
   },
-  Repository
+  Repository,
+  { Location: string }
 > = {
   id: \\"repos/create-using-template\\",
 };
@@ -54794,7 +55275,8 @@ export const deleteBranchProtection: ApiHeroEndpoint<
  */
 export const listReleaseAssets: ApiHeroEndpoint<
   { owner: string; repo: string; releaseId: number; page?: number; perPage?: number },
-  Array<ReleaseAsset>
+  Array<ReleaseAsset>,
+  { Link: Link }
 > = {
   id: \\"repos/list-release-assets\\",
 };
@@ -54833,7 +55315,8 @@ export const uploadReleaseAsset: ApiHeroEndpoint<
  */
 export const listCommentsForCommit: ApiHeroEndpoint<
   { owner: string; repo: string; commitSha: string; page?: number; perPage?: number },
-  Array<CommitComment>
+  Array<CommitComment>,
+  { Link: Link }
 > = {
   id: \\"repos/list-comments-for-commit\\",
 };
@@ -54871,7 +55354,8 @@ export const createCommitComment: ApiHeroEndpoint<
       position?: number;
     };
   },
-  CommitComment
+  CommitComment,
+  { Location: string }
 > = {
   id: \\"repos/create-commit-comment\\",
 };
@@ -54965,7 +55449,8 @@ export const deleteTagProtection: ApiHeroEndpoint<
  */
 export const listDeploymentStatuses: ApiHeroEndpoint<
   { owner: string; deploymentId: number; repo: string; page?: number; perPage?: number },
-  Array<DeploymentStatus>
+  Array<DeploymentStatus>,
+  { Link: Link }
 > = {
   id: \\"repos/list-deployment-statuses\\",
 };
@@ -55018,7 +55503,8 @@ export const createDeploymentStatus: ApiHeroEndpoint<
       environment_url?: string;
     };
   },
-  DeploymentStatus
+  DeploymentStatus,
+  { Location: string }
 > = {
   id: \\"repos/create-deployment-status\\",
 };
@@ -56167,6 +56653,7 @@ export const repos: ApiHeroEndpoint<
 ",
   "secret-scanning.ts" => "import {
   AlertNumber,
+  Link,
   OrganizationSecretScanningAlert,
   SecretScanningAlert,
   SecretScanningAlertResolution,
@@ -56196,7 +56683,8 @@ export const listAlertsForOrg: ApiHeroEndpoint<
     sort?: \\"created\\" | \\"updated\\";
     after?: string;
   },
-  Array<OrganizationSecretScanningAlert>
+  Array<OrganizationSecretScanningAlert>,
+  { Link: Link }
 > = {
   id: \\"secret-scanning/list-alerts-for-org\\",
 };
@@ -56245,7 +56733,8 @@ export const listAlertsForEnterprise: ApiHeroEndpoint<
     secretType?: string;
     sort?: \\"created\\" | \\"updated\\";
   },
-  Array<OrganizationSecretScanningAlert>
+  Array<OrganizationSecretScanningAlert>,
+  { Link: Link }
 > = {
   id: \\"secret-scanning/list-alerts-for-enterprise\\",
 };
@@ -56299,7 +56788,8 @@ export const updateAlert: ApiHeroEndpoint<
  */
 export const listLocationsForAlert: ApiHeroEndpoint<
   { owner: string; repo: string; alertNumber: AlertNumber; page?: number; perPage?: number },
-  Array<SecretScanningLocation>
+  Array<SecretScanningLocation>,
+  { Link: Link }
 > = {
   id: \\"secret-scanning/list-locations-for-alert\\",
 };
@@ -56329,6 +56819,7 @@ export const getServerStatistics: ApiHeroEndpoint<
   ExternalGroup,
   ExternalGroups,
   GroupMapping,
+  Link,
   MinimalRepository,
   OrganizationInvitation,
   SimpleUser,
@@ -56348,7 +56839,8 @@ export const getServerStatistics: ApiHeroEndpoint<
  */
 export const listForAuthenticatedUser: ApiHeroEndpoint<
   { page?: number; perPage?: number },
-  Array<TeamFull>
+  Array<TeamFull>,
+  { Link: Link }
 > = {
   id: \\"teams/list-for-authenticated-user\\",
 };
@@ -56427,7 +56919,8 @@ export const updateLegacy: ApiHeroEndpoint<
  */
 export const list: ApiHeroEndpoint<
   { org: string; page?: number; perPage?: number },
-  Array<Team>
+  Array<Team>,
+  { Link: Link }
 > = {
   id: \\"teams/list\\",
 };
@@ -56496,7 +56989,8 @@ Default for child team: \`closed\`
  */
 export const listReposLegacy: ApiHeroEndpoint<
   { teamId: number; page?: number; perPage?: number },
-  Array<MinimalRepository>
+  Array<MinimalRepository>,
+  { Link: Link }
 > = {
   id: \\"teams/list-repos-legacy\\",
 };
@@ -56507,7 +57001,8 @@ export const listReposLegacy: ApiHeroEndpoint<
  */
 export const listChildLegacy: ApiHeroEndpoint<
   { teamId: number; page?: number; perPage?: number },
-  Array<Team>
+  Array<Team>,
+  { Link: Link }
 > = {
   id: \\"teams/list-child-legacy\\",
 };
@@ -56520,7 +57015,8 @@ export const listChildLegacy: ApiHeroEndpoint<
  */
 export const listMembersLegacy: ApiHeroEndpoint<
   { teamId: number; page?: number; perPage?: number; role?: \\"member\\" | \\"maintainer\\" | \\"all\\" },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"teams/list-members-legacy\\",
 };
@@ -56533,7 +57029,8 @@ export const listMembersLegacy: ApiHeroEndpoint<
  */
 export const listProjectsLegacy: ApiHeroEndpoint<
   { teamId: number; page?: number; perPage?: number },
-  Array<TeamProject>
+  Array<TeamProject>,
+  { Link: Link }
 > = {
   id: \\"teams/list-projects-legacy\\",
 };
@@ -56546,7 +57043,8 @@ export const listProjectsLegacy: ApiHeroEndpoint<
  */
 export const listExternalIdpGroupsForOrg: ApiHeroEndpoint<
   { org: string; perPage?: number; displayName?: string; page?: number },
-  ExternalGroups
+  ExternalGroups,
+  { Link: string }
 > = {
   id: \\"teams/list-external-idp-groups-for-org\\",
 };
@@ -56559,7 +57057,8 @@ export const listExternalIdpGroupsForOrg: ApiHeroEndpoint<
  */
 export const listIdpGroupsForOrg: ApiHeroEndpoint<
   { org: string; perPage?: number; page?: string },
-  GroupMapping
+  GroupMapping,
+  { Link: string }
 > = {
   id: \\"teams/list-idp-groups-for-org\\",
 };
@@ -56572,7 +57071,8 @@ export const listIdpGroupsForOrg: ApiHeroEndpoint<
  */
 export const listDiscussionsLegacy: ApiHeroEndpoint<
   { teamId: number; page?: number; direction?: \\"asc\\" | \\"desc\\"; perPage?: number },
-  Array<TeamDiscussion>
+  Array<TeamDiscussion>,
+  { Link: Link }
 > = {
   id: \\"teams/list-discussions-legacy\\",
 };
@@ -56618,7 +57118,8 @@ export const createDiscussionLegacy: ApiHeroEndpoint<
  */
 export const listPendingInvitationsLegacy: ApiHeroEndpoint<
   { teamId: number; page?: number; perPage?: number },
-  Array<OrganizationInvitation>
+  Array<OrganizationInvitation>,
+  { Link: Link }
 > = {
   id: \\"teams/list-pending-invitations-legacy\\",
 };
@@ -56700,7 +57201,8 @@ export const updateInOrg: ApiHeroEndpoint<
  */
 export const listReposInOrg: ApiHeroEndpoint<
   { teamSlug: string; org: string; page?: number; perPage?: number },
-  Array<MinimalRepository>
+  Array<MinimalRepository>,
+  { Link: Link }
 > = {
   id: \\"teams/list-repos-in-org\\",
 };
@@ -56713,7 +57215,8 @@ export const listReposInOrg: ApiHeroEndpoint<
  */
 export const listChildInOrg: ApiHeroEndpoint<
   { teamSlug: string; org: string; page?: number; perPage?: number },
-  Array<Team>
+  Array<Team>,
+  { Link: Link }
 > = {
   id: \\"teams/list-child-in-org\\",
 };
@@ -56791,7 +57294,8 @@ export const listMembersInOrg: ApiHeroEndpoint<
     perPage?: number;
     role?: \\"member\\" | \\"maintainer\\" | \\"all\\";
   },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"teams/list-members-in-org\\",
 };
@@ -56857,7 +57361,8 @@ export const removeRepoLegacy: ApiHeroEndpoint<
  */
 export const listProjectsInOrg: ApiHeroEndpoint<
   { teamSlug: string; org: string; page?: number; perPage?: number },
-  Array<TeamProject>
+  Array<TeamProject>,
+  { Link: Link }
 > = {
   id: \\"teams/list-projects-in-org\\",
 };
@@ -56989,7 +57494,8 @@ export const listDiscussionsInOrg: ApiHeroEndpoint<
     perPage?: number;
     pinned?: string;
   },
-  Array<TeamDiscussion>
+  Array<TeamDiscussion>,
+  { Link: Link }
 > = {
   id: \\"teams/list-discussions-in-org\\",
 };
@@ -57036,7 +57542,8 @@ export const createDiscussionInOrg: ApiHeroEndpoint<
  */
 export const listPendingInvitationsInOrg: ApiHeroEndpoint<
   { teamSlug: string; org: string; page?: number; perPage?: number },
-  Array<OrganizationInvitation>
+  Array<OrganizationInvitation>,
+  { Link: Link }
 > = {
   id: \\"teams/list-pending-invitations-in-org\\",
 };
@@ -57439,7 +57946,8 @@ export const listDiscussionCommentsLegacy: ApiHeroEndpoint<
     direction?: \\"asc\\" | \\"desc\\";
     perPage?: number;
   },
-  Array<TeamDiscussionComment>
+  Array<TeamDiscussionComment>,
+  { Link: Link }
 > = {
   id: \\"teams/list-discussion-comments-legacy\\",
 };
@@ -57537,7 +58045,8 @@ export const listDiscussionCommentsInOrg: ApiHeroEndpoint<
     direction?: \\"asc\\" | \\"desc\\";
     perPage?: number;
   },
-  Array<TeamDiscussionComment>
+  Array<TeamDiscussionComment>,
+  { Link: Link }
 > = {
   id: \\"teams/list-discussion-comments-in-org\\",
 };
@@ -57672,6 +58181,7 @@ export const updateDiscussionCommentInOrg: ApiHeroEndpoint<
   Hovercard,
   Key,
   KeySimple,
+  Link,
   PrivateUser,
   PublicUser,
   SimpleUser,
@@ -57747,7 +58257,11 @@ export const updateAuthenticated: ApiHeroEndpoint<
  *
  * Note: Pagination is powered exclusively by the \`since\` parameter. Use the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header) to get the URL for the next page of users.
  */
-export const list: ApiHeroEndpoint<{ since?: number; perPage?: number }, Array<SimpleUser>> = {
+export const list: ApiHeroEndpoint<
+  { since?: number; perPage?: number },
+  Array<SimpleUser>,
+  { Link: string }
+> = {
   id: \\"users/list\\",
 };
 
@@ -57757,7 +58271,8 @@ export const list: ApiHeroEndpoint<{ since?: number; perPage?: number }, Array<S
  */
 export const listPublicSshKeysForAuthenticatedUser: ApiHeroEndpoint<
   { page?: number; perPage?: number },
-  Array<Key>
+  Array<Key>,
+  { Link: Link }
 > = {
   id: \\"users/list-public-ssh-keys-for-authenticated-user\\",
 };
@@ -57799,7 +58314,8 @@ export const listBlockedByAuthenticatedUser: ApiHeroEndpoint<never, Array<Simple
  */
 export const listEmailsForAuthenticatedUser: ApiHeroEndpoint<
   { page?: number; perPage?: number },
-  Array<Email>
+  Array<Email>,
+  { Link: Link }
 > = {
   id: \\"users/list-emails-for-authenticated-user\\",
 };
@@ -57852,7 +58368,8 @@ export const deleteEmailForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listGpgKeysForAuthenticatedUser: ApiHeroEndpoint<
   { page?: number; perPage?: number },
-  Array<GpgKey>
+  Array<GpgKey>,
+  { Link: Link }
 > = {
   id: \\"users/list-gpg-keys-for-authenticated-user\\",
 };
@@ -57886,7 +58403,8 @@ export const createGpgKeyForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listFollowersForAuthenticatedUser: ApiHeroEndpoint<
   { page?: number; perPage?: number },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"users/list-followers-for-authenticated-user\\",
 };
@@ -57897,7 +58415,8 @@ export const listFollowersForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listFollowedByAuthenticatedUser: ApiHeroEndpoint<
   { page?: number; perPage?: number },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"users/list-followed-by-authenticated-user\\",
 };
@@ -57938,7 +58457,8 @@ export const deletePublicSshKeyForAuthenticatedUser: ApiHeroEndpoint<{ keyId: nu
  */
 export const listPublicEmailsForAuthenticatedUser: ApiHeroEndpoint<
   { page?: number; perPage?: number },
-  Array<Email>
+  Array<Email>,
+  { Link: Link }
 > = {
   id: \\"users/list-public-emails-for-authenticated-user\\",
 };
@@ -57967,7 +58487,8 @@ export const setPrimaryEmailVisibilityForAuthenticatedUser: ApiHeroEndpoint<
  */
 export const listPublicKeysForUser: ApiHeroEndpoint<
   { username: string; page?: number; perPage?: number },
-  Array<KeySimple>
+  Array<KeySimple>,
+  { Link: Link }
 > = {
   id: \\"users/list-public-keys-for-user\\",
 };
@@ -58024,7 +58545,8 @@ export const unfollow: ApiHeroEndpoint<{ username: string }, void> = {
  */
 export const listGpgKeysForUser: ApiHeroEndpoint<
   { username: string; page?: number; perPage?: number },
-  Array<GpgKey>
+  Array<GpgKey>,
+  { Link: Link }
 > = {
   id: \\"users/list-gpg-keys-for-user\\",
 };
@@ -58051,7 +58573,8 @@ export const deleteGpgKeyForAuthenticatedUser: ApiHeroEndpoint<{ gpgKeyId: numbe
  */
 export const listFollowersForUser: ApiHeroEndpoint<
   { username: string; page?: number; perPage?: number },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"users/list-followers-for-user\\",
 };
@@ -58062,7 +58585,8 @@ export const listFollowersForUser: ApiHeroEndpoint<
  */
 export const listFollowingForUser: ApiHeroEndpoint<
   { username: string; page?: number; perPage?: number },
-  Array<SimpleUser>
+  Array<SimpleUser>,
+  { Link: Link }
 > = {
   id: \\"users/list-following-for-user\\",
 };
@@ -58182,8 +58706,11 @@ export * from \\"./@types\\";
 }
 `;
 
-exports[`v3_1/github.json generateOperationCode 1`] = `
-"export type ApiHeroEndpoint<Params, ResponseData> = { id: string; [key: string]: string | number };
+exports[`v3_1/github.json generateOperationCode repos/get 1`] = `
+"export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+  id: string;
+  [key: string]: string | number;
+};
 
 /**
  * Full Repository
@@ -58775,6 +59302,600 @@ export type SimpleUser = {
  */
 export const getRepos: ApiHeroEndpoint<{ owner: string; repo: string }, FullRepository> = {
   id: \\"repos/get\\",
+};
+"
+`;
+
+exports[`v3_1/github.json generateOperationCode repos/list-for-org 1`] = `
+"export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+  id: string;
+  [key: string]: string | number;
+};
+
+/**
+ * Hypermedia Link
+ */
+export type Link = {
+  href: string;
+};
+
+/**
+ * Minimal Repository
+ */
+export type MinimalRepository = {
+  id: number;
+  url: string;
+  fork: boolean;
+  name: string;
+  size?: number;
+  forks?: number;
+  owner: SimpleUser;
+  topics?: Array<string>;
+  git_url?: string;
+  license?: {
+    key?: string;
+
+    url?: string;
+
+    name?: string;
+
+    node_id?: string;
+
+    spdx_id?: string;
+  };
+  node_id: string;
+  private: boolean;
+  ssh_url?: string;
+  svn_url?: string;
+  archived?: boolean;
+  disabled?: boolean;
+  has_wiki?: boolean;
+  homepage?: string;
+  html_url: string;
+  keys_url: string;
+  language?: string;
+  tags_url: string;
+  watchers?: number;
+  blobs_url: string;
+  clone_url?: string;
+  forks_url: string;
+  full_name: string;
+  has_pages?: boolean;
+  hooks_url: string;
+  pulls_url: string;
+  pushed_at?: string;
+  role_name?: string;
+  teams_url: string;
+  trees_url: string;
+  created_at?: string;
+  events_url: string;
+  has_issues?: boolean;
+  issues_url: string;
+  labels_url: string;
+  merges_url: string;
+  mirror_url?: string;
+  updated_at?: string;
+  visibility?: string;
+  archive_url: string;
+  commits_url: string;
+  compare_url: string;
+  description: string;
+  forks_count?: number;
+  is_template?: boolean;
+  open_issues?: number;
+  permissions?: {
+    pull?: boolean;
+
+    push?: boolean;
+
+    admin?: boolean;
+
+    triage?: boolean;
+
+    maintain?: boolean;
+  };
+  branches_url: string;
+  comments_url: string;
+  contents_url: string;
+  git_refs_url: string;
+  git_tags_url: string;
+  has_projects?: boolean;
+  releases_url: string;
+  statuses_url: string;
+  allow_forking?: boolean;
+  assignees_url: string;
+  downloads_url: string;
+  has_downloads?: boolean;
+  languages_url: string;
+  network_count?: number;
+  default_branch?: string;
+  milestones_url: string;
+  stargazers_url: string;
+  watchers_count?: number;
+  code_of_conduct?: CodeOfConduct;
+  deployments_url: string;
+  git_commits_url: string;
+  subscribers_url: string;
+  contributors_url: string;
+  issue_events_url: string;
+  stargazers_count?: number;
+  subscription_url: string;
+  temp_clone_token?: string;
+  collaborators_url: string;
+  issue_comment_url: string;
+  notifications_url: string;
+  open_issues_count?: number;
+  subscribers_count?: number;
+  template_repository?: null | Repository;
+  delete_branch_on_merge?: boolean;
+};
+
+/**
+ * Code Of Conduct
+ */
+export type CodeOfConduct = {
+  key: string;
+  url: string;
+  body?: string;
+  name: string;
+  html_url: string;
+};
+
+/**
+ * A git repository
+ */
+export type Repository = {
+  /**
+   * Unique identifier of the repository
+   */
+  id: number;
+  url: string;
+  fork: boolean;
+
+  /**
+   * The name of the repository.
+   */
+  name: string;
+  size: number;
+  forks: number;
+  owner: SimpleUser;
+  topics?: Array<string>;
+  git_url: string;
+  license: null | LicenseSimple;
+  node_id: string;
+
+  /**
+   * Whether the repository is private or public.
+   */
+  private: boolean;
+  ssh_url: string;
+  svn_url: string;
+
+  /**
+   * Whether the repository is archived.
+   */
+  archived: boolean;
+
+  /**
+   * Returns whether or not this repository disabled.
+   */
+  disabled: boolean;
+
+  /**
+   * Whether the wiki is enabled.
+   */
+  has_wiki: boolean;
+  homepage: string;
+  html_url: string;
+  keys_url: string;
+  language: string;
+  tags_url: string;
+  watchers: number;
+  blobs_url: string;
+  clone_url: string;
+  forks_url: string;
+  full_name: string;
+  has_pages: boolean;
+  hooks_url: string;
+  pulls_url: string;
+  pushed_at: string;
+  teams_url: string;
+  trees_url: string;
+  created_at: string;
+  events_url: string;
+
+  /**
+   * Whether issues are enabled.
+   */
+  has_issues: boolean;
+  issues_url: string;
+  labels_url: string;
+  merges_url: string;
+  mirror_url: string;
+  starred_at?: string;
+  updated_at: string;
+
+  /**
+   * The repository visibility: public, private, or internal.
+   */
+  visibility?: string;
+  archive_url: string;
+  commits_url: string;
+  compare_url: string;
+  description: string;
+  forks_count: number;
+
+  /**
+   * Whether this repository acts as a template that can be used to generate new repositories.
+   */
+  is_template?: boolean;
+  open_issues: number;
+  permissions?: {
+    pull: boolean;
+
+    push: boolean;
+
+    admin: boolean;
+
+    triage?: boolean;
+
+    maintain?: boolean;
+  };
+  branches_url: string;
+  comments_url: string;
+  contents_url: string;
+  git_refs_url: string;
+  git_tags_url: string;
+
+  /**
+   * Whether projects are enabled.
+   */
+  has_projects: boolean;
+  organization?: null | SimpleUser;
+  releases_url: string;
+  statuses_url: string;
+
+  /**
+   * Whether to allow forking this repo
+   */
+  allow_forking?: boolean;
+  assignees_url: string;
+  downloads_url: string;
+
+  /**
+   * Whether downloads are enabled.
+   */
+  has_downloads: boolean;
+  languages_url: string;
+  master_branch?: string;
+  network_count?: number;
+
+  /**
+   * The default branch of the repository.
+   */
+  default_branch: string;
+  milestones_url: string;
+  stargazers_url: string;
+  watchers_count: number;
+  deployments_url: string;
+  git_commits_url: string;
+  subscribers_url: string;
+
+  /**
+   * Whether to allow Auto-merge to be used on pull requests.
+   */
+  allow_auto_merge?: boolean;
+  contributors_url: string;
+  issue_events_url: string;
+  stargazers_count: number;
+  subscription_url: string;
+  temp_clone_token?: string;
+  collaborators_url: string;
+  issue_comment_url: string;
+  notifications_url: string;
+  open_issues_count: number;
+  subscribers_count?: number;
+
+  /**
+   * Whether to allow merge commits for pull requests.
+   */
+  allow_merge_commit?: boolean;
+
+  /**
+   * Whether to allow rebase merges for pull requests.
+   */
+  allow_rebase_merge?: boolean;
+
+  /**
+   * Whether to allow squash merges for pull requests.
+   */
+  allow_squash_merge?: boolean;
+
+  /**
+   * Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
+   */
+  allow_update_branch?: boolean;
+  template_repository?: {
+    id?: number;
+
+    url?: string;
+
+    fork?: boolean;
+
+    name?: string;
+
+    size?: number;
+
+    owner?: {
+      id?: number;
+
+      url?: string;
+
+      type?: string;
+
+      login?: string;
+
+      node_id?: string;
+
+      html_url?: string;
+
+      gists_url?: string;
+
+      repos_url?: string;
+
+      avatar_url?: string;
+
+      events_url?: string;
+
+      site_admin?: boolean;
+
+      gravatar_id?: string;
+
+      starred_url?: string;
+
+      followers_url?: string;
+
+      following_url?: string;
+
+      organizations_url?: string;
+
+      subscriptions_url?: string;
+
+      received_events_url?: string;
+    };
+
+    topics?: Array<string>;
+
+    git_url?: string;
+
+    node_id?: string;
+
+    private?: boolean;
+
+    ssh_url?: string;
+
+    svn_url?: string;
+
+    archived?: boolean;
+
+    disabled?: boolean;
+
+    has_wiki?: boolean;
+
+    homepage?: string;
+
+    html_url?: string;
+
+    keys_url?: string;
+
+    language?: string;
+
+    tags_url?: string;
+
+    blobs_url?: string;
+
+    clone_url?: string;
+
+    forks_url?: string;
+
+    full_name?: string;
+
+    has_pages?: boolean;
+
+    hooks_url?: string;
+
+    pulls_url?: string;
+
+    pushed_at?: string;
+
+    teams_url?: string;
+
+    trees_url?: string;
+
+    created_at?: string;
+
+    events_url?: string;
+
+    has_issues?: boolean;
+
+    issues_url?: string;
+
+    labels_url?: string;
+
+    merges_url?: string;
+
+    mirror_url?: string;
+
+    updated_at?: string;
+
+    visibility?: string;
+
+    archive_url?: string;
+
+    commits_url?: string;
+
+    compare_url?: string;
+
+    description?: string;
+
+    forks_count?: number;
+
+    is_template?: boolean;
+
+    permissions?: {
+      pull?: boolean;
+
+      push?: boolean;
+
+      admin?: boolean;
+
+      triage?: boolean;
+
+      maintain?: boolean;
+    };
+
+    branches_url?: string;
+
+    comments_url?: string;
+
+    contents_url?: string;
+
+    git_refs_url?: string;
+
+    git_tags_url?: string;
+
+    has_projects?: boolean;
+
+    releases_url?: string;
+
+    statuses_url?: string;
+
+    assignees_url?: string;
+
+    downloads_url?: string;
+
+    has_downloads?: boolean;
+
+    languages_url?: string;
+
+    network_count?: number;
+
+    default_branch?: string;
+
+    milestones_url?: string;
+
+    stargazers_url?: string;
+
+    watchers_count?: number;
+
+    deployments_url?: string;
+
+    git_commits_url?: string;
+
+    subscribers_url?: string;
+
+    allow_auto_merge?: boolean;
+
+    contributors_url?: string;
+
+    issue_events_url?: string;
+
+    stargazers_count?: number;
+
+    subscription_url?: string;
+
+    temp_clone_token?: string;
+
+    collaborators_url?: string;
+
+    issue_comment_url?: string;
+
+    notifications_url?: string;
+
+    open_issues_count?: number;
+
+    subscribers_count?: number;
+
+    allow_merge_commit?: boolean;
+
+    allow_rebase_merge?: boolean;
+
+    allow_squash_merge?: boolean;
+
+    allow_update_branch?: boolean;
+
+    delete_branch_on_merge?: boolean;
+
+    use_squash_pr_title_as_default?: boolean;
+  };
+
+  /**
+   * Whether to delete head branches when pull requests are merged
+   */
+  delete_branch_on_merge?: boolean;
+
+  /**
+   * Whether a squash merge commit can use the pull request title as default.
+   */
+  use_squash_pr_title_as_default?: boolean;
+};
+
+/**
+ * Simple User
+ */
+export type SimpleUser = {
+  id: number;
+  url: string;
+  name?: string;
+  type: string;
+  email?: string;
+  login: string;
+  node_id: string;
+  html_url: string;
+  gists_url: string;
+  repos_url: string;
+  avatar_url: string;
+  events_url: string;
+  site_admin: boolean;
+  starred_at?: string;
+  gravatar_id: string;
+  starred_url: string;
+  followers_url: string;
+  following_url: string;
+  organizations_url: string;
+  subscriptions_url: string;
+  received_events_url: string;
+};
+
+/**
+ * License Simple
+ */
+export type LicenseSimple = {
+  key: string;
+  url: string;
+  name: string;
+  node_id: string;
+  spdx_id: string;
+  html_url?: string;
+};
+
+/**
+ * List organization repositories
+ * Lists repositories for the specified organization.
+ */
+export const listForOrg: ApiHeroEndpoint<
+  {
+    org: string;
+    page?: number;
+    type?: \\"all\\" | \\"public\\" | \\"private\\" | \\"forks\\" | \\"sources\\" | \\"member\\" | \\"internal\\";
+    perPage?: number;
+    direction?: \\"asc\\" | \\"desc\\";
+    sort?: \\"created\\" | \\"updated\\" | \\"pushed\\" | \\"full_name\\";
+  },
+  Array<MinimalRepository>,
+  { Link: Link }
+> = {
+  id: \\"repos/list-for-org\\",
 };
 "
 `;

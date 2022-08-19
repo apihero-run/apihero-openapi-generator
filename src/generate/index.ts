@@ -122,8 +122,11 @@ function generateOperationExport(
 ): string {
   const parameters = generateOperationParameters(operation);
   const result = generateOperationResult(operation);
+  const headers = generateOperationHeaders(operation);
 
-  return `export const ${operation.name}: ApiHeroEndpoint<${parameters}, ${result}> = {
+  return `export const ${operation.name}: ApiHeroEndpoint<${parameters}, ${result}${
+    headers ? `, ${headers}` : ``
+  }> = {
     id: '${operation.id}',
     ${
       additionalData
@@ -143,12 +146,28 @@ function generateOperationResult(operation: Operation): string {
   return operation.results.map((result) => generateType(result)).join(" | ");
 }
 
+function generateOperationHeaders(operation: Operation): string | undefined {
+  const allHeaders = operation.results.flatMap((result) => result.headers);
+
+  if (allHeaders.length === 0) {
+    return;
+  }
+
+  return operation.results
+    .flatMap((result) => {
+      return `{ ${result.headers
+        .map((header) => `"${header.name}": ${generateType(header)}; `)
+        .join(" ")} }`;
+    })
+    .join(" | ");
+}
+
 function generateOperationParameters(operation: Operation): string {
   if (!operation.parameters || operation.parameters.length === 0) {
     return "never";
   }
 
-  return `{ ${operation.parameters.map(generateOperationParameter)} }`;
+  return `{ ${operation.parameters.map(generateOperationParameter).join("; ")} }`;
 }
 
 function generateOperationParameter(parameter: Operation["parameters"][0]): string {
@@ -177,14 +196,14 @@ const escapeComment = (value: string): string => {
 };
 
 function generateClientModels(models: Client["models"]): string {
-  const endpointGenericCode = `export type ApiHeroEndpoint<Params, ResponseData> = \n{ id: string;\n[key: string]: string | number;\n };`;
+  const endpointGenericCode = `export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = \n{ id: string;\n[key: string]: string | number;\n };`;
 
   const modelsCode = models.map(generateClientModel).join("\n\n");
 
   return `${endpointGenericCode}\n\n${modelsCode}`;
 }
 
-function generateClientModel(model: Model): string {
+export function generateClientModel(model: Model): string {
   if (model.export === "interface") {
     return generateClientModelInterface(model);
   }

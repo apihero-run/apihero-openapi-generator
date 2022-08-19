@@ -207,6 +207,7 @@ export const getOperationResults = (
       enum: [],
       enums: [],
       properties: [],
+      headers: [],
     });
   }
 
@@ -270,7 +271,85 @@ const getOperationResponse = (
     enum: [],
     enums: [],
     properties: [],
+    headers: [],
   };
+
+  if (response.headers) {
+    for (const [name, headerOrRef] of Object.entries(response.headers)) {
+      const header: Model = {
+        name,
+        description: null,
+        export: "generic",
+        type: "any",
+        base: "any",
+        template: null,
+        link: null,
+        isDefinition: false,
+        isReadOnly: false,
+        isRequired: false,
+        isNullable: false,
+        imports: [],
+        enum: [],
+        enums: [],
+        properties: [],
+      };
+
+      const resolvedHeader = getRef<OpenAPIV3.HeaderObject>(
+        openApi,
+        headerOrRef as OpenAPIV3.HeaderObject & OpenAPIV3.ReferenceObject,
+      );
+
+      header.description = resolvedHeader.description ?? null;
+      header.isRequired = resolvedHeader.required ?? false;
+      header.deprecated = resolvedHeader.deprecated ?? false;
+
+      if (!resolvedHeader.schema) {
+        continue;
+      }
+
+      if ("$ref" in headerOrRef) {
+        const model = getType(headerOrRef.$ref);
+
+        header.export = "reference";
+        header.type = model.type;
+        header.base = model.base;
+        header.template = model.template;
+        header.imports.push(...model.imports);
+      } else {
+        const model = getModel(openApi, "", resolvedHeader.schema);
+
+        header.export = model.export;
+        header.type = model.type;
+        header.base = model.base;
+        header.template = model.template;
+        header.link = model.link;
+        header.isReadOnly = model.isReadOnly;
+        header.isRequired = model.isRequired;
+        header.isNullable = model.isNullable;
+        header.format = model.format;
+        header.maximum = model.maximum;
+        header.exclusiveMaximum = model.exclusiveMaximum;
+        header.minimum = model.minimum;
+        header.exclusiveMinimum = model.exclusiveMinimum;
+        header.multipleOf = model.multipleOf;
+        header.maxLength = model.maxLength;
+        header.minLength = model.minLength;
+        header.maxItems = model.maxItems;
+        header.minItems = model.minItems;
+        header.uniqueItems = model.uniqueItems;
+        header.maxProperties = model.maxProperties;
+        header.minProperties = model.minProperties;
+        header.pattern = getPattern(model.pattern);
+        header.imports.push(...model.imports);
+        header.enum.push(...model.enum);
+        header.enums.push(...model.enums);
+        header.properties.push(...model.properties);
+      }
+
+      operationResponse.headers.push(header);
+      operationResponse.imports.push(...header.imports);
+    }
+  }
 
   if (response.content) {
     const content = getContent(response.content);

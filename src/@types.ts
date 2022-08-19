@@ -84,6 +84,7 @@ export type OperationError = {
 export type OperationResponse = Model & {
   in: "response" | "header";
   code: number;
+  headers: Model[];
 };
 
 export type Operation = OperationParameters & {
