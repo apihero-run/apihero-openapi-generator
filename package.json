@@ -23,8 +23,9 @@
   "scripts": {
     "clean": "rimraf lib",
     "check-types": "tsc --noEmit",
-    "test": "jest --runInBand --coverage",
-    "test:badges": "npm t && jest-coverage-badges --output ./badges",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:badges": "npm run test:coverage && jest-coverage-badges --output ./badges",
     "build": "rollup -c",
     "prepublishOnly": "npm run clean && npm run check-types && npm run format:check && npm run lint && npm test && npm run build",
     "lint": "eslint . --ext .ts",

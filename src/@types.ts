@@ -30,6 +30,13 @@ export type Model = Schema & {
   properties: Model[];
 };
 
+export type Example = {
+  summary?: string;
+  description?: string;
+  value?: unknown;
+  externalValue?: string;
+};
+
 export type ModelComposition = {
   type: "one-of" | "any-of" | "all-of";
   imports: string[];
@@ -56,6 +63,8 @@ export type Schema = {
   uniqueItems?: boolean;
   maxProperties?: number;
   minProperties?: number;
+  example?: unknown;
+  examples?: Array<unknown>;
 };
 
 export type OperationParameter = Model & {

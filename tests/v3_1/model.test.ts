@@ -449,11 +449,35 @@ test("getModel with Github v3.1", async () => {
     * Minimal Repository
     */
     export type MinimalRepository = { 
+
+    /** 
+    * 
+    * @example
+    * 1296269
+    */
     id: number;
+
+    /** 
+    * 
+    * @example
+    * \\"https://api.github.com/repos/octocat/Hello-World\\"
+    */
     url: string;
     fork: boolean;
+
+    /** 
+    * 
+    * @example
+    * \\"Hello-World\\"
+    */
     name: string;
     size?: number;
+
+    /** 
+    * 
+    * @example
+    * 0
+    */
     forks?: number;
     owner: SimpleUser;
     topics?: Array<string>;
@@ -470,6 +494,12 @@ test("getModel with Github v3.1", async () => {
 
     spdx_id?: string;
     };
+
+    /** 
+    * 
+    * @example
+    * \\"MDEwOlJlcG9zaXRvcnkxMjk2MjY5\\"
+    */
     node_id: string;
     private: boolean;
     ssh_url?: string;
@@ -478,37 +508,181 @@ test("getModel with Github v3.1", async () => {
     disabled?: boolean;
     has_wiki?: boolean;
     homepage?: string;
+
+    /** 
+    * 
+    * @example
+    * \\"https://github.com/octocat/Hello-World\\"
+    */
     html_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/keys{/key_id}\\"
+    */
     keys_url: string;
     language?: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/tags\\"
+    */
     tags_url: string;
+
+    /** 
+    * 
+    * @example
+    * 0
+    */
     watchers?: number;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/git/blobs{/sha}\\"
+    */
     blobs_url: string;
     clone_url?: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/forks\\"
+    */
     forks_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"octocat/Hello-World\\"
+    */
     full_name: string;
     has_pages?: boolean;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/hooks\\"
+    */
     hooks_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/pulls{/number}\\"
+    */
     pulls_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"2011-01-26T19:06:43Z\\"
+    */
     pushed_at?: string;
+
+    /** 
+    * 
+    * @example
+    * \\"admin\\"
+    */
     role_name?: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/teams\\"
+    */
     teams_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/git/trees{/sha}\\"
+    */
     trees_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"2011-01-26T19:01:12Z\\"
+    */
     created_at?: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/events\\"
+    */
     events_url: string;
     has_issues?: boolean;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/issues{/number}\\"
+    */
     issues_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/labels{/name}\\"
+    */
     labels_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/merges\\"
+    */
     merges_url: string;
     mirror_url?: string;
+
+    /** 
+    * 
+    * @example
+    * \\"2011-01-26T19:14:43Z\\"
+    */
     updated_at?: string;
     visibility?: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/{archive_format}{/ref}\\"
+    */
     archive_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/commits{/sha}\\"
+    */
     commits_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/compare/{base}...{head}\\"
+    */
     compare_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"This your first repo!\\"
+    */
     description: string;
     forks_count?: number;
     is_template?: boolean;
+
+    /** 
+    * 
+    * @example
+    * 0
+    */
     open_issues?: number;
     permissions?: {
 
@@ -522,35 +696,161 @@ test("getModel with Github v3.1", async () => {
 
     maintain?: boolean;
     };
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/branches{/branch}\\"
+    */
     branches_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/comments{/number}\\"
+    */
     comments_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/contents/{+path}\\"
+    */
     contents_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/git/refs{/sha}\\"
+    */
     git_refs_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/git/tags{/sha}\\"
+    */
     git_tags_url: string;
     has_projects?: boolean;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/releases{/id}\\"
+    */
     releases_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/statuses/{sha}\\"
+    */
     statuses_url: string;
     allow_forking?: boolean;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/assignees{/user}\\"
+    */
     assignees_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/downloads\\"
+    */
     downloads_url: string;
     has_downloads?: boolean;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/languages\\"
+    */
     languages_url: string;
     network_count?: number;
     default_branch?: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/milestones{/number}\\"
+    */
     milestones_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/stargazers\\"
+    */
     stargazers_url: string;
     watchers_count?: number;
     code_of_conduct?: CodeOfConduct;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/deployments\\"
+    */
     deployments_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/git/commits{/sha}\\"
+    */
     git_commits_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/subscribers\\"
+    */
     subscribers_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/contributors\\"
+    */
     contributors_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/issues/events{/number}\\"
+    */
     issue_events_url: string;
     stargazers_count?: number;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/subscription\\"
+    */
     subscription_url: string;
     temp_clone_token?: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/collaborators{/collaborator}\\"
+    */
     collaborators_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/issues/comments{/number}\\"
+    */
     issue_comment_url: string;
+
+    /** 
+    * 
+    * @example
+    * \\"http://api.github.com/repos/octocat/Hello-World/notifications{?since,all,participating}\\"
+    */
     notifications_url: string;
     open_issues_count?: number;
     subscribers_count?: number;

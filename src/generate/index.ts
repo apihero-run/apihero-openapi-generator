@@ -222,7 +222,7 @@ function generateClientModelInterface(model: Model): string {
 }
 
 function generateModelComments(m: Model) {
-  if (!m.description && !m.deprecated) {
+  if (!m.description && !m.deprecated && (!m.examples || m.examples.length === 0)) {
     return "";
   }
 
@@ -230,6 +230,11 @@ function generateModelComments(m: Model) {
     "\n\n/** " +
     (m.description ? `\n* ${m.description}` : "") +
     (m.deprecated ? `\n* @deprecated` : "") +
+    (m.examples && m.examples.length > 0
+      ? `\n* ${m.examples
+          .map((example) => `\n* @example\n* ${JSON.stringify(example, null, 2)}`)
+          .join("\n* ")}`
+      : "") +
     "\n*/"
   );
 }

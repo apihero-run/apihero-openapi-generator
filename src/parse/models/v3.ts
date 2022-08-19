@@ -101,6 +101,7 @@ function getSchemaModel(
     minProperties: schema.minProperties,
     pattern: getPattern(schema.pattern),
     deprecated: schema.deprecated,
+    examples: schema.example ? [schema.example] : [],
   };
 
   if (schema.enum && schema.type !== "boolean") {
@@ -498,6 +499,7 @@ export const getModelProperties = (
         enums: model.enums,
         properties: model.properties,
         deprecated: property.deprecated,
+        examples: property.example ? [property.example] : [],
       });
     }
   }

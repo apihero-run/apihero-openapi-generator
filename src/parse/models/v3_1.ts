@@ -53,6 +53,7 @@ function getReferenceModel(
     enums: [],
     link: null,
     description: null,
+    examples: [],
   };
 
   const definitionRef = getType(schema.$ref);
@@ -85,6 +86,7 @@ function getSchemaModel(
     enums: [],
     template: null,
     link: null,
+    examples: schema.examples || [],
     description: schema.description ?? null,
     format: schema.format,
     maximum: schema.maximum,
@@ -400,6 +402,7 @@ export const getModelComposition = (
       imports: [],
       enum: [],
       enums: [],
+      examples: [],
       properties,
     });
   }
@@ -465,6 +468,7 @@ export const getModelProperties = (
         enum: [],
         enums: [],
         properties: [],
+        examples: [],
       });
     } else {
       const model = getModel(doc, propertyName, property);
@@ -500,6 +504,7 @@ export const getModelProperties = (
         enums: model.enums,
         properties: model.properties,
         deprecated: property.deprecated,
+        examples: property.examples,
       });
     }
   }
