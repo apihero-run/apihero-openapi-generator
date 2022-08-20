@@ -23,15 +23,10 @@ export type BasicError = {
 export type ValidationError = {
   errors?: Array<{
     code: string;
-
     field?: string;
-
     index?: number;
-
     value?: string | null | number | null | Array<string> | null;
-
     message?: string;
-
     resource?: string;
   }>;
   message: string;

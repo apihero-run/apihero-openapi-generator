@@ -473,15 +473,10 @@ export type ValidationError = {
   documentation_url: string;
   errors?: Array<{
     resource?: string;
-
     field?: string;
-
     message?: string;
-
     code: string;
-
     index?: number;
-
     value?: string | null | number | null | Array<string> | null;
   }>;
 };
@@ -1154,13 +1149,9 @@ export type Repository = {
   forks: number;
   permissions?: {
     admin: boolean;
-
     pull: boolean;
-
     triage?: boolean;
-
     push: boolean;
-
     maintain?: boolean;
   };
   owner: SimpleUser;
@@ -1611,215 +1602,112 @@ export type Repository = {
   allow_rebase_merge?: boolean;
   template_repository?: {
     id?: number;
-
     node_id?: string;
-
     name?: string;
-
     full_name?: string;
-
     owner?: {
       login?: string;
-
       id?: number;
-
       node_id?: string;
-
       avatar_url?: string;
-
       gravatar_id?: string;
-
       url?: string;
-
       html_url?: string;
-
       followers_url?: string;
-
       following_url?: string;
-
       gists_url?: string;
-
       starred_url?: string;
-
       subscriptions_url?: string;
-
       organizations_url?: string;
-
       repos_url?: string;
-
       events_url?: string;
-
       received_events_url?: string;
-
       type?: string;
-
       site_admin?: boolean;
     };
-
     private?: boolean;
-
     html_url?: string;
-
     description?: string;
-
     fork?: boolean;
-
     url?: string;
-
     archive_url?: string;
-
     assignees_url?: string;
-
     blobs_url?: string;
-
     branches_url?: string;
-
     collaborators_url?: string;
-
     comments_url?: string;
-
     commits_url?: string;
-
     compare_url?: string;
-
     contents_url?: string;
-
     contributors_url?: string;
-
     deployments_url?: string;
-
     downloads_url?: string;
-
     events_url?: string;
-
     forks_url?: string;
-
     git_commits_url?: string;
-
     git_refs_url?: string;
-
     git_tags_url?: string;
-
     git_url?: string;
-
     issue_comment_url?: string;
-
     issue_events_url?: string;
-
     issues_url?: string;
-
     keys_url?: string;
-
     labels_url?: string;
-
     languages_url?: string;
-
     merges_url?: string;
-
     milestones_url?: string;
-
     notifications_url?: string;
-
     pulls_url?: string;
-
     releases_url?: string;
-
     ssh_url?: string;
-
     stargazers_url?: string;
-
     statuses_url?: string;
-
     subscribers_url?: string;
-
     subscription_url?: string;
-
     tags_url?: string;
-
     teams_url?: string;
-
     trees_url?: string;
-
     clone_url?: string;
-
     mirror_url?: string;
-
     hooks_url?: string;
-
     svn_url?: string;
-
     homepage?: string;
-
     language?: string;
-
     forks_count?: number;
-
     stargazers_count?: number;
-
     watchers_count?: number;
-
     size?: number;
-
     default_branch?: string;
-
     open_issues_count?: number;
-
     is_template?: boolean;
-
     topics?: Array<string>;
-
     has_issues?: boolean;
-
     has_projects?: boolean;
-
     has_wiki?: boolean;
-
     has_pages?: boolean;
-
     has_downloads?: boolean;
-
     archived?: boolean;
-
     disabled?: boolean;
-
     visibility?: string;
-
     pushed_at?: string;
-
     created_at?: string;
-
     updated_at?: string;
-
     permissions?: {
       admin?: boolean;
-
       maintain?: boolean;
-
       push?: boolean;
-
       triage?: boolean;
-
       pull?: boolean;
     };
-
     allow_rebase_merge?: boolean;
-
     temp_clone_token?: string;
-
     allow_squash_merge?: boolean;
-
     allow_auto_merge?: boolean;
-
     delete_branch_on_merge?: boolean;
-
     allow_update_branch?: boolean;
-
     use_squash_pr_title_as_default?: boolean;
-
     allow_merge_commit?: boolean;
-
     subscribers_count?: number;
-
     network_count?: number;
   };
   temp_clone_token?: string;
@@ -1932,9 +1820,7 @@ export type ApplicationGrant = {
   url: string;
   app: {
     client_id: string;
-
     name: string;
-
     url: string;
   };
 
@@ -2020,9 +1906,7 @@ export type Authorization = {
   hashed_token: string;
   app: {
     client_id: string;
-
     name: string;
-
     url: string;
   };
   note: string;
@@ -3645,17 +3529,11 @@ export type Issue = {
     | string
     | {
         id?: number;
-
         node_id?: string;
-
         url?: string;
-
         name?: string;
-
         description?: string;
-
         color?: string;
-
         default?: boolean;
       }
   >;
@@ -3667,13 +3545,9 @@ export type Issue = {
   comments: number;
   pull_request?: {
     merged_at?: string;
-
     diff_url: string;
-
     html_url: string;
-
     patch_url: string;
-
     url: string;
   };
   closed_at: string;
@@ -3751,30 +3625,20 @@ export type Event = {
   actor: Actor;
   repo: {
     id: number;
-
     name: string;
-
     url: string;
   };
   org?: Actor;
   payload: {
     action?: string;
-
     issue?: Issue;
-
     comment?: IssueComment;
-
     pages?: Array<{
       page_name?: string;
-
       title?: string;
-
       summary?: string;
-
       action?: string;
-
       sha?: string;
-
       html_url?: string;
     }>;
   };
@@ -3853,19 +3717,12 @@ export type Feed = {
   security_advisories_url?: string;
   _links: {
     timeline: LinkWithType;
-
     user: LinkWithType;
-
     security_advisories?: LinkWithType;
-
     current_user?: LinkWithType;
-
     current_user_public?: LinkWithType;
-
     current_user_actor?: LinkWithType;
-
     current_user_organization?: LinkWithType;
-
     current_user_organizations?: Array<LinkWithType>;
   };
 };
@@ -3886,13 +3743,9 @@ export type BaseGist = {
     string,
     {
       filename?: string;
-
       type?: string;
-
       language?: string;
-
       raw_url?: string;
-
       size?: number;
     }
   >;
@@ -3947,11 +3800,8 @@ export type PublicUser = {
   updated_at: string;
   plan?: {
     collaborators: number;
-
     name: string;
-
     space: number;
-
     private_repos: number;
   };
   suspended_at?: string;
@@ -4001,9 +3851,7 @@ export type GistHistory = {
   committed_at?: string;
   change_status?: {
     total?: number;
-
     additions?: number;
-
     deletions?: number;
   };
   url?: string;
@@ -4018,13 +3866,9 @@ export type GistSimple = {
    */
   forks?: Array<{
     id?: string;
-
     url?: string;
-
     user?: PublicUser;
-
     created_at?: string;
-
     updated_at?: string;
   }>;
 
@@ -4038,56 +3882,33 @@ export type GistSimple = {
    */
   fork_of?: {
     url: string;
-
     forks_url: string;
-
     commits_url: string;
-
     id: string;
-
     node_id: string;
-
     git_pull_url: string;
-
     git_push_url: string;
-
     html_url: string;
-
     files: Record<
       string,
       {
         filename?: string;
-
         type?: string;
-
         language?: string;
-
         raw_url?: string;
-
         size?: number;
       }
     >;
-
     public: boolean;
-
     created_at: string;
-
     updated_at: string;
-
     description: string;
-
     comments: number;
-
     user: NullableSimpleUser;
-
     comments_url: string;
-
     owner?: NullableSimpleUser;
-
     truncated?: boolean;
-
     forks?: Array<{}>;
-
     history?: Array<{}>;
   };
   url?: string;
@@ -4102,17 +3923,11 @@ export type GistSimple = {
     string,
     {
       filename?: string;
-
       type?: string;
-
       language?: string;
-
       raw_url?: string;
-
       size?: number;
-
       truncated?: boolean;
-
       content?: string;
     } | null
   >;
@@ -4197,9 +4012,7 @@ export type GistCommit = {
   user: NullableSimpleUser;
   change_status: {
     total?: number;
-
     additions?: number;
-
     deletions?: number;
   };
 
@@ -4482,30 +4295,19 @@ export type MarketplacePurchase = {
   email?: string;
   marketplace_pending_change?: {
     is_installed?: boolean;
-
     effective_date?: string;
-
     unit_count?: number;
-
     id?: number;
-
     plan?: MarketplaceListingPlan;
   };
   marketplace_purchase: {
     billing_cycle?: string;
-
     next_billing_date?: string;
-
     is_installed?: boolean;
-
     unit_count?: number;
-
     on_free_trial?: boolean;
-
     free_trial_ends_on?: string;
-
     updated_at?: string;
-
     plan?: MarketplaceListingPlan;
   };
 };
@@ -4522,11 +4324,8 @@ export type ApiOverview = {
   verifiable_password_authentication: boolean;
   ssh_key_fingerprints?: {
     SHA256_RSA?: string;
-
     SHA256_DSA?: string;
-
     SHA256_ECDSA?: string;
-
     SHA256_ED25519?: string;
   };
 
@@ -4665,13 +4464,9 @@ export type NullableRepository = {
   forks: number;
   permissions?: {
     admin: boolean;
-
     pull: boolean;
-
     triage?: boolean;
-
     push: boolean;
-
     maintain?: boolean;
   };
   owner: SimpleUser;
@@ -5122,215 +4917,112 @@ export type NullableRepository = {
   allow_rebase_merge?: boolean;
   template_repository?: {
     id?: number;
-
     node_id?: string;
-
     name?: string;
-
     full_name?: string;
-
     owner?: {
       login?: string;
-
       id?: number;
-
       node_id?: string;
-
       avatar_url?: string;
-
       gravatar_id?: string;
-
       url?: string;
-
       html_url?: string;
-
       followers_url?: string;
-
       following_url?: string;
-
       gists_url?: string;
-
       starred_url?: string;
-
       subscriptions_url?: string;
-
       organizations_url?: string;
-
       repos_url?: string;
-
       events_url?: string;
-
       received_events_url?: string;
-
       type?: string;
-
       site_admin?: boolean;
     };
-
     private?: boolean;
-
     html_url?: string;
-
     description?: string;
-
     fork?: boolean;
-
     url?: string;
-
     archive_url?: string;
-
     assignees_url?: string;
-
     blobs_url?: string;
-
     branches_url?: string;
-
     collaborators_url?: string;
-
     comments_url?: string;
-
     commits_url?: string;
-
     compare_url?: string;
-
     contents_url?: string;
-
     contributors_url?: string;
-
     deployments_url?: string;
-
     downloads_url?: string;
-
     events_url?: string;
-
     forks_url?: string;
-
     git_commits_url?: string;
-
     git_refs_url?: string;
-
     git_tags_url?: string;
-
     git_url?: string;
-
     issue_comment_url?: string;
-
     issue_events_url?: string;
-
     issues_url?: string;
-
     keys_url?: string;
-
     labels_url?: string;
-
     languages_url?: string;
-
     merges_url?: string;
-
     milestones_url?: string;
-
     notifications_url?: string;
-
     pulls_url?: string;
-
     releases_url?: string;
-
     ssh_url?: string;
-
     stargazers_url?: string;
-
     statuses_url?: string;
-
     subscribers_url?: string;
-
     subscription_url?: string;
-
     tags_url?: string;
-
     teams_url?: string;
-
     trees_url?: string;
-
     clone_url?: string;
-
     mirror_url?: string;
-
     hooks_url?: string;
-
     svn_url?: string;
-
     homepage?: string;
-
     language?: string;
-
     forks_count?: number;
-
     stargazers_count?: number;
-
     watchers_count?: number;
-
     size?: number;
-
     default_branch?: string;
-
     open_issues_count?: number;
-
     is_template?: boolean;
-
     topics?: Array<string>;
-
     has_issues?: boolean;
-
     has_projects?: boolean;
-
     has_wiki?: boolean;
-
     has_pages?: boolean;
-
     has_downloads?: boolean;
-
     archived?: boolean;
-
     disabled?: boolean;
-
     visibility?: string;
-
     pushed_at?: string;
-
     created_at?: string;
-
     updated_at?: string;
-
     permissions?: {
       admin?: boolean;
-
       maintain?: boolean;
-
       push?: boolean;
-
       triage?: boolean;
-
       pull?: boolean;
     };
-
     allow_rebase_merge?: boolean;
-
     temp_clone_token?: string;
-
     allow_squash_merge?: boolean;
-
     allow_auto_merge?: boolean;
-
     delete_branch_on_merge?: boolean;
-
     allow_update_branch?: boolean;
-
     use_squash_pr_title_as_default?: boolean;
-
     allow_merge_commit?: boolean;
-
     subscribers_count?: number;
-
     network_count?: number;
   };
   temp_clone_token?: string;
@@ -5742,13 +5434,9 @@ export type MinimalRepository = {
   updated_at?: string;
   permissions?: {
     admin?: boolean;
-
     maintain?: boolean;
-
     push?: boolean;
-
     triage?: boolean;
-
     pull?: boolean;
   };
 
@@ -5766,13 +5454,9 @@ export type MinimalRepository = {
   code_of_conduct?: CodeOfConduct;
   license?: {
     key?: string;
-
     name?: string;
-
     spdx_id?: string;
-
     url?: string;
-
     node_id?: string;
   };
   forks?: number;
@@ -5789,11 +5473,8 @@ export type Thread = {
   repository: MinimalRepository;
   subject: {
     title: string;
-
     url: string;
-
     latest_comment_url: string;
-
     type: string;
   };
   reason: string;
@@ -6097,13 +5778,9 @@ export type OrganizationFull = {
   billing_email?: string;
   plan?: {
     name: string;
-
     space: number;
-
     private_repos: number;
-
     filled_seats?: number;
-
     seats?: number;
   };
   default_repository_permission?: string;
@@ -7195,13 +6872,9 @@ export type Team = {
   permission: string;
   permissions?: {
     pull: boolean;
-
     triage: boolean;
-
     push: boolean;
-
     maintain: boolean;
-
     admin: boolean;
   };
   url: string;
@@ -7675,13 +7348,9 @@ export type NullableMinimalRepository = {
   updated_at?: string;
   permissions?: {
     admin?: boolean;
-
     maintain?: boolean;
-
     push?: boolean;
-
     triage?: boolean;
-
     pull?: boolean;
   };
 
@@ -7699,13 +7368,9 @@ export type NullableMinimalRepository = {
   code_of_conduct?: CodeOfConduct;
   license?: {
     key?: string;
-
     name?: string;
-
     spdx_id?: string;
-
     url?: string;
-
     node_id?: string;
   };
   forks?: number;
@@ -7851,11 +7516,9 @@ export type PackageVersion = {
      * \\"docker\\"
      */
     package_type: \\"npm\\" | \\"maven\\" | \\"rubygems\\" | \\"docker\\" | \\"nuget\\" | \\"container\\";
-
     container?: {
       tags: Array<string>;
     };
-
     docker?: {
       tag?: Array<string>;
     };
@@ -8434,9 +8097,7 @@ export type TeamProject = {
   private?: boolean;
   permissions: {
     read: boolean;
-
     write: boolean;
-
     admin: boolean;
   };
 };
@@ -8478,13 +8139,9 @@ export type TeamRepository = {
   forks: number;
   permissions?: {
     admin: boolean;
-
     pull: boolean;
-
     triage?: boolean;
-
     push: boolean;
-
     maintain?: boolean;
   };
 
@@ -9141,21 +8798,13 @@ export type RateLimit = {
 export type RateLimitOverview = {
   resources: {
     core: RateLimit;
-
     graphql?: RateLimit;
-
     search: RateLimit;
-
     source_import?: RateLimit;
-
     integration_manifest?: RateLimit;
-
     code_scanning_upload?: RateLimit;
-
     actions_runner_registration?: RateLimit;
-
     scim?: RateLimit;
-
     dependency_snapshots?: RateLimit;
   };
   rate: RateLimit;
@@ -9677,13 +9326,9 @@ export type FullRepository = {
   updated_at: string;
   permissions?: {
     admin: boolean;
-
     maintain?: boolean;
-
     push: boolean;
-
     triage?: boolean;
-
     pull: boolean;
   };
 
@@ -10160,27 +9805,19 @@ export type PullRequestMinimal = {
   url: string;
   head: {
     ref: string;
-
     sha: string;
-
     repo: {
       id: number;
-
       url: string;
-
       name: string;
     };
   };
   base: {
     ref: string;
-
     sha: string;
-
     repo: {
       id: number;
-
       url: string;
-
       name: string;
     };
   };
@@ -10196,12 +9833,10 @@ export type NullableSimpleCommit = {
   timestamp: string;
   author: {
     name: string;
-
     email: string;
   };
   committer: {
     name: string;
-
     email: string;
   };
 };
@@ -10578,7 +10213,6 @@ export type PendingDeployment = {
    */
   reviewers: Array<{
     type?: DeploymentReviewerType;
-
     reviewer?: SimpleUser | Team;
   }>;
 };
@@ -10709,36 +10343,25 @@ export type WorkflowRunUsage = {
   billable: {
     UBUNTU?: {
       total_ms: number;
-
       jobs: number;
-
       job_runs?: Array<{
         job_id: number;
-
         duration_ms: number;
       }>;
     };
-
     MACOS?: {
       total_ms: number;
-
       jobs: number;
-
       job_runs?: Array<{
         job_id: number;
-
         duration_ms: number;
       }>;
     };
-
     WINDOWS?: {
       total_ms: number;
-
       jobs: number;
-
       job_runs?: Array<{
         job_id: number;
-
         duration_ms: number;
       }>;
     };
@@ -10851,11 +10474,9 @@ export type WorkflowUsage = {
     UBUNTU?: {
       total_ms?: number;
     };
-
     MACOS?: {
       total_ms?: number;
     };
-
     WINDOWS?: {
       total_ms?: number;
     };
@@ -10904,7 +10525,6 @@ export type ProtectedBranchRequiredStatusCheck = {
   contexts: Array<string>;
   checks: Array<{
     context: string;
-
     app_id: number;
   }>;
   contexts_url?: string;
@@ -11030,96 +10650,54 @@ export type BranchRestrictionPolicy = {
   apps_url: string;
   users: Array<{
     login?: string;
-
     id?: number;
-
     node_id?: string;
-
     avatar_url?: string;
-
     gravatar_id?: string;
-
     url?: string;
-
     html_url?: string;
-
     followers_url?: string;
-
     following_url?: string;
-
     gists_url?: string;
-
     starred_url?: string;
-
     subscriptions_url?: string;
-
     organizations_url?: string;
-
     repos_url?: string;
-
     events_url?: string;
-
     received_events_url?: string;
-
     type?: string;
-
     site_admin?: boolean;
   }>;
   teams: Array<{
     id?: number;
-
     node_id?: string;
-
     url?: string;
-
     html_url?: string;
-
     name?: string;
-
     slug?: string;
-
     description?: string;
-
     privacy?: string;
-
     permission?: string;
-
     members_url?: string;
-
     repositories_url?: string;
-
     parent?: string;
   }>;
   apps: Array<{
     id?: number;
-
     slug?: string;
-
     node_id?: string;
-
     owner?: {
       login?: string;
-
       id?: number;
-
       node_id?: string;
-
       url?: string;
-
       repos_url?: string;
-
       events_url?: string;
-
       hooks_url?: string;
-
       issues_url?: string;
-
       members_url?: string;
-
       public_members_url?: string;
-
       avatar_url?: string;
-
       description?: string;
 
       /**
@@ -11191,32 +10769,20 @@ export type BranchRestrictionPolicy = {
        * \\"\\\\\\"Organization\\\\\\"\\"
        */
       type?: string;
-
       site_admin?: boolean;
     };
-
     name?: string;
-
     description?: string;
-
     external_url?: string;
-
     html_url?: string;
-
     created_at?: string;
-
     updated_at?: string;
-
     permissions?: {
       metadata?: string;
-
       contents?: string;
-
       issues?: string;
-
       single_file?: string;
     };
-
     events?: Array<string>;
   }>;
 };
@@ -11284,7 +10850,6 @@ export type ShortBranch = {
   name: string;
   commit: {
     sha: string;
-
     url: string;
   };
   protected: boolean;
@@ -11452,9 +11017,7 @@ export type Commit = {
      * \\"https://api.github.com/repos/octocat/Hello-World/commits/6dcb09b5b57875f334f61aebed695e2e4193db5e\\"
      */
     url: string;
-
     author: NullableGitUser;
-
     committer: NullableGitUser;
 
     /**
@@ -11463,9 +11026,7 @@ export type Commit = {
      * \\"Fix all the bugs\\"
      */
     message: string;
-
     comment_count: number;
-
     tree: {
       /**
        *
@@ -11481,7 +11042,6 @@ export type Commit = {
        */
       url: string;
     };
-
     verification?: Verification;
   };
   author: NullableSimpleUser;
@@ -11510,9 +11070,7 @@ export type Commit = {
   }>;
   stats?: {
     additions?: number;
-
     deletions?: number;
-
     total?: number;
   };
   files?: Array<DiffEntry>;
@@ -11526,7 +11084,6 @@ export type BranchWithProtection = {
   commit: Commit;
   _links: {
     html: string;
-
     self: string;
   };
   protected: boolean;
@@ -11581,7 +11138,6 @@ export type StatusCheckPolicy = {
      * \\"continuous-integration/travis-ci\\"
      */
     context: string;
-
     app_id: number;
   }>;
 
@@ -11601,32 +11157,20 @@ export type ProtectedBranch = {
   required_status_checks?: StatusCheckPolicy;
   required_pull_request_reviews?: {
     url: string;
-
     dismiss_stale_reviews?: boolean;
-
     require_code_owner_reviews?: boolean;
-
     required_approving_review_count?: number;
-
     dismissal_restrictions?: {
       url: string;
-
       users_url: string;
-
       teams_url: string;
-
       users: Array<SimpleUser>;
-
       teams: Array<Team>;
-
       apps?: Array<Integration>;
     };
-
     bypass_pull_request_allowances?: {
       users: Array<SimpleUser>;
-
       teams: Array<Team>;
-
       apps?: Array<Integration>;
     };
   };
@@ -11647,7 +11191,6 @@ export type ProtectedBranch = {
   };
   enforce_admins?: {
     url: string;
-
     enabled: boolean;
   };
   required_linear_history?: {
@@ -11862,13 +11405,9 @@ export type CheckRun = {
   completed_at: string;
   output: {
     title: string;
-
     summary: string;
-
     text: string;
-
     annotations_count: number;
-
     annotations_url: string;
   };
 
@@ -11966,12 +11505,10 @@ export type SimpleCommit = {
   timestamp: string;
   author: {
     name: string;
-
     email: string;
   };
   committer: {
     name: string;
-
     email: string;
   };
 };
@@ -12069,7 +11606,6 @@ export type CheckSuitePreference = {
   preferences: {
     auto_trigger_checks?: Array<{
       app_id: number;
-
       setting: boolean;
     }>;
   };
@@ -12576,13 +12112,9 @@ export type Collaborator = {
   site_admin: boolean;
   permissions?: {
     pull: boolean;
-
     triage?: boolean;
-
     push: boolean;
-
     maintain?: boolean;
-
     admin: boolean;
   };
 
@@ -12773,13 +12305,9 @@ export type NullableCollaborator = {
   site_admin: boolean;
   permissions?: {
     pull: boolean;
-
     triage?: boolean;
-
     push: boolean;
-
     maintain?: boolean;
-
     admin: boolean;
   };
 
@@ -12833,7 +12361,6 @@ export type BranchShort = {
   name: string;
   commit: {
     sha: string;
-
     url: string;
   };
   protected: boolean;
@@ -12993,17 +12520,11 @@ export type PullRequestSimple = {
   body: string;
   labels: Array<{
     id: number;
-
     node_id: string;
-
     url: string;
-
     name: string;
-
     description: string;
-
     color: string;
-
     default: boolean;
   }>;
   milestone: NullableMilestone;
@@ -13055,41 +12576,26 @@ export type PullRequestSimple = {
   requested_teams?: Array<Team>;
   head: {
     label: string;
-
     ref: string;
-
     repo: Repository;
-
     sha: string;
-
     user: NullableSimpleUser;
   };
   base: {
     label: string;
-
     ref: string;
-
     repo: Repository;
-
     sha: string;
-
     user: NullableSimpleUser;
   };
   _links: {
     comments: Link;
-
     commits: Link;
-
     statuses: Link;
-
     html: Link;
-
     issue: Link;
-
     review_comments: Link;
-
     review_comment: Link;
-
     self: Link;
   };
   author_association: AuthorAssociation;
@@ -13209,17 +12715,11 @@ export type CommunityProfile = {
   documentation: string;
   files: {
     code_of_conduct: NullableCodeOfConductSimple;
-
     code_of_conduct_file: NullableCommunityHealthFile;
-
     license: NullableLicenseSimple;
-
     contributing: NullableCommunityHealthFile;
-
     readme: NullableCommunityHealthFile;
-
     issue_template: NullableCommunityHealthFile;
-
     pull_request_template: NullableCommunityHealthFile;
   };
 
@@ -13325,38 +12825,24 @@ export type ContentTree = {
   download_url: string;
   entries?: Array<{
     type: string;
-
     size: number;
-
     name: string;
-
     path: string;
-
     content?: string;
-
     sha: string;
-
     url: string;
-
     git_url: string;
-
     html_url: string;
-
     download_url: string;
-
     _links: {
       git: string;
-
       html: string;
-
       self: string;
     };
   }>;
   _links: {
     git: string;
-
     html: string;
-
     self: string;
   };
 };
@@ -13366,30 +12852,18 @@ export type ContentTree = {
  */
 export type ContentDirectory = Array<{
   type: string;
-
   size: number;
-
   name: string;
-
   path: string;
-
   content?: string;
-
   sha: string;
-
   url: string;
-
   git_url: string;
-
   html_url: string;
-
   download_url: string;
-
   _links: {
     git: string;
-
     html: string;
-
     self: string;
   };
 }>;
@@ -13411,9 +12885,7 @@ export type ContentFile = {
   download_url: string;
   _links: {
     git: string;
-
     html: string;
-
     self: string;
   };
 
@@ -13448,9 +12920,7 @@ export type ContentSymlink = {
   download_url: string;
   _links: {
     git: string;
-
     html: string;
-
     self: string;
   };
 };
@@ -13471,9 +12941,7 @@ export type ContentSubmodule = {
   download_url: string;
   _links: {
     git: string;
-
     html: string;
-
     self: string;
   };
 };
@@ -13484,79 +12952,49 @@ export type ContentSubmodule = {
 export type FileCommit = {
   content: {
     name?: string;
-
     path?: string;
-
     sha?: string;
-
     size?: number;
-
     url?: string;
-
     html_url?: string;
-
     git_url?: string;
-
     download_url?: string;
-
     type?: string;
-
     _links?: {
       self?: string;
-
       git?: string;
-
       html?: string;
     };
   };
   commit: {
     sha?: string;
-
     node_id?: string;
-
     url?: string;
-
     html_url?: string;
-
     author?: {
       date?: string;
-
       name?: string;
-
       email?: string;
     };
-
     committer?: {
       date?: string;
-
       name?: string;
-
       email?: string;
     };
-
     message?: string;
-
     tree?: {
       url?: string;
-
       sha?: string;
     };
-
     parents?: Array<{
       url?: string;
-
       html_url?: string;
-
       sha?: string;
     }>;
-
     verification?: {
       verified?: boolean;
-
       reason?: string;
-
       signature?: string;
-
       payload?: string;
     };
   };
@@ -13658,7 +13096,6 @@ export type DependencyGraphDiff = Array<{
    * \\"https://github.com/github/actions\\"
    */
   source_repository_url: string;
-
   vulnerabilities: Array<{
     /**
      *
@@ -14056,7 +13493,6 @@ export type Environment = {
          * \\"wait_timer\\"
          */
         type: string;
-
         wait_timer?: WaitTimer;
       }
     | {
@@ -14086,7 +13522,6 @@ export type Environment = {
          */
         reviewers?: Array<{
           type?: DeploymentReviewerType;
-
           reviewer?: SimpleUser | Team;
         }>;
       }
@@ -14224,7 +13659,6 @@ export type GitCommit = {
      * \\"7638417db6d59f3c431d3e1f261cc637155684cd\\"
      */
     sha: string;
-
     url: string;
   };
   parents: Array<{
@@ -14235,18 +13669,13 @@ export type GitCommit = {
      * \\"7638417db6d59f3c431d3e1f261cc637155684cd\\"
      */
     sha: string;
-
     url: string;
-
     html_url: string;
   }>;
   verification: {
     verified: boolean;
-
     reason: string;
-
     signature: string;
-
     payload: string;
   };
   html_url: string;
@@ -14269,7 +13698,6 @@ export type GitRef = {
      * \\"7638417db6d59f3c431d3e1f261cc637155684cd\\"
      */
     sha: string;
-
     url: string;
   };
 };
@@ -14317,16 +13745,12 @@ export type GitTag = {
   message: string;
   tagger: {
     date: string;
-
     email: string;
-
     name: string;
   };
   object: {
     sha: string;
-
     type: string;
-
     url: string;
   };
   verification?: Verification;
@@ -14502,11 +13926,8 @@ export type Hook = {
      * \\"\\\\\\"foo\\\\\\"\\"
      */
     subdomain?: string;
-
     url?: WebhookConfigUrl;
-
     insecure_ssl?: WebhookConfigInsecureSsl;
-
     content_type?: WebhookConfigContentType;
 
     /**
@@ -14515,7 +13936,6 @@ export type Hook = {
      * \\"\\\\\\"sha256\\\\\\"\\"
      */
     digest?: string;
-
     secret?: WebhookConfigSecret;
 
     /**
@@ -14611,9 +14031,7 @@ export type Import = {
   large_files_count?: number;
   project_choices?: Array<{
     vcs?: string;
-
     tfvc_project?: string;
-
     human_name?: string;
   }>;
   message?: string;
@@ -14722,17 +14140,11 @@ export type NullableIssue = {
     | string
     | {
         id?: number;
-
         node_id?: string;
-
         url?: string;
-
         name?: string;
-
         description?: string;
-
         color?: string;
-
         default?: boolean;
       }
   >;
@@ -14744,13 +14156,9 @@ export type NullableIssue = {
   comments: number;
   pull_request?: {
     merged_at?: string;
-
     diff_url: string;
-
     html_url: string;
-
     patch_url: string;
-
     url: string;
   };
   closed_at: string;
@@ -14893,7 +14301,6 @@ export type LabeledIssueEvent = {
   performed_via_github_app: NullableIntegration;
   label: {
     name: string;
-
     color: string;
   };
 };
@@ -14913,7 +14320,6 @@ export type UnlabeledIssueEvent = {
   performed_via_github_app: NullableIntegration;
   label: {
     name: string;
-
     color: string;
   };
 };
@@ -15003,7 +14409,6 @@ export type RenamedIssueEvent = {
   performed_via_github_app: NullableIntegration;
   rename: {
     from: string;
-
     to: string;
   };
 };
@@ -15059,11 +14464,8 @@ export type ReviewDismissedIssueEvent = {
   performed_via_github_app: NullableIntegration;
   dismissed_review: {
     state: string;
-
     review_id: number;
-
     dismissal_message: string;
-
     dismissal_commit_id?: string;
   };
 };
@@ -15105,15 +14507,10 @@ export type AddedToProjectIssueEvent = {
   performed_via_github_app: NullableIntegration;
   project_card?: {
     id: number;
-
     url: string;
-
     project_id: number;
-
     project_url: string;
-
     column_name: string;
-
     previous_column_name?: string;
   };
 };
@@ -15133,15 +14530,10 @@ export type MovedColumnInProjectIssueEvent = {
   performed_via_github_app: NullableIntegration;
   project_card?: {
     id: number;
-
     url: string;
-
     project_id: number;
-
     project_url: string;
-
     column_name: string;
-
     previous_column_name?: string;
   };
 };
@@ -15161,15 +14553,10 @@ export type RemovedFromProjectIssueEvent = {
   performed_via_github_app: NullableIntegration;
   project_card?: {
     id: number;
-
     url: string;
-
     project_id: number;
-
     project_url: string;
-
     column_name: string;
-
     previous_column_name?: string;
   };
 };
@@ -15189,15 +14576,10 @@ export type ConvertedNoteToIssueIssueEvent = {
   performed_via_github_app: Integration;
   project_card?: {
     id: number;
-
     url: string;
-
     project_id: number;
-
     project_url: string;
-
     column_name: string;
-
     previous_column_name?: string;
   };
 };
@@ -15344,7 +14726,6 @@ export type TimelineCrossReferencedEvent = {
   updated_at: string;
   source: {
     type?: string;
-
     issue?: Issue;
   };
 };
@@ -15438,7 +14819,6 @@ export type TimelineCommittedEvent = {
      * \\"7638417db6d59f3c431d3e1f261cc637155684cd\\"
      */
     sha: string;
-
     url: string;
   };
   parents: Array<{
@@ -15449,18 +14829,13 @@ export type TimelineCommittedEvent = {
      * \\"7638417db6d59f3c431d3e1f261cc637155684cd\\"
      */
     sha: string;
-
     url: string;
-
     html_url: string;
   }>;
   verification: {
     verified: boolean;
-
     reason: string;
-
     signature: string;
-
     payload: string;
   };
   html_url: string;
@@ -15520,7 +14895,6 @@ export type TimelineReviewedEvent = {
     html: {
       href: string;
     };
-
     pull_request: {
       href: string;
     };
@@ -15679,7 +15053,6 @@ export type PullRequestReviewComment = {
        */
       href: string;
     };
-
     html: {
       /**
        *
@@ -15688,7 +15061,6 @@ export type PullRequestReviewComment = {
        */
       href: string;
     };
-
     pull_request: {
       /**
        *
@@ -15886,9 +15258,7 @@ export type LicenseContent = {
   encoding: string;
   _links: {
     git: string;
-
     html: string;
-
     self: string;
   };
   license: NullableLicenseSimple;
@@ -16184,116 +15554,62 @@ export type PageBuildStatus = {
 export type PagesHealthCheck = {
   domain?: {
     host?: string;
-
     uri?: string;
-
     nameservers?: string;
-
     dns_resolves?: boolean;
-
     is_proxied?: boolean;
-
     is_cloudflare_ip?: boolean;
-
     is_fastly_ip?: boolean;
-
     is_old_ip_address?: boolean;
-
     is_a_record?: boolean;
-
     has_cname_record?: boolean;
-
     has_mx_records_present?: boolean;
-
     is_valid_domain?: boolean;
-
     is_apex_domain?: boolean;
-
     should_be_a_record?: boolean;
-
     is_cname_to_github_user_domain?: boolean;
-
     is_cname_to_pages_dot_github_dot_com?: boolean;
-
     is_cname_to_fastly?: boolean;
-
     is_pointed_to_github_pages_ip?: boolean;
-
     is_non_github_pages_ip_present?: boolean;
-
     is_pages_domain?: boolean;
-
     is_served_by_pages?: boolean;
-
     is_valid?: boolean;
-
     reason?: string;
-
     responds_to_https?: boolean;
-
     enforces_https?: boolean;
-
     https_error?: string;
-
     is_https_eligible?: boolean;
-
     caa_error?: string;
   };
   alt_domain?: {
     host?: string;
-
     uri?: string;
-
     nameservers?: string;
-
     dns_resolves?: boolean;
-
     is_proxied?: boolean;
-
     is_cloudflare_ip?: boolean;
-
     is_fastly_ip?: boolean;
-
     is_old_ip_address?: boolean;
-
     is_a_record?: boolean;
-
     has_cname_record?: boolean;
-
     has_mx_records_present?: boolean;
-
     is_valid_domain?: boolean;
-
     is_apex_domain?: boolean;
-
     should_be_a_record?: boolean;
-
     is_cname_to_github_user_domain?: boolean;
-
     is_cname_to_pages_dot_github_dot_com?: boolean;
-
     is_cname_to_fastly?: boolean;
-
     is_pointed_to_github_pages_ip?: boolean;
-
     is_non_github_pages_ip_present?: boolean;
-
     is_pages_domain?: boolean;
-
     is_served_by_pages?: boolean;
-
     is_valid?: boolean;
-
     reason?: string;
-
     responds_to_https?: boolean;
-
     enforces_https?: boolean;
-
     https_error?: string;
-
     is_https_eligible?: boolean;
-
     caa_error?: string;
   };
 };
@@ -16522,17 +15838,11 @@ export type PullRequest = {
   body: string;
   labels: Array<{
     id: number;
-
     node_id: string;
-
     url: string;
-
     name: string;
-
     description: string;
-
     color: string;
-
     default: boolean;
   }>;
   milestone: NullableMilestone;
@@ -16584,553 +15894,296 @@ export type PullRequest = {
   requested_teams?: Array<TeamSimple>;
   head: {
     label: string;
-
     ref: string;
-
     repo: {
       archive_url: string;
-
       assignees_url: string;
-
       blobs_url: string;
-
       branches_url: string;
-
       collaborators_url: string;
-
       comments_url: string;
-
       commits_url: string;
-
       compare_url: string;
-
       contents_url: string;
-
       contributors_url: string;
-
       deployments_url: string;
-
       description: string;
-
       downloads_url: string;
-
       events_url: string;
-
       fork: boolean;
-
       forks_url: string;
-
       full_name: string;
-
       git_commits_url: string;
-
       git_refs_url: string;
-
       git_tags_url: string;
-
       hooks_url: string;
-
       html_url: string;
-
       id: number;
-
       node_id: string;
-
       issue_comment_url: string;
-
       issue_events_url: string;
-
       issues_url: string;
-
       keys_url: string;
-
       labels_url: string;
-
       languages_url: string;
-
       merges_url: string;
-
       milestones_url: string;
-
       name: string;
-
       notifications_url: string;
-
       owner: {
         avatar_url: string;
-
         events_url: string;
-
         followers_url: string;
-
         following_url: string;
-
         gists_url: string;
-
         gravatar_id: string;
-
         html_url: string;
-
         id: number;
-
         node_id: string;
-
         login: string;
-
         organizations_url: string;
-
         received_events_url: string;
-
         repos_url: string;
-
         site_admin: boolean;
-
         starred_url: string;
-
         subscriptions_url: string;
-
         type: string;
-
         url: string;
       };
-
       private: boolean;
-
       pulls_url: string;
-
       releases_url: string;
-
       stargazers_url: string;
-
       statuses_url: string;
-
       subscribers_url: string;
-
       subscription_url: string;
-
       tags_url: string;
-
       teams_url: string;
-
       trees_url: string;
-
       url: string;
-
       clone_url: string;
-
       default_branch: string;
-
       forks: number;
-
       forks_count: number;
-
       git_url: string;
-
       has_downloads: boolean;
-
       has_issues: boolean;
-
       has_projects: boolean;
-
       has_wiki: boolean;
-
       has_pages: boolean;
-
       homepage: string;
-
       language: string;
-
       master_branch?: string;
-
       archived: boolean;
-
       disabled: boolean;
 
       /**
        * The repository visibility: public, private, or internal.
        */
       visibility?: string;
-
       mirror_url: string;
-
       open_issues: number;
-
       open_issues_count: number;
-
       permissions?: {
         admin: boolean;
-
         maintain?: boolean;
-
         push: boolean;
-
         triage?: boolean;
-
         pull: boolean;
       };
-
       temp_clone_token?: string;
-
       allow_merge_commit?: boolean;
-
       allow_squash_merge?: boolean;
-
       allow_rebase_merge?: boolean;
-
       license: {
         key: string;
-
         name: string;
-
         url: string;
-
         spdx_id: string;
-
         node_id: string;
       };
-
       pushed_at: string;
-
       size: number;
-
       ssh_url: string;
-
       stargazers_count: number;
-
       svn_url: string;
-
       topics?: Array<string>;
-
       watchers: number;
-
       watchers_count: number;
-
       created_at: string;
-
       updated_at: string;
-
       allow_forking?: boolean;
-
       is_template?: boolean;
     };
-
     sha: string;
-
     user: {
       avatar_url: string;
-
       events_url: string;
-
       followers_url: string;
-
       following_url: string;
-
       gists_url: string;
-
       gravatar_id: string;
-
       html_url: string;
-
       id: number;
-
       node_id: string;
-
       login: string;
-
       organizations_url: string;
-
       received_events_url: string;
-
       repos_url: string;
-
       site_admin: boolean;
-
       starred_url: string;
-
       subscriptions_url: string;
-
       type: string;
-
       url: string;
     };
   };
   base: {
     label: string;
-
     ref: string;
-
     repo: {
       archive_url: string;
-
       assignees_url: string;
-
       blobs_url: string;
-
       branches_url: string;
-
       collaborators_url: string;
-
       comments_url: string;
-
       commits_url: string;
-
       compare_url: string;
-
       contents_url: string;
-
       contributors_url: string;
-
       deployments_url: string;
-
       description: string;
-
       downloads_url: string;
-
       events_url: string;
-
       fork: boolean;
-
       forks_url: string;
-
       full_name: string;
-
       git_commits_url: string;
-
       git_refs_url: string;
-
       git_tags_url: string;
-
       hooks_url: string;
-
       html_url: string;
-
       id: number;
-
       is_template?: boolean;
-
       node_id: string;
-
       issue_comment_url: string;
-
       issue_events_url: string;
-
       issues_url: string;
-
       keys_url: string;
-
       labels_url: string;
-
       languages_url: string;
-
       merges_url: string;
-
       milestones_url: string;
-
       name: string;
-
       notifications_url: string;
-
       owner: {
         avatar_url: string;
-
         events_url: string;
-
         followers_url: string;
-
         following_url: string;
-
         gists_url: string;
-
         gravatar_id: string;
-
         html_url: string;
-
         id: number;
-
         node_id: string;
-
         login: string;
-
         organizations_url: string;
-
         received_events_url: string;
-
         repos_url: string;
-
         site_admin: boolean;
-
         starred_url: string;
-
         subscriptions_url: string;
-
         type: string;
-
         url: string;
       };
-
       private: boolean;
-
       pulls_url: string;
-
       releases_url: string;
-
       stargazers_url: string;
-
       statuses_url: string;
-
       subscribers_url: string;
-
       subscription_url: string;
-
       tags_url: string;
-
       teams_url: string;
-
       trees_url: string;
-
       url: string;
-
       clone_url: string;
-
       default_branch: string;
-
       forks: number;
-
       forks_count: number;
-
       git_url: string;
-
       has_downloads: boolean;
-
       has_issues: boolean;
-
       has_projects: boolean;
-
       has_wiki: boolean;
-
       has_pages: boolean;
-
       homepage: string;
-
       language: string;
-
       master_branch?: string;
-
       archived: boolean;
-
       disabled: boolean;
 
       /**
        * The repository visibility: public, private, or internal.
        */
       visibility?: string;
-
       mirror_url: string;
-
       open_issues: number;
-
       open_issues_count: number;
-
       permissions?: {
         admin: boolean;
-
         maintain?: boolean;
-
         push: boolean;
-
         triage?: boolean;
-
         pull: boolean;
       };
-
       temp_clone_token?: string;
-
       allow_merge_commit?: boolean;
-
       allow_squash_merge?: boolean;
-
       allow_rebase_merge?: boolean;
-
       license: NullableLicenseSimple;
-
       pushed_at: string;
-
       size: number;
-
       ssh_url: string;
-
       stargazers_count: number;
-
       svn_url: string;
-
       topics?: Array<string>;
-
       watchers: number;
-
       watchers_count: number;
-
       created_at: string;
-
       updated_at: string;
-
       allow_forking?: boolean;
     };
-
     sha: string;
-
     user: {
       avatar_url: string;
-
       events_url: string;
-
       followers_url: string;
-
       following_url: string;
-
       gists_url: string;
-
       gravatar_id: string;
-
       html_url: string;
-
       id: number;
-
       node_id: string;
-
       login: string;
-
       organizations_url: string;
-
       received_events_url: string;
-
       repos_url: string;
-
       site_admin: boolean;
-
       starred_url: string;
-
       subscriptions_url: string;
-
       type: string;
-
       url: string;
     };
   };
   _links: {
     comments: Link;
-
     commits: Link;
-
     statuses: Link;
-
     html: Link;
-
     issue: Link;
-
     review_comments: Link;
-
     review_comment: Link;
-
     self: Link;
   };
   author_association: AuthorAssociation;
@@ -17278,7 +16331,6 @@ export type PullRequestReview = {
     html: {
       href: string;
     };
-
     pull_request: {
       href: string;
     };
@@ -17416,9 +16468,7 @@ export type ReviewComment = {
   author_association: AuthorAssociation;
   _links: {
     self: Link;
-
     html: Link;
-
     pull_request: Link;
   };
   body_text?: string;
@@ -17763,11 +16813,8 @@ export type ContributorActivity = {
 */
   weeks: Array<{
     w?: number;
-
     a?: number;
-
     d?: number;
-
     c?: number;
   }>;
 };
@@ -17829,7 +16876,6 @@ export type Tag = {
   name: string;
   commit: {
     sha: string;
-
     url: string;
   };
 
@@ -18008,28 +17054,18 @@ export type ScimGroupListEnterprise = {
   startIndex: number;
   Resources: Array<{
     schemas: Array<string>;
-
     id: string;
-
     externalId?: string;
-
     displayName?: string;
-
     members?: Array<{
       value?: string;
-
       $ref?: string;
-
       display?: string;
     }>;
-
     meta?: {
       resourceType?: string;
-
       created?: string;
-
       lastModified?: string;
-
       location?: string;
     };
   }>;
@@ -18042,18 +17078,13 @@ export type ScimEnterpriseGroup = {
   displayName?: string;
   members?: Array<{
     value?: string;
-
     $ref?: string;
-
     display?: string;
   }>;
   meta?: {
     resourceType?: string;
-
     created?: string;
-
     lastModified?: string;
-
     location?: string;
   };
 };
@@ -18065,40 +17096,26 @@ export type ScimUserListEnterprise = {
   startIndex: number;
   Resources: Array<{
     schemas: Array<string>;
-
     id: string;
-
     externalId?: string;
-
     userName?: string;
-
     name?: {
       givenName?: string;
-
       familyName?: string;
     };
-
     emails?: Array<{
       value?: string;
-
       primary?: boolean;
-
       type?: string;
     }>;
-
     groups?: Array<{
       value?: string;
     }>;
-
     active?: boolean;
-
     meta?: {
       resourceType?: string;
-
       created?: string;
-
       lastModified?: string;
-
       location?: string;
     };
   }>;
@@ -18111,14 +17128,11 @@ export type ScimEnterpriseUser = {
   userName?: string;
   name?: {
     givenName?: string;
-
     familyName?: string;
   };
   emails?: Array<{
     value?: string;
-
     type?: string;
-
     primary?: boolean;
   }>;
   groups?: Array<{
@@ -18127,11 +17141,8 @@ export type ScimEnterpriseUser = {
   active?: boolean;
   meta?: {
     resourceType?: string;
-
     created?: string;
-
     lastModified?: string;
-
     location?: string;
   };
 };
@@ -18187,9 +17198,7 @@ export type ScimUser = {
 */
   name: {
     givenName: string;
-
     familyName: string;
-
     formatted?: string;
   };
 
@@ -18210,7 +17219,6 @@ export type ScimUser = {
 */
   emails: Array<{
     value: string;
-
     primary?: boolean;
   }>;
 
@@ -18271,9 +17279,7 @@ export type ScimUser = {
 */
   operations?: Array<{
     op: \\"add\\" | \\"remove\\" | \\"replace\\";
-
     path?: string;
-
     value?: string;
   }>;
 
@@ -18317,16 +17323,11 @@ export type ScimUserList = {
 
 export type SearchResultTextMatches = Array<{
   object_url?: string;
-
   object_type?: string;
-
   property?: string;
-
   fragment?: string;
-
   matches?: Array<{
     text?: string;
-
     indices?: Array<number>;
   }>;
 }>;
@@ -18370,35 +17371,24 @@ export type CommitSearchResultItem = {
   commit: {
     author: {
       name: string;
-
       email: string;
-
       date: string;
     };
-
     committer: NullableGitUser;
-
     comment_count: number;
-
     message: string;
-
     tree: {
       sha: string;
-
       url: string;
     };
-
     url: string;
-
     verification?: Verification;
   };
   author: NullableSimpleUser;
   committer: NullableGitUser;
   parents: Array<{
     url?: string;
-
     html_url?: string;
-
     sha?: string;
   }>;
   repository: MinimalRepository;
@@ -18427,17 +17417,11 @@ export type IssueSearchResultItem = {
   user: NullableSimpleUser;
   labels: Array<{
     id?: number;
-
     node_id?: string;
-
     url?: string;
-
     name?: string;
-
     color?: string;
-
     default?: boolean;
-
     description?: string;
   }>;
   state: string;
@@ -18451,13 +17435,9 @@ export type IssueSearchResultItem = {
   text_matches?: SearchResultTextMatches;
   pull_request?: {
     merged_at?: string;
-
     diff_url: string;
-
     html_url: string;
-
     patch_url: string;
-
     url: string;
   };
   body?: string;
@@ -18578,13 +17558,9 @@ export type RepoSearchResultItem = {
   license: NullableLicenseSimple;
   permissions?: {
     admin: boolean;
-
     maintain?: boolean;
-
     push: boolean;
-
     triage?: boolean;
-
     pull: boolean;
   };
   text_matches?: SearchResultTextMatches;
@@ -18619,22 +17595,16 @@ export type TopicSearchResultItem = {
   related?: Array<{
     topic_relation?: {
       id?: number;
-
       name?: string;
-
       topic_id?: number;
-
       relation_type?: string;
     };
   }>;
   aliases?: Array<{
     topic_relation?: {
       id?: number;
-
       name?: string;
-
       topic_id?: number;
-
       relation_type?: string;
     };
   }>;
@@ -18933,11 +17903,8 @@ export type PrivateUser = {
   two_factor_authentication: boolean;
   plan?: {
     collaborators: number;
-
     name: string;
-
     space: number;
-
     private_repos: number;
   };
   suspended_at?: string;
@@ -19141,7 +18108,6 @@ export type GpgKey = {
 */
   emails: Array<{
     email?: string;
-
     verified?: boolean;
   }>;
 
@@ -19168,31 +18134,18 @@ export type GpgKey = {
 */
   subkeys: Array<{
     id?: number;
-
     primary_key_id?: number;
-
     key_id?: string;
-
     public_key?: string;
-
     emails?: Array<{}>;
-
     subkeys?: Array<{}>;
-
     can_sign?: boolean;
-
     can_encrypt_comms?: boolean;
-
     can_encrypt_storage?: boolean;
-
     can_certify?: boolean;
-
     created_at?: string;
-
     expires_at?: string;
-
     raw_key?: string;
-
     revoked?: boolean;
   }>;
 
@@ -19309,7 +18262,6 @@ export type StarredRepository = {
 export type Hovercard = {
   contexts: Array<{
     message: string;
-
     octicon: string;
   }>;
 };
@@ -19479,7 +18431,6 @@ export const getActionsCacheUsageByRepoForOrg: ApiHeroEndpoint<
   { org: string; perPage?: number; page?: number },
   {
     total_count: number;
-
     repository_cache_usages: Array<ActionsCacheUsageByRepository>;
   },
   { Link: Link }
@@ -19527,7 +18478,6 @@ export const setGithubActionsPermissionsOrganization: ApiHeroEndpoint<
     org: string;
     body: {
       enabled_repositories: EnabledRepositories;
-
       allowed_actions?: AllowedActions;
     };
   },
@@ -19553,7 +18503,6 @@ export const listSelectedRepositoriesEnabledGithubActionsOrganization: ApiHeroEn
   { org: string; perPage?: number; page?: number },
   {
     total_count: number;
-
     repositories: Array<Repository>;
   }
 > = {
@@ -19726,7 +18675,6 @@ export const listSelfHostedRunnerGroupsForOrg: ApiHeroEndpoint<
   { org: string; perPage?: number; page?: number; visibleToRepository?: string },
   {
     total_count: number;
-
     runner_groups: Array<RunnerGroupsOrg>;
   }
 > = {
@@ -19919,7 +18867,6 @@ export const listRepoAccessToSelfHostedRunnerGroupInOrg: ApiHeroEndpoint<
   { org: string; runnerGroupId: number; page?: number; perPage?: number },
   {
     total_count: number;
-
     repositories: Array<MinimalRepository>;
   }
 > = {
@@ -20026,7 +18973,6 @@ export const listSelfHostedRunnersInGroupForOrg: ApiHeroEndpoint<
   { org: string; runnerGroupId: number; perPage?: number; page?: number },
   {
     total_count: number;
-
     runners: Array<Runner>;
   },
   { Link: Link }
@@ -20131,7 +19077,6 @@ export const listSelfHostedRunnersForOrg: ApiHeroEndpoint<
   { org: string; perPage?: number; page?: number },
   {
     total_count: number;
-
     runners: Array<Runner>;
   },
   { Link: Link }
@@ -20257,7 +19202,6 @@ export const listLabelsForSelfHostedRunnerForOrg: ApiHeroEndpoint<
   { org: string; runnerId: number },
   {
     total_count: number;
-
     labels: Array<RunnerLabel>;
   }
 > = {
@@ -20292,7 +19236,6 @@ export const addCustomLabelsToSelfHostedRunnerForOrg: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     labels: Array<RunnerLabel>;
   }
 > = {
@@ -20328,7 +19271,6 @@ export const setCustomLabelsForSelfHostedRunnerForOrg: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     labels: Array<RunnerLabel>;
   }
 > = {
@@ -20352,7 +19294,6 @@ export const removeAllCustomLabelsFromSelfHostedRunnerForOrg: ApiHeroEndpoint<
   { org: string; runnerId: number },
   {
     total_count: number;
-
     labels: Array<RunnerLabel>;
   }
 > = {
@@ -20380,7 +19321,6 @@ export const removeCustomLabelFromSelfHostedRunnerForOrg: ApiHeroEndpoint<
   { org: string; runnerId: number; name: string },
   {
     total_count: number;
-
     labels: Array<RunnerLabel>;
   }
 > = {
@@ -20402,7 +19342,6 @@ export const listOrgSecrets: ApiHeroEndpoint<
   { org: string; perPage?: number; page?: number },
   {
     total_count: number;
-
     secrets: Array<OrganizationActionsSecret>;
   },
   { Link: Link }
@@ -20591,7 +19530,6 @@ export const listSelectedReposForOrgSecret: ApiHeroEndpoint<
   { org: string; secretName: string; page?: number; perPage?: number },
   {
     total_count: number;
-
     repositories: Array<MinimalRepository>;
   }
 > = {
@@ -20679,7 +19617,6 @@ export const listArtifactsForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
   {
     total_count: number;
-
     artifacts: Array<Artifact>;
   },
   { Link: Link }
@@ -20996,7 +19933,6 @@ export const setGithubActionsPermissionsRepository: ApiHeroEndpoint<
     repo: string;
     body: {
       enabled: ActionsEnabled;
-
       allowed_actions?: AllowedActions;
     };
   },
@@ -21150,7 +20086,6 @@ export const listSelfHostedRunnersForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
   {
     total_count: number;
-
     runners: Array<Runner>;
   },
   { Link: Link }
@@ -21289,7 +20224,6 @@ export const listLabelsForSelfHostedRunnerForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; runnerId: number },
   {
     total_count: number;
-
     labels: Array<RunnerLabel>;
   }
 > = {
@@ -21327,7 +20261,6 @@ export const addCustomLabelsToSelfHostedRunnerForRepo: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     labels: Array<RunnerLabel>;
   }
 > = {
@@ -21366,7 +20299,6 @@ export const setCustomLabelsForSelfHostedRunnerForRepo: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     labels: Array<RunnerLabel>;
   }
 > = {
@@ -21392,7 +20324,6 @@ export const removeAllCustomLabelsFromSelfHostedRunnerForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; runnerId: number },
   {
     total_count: number;
-
     labels: Array<RunnerLabel>;
   }
 > = {
@@ -21422,7 +20353,6 @@ export const removeCustomLabelFromSelfHostedRunnerForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; runnerId: number; name: string },
   {
     total_count: number;
-
     labels: Array<RunnerLabel>;
   }
 > = {
@@ -21479,7 +20409,6 @@ export const listWorkflowRunsForRepo: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     workflow_runs: Array<WorkflowRun>;
   },
   { Link: Link }
@@ -21581,7 +20510,6 @@ export const listWorkflowRunArtifacts: ApiHeroEndpoint<
   { owner: string; repo: string; runId: number; perPage?: number; page?: number },
   {
     total_count: number;
-
     artifacts: Array<Artifact>;
   },
   { Link: Link }
@@ -21643,7 +20571,6 @@ export const listJobsForWorkflowRunAttempt: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     jobs: Array<Job>;
   },
   { Link: Link }
@@ -21716,7 +20643,6 @@ export const listJobsForWorkflowRun: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     jobs: Array<Job>;
   },
   { Link: Link }
@@ -21938,7 +20864,6 @@ export const listRepoSecrets: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
   {
     total_count: number;
-
     secrets: Array<ActionsSecret>;
   },
   { Link: Link }
@@ -22124,7 +21049,6 @@ export const listRepoWorkflows: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
   {
     total_count: number;
-
     workflows: Array<Workflow>;
   },
   { Link: Link }
@@ -22298,7 +21222,6 @@ export const listWorkflowRuns: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     workflow_runs: Array<WorkflowRun>;
   },
   { Link: Link }
@@ -22345,7 +21268,6 @@ export const listEnvironmentSecrets: ApiHeroEndpoint<
   { repositoryId: number; environmentName: string; perPage?: number; page?: number },
   {
     total_count: number;
-
     secrets: Array<ActionsSecret>;
   },
   { Link: Link }
@@ -22830,7 +21752,6 @@ export const markRepoNotificationsAsRead: ApiHeroEndpoint<
   },
   {
     message?: string;
-
     url?: string;
   }
 > = {
@@ -23215,11 +22136,8 @@ export const createFromManifest: ApiHeroEndpoint<
   { code: string },
   Integration & {
     client_id: string;
-
     client_secret: string;
-
     webhook_secret: string;
-
     pem: string;
   }
 > = {
@@ -23259,11 +22177,8 @@ export const updateWebhookConfigForApp: ApiHeroEndpoint<
   {
     body: {
       url?: WebhookConfigUrl;
-
       content_type?: WebhookConfigContentType;
-
       secret?: WebhookConfigSecret;
-
       insecure_ssl?: WebhookConfigInsecureSsl;
     };
   },
@@ -23407,7 +22322,6 @@ export const createInstallationAccessToken: ApiHeroEndpoint<
 ]
 */
       repository_ids?: Array<number>;
-
       permissions?: AppPermissions;
     };
   },
@@ -23614,7 +22528,6 @@ export const scopeToken: ApiHeroEndpoint<
 ]
 */
       repository_ids?: Array<number>;
-
       permissions?: AppPermissions;
     };
   },
@@ -23654,7 +22567,6 @@ export const listReposAccessibleToInstallation: ApiHeroEndpoint<
   { perPage?: number; page?: number },
   {
     total_count: number;
-
     repositories: Array<Repository>;
 
     /**
@@ -23869,7 +22781,6 @@ export const listInstallationsForAuthenticatedUser: ApiHeroEndpoint<
   { perPage?: number; page?: number },
   {
     total_count: number;
-
     installations: Array<Installation>;
   },
   { Link: Link }
@@ -23898,9 +22809,7 @@ export const listInstallationReposForAuthenticatedUser: ApiHeroEndpoint<
   { installationId: number; perPage?: number; page?: number },
   {
     total_count: number;
-
     repository_selection?: string;
-
     repositories: Array<Repository>;
   },
   { Link: Link }
@@ -24817,7 +23726,6 @@ export const listForSuite: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     check_runs: Array<CheckRun>;
   },
   { Link: Link }
@@ -24878,7 +23786,6 @@ export const listForRef: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     check_runs: Array<CheckRun>;
   },
   { Link: Link }
@@ -24915,7 +23822,6 @@ export const listSuitesForRef: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     check_suites: Array<CheckSuite>;
   },
   { Link: Link }
@@ -25117,9 +24023,7 @@ export const updateAlert: ApiHeroEndpoint<
     alertNumber: AlertNumber;
     body: {
       state: CodeScanningAlertSetState;
-
       dismissed_reason?: CodeScanningAlertDismissedReason;
-
       dismissed_comment?: CodeScanningAlertDismissedComment;
     };
   },
@@ -25368,9 +24272,7 @@ export const uploadSarif: ApiHeroEndpoint<
     repo: string;
     body: {
       commit_sha: CodeScanningAnalysisCommitSha;
-
       ref: CodeScanningRef;
-
       sarif: CodeScanningAnalysisSarifFile;
 
       /** 
@@ -25471,7 +24373,6 @@ export const listInOrganization: ApiHeroEndpoint<
   { org: string; perPage?: number; page?: number },
   {
     total_count: number;
-
     codespaces: Array<Codespace>;
   }
 > = {
@@ -25538,7 +24439,6 @@ export const listInRepositoryForAuthenticatedUser: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
   {
     total_count: number;
-
     codespaces: Array<Codespace>;
   }
 > = {
@@ -25653,10 +24553,8 @@ export const listDevcontainersInRepositoryForAuthenticatedUser: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
   {
     total_count: number;
-
     devcontainers: Array<{
       path: string;
-
       name?: string;
     }>;
   }
@@ -25684,7 +24582,6 @@ export const repoMachinesForAuthenticatedUser: ApiHeroEndpoint<
   { owner: string; repo: string; location?: string; clientIp?: string },
   {
     total_count: number;
-
     machines: Array<CodespaceMachine>;
   }
 > = {
@@ -25711,10 +24608,8 @@ export const preFlightWithRepoForAuthenticatedUser: ApiHeroEndpoint<
   { owner: string; repo: string; ref?: string; clientIp?: string },
   {
     billable_owner?: SimpleUser;
-
     defaults?: {
       location: string;
-
       devcontainer_path: string;
     };
   }
@@ -25738,7 +24633,6 @@ export const listRepoSecrets: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
   {
     total_count: number;
-
     secrets: Array<RepoCodespacesSecret>;
   },
   { Link: Link }
@@ -26012,7 +24906,6 @@ export const listForAuthenticatedUser: ApiHeroEndpoint<
   { perPage?: number; page?: number; repositoryId?: number },
   {
     total_count: number;
-
     codespaces: Array<Codespace>;
   }
 > = {
@@ -26184,7 +25077,6 @@ export const listSecretsForAuthenticatedUser: ApiHeroEndpoint<
   { perPage?: number; page?: number },
   {
     total_count: number;
-
     secrets: Array<CodespacesSecret>;
   },
   { Link: Link }
@@ -26376,7 +25268,6 @@ export const listRepositoriesForSecretForAuthenticatedUser: ApiHeroEndpoint<
   { secretName: string },
   {
     total_count: number;
-
     repositories: Array<MinimalRepository>;
   }
 > = {
@@ -26587,7 +25478,6 @@ export const codespaceMachinesForAuthenticatedUser: ApiHeroEndpoint<
   { codespaceName: string },
   {
     total_count: number;
-
     machines: Array<CodespaceMachine>;
   }
 > = {
@@ -26724,7 +25614,6 @@ export const setGithubActionsPermissionsEnterprise: ApiHeroEndpoint<
     enterprise: string;
     body: {
       enabled_organizations: EnabledOrganizations;
-
       allowed_actions?: AllowedActions;
     };
   },
@@ -26750,7 +25639,6 @@ export const listSelectedOrganizationsEnabledGithubActionsEnterprise: ApiHeroEnd
   { enterprise: string; perPage?: number; page?: number },
   {
     total_count: number;
-
     organizations: Array<OrganizationSimple>;
   }
 > = {
@@ -26877,7 +25765,6 @@ export const listSelfHostedRunnerGroupsForEnterprise: ApiHeroEndpoint<
   { enterprise: string; perPage?: number; page?: number; visibleToOrganization?: string },
   {
     total_count: number;
-
     runner_groups: Array<RunnerGroupsEnterprise>;
   }
 > = {
@@ -27060,7 +25947,6 @@ export const listOrgAccessToSelfHostedRunnerGroupInEnterprise: ApiHeroEndpoint<
   { enterprise: string; runnerGroupId: number; perPage?: number; page?: number },
   {
     total_count: number;
-
     organizations: Array<OrganizationSimple>;
   }
 > = {
@@ -27156,7 +26042,6 @@ export const listSelfHostedRunnersInGroupForEnterprise: ApiHeroEndpoint<
   { enterprise: string; runnerGroupId: number; perPage?: number; page?: number },
   {
     total_count: number;
-
     runners: Array<Runner>;
   },
   { Link: Link }
@@ -27253,7 +26138,6 @@ export const listSelfHostedRunnersForEnterprise: ApiHeroEndpoint<
   { enterprise: string; perPage?: number; page?: number },
   {
     total_count?: number;
-
     runners?: Array<Runner>;
   },
   { Link: Link }
@@ -27386,7 +26270,6 @@ export const listLabelsForSelfHostedRunnerForEnterprise: ApiHeroEndpoint<
   { enterprise: string; runnerId: number },
   {
     total_count: number;
-
     labels: Array<RunnerLabel>;
   }
 > = {
@@ -27421,7 +26304,6 @@ export const addCustomLabelsToSelfHostedRunnerForEnterprise: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     labels: Array<RunnerLabel>;
   }
 > = {
@@ -27457,7 +26339,6 @@ export const setCustomLabelsForSelfHostedRunnerForEnterprise: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     labels: Array<RunnerLabel>;
   }
 > = {
@@ -27481,7 +26362,6 @@ export const removeAllCustomLabelsFromSelfHostedRunnerForEnterprise: ApiHeroEndp
   { enterprise: string; runnerId: number },
   {
     total_count: number;
-
     labels: Array<RunnerLabel>;
   }
 > = {
@@ -27509,7 +26389,6 @@ export const removeCustomLabelFromSelfHostedRunnerForEnterprise: ApiHeroEndpoint
   { enterprise: string; runnerId: number; name: string },
   {
     total_count: number;
-
     labels: Array<RunnerLabel>;
   }
 > = {
@@ -27611,7 +26490,6 @@ export const provisionAndInviteEnterpriseGroup: ApiHeroEndpoint<
        * The name of the SCIM group. This must match the GitHub organization that the group maps to.
        */
       displayName: string;
-
       members?: Array<{
         /**
          * The SCIM user ID for a user.
@@ -27674,7 +26552,6 @@ export const setInformationForProvisionedEnterpriseGroup: ApiHeroEndpoint<
        * The name of the SCIM group. This must match the GitHub organization that the group maps to.
        */
       displayName: string;
-
       members?: Array<{
         /**
          * The SCIM user ID for a user.
@@ -27736,7 +26613,6 @@ export const updateAttributeForEnterpriseGroup: ApiHeroEndpoint<
        */
       Operations: Array<{
         op: \\"add\\" | \\"Add\\" | \\"remove\\" | \\"Remove\\" | \\"replace\\" | \\"Replace\\";
-
         path?: string;
 
         /**
@@ -27823,7 +26699,6 @@ export const provisionAndInviteEnterpriseUser: ApiHeroEndpoint<
        * The username for the user.
        */
       userName: string;
-
       name: {
         /**
          * The first name of the user.
@@ -27926,7 +26801,6 @@ export const setInformationForProvisionedEnterpriseUser: ApiHeroEndpoint<
        * The username for the user.
        */
       userName: string;
-
       name: {
         /**
          * The first name of the user.
@@ -28066,7 +26940,6 @@ export const listOrgSecrets: ApiHeroEndpoint<
   { org: string; perPage?: number; page?: number },
   {
     total_count: number;
-
     secrets: Array<OrganizationDependabotSecret>;
   },
   { Link: Link }
@@ -28255,7 +27128,6 @@ export const listSelectedReposForOrgSecret: ApiHeroEndpoint<
   { org: string; secretName: string; page?: number; perPage?: number },
   {
     total_count: number;
-
     repositories: Array<MinimalRepository>;
   }
 > = {
@@ -28343,7 +27215,6 @@ export const listRepoSecrets: ApiHeroEndpoint<
   { owner: string; repo: string; perPage?: number; page?: number },
   {
     total_count: number;
-
     secrets: Array<DependabotSecret>;
   },
   { Link: Link }
@@ -28644,7 +27515,6 @@ export const create: ApiHeroEndpoint<
           content: string;
         }
       >;
-
       public?: boolean | \\"true\\" | \\"false\\";
     };
   },
@@ -30009,7 +28879,6 @@ export const create: ApiHeroEndpoint<
        * Login for the user that this issue should be assigned to. _NOTE: Only users with push access can set the assignee for new issues. The assignee is silently dropped otherwise. **This field is deprecated.**_
        */
       assignee?: string;
-
       milestone?: string | number;
 
       /**
@@ -30019,11 +28888,8 @@ export const create: ApiHeroEndpoint<
         | string
         | {
             id?: number;
-
             name?: string;
-
             description?: string;
-
             color?: string;
           }
       >;
@@ -30250,7 +29116,6 @@ export const update: ApiHeroEndpoint<
        * State of the issue. Either \`open\` or \`closed\`.
        */
       state?: \\"open\\" | \\"closed\\";
-
       milestone?: string | number;
 
       /**
@@ -30260,11 +29125,8 @@ export const update: ApiHeroEndpoint<
         | string
         | {
             id?: number;
-
             name?: string;
-
             description?: string;
-
             color?: string;
           }
       >;
@@ -31744,7 +30606,6 @@ export const startForAuthenticatedUser: ApiHeroEndpoint<
 ]
 */
       exclude?: Array<\\"repositories\\">;
-
       repositories: Array<string>;
     };
   },
@@ -32343,7 +31204,6 @@ export const listCustomRoles: ApiHeroEndpoint<
      * 3
      */
     total_count?: number;
-
     custom_roles?: Array<OrganizationCustomRepositoryRole>;
   }
 > = {
@@ -32721,11 +31581,8 @@ export const createWebhook: ApiHeroEndpoint<
        */
       config: {
         url: WebhookConfigUrl;
-
         content_type?: WebhookConfigContentType;
-
         secret?: WebhookConfigSecret;
-
         insecure_ssl?: WebhookConfigInsecureSsl;
 
         /**
@@ -32818,11 +31675,8 @@ export const updateWebhook: ApiHeroEndpoint<
        */
       config?: {
         url: WebhookConfigUrl;
-
         content_type?: WebhookConfigContentType;
-
         secret?: WebhookConfigSecret;
-
         insecure_ssl?: WebhookConfigInsecureSsl;
       };
 
@@ -32892,11 +31746,8 @@ export const updateWebhookConfigForOrg: ApiHeroEndpoint<
     hookId: number;
     body?: {
       url?: WebhookConfigUrl;
-
       content_type?: WebhookConfigContentType;
-
       secret?: WebhookConfigSecret;
-
       insecure_ssl?: WebhookConfigInsecureSsl;
     };
   },
@@ -32989,7 +31840,6 @@ export const listAppInstallations: ApiHeroEndpoint<
   { org: string; perPage?: number; page?: number },
   {
     total_count: number;
-
     installations: Array<Installation>;
   },
   { Link: Link }
@@ -35774,7 +34624,6 @@ export const updateBranch: ApiHeroEndpoint<
   },
   {
     message?: string;
-
     url?: string;
   }
 > = {
@@ -39402,7 +38251,6 @@ export const createDeployment: ApiHeroEndpoint<
        * The [status](https://docs.github.com/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts.
        */
       required_contexts?: Array<string>;
-
       payload?: string;
 
       /**
@@ -39654,7 +38502,6 @@ export const getAllEnvironments: ApiHeroEndpoint<
      * 5
      */
     total_count?: number;
-
     environments?: Array<Environment>;
   }
 > = {
@@ -39723,7 +38570,6 @@ export const createOrUpdateEnvironment: ApiHeroEndpoint<
          */
         id?: number;
       }>;
-
       deployment_branch_policy?: DeploymentBranchPolicy;
     } | null;
   },
@@ -39871,11 +38717,8 @@ export const createWebhook: ApiHeroEndpoint<
        */
       config?: {
         url?: WebhookConfigUrl;
-
         content_type?: WebhookConfigContentType;
-
         secret?: WebhookConfigSecret;
-
         insecure_ssl?: WebhookConfigInsecureSsl;
 
         /**
@@ -39976,11 +38819,8 @@ export const updateWebhook: ApiHeroEndpoint<
        */
       config?: {
         url: WebhookConfigUrl;
-
         content_type?: WebhookConfigContentType;
-
         secret?: WebhookConfigSecret;
-
         insecure_ssl?: WebhookConfigInsecureSsl;
 
         /**
@@ -40070,11 +38910,8 @@ export const updateWebhookConfigForRepo: ApiHeroEndpoint<
     hookId: number;
     body?: {
       url?: WebhookConfigUrl;
-
       content_type?: WebhookConfigContentType;
-
       secret?: WebhookConfigSecret;
-
       insecure_ssl?: WebhookConfigInsecureSsl;
     };
   },
@@ -40552,7 +39389,6 @@ export const updateInformationAboutPagesSite: ApiHeroEndpoint<
        * Configures access controls for the GitHub Pages site. If public is set to \`true\`, the site is accessible to anyone on the internet. If set to \`false\`, the site will only be accessible to users who have at least \`read\` access to the repository that published the site. This includes anyone in your Enterprise if the repository is set to \`internal\` visibility. This feature is only available to repositories in an organization on an Enterprise plan.
        */
       public?: boolean;
-
       source?:
         | \\"gh-pages\\"
         | \\"master\\"
@@ -42089,9 +40925,7 @@ export const provisionAndInviteUser: ApiHeroEndpoint<
 */
       name: {
         givenName: string;
-
         familyName: string;
-
         formatted?: string;
       };
 
@@ -42112,18 +40946,12 @@ export const provisionAndInviteUser: ApiHeroEndpoint<
 */
       emails: Array<{
         value: string;
-
         primary?: boolean;
-
         type?: string;
       }>;
-
       schemas?: Array<string>;
-
       externalId?: string;
-
       groups?: Array<string>;
-
       active?: boolean;
     };
   },
@@ -42190,11 +41018,8 @@ export const setInformationForProvisionedUser: ApiHeroEndpoint<
        * \\"Jon Doe\\"
        */
       displayName?: string;
-
       externalId?: string;
-
       groups?: Array<string>;
-
       active?: boolean;
 
       /**
@@ -42215,9 +41040,7 @@ export const setInformationForProvisionedUser: ApiHeroEndpoint<
 */
       name: {
         givenName: string;
-
         familyName: string;
-
         formatted?: string;
       };
 
@@ -42238,9 +41061,7 @@ export const setInformationForProvisionedUser: ApiHeroEndpoint<
 */
       emails: Array<{
         type?: string;
-
         value: string;
-
         primary?: boolean;
       }>;
     };
@@ -42314,19 +41135,13 @@ export const updateAttributeForUser: ApiHeroEndpoint<
 */
       Operations: Array<{
         op: \\"add\\" | \\"remove\\" | \\"replace\\";
-
         path?: string;
-
         value?:
           | {
               active?: boolean;
-
               userName?: string;
-
               externalId?: string;
-
               givenName?: string;
-
               familyName?: string;
             }
           | string;
@@ -42383,9 +41198,7 @@ export const code: ApiHeroEndpoint<
   { q: string; sort?: \\"indexed\\"; order?: \\"desc\\" | \\"asc\\"; perPage?: number; page?: number },
   {
     total_count: number;
-
     incomplete_results: boolean;
-
     items: Array<CodeSearchResultItem>;
   }
 > = {
@@ -42422,9 +41235,7 @@ export const commits: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     incomplete_results: boolean;
-
     items: Array<CommitSearchResultItem>;
   }
 > = {
@@ -42476,9 +41287,7 @@ export const issuesAndPullRequests: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     incomplete_results: boolean;
-
     items: Array<IssueSearchResultItem>;
   }
 > = {
@@ -42518,9 +41327,7 @@ export const labels: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     incomplete_results: boolean;
-
     items: Array<LabelSearchResultItem>;
   }
 > = {
@@ -42558,9 +41365,7 @@ export const repos: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     incomplete_results: boolean;
-
     items: Array<RepoSearchResultItem>;
   }
 > = {
@@ -42590,9 +41395,7 @@ export const topics: ApiHeroEndpoint<
   { q: string; perPage?: number; page?: number },
   {
     total_count: number;
-
     incomplete_results: boolean;
-
     items: Array<TopicSearchResultItem>;
   }
 > = {
@@ -42630,9 +41433,7 @@ export const users: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     incomplete_results: boolean;
-
     items: Array<UserSearchResultItem>;
   }
 > = {
@@ -42823,7 +41624,6 @@ export const updateAlert: ApiHeroEndpoint<
     alertNumber: AlertNumber;
     body: {
       state: SecretScanningAlertState;
-
       resolution?: SecretScanningAlertResolution;
     };
   },
@@ -46816,7 +45616,6 @@ export type Tag = {
   name: string;
   commit: {
     sha: string;
-
     url: string;
   };
   node_id: string;
@@ -46855,19 +45654,12 @@ export type Blob = {
 export type Feed = {
   _links: {
     user: LinkWithType;
-
     timeline: LinkWithType;
-
     current_user?: LinkWithType;
-
     current_user_actor?: LinkWithType;
-
     current_user_public?: LinkWithType;
-
     security_advisories?: LinkWithType;
-
     current_user_organization?: LinkWithType;
-
     current_user_organizations?: Array<LinkWithType>;
   };
 
@@ -46993,7 +45785,6 @@ export type Hook = {
      * \\"\\\\\\"sha256\\\\\\"\\"
      */
     digest?: string;
-
     secret?: WebhookConfigSecret;
 
     /**
@@ -47009,9 +45800,7 @@ export type Hook = {
      * \\"\\\\\\"foo\\\\\\"\\"
      */
     subdomain?: string;
-
     content_type?: WebhookConfigContentType;
-
     insecure_ssl?: WebhookConfigInsecureSsl;
   };
 
@@ -47213,13 +46002,9 @@ export type Team = {
   members_url: string;
   permissions?: {
     pull: boolean;
-
     push: boolean;
-
     admin: boolean;
-
     triage: boolean;
-
     maintain: boolean;
   };
   repositories_url: string;
@@ -47278,9 +46063,7 @@ export type Event = {
   org?: Actor;
   repo: {
     id: number;
-
     url: string;
-
     name: string;
   };
   type: string;
@@ -47288,23 +46071,15 @@ export type Event = {
   public: boolean;
   payload: {
     issue?: Issue;
-
     pages?: Array<{
       sha?: string;
-
       title?: string;
-
       action?: string;
-
       summary?: string;
-
       html_url?: string;
-
       page_name?: string;
     }>;
-
     action?: string;
-
     comment?: IssueComment;
   };
   created_at: string;
@@ -47363,17 +46138,11 @@ export type Issue = {
     | string
     | {
         id?: number;
-
         url?: string;
-
         name?: string;
-
         color?: string;
-
         default?: boolean;
-
         node_id?: string;
-
         description?: string;
       }
   >;
@@ -47405,13 +46174,9 @@ export type Issue = {
   comments_url: string;
   pull_request?: {
     url: string;
-
     diff_url: string;
-
     html_url: string;
-
     merged_at?: string;
-
     patch_url: string;
   };
 
@@ -47513,9 +46278,7 @@ export type Commit = {
   files?: Array<DiffEntry>;
   stats?: {
     total?: number;
-
     additions?: number;
-
     deletions?: number;
   };
   author: null | SimpleUser;
@@ -47526,7 +46289,6 @@ export type Commit = {
      * \\"https://api.github.com/repos/octocat/Hello-World/commits/6dcb09b5b57875f334f61aebed695e2e4193db5e\\"
      */
     url: string;
-
     tree: {
       /**
        *
@@ -47542,7 +46304,6 @@ export type Commit = {
        */
       url: string;
     };
-
     author: null | GitUser;
 
     /**
@@ -47551,9 +46312,7 @@ export type Commit = {
      * \\"Fix all the bugs\\"
      */
     message: string;
-
     committer: null | GitUser;
-
     verification?: Verification;
 
     /**
@@ -47655,9 +46414,7 @@ export type Import = {
   has_large_files?: boolean;
   project_choices?: Array<{
     vcs?: string;
-
     human_name?: string;
-
     tfvc_project?: string;
   }>;
   large_files_size?: number;
@@ -47730,11 +46487,8 @@ export type Thread = {
   unread: boolean;
   subject: {
     url: string;
-
     type: string;
-
     title: string;
-
     latest_comment_url: string;
   };
   repository: MinimalRepository;
@@ -47763,9 +46517,7 @@ export type GitRef = {
      * \\"7638417db6d59f3c431d3e1f261cc637155684cd\\"
      */
     sha: string;
-
     url: string;
-
     type: string;
   };
   node_id: string;
@@ -47799,16 +46551,12 @@ export type GitTag = {
   url: string;
   object: {
     sha: string;
-
     url: string;
-
     type: string;
   };
   tagger: {
     date: string;
-
     name: string;
-
     email: string;
   };
 
@@ -47857,7 +46605,6 @@ export type GpgKey = {
 */
   emails: Array<{
     email?: string;
-
     verified?: boolean;
   }>;
 
@@ -47897,31 +46644,18 @@ export type GpgKey = {
 */
   subkeys: Array<{
     id?: number;
-
     emails?: Array<{}>;
-
     key_id?: string;
-
     raw_key?: string;
-
     revoked?: boolean;
-
     subkeys?: Array<{}>;
-
     can_sign?: boolean;
-
     created_at?: string;
-
     expires_at?: string;
-
     public_key?: string;
-
     can_certify?: boolean;
-
     primary_key_id?: number;
-
     can_encrypt_comms?: boolean;
-
     can_encrypt_storage?: boolean;
   }>;
 
@@ -48907,13 +47641,9 @@ export type BaseGist = {
     string,
     {
       size?: number;
-
       type?: string;
-
       raw_url?: string;
-
       filename?: string;
-
       language?: string;
     }
   >;
@@ -48964,13 +47694,9 @@ export type CheckRun = {
   name: string;
   output: {
     text: string;
-
     title: string;
-
     summary: string;
-
     annotations_url: string;
-
     annotations_count: number;
   };
 
@@ -49268,7 +47994,6 @@ export type Codespace = {
 export type Hovercard = {
   contexts: Array<{
     message: string;
-
     octicon: string;
   }>;
 };
@@ -49494,9 +48219,7 @@ export type ScimUser = {
   };
   name: {
     formatted?: string;
-
     givenName: string;
-
     familyName: string;
   };
 
@@ -49525,7 +48248,6 @@ export type ScimUser = {
 */
   emails: Array<{
     value: string;
-
     primary?: boolean;
   }>;
 
@@ -49568,9 +48290,7 @@ export type ScimUser = {
 */
   operations?: Array<{
     op: \\"add\\" | \\"remove\\" | \\"replace\\";
-
     path?: string;
-
     value?: string;
   }>;
 
@@ -50083,7 +48803,6 @@ export type GitCommit = {
      * \\"7638417db6d59f3c431d3e1f261cc637155684cd\\"
      */
     sha: string;
-
     url: string;
   };
 
@@ -50132,9 +48851,7 @@ export type GitCommit = {
      * \\"7638417db6d59f3c431d3e1f261cc637155684cd\\"
      */
     sha: string;
-
     url: string;
-
     html_url: string;
   }>;
   html_url: string;
@@ -50169,11 +48886,8 @@ export type GitCommit = {
   };
   verification: {
     reason: string;
-
     payload: string;
-
     verified: boolean;
-
     signature: string;
   };
 };
@@ -50507,13 +49221,9 @@ export type Repository = {
   open_issues: number;
   permissions?: {
     pull: boolean;
-
     push: boolean;
-
     admin: boolean;
-
     triage?: boolean;
-
     maintain?: boolean;
   };
 
@@ -50760,215 +49470,112 @@ export type Repository = {
   allow_update_branch?: boolean;
   template_repository?: {
     id?: number;
-
     url?: string;
-
     fork?: boolean;
-
     name?: string;
-
     size?: number;
-
     owner?: {
       id?: number;
-
       url?: string;
-
       type?: string;
-
       login?: string;
-
       node_id?: string;
-
       html_url?: string;
-
       gists_url?: string;
-
       repos_url?: string;
-
       avatar_url?: string;
-
       events_url?: string;
-
       site_admin?: boolean;
-
       gravatar_id?: string;
-
       starred_url?: string;
-
       followers_url?: string;
-
       following_url?: string;
-
       organizations_url?: string;
-
       subscriptions_url?: string;
-
       received_events_url?: string;
     };
-
     topics?: Array<string>;
-
     git_url?: string;
-
     node_id?: string;
-
     private?: boolean;
-
     ssh_url?: string;
-
     svn_url?: string;
-
     archived?: boolean;
-
     disabled?: boolean;
-
     has_wiki?: boolean;
-
     homepage?: string;
-
     html_url?: string;
-
     keys_url?: string;
-
     language?: string;
-
     tags_url?: string;
-
     blobs_url?: string;
-
     clone_url?: string;
-
     forks_url?: string;
-
     full_name?: string;
-
     has_pages?: boolean;
-
     hooks_url?: string;
-
     pulls_url?: string;
-
     pushed_at?: string;
-
     teams_url?: string;
-
     trees_url?: string;
-
     created_at?: string;
-
     events_url?: string;
-
     has_issues?: boolean;
-
     issues_url?: string;
-
     labels_url?: string;
-
     merges_url?: string;
-
     mirror_url?: string;
-
     updated_at?: string;
-
     visibility?: string;
-
     archive_url?: string;
-
     commits_url?: string;
-
     compare_url?: string;
-
     description?: string;
-
     forks_count?: number;
-
     is_template?: boolean;
-
     permissions?: {
       pull?: boolean;
-
       push?: boolean;
-
       admin?: boolean;
-
       triage?: boolean;
-
       maintain?: boolean;
     };
-
     branches_url?: string;
-
     comments_url?: string;
-
     contents_url?: string;
-
     git_refs_url?: string;
-
     git_tags_url?: string;
-
     has_projects?: boolean;
-
     releases_url?: string;
-
     statuses_url?: string;
-
     assignees_url?: string;
-
     downloads_url?: string;
-
     has_downloads?: boolean;
-
     languages_url?: string;
-
     network_count?: number;
-
     default_branch?: string;
-
     milestones_url?: string;
-
     stargazers_url?: string;
-
     watchers_count?: number;
-
     deployments_url?: string;
-
     git_commits_url?: string;
-
     subscribers_url?: string;
-
     allow_auto_merge?: boolean;
-
     contributors_url?: string;
-
     issue_events_url?: string;
-
     stargazers_count?: number;
-
     subscription_url?: string;
-
     temp_clone_token?: string;
-
     collaborators_url?: string;
-
     issue_comment_url?: string;
-
     notifications_url?: string;
-
     open_issues_count?: number;
-
     subscribers_count?: number;
-
     allow_merge_commit?: boolean;
-
     allow_rebase_merge?: boolean;
-
     allow_squash_merge?: boolean;
-
     allow_update_branch?: boolean;
-
     delete_branch_on_merge?: boolean;
-
     use_squash_pr_title_as_default?: boolean;
   };
 
@@ -51215,7 +49822,6 @@ export type Environment = {
          * \\"MDQ6R2F0ZTM1MTU=\\"
          */
         node_id: string;
-
         wait_timer?: WaitTimer;
       }
     | {
@@ -51245,7 +49851,6 @@ export type Environment = {
          */
         reviewers?: Array<{
           type?: DeploymentReviewerType;
-
           reviewer?: SimpleUser | Team;
         }>;
       }
@@ -51281,80 +49886,50 @@ export type Environment = {
 export type FileCommit = {
   commit: {
     sha?: string;
-
     url?: string;
-
     tree?: {
       sha?: string;
-
       url?: string;
     };
-
     author?: {
       date?: string;
-
       name?: string;
-
       email?: string;
     };
-
     message?: string;
-
     node_id?: string;
-
     parents?: Array<{
       sha?: string;
-
       url?: string;
-
       html_url?: string;
     }>;
-
     html_url?: string;
-
     committer?: {
       date?: string;
-
       name?: string;
-
       email?: string;
     };
-
     verification?: {
       reason?: string;
-
       payload?: string;
-
       verified?: boolean;
-
       signature?: string;
     };
   };
   content: {
     sha?: string;
-
     url?: string;
-
     name?: string;
-
     path?: string;
-
     size?: number;
-
     type?: string;
-
     _links?: {
       git?: string;
-
       html?: string;
-
       self?: string;
     };
-
     git_url?: string;
-
     html_url?: string;
-
     download_url?: string;
   };
 };
@@ -51386,9 +49961,7 @@ export type GistCommit = {
   committed_at: string;
   change_status: {
     total?: number;
-
     additions?: number;
-
     deletions?: number;
   };
 };
@@ -51404,17 +49977,11 @@ export type GistSimple = {
     string,
     {
       size?: number;
-
       type?: string;
-
       content?: string;
-
       raw_url?: string;
-
       filename?: string;
-
       language?: string;
-
       truncated?: boolean;
     } | null
   >;
@@ -51424,13 +49991,9 @@ export type GistSimple = {
    */
   forks?: Array<{
     id?: string;
-
     url?: string;
-
     user?: PublicUser;
-
     created_at?: string;
-
     updated_at?: string;
   }>;
   owner?: SimpleUser;
@@ -51441,56 +50004,33 @@ export type GistSimple = {
    */
   fork_of?: {
     id: string;
-
     url: string;
-
     user: null | SimpleUser;
-
     files: Record<
       string,
       {
         size?: number;
-
         type?: string;
-
         raw_url?: string;
-
         filename?: string;
-
         language?: string;
       }
     >;
-
     forks?: Array<{}>;
-
     owner?: null | SimpleUser;
-
     public: boolean;
-
     history?: Array<{}>;
-
     node_id: string;
-
     comments: number;
-
     html_url: string;
-
     forks_url: string;
-
     truncated?: boolean;
-
     created_at: string;
-
     updated_at: string;
-
     commits_url: string;
-
     description: string;
-
     comments_url: string;
-
     git_pull_url: string;
-
     git_push_url: string;
   };
 
@@ -51716,11 +50256,8 @@ export type PublicUser = {
   name: string;
   plan?: {
     name: string;
-
     space: number;
-
     collaborators: number;
-
     private_repos: number;
   };
   type: string;
@@ -52116,11 +50653,8 @@ export type ApiOverview = {
   dependabot?: Array<string>;
   ssh_key_fingerprints?: {
     SHA256_DSA?: string;
-
     SHA256_RSA?: string;
-
     SHA256_ECDSA?: string;
-
     SHA256_ED25519?: string;
   };
 
@@ -52139,7 +50673,6 @@ export type BranchShort = {
   name: string;
   commit: {
     sha: string;
-
     url: string;
   };
   protected: boolean;
@@ -52237,13 +50770,9 @@ export type Collaborator = {
   gravatar_id: string;
   permissions?: {
     pull: boolean;
-
     push: boolean;
-
     admin: boolean;
-
     triage?: boolean;
-
     maintain?: boolean;
   };
 
@@ -52302,9 +50831,7 @@ export type ContentFile = {
   type: string;
   _links: {
     git: string;
-
     html: string;
-
     self: string;
   };
 
@@ -52340,38 +50867,24 @@ export type ContentTree = {
   type: string;
   _links: {
     git: string;
-
     html: string;
-
     self: string;
   };
   entries?: Array<{
     sha: string;
-
     url: string;
-
     name: string;
-
     path: string;
-
     size: number;
-
     type: string;
-
     _links: {
       git: string;
-
       html: string;
-
       self: string;
     };
-
     content?: string;
-
     git_url: string;
-
     html_url: string;
-
     download_url: string;
   }>;
   git_url: string;
@@ -52444,9 +50957,7 @@ export type GistHistory = {
   committed_at?: string;
   change_status?: {
     total?: number;
-
     additions?: number;
-
     deletions?: number;
   };
 };
@@ -52594,11 +51105,8 @@ export type PrivateUser = {
   name: string;
   plan?: {
     name: string;
-
     space: number;
-
     collaborators: number;
-
     private_repos: number;
   };
 
@@ -52924,264 +51432,141 @@ export type PullRequest = {
   url: string;
   base: {
     ref: string;
-
     sha: string;
-
     repo: {
       id: number;
-
       url: string;
-
       fork: boolean;
-
       name: string;
-
       size: number;
-
       forks: number;
-
       owner: {
         id: number;
-
         url: string;
-
         type: string;
-
         login: string;
-
         node_id: string;
-
         html_url: string;
-
         gists_url: string;
-
         repos_url: string;
-
         avatar_url: string;
-
         events_url: string;
-
         site_admin: boolean;
-
         gravatar_id: string;
-
         starred_url: string;
-
         followers_url: string;
-
         following_url: string;
-
         organizations_url: string;
-
         subscriptions_url: string;
-
         received_events_url: string;
       };
-
       topics?: Array<string>;
-
       git_url: string;
-
       license: null | LicenseSimple;
-
       node_id: string;
-
       private: boolean;
-
       ssh_url: string;
-
       svn_url: string;
-
       archived: boolean;
-
       disabled: boolean;
-
       has_wiki: boolean;
-
       homepage: string;
-
       html_url: string;
-
       keys_url: string;
-
       language: string;
-
       tags_url: string;
-
       watchers: number;
-
       blobs_url: string;
-
       clone_url: string;
-
       forks_url: string;
-
       full_name: string;
-
       has_pages: boolean;
-
       hooks_url: string;
-
       pulls_url: string;
-
       pushed_at: string;
-
       teams_url: string;
-
       trees_url: string;
-
       created_at: string;
-
       events_url: string;
-
       has_issues: boolean;
-
       issues_url: string;
-
       labels_url: string;
-
       merges_url: string;
-
       mirror_url: string;
-
       updated_at: string;
 
       /**
        * The repository visibility: public, private, or internal.
        */
       visibility?: string;
-
       archive_url: string;
-
       commits_url: string;
-
       compare_url: string;
-
       description: string;
-
       forks_count: number;
-
       is_template?: boolean;
-
       open_issues: number;
-
       permissions?: {
         pull: boolean;
-
         push: boolean;
-
         admin: boolean;
-
         triage?: boolean;
-
         maintain?: boolean;
       };
-
       branches_url: string;
-
       comments_url: string;
-
       contents_url: string;
-
       git_refs_url: string;
-
       git_tags_url: string;
-
       has_projects: boolean;
-
       releases_url: string;
-
       statuses_url: string;
-
       allow_forking?: boolean;
-
       assignees_url: string;
-
       downloads_url: string;
-
       has_downloads: boolean;
-
       languages_url: string;
-
       master_branch?: string;
-
       default_branch: string;
-
       milestones_url: string;
-
       stargazers_url: string;
-
       watchers_count: number;
-
       deployments_url: string;
-
       git_commits_url: string;
-
       subscribers_url: string;
-
       contributors_url: string;
-
       issue_events_url: string;
-
       stargazers_count: number;
-
       subscription_url: string;
-
       temp_clone_token?: string;
-
       collaborators_url: string;
-
       issue_comment_url: string;
-
       notifications_url: string;
-
       open_issues_count: number;
-
       allow_merge_commit?: boolean;
-
       allow_rebase_merge?: boolean;
-
       allow_squash_merge?: boolean;
     };
-
     user: {
       id: number;
-
       url: string;
-
       type: string;
-
       login: string;
-
       node_id: string;
-
       html_url: string;
-
       gists_url: string;
-
       repos_url: string;
-
       avatar_url: string;
-
       events_url: string;
-
       site_admin: boolean;
-
       gravatar_id: string;
-
       starred_url: string;
-
       followers_url: string;
-
       following_url: string;
-
       organizations_url: string;
-
       subscriptions_url: string;
-
       received_events_url: string;
     };
-
     label: string;
   };
 
@@ -53193,274 +51578,147 @@ export type PullRequest = {
   body: string;
   head: {
     ref: string;
-
     sha: string;
-
     repo: {
       id: number;
-
       url: string;
-
       fork: boolean;
-
       name: string;
-
       size: number;
-
       forks: number;
-
       owner: {
         id: number;
-
         url: string;
-
         type: string;
-
         login: string;
-
         node_id: string;
-
         html_url: string;
-
         gists_url: string;
-
         repos_url: string;
-
         avatar_url: string;
-
         events_url: string;
-
         site_admin: boolean;
-
         gravatar_id: string;
-
         starred_url: string;
-
         followers_url: string;
-
         following_url: string;
-
         organizations_url: string;
-
         subscriptions_url: string;
-
         received_events_url: string;
       };
-
       topics?: Array<string>;
-
       git_url: string;
-
       license: {
         key: string;
-
         url: string;
-
         name: string;
-
         node_id: string;
-
         spdx_id: string;
       };
-
       node_id: string;
-
       private: boolean;
-
       ssh_url: string;
-
       svn_url: string;
-
       archived: boolean;
-
       disabled: boolean;
-
       has_wiki: boolean;
-
       homepage: string;
-
       html_url: string;
-
       keys_url: string;
-
       language: string;
-
       tags_url: string;
-
       watchers: number;
-
       blobs_url: string;
-
       clone_url: string;
-
       forks_url: string;
-
       full_name: string;
-
       has_pages: boolean;
-
       hooks_url: string;
-
       pulls_url: string;
-
       pushed_at: string;
-
       teams_url: string;
-
       trees_url: string;
-
       created_at: string;
-
       events_url: string;
-
       has_issues: boolean;
-
       issues_url: string;
-
       labels_url: string;
-
       merges_url: string;
-
       mirror_url: string;
-
       updated_at: string;
 
       /**
        * The repository visibility: public, private, or internal.
        */
       visibility?: string;
-
       archive_url: string;
-
       commits_url: string;
-
       compare_url: string;
-
       description: string;
-
       forks_count: number;
-
       is_template?: boolean;
-
       open_issues: number;
-
       permissions?: {
         pull: boolean;
-
         push: boolean;
-
         admin: boolean;
-
         triage?: boolean;
-
         maintain?: boolean;
       };
-
       branches_url: string;
-
       comments_url: string;
-
       contents_url: string;
-
       git_refs_url: string;
-
       git_tags_url: string;
-
       has_projects: boolean;
-
       releases_url: string;
-
       statuses_url: string;
-
       allow_forking?: boolean;
-
       assignees_url: string;
-
       downloads_url: string;
-
       has_downloads: boolean;
-
       languages_url: string;
-
       master_branch?: string;
-
       default_branch: string;
-
       milestones_url: string;
-
       stargazers_url: string;
-
       watchers_count: number;
-
       deployments_url: string;
-
       git_commits_url: string;
-
       subscribers_url: string;
-
       contributors_url: string;
-
       issue_events_url: string;
-
       stargazers_count: number;
-
       subscription_url: string;
-
       temp_clone_token?: string;
-
       collaborators_url: string;
-
       issue_comment_url: string;
-
       notifications_url: string;
-
       open_issues_count: number;
-
       allow_merge_commit?: boolean;
-
       allow_rebase_merge?: boolean;
-
       allow_squash_merge?: boolean;
     };
-
     user: {
       id: number;
-
       url: string;
-
       type: string;
-
       login: string;
-
       node_id: string;
-
       html_url: string;
-
       gists_url: string;
-
       repos_url: string;
-
       avatar_url: string;
-
       events_url: string;
-
       site_admin: boolean;
-
       gravatar_id: string;
-
       starred_url: string;
-
       followers_url: string;
-
       following_url: string;
-
       organizations_url: string;
-
       subscriptions_url: string;
-
       received_events_url: string;
     };
-
     label: string;
   };
   user: null | SimpleUser;
@@ -53490,34 +51748,21 @@ export type PullRequest = {
   title: string;
   _links: {
     html: Link;
-
     self: Link;
-
     issue: Link;
-
     commits: Link;
-
     comments: Link;
-
     statuses: Link;
-
     review_comment: Link;
-
     review_comments: Link;
   };
   labels: Array<{
     id: number;
-
     url: string;
-
     name: string;
-
     color: string;
-
     default: boolean;
-
     node_id: string;
-
     description: string;
   }>;
 
@@ -53756,7 +52001,6 @@ export type ShortBranch = {
   name: string;
   commit: {
     sha: string;
-
     url: string;
   };
   protected: boolean;
@@ -53788,9 +52032,7 @@ export type TeamProject = {
   columns_url: string;
   permissions: {
     read: boolean;
-
     admin: boolean;
-
     write: boolean;
   };
 
@@ -54046,9 +52288,7 @@ export type Authorization = {
   id: number;
   app: {
     url: string;
-
     name: string;
-
     client_id: string;
   };
   url: string;
@@ -54385,14 +52625,12 @@ export type SimpleCommit = {
   id: string;
   author: {
     name: string;
-
     email: string;
   };
   message: string;
   tree_id: string;
   committer: {
     name: string;
-
     email: string;
   };
   timestamp: string;
@@ -54752,9 +52990,7 @@ export type ReviewComment = {
   user: null | SimpleUser;
   _links: {
     html: Link;
-
     self: Link;
-
     pull_request: Link;
   };
 
@@ -54966,11 +53202,9 @@ export type WorkflowUsage = {
     MACOS?: {
       total_ms?: number;
     };
-
     UBUNTU?: {
       total_ms?: number;
     };
-
     WINDOWS?: {
       total_ms?: number;
     };
@@ -55329,9 +53563,7 @@ export type ContentSymlink = {
   type: string;
   _links: {
     git: string;
-
     html: string;
-
     self: string;
   };
   target: string;
@@ -55719,13 +53951,9 @@ export type FullRepository = {
   open_issues: number;
   permissions?: {
     pull: boolean;
-
     push: boolean;
-
     admin: boolean;
-
     triage?: boolean;
-
     maintain?: boolean;
   };
 
@@ -56012,9 +54240,7 @@ export type LicenseContent = {
   type: string;
   _links: {
     git: string;
-
     html: string;
-
     self: string;
   };
   content: string;
@@ -56085,7 +54311,6 @@ export type PackageVersion = {
     docker?: {
       tag?: Array<string>;
     };
-
     container?: {
       tags: Array<string>;
     };
@@ -56607,13 +54832,9 @@ export type TeamRepository = {
   open_issues: number;
   permissions?: {
     pull: boolean;
-
     push: boolean;
-
     admin: boolean;
-
     triage?: boolean;
-
     maintain?: boolean;
   };
 
@@ -56950,7 +55171,6 @@ export type ProtectedBranch = {
   restrictions?: BranchRestrictionPolicy;
   enforce_admins?: {
     url: string;
-
     enabled: boolean;
   };
   allow_deletions?: {
@@ -56983,33 +55203,21 @@ export type ProtectedBranch = {
   };
   required_pull_request_reviews?: {
     url: string;
-
     dismiss_stale_reviews?: boolean;
-
     dismissal_restrictions?: {
       url: string;
-
       apps?: Array<Integration>;
-
       teams: Array<Team>;
-
       users: Array<SimpleUser>;
-
       teams_url: string;
-
       users_url: string;
     };
-
     require_code_owner_reviews?: boolean;
-
     bypass_pull_request_allowances?: {
       apps?: Array<Integration>;
-
       teams: Array<Team>;
-
       users: Array<SimpleUser>;
     };
-
     required_approving_review_count?: number;
   };
   required_conversation_resolution?: {
@@ -57066,15 +55274,10 @@ export type SelectedActions = {
 export type ValidationError = {
   errors?: Array<{
     code: string;
-
     field?: string;
-
     index?: number;
-
     value?: string | null | number | null | Array<string> | null;
-
     message?: string;
-
     resource?: string;
   }>;
   message: string;
@@ -57093,9 +55296,7 @@ export type ApplicationGrant = {
   id: number;
   app: {
     url: string;
-
     name: string;
-
     client_id: string;
   };
 
@@ -57429,17 +55630,11 @@ export type CommitComparison = {
 export type CommunityProfile = {
   files: {
     readme: null | CommunityHealthFile;
-
     license: null | LicenseSimple;
-
     contributing: null | CommunityHealthFile;
-
     issue_template: null | CommunityHealthFile;
-
     code_of_conduct: null | CodeOfConductSimple;
-
     code_of_conduct_file: null | CommunityHealthFile;
-
     pull_request_template: null | CommunityHealthFile;
   };
 
@@ -57484,31 +55679,19 @@ export type CommunityProfile = {
  */
 export type ContentDirectory = Array<{
   sha: string;
-
   url: string;
-
   name: string;
-
   path: string;
-
   size: number;
-
   type: string;
-
   _links: {
     git: string;
-
     html: string;
-
     self: string;
   };
-
   content?: string;
-
   git_url: string;
-
   html_url: string;
-
   download_url: string;
 }>;
 
@@ -57524,9 +55707,7 @@ export type ContentSubmodule = {
   type: string;
   _links: {
     git: string;
-
     html: string;
-
     self: string;
   };
   git_url: string;
@@ -57813,13 +55994,9 @@ export type OrganizationFull = {
   name?: string;
   plan?: {
     name: string;
-
     seats?: number;
-
     space: number;
-
     filled_seats?: number;
-
     private_repos: number;
   };
 
@@ -58891,13 +57068,9 @@ export type MinimalRepository = {
   git_url?: string;
   license?: {
     key?: string;
-
     url?: string;
-
     name?: string;
-
     node_id?: string;
-
     spdx_id?: string;
   };
 
@@ -59092,13 +57265,9 @@ export type MinimalRepository = {
   open_issues?: number;
   permissions?: {
     pull?: boolean;
-
     push?: boolean;
-
     admin?: boolean;
-
     triage?: boolean;
-
     maintain?: boolean;
   };
 
@@ -59269,116 +57438,62 @@ export type MinimalRepository = {
 export type PagesHealthCheck = {
   domain?: {
     uri?: string;
-
     host?: string;
-
     reason?: string;
-
     is_valid?: boolean;
-
     caa_error?: string;
-
     is_proxied?: boolean;
-
     https_error?: string;
-
     is_a_record?: boolean;
-
     nameservers?: string;
-
     dns_resolves?: boolean;
-
     is_fastly_ip?: boolean;
-
     enforces_https?: boolean;
-
     is_apex_domain?: boolean;
-
     is_pages_domain?: boolean;
-
     is_valid_domain?: boolean;
-
     has_cname_record?: boolean;
-
     is_cloudflare_ip?: boolean;
-
     is_https_eligible?: boolean;
-
     is_old_ip_address?: boolean;
-
     responds_to_https?: boolean;
-
     is_cname_to_fastly?: boolean;
-
     is_served_by_pages?: boolean;
-
     should_be_a_record?: boolean;
-
     has_mx_records_present?: boolean;
-
     is_pointed_to_github_pages_ip?: boolean;
-
     is_cname_to_github_user_domain?: boolean;
-
     is_non_github_pages_ip_present?: boolean;
-
     is_cname_to_pages_dot_github_dot_com?: boolean;
   };
   alt_domain?: {
     uri?: string;
-
     host?: string;
-
     reason?: string;
-
     is_valid?: boolean;
-
     caa_error?: string;
-
     is_proxied?: boolean;
-
     https_error?: string;
-
     is_a_record?: boolean;
-
     nameservers?: string;
-
     dns_resolves?: boolean;
-
     is_fastly_ip?: boolean;
-
     enforces_https?: boolean;
-
     is_apex_domain?: boolean;
-
     is_pages_domain?: boolean;
-
     is_valid_domain?: boolean;
-
     has_cname_record?: boolean;
-
     is_cloudflare_ip?: boolean;
-
     is_https_eligible?: boolean;
-
     is_old_ip_address?: boolean;
-
     responds_to_https?: boolean;
-
     is_cname_to_fastly?: boolean;
-
     is_served_by_pages?: boolean;
-
     should_be_a_record?: boolean;
-
     has_mx_records_present?: boolean;
-
     is_pointed_to_github_pages_ip?: boolean;
-
     is_cname_to_github_user_domain?: boolean;
-
     is_non_github_pages_ip_present?: boolean;
-
     is_cname_to_pages_dot_github_dot_com?: boolean;
   };
 };
@@ -59392,7 +57507,6 @@ export type PendingDeployment = {
    */
   reviewers: Array<{
     type?: DeploymentReviewerType;
-
     reviewer?: SimpleUser | Team;
   }>;
 
@@ -59498,37 +57612,26 @@ export type WorkflowRunUsage = {
   billable: {
     MACOS?: {
       jobs: number;
-
       job_runs?: Array<{
         job_id: number;
-
         duration_ms: number;
       }>;
-
       total_ms: number;
     };
-
     UBUNTU?: {
       jobs: number;
-
       job_runs?: Array<{
         job_id: number;
-
         duration_ms: number;
       }>;
-
       total_ms: number;
     };
-
     WINDOWS?: {
       jobs: number;
-
       job_runs?: Array<{
         job_id: number;
-
         duration_ms: number;
       }>;
-
       total_ms: number;
     };
   };
@@ -59573,7 +57676,6 @@ export type LabeledIssueEvent = {
   event: string;
   label: {
     name: string;
-
     color: string;
   };
   node_id: string;
@@ -59718,7 +57820,6 @@ export type PullRequestReview = {
     html: {
       href: string;
     };
-
     pull_request: {
       href: string;
     };
@@ -59777,13 +57878,9 @@ export type PullRequestSimple = {
   url: string;
   base: {
     ref: string;
-
     sha: string;
-
     repo: Repository;
-
     user: null | SimpleUser;
-
     label: string;
   };
 
@@ -59795,13 +57892,9 @@ export type PullRequestSimple = {
   body: string;
   head: {
     ref: string;
-
     sha: string;
-
     repo: Repository;
-
     user: null | SimpleUser;
-
     label: string;
   };
   user: null | SimpleUser;
@@ -59829,34 +57922,21 @@ export type PullRequestSimple = {
   title: string;
   _links: {
     html: Link;
-
     self: Link;
-
     issue: Link;
-
     commits: Link;
-
     comments: Link;
-
     statuses: Link;
-
     review_comment: Link;
-
     review_comments: Link;
   };
   labels: Array<{
     id: number;
-
     url: string;
-
     name: string;
-
     color: string;
-
     default: boolean;
-
     node_id: string;
-
     description: string;
   }>;
 
@@ -60001,21 +58081,13 @@ export type RateLimitOverview = {
   rate: RateLimit;
   resources: {
     core: RateLimit;
-
     scim?: RateLimit;
-
     search: RateLimit;
-
     graphql?: RateLimit;
-
     source_import?: RateLimit;
-
     code_scanning_upload?: RateLimit;
-
     dependency_snapshots?: RateLimit;
-
     integration_manifest?: RateLimit;
-
     actions_runner_registration?: RateLimit;
   };
 };
@@ -60039,7 +58111,6 @@ export type RenamedIssueEvent = {
   event: string;
   rename: {
     to: string;
-
     from: string;
   };
   node_id: string;
@@ -60284,11 +58355,8 @@ export type ContributorActivity = {
 */
   weeks: Array<{
     a?: number;
-
     c?: number;
-
     d?: number;
-
     w?: number;
   }>;
   author: null | SimpleUser;
@@ -60310,30 +58378,19 @@ export type MarketplacePurchase = {
   login: string;
   marketplace_purchase: {
     plan?: MarketplaceListingPlan;
-
     unit_count?: number;
-
     updated_at?: string;
-
     is_installed?: boolean;
-
     billing_cycle?: string;
-
     on_free_trial?: boolean;
-
     next_billing_date?: string;
-
     free_trial_ends_on?: string;
   };
   marketplace_pending_change?: {
     id?: number;
-
     plan?: MarketplaceListingPlan;
-
     unit_count?: number;
-
     is_installed?: boolean;
-
     effective_date?: string;
   };
   organization_billing_email?: string;
@@ -60344,27 +58401,19 @@ export type PullRequestMinimal = {
   url: string;
   base: {
     ref: string;
-
     sha: string;
-
     repo: {
       id: number;
-
       url: string;
-
       name: string;
     };
   };
   head: {
     ref: string;
-
     sha: string;
-
     repo: {
       id: number;
-
       url: string;
-
       name: string;
     };
   };
@@ -60375,24 +58424,18 @@ export type ScimEnterpriseUser = {
   id: string;
   meta?: {
     created?: string;
-
     location?: string;
-
     lastModified?: string;
-
     resourceType?: string;
   };
   name?: {
     givenName?: string;
-
     familyName?: string;
   };
   active?: boolean;
   emails?: Array<{
     type?: string;
-
     value?: string;
-
     primary?: boolean;
   }>;
   groups?: Array<{
@@ -60623,7 +58666,6 @@ export type DependencyGraphDiff = Array<{
    * \\"npm\\"
    */
   ecosystem: string;
-
   change_type: \\"added\\" | \\"removed\\";
 
   /**
@@ -60632,7 +58674,6 @@ export type DependencyGraphDiff = Array<{
    * \\"pkg:/npm/%40actions/core@1.1.0\\"
    */
   package_url: string;
-
   vulnerabilities: Array<{
     /**
      *
@@ -60858,18 +58899,13 @@ export type ScimEnterpriseGroup = {
   id: string;
   meta?: {
     created?: string;
-
     location?: string;
-
     lastModified?: string;
-
     resourceType?: string;
   };
   members?: Array<{
     $ref?: string;
-
     value?: string;
-
     display?: string;
   }>;
   schemas: Array<string>;
@@ -60974,7 +59010,6 @@ export type UnlabeledIssueEvent = {
   event: string;
   label: {
     name: string;
-
     color: string;
   };
   node_id: string;
@@ -60999,7 +59034,6 @@ export type BranchWithProtection = {
   name: string;
   _links: {
     html: string;
-
     self: string;
   };
   commit: Commit;
@@ -61030,7 +59064,6 @@ export type CheckSuitePreference = {
   preferences: {
     auto_trigger_checks?: Array<{
       app_id: number;
-
       setting: boolean;
     }>;
   };
@@ -61430,13 +59463,9 @@ export type RepoSearchResultItem = {
   open_issues: number;
   permissions?: {
     pull: boolean;
-
     push: boolean;
-
     admin: boolean;
-
     triage?: boolean;
-
     maintain?: boolean;
   };
   branches_url: string;
@@ -61630,7 +59659,6 @@ export type TimelineReviewedEvent = {
     html: {
       href: string;
     };
-
     pull_request: {
       href: string;
     };
@@ -61989,17 +60017,11 @@ export type IssueSearchResultItem = {
   title: string;
   labels: Array<{
     id?: number;
-
     url?: string;
-
     name?: string;
-
     color?: string;
-
     default?: boolean;
-
     node_id?: string;
-
     description?: string;
   }>;
   locked: boolean;
@@ -62022,13 +60044,9 @@ export type IssueSearchResultItem = {
   comments_url: string;
   pull_request?: {
     url: string;
-
     diff_url: string;
-
     html_url: string;
-
     merged_at?: string;
-
     patch_url: string;
   };
   state_reason?: string;
@@ -62220,7 +60238,6 @@ export type TimelineCommittedEvent = {
      * \\"7638417db6d59f3c431d3e1f261cc637155684cd\\"
      */
     sha: string;
-
     url: string;
   };
   event?: string;
@@ -62270,9 +60287,7 @@ export type TimelineCommittedEvent = {
      * \\"7638417db6d59f3c431d3e1f261cc637155684cd\\"
      */
     sha: string;
-
     url: string;
-
     html_url: string;
   }>;
   html_url: string;
@@ -62307,11 +60322,8 @@ export type TimelineCommittedEvent = {
   };
   verification: {
     reason: string;
-
     payload: string;
-
     verified: boolean;
-
     signature: string;
   };
 };
@@ -62325,11 +60337,8 @@ export type TopicSearchResultItem = {
   aliases?: Array<{
     topic_relation?: {
       id?: number;
-
       name?: string;
-
       topic_id?: number;
-
       relation_type?: string;
     };
   }>;
@@ -62337,11 +60346,8 @@ export type TopicSearchResultItem = {
   related?: Array<{
     topic_relation?: {
       id?: number;
-
       name?: string;
-
       topic_id?: number;
-
       relation_type?: string;
     };
   }>;
@@ -62365,14 +60371,10 @@ export type BranchRestrictionPolicy = {
   url: string;
   apps: Array<{
     id?: number;
-
     name?: string;
-
     slug?: string;
-
     owner?: {
       id?: number;
-
       url?: string;
 
       /**
@@ -62381,9 +60383,7 @@ export type BranchRestrictionPolicy = {
        * \\"\\\\\\"Organization\\\\\\"\\"
        */
       type?: string;
-
       login?: string;
-
       node_id?: string;
 
       /**
@@ -62399,15 +60399,10 @@ export type BranchRestrictionPolicy = {
        * \\"\\\\\\"https://api.github.com/users/testorg-ea8ec76d71c3af4b/gists{/gist_id}\\\\\\"\\"
        */
       gists_url?: string;
-
       hooks_url?: string;
-
       repos_url?: string;
-
       avatar_url?: string;
-
       events_url?: string;
-
       issues_url?: string;
 
       /**
@@ -62416,7 +60411,6 @@ export type BranchRestrictionPolicy = {
        * false
        */
       site_admin?: boolean;
-
       description?: string;
 
       /**
@@ -62425,7 +60419,6 @@ export type BranchRestrictionPolicy = {
        * \\"\\\\\\"\\\\\\"\\"
        */
       gravatar_id?: string;
-
       members_url?: string;
 
       /**
@@ -62462,7 +60455,6 @@ export type BranchRestrictionPolicy = {
        * \\"\\\\\\"https://api.github.com/users/testorg-ea8ec76d71c3af4b/subscriptions\\\\\\"\\"
        */
       subscriptions_url?: string;
-
       public_members_url?: string;
 
       /**
@@ -62472,91 +60464,52 @@ export type BranchRestrictionPolicy = {
        */
       received_events_url?: string;
     };
-
     events?: Array<string>;
-
     node_id?: string;
-
     html_url?: string;
-
     created_at?: string;
-
     updated_at?: string;
-
     description?: string;
-
     permissions?: {
       issues?: string;
-
       contents?: string;
-
       metadata?: string;
-
       single_file?: string;
     };
-
     external_url?: string;
   }>;
   teams: Array<{
     id?: number;
-
     url?: string;
-
     name?: string;
-
     slug?: string;
-
     parent?: string;
-
     node_id?: string;
-
     privacy?: string;
-
     html_url?: string;
-
     permission?: string;
-
     description?: string;
-
     members_url?: string;
-
     repositories_url?: string;
   }>;
   users: Array<{
     id?: number;
-
     url?: string;
-
     type?: string;
-
     login?: string;
-
     node_id?: string;
-
     html_url?: string;
-
     gists_url?: string;
-
     repos_url?: string;
-
     avatar_url?: string;
-
     events_url?: string;
-
     site_admin?: boolean;
-
     gravatar_id?: string;
-
     starred_url?: string;
-
     followers_url?: string;
-
     following_url?: string;
-
     organizations_url?: string;
-
     subscriptions_url?: string;
-
     received_events_url?: string;
   }>;
   apps_url: string;
@@ -62597,35 +60550,24 @@ export type CommitSearchResultItem = {
   author: null | SimpleUser;
   commit: {
     url: string;
-
     tree: {
       sha: string;
-
       url: string;
     };
-
     author: {
       date: string;
-
       name: string;
-
       email: string;
     };
-
     message: string;
-
     committer: null | GitUser;
-
     verification?: Verification;
-
     comment_count: number;
   };
   node_id: string;
   parents: Array<{
     sha?: string;
-
     url?: string;
-
     html_url?: string;
   }>;
   html_url: string;
@@ -62648,41 +60590,27 @@ export type ScimUserListEnterprise = {
   schemas: Array<string>;
   Resources: Array<{
     id: string;
-
     meta?: {
       created?: string;
-
       location?: string;
-
       lastModified?: string;
-
       resourceType?: string;
     };
-
     name?: {
       givenName?: string;
-
       familyName?: string;
     };
-
     active?: boolean;
-
     emails?: Array<{
       type?: string;
-
       value?: string;
-
       primary?: boolean;
     }>;
-
     groups?: Array<{
       value?: string;
     }>;
-
     schemas: Array<string>;
-
     userName?: string;
-
     externalId?: string;
   }>;
   startIndex: number;
@@ -62785,29 +60713,19 @@ export type ScimGroupListEnterprise = {
   schemas: Array<string>;
   Resources: Array<{
     id: string;
-
     meta?: {
       created?: string;
-
       location?: string;
-
       lastModified?: string;
-
       resourceType?: string;
     };
-
     members?: Array<{
       $ref?: string;
-
       value?: string;
-
       display?: string;
     }>;
-
     schemas: Array<string>;
-
     externalId?: string;
-
     displayName?: string;
   }>;
   startIndex: number;
@@ -62818,16 +60736,11 @@ export type ScimGroupListEnterprise = {
 export type SearchResultTextMatches = Array<{
   matches?: Array<{
     text?: string;
-
     indices?: Array<number>;
   }>;
-
   fragment?: string;
-
   property?: string;
-
   object_url?: string;
-
   object_type?: string;
 }>;
 
@@ -62939,7 +60852,6 @@ export type PullRequestReviewComment = {
        */
       href: string;
     };
-
     self: {
       /**
        *
@@ -62948,7 +60860,6 @@ export type PullRequestReviewComment = {
        */
       href: string;
     };
-
     pull_request: {
       /**
        *
@@ -63136,15 +61047,10 @@ export type AddedToProjectIssueEvent = {
   created_at: string;
   project_card?: {
     id: number;
-
     url: string;
-
     project_id: number;
-
     column_name: string;
-
     project_url: string;
-
     previous_column_name?: string;
   };
   performed_via_github_app: null | Integration;
@@ -63208,9 +61114,7 @@ export type MergeGroupChecksRequested = {
   repository?: Repository;
   merge_group: {
     base_ref: string;
-
     head_ref: string;
-
     head_sha: string;
   };
   installation?: SimpleInstallation;
@@ -63231,11 +61135,8 @@ export type ReviewDismissedIssueEvent = {
   created_at: string;
   dismissed_review: {
     state: string;
-
     review_id: number;
-
     dismissal_message: string;
-
     dismissal_commit_id?: string;
   };
   performed_via_github_app: null | Integration;
@@ -63470,7 +61371,6 @@ export type TimelineCrossReferencedEvent = {
   event: string;
   source: {
     type?: string;
-
     issue?: Issue;
   };
   created_at: string;
@@ -63560,15 +61460,10 @@ export type RemovedFromProjectIssueEvent = {
   created_at: string;
   project_card?: {
     id: number;
-
     url: string;
-
     project_id: number;
-
     column_name: string;
-
     project_url: string;
-
     previous_column_name?: string;
   };
   performed_via_github_app: null | Integration;
@@ -63773,15 +61668,10 @@ export type ConvertedNoteToIssueIssueEvent = {
   created_at: string;
   project_card?: {
     id: number;
-
     url: string;
-
     project_id: number;
-
     column_name: string;
-
     project_url: string;
-
     previous_column_name?: string;
   };
   performed_via_github_app: Integration;
@@ -63801,15 +61691,10 @@ export type MovedColumnInProjectIssueEvent = {
   created_at: string;
   project_card?: {
     id: number;
-
     url: string;
-
     project_id: number;
-
     column_name: string;
-
     project_url: string;
-
     previous_column_name?: string;
   };
   performed_via_github_app: null | Integration;
@@ -63973,7 +61858,6 @@ export type ProtectedBranchRequiredStatusCheck = {
   url?: string;
   checks: Array<{
     app_id: number;
-
     context: string;
   }>;
   strict?: boolean;
@@ -64092,7 +61976,6 @@ export const listSelfHostedRunnersForOrg: ApiHeroEndpoint<
   { org: string; page?: number; perPage?: number },
   {
     runners: Array<Runner>;
-
     total_count: number;
   },
   { Link: Link }
@@ -64115,7 +61998,6 @@ export const listOrgSecrets: ApiHeroEndpoint<
   { org: string; page?: number; perPage?: number },
   {
     secrets: Array<OrganizationActionsSecret>;
-
     total_count: number;
   },
   { Link: Link }
@@ -64182,7 +62064,6 @@ export const setGithubActionsPermissionsOrganization: ApiHeroEndpoint<
     org: string;
     body: {
       allowed_actions?: AllowedActions;
-
       enabled_repositories: EnabledRepositories;
     };
   },
@@ -64211,7 +62092,6 @@ export const listSelfHostedRunnerGroupsForOrg: ApiHeroEndpoint<
   { org: string; page?: number; perPage?: number; visibleToRepository?: string },
   {
     total_count: number;
-
     runner_groups: Array<RunnerGroupsOrg>;
   }
 > = {
@@ -64335,7 +62215,6 @@ export const listWorkflowRunsForRepo: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     workflow_runs: Array<WorkflowRun>;
   },
   { Link: Link }
@@ -64435,7 +62314,6 @@ export const listSelfHostedRunnersForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
   {
     runners: Array<Runner>;
-
     total_count: number;
   },
   { Link: Link }
@@ -64459,7 +62337,6 @@ export const listRepoSecrets: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
   {
     secrets: Array<ActionsSecret>;
-
     total_count: number;
   },
   { Link: Link }
@@ -64532,7 +62409,6 @@ export const listArtifactsForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
   {
     artifacts: Array<Artifact>;
-
     total_count: number;
   },
   { Link: Link }
@@ -64556,7 +62432,6 @@ export const listRepoWorkflows: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
   {
     workflows: Array<Workflow>;
-
     total_count: number;
   },
   { Link: Link }
@@ -64843,7 +62718,6 @@ export const setGithubActionsPermissionsRepository: ApiHeroEndpoint<
     repo: string;
     body: {
       enabled: ActionsEnabled;
-
       allowed_actions?: AllowedActions;
     };
   },
@@ -64926,7 +62800,6 @@ export const listSelectedRepositoriesEnabledGithubActionsOrganization: ApiHeroEn
   { org: string; page?: number; perPage?: number },
   {
     total_count: number;
-
     repositories: Array<Repository>;
   }
 > = {
@@ -64998,7 +62871,6 @@ export const getActionsCacheUsageByRepoForOrg: ApiHeroEndpoint<
   { org: string; page?: number; perPage?: number },
   {
     total_count: number;
-
     repository_cache_usages: Array<ActionsCacheUsageByRepository>;
   },
   { Link: Link }
@@ -65046,7 +62918,6 @@ export const listLabelsForSelfHostedRunnerForOrg: ApiHeroEndpoint<
   { org: string; runnerId: number },
   {
     labels: Array<RunnerLabel>;
-
     total_count: number;
   }
 > = {
@@ -65081,7 +62952,6 @@ export const addCustomLabelsToSelfHostedRunnerForOrg: ApiHeroEndpoint<
   },
   {
     labels: Array<RunnerLabel>;
-
     total_count: number;
   }
 > = {
@@ -65117,7 +62987,6 @@ export const setCustomLabelsForSelfHostedRunnerForOrg: ApiHeroEndpoint<
   },
   {
     labels: Array<RunnerLabel>;
-
     total_count: number;
   }
 > = {
@@ -65141,7 +63010,6 @@ export const removeAllCustomLabelsFromSelfHostedRunnerForOrg: ApiHeroEndpoint<
   { org: string; runnerId: number },
   {
     labels: Array<RunnerLabel>;
-
     total_count: number;
   }
 > = {
@@ -65316,7 +63184,6 @@ export const listJobsForWorkflowRun: ApiHeroEndpoint<
   },
   {
     jobs: Array<Job>;
-
     total_count: number;
   },
   { Link: Link }
@@ -65915,7 +63782,6 @@ export const removeCustomLabelFromSelfHostedRunnerForOrg: ApiHeroEndpoint<
   { org: string; runnerId: number; name: string },
   {
     labels: Array<RunnerLabel>;
-
     total_count: number;
   }
 > = {
@@ -65993,7 +63859,6 @@ export const listWorkflowRunArtifacts: ApiHeroEndpoint<
   { owner: string; repo: string; runId: number; page?: number; perPage?: number },
   {
     artifacts: Array<Artifact>;
-
     total_count: number;
   },
   { Link: Link }
@@ -66081,7 +63946,6 @@ export const listSelectedReposForOrgSecret: ApiHeroEndpoint<
   { org: string; secretName: string; page?: number; perPage?: number },
   {
     total_count: number;
-
     repositories: Array<MinimalRepository>;
   }
 > = {
@@ -66161,7 +64025,6 @@ export const listLabelsForSelfHostedRunnerForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; runnerId: number },
   {
     labels: Array<RunnerLabel>;
-
     total_count: number;
   }
 > = {
@@ -66199,7 +64062,6 @@ export const addCustomLabelsToSelfHostedRunnerForRepo: ApiHeroEndpoint<
   },
   {
     labels: Array<RunnerLabel>;
-
     total_count: number;
   }
 > = {
@@ -66238,7 +64100,6 @@ export const setCustomLabelsForSelfHostedRunnerForRepo: ApiHeroEndpoint<
   },
   {
     labels: Array<RunnerLabel>;
-
     total_count: number;
   }
 > = {
@@ -66264,7 +64125,6 @@ export const removeAllCustomLabelsFromSelfHostedRunnerForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; runnerId: number },
   {
     labels: Array<RunnerLabel>;
-
     total_count: number;
   }
 > = {
@@ -66369,7 +64229,6 @@ export const listWorkflowRuns: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     workflow_runs: Array<WorkflowRun>;
   },
   { Link: Link }
@@ -66416,7 +64275,6 @@ export const listSelfHostedRunnersInGroupForOrg: ApiHeroEndpoint<
   { org: string; runnerGroupId: number; page?: number; perPage?: number },
   {
     runners: Array<Runner>;
-
     total_count: number;
   },
   { Link: Link }
@@ -66618,7 +64476,6 @@ export const removeCustomLabelFromSelfHostedRunnerForRepo: ApiHeroEndpoint<
   { owner: string; repo: string; runnerId: number; name: string },
   {
     labels: Array<RunnerLabel>;
-
     total_count: number;
   }
 > = {
@@ -66722,7 +64579,6 @@ export const listRepoAccessToSelfHostedRunnerGroupInOrg: ApiHeroEndpoint<
   { org: string; runnerGroupId: number; page?: number; perPage?: number },
   {
     total_count: number;
-
     repositories: Array<MinimalRepository>;
   }
 > = {
@@ -66851,7 +64707,6 @@ export const listEnvironmentSecrets: ApiHeroEndpoint<
   { environmentName: string; repositoryId: number; page?: number; perPage?: number },
   {
     secrets: Array<ActionsSecret>;
-
     total_count: number;
   },
   { Link: Link }
@@ -66989,7 +64844,6 @@ export const listJobsForWorkflowRunAttempt: ApiHeroEndpoint<
   },
   {
     jobs: Array<Job>;
-
     total_count: number;
   },
   { Link: Link }
@@ -67776,7 +65630,6 @@ export const markRepoNotificationsAsRead: ApiHeroEndpoint<
   },
   {
     url?: string;
-
     message?: string;
   }
 > = {
@@ -67948,11 +65801,8 @@ export const updateWebhookConfigForApp: ApiHeroEndpoint<
   {
     body: {
       url?: WebhookConfigUrl;
-
       secret?: WebhookConfigSecret;
-
       content_type?: WebhookConfigContentType;
-
       insecure_ssl?: WebhookConfigInsecureSsl;
     };
   },
@@ -68033,7 +65883,6 @@ export const listInstallationsForAuthenticatedUser: ApiHeroEndpoint<
   { page?: number; perPage?: number },
   {
     total_count: number;
-
     installations: Array<Installation>;
   },
   { Link: Link }
@@ -68091,7 +65940,6 @@ export const listReposAccessibleToInstallation: ApiHeroEndpoint<
   { page?: number; perPage?: number },
   {
     total_count: number;
-
     repositories: Array<Repository>;
 
     /**
@@ -68281,11 +66129,8 @@ export const createFromManifest: ApiHeroEndpoint<
   { code: string },
   Integration & {
     pem: string;
-
     client_id: string;
-
     client_secret: string;
-
     webhook_secret: string;
   }
 > = {
@@ -68427,7 +66272,6 @@ export const scopeToken: ApiHeroEndpoint<
        * 1
        */
       target_id?: number;
-
       permissions?: AppPermissions;
 
       /**
@@ -68629,9 +66473,7 @@ export const listInstallationReposForAuthenticatedUser: ApiHeroEndpoint<
   { installationId: number; page?: number; perPage?: number },
   {
     total_count: number;
-
     repositories: Array<Repository>;
-
     repository_selection?: string;
   },
   { Link: Link }
@@ -69248,7 +67090,6 @@ export const listForRef: ApiHeroEndpoint<
   },
   {
     check_runs: Array<CheckRun>;
-
     total_count: number;
   },
   { Link: Link }
@@ -69504,7 +67345,6 @@ export const listSuitesForRef: ApiHeroEndpoint<
   },
   {
     total_count: number;
-
     check_suites: Array<CheckSuite>;
   },
   { Link: Link }
@@ -69624,7 +67464,6 @@ export const listForSuite: ApiHeroEndpoint<
   },
   {
     check_runs: Array<CheckRun>;
-
     total_count: number;
   },
   { Link: Link }
@@ -69781,14 +67620,12 @@ export const uploadSarif: ApiHeroEndpoint<
     repo: string;
     body: {
       ref: CodeScanningRef;
-
       sarif: CodeScanningAnalysisSarifFile;
 
       /**
        * The name of the tool used to generate the code scanning analysis. If this parameter is not used, the tool name defaults to \\"API\\". If the uploaded SARIF contains a tool GUID, this will be available for filtering using the \`tool_guid\` parameter of operations such as \`GET /repos/{owner}/{repo}/code-scanning/alerts\`.
        */
       tool_name?: string;
-
       commit_sha: CodeScanningAnalysisCommitSha;
 
       /**
@@ -69961,9 +67798,7 @@ export const updateAlert: ApiHeroEndpoint<
     alertNumber: AlertNumber;
     body: {
       state: CodeScanningAlertSetState;
-
       dismissed_reason?: CodeScanningAlertDismissedReason;
-
       dismissed_comment?: CodeScanningAlertDismissedComment;
     };
   },
@@ -70180,7 +68015,6 @@ export const listForAuthenticatedUser: ApiHeroEndpoint<
   { page?: number; perPage?: number; repositoryId?: number },
   {
     codespaces: Array<Codespace>;
-
     total_count: number;
   }
 > = {
@@ -70350,7 +68184,6 @@ export const listInOrganization: ApiHeroEndpoint<
   { org: string; page?: number; perPage?: number },
   {
     codespaces: Array<Codespace>;
-
     total_count: number;
   }
 > = {
@@ -70376,7 +68209,6 @@ export const listSecretsForAuthenticatedUser: ApiHeroEndpoint<
   { page?: number; perPage?: number },
   {
     secrets: Array<CodespacesSecret>;
-
     total_count: number;
   },
   { Link: Link }
@@ -70404,7 +68236,6 @@ export const listInRepositoryForAuthenticatedUser: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
   {
     codespaces: Array<Codespace>;
-
     total_count: number;
   }
 > = {
@@ -70613,10 +68444,8 @@ export const preFlightWithRepoForAuthenticatedUser: ApiHeroEndpoint<
   {
     defaults?: {
       location: string;
-
       devcontainer_path: string;
     };
-
     billable_owner?: SimpleUser;
   }
 > = {
@@ -70825,7 +68654,6 @@ export const listRepoSecrets: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
   {
     secrets: Array<RepoCodespacesSecret>;
-
     total_count: number;
   },
   { Link: Link }
@@ -70853,7 +68681,6 @@ export const repoMachinesForAuthenticatedUser: ApiHeroEndpoint<
   { owner: string; repo: string; location?: string; clientIp?: string },
   {
     machines: Array<CodespaceMachine>;
-
     total_count: number;
   }
 > = {
@@ -70896,7 +68723,6 @@ export const codespaceMachinesForAuthenticatedUser: ApiHeroEndpoint<
   { codespaceName: string },
   {
     machines: Array<CodespaceMachine>;
-
     total_count: number;
   }
 > = {
@@ -70924,10 +68750,8 @@ export const listDevcontainersInRepositoryForAuthenticatedUser: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
   {
     total_count: number;
-
     devcontainers: Array<{
       name?: string;
-
       path: string;
     }>;
   }
@@ -70969,7 +68793,6 @@ export const listRepositoriesForSecretForAuthenticatedUser: ApiHeroEndpoint<
   { secretName: string },
   {
     total_count: number;
-
     repositories: Array<MinimalRepository>;
   }
 > = {
@@ -71611,7 +69434,6 @@ export const listSelfHostedRunnersForEnterprise: ApiHeroEndpoint<
   { enterprise: string; page?: number; perPage?: number },
   {
     runners?: Array<Runner>;
-
     total_count?: number;
   },
   { Link: Link }
@@ -71657,7 +69479,6 @@ export const setGithubActionsPermissionsEnterprise: ApiHeroEndpoint<
     enterprise: string;
     body: {
       allowed_actions?: AllowedActions;
-
       enabled_organizations: EnabledOrganizations;
     };
   },
@@ -71684,7 +69505,6 @@ export const listSelfHostedRunnerGroupsForEnterprise: ApiHeroEndpoint<
   { enterprise: string; page?: number; perPage?: number; visibleToOrganization?: string },
   {
     total_count: number;
-
     runner_groups: Array<RunnerGroupsEnterprise>;
   }
 > = {
@@ -72122,7 +69942,6 @@ export const updateAttributeForEnterpriseGroup: ApiHeroEndpoint<
        */
       Operations: Array<{
         op: \\"add\\" | \\"Add\\" | \\"remove\\" | \\"Remove\\" | \\"replace\\" | \\"Replace\\";
-
         path?: string;
 
         /**
@@ -72154,7 +69973,6 @@ export const listSelectedOrganizationsEnabledGithubActionsEnterprise: ApiHeroEnd
   { enterprise: string; page?: number; perPage?: number },
   {
     total_count: number;
-
     organizations: Array<OrganizationSimple>;
   }
 > = {
@@ -72232,7 +70050,6 @@ export const listLabelsForSelfHostedRunnerForEnterprise: ApiHeroEndpoint<
   { enterprise: string; runnerId: number },
   {
     labels: Array<RunnerLabel>;
-
     total_count: number;
   }
 > = {
@@ -72267,7 +70084,6 @@ export const addCustomLabelsToSelfHostedRunnerForEnterprise: ApiHeroEndpoint<
   },
   {
     labels: Array<RunnerLabel>;
-
     total_count: number;
   }
 > = {
@@ -72303,7 +70119,6 @@ export const setCustomLabelsForSelfHostedRunnerForEnterprise: ApiHeroEndpoint<
   },
   {
     labels: Array<RunnerLabel>;
-
     total_count: number;
   }
 > = {
@@ -72327,7 +70142,6 @@ export const removeAllCustomLabelsFromSelfHostedRunnerForEnterprise: ApiHeroEndp
   { enterprise: string; runnerId: number },
   {
     labels: Array<RunnerLabel>;
-
     total_count: number;
   }
 > = {
@@ -72509,7 +70323,6 @@ export const removeCustomLabelFromSelfHostedRunnerForEnterprise: ApiHeroEndpoint
   { enterprise: string; runnerId: number; name: string },
   {
     labels: Array<RunnerLabel>;
-
     total_count: number;
   }
 > = {
@@ -72572,7 +70385,6 @@ export const listSelfHostedRunnersInGroupForEnterprise: ApiHeroEndpoint<
   { enterprise: string; runnerGroupId: number; page?: number; perPage?: number },
   {
     runners: Array<Runner>;
-
     total_count: number;
   },
   { Link: Link }
@@ -72629,7 +70441,6 @@ export const listOrgAccessToSelfHostedRunnerGroupInEnterprise: ApiHeroEndpoint<
   { enterprise: string; runnerGroupId: number; page?: number; perPage?: number },
   {
     total_count: number;
-
     organizations: Array<OrganizationSimple>;
   }
 > = {
@@ -72773,7 +70584,6 @@ export const listOrgSecrets: ApiHeroEndpoint<
   { org: string; page?: number; perPage?: number },
   {
     secrets: Array<OrganizationDependabotSecret>;
-
     total_count: number;
   },
   { Link: Link }
@@ -72797,7 +70607,6 @@ export const listRepoSecrets: ApiHeroEndpoint<
   { owner: string; repo: string; page?: number; perPage?: number },
   {
     secrets: Array<DependabotSecret>;
-
     total_count: number;
   },
   { Link: Link }
@@ -73150,7 +70959,6 @@ export const listSelectedReposForOrgSecret: ApiHeroEndpoint<
   { org: string; secretName: string; page?: number; perPage?: number },
   {
     total_count: number;
-
     repositories: Array<MinimalRepository>;
   }
 > = {
@@ -73343,7 +71151,6 @@ export const create: ApiHeroEndpoint<
           content: string;
         }
       >;
-
       public?: boolean | \\"true\\" | \\"false\\";
 
       /**
@@ -74715,11 +72522,8 @@ export const create: ApiHeroEndpoint<
         | string
         | {
             id?: number;
-
             name?: string;
-
             color?: string;
-
             description?: string;
           }
       >;
@@ -74733,7 +72537,6 @@ export const create: ApiHeroEndpoint<
        * Logins for Users to assign to this issue. _NOTE: Only users with push access can set assignees for new issues. Assignees are silently dropped otherwise._
        */
       assignees?: Array<string>;
-
       milestone?: string | number;
     };
   },
@@ -75124,11 +72927,8 @@ export const update: ApiHeroEndpoint<
         | string
         | {
             id?: number;
-
             name?: string;
-
             color?: string;
-
             description?: string;
           }
       >;
@@ -75142,7 +72942,6 @@ export const update: ApiHeroEndpoint<
        * Logins for Users to assign to this issue. Pass one or more user logins to _replace_ the set of assignees on this Issue. Send an empty array (\`[]\`) to clear all assignees from the Issue. _NOTE: Only users with push access can set assignees for new issues. Assignees are silently dropped otherwise._
        */
       assignees?: Array<string>;
-
       milestone?: string | number;
     };
   },
@@ -75917,7 +73716,6 @@ export const startForAuthenticatedUser: ApiHeroEndpoint<
        * \\"repositories\\"
        */
       exclude?: Array<\\"repositories\\">;
-
       repositories: Array<string>;
 
       /**
@@ -77271,7 +75069,6 @@ export const createWebhook: ApiHeroEndpoint<
        */
       config: {
         url: WebhookConfigUrl;
-
         secret?: WebhookConfigSecret;
 
         /**
@@ -77287,9 +75084,7 @@ export const createWebhook: ApiHeroEndpoint<
          * \\"\\\\\\"kdaigle\\\\\\"\\"
          */
         username?: string;
-
         content_type?: WebhookConfigContentType;
-
         insecure_ssl?: WebhookConfigInsecureSsl;
       };
 
@@ -77515,7 +75310,6 @@ export const listAppInstallations: ApiHeroEndpoint<
   { org: string; page?: number; perPage?: number },
   {
     total_count: number;
-
     installations: Array<Installation>;
   },
   { Link: Link }
@@ -77612,11 +75406,8 @@ export const updateWebhook: ApiHeroEndpoint<
        */
       config?: {
         url: WebhookConfigUrl;
-
         secret?: WebhookConfigSecret;
-
         content_type?: WebhookConfigContentType;
-
         insecure_ssl?: WebhookConfigInsecureSsl;
       };
 
@@ -77849,11 +75640,8 @@ export const updateWebhookConfigForOrg: ApiHeroEndpoint<
     hookId: number;
     body?: {
       url?: WebhookConfigUrl;
-
       secret?: WebhookConfigSecret;
-
       content_type?: WebhookConfigContentType;
-
       insecure_ssl?: WebhookConfigInsecureSsl;
     };
   },
@@ -78108,7 +75896,6 @@ export const listCustomRoles: ApiHeroEndpoint<
      * 3
      */
     total_count?: number;
-
     custom_roles?: Array<OrganizationCustomRepositoryRole>;
   }
 > = {
@@ -80228,7 +78015,6 @@ export const updateBranch: ApiHeroEndpoint<
   },
   {
     url?: string;
-
     message?: string;
   }
 > = {
@@ -82265,11 +80051,8 @@ export const createWebhook: ApiHeroEndpoint<
          * \\"\\\\\\"sha256\\\\\\"\\"
          */
         digest?: string;
-
         secret?: WebhookConfigSecret;
-
         content_type?: WebhookConfigContentType;
-
         insecure_ssl?: WebhookConfigInsecureSsl;
       };
 
@@ -82387,7 +80170,6 @@ export const updateInformationAboutPagesSite: ApiHeroEndpoint<
        * Configures access controls for the GitHub Pages site. If public is set to \`true\`, the site is accessible to anyone on the internet. If set to \`false\`, the site will only be accessible to users who have at least \`read\` access to the repository that published the site. This includes anyone in your Enterprise if the repository is set to \`internal\` visibility. This feature is only available to repositories in an organization on an Enterprise plan.
        */
       public?: boolean;
-
       source?:
         | \\"gh-pages\\"
         | \\"master\\"
@@ -83039,7 +80821,6 @@ export const createDeployment: ApiHeroEndpoint<
        * Specifies a task to execute (e.g., \`deploy\` or \`deploy:migrations\`).
        */
       task?: string;
-
       payload?: string;
 
       /**
@@ -83148,7 +80929,6 @@ export const getAllEnvironments: ApiHeroEndpoint<
      * 5
      */
     total_count?: number;
-
     environments?: Array<Environment>;
   }
 > = {
@@ -83843,7 +81623,6 @@ export const updateWebhook: ApiHeroEndpoint<
          * \\"\\\\\\"The Serious Room\\\\\\"\\"
          */
         room?: string;
-
         secret?: WebhookConfigSecret;
 
         /**
@@ -83852,9 +81631,7 @@ export const updateWebhook: ApiHeroEndpoint<
          * \\"\\\\\\"bar@example.com\\\\\\"\\"
          */
         address?: string;
-
         content_type?: WebhookConfigContentType;
-
         insecure_ssl?: WebhookConfigInsecureSsl;
       };
 
@@ -84606,11 +82383,8 @@ export const updateWebhookConfigForRepo: ApiHeroEndpoint<
     hookId: number;
     body?: {
       url?: WebhookConfigUrl;
-
       secret?: WebhookConfigSecret;
-
       content_type?: WebhookConfigContentType;
-
       insecure_ssl?: WebhookConfigInsecureSsl;
     };
   },
@@ -85635,12 +83409,9 @@ export const createOrUpdateEnvironment: ApiHeroEndpoint<
          * 4532992
          */
         id?: number;
-
         type?: DeploymentReviewerType;
       }>;
-
       wait_timer?: WaitTimer;
-
       deployment_branch_policy?: DeploymentBranchPolicy;
     } | null;
   },
@@ -86896,12 +84667,9 @@ export const provisionAndInviteUser: ApiHeroEndpoint<
     body: {
       name: {
         formatted?: string;
-
         givenName: string;
-
         familyName: string;
       };
-
       active?: boolean;
 
       /** 
@@ -86921,14 +84689,10 @@ export const provisionAndInviteUser: ApiHeroEndpoint<
 */
       emails: Array<{
         type?: string;
-
         value: string;
-
         primary?: boolean;
       }>;
-
       groups?: Array<string>;
-
       schemas?: Array<string>;
 
       /**
@@ -86938,7 +84702,6 @@ export const provisionAndInviteUser: ApiHeroEndpoint<
        * \\"someone@example.com\\"
        */
       userName: string;
-
       externalId?: string;
 
       /**
@@ -87006,12 +84769,9 @@ export const setInformationForProvisionedUser: ApiHeroEndpoint<
     body: {
       name: {
         formatted?: string;
-
         givenName: string;
-
         familyName: string;
       };
-
       active?: boolean;
 
       /** 
@@ -87031,14 +84791,10 @@ export const setInformationForProvisionedUser: ApiHeroEndpoint<
 */
       emails: Array<{
         type?: string;
-
         value: string;
-
         primary?: boolean;
       }>;
-
       groups?: Array<string>;
-
       schemas?: Array<string>;
 
       /**
@@ -87048,7 +84804,6 @@ export const setInformationForProvisionedUser: ApiHeroEndpoint<
        * \\"someone@example.com\\"
        */
       userName: string;
-
       externalId?: string;
 
       /**
@@ -87127,19 +84882,13 @@ export const updateAttributeForUser: ApiHeroEndpoint<
 */
       Operations: Array<{
         op: \\"add\\" | \\"remove\\" | \\"replace\\";
-
         path?: string;
-
         value?:
           | {
               active?: boolean;
-
               userName?: string;
-
               givenName?: string;
-
               externalId?: string;
-
               familyName?: string;
             }
           | string;
@@ -87196,9 +84945,7 @@ export const code: ApiHeroEndpoint<
   { q: string; page?: number; perPage?: number; order?: \\"desc\\" | \\"asc\\"; sort?: \\"indexed\\" },
   {
     items: Array<CodeSearchResultItem>;
-
     total_count: number;
-
     incomplete_results: boolean;
   }
 > = {
@@ -87236,9 +84983,7 @@ export const users: ApiHeroEndpoint<
   },
   {
     items: Array<UserSearchResultItem>;
-
     total_count: number;
-
     incomplete_results: boolean;
   }
 > = {
@@ -87290,9 +85035,7 @@ export const issuesAndPullRequests: ApiHeroEndpoint<
   },
   {
     items: Array<IssueSearchResultItem>;
-
     total_count: number;
-
     incomplete_results: boolean;
   }
 > = {
@@ -87332,9 +85075,7 @@ export const labels: ApiHeroEndpoint<
   },
   {
     items: Array<LabelSearchResultItem>;
-
     total_count: number;
-
     incomplete_results: boolean;
   }
 > = {
@@ -87364,9 +85105,7 @@ export const topics: ApiHeroEndpoint<
   { q: string; page?: number; perPage?: number },
   {
     items: Array<TopicSearchResultItem>;
-
     total_count: number;
-
     incomplete_results: boolean;
   }
 > = {
@@ -87403,9 +85142,7 @@ export const commits: ApiHeroEndpoint<
   },
   {
     items: Array<CommitSearchResultItem>;
-
     total_count: number;
-
     incomplete_results: boolean;
   }
 > = {
@@ -87443,9 +85180,7 @@ export const repos: ApiHeroEndpoint<
   },
   {
     items: Array<RepoSearchResultItem>;
-
     total_count: number;
-
     incomplete_results: boolean;
   }
 > = {
@@ -87636,7 +85371,6 @@ export const updateAlert: ApiHeroEndpoint<
     alertNumber: AlertNumber;
     body: {
       state: SecretScanningAlertState;
-
       resolution?: SecretScanningAlertResolution;
     };
   },
@@ -90745,13 +88479,9 @@ export type FullRepository = {
   open_issues: number;
   permissions?: {
     pull: boolean;
-
     push: boolean;
-
     admin: boolean;
-
     triage?: boolean;
-
     maintain?: boolean;
   };
 
@@ -91398,13 +89128,9 @@ export type Repository = {
   open_issues: number;
   permissions?: {
     pull: boolean;
-
     push: boolean;
-
     admin: boolean;
-
     triage?: boolean;
-
     maintain?: boolean;
   };
 
@@ -91651,215 +89377,112 @@ export type Repository = {
   allow_update_branch?: boolean;
   template_repository?: {
     id?: number;
-
     url?: string;
-
     fork?: boolean;
-
     name?: string;
-
     size?: number;
-
     owner?: {
       id?: number;
-
       url?: string;
-
       type?: string;
-
       login?: string;
-
       node_id?: string;
-
       html_url?: string;
-
       gists_url?: string;
-
       repos_url?: string;
-
       avatar_url?: string;
-
       events_url?: string;
-
       site_admin?: boolean;
-
       gravatar_id?: string;
-
       starred_url?: string;
-
       followers_url?: string;
-
       following_url?: string;
-
       organizations_url?: string;
-
       subscriptions_url?: string;
-
       received_events_url?: string;
     };
-
     topics?: Array<string>;
-
     git_url?: string;
-
     node_id?: string;
-
     private?: boolean;
-
     ssh_url?: string;
-
     svn_url?: string;
-
     archived?: boolean;
-
     disabled?: boolean;
-
     has_wiki?: boolean;
-
     homepage?: string;
-
     html_url?: string;
-
     keys_url?: string;
-
     language?: string;
-
     tags_url?: string;
-
     blobs_url?: string;
-
     clone_url?: string;
-
     forks_url?: string;
-
     full_name?: string;
-
     has_pages?: boolean;
-
     hooks_url?: string;
-
     pulls_url?: string;
-
     pushed_at?: string;
-
     teams_url?: string;
-
     trees_url?: string;
-
     created_at?: string;
-
     events_url?: string;
-
     has_issues?: boolean;
-
     issues_url?: string;
-
     labels_url?: string;
-
     merges_url?: string;
-
     mirror_url?: string;
-
     updated_at?: string;
-
     visibility?: string;
-
     archive_url?: string;
-
     commits_url?: string;
-
     compare_url?: string;
-
     description?: string;
-
     forks_count?: number;
-
     is_template?: boolean;
-
     permissions?: {
       pull?: boolean;
-
       push?: boolean;
-
       admin?: boolean;
-
       triage?: boolean;
-
       maintain?: boolean;
     };
-
     branches_url?: string;
-
     comments_url?: string;
-
     contents_url?: string;
-
     git_refs_url?: string;
-
     git_tags_url?: string;
-
     has_projects?: boolean;
-
     releases_url?: string;
-
     statuses_url?: string;
-
     assignees_url?: string;
-
     downloads_url?: string;
-
     has_downloads?: boolean;
-
     languages_url?: string;
-
     network_count?: number;
-
     default_branch?: string;
-
     milestones_url?: string;
-
     stargazers_url?: string;
-
     watchers_count?: number;
-
     deployments_url?: string;
-
     git_commits_url?: string;
-
     subscribers_url?: string;
-
     allow_auto_merge?: boolean;
-
     contributors_url?: string;
-
     issue_events_url?: string;
-
     stargazers_count?: number;
-
     subscription_url?: string;
-
     temp_clone_token?: string;
-
     collaborators_url?: string;
-
     issue_comment_url?: string;
-
     notifications_url?: string;
-
     open_issues_count?: number;
-
     subscribers_count?: number;
-
     allow_merge_commit?: boolean;
-
     allow_rebase_merge?: boolean;
-
     allow_squash_merge?: boolean;
-
     allow_update_branch?: boolean;
-
     delete_branch_on_merge?: boolean;
-
     use_squash_pr_title_as_default?: boolean;
   };
 
@@ -92090,13 +89713,9 @@ export type MinimalRepository = {
   git_url?: string;
   license?: {
     key?: string;
-
     url?: string;
-
     name?: string;
-
     node_id?: string;
-
     spdx_id?: string;
   };
 
@@ -92291,13 +89910,9 @@ export type MinimalRepository = {
   open_issues?: number;
   permissions?: {
     pull?: boolean;
-
     push?: boolean;
-
     admin?: boolean;
-
     triage?: boolean;
-
     maintain?: boolean;
   };
 
@@ -92794,13 +90409,9 @@ export type Repository = {
   open_issues: number;
   permissions?: {
     pull: boolean;
-
     push: boolean;
-
     admin: boolean;
-
     triage?: boolean;
-
     maintain?: boolean;
   };
 
@@ -93047,215 +90658,112 @@ export type Repository = {
   allow_update_branch?: boolean;
   template_repository?: {
     id?: number;
-
     url?: string;
-
     fork?: boolean;
-
     name?: string;
-
     size?: number;
-
     owner?: {
       id?: number;
-
       url?: string;
-
       type?: string;
-
       login?: string;
-
       node_id?: string;
-
       html_url?: string;
-
       gists_url?: string;
-
       repos_url?: string;
-
       avatar_url?: string;
-
       events_url?: string;
-
       site_admin?: boolean;
-
       gravatar_id?: string;
-
       starred_url?: string;
-
       followers_url?: string;
-
       following_url?: string;
-
       organizations_url?: string;
-
       subscriptions_url?: string;
-
       received_events_url?: string;
     };
-
     topics?: Array<string>;
-
     git_url?: string;
-
     node_id?: string;
-
     private?: boolean;
-
     ssh_url?: string;
-
     svn_url?: string;
-
     archived?: boolean;
-
     disabled?: boolean;
-
     has_wiki?: boolean;
-
     homepage?: string;
-
     html_url?: string;
-
     keys_url?: string;
-
     language?: string;
-
     tags_url?: string;
-
     blobs_url?: string;
-
     clone_url?: string;
-
     forks_url?: string;
-
     full_name?: string;
-
     has_pages?: boolean;
-
     hooks_url?: string;
-
     pulls_url?: string;
-
     pushed_at?: string;
-
     teams_url?: string;
-
     trees_url?: string;
-
     created_at?: string;
-
     events_url?: string;
-
     has_issues?: boolean;
-
     issues_url?: string;
-
     labels_url?: string;
-
     merges_url?: string;
-
     mirror_url?: string;
-
     updated_at?: string;
-
     visibility?: string;
-
     archive_url?: string;
-
     commits_url?: string;
-
     compare_url?: string;
-
     description?: string;
-
     forks_count?: number;
-
     is_template?: boolean;
-
     permissions?: {
       pull?: boolean;
-
       push?: boolean;
-
       admin?: boolean;
-
       triage?: boolean;
-
       maintain?: boolean;
     };
-
     branches_url?: string;
-
     comments_url?: string;
-
     contents_url?: string;
-
     git_refs_url?: string;
-
     git_tags_url?: string;
-
     has_projects?: boolean;
-
     releases_url?: string;
-
     statuses_url?: string;
-
     assignees_url?: string;
-
     downloads_url?: string;
-
     has_downloads?: boolean;
-
     languages_url?: string;
-
     network_count?: number;
-
     default_branch?: string;
-
     milestones_url?: string;
-
     stargazers_url?: string;
-
     watchers_count?: number;
-
     deployments_url?: string;
-
     git_commits_url?: string;
-
     subscribers_url?: string;
-
     allow_auto_merge?: boolean;
-
     contributors_url?: string;
-
     issue_events_url?: string;
-
     stargazers_count?: number;
-
     subscription_url?: string;
-
     temp_clone_token?: string;
-
     collaborators_url?: string;
-
     issue_comment_url?: string;
-
     notifications_url?: string;
-
     open_issues_count?: number;
-
     subscribers_count?: number;
-
     allow_merge_commit?: boolean;
-
     allow_rebase_merge?: boolean;
-
     allow_squash_merge?: boolean;
-
     allow_update_branch?: boolean;
-
     delete_branch_on_merge?: boolean;
-
     use_squash_pr_title_as_default?: boolean;
   };
 

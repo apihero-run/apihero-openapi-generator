@@ -334,7 +334,7 @@ function generateTypeInterface(property: Model, parent?: Model): string {
     return "any";
   } else {
     return `{
-${property.properties.map((p) => generateModelProperty(p, parent)).join("\n")}
+${property.properties.map((p) => generateModelProperty(p, parent)).join("")}
 }${generateIsNullable(property)}`;
   }
 }

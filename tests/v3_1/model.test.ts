@@ -485,13 +485,9 @@ test("getModel with Github v3.1", async () => {
     license?: {
 
     key?: string;
-
     url?: string;
-
     name?: string;
-
     node_id?: string;
-
     spdx_id?: string;
     };
 
@@ -687,13 +683,9 @@ test("getModel with Github v3.1", async () => {
     permissions?: {
 
     pull?: boolean;
-
     push?: boolean;
-
     admin?: boolean;
-
     triage?: boolean;
-
     maintain?: boolean;
     };
 
