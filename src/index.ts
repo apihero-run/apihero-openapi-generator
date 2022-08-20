@@ -16,7 +16,7 @@ export async function generatePackage(
   destination: string,
   options: GeneratePackageOptions,
 ): Promise<void> {
-  const typescriptFiles = generateClientFiles(doc, {
+  const typescriptFiles = generateClientFiles(doc, `${options.name}/${options.version}`, {
     additionalData: {
       clientId: options.name,
       version: `${options.version.major}.${options.version.minor}.${options.version.patch}`,
@@ -28,18 +28,20 @@ export async function generatePackage(
 
 export function generateClientFiles(
   doc: OpenAPI.Document,
+  identifier: string,
   options?: GenerateClientOptions,
 ): Map<string, string> {
   const client = generateClient(doc);
 
-  return generateClientCode(client, options);
+  return generateClientCode(client, identifier, options);
 }
 
 export function generateClientCode(
   client: Client,
+  identifier: string,
   options?: GenerateClientOptions,
 ): Map<string, string> {
-  const files = generateFromClient(client, options);
+  const files = generateFromClient(client, identifier, options);
 
   // Format each file
   for (const [name, code] of Array.from(files)) {

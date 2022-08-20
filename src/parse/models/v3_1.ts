@@ -40,6 +40,7 @@ function getReferenceModel(
 ): Model {
   const model: Model = {
     name,
+    identifier,
     type: "any",
     export: "reference",
     isDefinition,
@@ -75,6 +76,7 @@ function getSchemaModel(
 ): Model {
   const model: Model = {
     name,
+    identifier,
     type: "any",
     base: "any",
     export: "interface",

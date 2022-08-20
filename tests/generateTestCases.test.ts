@@ -11,7 +11,7 @@ async function loadTestCase(testCaseId: string): Promise<OpenAPI.Document> {
 async function generateTestCase(testCaseId: string): Promise<Map<string, string>> {
   const doc = await loadTestCase(testCaseId);
 
-  const code = generateClientFiles(doc);
+  const code = generateClientFiles(doc, testCaseId);
 
   return code;
 }

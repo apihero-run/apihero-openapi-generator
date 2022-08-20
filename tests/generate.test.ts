@@ -11,7 +11,7 @@ async function loadSpecFromFixtureFile(filePath: string): Promise<OpenAPI.Docume
 test("v3/petstore.json", async () => {
   const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3/petstore.json");
 
-  const code = generateClientFiles(doc);
+  const code = generateClientFiles(doc, "petstore/v3");
 
   expect(code).toMatchSnapshot();
 });
@@ -19,7 +19,7 @@ test("v3/petstore.json", async () => {
 test("v3/petstore.json with additional options", async () => {
   const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3/petstore.json");
 
-  const code = generateClientFiles(doc, {
+  const code = generateClientFiles(doc, "petstore/v3", {
     additionalImports: [{ name: "@apihero/endpoint", imports: ["ApiHeroEndpoint"] }],
     additionalData: {
       clientId: "github",
@@ -33,7 +33,7 @@ test("v3/petstore.json with additional options", async () => {
 test("v3/github.json", async () => {
   const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3/github.json");
 
-  const code = generateClientFiles(doc);
+  const code = generateClientFiles(doc, "github/v3");
 
   expect(code).toMatchSnapshot();
 });
@@ -41,7 +41,7 @@ test("v3/github.json", async () => {
 test("v3_1/github.json", async () => {
   const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3_1/github.json");
 
-  const code = generateClientFiles(doc);
+  const code = generateClientFiles(doc, "github/v3.1");
 
   expect(code).toMatchSnapshot();
 });

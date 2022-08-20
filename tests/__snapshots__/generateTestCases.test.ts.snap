@@ -35,16 +35,7 @@ export type ValidationError = {
 
 /**
  * Color-coded labels help you categorize and filter your issues (just like labels in Gmail).
- * @example
- * {
- *   \\"id\\": 208045946,
- *   \\"url\\": \\"https://api.github.com/repos/octocat/Hello-World/labels/bug\\",
- *   \\"name\\": \\"bug\\",
- *   \\"color\\": \\"f29513\\",
- *   \\"default\\": true,
- *   \\"node_id\\": \\"MDU6TGFiZWwyMDgwNDU5NDY=\\",
- *   \\"description\\": \\"Something isn't working\\"
- * }
+ * @example @see https://apihero.run/integrations/createLabel/examples/label
  */
 export type Label = {
   /**

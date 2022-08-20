@@ -7,6 +7,7 @@ export type Enum = {
 
 export type Model = Schema & {
   name: string;
+  identifier?: string;
   export:
     | "reference"
     | "generic"
