@@ -325,8 +325,20 @@ class ClientGenerator {
       return arr.indexOf(val) === index;
     };
 
+    const sortNullLast = (a: string, b: string): number => {
+      if (a === "null") {
+        return 1;
+      }
+
+      if (b === "null") {
+        return -1;
+      }
+
+      return 0;
+    };
+
     const types = model.properties.map((property) => this.generateType(property, parent));
-    const uniqueTypes = types.filter(unique);
+    const uniqueTypes = types.sort(sortNullLast).filter(unique);
     let uniqueTypesString = uniqueTypes.join(` ${compositeType} `);
     if (uniqueTypes.length > 1) {
       uniqueTypesString = `(${uniqueTypesString})`;

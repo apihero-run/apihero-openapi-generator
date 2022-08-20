@@ -45993,7 +45993,7 @@ export type Team = {
   url: string;
   name: string;
   slug: string;
-  parent: null | TeamSimple;
+  parent: TeamSimple | null;
   node_id: string;
   privacy?: string;
 
@@ -46113,7 +46113,7 @@ export type Issue = {
    * \\"It looks like the new widget form is broken on Safari. When I try and create the widget, Safari crashes. This is reproducible on 10.8, but not 10.9. Maybe a browser bug?\\"
    */
   body?: string;
-  user: null | SimpleUser;
+  user: SimpleUser | null;
   draft?: boolean;
 
   /**
@@ -46163,15 +46163,15 @@ export type Issue = {
    */
   number: number;
   node_id: string;
-  assignee: null | SimpleUser;
+  assignee: SimpleUser | null;
   comments: number;
   html_url: string;
   assignees?: Array<SimpleUser>;
   body_html?: string;
   body_text?: string;
   closed_at: string;
-  closed_by?: null | SimpleUser;
-  milestone: null | Milestone;
+  closed_by?: SimpleUser | null;
+  milestone: Milestone | null;
   reactions?: ReactionRollup;
   created_at: string;
   events_url: string;
@@ -46198,7 +46198,7 @@ export type Issue = {
   repository_url: string;
   active_lock_reason?: string;
   author_association: AuthorAssociation;
-  performed_via_github_app?: null | Integration;
+  performed_via_github_app?: Integration | null;
 };
 
 /**
@@ -46291,7 +46291,7 @@ export type Commit = {
     additions?: number;
     deletions?: number;
   };
-  author: null | SimpleUser;
+  author: SimpleUser | null;
   commit: {
     /**
      *
@@ -46314,7 +46314,7 @@ export type Commit = {
        */
       url: string;
     };
-    author: null | GitUser;
+    author: GitUser | null;
 
     /**
      *
@@ -46322,7 +46322,7 @@ export type Commit = {
      * \\"Fix all the bugs\\"
      */
     message: string;
-    committer: null | GitUser;
+    committer: GitUser | null;
     verification?: Verification;
 
     /**
@@ -46368,7 +46368,7 @@ export type Commit = {
    * \\"https://github.com/octocat/Hello-World/commit/6dcb09b5b57875f334f61aebed695e2e4193db5e\\"
    */
   html_url: string;
-  committer: null | SimpleUser;
+  committer: SimpleUser | null;
 
   /**
    *
@@ -46481,7 +46481,7 @@ export type Status = {
   url: string;
   state: string;
   context: string;
-  creator: null | SimpleUser;
+  creator: SimpleUser | null;
   node_id: string;
   avatar_url: string;
   created_at: string;
@@ -46844,7 +46844,7 @@ export type Package = {
    * \\"super-linter\\"
    */
   name: string;
-  owner?: null | SimpleUser;
+  owner?: SimpleUser | null;
 
   /**
    *
@@ -46853,7 +46853,7 @@ export type Package = {
    */
   html_url: string;
   created_at: string;
-  repository?: null | MinimalRepository;
+  repository?: MinimalRepository | null;
   updated_at: string;
 
   /**
@@ -46928,7 +46928,7 @@ export type Project = {
    * 1
    */
   number: number;
-  creator: null | SimpleUser;
+  creator: SimpleUser | null;
 
   /**
    *
@@ -47449,7 +47449,7 @@ export type Reaction = {
    * 1
    */
   id: number;
-  user: null | SimpleUser;
+  user: SimpleUser | null;
 
   /**
    * The reaction to use
@@ -47664,7 +47664,7 @@ export type AlertUrl = string;
 export type BaseGist = {
   id: string;
   url: string;
-  user: null | SimpleUser;
+  user: SimpleUser | null;
   files: Record<
     string,
     {
@@ -47705,7 +47705,7 @@ export type CheckRun = {
    * 21
    */
   id: number;
-  app: null | Integration;
+  app: Integration | null;
 
   /**
    *
@@ -47857,7 +47857,7 @@ export type Codespace = {
     | \\"Exporting\\"
     | \\"Updating\\"
     | \\"Rebuilding\\";
-  machine: null | CodespaceMachine;
+  machine: CodespaceMachine | null;
 
   /**
    * URL to access this codespace on the web.
@@ -48054,7 +48054,7 @@ export type Migration = {
    * \\"0b989ba4-242f-11e5-81e1-c7b6966d2516\\"
    */
   guid: string;
-  owner: null | SimpleUser;
+  owner: SimpleUser | null;
 
   /**
    *
@@ -48144,7 +48144,7 @@ export type Milestone = {
    * 42
    */
   number: number;
-  creator: null | SimpleUser;
+  creator: SimpleUser | null;
 
   /**
    *
@@ -48346,7 +48346,7 @@ export type ScimUser = {
  * Stargazer
  */
 export type Stargazer = {
-  user: null | SimpleUser;
+  user: SimpleUser | null;
   starred_at: string;
 };
 
@@ -48385,7 +48385,7 @@ export type TeamFull = {
    * \\"justice-league\\"
    */
   slug: string;
-  parent?: null | TeamSimple;
+  parent?: TeamSimple | null;
 
   /**
    * Distinguished Name (DN) that team maps to within LDAP environment
@@ -48592,7 +48592,7 @@ export type Deployment = {
    * \\"deploy\\"
    */
   task: string;
-  creator: null | SimpleUser;
+  creator: SimpleUser | null;
 
   /**
    *
@@ -48667,7 +48667,7 @@ export type Deployment = {
    * true
    */
   production_environment?: boolean;
-  performed_via_github_app?: null | Integration;
+  performed_via_github_app?: Integration | null;
 };
 
 /**
@@ -48948,7 +48948,7 @@ export type PageBuild = {
     message: string;
   };
   commit: string;
-  pusher: null | SimpleUser;
+  pusher: SimpleUser | null;
   status: string;
   duration: number;
   created_at: string;
@@ -49007,7 +49007,7 @@ export type Repository = {
    * \\"git:github.com/octocat/Hello-World.git\\"
    */
   git_url: string;
-  license: null | LicenseSimple;
+  license: LicenseSimple | null;
 
   /**
    *
@@ -49309,7 +49309,7 @@ export type Repository = {
    * true
    */
   has_projects: boolean;
-  organization?: null | SimpleUser;
+  organization?: SimpleUser | null;
 
   /**
    *
@@ -49682,7 +49682,7 @@ export type CheckSuite = {
    * 5
    */
   id: number;
-  app: null | Integration;
+  app: Integration | null;
 
   /**
    *
@@ -49987,7 +49987,7 @@ export type GistCommit = {
    * \\"https://api.github.com/gists/aa5a315d61ae9438b18d/57a7f021a713b1c5a6a199b54cc514735d2d462f\\"
    */
   url: string;
-  user: null | SimpleUser;
+  user: SimpleUser | null;
 
   /**
    *
@@ -50048,7 +50048,7 @@ export type GistSimple = {
   fork_of?: {
     id: string;
     url: string;
-    user: null | SimpleUser;
+    user: SimpleUser | null;
     files: Record<
       string,
       {
@@ -50060,7 +50060,7 @@ export type GistSimple = {
       }
     >;
     forks?: Array<{}>;
-    owner?: null | SimpleUser;
+    owner?: SimpleUser | null;
     public: boolean;
     history?: Array<{}>;
     node_id: string;
@@ -50130,7 +50130,7 @@ export type Integration = {
    * \\"probot-owners\\"
    */
   slug?: string;
-  owner: null | SimpleUser;
+  owner: SimpleUser | null;
 
   /**
    * The list of events for the GitHub app
@@ -50238,7 +50238,7 @@ export type IssueEvent = {
    * \\"https://api.github.com/repos/octocat/Hello-World/issues/events/1\\"
    */
   url: string;
-  actor: null | SimpleUser;
+  actor: SimpleUser | null;
 
   /**
    *
@@ -50246,7 +50246,7 @@ export type IssueEvent = {
    * \\"closed\\"
    */
   event: string;
-  issue?: null | Issue;
+  issue?: Issue | null;
   label?: IssueEventLabel;
   rename?: IssueEventRename;
 
@@ -50256,8 +50256,8 @@ export type IssueEvent = {
    * \\"MDEwOklzc3VlRXZlbnQx\\"
    */
   node_id: string;
-  assignee?: null | SimpleUser;
-  assigner?: null | SimpleUser;
+  assignee?: SimpleUser | null;
+  assigner?: SimpleUser | null;
 
   /**
    *
@@ -50284,10 +50284,10 @@ export type IssueEvent = {
   project_card?: IssueEventProjectCard;
   requested_team?: Team;
   dismissed_review?: IssueEventDismissedReview;
-  review_requester?: null | SimpleUser;
+  review_requester?: SimpleUser | null;
   author_association?: AuthorAssociation;
-  requested_reviewer?: null | SimpleUser;
-  performed_via_github_app?: null | Integration;
+  requested_reviewer?: SimpleUser | null;
+  performed_via_github_app?: Integration | null;
 };
 
 /**
@@ -50970,7 +50970,7 @@ export type GistComment = {
    * \\"Body of the attachment\\"
    */
   body: string;
-  user: null | SimpleUser;
+  user: SimpleUser | null;
 
   /**
    *
@@ -51000,7 +51000,7 @@ export type GistComment = {
  */
 export type GistHistory = {
   url?: string;
-  user?: null | SimpleUser;
+  user?: SimpleUser | null;
   version?: string;
   committed_at?: string;
   change_status?: {
@@ -51061,7 +51061,7 @@ export type Installation = {
    */
   target_type: string;
   suspended_at: string;
-  suspended_by: null | SimpleUser;
+  suspended_by: SimpleUser | null;
 
   /**
    *
@@ -51409,7 +51409,7 @@ export type ProjectCard = {
    * \\"Add payload for delete Project column\\"
    */
   note: string;
-  creator: null | SimpleUser;
+  creator: SimpleUser | null;
 
   /**
    *
@@ -51514,7 +51514,7 @@ export type PullRequest = {
       };
       topics?: Array<string>;
       git_url: string;
-      license: null | LicenseSimple;
+      license: LicenseSimple | null;
       node_id: string;
       private: boolean;
       ssh_url: string;
@@ -51773,7 +51773,7 @@ export type PullRequest = {
     };
     label: string;
   };
-  user: null | SimpleUser;
+  user: SimpleUser | null;
 
   /**
    * Indicates whether or not the pull request is a draft.
@@ -51847,7 +51847,7 @@ export type PullRequest = {
    * \\"MDExOlB1bGxSZXF1ZXN0MQ==\\"
    */
   node_id: string;
-  assignee: null | SimpleUser;
+  assignee: SimpleUser | null;
 
   /**
    *
@@ -51912,8 +51912,8 @@ export type PullRequest = {
    * \\"2011-01-26T19:01:12Z\\"
    */
   merged_at: string;
-  merged_by: null | SimpleUser;
-  milestone: null | Milestone;
+  merged_by: SimpleUser | null;
+  milestone: Milestone | null;
 
   /**
    *
@@ -52253,7 +52253,7 @@ export type WorkflowRun = {
    * \\"master\\"
    */
   head_branch: string;
-  head_commit: null | SimpleCommit;
+  head_commit: SimpleCommit | null;
 
   /**
    * Attempt number of the run, 1 for first attempt and higher if the workflow was re-run.
@@ -52349,7 +52349,7 @@ export type Authorization = {
   };
   url: string;
   note: string;
-  user?: null | SimpleUser;
+  user?: SimpleUser | null;
   token: string;
 
   /**
@@ -52362,7 +52362,7 @@ export type Authorization = {
   updated_at: string;
   fingerprint: string;
   hashed_token: string;
-  installation?: null | ScopedInstallation;
+  installation?: ScopedInstallation | null;
   token_last_eight: string;
 };
 
@@ -52610,7 +52610,7 @@ export type IssueComment = {
    * \\"What version of Safari were you using when you observed this bug?\\"
    */
   body?: string;
-  user: null | SimpleUser;
+  user: SimpleUser | null;
   node_id: string;
   html_url: string;
   body_html?: string;
@@ -52632,7 +52632,7 @@ export type IssueComment = {
    */
   updated_at: string;
   author_association: AuthorAssociation;
-  performed_via_github_app?: null | Integration;
+  performed_via_github_app?: Integration | null;
 };
 
 /**
@@ -52672,7 +52672,7 @@ export type ReleaseAsset = {
    */
   state: \\"uploaded\\" | \\"open\\";
   node_id: string;
-  uploader: null | SimpleUser;
+  uploader: SimpleUser | null;
   created_at: string;
   updated_at: string;
   content_type: string;
@@ -52729,7 +52729,7 @@ export type CommitComment = {
   body: string;
   line: number;
   path: string;
-  user: null | SimpleUser;
+  user: SimpleUser | null;
   node_id: string;
   html_url: string;
   position: number;
@@ -52924,7 +52924,7 @@ export type OrgMembership = {
    * \\"admin\\"
    */
   role: \\"admin\\" | \\"member\\" | \\"billing_manager\\";
-  user: null | SimpleUser;
+  user: SimpleUser | null;
 
   /**
    * The state of the member in the organization. The \`pending\` state indicates the user has not yet accepted an invitation.
@@ -53054,7 +53054,7 @@ export type ReviewComment = {
    * The side of the first line of the range for a multi-line comment.
    */
   side?: \\"LEFT\\" | \\"RIGHT\\";
-  user: null | SimpleUser;
+  user: SimpleUser | null;
   _links: {
     html: Link;
     self: Link;
@@ -53785,7 +53785,7 @@ export type FullRepository = {
    * \\"git:github.com/octocat/Hello-World.git\\"
    */
   git_url: string;
-  license: null | LicenseSimple;
+  license: LicenseSimple | null;
 
   /**
    *
@@ -54071,7 +54071,7 @@ export type FullRepository = {
    * true
    */
   has_projects: boolean;
-  organization?: null | SimpleUser;
+  organization?: SimpleUser | null;
 
   /**
    *
@@ -54278,7 +54278,7 @@ export type FullRepository = {
    * true
    */
   allow_update_branch?: boolean;
-  template_repository?: null | Repository;
+  template_repository?: Repository | null;
   security_and_analysis?: SecurityAndAnalysis;
 
   /**
@@ -54319,7 +54319,7 @@ export type LicenseContent = {
   };
   content: string;
   git_url: string;
-  license: null | LicenseSimple;
+  license: LicenseSimple | null;
   encoding: string;
   html_url: string;
   download_url: string;
@@ -54499,7 +54499,7 @@ export type TeamDiscussion = {
    * \\"How can we improve our workflow?\\"
    */
   title: string;
-  author: null | SimpleUser;
+  author: SimpleUser | null;
 
   /**
    * The unique sequence number of a team discussion.
@@ -54647,7 +54647,7 @@ export type TeamRepository = {
    */
   size: number;
   forks: number;
-  owner: null | SimpleUser;
+  owner: SimpleUser | null;
   topics?: Array<string>;
 
   /**
@@ -54656,7 +54656,7 @@ export type TeamRepository = {
    * \\"git:github.com/octocat/Hello-World.git\\"
    */
   git_url: string;
-  license: null | LicenseSimple;
+  license: LicenseSimple | null;
 
   /**
    *
@@ -55151,7 +55151,7 @@ export type TeamRepository = {
    * true
    */
   allow_squash_merge?: boolean;
-  template_repository?: null | Repository;
+  template_repository?: Repository | null;
 
   /**
    * Whether to delete head branches when pull requests are merged
@@ -55385,7 +55385,7 @@ export type ApplicationGrant = {
    * \\"https://api.github.com/applications/grants/1\\"
    */
   url: string;
-  user?: null | SimpleUser;
+  user?: SimpleUser | null;
 
   /**
    *
@@ -55712,13 +55712,13 @@ export type CommitComparison = {
  */
 export type CommunityProfile = {
   files: {
-    readme: null | CommunityHealthFile;
-    license: null | LicenseSimple;
-    contributing: null | CommunityHealthFile;
-    issue_template: null | CommunityHealthFile;
-    code_of_conduct: null | CodeOfConductSimple;
-    code_of_conduct_file: null | CommunityHealthFile;
-    pull_request_template: null | CommunityHealthFile;
+    readme: CommunityHealthFile | null;
+    license: LicenseSimple | null;
+    contributing: CommunityHealthFile | null;
+    issue_template: CommunityHealthFile | null;
+    code_of_conduct: CodeOfConductSimple | null;
+    code_of_conduct_file: CommunityHealthFile | null;
+    pull_request_template: CommunityHealthFile | null;
   };
 
   /**
@@ -55914,7 +55914,7 @@ export type DeploymentSimple = {
    * true
    */
   production_environment?: boolean;
-  performed_via_github_app?: null | Integration;
+  performed_via_github_app?: Integration | null;
 };
 
 /**
@@ -55943,7 +55943,7 @@ export type DeploymentStatus = {
    * \\"success\\"
    */
   state: \\"error\\" | \\"failure\\" | \\"inactive\\" | \\"pending\\" | \\"success\\" | \\"queued\\" | \\"in_progress\\";
-  creator: null | SimpleUser;
+  creator: SimpleUser | null;
 
   /**
    * The URL to associate with this status.
@@ -56019,7 +56019,7 @@ export type DeploymentStatus = {
    * \\"https://staging.example.com/\\"
    */
   environment_url?: string;
-  performed_via_github_app?: null | Integration;
+  performed_via_github_app?: Integration | null;
 };
 
 /**
@@ -57116,7 +57116,7 @@ export type LockedIssueEvent = {
    * \\"\\\\\\"off-topic\\\\\\"\\"
    */
   lock_reason: string;
-  performed_via_github_app: null | Integration;
+  performed_via_github_app: Integration | null;
 };
 
 /**
@@ -57518,7 +57518,7 @@ export type MinimalRepository = {
   notifications_url: string;
   open_issues_count?: number;
   subscribers_count?: number;
-  template_repository?: null | Repository;
+  template_repository?: Repository | null;
   delete_branch_on_merge?: boolean;
 };
 
@@ -57750,7 +57750,7 @@ export type CodeScanningAlert = {
   created_at: AlertCreatedAt;
   updated_at?: AlertUpdatedAt;
   dismissed_at: CodeScanningAlertDismissedAt;
-  dismissed_by: null | SimpleUser;
+  dismissed_by: SimpleUser | null;
   instances_url: AlertInstancesUrl;
   dismissed_reason: CodeScanningAlertDismissedReason;
   dismissed_comment?: CodeScanningAlertDismissedComment;
@@ -57773,7 +57773,7 @@ export type LabeledIssueEvent = {
   commit_id: string;
   commit_url: string;
   created_at: string;
-  performed_via_github_app: null | Integration;
+  performed_via_github_app: Integration | null;
 };
 
 export type MarketplaceAccount = {
@@ -57900,7 +57900,7 @@ export type PullRequestReview = {
    * \\"This looks great.\\"
    */
   body: string;
-  user: null | SimpleUser;
+  user: SimpleUser | null;
 
   /**
    *
@@ -57973,7 +57973,7 @@ export type PullRequestSimple = {
     ref: string;
     sha: string;
     repo: Repository;
-    user: null | SimpleUser;
+    user: SimpleUser | null;
     label: string;
   };
 
@@ -57987,10 +57987,10 @@ export type PullRequestSimple = {
     ref: string;
     sha: string;
     repo: Repository;
-    user: null | SimpleUser;
+    user: SimpleUser | null;
     label: string;
   };
-  user: null | SimpleUser;
+  user: SimpleUser | null;
 
   /**
    * Indicates whether or not the pull request is a draft.
@@ -58053,7 +58053,7 @@ export type PullRequestSimple = {
    * \\"MDExOlB1bGxSZXF1ZXN0MQ==\\"
    */
   node_id: string;
-  assignee: null | SimpleUser;
+  assignee: SimpleUser | null;
 
   /**
    *
@@ -58090,7 +58090,7 @@ export type PullRequestSimple = {
    * \\"2011-01-26T19:01:12Z\\"
    */
   merged_at: string;
-  milestone: null | Milestone;
+  milestone: Milestone | null;
 
   /**
    *
@@ -58211,7 +58211,7 @@ export type RenamedIssueEvent = {
   commit_id: string;
   commit_url: string;
   created_at: string;
-  performed_via_github_app: null | Integration;
+  performed_via_github_app: Integration | null;
 };
 
 export type ScopedInstallation = {
@@ -58456,7 +58456,7 @@ export type ContributorActivity = {
     d?: number;
     w?: number;
   }>;
-  author: null | SimpleUser;
+  author: SimpleUser | null;
 };
 
 /**
@@ -58969,8 +58969,8 @@ export type RepositoryInvitation = {
    * Whether or not the invitation has expired
    */
   expired?: boolean;
-  invitee: null | SimpleUser;
-  inviter: null | SimpleUser;
+  invitee: SimpleUser | null;
+  inviter: SimpleUser | null;
   node_id: string;
 
   /**
@@ -59033,7 +59033,7 @@ export type SecretScanningAlert = {
    * The time that the alert was resolved in ISO 8601 format: \`YYYY-MM-DDTHH:MM:SSZ\`.
    */
   resolved_at?: string;
-  resolved_by?: null | SimpleUser;
+  resolved_by?: SimpleUser | null;
 
   /**
    * The type of secret that secret scanning detected.
@@ -59060,7 +59060,7 @@ For a list of built-in patterns, see \\"[Secret scanning patterns](https://docs.
    * The time that push protection was bypassed in ISO 8601 format: \`YYYY-MM-DDTHH:MM:SSZ\`.
    */
   push_protection_bypassed_at?: string;
-  push_protection_bypassed_by?: null | SimpleUser;
+  push_protection_bypassed_by?: SimpleUser | null;
 };
 
 export type SecurityAndAnalysis = {
@@ -59119,7 +59119,7 @@ export type UnlabeledIssueEvent = {
   commit_id: string;
   commit_url: string;
   created_at: string;
-  performed_via_github_app: null | Integration;
+  performed_via_github_app: Integration | null;
 };
 
 /**
@@ -59294,7 +59294,7 @@ export type MilestonedIssueEvent = {
   };
   commit_url: string;
   created_at: string;
-  performed_via_github_app: null | Integration;
+  performed_via_github_app: Integration | null;
 };
 
 export type PackagesBillingUsage = {
@@ -59381,7 +59381,7 @@ export type TimelineCommentEvent = {
    */
   updated_at: string;
   author_association: AuthorAssociation;
-  performed_via_github_app?: null | Integration;
+  performed_via_github_app?: Integration | null;
 };
 
 /**
@@ -59398,7 +59398,7 @@ export type UnassignedIssueEvent = {
   commit_id: string;
   commit_url: string;
   created_at: string;
-  performed_via_github_app: null | Integration;
+  performed_via_github_app: Integration | null;
 };
 
 /**
@@ -59517,11 +59517,11 @@ export type RepoSearchResultItem = {
   name: string;
   size: number;
   forks: number;
-  owner: null | SimpleUser;
+  owner: SimpleUser | null;
   score: number;
   topics?: Array<string>;
   git_url: string;
-  license: null | LicenseSimple;
+  license: LicenseSimple | null;
   node_id: string;
   private: boolean;
   ssh_url: string;
@@ -59674,7 +59674,7 @@ export type TeamDiscussionComment = {
    * \\"I agree with this suggestion.\\"
    */
   body: string;
-  author: null | SimpleUser;
+  author: SimpleUser | null;
 
   /**
    * The unique sequence number of a team discussion comment.
@@ -60075,7 +60075,7 @@ export type DemilestonedIssueEvent = {
   };
   commit_url: string;
   created_at: string;
-  performed_via_github_app: null | Integration;
+  performed_via_github_app: Integration | null;
 };
 
 /**
@@ -60119,7 +60119,7 @@ export type IssueSearchResultItem = {
   id: number;
   url: string;
   body?: string;
-  user: null | SimpleUser;
+  user: SimpleUser | null;
   draft?: boolean;
   score: number;
   state: string;
@@ -60136,14 +60136,14 @@ export type IssueSearchResultItem = {
   locked: boolean;
   number: number;
   node_id: string;
-  assignee: null | SimpleUser;
+  assignee: SimpleUser | null;
   comments: number;
   html_url: string;
   assignees?: Array<SimpleUser>;
   body_html?: string;
   body_text?: string;
   closed_at: string;
-  milestone: null | Milestone;
+  milestone: Milestone | null;
   reactions?: ReactionRollup;
   created_at: string;
   events_url: string;
@@ -60164,7 +60164,7 @@ export type IssueSearchResultItem = {
   repository_url: string;
   active_lock_reason?: string;
   author_association: AuthorAssociation;
-  performed_via_github_app?: null | Integration;
+  performed_via_github_app?: Integration | null;
 };
 
 /**
@@ -60324,7 +60324,7 @@ export type StateChangeIssueEvent = {
   commit_url: string;
   created_at: string;
   state_reason?: string;
-  performed_via_github_app: null | Integration;
+  performed_via_github_app: Integration | null;
 };
 
 /**
@@ -60638,7 +60638,7 @@ export type CodeScanningAlertItems = {
   created_at: AlertCreatedAt;
   updated_at?: AlertUpdatedAt;
   dismissed_at: CodeScanningAlertDismissedAt;
-  dismissed_by: null | SimpleUser;
+  dismissed_by: SimpleUser | null;
   instances_url: AlertInstancesUrl;
   dismissed_reason: CodeScanningAlertDismissedReason;
   dismissed_comment?: CodeScanningAlertDismissedComment;
@@ -60657,7 +60657,7 @@ export type CommitSearchResultItem = {
   sha: string;
   url: string;
   score: number;
-  author: null | SimpleUser;
+  author: SimpleUser | null;
   commit: {
     url: string;
     tree: {
@@ -60670,7 +60670,7 @@ export type CommitSearchResultItem = {
       email: string;
     };
     message: string;
-    committer: null | GitUser;
+    committer: GitUser | null;
     verification?: Verification;
     comment_count: number;
   };
@@ -60681,7 +60681,7 @@ export type CommitSearchResultItem = {
     html_url?: string;
   }>;
   html_url: string;
-  committer: null | GitUser;
+  committer: GitUser | null;
   repository: MinimalRepository;
   comments_url: string;
   text_matches?: SearchResultTextMatches;
@@ -61167,7 +61167,7 @@ export type AddedToProjectIssueEvent = {
     project_url: string;
     previous_column_name?: string;
   };
-  performed_via_github_app: null | Integration;
+  performed_via_github_app: Integration | null;
 };
 
 /**
@@ -61253,7 +61253,7 @@ export type ReviewDismissedIssueEvent = {
     dismissal_message: string;
     dismissal_commit_id?: string;
   };
-  performed_via_github_app: null | Integration;
+  performed_via_github_app: Integration | null;
 };
 
 /**
@@ -61271,7 +61271,7 @@ export type ReviewRequestedIssueEvent = {
   requested_team?: Team;
   review_requester: SimpleUser;
   requested_reviewer?: SimpleUser;
-  performed_via_github_app: null | Integration;
+  performed_via_github_app: Integration | null;
 };
 
 /**
@@ -61292,7 +61292,7 @@ export type TimelineAssignedIssueEvent = {
   commit_id: string;
   commit_url: string;
   created_at: string;
-  performed_via_github_app: null | Integration;
+  performed_via_github_app: Integration | null;
 };
 
 /**
@@ -61387,7 +61387,7 @@ export type CodeScanningAnalysisSarifId = string;
  * @example @see https://apihero.run/integrations/github/v3.1/examples/project-collaborator-permission
  */
 export type ProjectCollaboratorPermission = {
-  user: null | SimpleUser;
+  user: SimpleUser | null;
   permission: string;
 };
 
@@ -61507,7 +61507,7 @@ export type TimelineUnassignedIssueEvent = {
   commit_id: string;
   commit_url: string;
   created_at: string;
-  performed_via_github_app: null | Integration;
+  performed_via_github_app: Integration | null;
 };
 
 export type ActionsOrganizationPermissions = {
@@ -61583,7 +61583,7 @@ export type RemovedFromProjectIssueEvent = {
     project_url: string;
     previous_column_name?: string;
   };
-  performed_via_github_app: null | Integration;
+  performed_via_github_app: Integration | null;
 };
 
 /**
@@ -61675,13 +61675,13 @@ export type OrganizationSecretScanningAlert = {
   created_at?: AlertCreatedAt;
   repository?: SimpleRepository;
   resolution?: SecretScanningAlertResolution;
-  updated_at?: null | AlertUpdatedAt;
+  updated_at?: AlertUpdatedAt | null;
 
   /**
    * The time that the alert was resolved in ISO 8601 format: \`YYYY-MM-DDTHH:MM:SSZ\`.
    */
   resolved_at?: string;
-  resolved_by?: null | SimpleUser;
+  resolved_by?: SimpleUser | null;
 
   /**
    * The type of secret that secret scanning detected.
@@ -61708,14 +61708,14 @@ For a list of built-in patterns, see \\"[Secret scanning patterns](https://docs.
    * The time that push protection was bypassed in ISO 8601 format: \`YYYY-MM-DDTHH:MM:SSZ\`.
    */
   push_protection_bypassed_at?: string;
-  push_protection_bypassed_by?: null | SimpleUser;
+  push_protection_bypassed_by?: SimpleUser | null;
 };
 
 /**
  * Repository Collaborator Permission
  */
 export type RepositoryCollaboratorPermission = {
-  user: null | Collaborator;
+  user: Collaborator | null;
 
   /**
    *
@@ -61741,7 +61741,7 @@ export type ReviewRequestRemovedIssueEvent = {
   requested_team?: Team;
   review_requester: SimpleUser;
   requested_reviewer?: SimpleUser;
-  performed_via_github_app: null | Integration;
+  performed_via_github_app: Integration | null;
 };
 
 export type AdvancedSecurityActiveCommitters = {
@@ -61814,7 +61814,7 @@ export type MovedColumnInProjectIssueEvent = {
     project_url: string;
     previous_column_name?: string;
   };
-  performed_via_github_app: null | Integration;
+  performed_via_github_app: Integration | null;
 };
 
 /**
@@ -61963,7 +61963,7 @@ export type CodeScanningOrganizationAlertItems = {
   repository: SimpleRepository;
   updated_at?: AlertUpdatedAt;
   dismissed_at: CodeScanningAlertDismissedAt;
-  dismissed_by: null | SimpleUser;
+  dismissed_by: SimpleUser | null;
   instances_url: AlertInstancesUrl;
   dismissed_reason: CodeScanningAlertDismissedReason;
   dismissed_comment?: CodeScanningAlertDismissedComment;
@@ -88360,7 +88360,7 @@ export type FullRepository = {
    * \\"git:github.com/octocat/Hello-World.git\\"
    */
   git_url: string;
-  license: null | LicenseSimple;
+  license: LicenseSimple | null;
 
   /**
    *
@@ -88646,7 +88646,7 @@ export type FullRepository = {
    * true
    */
   has_projects: boolean;
-  organization?: null | SimpleUser;
+  organization?: SimpleUser | null;
 
   /**
    *
@@ -88853,7 +88853,7 @@ export type FullRepository = {
    * true
    */
   allow_update_branch?: boolean;
-  template_repository?: null | Repository;
+  template_repository?: Repository | null;
   security_and_analysis?: SecurityAndAnalysis;
 
   /**
@@ -88995,7 +88995,7 @@ export type Repository = {
    * \\"git:github.com/octocat/Hello-World.git\\"
    */
   git_url: string;
-  license: null | LicenseSimple;
+  license: LicenseSimple | null;
 
   /**
    *
@@ -89297,7 +89297,7 @@ export type Repository = {
    * true
    */
   has_projects: boolean;
-  organization?: null | SimpleUser;
+  organization?: SimpleUser | null;
 
   /**
    *
@@ -90195,7 +90195,7 @@ export type MinimalRepository = {
   notifications_url: string;
   open_issues_count?: number;
   subscribers_count?: number;
-  template_repository?: null | Repository;
+  template_repository?: Repository | null;
   delete_branch_on_merge?: boolean;
 };
 
@@ -90279,7 +90279,7 @@ export type Repository = {
    * \\"git:github.com/octocat/Hello-World.git\\"
    */
   git_url: string;
-  license: null | LicenseSimple;
+  license: LicenseSimple | null;
 
   /**
    *
@@ -90581,7 +90581,7 @@ export type Repository = {
    * true
    */
   has_projects: boolean;
-  organization?: null | SimpleUser;
+  organization?: SimpleUser | null;
 
   /**
    *
