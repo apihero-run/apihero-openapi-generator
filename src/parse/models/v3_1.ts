@@ -25,9 +25,9 @@ export function getModel(
   const normalizedName = normalizeModelName(name);
 
   if ("$ref" in schema) {
-    return getReferenceModel(doc, schema, normalizedName, isDefinition);
+    return getReferenceModel(doc, schema, normalizedName, name, isDefinition);
   } else {
-    return getSchemaModel(doc, schema, normalizedName, isDefinition);
+    return getSchemaModel(doc, schema, normalizedName, name, isDefinition);
   }
 }
 
@@ -35,6 +35,7 @@ function getReferenceModel(
   doc: OpenAPIV3_1.Document,
   schema: OpenAPIV3_1.ReferenceObject,
   name: string,
+  identifier: string,
   isDefinition: boolean,
 ): Model {
   const model: Model = {
@@ -69,6 +70,7 @@ function getSchemaModel(
   doc: OpenAPIV3_1.Document,
   schema: OpenAPIV3_1.SchemaObject,
   name: string,
+  identifier: string,
   isDefinition: boolean,
 ): Model {
   const model: Model = {
@@ -104,6 +106,12 @@ function getSchemaModel(
     pattern: getPattern(schema.pattern),
     deprecated: schema.deprecated,
   };
+
+  const example = getExampleForIdentifier(doc, identifier);
+
+  if (example) {
+    model.example = example.value;
+  }
 
   const schemaType = getSchemaType(schema.type);
 
@@ -663,6 +671,16 @@ export function getType(type: string | string[] = "any", format?: string): Type 
   }
 
   return result;
+}
+
+function getExampleForIdentifier(
+  doc: OpenAPIV3_1.Document,
+  identifier: string,
+): OpenAPIV3_1.ExampleObject | undefined {
+  const examples = doc.components?.examples;
+  if (examples) {
+    return examples[identifier];
+  }
 }
 
 // normalizeModelName should be used to convert a model name to a valid typescript name

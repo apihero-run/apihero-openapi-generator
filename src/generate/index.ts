@@ -250,13 +250,34 @@ function generateModelComments(m: Model) {
     "\n\n/** " +
     (m.description ? `\n* ${m.description}` : "") +
     (m.deprecated ? `\n* @deprecated` : "") +
-    (m.examples && m.examples.length > 0
-      ? `\n* ${m.examples
-          .map((example) => `\n* @example\n* ${JSON.stringify(example, null, 2)}`)
-          .join("\n* ")}`
-      : "") +
+    generateModelExamples(m) +
     "\n*/"
   );
+}
+
+function prettyPrintJSONInComment(json: string): string {
+  return `${json.replace(/\r?\n/g, "\n* ")}`;
+}
+
+function generateModelExamples(m: Model) {
+  if (!m.example && (!m.examples || m.examples.length === 0)) {
+    return "";
+  }
+
+  if (m.example) {
+    return `\n* @example\n* ${prettyPrintJSONInComment(JSON.stringify(m.example, null, 2))}`;
+  }
+
+  if (m.examples) {
+    return `\n* ${m.examples
+      .map(
+        (example) =>
+          `\n* @example\n* ${prettyPrintJSONInComment(JSON.stringify(example, null, 2))}`,
+      )
+      .join("\n* ")}`;
+  }
+
+  return "";
 }
 
 function generateType(property: Model, parent?: Model) {
