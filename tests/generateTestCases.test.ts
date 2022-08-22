@@ -18,4 +18,5 @@ async function generateTestCase(testCaseId: string): Promise<Map<string, string>
 
 test("code generation test cases", async () => {
   expect(await generateTestCase("createLabel")).toMatchSnapshot();
+  expect(await generateTestCase("getAuthenticatedApp")).toMatchSnapshot();
 });

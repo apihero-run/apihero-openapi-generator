@@ -258,7 +258,15 @@ export type Integration = {
    *   \\"deployments\\": \\"write\\"
    * }
    */
-  permissions: Record<string, string>;
+  permissions: {
+    issues?: string;
+    checks?: string;
+    metadata?: string;
+    contents?: string;
+    deployments?: string;
+
+    [key: string]: string;
+  };
 
   /**
    * The list of events for the GitHub app
@@ -3376,7 +3384,15 @@ export type NullableIntegration = {
    *   \\"deployments\\": \\"write\\"
    * }
    */
-  permissions: Record<string, string>;
+  permissions: {
+    issues?: string;
+    checks?: string;
+    metadata?: string;
+    contents?: string;
+    deployments?: string;
+
+    [key: string]: string;
+  };
 
   /**
    * The list of events for the GitHub app
@@ -50188,7 +50204,15 @@ export type Integration = {
   /**
    * The set of permissions for the GitHub app
    */
-  permissions: Record<string, string>;
+  permissions: {
+    checks?: string;
+    issues?: string;
+    contents?: string;
+    metadata?: string;
+    deployments?: string;
+
+    [key: string]: string;
+  };
 
   /**
    *

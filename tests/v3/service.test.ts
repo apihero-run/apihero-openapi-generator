@@ -952,6 +952,7 @@ test("getService with GitHub repos service", async () => {
               "enum": Array [],
               "enums": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Can be \`public\` or \`private\`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, \`visibility\` can also be \`internal\`. Note: For GitHub Enterprise Server and GitHub AE, this endpoint will only list repositories available to all users on the enterprise. For more information, see \\"[Creating an internal repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility#about-internal-repositories)\\" in the GitHub Help documentation.",
@@ -1030,6 +1031,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The name of the repository.",
@@ -1063,6 +1065,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "A short description of the repository.",
@@ -1096,6 +1099,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "A URL with more information about the repository.",
@@ -1129,6 +1133,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Whether the repository is private.",
@@ -1162,6 +1167,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Can be \`public\` or \`private\`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, \`visibility\` can also be \`internal\`. Note: For GitHub Enterprise Server and GitHub AE, this endpoint will only list repositories available to all users on the enterprise. For more information, see \\"[Creating an internal repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility#about-internal-repositories)\\" in the GitHub Help documentation.",
@@ -1214,6 +1220,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to enable issues for this repository or \`false\` to disable them.",
@@ -1247,6 +1254,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to enable projects for this repository or \`false\` to disable them. **Note:** If you're creating a repository in an organization that has disabled repository projects, the default is \`false\`, and if you pass \`true\`, the API returns an error.",
@@ -1280,6 +1288,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to enable the wiki for this repository or \`false\` to disable it.",
@@ -1313,6 +1322,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to make this repo available as a template repository or \`false\` to prevent it.",
@@ -1346,6 +1356,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "number",
                   "deprecated": undefined,
                   "description": "The id of the team that will be granted access to this repository. This is only valid when creating a repository in an organization.",
@@ -1379,6 +1390,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Pass \`true\` to create an initial commit with empty README.",
@@ -1412,6 +1424,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Desired language or platform [.gitignore template](https://github.com/github/gitignore) to apply. Use the name of the template without the extension. For example, \\"Haskell\\".",
@@ -1445,6 +1458,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Choose an [open source license template](https://choosealicense.com/) that best suits your needs, and then use the [license keyword](https://docs.github.com/articles/licensing-a-repository/#searching-github-by-license-type) as the \`license_template\` string. For example, \\"mit\\" or \\"mpl-2.0\\".",
@@ -1478,6 +1492,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to allow squash-merging pull requests, or \`false\` to prevent squash-merging.",
@@ -1511,6 +1526,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to allow merging pull requests with a merge commit, or \`false\` to prevent merging pull requests with merge commits.",
@@ -1544,6 +1560,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to allow rebase-merging pull requests, or \`false\` to prevent rebase-merging.",
@@ -1577,6 +1594,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to allow auto-merge on pull requests, or \`false\` to disallow auto-merge.",
@@ -1610,6 +1628,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to allow automatically deleting head branches when pull requests are merged, or \`false\` to prevent automatic deletion.",
@@ -1643,6 +1662,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to allow squash-merge commits to use pull request title, or \`false\` to use commit message.",
@@ -1688,6 +1708,7 @@ test("getService with GitHub repos service", async () => {
             "enum": Array [],
             "enums": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Can be \`public\` or \`private\`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, \`visibility\` can also be \`internal\`. Note: For GitHub Enterprise Server and GitHub AE, this endpoint will only list repositories available to all users on the enterprise. For more information, see \\"[Creating an internal repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility#about-internal-repositories)\\" in the GitHub Help documentation.",
@@ -1766,6 +1787,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The name of the repository.",
@@ -1799,6 +1821,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "A short description of the repository.",
@@ -1832,6 +1855,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "A URL with more information about the repository.",
@@ -1865,6 +1889,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Whether the repository is private.",
@@ -1898,6 +1923,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Can be \`public\` or \`private\`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, \`visibility\` can also be \`internal\`. Note: For GitHub Enterprise Server and GitHub AE, this endpoint will only list repositories available to all users on the enterprise. For more information, see \\"[Creating an internal repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repository-visibility#about-internal-repositories)\\" in the GitHub Help documentation.",
@@ -1950,6 +1976,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to enable issues for this repository or \`false\` to disable them.",
@@ -1983,6 +2010,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to enable projects for this repository or \`false\` to disable them. **Note:** If you're creating a repository in an organization that has disabled repository projects, the default is \`false\`, and if you pass \`true\`, the API returns an error.",
@@ -2016,6 +2044,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to enable the wiki for this repository or \`false\` to disable it.",
@@ -2049,6 +2078,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to make this repo available as a template repository or \`false\` to prevent it.",
@@ -2082,6 +2112,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "number",
                 "deprecated": undefined,
                 "description": "The id of the team that will be granted access to this repository. This is only valid when creating a repository in an organization.",
@@ -2115,6 +2146,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Pass \`true\` to create an initial commit with empty README.",
@@ -2148,6 +2180,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Desired language or platform [.gitignore template](https://github.com/github/gitignore) to apply. Use the name of the template without the extension. For example, \\"Haskell\\".",
@@ -2181,6 +2214,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Choose an [open source license template](https://choosealicense.com/) that best suits your needs, and then use the [license keyword](https://docs.github.com/articles/licensing-a-repository/#searching-github-by-license-type) as the \`license_template\` string. For example, \\"mit\\" or \\"mpl-2.0\\".",
@@ -2214,6 +2248,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to allow squash-merging pull requests, or \`false\` to prevent squash-merging.",
@@ -2247,6 +2282,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to allow merging pull requests with a merge commit, or \`false\` to prevent merging pull requests with merge commits.",
@@ -2280,6 +2316,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to allow rebase-merging pull requests, or \`false\` to prevent rebase-merging.",
@@ -2313,6 +2350,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to allow auto-merge on pull requests, or \`false\` to disallow auto-merge.",
@@ -2346,6 +2384,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to allow automatically deleting head branches when pull requests are merged, or \`false\` to prevent automatic deletion.",
@@ -2379,6 +2418,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to allow squash-merge commits to use pull request title, or \`false\` to use commit message.",
@@ -3047,6 +3087,7 @@ test("getService with GitHub repos service", async () => {
               "enum": Array [],
               "enums": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Can be \`public\` or \`private\`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, \`visibility\` can also be \`internal\`.\\"",
@@ -3125,6 +3166,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The name of the repository.",
@@ -3158,6 +3200,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "A short description of the repository.",
@@ -3191,6 +3234,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "A URL with more information about the repository.",
@@ -3224,6 +3268,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to make the repository private or \`false\` to make it public. Default: \`false\`.  
@@ -3258,6 +3303,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Can be \`public\` or \`private\`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, \`visibility\` can also be \`internal\`.\\"",
@@ -3310,6 +3356,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "any",
                   "deprecated": undefined,
                   "description": "Specify which security and analysis features to enable or disable. For example, to enable GitHub Advanced Security, use this data in the body of the PATCH request: \`{\\"security_and_analysis\\": {\\"advanced_security\\": {\\"status\\": \\"enabled\\"}}}\`. If you have admin permissions for a private repository covered by an Advanced Security license, you can check which security and analysis features are currently enabled by using a \`GET /repos/{owner}/{repo}\` request.",
@@ -3339,6 +3386,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "any",
                       "deprecated": undefined,
                       "description": "Use the \`status\` property to enable or disable GitHub Advanced Security for this repository. For more information, see \\"[About GitHub Advanced Security](/github/getting-started-with-github/learning-about-github/about-github-advanced-security).\\"",
@@ -3368,6 +3416,7 @@ test("getService with GitHub repos service", async () => {
                       "pattern": undefined,
                       "properties": Array [
                         Object {
+                          "additionalProperties": undefined,
                           "base": "string",
                           "deprecated": undefined,
                           "description": "Can be \`enabled\` or \`disabled\`.",
@@ -3406,6 +3455,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "any",
                       "deprecated": undefined,
                       "description": "Use the \`status\` property to enable or disable secret scanning for this repository. For more information, see \\"[About secret scanning](/code-security/secret-security/about-secret-scanning).\\"",
@@ -3435,6 +3485,7 @@ test("getService with GitHub repos service", async () => {
                       "pattern": undefined,
                       "properties": Array [
                         Object {
+                          "additionalProperties": undefined,
                           "base": "string",
                           "deprecated": undefined,
                           "description": "Can be \`enabled\` or \`disabled\`.",
@@ -3473,6 +3524,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "any",
                       "deprecated": undefined,
                       "description": "Use the \`status\` property to enable or disable secret scanning push protection for this repository. For more information, see \\"[Protecting pushes with secret scanning](/code-security/secret-scanning/protecting-pushes-with-secret-scanning).\\"",
@@ -3502,6 +3554,7 @@ test("getService with GitHub repos service", async () => {
                       "pattern": undefined,
                       "properties": Array [
                         Object {
+                          "additionalProperties": undefined,
                           "base": "string",
                           "deprecated": undefined,
                           "description": "Can be \`enabled\` or \`disabled\`.",
@@ -3545,6 +3598,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to enable issues for this repository or \`false\` to disable them.",
@@ -3578,6 +3632,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to enable projects for this repository or \`false\` to disable them. **Note:** If you're creating a repository in an organization that has disabled repository projects, the default is \`false\`, and if you pass \`true\`, the API returns an error.",
@@ -3611,6 +3666,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to enable the wiki for this repository or \`false\` to disable it.",
@@ -3644,6 +3700,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to make this repo available as a template repository or \`false\` to prevent it.",
@@ -3677,6 +3734,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Updates the default branch for this repository.",
@@ -3710,6 +3768,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to allow squash-merging pull requests, or \`false\` to prevent squash-merging.",
@@ -3743,6 +3802,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to allow merging pull requests with a merge commit, or \`false\` to prevent merging pull requests with merge commits.",
@@ -3776,6 +3836,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to allow rebase-merging pull requests, or \`false\` to prevent rebase-merging.",
@@ -3809,6 +3870,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to allow auto-merge on pull requests, or \`false\` to disallow auto-merge.",
@@ -3842,6 +3904,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to allow automatically deleting head branches when pull requests are merged, or \`false\` to prevent automatic deletion.",
@@ -3875,6 +3938,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to always allow a pull request head branch that is behind its base branch to be updated even if it is not required to be up to date before merging, or false otherwise.",
@@ -3908,6 +3972,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to allow squash-merge commits to use pull request title, or \`false\` to use commit message.",
@@ -3941,6 +4006,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "\`true\` to archive this repository. **Note**: You cannot unarchive repositories through the API.",
@@ -3974,6 +4040,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to allow private forks, or \`false\` to prevent private forks.",
@@ -4019,6 +4086,7 @@ test("getService with GitHub repos service", async () => {
             "enum": Array [],
             "enums": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Can be \`public\` or \`private\`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, \`visibility\` can also be \`internal\`.\\"",
@@ -4097,6 +4165,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The name of the repository.",
@@ -4130,6 +4199,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "A short description of the repository.",
@@ -4163,6 +4233,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "A URL with more information about the repository.",
@@ -4196,6 +4267,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to make the repository private or \`false\` to make it public. Default: \`false\`.  
@@ -4230,6 +4302,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Can be \`public\` or \`private\`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, \`visibility\` can also be \`internal\`.\\"",
@@ -4282,6 +4355,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "any",
                 "deprecated": undefined,
                 "description": "Specify which security and analysis features to enable or disable. For example, to enable GitHub Advanced Security, use this data in the body of the PATCH request: \`{\\"security_and_analysis\\": {\\"advanced_security\\": {\\"status\\": \\"enabled\\"}}}\`. If you have admin permissions for a private repository covered by an Advanced Security license, you can check which security and analysis features are currently enabled by using a \`GET /repos/{owner}/{repo}\` request.",
@@ -4311,6 +4385,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "any",
                     "deprecated": undefined,
                     "description": "Use the \`status\` property to enable or disable GitHub Advanced Security for this repository. For more information, see \\"[About GitHub Advanced Security](/github/getting-started-with-github/learning-about-github/about-github-advanced-security).\\"",
@@ -4340,6 +4415,7 @@ test("getService with GitHub repos service", async () => {
                     "pattern": undefined,
                     "properties": Array [
                       Object {
+                        "additionalProperties": undefined,
                         "base": "string",
                         "deprecated": undefined,
                         "description": "Can be \`enabled\` or \`disabled\`.",
@@ -4378,6 +4454,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "any",
                     "deprecated": undefined,
                     "description": "Use the \`status\` property to enable or disable secret scanning for this repository. For more information, see \\"[About secret scanning](/code-security/secret-security/about-secret-scanning).\\"",
@@ -4407,6 +4484,7 @@ test("getService with GitHub repos service", async () => {
                     "pattern": undefined,
                     "properties": Array [
                       Object {
+                        "additionalProperties": undefined,
                         "base": "string",
                         "deprecated": undefined,
                         "description": "Can be \`enabled\` or \`disabled\`.",
@@ -4445,6 +4523,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "any",
                     "deprecated": undefined,
                     "description": "Use the \`status\` property to enable or disable secret scanning push protection for this repository. For more information, see \\"[Protecting pushes with secret scanning](/code-security/secret-scanning/protecting-pushes-with-secret-scanning).\\"",
@@ -4474,6 +4553,7 @@ test("getService with GitHub repos service", async () => {
                     "pattern": undefined,
                     "properties": Array [
                       Object {
+                        "additionalProperties": undefined,
                         "base": "string",
                         "deprecated": undefined,
                         "description": "Can be \`enabled\` or \`disabled\`.",
@@ -4517,6 +4597,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to enable issues for this repository or \`false\` to disable them.",
@@ -4550,6 +4631,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to enable projects for this repository or \`false\` to disable them. **Note:** If you're creating a repository in an organization that has disabled repository projects, the default is \`false\`, and if you pass \`true\`, the API returns an error.",
@@ -4583,6 +4665,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to enable the wiki for this repository or \`false\` to disable it.",
@@ -4616,6 +4699,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to make this repo available as a template repository or \`false\` to prevent it.",
@@ -4649,6 +4733,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Updates the default branch for this repository.",
@@ -4682,6 +4767,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to allow squash-merging pull requests, or \`false\` to prevent squash-merging.",
@@ -4715,6 +4801,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to allow merging pull requests with a merge commit, or \`false\` to prevent merging pull requests with merge commits.",
@@ -4748,6 +4835,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to allow rebase-merging pull requests, or \`false\` to prevent rebase-merging.",
@@ -4781,6 +4869,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to allow auto-merge on pull requests, or \`false\` to disallow auto-merge.",
@@ -4814,6 +4903,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to allow automatically deleting head branches when pull requests are merged, or \`false\` to prevent automatic deletion.",
@@ -4847,6 +4937,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to always allow a pull request head branch that is behind its base branch to be updated even if it is not required to be up to date before merging, or false otherwise.",
@@ -4880,6 +4971,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to allow squash-merge commits to use pull request title, or \`false\` to use commit message.",
@@ -4913,6 +5005,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "\`true\` to archive this repository. **Note**: You cannot unarchive repositories through the API.",
@@ -4946,6 +5039,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to allow private forks, or \`false\` to prevent private forks.",
@@ -5501,6 +5595,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The prefix appended by alphanumeric characters will generate a link any time it is found in an issue, pull request, or commit.",
@@ -5534,6 +5629,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The URL must contain \`<num>\` for the reference number. \`<num>\` matches alphanumeric characters \`A-Z\` (case insensitive), \`0-9\`, and \`-\`.",
@@ -5604,6 +5700,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The prefix appended by alphanumeric characters will generate a link any time it is found in an issue, pull request, or commit.",
@@ -5637,6 +5734,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The URL must contain \`<num>\` for the reference number. \`<num>\` matches alphanumeric characters \`A-Z\` (case insensitive), \`0-9\`, and \`-\`.",
@@ -7938,6 +8036,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "any",
                   "deprecated": undefined,
                   "description": "Require status checks to pass before merging. Set to \`null\` to disable.",
@@ -7967,6 +8066,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "boolean",
                       "deprecated": undefined,
                       "description": "Require branches to be up to date before merging.",
@@ -8000,6 +8100,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": true,
                       "description": "**Deprecated**: The list of status checks to require in order to merge into this branch. If any of these checks have recently been set by a particular GitHub App, they will be required to come from that app in future for the branch to merge. Use \`checks\` instead of \`contexts\` for more fine-grained control.
@@ -8067,6 +8168,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "any",
                       "deprecated": undefined,
                       "description": "The list of status checks to require in order to merge into this branch.",
@@ -8112,6 +8214,7 @@ test("getService with GitHub repos service", async () => {
                         "pattern": undefined,
                         "properties": Array [
                           Object {
+                            "additionalProperties": undefined,
                             "base": "string",
                             "deprecated": undefined,
                             "description": "The name of the required check",
@@ -8145,6 +8248,7 @@ test("getService with GitHub repos service", async () => {
                             "uniqueItems": undefined,
                           },
                           Object {
+                            "additionalProperties": undefined,
                             "base": "number",
                             "deprecated": undefined,
                             "description": "The ID of the GitHub App that must provide this check. Omit this field to automatically select the GitHub App that has recently provided this check, or any app if it was not set by a GitHub App. Pass -1 to explicitly allow any app to set the status.",
@@ -8204,6 +8308,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Enforce all configured restrictions for administrators. Set to \`true\` to enforce required status checks for repository administrators. Set to \`null\` to disable.",
@@ -8237,6 +8342,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "any",
                   "deprecated": undefined,
                   "description": "Require at least one approving review on a pull request, before merging. Set to \`null\` to disable.",
@@ -8266,6 +8372,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "any",
                       "deprecated": undefined,
                       "description": "Specify which users, teams, and apps can dismiss pull request reviews. Pass an empty \`dismissal_restrictions\` object to disable. User and team \`dismissal_restrictions\` are only available for organization-owned repositories. Omit this parameter for personal repositories.",
@@ -8295,6 +8402,7 @@ test("getService with GitHub repos service", async () => {
                       "pattern": undefined,
                       "properties": Array [
                         Object {
+                          "additionalProperties": undefined,
                           "base": "string",
                           "deprecated": undefined,
                           "description": "The list of user \`login\`s with dismissal access",
@@ -8361,6 +8469,7 @@ test("getService with GitHub repos service", async () => {
                           "uniqueItems": undefined,
                         },
                         Object {
+                          "additionalProperties": undefined,
                           "base": "string",
                           "deprecated": undefined,
                           "description": "The list of team \`slug\`s with dismissal access",
@@ -8427,6 +8536,7 @@ test("getService with GitHub repos service", async () => {
                           "uniqueItems": undefined,
                         },
                         Object {
+                          "additionalProperties": undefined,
                           "base": "string",
                           "deprecated": undefined,
                           "description": "The list of app \`slug\`s with dismissal access",
@@ -8498,6 +8608,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "boolean",
                       "deprecated": undefined,
                       "description": "Set to \`true\` if you want to automatically dismiss approving reviews when someone pushes a new commit.",
@@ -8531,6 +8642,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "boolean",
                       "deprecated": undefined,
                       "description": "Blocks merging pull requests until [code owners](https://docs.github.com/articles/about-code-owners/) review them.",
@@ -8564,6 +8676,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "number",
                       "deprecated": undefined,
                       "description": "Specify the number of reviewers required to approve pull requests. Use a number between 1 and 6 or 0 to not require reviewers.",
@@ -8597,6 +8710,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "any",
                       "deprecated": undefined,
                       "description": "Allow specific users, teams, or apps to bypass pull request requirements.",
@@ -8626,6 +8740,7 @@ test("getService with GitHub repos service", async () => {
                       "pattern": undefined,
                       "properties": Array [
                         Object {
+                          "additionalProperties": undefined,
                           "base": "string",
                           "deprecated": undefined,
                           "description": "The list of user \`login\`s allowed to bypass pull request requirements.",
@@ -8692,6 +8807,7 @@ test("getService with GitHub repos service", async () => {
                           "uniqueItems": undefined,
                         },
                         Object {
+                          "additionalProperties": undefined,
                           "base": "string",
                           "deprecated": undefined,
                           "description": "The list of team \`slug\`s allowed to bypass pull request requirements.",
@@ -8758,6 +8874,7 @@ test("getService with GitHub repos service", async () => {
                           "uniqueItems": undefined,
                         },
                         Object {
+                          "additionalProperties": undefined,
                           "base": "string",
                           "deprecated": undefined,
                           "description": "The list of app \`slug\`s allowed to bypass pull request requirements.",
@@ -8834,6 +8951,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "any",
                   "deprecated": undefined,
                   "description": "Restrict who can push to the protected branch. User, app, and team \`restrictions\` are only available for organization-owned repositories. Set to \`null\` to disable.",
@@ -8863,6 +8981,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "The list of user \`login\`s with push access",
@@ -8929,6 +9048,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "The list of team \`slug\`s with push access",
@@ -8995,6 +9115,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "The list of app \`slug\`s with push access",
@@ -9066,6 +9187,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Enforces a linear commit Git history, which prevents anyone from pushing merge commits to a branch. Set to \`true\` to enforce a linear commit history. Set to \`false\` to disable a linear commit Git history. Your repository must allow squash merging or rebase merging before you can enable a linear commit history. Default: \`false\`. For more information, see \\"[Requiring a linear commit history](https://docs.github.com/github/administering-a-repository/requiring-a-linear-commit-history)\\" in the GitHub Help documentation.",
@@ -9099,6 +9221,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Permits force pushes to the protected branch by anyone with write access to the repository. Set to \`true\` to allow force pushes. Set to \`false\` or \`null\` to block force pushes. Default: \`false\`. For more information, see \\"[Enabling force pushes to a protected branch](https://docs.github.com/en/github/administering-a-repository/enabling-force-pushes-to-a-protected-branch)\\" in the GitHub Help documentation.\\"",
@@ -9132,6 +9255,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Allows deletion of the protected branch by anyone with write access to the repository. Set to \`false\` to prevent deletion of the protected branch. Default: \`false\`. For more information, see \\"[Enabling force pushes to a protected branch](https://docs.github.com/en/github/administering-a-repository/enabling-force-pushes-to-a-protected-branch)\\" in the GitHub Help documentation.",
@@ -9165,6 +9289,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "If set to \`true\`, the \`restrictions\` branch protection settings which limits who can push will also block pushes which create new branches, unless the push is initiated by a user, team, or app which has the ability to push. Set to \`true\` to restrict new branch creation. Default: \`false\`.",
@@ -9198,6 +9323,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Requires all conversations on code to be resolved before a pull request can be merged into a branch that matches this rule. Set to \`false\` to disable. Default: \`false\`.",
@@ -9268,6 +9394,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "any",
                 "deprecated": undefined,
                 "description": "Require status checks to pass before merging. Set to \`null\` to disable.",
@@ -9297,6 +9424,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "boolean",
                     "deprecated": undefined,
                     "description": "Require branches to be up to date before merging.",
@@ -9330,6 +9458,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": true,
                     "description": "**Deprecated**: The list of status checks to require in order to merge into this branch. If any of these checks have recently been set by a particular GitHub App, they will be required to come from that app in future for the branch to merge. Use \`checks\` instead of \`contexts\` for more fine-grained control.
@@ -9397,6 +9526,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "any",
                     "deprecated": undefined,
                     "description": "The list of status checks to require in order to merge into this branch.",
@@ -9442,6 +9572,7 @@ test("getService with GitHub repos service", async () => {
                       "pattern": undefined,
                       "properties": Array [
                         Object {
+                          "additionalProperties": undefined,
                           "base": "string",
                           "deprecated": undefined,
                           "description": "The name of the required check",
@@ -9475,6 +9606,7 @@ test("getService with GitHub repos service", async () => {
                           "uniqueItems": undefined,
                         },
                         Object {
+                          "additionalProperties": undefined,
                           "base": "number",
                           "deprecated": undefined,
                           "description": "The ID of the GitHub App that must provide this check. Omit this field to automatically select the GitHub App that has recently provided this check, or any app if it was not set by a GitHub App. Pass -1 to explicitly allow any app to set the status.",
@@ -9534,6 +9666,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Enforce all configured restrictions for administrators. Set to \`true\` to enforce required status checks for repository administrators. Set to \`null\` to disable.",
@@ -9567,6 +9700,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "any",
                 "deprecated": undefined,
                 "description": "Require at least one approving review on a pull request, before merging. Set to \`null\` to disable.",
@@ -9596,6 +9730,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "any",
                     "deprecated": undefined,
                     "description": "Specify which users, teams, and apps can dismiss pull request reviews. Pass an empty \`dismissal_restrictions\` object to disable. User and team \`dismissal_restrictions\` are only available for organization-owned repositories. Omit this parameter for personal repositories.",
@@ -9625,6 +9760,7 @@ test("getService with GitHub repos service", async () => {
                     "pattern": undefined,
                     "properties": Array [
                       Object {
+                        "additionalProperties": undefined,
                         "base": "string",
                         "deprecated": undefined,
                         "description": "The list of user \`login\`s with dismissal access",
@@ -9691,6 +9827,7 @@ test("getService with GitHub repos service", async () => {
                         "uniqueItems": undefined,
                       },
                       Object {
+                        "additionalProperties": undefined,
                         "base": "string",
                         "deprecated": undefined,
                         "description": "The list of team \`slug\`s with dismissal access",
@@ -9757,6 +9894,7 @@ test("getService with GitHub repos service", async () => {
                         "uniqueItems": undefined,
                       },
                       Object {
+                        "additionalProperties": undefined,
                         "base": "string",
                         "deprecated": undefined,
                         "description": "The list of app \`slug\`s with dismissal access",
@@ -9828,6 +9966,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "boolean",
                     "deprecated": undefined,
                     "description": "Set to \`true\` if you want to automatically dismiss approving reviews when someone pushes a new commit.",
@@ -9861,6 +10000,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "boolean",
                     "deprecated": undefined,
                     "description": "Blocks merging pull requests until [code owners](https://docs.github.com/articles/about-code-owners/) review them.",
@@ -9894,6 +10034,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "number",
                     "deprecated": undefined,
                     "description": "Specify the number of reviewers required to approve pull requests. Use a number between 1 and 6 or 0 to not require reviewers.",
@@ -9927,6 +10068,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "any",
                     "deprecated": undefined,
                     "description": "Allow specific users, teams, or apps to bypass pull request requirements.",
@@ -9956,6 +10098,7 @@ test("getService with GitHub repos service", async () => {
                     "pattern": undefined,
                     "properties": Array [
                       Object {
+                        "additionalProperties": undefined,
                         "base": "string",
                         "deprecated": undefined,
                         "description": "The list of user \`login\`s allowed to bypass pull request requirements.",
@@ -10022,6 +10165,7 @@ test("getService with GitHub repos service", async () => {
                         "uniqueItems": undefined,
                       },
                       Object {
+                        "additionalProperties": undefined,
                         "base": "string",
                         "deprecated": undefined,
                         "description": "The list of team \`slug\`s allowed to bypass pull request requirements.",
@@ -10088,6 +10232,7 @@ test("getService with GitHub repos service", async () => {
                         "uniqueItems": undefined,
                       },
                       Object {
+                        "additionalProperties": undefined,
                         "base": "string",
                         "deprecated": undefined,
                         "description": "The list of app \`slug\`s allowed to bypass pull request requirements.",
@@ -10164,6 +10309,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "any",
                 "deprecated": undefined,
                 "description": "Restrict who can push to the protected branch. User, app, and team \`restrictions\` are only available for organization-owned repositories. Set to \`null\` to disable.",
@@ -10193,6 +10339,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "The list of user \`login\`s with push access",
@@ -10259,6 +10406,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "The list of team \`slug\`s with push access",
@@ -10325,6 +10473,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "The list of app \`slug\`s with push access",
@@ -10396,6 +10545,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Enforces a linear commit Git history, which prevents anyone from pushing merge commits to a branch. Set to \`true\` to enforce a linear commit history. Set to \`false\` to disable a linear commit Git history. Your repository must allow squash merging or rebase merging before you can enable a linear commit history. Default: \`false\`. For more information, see \\"[Requiring a linear commit history](https://docs.github.com/github/administering-a-repository/requiring-a-linear-commit-history)\\" in the GitHub Help documentation.",
@@ -10429,6 +10579,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Permits force pushes to the protected branch by anyone with write access to the repository. Set to \`true\` to allow force pushes. Set to \`false\` or \`null\` to block force pushes. Default: \`false\`. For more information, see \\"[Enabling force pushes to a protected branch](https://docs.github.com/en/github/administering-a-repository/enabling-force-pushes-to-a-protected-branch)\\" in the GitHub Help documentation.\\"",
@@ -10462,6 +10613,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Allows deletion of the protected branch by anyone with write access to the repository. Set to \`false\` to prevent deletion of the protected branch. Default: \`false\`. For more information, see \\"[Enabling force pushes to a protected branch](https://docs.github.com/en/github/administering-a-repository/enabling-force-pushes-to-a-protected-branch)\\" in the GitHub Help documentation.",
@@ -10495,6 +10647,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "If set to \`true\`, the \`restrictions\` branch protection settings which limits who can push will also block pushes which create new branches, unless the push is initiated by a user, team, or app which has the ability to push. Set to \`true\` to restrict new branch creation. Default: \`false\`.",
@@ -10528,6 +10681,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Requires all conversations on code to be resolved before a pull request can be merged into a branch that matches this rule. Set to \`false\` to disable. Default: \`false\`.",
@@ -12501,6 +12655,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "any",
                   "deprecated": undefined,
                   "description": "Specify which users, teams, and apps can dismiss pull request reviews. Pass an empty \`dismissal_restrictions\` object to disable. User and team \`dismissal_restrictions\` are only available for organization-owned repositories. Omit this parameter for personal repositories.",
@@ -12530,6 +12685,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "The list of user \`login\`s with dismissal access",
@@ -12596,6 +12752,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "The list of team \`slug\`s with dismissal access",
@@ -12662,6 +12819,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "The list of app \`slug\`s with dismissal access",
@@ -12733,6 +12891,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Set to \`true\` if you want to automatically dismiss approving reviews when someone pushes a new commit.",
@@ -12766,6 +12925,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Blocks merging pull requests until [code owners](https://docs.github.com/articles/about-code-owners/) have reviewed.",
@@ -12799,6 +12959,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "number",
                   "deprecated": undefined,
                   "description": "Specifies the number of reviewers required to approve pull requests. Use a number between 1 and 6 or 0 to not require reviewers.",
@@ -12832,6 +12993,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "any",
                   "deprecated": undefined,
                   "description": "Allow specific users, teams, or apps to bypass pull request requirements.",
@@ -12861,6 +13023,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "The list of user \`login\`s allowed to bypass pull request requirements.",
@@ -12927,6 +13090,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "The list of team \`slug\`s allowed to bypass pull request requirements.",
@@ -12993,6 +13157,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "The list of app \`slug\`s allowed to bypass pull request requirements.",
@@ -13101,6 +13266,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "any",
                 "deprecated": undefined,
                 "description": "Specify which users, teams, and apps can dismiss pull request reviews. Pass an empty \`dismissal_restrictions\` object to disable. User and team \`dismissal_restrictions\` are only available for organization-owned repositories. Omit this parameter for personal repositories.",
@@ -13130,6 +13296,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "The list of user \`login\`s with dismissal access",
@@ -13196,6 +13363,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "The list of team \`slug\`s with dismissal access",
@@ -13262,6 +13430,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "The list of app \`slug\`s with dismissal access",
@@ -13333,6 +13502,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Set to \`true\` if you want to automatically dismiss approving reviews when someone pushes a new commit.",
@@ -13366,6 +13536,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Blocks merging pull requests until [code owners](https://docs.github.com/articles/about-code-owners/) have reviewed.",
@@ -13399,6 +13570,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "number",
                 "deprecated": undefined,
                 "description": "Specifies the number of reviewers required to approve pull requests. Use a number between 1 and 6 or 0 to not require reviewers.",
@@ -13432,6 +13604,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "any",
                 "deprecated": undefined,
                 "description": "Allow specific users, teams, or apps to bypass pull request requirements.",
@@ -13461,6 +13634,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "The list of user \`login\`s allowed to bypass pull request requirements.",
@@ -13527,6 +13701,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "The list of team \`slug\`s allowed to bypass pull request requirements.",
@@ -13593,6 +13768,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "The list of app \`slug\`s allowed to bypass pull request requirements.",
@@ -15349,6 +15525,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Require branches to be up to date before merging.",
@@ -15382,6 +15559,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": true,
                   "description": "**Deprecated**: The list of status checks to require in order to merge into this branch. If any of these checks have recently been set by a particular GitHub App, they will be required to come from that app in future for the branch to merge. Use \`checks\` instead of \`contexts\` for more fine-grained control.
@@ -15449,6 +15627,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "any",
                   "deprecated": undefined,
                   "description": "The list of status checks to require in order to merge into this branch.",
@@ -15494,6 +15673,7 @@ test("getService with GitHub repos service", async () => {
                     "pattern": undefined,
                     "properties": Array [
                       Object {
+                        "additionalProperties": undefined,
                         "base": "string",
                         "deprecated": undefined,
                         "description": "The name of the required check",
@@ -15527,6 +15707,7 @@ test("getService with GitHub repos service", async () => {
                         "uniqueItems": undefined,
                       },
                       Object {
+                        "additionalProperties": undefined,
                         "base": "number",
                         "deprecated": undefined,
                         "description": "The ID of the GitHub App that must provide this check. Omit this field to automatically select the GitHub App that has recently provided this check, or any app if it was not set by a GitHub App. Pass -1 to explicitly allow any app to set the status.",
@@ -15618,6 +15799,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Require branches to be up to date before merging.",
@@ -15651,6 +15833,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": true,
                 "description": "**Deprecated**: The list of status checks to require in order to merge into this branch. If any of these checks have recently been set by a particular GitHub App, they will be required to come from that app in future for the branch to merge. Use \`checks\` instead of \`contexts\` for more fine-grained control.
@@ -15718,6 +15901,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "any",
                 "deprecated": undefined,
                 "description": "The list of status checks to require in order to merge into this branch.",
@@ -15763,6 +15947,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "The name of the required check",
@@ -15796,6 +15981,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "number",
                       "deprecated": undefined,
                       "description": "The ID of the GitHub App that must provide this check. Omit this field to automatically select the GitHub App that has recently provided this check, or any app if it was not set by a GitHub App. Pass -1 to explicitly allow any app to set the status.",
@@ -16518,6 +16704,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "contexts parameter",
@@ -16727,6 +16914,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "contexts parameter",
@@ -17255,6 +17443,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "contexts parameter",
@@ -17464,6 +17653,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "contexts parameter",
@@ -17992,6 +18182,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "contexts parameter",
@@ -18201,6 +18392,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "contexts parameter",
@@ -19571,6 +19763,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "apps parameter",
@@ -19780,6 +19973,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "apps parameter",
@@ -20281,6 +20475,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "apps parameter",
@@ -20490,6 +20685,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "apps parameter",
@@ -20991,6 +21187,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "apps parameter",
@@ -21200,6 +21397,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "apps parameter",
@@ -21992,6 +22190,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "teams parameter",
@@ -22201,6 +22400,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "teams parameter",
@@ -22702,6 +22902,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "teams parameter",
@@ -22911,6 +23112,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "teams parameter",
@@ -23412,6 +23614,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "teams parameter",
@@ -23621,6 +23824,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "teams parameter",
@@ -24413,6 +24617,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "users parameter",
@@ -24622,6 +24827,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "users parameter",
@@ -25123,6 +25329,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "users parameter",
@@ -25332,6 +25539,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "users parameter",
@@ -25833,6 +26041,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "users parameter",
@@ -26042,6 +26251,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "users parameter",
@@ -26524,6 +26734,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The new name of the branch.",
@@ -26594,6 +26805,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The new name of the branch.",
@@ -27998,6 +28210,7 @@ test("getService with GitHub repos service", async () => {
               "enum": Array [],
               "enums": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The permission to grant the collaborator. **Only valid on organization-owned repositories.** In addition to the enumerated values, you can also specify a custom repository role name, if the owning organization has defined any.",
@@ -28088,6 +28301,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The permission to grant the collaborator. **Only valid on organization-owned repositories.** In addition to the enumerated values, you can also specify a custom repository role name, if the owning organization has defined any.",
@@ -28164,6 +28378,7 @@ test("getService with GitHub repos service", async () => {
             "enum": Array [],
             "enums": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The permission to grant the collaborator. **Only valid on organization-owned repositories.** In addition to the enumerated values, you can also specify a custom repository role name, if the owning organization has defined any.",
@@ -28254,6 +28469,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The permission to grant the collaborator. **Only valid on organization-owned repositories.** In addition to the enumerated values, you can also specify a custom repository role name, if the owning organization has defined any.",
@@ -30098,6 +30314,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The contents of the comment",
@@ -30168,6 +30385,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The contents of the comment",
@@ -32059,6 +32277,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The contents of the comment.",
@@ -32092,6 +32311,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Relative path of the file to comment on.",
@@ -32125,6 +32345,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "number",
                   "deprecated": undefined,
                   "description": "Line index in the diff to comment on.",
@@ -32158,6 +32379,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "number",
                   "deprecated": undefined,
                   "description": "**Deprecated**. Use **position** parameter instead. Line number in the file to comment on.",
@@ -32228,6 +32450,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The contents of the comment.",
@@ -32261,6 +32484,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Relative path of the file to comment on.",
@@ -32294,6 +32518,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "number",
                 "deprecated": undefined,
                 "description": "Line index in the diff to comment on.",
@@ -32327,6 +32552,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "number",
                 "deprecated": undefined,
                 "description": "**Deprecated**. Use **position** parameter instead. Line number in the file to comment on.",
@@ -35692,6 +35918,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The commit message.",
@@ -35725,6 +35952,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The new file content, using Base64 encoding.",
@@ -35758,6 +35986,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "**Required if you are updating a file**. The blob SHA of the file being replaced.",
@@ -35791,6 +36020,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The branch name. Default: the repository’s default branch (usually \`master\`)",
@@ -35824,6 +36054,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "any",
                   "deprecated": undefined,
                   "description": "The person that committed the file. Default: the authenticated user.",
@@ -35853,6 +36084,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "The name of the author or committer of the commit. You'll receive a \`422\` status code if \`name\` is omitted.",
@@ -35886,6 +36118,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "The email of the author or committer of the commit. You'll receive a \`422\` status code if \`email\` is omitted.",
@@ -35919,6 +36152,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": null,
@@ -35959,6 +36193,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "any",
                   "deprecated": undefined,
                   "description": "The author of the file. Default: The \`committer\` or the authenticated user if you omit \`committer\`.",
@@ -35988,6 +36223,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "The name of the author or committer of the commit. You'll receive a \`422\` status code if \`name\` is omitted.",
@@ -36021,6 +36257,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "The email of the author or committer of the commit. You'll receive a \`422\` status code if \`email\` is omitted.",
@@ -36054,6 +36291,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": null,
@@ -36131,6 +36369,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The commit message.",
@@ -36164,6 +36403,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The new file content, using Base64 encoding.",
@@ -36197,6 +36437,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "**Required if you are updating a file**. The blob SHA of the file being replaced.",
@@ -36230,6 +36471,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The branch name. Default: the repository’s default branch (usually \`master\`)",
@@ -36263,6 +36505,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "any",
                 "deprecated": undefined,
                 "description": "The person that committed the file. Default: the authenticated user.",
@@ -36292,6 +36535,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "The name of the author or committer of the commit. You'll receive a \`422\` status code if \`name\` is omitted.",
@@ -36325,6 +36569,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "The email of the author or committer of the commit. You'll receive a \`422\` status code if \`email\` is omitted.",
@@ -36358,6 +36603,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": null,
@@ -36398,6 +36644,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "any",
                 "deprecated": undefined,
                 "description": "The author of the file. Default: The \`committer\` or the authenticated user if you omit \`committer\`.",
@@ -36427,6 +36674,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "The name of the author or committer of the commit. You'll receive a \`422\` status code if \`name\` is omitted.",
@@ -36460,6 +36708,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "The email of the author or committer of the commit. You'll receive a \`422\` status code if \`email\` is omitted.",
@@ -36493,6 +36742,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": null,
@@ -36860,6 +37110,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The commit message.",
@@ -36893,6 +37144,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The blob SHA of the file being replaced.",
@@ -36926,6 +37178,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The branch name. Default: the repository’s default branch (usually \`master\`)",
@@ -36959,6 +37212,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "any",
                   "deprecated": undefined,
                   "description": "object containing information about the committer.",
@@ -36988,6 +37242,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "The name of the author (or committer) of the commit",
@@ -37021,6 +37276,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "The email of the author (or committer) of the commit",
@@ -37059,6 +37315,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "any",
                   "deprecated": undefined,
                   "description": "object containing information about the author.",
@@ -37088,6 +37345,7 @@ test("getService with GitHub repos service", async () => {
                   "pattern": undefined,
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "The name of the author (or committer) of the commit",
@@ -37121,6 +37379,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "The email of the author (or committer) of the commit",
@@ -37196,6 +37455,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The commit message.",
@@ -37229,6 +37489,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The blob SHA of the file being replaced.",
@@ -37262,6 +37523,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The branch name. Default: the repository’s default branch (usually \`master\`)",
@@ -37295,6 +37557,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "any",
                 "deprecated": undefined,
                 "description": "object containing information about the committer.",
@@ -37324,6 +37587,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "The name of the author (or committer) of the commit",
@@ -37357,6 +37621,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "The email of the author (or committer) of the commit",
@@ -37395,6 +37660,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "any",
                 "deprecated": undefined,
                 "description": "object containing information about the author.",
@@ -37424,6 +37690,7 @@ test("getService with GitHub repos service", async () => {
                 "pattern": undefined,
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "The name of the author (or committer) of the commit",
@@ -37457,6 +37724,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "The email of the author (or committer) of the commit",
@@ -38960,6 +39228,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The ref to deploy. This can be a branch, tag, or SHA.",
@@ -38993,6 +39262,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Specifies a task to execute (e.g., \`deploy\` or \`deploy:migrations\`).",
@@ -39026,6 +39296,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Attempts to automatically merge the default branch into the requested ref, if it's behind the default branch.",
@@ -39059,6 +39330,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The [status](https://docs.github.com/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts.",
@@ -39125,6 +39397,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "any",
                   "deprecated": undefined,
                   "description": null,
@@ -39193,6 +39466,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Name for the target deployment environment (e.g., \`production\`, \`staging\`, \`qa\`).",
@@ -39226,6 +39500,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Short description of the deployment.",
@@ -39259,6 +39534,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Specifies if the given environment is specific to the deployment and will no longer exist at some point in the future. Default: \`false\`",
@@ -39292,6 +39568,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Specifies if the given environment is one that end-users directly interact with. Default: \`true\` when \`environment\` is \`production\` and \`false\` otherwise.",
@@ -39362,6 +39639,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The ref to deploy. This can be a branch, tag, or SHA.",
@@ -39395,6 +39673,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Specifies a task to execute (e.g., \`deploy\` or \`deploy:migrations\`).",
@@ -39428,6 +39707,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Attempts to automatically merge the default branch into the requested ref, if it's behind the default branch.",
@@ -39461,6 +39741,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The [status](https://docs.github.com/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts.",
@@ -39527,6 +39808,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "any",
                 "deprecated": undefined,
                 "description": null,
@@ -39595,6 +39877,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Name for the target deployment environment (e.g., \`production\`, \`staging\`, \`qa\`).",
@@ -39628,6 +39911,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Short description of the deployment.",
@@ -39661,6 +39945,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Specifies if the given environment is specific to the deployment and will no longer exist at some point in the future. Default: \`false\`",
@@ -39694,6 +39979,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Specifies if the given environment is one that end-users directly interact with. Default: \`true\` when \`environment\` is \`production\` and \`false\` otherwise.",
@@ -39867,6 +40153,7 @@ test("getService with GitHub repos service", async () => {
               "pattern": undefined,
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": null,
@@ -41062,6 +41349,7 @@ test("getService with GitHub repos service", async () => {
               "enum": Array [],
               "enums": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The state of the status. When you set a transient deployment to \`inactive\`, the deployment will be shown as \`destroyed\` in GitHub.",
@@ -41138,6 +41426,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Name for the target deployment environment, which can be changed when setting a deploy status. For example, \`production\`, \`staging\`, or \`qa\`.",
@@ -41216,6 +41505,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The state of the status. When you set a transient deployment to \`inactive\`, the deployment will be shown as \`destroyed\` in GitHub.",
@@ -41292,6 +41582,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The target URL to associate with this status. This URL should contain output to keep the user updated while the task is running or serve as historical information for what happened in the deployment. **Note:** It's recommended to use the \`log_url\` parameter, which replaces \`target_url\`.",
@@ -41325,6 +41616,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The full URL of the deployment's output. This parameter replaces \`target_url\`. We will continue to accept \`target_url\` to support legacy uses, but we recommend replacing \`target_url\` with \`log_url\`. Setting \`log_url\` will automatically set \`target_url\` to the same value. Default: \`\\"\\"\`",
@@ -41358,6 +41650,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "A short description of the status. The maximum description length is 140 characters.",
@@ -41391,6 +41684,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Name for the target deployment environment, which can be changed when setting a deploy status. For example, \`production\`, \`staging\`, or \`qa\`.",
@@ -41443,6 +41737,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Sets the URL for accessing your environment. Default: \`\\"\\"\`",
@@ -41476,6 +41771,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Adds a new \`inactive\` status to all prior non-transient, non-production environment deployments with the same repository and \`environment\` name as the created status's deployment. An \`inactive\` status is only added to deployments that had a \`success\` state. Default: \`true\`",
@@ -41521,6 +41817,7 @@ test("getService with GitHub repos service", async () => {
             "enum": Array [],
             "enums": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The state of the status. When you set a transient deployment to \`inactive\`, the deployment will be shown as \`destroyed\` in GitHub.",
@@ -41597,6 +41894,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Name for the target deployment environment, which can be changed when setting a deploy status. For example, \`production\`, \`staging\`, or \`qa\`.",
@@ -41675,6 +41973,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The state of the status. When you set a transient deployment to \`inactive\`, the deployment will be shown as \`destroyed\` in GitHub.",
@@ -41751,6 +42050,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The target URL to associate with this status. This URL should contain output to keep the user updated while the task is running or serve as historical information for what happened in the deployment. **Note:** It's recommended to use the \`log_url\` parameter, which replaces \`target_url\`.",
@@ -41784,6 +42084,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The full URL of the deployment's output. This parameter replaces \`target_url\`. We will continue to accept \`target_url\` to support legacy uses, but we recommend replacing \`target_url\` with \`log_url\`. Setting \`log_url\` will automatically set \`target_url\` to the same value. Default: \`\\"\\"\`",
@@ -41817,6 +42118,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "A short description of the status. The maximum description length is 140 characters.",
@@ -41850,6 +42152,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Name for the target deployment environment, which can be changed when setting a deploy status. For example, \`production\`, \`staging\`, or \`qa\`.",
@@ -41902,6 +42205,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Sets the URL for accessing your environment. Default: \`\\"\\"\`",
@@ -41935,6 +42239,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Adds a new \`inactive\` status to all prior non-transient, non-production environment deployments with the same repository and \`environment\` name as the created status's deployment. An \`inactive\` status is only added to deployments that had a \`success\` state. Default: \`true\`",
@@ -42629,6 +42934,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "A custom webhook event name. Must be 100 characters or fewer.",
@@ -42662,6 +42968,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "any",
                   "deprecated": undefined,
                   "description": "JSON payload with extra information about the webhook event that your action or workflow may use.",
@@ -42732,6 +43039,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "A custom webhook event name. Must be 100 characters or fewer.",
@@ -42765,6 +43073,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "any",
                 "deprecated": undefined,
                 "description": "JSON payload with extra information about the webhook event that your action or workflow may use.",
@@ -43263,6 +43572,7 @@ test("getService with GitHub repos service", async () => {
               "pattern": undefined,
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "number",
                   "deprecated": undefined,
                   "description": "The number of environments in this repository",
@@ -43298,6 +43608,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "Environment",
                   "deprecated": undefined,
                   "description": null,
@@ -43802,6 +44113,7 @@ test("getService with GitHub repos service", async () => {
                   "type": "WaitTimer",
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "any",
                   "deprecated": undefined,
                   "description": "The people or teams that may review jobs that reference the environment. You can list up to six users or teams as reviewers. The reviewers must have at least read access to the repository. Only one of the required reviewers needs to approve the job for it to proceed.",
@@ -43870,6 +44182,7 @@ test("getService with GitHub repos service", async () => {
                         "type": "DeploymentReviewerType",
                       },
                       Object {
+                        "additionalProperties": undefined,
                         "base": "number",
                         "deprecated": undefined,
                         "description": "The id of the user or team who can review the deployment",
@@ -44005,6 +44318,7 @@ test("getService with GitHub repos service", async () => {
                 "type": "WaitTimer",
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "any",
                 "deprecated": undefined,
                 "description": "The people or teams that may review jobs that reference the environment. You can list up to six users or teams as reviewers. The reviewers must have at least read access to the repository. Only one of the required reviewers needs to approve the job for it to proceed.",
@@ -44073,6 +44387,7 @@ test("getService with GitHub repos service", async () => {
                       "type": "DeploymentReviewerType",
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "number",
                       "deprecated": undefined,
                       "description": "The id of the user or team who can review the deployment",
@@ -45211,6 +45526,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Optional parameter to specify the organization name if forking into an organization.",
@@ -45244,6 +45560,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "When forking from an existing repository, a new name for the fork.",
@@ -45314,6 +45631,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Optional parameter to specify the organization name if forking into an organization.",
@@ -45347,6 +45665,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "When forking from an existing repository, a new name for the fork.",
@@ -46020,6 +46339,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Use \`web\` to create a webhook. Default: \`web\`. This parameter only accepts the value \`web\`.",
@@ -46053,6 +46373,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "any",
                   "deprecated": undefined,
                   "description": "Key/value pairs to provide settings for this webhook. [These are defined below](https://docs.github.com/rest/reference/repos#create-hook-config-params).",
@@ -46163,6 +46484,7 @@ test("getService with GitHub repos service", async () => {
                       "type": "WebhookConfigInsecureSsl",
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": null,
@@ -46198,6 +46520,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": null,
@@ -46238,6 +46561,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Determines what [events](https://docs.github.com/webhooks/event-payloads) the hook is triggered for.",
@@ -46304,6 +46628,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Determines if notifications are sent when the webhook is triggered. Set to \`true\` to send notifications.",
@@ -46379,6 +46704,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Use \`web\` to create a webhook. Default: \`web\`. This parameter only accepts the value \`web\`.",
@@ -46412,6 +46738,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "any",
                 "deprecated": undefined,
                 "description": "Key/value pairs to provide settings for this webhook. [These are defined below](https://docs.github.com/rest/reference/repos#create-hook-config-params).",
@@ -46522,6 +46849,7 @@ test("getService with GitHub repos service", async () => {
                     "type": "WebhookConfigInsecureSsl",
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": null,
@@ -46557,6 +46885,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": null,
@@ -46597,6 +46926,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Determines what [events](https://docs.github.com/webhooks/event-payloads) the hook is triggered for.",
@@ -46663,6 +46993,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Determines if notifications are sent when the webhook is triggered. Set to \`true\` to send notifications.",
@@ -47560,6 +47891,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "any",
                   "deprecated": undefined,
                   "description": "Key/value pairs to provide settings for this webhook. [These are defined below](https://docs.github.com/rest/reference/repos#create-hook-config-params).",
@@ -47670,6 +48002,7 @@ test("getService with GitHub repos service", async () => {
                       "type": "WebhookConfigInsecureSsl",
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": null,
@@ -47705,6 +48038,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": null,
@@ -47745,6 +48079,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Determines what [events](https://docs.github.com/webhooks/event-payloads) the hook is triggered for. This replaces the entire array of events.",
@@ -47811,6 +48146,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Determines a list of events to be added to the list of events that the Hook triggers for.",
@@ -47877,6 +48213,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Determines a list of events to be removed from the list of events that the Hook triggers for.",
@@ -47943,6 +48280,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Determines if notifications are sent when the webhook is triggered. Set to \`true\` to send notifications.",
@@ -48018,6 +48356,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "any",
                 "deprecated": undefined,
                 "description": "Key/value pairs to provide settings for this webhook. [These are defined below](https://docs.github.com/rest/reference/repos#create-hook-config-params).",
@@ -48128,6 +48467,7 @@ test("getService with GitHub repos service", async () => {
                     "type": "WebhookConfigInsecureSsl",
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": null,
@@ -48163,6 +48503,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": null,
@@ -48203,6 +48544,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Determines what [events](https://docs.github.com/webhooks/event-payloads) the hook is triggered for. This replaces the entire array of events.",
@@ -48269,6 +48611,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Determines a list of events to be added to the list of events that the Hook triggers for.",
@@ -48335,6 +48678,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Determines a list of events to be removed from the list of events that the Hook triggers for.",
@@ -48401,6 +48745,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Determines if notifications are sent when the webhook is triggered. Set to \`true\` to send notifications.",
@@ -51844,6 +52189,7 @@ test("getService with GitHub repos service", async () => {
               "enum": Array [],
               "enums": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The permissions that the associated user will have on the repository. Valid values are \`read\`, \`write\`, \`maintain\`, \`triage\`, and \`admin\`.",
@@ -51934,6 +52280,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The permissions that the associated user will have on the repository. Valid values are \`read\`, \`write\`, \`maintain\`, \`triage\`, and \`admin\`.",
@@ -52010,6 +52357,7 @@ test("getService with GitHub repos service", async () => {
             "enum": Array [],
             "enums": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The permissions that the associated user will have on the repository. Valid values are \`read\`, \`write\`, \`maintain\`, \`triage\`, and \`admin\`.",
@@ -52100,6 +52448,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The permissions that the associated user will have on the repository. Valid values are \`read\`, \`write\`, \`maintain\`, \`triage\`, and \`admin\`.",
@@ -52818,6 +53167,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "A name for the key.",
@@ -52851,6 +53201,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The contents of the key.",
@@ -52884,6 +53235,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "If \`true\`, the key will only be able to read repository contents. Otherwise, the key will be able to read and write.  
@@ -52956,6 +53308,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "A name for the key.",
@@ -52989,6 +53342,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The contents of the key.",
@@ -53022,6 +53376,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "If \`true\`, the key will only be able to read repository contents. Otherwise, the key will be able to read and write.  
@@ -54473,6 +54828,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The name of the branch which should be updated to match upstream.",
@@ -54543,6 +54899,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The name of the branch which should be updated to match upstream.",
@@ -54823,6 +55180,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The name of the base branch that the head will be merged into.",
@@ -54856,6 +55214,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The head to merge. This can be a branch name or a commit SHA1.",
@@ -54889,6 +55248,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Commit message to use for the merge commit. If omitted, a default message will be used.",
@@ -54959,6 +55319,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The name of the base branch that the head will be merged into.",
@@ -54992,6 +55353,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The head to merge. This can be a branch name or a commit SHA1.",
@@ -55025,6 +55387,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Commit message to use for the merge commit. If omitted, a default message will be used.",
@@ -55473,6 +55836,7 @@ test("getService with GitHub repos service", async () => {
               "enum": Array [],
               "enums": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The repository directory that includes the source files for the Pages site. Allowed paths are \`/\` or \`/docs\`. Default: \`/\`",
@@ -55559,12 +55923,14 @@ test("getService with GitHub repos service", async () => {
                   "name": "properties",
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "any",
                       "deprecated": undefined,
                       "description": "The source branch and directory used to publish your Pages site.",
                       "enum": Array [],
                       "enums": Array [
                         Object {
+                          "additionalProperties": undefined,
                           "base": "string",
                           "deprecated": undefined,
                           "description": "The repository directory that includes the source files for the Pages site. Allowed paths are \`/\` or \`/docs\`. Default: \`/\`",
@@ -55635,6 +56001,7 @@ test("getService with GitHub repos service", async () => {
                       "pattern": undefined,
                       "properties": Array [
                         Object {
+                          "additionalProperties": undefined,
                           "base": "string",
                           "deprecated": undefined,
                           "description": "The repository branch used to publish your site's source files.",
@@ -55668,6 +56035,7 @@ test("getService with GitHub repos service", async () => {
                           "uniqueItems": undefined,
                         },
                         Object {
+                          "additionalProperties": undefined,
                           "base": "string",
                           "deprecated": undefined,
                           "description": "The repository directory that includes the source files for the Pages site. Allowed paths are \`/\` or \`/docs\`. Default: \`/\`",
@@ -55735,6 +56103,7 @@ test("getService with GitHub repos service", async () => {
             "enum": Array [],
             "enums": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The repository directory that includes the source files for the Pages site. Allowed paths are \`/\` or \`/docs\`. Default: \`/\`",
@@ -55821,12 +56190,14 @@ test("getService with GitHub repos service", async () => {
                 "name": "properties",
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "any",
                     "deprecated": undefined,
                     "description": "The source branch and directory used to publish your Pages site.",
                     "enum": Array [],
                     "enums": Array [
                       Object {
+                        "additionalProperties": undefined,
                         "base": "string",
                         "deprecated": undefined,
                         "description": "The repository directory that includes the source files for the Pages site. Allowed paths are \`/\` or \`/docs\`. Default: \`/\`",
@@ -55897,6 +56268,7 @@ test("getService with GitHub repos service", async () => {
                     "pattern": undefined,
                     "properties": Array [
                       Object {
+                        "additionalProperties": undefined,
                         "base": "string",
                         "deprecated": undefined,
                         "description": "The repository branch used to publish your site's source files.",
@@ -55930,6 +56302,7 @@ test("getService with GitHub repos service", async () => {
                         "uniqueItems": undefined,
                       },
                       Object {
+                        "additionalProperties": undefined,
                         "base": "string",
                         "deprecated": undefined,
                         "description": "The repository directory that includes the source files for the Pages site. Allowed paths are \`/\` or \`/docs\`. Default: \`/\`",
@@ -56197,6 +56570,7 @@ test("getService with GitHub repos service", async () => {
               "enum": Array [],
               "enums": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The repository directory that includes the source files for the Pages site. Allowed paths are \`/\` or \`/docs\`.",
@@ -56283,6 +56657,7 @@ test("getService with GitHub repos service", async () => {
                   "name": "properties",
                   "properties": Array [
                     Object {
+                      "additionalProperties": undefined,
                       "base": "string",
                       "deprecated": undefined,
                       "description": "Specify a custom domain for the repository. Sending a \`null\` value will remove the custom domain. For more about custom domains, see \\"[Using a custom domain with GitHub Pages](https://docs.github.com/articles/using-a-custom-domain-with-github-pages/).\\"",
@@ -56316,6 +56691,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "boolean",
                       "deprecated": undefined,
                       "description": "Specify whether HTTPS should be enforced for the repository.",
@@ -56349,6 +56725,7 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "boolean",
                       "deprecated": undefined,
                       "description": "Configures access controls for the GitHub Pages site. If public is set to \`true\`, the site is accessible to anyone on the internet. If set to \`false\`, the site will only be accessible to users who have at least \`read\` access to the repository that published the site. This includes anyone in your Enterprise if the repository is set to \`internal\` visibility. This feature is only available to repositories in an organization on an Enterprise plan.",
@@ -56382,12 +56759,14 @@ test("getService with GitHub repos service", async () => {
                       "uniqueItems": undefined,
                     },
                     Object {
+                      "additionalProperties": undefined,
                       "base": "any",
                       "deprecated": undefined,
                       "description": null,
                       "enum": Array [],
                       "enums": Array [
                         Object {
+                          "additionalProperties": undefined,
                           "base": "string",
                           "deprecated": undefined,
                           "description": "The repository directory that includes the source files for the Pages site. Allowed paths are \`/\` or \`/docs\`.",
@@ -56516,6 +56895,7 @@ test("getService with GitHub repos service", async () => {
                           "enum": Array [],
                           "enums": Array [
                             Object {
+                              "additionalProperties": undefined,
                               "base": "string",
                               "deprecated": undefined,
                               "description": "The repository directory that includes the source files for the Pages site. Allowed paths are \`/\` or \`/docs\`.",
@@ -56586,6 +56966,7 @@ test("getService with GitHub repos service", async () => {
                           "pattern": undefined,
                           "properties": Array [
                             Object {
+                              "additionalProperties": undefined,
                               "base": "string",
                               "deprecated": undefined,
                               "description": "The repository branch used to publish your site's source files.",
@@ -56619,6 +57000,7 @@ test("getService with GitHub repos service", async () => {
                               "uniqueItems": undefined,
                             },
                             Object {
+                              "additionalProperties": undefined,
                               "base": "string",
                               "deprecated": undefined,
                               "description": "The repository directory that includes the source files for the Pages site. Allowed paths are \`/\` or \`/docs\`.",
@@ -56691,6 +57073,7 @@ test("getService with GitHub repos service", async () => {
             "enum": Array [],
             "enums": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The repository directory that includes the source files for the Pages site. Allowed paths are \`/\` or \`/docs\`.",
@@ -56777,6 +57160,7 @@ test("getService with GitHub repos service", async () => {
                 "name": "properties",
                 "properties": Array [
                   Object {
+                    "additionalProperties": undefined,
                     "base": "string",
                     "deprecated": undefined,
                     "description": "Specify a custom domain for the repository. Sending a \`null\` value will remove the custom domain. For more about custom domains, see \\"[Using a custom domain with GitHub Pages](https://docs.github.com/articles/using-a-custom-domain-with-github-pages/).\\"",
@@ -56810,6 +57194,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "boolean",
                     "deprecated": undefined,
                     "description": "Specify whether HTTPS should be enforced for the repository.",
@@ -56843,6 +57228,7 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "boolean",
                     "deprecated": undefined,
                     "description": "Configures access controls for the GitHub Pages site. If public is set to \`true\`, the site is accessible to anyone on the internet. If set to \`false\`, the site will only be accessible to users who have at least \`read\` access to the repository that published the site. This includes anyone in your Enterprise if the repository is set to \`internal\` visibility. This feature is only available to repositories in an organization on an Enterprise plan.",
@@ -56876,12 +57262,14 @@ test("getService with GitHub repos service", async () => {
                     "uniqueItems": undefined,
                   },
                   Object {
+                    "additionalProperties": undefined,
                     "base": "any",
                     "deprecated": undefined,
                     "description": null,
                     "enum": Array [],
                     "enums": Array [
                       Object {
+                        "additionalProperties": undefined,
                         "base": "string",
                         "deprecated": undefined,
                         "description": "The repository directory that includes the source files for the Pages site. Allowed paths are \`/\` or \`/docs\`.",
@@ -57010,6 +57398,7 @@ test("getService with GitHub repos service", async () => {
                         "enum": Array [],
                         "enums": Array [
                           Object {
+                            "additionalProperties": undefined,
                             "base": "string",
                             "deprecated": undefined,
                             "description": "The repository directory that includes the source files for the Pages site. Allowed paths are \`/\` or \`/docs\`.",
@@ -57080,6 +57469,7 @@ test("getService with GitHub repos service", async () => {
                         "pattern": undefined,
                         "properties": Array [
                           Object {
+                            "additionalProperties": undefined,
                             "base": "string",
                             "deprecated": undefined,
                             "description": "The repository branch used to publish your site's source files.",
@@ -57113,6 +57503,7 @@ test("getService with GitHub repos service", async () => {
                             "uniqueItems": undefined,
                           },
                           Object {
+                            "additionalProperties": undefined,
                             "base": "string",
                             "deprecated": undefined,
                             "description": "The repository directory that includes the source files for the Pages site. Allowed paths are \`/\` or \`/docs\`.",
@@ -59922,6 +60313,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The name of the tag.",
@@ -59955,6 +60347,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Specifies the commitish value that determines where the Git tag is created from. Can be any branch or commit SHA. Unused if the Git tag already exists. Default: the repository's default branch (usually \`master\`).",
@@ -59988,6 +60381,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The name of the release.",
@@ -60021,6 +60415,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Text describing the contents of the tag.",
@@ -60054,6 +60449,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "\`true\` to create a draft (unpublished) release, \`false\` to create a published one.",
@@ -60087,6 +60483,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "\`true\` to identify the release as a prerelease. \`false\` to identify the release as a full release.",
@@ -60120,6 +60517,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "If specified, a discussion of the specified category is created and linked to the release. The value must be a category that already exists in the repository. For more information, see \\"[Managing categories for discussions in your repository](https://docs.github.com/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository).\\"",
@@ -60153,6 +60551,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Whether to automatically generate the name and body for this release. If \`name\` is specified, the specified name will be used; otherwise, a name will be automatically generated. If \`body\` is specified, the body will be pre-pended to the automatically generated notes.",
@@ -60223,6 +60622,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The name of the tag.",
@@ -60256,6 +60656,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Specifies the commitish value that determines where the Git tag is created from. Can be any branch or commit SHA. Unused if the Git tag already exists. Default: the repository's default branch (usually \`master\`).",
@@ -60289,6 +60690,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The name of the release.",
@@ -60322,6 +60724,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Text describing the contents of the tag.",
@@ -60355,6 +60758,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "\`true\` to create a draft (unpublished) release, \`false\` to create a published one.",
@@ -60388,6 +60792,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "\`true\` to identify the release as a prerelease. \`false\` to identify the release as a full release.",
@@ -60421,6 +60826,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "If specified, a discussion of the specified category is created and linked to the release. The value must be a category that already exists in the repository. For more information, see \\"[Managing categories for discussions in your repository](https://docs.github.com/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository).\\"",
@@ -60454,6 +60860,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Whether to automatically generate the name and body for this release. If \`name\` is specified, the specified name will be used; otherwise, a name will be automatically generated. If \`body\` is specified, the body will be pre-pended to the automatically generated notes.",
@@ -61332,6 +61739,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The file name of the asset.",
@@ -61365,6 +61773,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "An alternate short description of the asset. Used in place of the filename.",
@@ -61398,6 +61807,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": null,
@@ -61470,6 +61880,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The file name of the asset.",
@@ -61503,6 +61914,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "An alternate short description of the asset. Used in place of the filename.",
@@ -61536,6 +61948,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": null,
@@ -61843,6 +62256,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The tag name for the release. This can be an existing tag or a new one.",
@@ -61876,6 +62290,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Specifies the commitish value that will be the target for the release's tag. Required if the supplied tag_name does not reference an existing tag. Ignored if the tag_name already exists.",
@@ -61909,6 +62324,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The name of the previous tag to use as the starting point for the release notes. Use to manually specify the range for the set of changes considered as part this release.",
@@ -61942,6 +62358,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Specifies a path to a file in the repository containing configuration settings used for generating the release notes. If unspecified, the configuration file located in the repository at '.github/release.yml' or '.github/release.yaml' will be used. If that is not present, the default configuration will be used.",
@@ -62012,6 +62429,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The tag name for the release. This can be an existing tag or a new one.",
@@ -62045,6 +62463,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Specifies the commitish value that will be the target for the release's tag. Required if the supplied tag_name does not reference an existing tag. Ignored if the tag_name already exists.",
@@ -62078,6 +62497,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The name of the previous tag to use as the starting point for the release notes. Use to manually specify the range for the set of changes considered as part this release.",
@@ -62111,6 +62531,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Specifies a path to a file in the repository containing configuration settings used for generating the release notes. If unspecified, the configuration file located in the repository at '.github/release.yml' or '.github/release.yaml' will be used. If that is not present, the default configuration will be used.",
@@ -63430,6 +63851,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The name of the tag.",
@@ -63463,6 +63885,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Specifies the commitish value that determines where the Git tag is created from. Can be any branch or commit SHA. Unused if the Git tag already exists. Default: the repository's default branch (usually \`master\`).",
@@ -63496,6 +63919,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The name of the release.",
@@ -63529,6 +63953,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "Text describing the contents of the tag.",
@@ -63562,6 +63987,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "\`true\` makes the release a draft, and \`false\` publishes the release.",
@@ -63595,6 +64021,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "\`true\` to identify the release as a prerelease, \`false\` to identify the release as a full release.",
@@ -63628,6 +64055,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "If specified, a discussion of the specified category is created and linked to the release. The value must be a category that already exists in the repository. If there is already a discussion linked to the release, this parameter is ignored. For more information, see \\"[Managing categories for discussions in your repository](https://docs.github.com/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository).\\"",
@@ -63698,6 +64126,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The name of the tag.",
@@ -63731,6 +64160,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Specifies the commitish value that determines where the Git tag is created from. Can be any branch or commit SHA. Unused if the Git tag already exists. Default: the repository's default branch (usually \`master\`).",
@@ -63764,6 +64194,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The name of the release.",
@@ -63797,6 +64228,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "Text describing the contents of the tag.",
@@ -63830,6 +64262,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "\`true\` makes the release a draft, and \`false\` publishes the release.",
@@ -63863,6 +64296,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "\`true\` to identify the release as a prerelease, \`false\` to identify the release as a full release.",
@@ -63896,6 +64330,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "If specified, a discussion of the specified category is created and linked to the release. The value must be a category that already exists in the repository. If there is already a discussion linked to the release, this parameter is ignored. For more information, see \\"[Managing categories for discussions in your repository](https://docs.github.com/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository).\\"",
@@ -66336,6 +66771,7 @@ test("getService with GitHub repos service", async () => {
               "enum": Array [],
               "enums": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The state of the status.",
@@ -66420,6 +66856,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The state of the status.",
@@ -66478,6 +66915,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The target URL to associate with this status. This URL will be linked from the GitHub UI to allow users to easily see the source of the status.  
@@ -66513,6 +66951,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "A short description of the status.",
@@ -66546,6 +66985,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "A string label to differentiate this status from the status of other systems. This field is case-insensitive.",
@@ -66591,6 +67031,7 @@ test("getService with GitHub repos service", async () => {
             "enum": Array [],
             "enums": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The state of the status.",
@@ -66675,6 +67116,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The state of the status.",
@@ -66733,6 +67175,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The target URL to associate with this status. This URL will be linked from the GitHub UI to allow users to easily see the source of the status.  
@@ -66768,6 +67211,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "A short description of the status.",
@@ -66801,6 +67245,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "A string label to differentiate this status from the status of other systems. This field is case-insensitive.",
@@ -67747,6 +68192,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "An optional glob pattern to match against when enforcing tag protection.",
@@ -67817,6 +68263,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "An optional glob pattern to match against when enforcing tag protection.",
@@ -69371,6 +69818,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "An array of topics to add to the repository. Pass one or more topics to _replace_ the set of existing topics. Send an empty array (\`[]\`) to clear all topics from the repository. **Note:** Topic \`names\` cannot contain uppercase letters.",
@@ -69474,6 +69922,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "An array of topics to add to the repository. Pass one or more topics to _replace_ the set of existing topics. Send an empty array (\`[]\`) to clear all topics from the repository. **Note:** Topic \`names\` cannot contain uppercase letters.",
@@ -70828,6 +71277,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The username or organization name the repository will be transferred to.",
@@ -70861,6 +71311,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "number",
                   "deprecated": undefined,
                   "description": "ID of the team or teams to add to the repository. Teams can only be added to organization-owned repositories.",
@@ -70964,6 +71415,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The username or organization name the repository will be transferred to.",
@@ -70997,6 +71449,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "number",
                 "deprecated": undefined,
                 "description": "ID of the team or teams to add to the repository. Teams can only be added to organization-owned repositories.",
@@ -72155,6 +72608,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The organization or person who will own the new repository. To create a new repository in an organization, the authenticated user must be a member of the specified organization.",
@@ -72188,6 +72642,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The name of the new repository.",
@@ -72221,6 +72676,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "A short description of the new repository.",
@@ -72254,6 +72710,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Set to \`true\` to include the directory structure and files from all branches in the template repository, and not just the default branch. Default: \`false\`.",
@@ -72287,6 +72744,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Either \`true\` to create a new private repository or \`false\` to create a new public one.",
@@ -72357,6 +72815,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The organization or person who will own the new repository. To create a new repository in an organization, the authenticated user must be a member of the specified organization.",
@@ -72390,6 +72849,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The name of the new repository.",
@@ -72423,6 +72883,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "A short description of the new repository.",
@@ -72456,6 +72917,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Set to \`true\` to include the directory structure and files from all branches in the template repository, and not just the default branch. Default: \`false\`.",
@@ -72489,6 +72951,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Either \`true\` to create a new private repository or \`false\` to create a new public one.",
@@ -73854,6 +74317,7 @@ test("getService with GitHub repos service", async () => {
               "prop": "body",
               "properties": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The name of the repository.",
@@ -73889,6 +74353,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "A short description of the repository.",
@@ -73922,6 +74387,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "A URL with more information about the repository.",
@@ -73955,6 +74421,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Whether the repository is private.",
@@ -73988,6 +74455,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Whether issues are enabled.",
@@ -74023,6 +74491,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Whether projects are enabled.",
@@ -74058,6 +74527,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Whether the wiki is enabled.",
@@ -74093,6 +74563,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "number",
                   "deprecated": undefined,
                   "description": "The id of the team that will be granted access to this repository. This is only valid when creating a repository in an organization.",
@@ -74126,6 +74597,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Whether the repository is initialized with a minimal README.",
@@ -74159,6 +74631,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The desired language or platform to apply to the .gitignore.",
@@ -74194,6 +74667,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": undefined,
                   "description": "The license keyword of the open source license for this repository.",
@@ -74229,6 +74703,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Whether to allow squash merges for pull requests.",
@@ -74264,6 +74739,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Whether to allow merge commits for pull requests.",
@@ -74299,6 +74775,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Whether to allow rebase merges for pull requests.",
@@ -74334,6 +74811,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Whether to allow Auto-merge to be used on pull requests.",
@@ -74367,6 +74845,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Whether to delete head branches when pull requests are merged",
@@ -74400,6 +74879,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Whether downloads are enabled.",
@@ -74435,6 +74915,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
+                  "additionalProperties": undefined,
                   "base": "boolean",
                   "deprecated": undefined,
                   "description": "Whether this repository acts as a template that can be used to generate new repositories.",
@@ -74507,6 +74988,7 @@ test("getService with GitHub repos service", async () => {
             "prop": "body",
             "properties": Array [
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The name of the repository.",
@@ -74542,6 +75024,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "A short description of the repository.",
@@ -74575,6 +75058,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "A URL with more information about the repository.",
@@ -74608,6 +75092,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Whether the repository is private.",
@@ -74641,6 +75126,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Whether issues are enabled.",
@@ -74676,6 +75162,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Whether projects are enabled.",
@@ -74711,6 +75198,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Whether the wiki is enabled.",
@@ -74746,6 +75234,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "number",
                 "deprecated": undefined,
                 "description": "The id of the team that will be granted access to this repository. This is only valid when creating a repository in an organization.",
@@ -74779,6 +75268,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Whether the repository is initialized with a minimal README.",
@@ -74812,6 +75302,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The desired language or platform to apply to the .gitignore.",
@@ -74847,6 +75338,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "string",
                 "deprecated": undefined,
                 "description": "The license keyword of the open source license for this repository.",
@@ -74882,6 +75374,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Whether to allow squash merges for pull requests.",
@@ -74917,6 +75410,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Whether to allow merge commits for pull requests.",
@@ -74952,6 +75446,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Whether to allow rebase merges for pull requests.",
@@ -74987,6 +75482,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Whether to allow Auto-merge to be used on pull requests.",
@@ -75020,6 +75516,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Whether to delete head branches when pull requests are merged",
@@ -75053,6 +75550,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Whether downloads are enabled.",
@@ -75088,6 +75586,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
+                "additionalProperties": undefined,
                 "base": "boolean",
                 "deprecated": undefined,
                 "description": "Whether this repository acts as a template that can be used to generate new repositories.",

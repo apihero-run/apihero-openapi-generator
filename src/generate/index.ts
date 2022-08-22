@@ -378,14 +378,19 @@ class ClientGenerator {
     return base === "binary" ? "ReadableStream" : base;
   }
 
-  private generateTypeInterface(property: Model, parent?: Model): string {
-    if (!property.properties) {
+  private generateTypeInterface(model: Model, parent?: Model): string {
+    if (!model.properties) {
       return "any";
     } else {
       return `{
-${property.properties.map((p) => this.generateModelProperty(p, parent)).join("")}
-}${generateIsNullable(property)}`;
+${model.properties.map((p) => this.generateModelProperty(p, parent)).join("")}
+${model.additionalProperties ? this.generateAdditionalProperties(model.additionalProperties) : ""}
+}${generateIsNullable(model)}`;
     }
+  }
+
+  private generateAdditionalProperties(model: Model): string {
+    return `\n  [key: string]: ${this.generateType(model)}`;
   }
 
   private generateModelProperty(property: Model, parent?: Model): string {

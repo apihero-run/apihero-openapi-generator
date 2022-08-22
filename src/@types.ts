@@ -29,6 +29,7 @@ export type Model = Schema & {
   enum: Enum[];
   enums: Model[];
   properties: Model[];
+  additionalProperties?: Model;
 };
 
 export type Example = {

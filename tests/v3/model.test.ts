@@ -290,6 +290,7 @@ test("getModel with Petstore User schema", async () => {
       "pattern": undefined,
       "properties": Array [
         Object {
+          "additionalProperties": undefined,
           "base": "number",
           "deprecated": undefined,
           "description": null,
@@ -325,6 +326,7 @@ test("getModel with Petstore User schema", async () => {
           "uniqueItems": undefined,
         },
         Object {
+          "additionalProperties": undefined,
           "base": "string",
           "deprecated": undefined,
           "description": null,
@@ -360,6 +362,7 @@ test("getModel with Petstore User schema", async () => {
           "uniqueItems": undefined,
         },
         Object {
+          "additionalProperties": undefined,
           "base": "string",
           "deprecated": undefined,
           "description": null,
@@ -395,6 +398,7 @@ test("getModel with Petstore User schema", async () => {
           "uniqueItems": undefined,
         },
         Object {
+          "additionalProperties": undefined,
           "base": "string",
           "deprecated": true,
           "description": null,
@@ -430,6 +434,7 @@ test("getModel with Petstore User schema", async () => {
           "uniqueItems": undefined,
         },
         Object {
+          "additionalProperties": undefined,
           "base": "string",
           "deprecated": undefined,
           "description": null,
@@ -465,6 +470,7 @@ test("getModel with Petstore User schema", async () => {
           "uniqueItems": undefined,
         },
         Object {
+          "additionalProperties": undefined,
           "base": "string",
           "deprecated": undefined,
           "description": null,
@@ -500,6 +506,7 @@ test("getModel with Petstore User schema", async () => {
           "uniqueItems": undefined,
         },
         Object {
+          "additionalProperties": undefined,
           "base": "string",
           "deprecated": undefined,
           "description": null,
@@ -535,6 +542,7 @@ test("getModel with Petstore User schema", async () => {
           "uniqueItems": undefined,
         },
         Object {
+          "additionalProperties": undefined,
           "base": "number",
           "deprecated": undefined,
           "description": "User Status",
@@ -632,6 +640,7 @@ test("getModel with Petstore Order schema", async () => {
       "enum": Array [],
       "enums": Array [
         Object {
+          "additionalProperties": undefined,
           "base": "string",
           "deprecated": undefined,
           "description": "Order Status",
@@ -710,6 +719,7 @@ test("getModel with Petstore Order schema", async () => {
       "pattern": undefined,
       "properties": Array [
         Object {
+          "additionalProperties": undefined,
           "base": "number",
           "deprecated": undefined,
           "description": null,
@@ -745,6 +755,7 @@ test("getModel with Petstore Order schema", async () => {
           "uniqueItems": undefined,
         },
         Object {
+          "additionalProperties": undefined,
           "base": "number",
           "deprecated": undefined,
           "description": null,
@@ -780,6 +791,7 @@ test("getModel with Petstore Order schema", async () => {
           "uniqueItems": undefined,
         },
         Object {
+          "additionalProperties": undefined,
           "base": "number",
           "deprecated": undefined,
           "description": null,
@@ -815,6 +827,7 @@ test("getModel with Petstore Order schema", async () => {
           "uniqueItems": undefined,
         },
         Object {
+          "additionalProperties": undefined,
           "base": "string",
           "deprecated": undefined,
           "description": null,
@@ -848,6 +861,7 @@ test("getModel with Petstore Order schema", async () => {
           "uniqueItems": undefined,
         },
         Object {
+          "additionalProperties": undefined,
           "base": "string",
           "deprecated": undefined,
           "description": "Order Status",
@@ -902,6 +916,7 @@ test("getModel with Petstore Order schema", async () => {
           "uniqueItems": undefined,
         },
         Object {
+          "additionalProperties": undefined,
           "base": "boolean",
           "deprecated": undefined,
           "description": null,
@@ -1001,6 +1016,7 @@ test("getModel with PetStore Customer schema", async () => {
       "pattern": undefined,
       "properties": Array [
         Object {
+          "additionalProperties": undefined,
           "base": "number",
           "deprecated": undefined,
           "description": null,
@@ -1036,6 +1052,7 @@ test("getModel with PetStore Customer schema", async () => {
           "uniqueItems": undefined,
         },
         Object {
+          "additionalProperties": undefined,
           "base": "string",
           "deprecated": undefined,
           "description": null,
@@ -1071,6 +1088,7 @@ test("getModel with PetStore Customer schema", async () => {
           "uniqueItems": undefined,
         },
         Object {
+          "additionalProperties": undefined,
           "base": "Address",
           "deprecated": undefined,
           "description": null,
@@ -1171,6 +1189,7 @@ test("getModel with Petstore Pet schema", async () => {
       "enum": Array [],
       "enums": Array [
         Object {
+          "additionalProperties": undefined,
           "base": "string",
           "deprecated": undefined,
           "description": "pet status in the store",
@@ -1250,6 +1269,7 @@ test("getModel with Petstore Pet schema", async () => {
       "pattern": undefined,
       "properties": Array [
         Object {
+          "additionalProperties": undefined,
           "base": "number",
           "deprecated": undefined,
           "description": null,
@@ -1285,6 +1305,7 @@ test("getModel with Petstore Pet schema", async () => {
           "uniqueItems": undefined,
         },
         Object {
+          "additionalProperties": undefined,
           "base": "string",
           "deprecated": undefined,
           "description": null,
@@ -1339,6 +1360,7 @@ test("getModel with Petstore Pet schema", async () => {
           "type": "Category",
         },
         Object {
+          "additionalProperties": undefined,
           "base": "string",
           "deprecated": undefined,
           "description": null,
@@ -1405,6 +1427,7 @@ test("getModel with Petstore Pet schema", async () => {
           "uniqueItems": undefined,
         },
         Object {
+          "additionalProperties": undefined,
           "base": "Tag",
           "deprecated": undefined,
           "description": null,
@@ -1440,6 +1463,7 @@ test("getModel with Petstore Pet schema", async () => {
           "uniqueItems": undefined,
         },
         Object {
+          "additionalProperties": undefined,
           "base": "string",
           "deprecated": undefined,
           "description": "pet status in the store",

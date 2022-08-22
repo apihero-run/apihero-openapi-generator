@@ -141,7 +141,11 @@ function getSchemaModel(
     }
   }
 
-  if (schema.type === "object" && typeof schema.additionalProperties === "object") {
+  if (
+    schema.type === "object" &&
+    typeof schema.additionalProperties === "object" &&
+    typeof schema.properties === "undefined"
+  ) {
     if ("$ref" in schema.additionalProperties) {
       const additionalProperties = getType(schema.additionalProperties.$ref);
 
@@ -211,6 +215,54 @@ function getSchemaModel(
           model.enums.push(modelProperty);
         }
       });
+    }
+
+    if (typeof schema.additionalProperties === "object") {
+      const additionalPropertiesModel: Model = {
+        name: "",
+        type: "any",
+        base: "any",
+        export: "generic",
+        isReadOnly: false,
+        isRequired: false,
+        isNullable: false,
+        isDefinition: false,
+        imports: [],
+        properties: [],
+        enum: [],
+        enums: [],
+        template: null,
+        link: null,
+        description: null,
+      };
+
+      if ("$ref" in schema.additionalProperties) {
+        const additionalProperties = getType(schema.additionalProperties.$ref);
+
+        additionalPropertiesModel.type = additionalProperties.type;
+        additionalPropertiesModel.base = additionalProperties.base;
+        additionalPropertiesModel.template = additionalProperties.template;
+        additionalPropertiesModel.imports.push(...additionalProperties.imports);
+        additionalPropertiesModel.default = getModelDefault(
+          schema as OpenAPIV3.NonArraySchemaObject,
+          model,
+        );
+      } else {
+        const additionalProperties = getModel(doc, "", schema.additionalProperties);
+
+        additionalPropertiesModel.type = additionalProperties.type;
+        additionalPropertiesModel.base = additionalProperties.base;
+        additionalPropertiesModel.template = additionalProperties.template;
+        additionalPropertiesModel.link = additionalProperties;
+        additionalPropertiesModel.imports.push(...additionalProperties.imports);
+        additionalPropertiesModel.default = getModelDefault(
+          schema as OpenAPIV3.NonArraySchemaObject,
+          model,
+        );
+      }
+
+      model.additionalProperties = additionalPropertiesModel;
+      model.imports.push(...additionalPropertiesModel.imports);
     }
 
     return model;
@@ -475,6 +527,7 @@ export const getModelProperties = (
         base: model.base,
         template: model.template,
         link: model.link,
+        additionalProperties: model.additionalProperties,
         description: property.description || null,
         isDefinition: false,
         isReadOnly: property.readOnly === true,
