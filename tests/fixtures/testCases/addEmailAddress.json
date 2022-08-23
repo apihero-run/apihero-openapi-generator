@@ -1,0 +1,340 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "version": "1.1.4"
+  },
+  "tags": [
+    {
+      "name": "users",
+      "description": "Interact with and view information about users and also current user."
+    }
+  ],
+  "paths": {
+    "/user/emails": {
+      "post": {
+        "operationId": "users/add-email-for-authenticated-user",
+        "summary": "Add an email address for the authenticated user",
+        "description": "This endpoint is accessible with the `user` scope.",
+        "deprecated": false,
+        "externalDocs": {
+          "url": "https://docs.github.com/rest/reference/users#add-an-email-address-for-the-authenticated-user",
+          "description": "API method documentation"
+        },
+        "tags": [
+          "users"
+        ],
+        "responses": {
+          "201": {
+            "description": "Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/email"
+                  }
+                },
+                "examples": {
+                  "default": {
+                    "$ref": "#/components/examples/email-items"
+                  }
+                }
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/not_modified",
+            "description": "Not modified"
+          },
+          "401": {
+            "$ref": "#/components/responses/requires_authentication",
+            "description": "Requires authentication"
+          },
+          "403": {
+            "$ref": "#/components/responses/forbidden",
+            "description": "Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/not_found",
+            "description": "Resource not found"
+          },
+          "422": {
+            "$ref": "#/components/responses/validation_failed",
+            "description": "Validation failed"
+          }
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "example": {
+                      "emails": [
+                        "octocat@github.com",
+                        "mona@github.com"
+                      ]
+                    },
+                    "required": [
+                      "emails"
+                    ],
+                    "properties": {
+                      "emails": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "examples": [
+                            "username@example.com"
+                          ],
+                          "minItems": 1
+                        },
+                        "examples": [],
+                        "description": "Adds one or more email addresses to your GitHub account. Must contain at least one email address. **Note:** Alternatively, you can pass a single email address or an `array` of emails addresses directly, but we recommend that you pass an object using the `emails` key."
+                      }
+                    }
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "examples": [
+                        "username@example.com"
+                      ],
+                      "minItems": 1
+                    }
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "examples": {
+                "default": {
+                  "value": {
+                    "emails": [
+                      "octocat@github.com",
+                      "mona@github.com",
+                      "octocat@octocat.org"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-github": {
+          "category": "users",
+          "subcategory": "emails",
+          "githubCloudOnly": false,
+          "enabledForGitHubApps": false
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "basic-error": {
+        "type": "object",
+        "title": "Basic Error",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "documentation_url": {
+            "type": "string"
+          }
+        },
+        "description": "Basic Error"
+      },
+      "validation-error": {
+        "type": "object",
+        "title": "Validation Error",
+        "required": [
+          "message",
+          "documentation_url"
+        ],
+        "properties": {
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "code"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "field": {
+                  "type": "string"
+                },
+                "index": {
+                  "type": "integer"
+                },
+                "value": {
+                  "oneOf": [
+                    {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    {
+                      "type": [
+                        "integer",
+                        "null"
+                      ]
+                    },
+                    {
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  ]
+                },
+                "message": {
+                  "type": "string"
+                },
+                "resource": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "message": {
+            "type": "string"
+          },
+          "documentation_url": {
+            "type": "string"
+          }
+        },
+        "description": "Validation Error"
+      },
+      "email": {
+        "type": "object",
+        "title": "Email",
+        "required": [
+          "email",
+          "primary",
+          "verified",
+          "visibility"
+        ],
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "examples": [
+              "octocat@github.com"
+            ]
+          },
+          "primary": {
+            "type": "boolean",
+            "examples": [
+              true
+            ]
+          },
+          "verified": {
+            "type": "boolean",
+            "examples": [
+              true
+            ]
+          },
+          "visibility": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "examples": [
+              "public"
+            ]
+          }
+        },
+        "description": "Email"
+      }
+    },
+    "responses": {
+      "not_modified": {
+        "description": "Not modified"
+      },
+      "requires_authentication": {
+        "description": "Requires authentication",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/basic-error"
+            }
+          }
+        }
+      },
+      "forbidden": {
+        "description": "Forbidden",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/basic-error"
+            }
+          }
+        }
+      },
+      "not_found": {
+        "description": "Resource not found",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/basic-error"
+            }
+          }
+        }
+      },
+      "validation_failed": {
+        "description": "Validation failed",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/validation-error"
+            }
+          }
+        }
+      }
+    },
+    "examples": {
+      "email-items": {
+        "value": [
+          {
+            "email": "octocat@octocat.org",
+            "primary": false,
+            "verified": false,
+            "visibility": "public"
+          },
+          {
+            "email": "octocat@github.com",
+            "primary": false,
+            "verified": false,
+            "visibility": null
+          },
+          {
+            "email": "mona@github.com",
+            "primary": false,
+            "verified": false,
+            "visibility": null
+          }
+        ]
+      }
+    },
+    "parameters": {},
+    "headers": {},
+    "requestBodies": {}
+  }
+}

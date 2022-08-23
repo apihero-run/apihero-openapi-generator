@@ -1,5 +1,5 @@
 import { camelCase } from "camel-case";
-import { Client, Model, Operation, Service } from "../@types";
+import { Client, Model, Operation, OperationParameter, Service } from "../@types";
 
 export type GenerateClientOptions = {
   additionalImports?: Array<{ imports: string[]; name: string }>;
@@ -196,20 +196,43 @@ class ClientGenerator {
     return `${parameter.name}${parameter.isRequired ? "" : "?"}: ${this.generateType(parameter)}`;
   }
 
-  private generateOperationParameterComments(parameters: Model[], path: string[] = []): string {
+  private generateOperationParameterComments(
+    parameters: OperationParameter[],
+    path: string[] = [],
+  ): string {
     if (!parameters || parameters.length === 0) {
       return "";
     }
 
-    return `\n\n${parameters
+    const supportedParameters = parameters
+      .filter((p) => p.export !== "one-of")
+      .filter((p) => p.in !== "body");
+
+    if (supportedParameters.length === 0) {
+      return "";
+    }
+
+    return `\n${supportedParameters
       .map((parameter) => this.generateOperationParameterComment(parameter, path))
       .join("\n")}`;
   }
 
   private generateOperationParameterComment(parameter: Model, path: string[] = []): string {
-    return `* @param ${[...path, parameter.name].join(".")} ${
+    return `* @param ${this.generateJSDocParamName(parameter, path)} ${
       parameter.description ? `- ${parameter.description}` : ""
-    }${this.generateOperationParameterComments(parameter.properties, [parameter.name])}`;
+    }${parameter.properties
+      .map((prop) => this.generateOperationParameterComment(prop, [parameter.name]))
+      .join("\n")}`;
+  }
+
+  private generateJSDocParamName(parameter: Model, path: string[] = []): string {
+    if (parameter.isRequired) {
+      return [...path, parameter.name].join(".");
+    }
+
+    return `[${[...path, parameter.name].join(".")}${
+      parameter.default ? `=${parameter.default}` : ""
+    }]`;
   }
 
   private generateOperationDocs(operation: Operation): string {

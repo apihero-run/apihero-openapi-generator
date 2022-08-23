@@ -1,0 +1,242 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "version": "1.1.4"
+  },
+  "tags": [
+    {
+      "name": "users",
+      "description": "Interact with and view information about users and also current user."
+    }
+  ],
+  "paths": {
+    "/user/public_emails": {
+      "get": {
+        "operationId": "users/list-public-emails-for-authenticated-user",
+        "summary": "List public email addresses for the authenticated user",
+        "description": "Lists your publicly visible email address, which you can set with the [Set primary email visibility for the authenticated user](https://docs.github.com/rest/reference/users#set-primary-email-visibility-for-the-authenticated-user) endpoint. This endpoint is accessible with the `user:email` scope.",
+        "deprecated": false,
+        "externalDocs": {
+          "url": "https://docs.github.com/rest/reference/users#list-public-email-addresses-for-the-authenticated-user",
+          "description": "API method documentation"
+        },
+        "tags": [
+          "users"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/per-page",
+            "description": "The number of results per page (max 100)."
+          },
+          {
+            "$ref": "#/components/parameters/page",
+            "description": "Page number of the results to fetch."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/email"
+                  }
+                },
+                "examples": {
+                  "default": {
+                    "$ref": "#/components/examples/email-items-2"
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Link": {
+                "$ref": "#/components/headers/link"
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/not_modified",
+            "description": "Not modified"
+          },
+          "401": {
+            "$ref": "#/components/responses/requires_authentication",
+            "description": "Requires authentication"
+          },
+          "403": {
+            "$ref": "#/components/responses/forbidden",
+            "description": "Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/not_found",
+            "description": "Resource not found"
+          }
+        },
+        "x-github": {
+          "category": "users",
+          "subcategory": "emails",
+          "githubCloudOnly": false,
+          "enabledForGitHubApps": false
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "email": {
+        "type": "object",
+        "title": "Email",
+        "required": [
+          "email",
+          "primary",
+          "verified",
+          "visibility"
+        ],
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "examples": [
+              "octocat@github.com"
+            ]
+          },
+          "primary": {
+            "type": "boolean",
+            "examples": [
+              true
+            ]
+          },
+          "verified": {
+            "type": "boolean",
+            "examples": [
+              true
+            ]
+          },
+          "visibility": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "examples": [
+              "public"
+            ]
+          }
+        },
+        "description": "Email"
+      },
+      "basic-error": {
+        "type": "object",
+        "title": "Basic Error",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "documentation_url": {
+            "type": "string"
+          }
+        },
+        "description": "Basic Error"
+      }
+    },
+    "responses": {
+      "not_modified": {
+        "description": "Not modified"
+      },
+      "requires_authentication": {
+        "description": "Requires authentication",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/basic-error"
+            }
+          }
+        }
+      },
+      "forbidden": {
+        "description": "Forbidden",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/basic-error"
+            }
+          }
+        }
+      },
+      "not_found": {
+        "description": "Resource not found",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/basic-error"
+            }
+          }
+        }
+      }
+    },
+    "examples": {
+      "email-items-2": {
+        "value": [
+          {
+            "email": "octocat@github.com",
+            "primary": true,
+            "verified": true,
+            "visibility": "public"
+          }
+        ]
+      }
+    },
+    "parameters": {
+      "per-page": {
+        "name": "per_page",
+        "in": "query",
+        "description": "The number of results per page (max 100).",
+        "required": false,
+        "schema": {
+          "type": "integer",
+          "default": 30
+        },
+        "deprecated": false,
+        "allowEmptyValue": false,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false
+      },
+      "page": {
+        "name": "page",
+        "in": "query",
+        "description": "Page number of the results to fetch.",
+        "required": false,
+        "schema": {
+          "type": "integer",
+          "default": 1
+        },
+        "deprecated": false,
+        "allowEmptyValue": false,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false
+      }
+    },
+    "headers": {
+      "link": {
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "deprecated": false,
+        "style": "simple",
+        "explode": false,
+        "example": "<https://api.github.com/resource?page=2>; rel=\"next\", <https://api.github.com/resource?page=5>; rel=\"last\""
+      }
+    },
+    "requestBodies": {}
+  }
+}

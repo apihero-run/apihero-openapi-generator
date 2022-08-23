@@ -16,7 +16,18 @@ async function generateTestCase(testCaseId: string): Promise<Map<string, string>
   return code;
 }
 
-test("code generation test cases", async () => {
+test("createLabel", async () => {
   expect(await generateTestCase("createLabel")).toMatchSnapshot();
+});
+
+test("getAuthenticatedApp", async () => {
   expect(await generateTestCase("getAuthenticatedApp")).toMatchSnapshot();
+});
+
+test("listPublicEmails", async () => {
+  expect(await generateTestCase("listPublicEmails")).toMatchSnapshot();
+});
+
+test("addEmailAddress", async () => {
+  expect(await generateTestCase("addEmailAddress")).toMatchSnapshot();
 });

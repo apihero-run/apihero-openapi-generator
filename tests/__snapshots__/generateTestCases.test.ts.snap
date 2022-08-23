@@ -1,6 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`code generation test cases 1`] = `
+exports[`addEmailAddress 1`] = `
+Map {
+  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+  id: string;
+  [key: string]: string | number;
+};
+
+/**
+ * Basic Error
+ */
+export type BasicError = {
+  url?: string;
+  status?: string;
+  message?: string;
+  documentation_url?: string;
+};
+
+/**
+ * Validation Error
+ */
+export type ValidationError = {
+  errors?: Array<{
+    code: string;
+    field?: string;
+    index?: number;
+    value?: string | null | number | null | Array<string> | null;
+    message?: string;
+    resource?: string;
+  }>;
+  message: string;
+  documentation_url: string;
+};
+
+/**
+ * Email
+ */
+export type Email = {
+  /**
+   *
+   * @example
+   * \\"octocat@github.com\\"
+   */
+  email: string;
+
+  /**
+   *
+   * @example
+   * true
+   */
+  primary: boolean;
+
+  /**
+   *
+   * @example
+   * true
+   */
+  verified: boolean;
+
+  /**
+   *
+   * @example
+   * \\"public\\"
+   */
+  visibility: string;
+};
+",
+  "users.ts" => "import { Email, ApiHeroEndpoint } from \\"./@types\\";
+
+/** 
+* @see https://docs.github.com/rest/reference/users#add-an-email-address-for-the-authenticated-user
+
+
+* Add an email address for the authenticated user
+* This endpoint is accessible with the \`user\` scope. 
+*/
+export const addEmailForAuthenticatedUser: ApiHeroEndpoint<
+  {
+    body?:
+      | {
+          /**
+           * Adds one or more email addresses to your GitHub account. Must contain at least one email address. **Note:** Alternatively, you can pass a single email address or an \`array\` of emails addresses directly, but we recommend that you pass an object using the \`emails\` key.
+           */
+          emails: Array<string>;
+        }
+      | Array<string>
+      | string;
+  },
+  Array<Email>
+> = {
+  id: \\"users/add-email-for-authenticated-user\\",
+};
+",
+  "index.ts" => "import * as users from \\"./users\\";
+
+export { users };
+
+export * from \\"./@types\\";
+",
+}
+`;
+
+exports[`createLabel 1`] = `
 Map {
   "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
   id: string;
@@ -98,14 +199,8 @@ export type Label = {
 
 
 * Create a label
-
 * @param repo - The name of the repository. The name is not case sensitive.
-* @param owner - The account owner of the repository. The name is not case sensitive.
-* @param body 
-
-* @param body.name - The name of the label. Emoji can be added to label names, using either native emoji or colon-style markup. For example, typing \`:strawberry:\` will render the emoji ![:strawberry:](https://github.githubassets.com/images/icons/emoji/unicode/1f353.png \\":strawberry:\\"). For a full list of available emoji and codes, see \\"[Emoji cheat sheet](https://github.com/ikatyang/emoji-cheat-sheet).\\"
-* @param body.color - The [hexadecimal color code](http://www.color-hex.com/) for the label, without the leading \`#\`.
-* @param body.description - A short description of the label. Must be 100 characters or fewer. 
+* @param owner - The account owner of the repository. The name is not case sensitive. 
 */
 export const createLabel: ApiHeroEndpoint<
   {
@@ -143,7 +238,7 @@ export * from \\"./@types\\";
 }
 `;
 
-exports[`code generation test cases 2`] = `
+exports[`getAuthenticatedApp 1`] = `
 Map {
   "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
   id: string;
@@ -435,6 +530,84 @@ export const getAuthenticated: ApiHeroEndpoint<never, Integration> = {
   "index.ts" => "import * as apps from \\"./apps\\";
 
 export { apps };
+
+export * from \\"./@types\\";
+",
+}
+`;
+
+exports[`listPublicEmails 1`] = `
+Map {
+  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+  id: string;
+  [key: string]: string | number;
+};
+
+/**
+ * Email
+ */
+export type Email = {
+  /**
+   *
+   * @example
+   * \\"octocat@github.com\\"
+   */
+  email: string;
+
+  /**
+   *
+   * @example
+   * true
+   */
+  primary: boolean;
+
+  /**
+   *
+   * @example
+   * true
+   */
+  verified: boolean;
+
+  /**
+   *
+   * @example
+   * \\"public\\"
+   */
+  visibility: string;
+};
+
+/**
+ * Basic Error
+ */
+export type BasicError = {
+  url?: string;
+  status?: string;
+  message?: string;
+  documentation_url?: string;
+};
+",
+  "users.ts" => "import { Email, Link, ApiHeroEndpoint } from \\"./@types\\";
+
+/** 
+* @see https://docs.github.com/rest/reference/users#list-public-email-addresses-for-the-authenticated-user
+
+
+* List public email addresses for the authenticated user
+* Lists your publicly visible email address, which you can set with the [Set primary email visibility for the authenticated user](https://docs.github.com/rest/reference/users#set-primary-email-visibility-for-the-authenticated-user) endpoint. This endpoint is accessible with the \`user:email\` scope.
+* @param [perPage=30] - The number of results per page (max 100).
+* @param [page=1] - Page number of the results to fetch. 
+*/
+export const listPublicEmailsForAuthenticatedUser: ApiHeroEndpoint<
+  { perPage?: number; page?: number },
+  Array<Email>,
+  { Link: Link }
+> = {
+  id: \\"users/list-public-emails-for-authenticated-user\\",
+};
+",
+  "index.ts" => "import * as users from \\"./users\\";
+
+export { users };
 
 export * from \\"./@types\\";
 ",
