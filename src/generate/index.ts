@@ -1,9 +1,14 @@
 import { camelCase } from "camel-case";
 import { Client, Model, Operation, OperationParameter, Service } from "../@types";
 
+export type GenerationOptions = {
+  noParamsType?: string;
+};
+
 export type GenerateClientOptions = {
   additionalImports?: Array<{ imports: string[]; name: string }>;
   additionalData?: Record<string, string | number>;
+  generation?: GenerationOptions;
   baseUrl?: string;
 };
 
@@ -184,7 +189,7 @@ class ClientGenerator {
 
   private generateOperationParameters(operation: Operation): string {
     if (!operation.parameters || operation.parameters.length === 0) {
-      return "never";
+      return this.options?.generation?.noParamsType ?? "never";
     }
 
     return `{ ${operation.parameters

@@ -70,3 +70,13 @@ test("generatePackage", async () => {
     version: { major: 1, minor: 0, patch: 0 },
   });
 });
+
+test("generatePackage with a different noParamsType", async () => {
+  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3/petstore.json");
+
+  await generatePackage(doc, "./tests/tmp/packages/petstore-no-params", {
+    name: "petstore",
+    version: { major: 1, minor: 0, patch: 0 },
+    generation: { noParamsType: "void" },
+  });
+});

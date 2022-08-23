@@ -21,6 +21,7 @@ export async function generatePackage(
       clientId: options.name,
       version: `${options.version.major}.${options.version.minor}.${options.version.patch}`,
     },
+    generation: options.generation,
   });
 
   return generatePackageFromTypeScriptFiles(typescriptFiles, destination, options);

@@ -1,11 +1,13 @@
 import path from "node:path";
 import { mkdir, readdir, stat, unlink, writeFile } from "node:fs/promises";
 import * as ts from "typescript";
+import { GenerationOptions } from "../generate";
 
 export type GeneratePackageOptions = {
   name: string;
   version: { major: number; minor: number; patch: number };
   description?: string;
+  generation?: GenerationOptions;
 };
 
 export async function generatePackageFromTypeScriptFiles(
