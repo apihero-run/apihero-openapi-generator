@@ -13181,7 +13181,7 @@ export type Dependency = {
    * Array of package-url (PURLs) of direct child dependencies.
    *
    * @example
-   * \\"@actions/http-client\\"
+   * [\\"@actions/http-client\\"]
    */
   dependencies?: Array<string>;
 };
@@ -29632,6 +29632,13 @@ export const startForAuthenticatedUser: ApiHeroEndpoint<
        * ]
        */
       exclude?: Array<\\"repositories\\">;
+
+      /**
+       * Repository path, owner and name
+       *
+       * @example
+       * \\"acme/widgets\\"
+       */
       repositories: Array<string>;
     };
   },
@@ -43166,13 +43173,13 @@ export type Job = {
    * Labels for the workflow job. Specified by the \\"runs_on\\" attribute in the action's workflow file.
    *
    * @example
-   * \\"self-hosted\\"
+   * [\\"self-hosted\\"]
    *
    * @example
-   * \\"foo\\"
+   * [\\"foo\\"]
    *
    * @example
-   * \\"bar\\"
+   * [\\"bar\\"]
    */
   labels: Array<string>;
 
@@ -43420,7 +43427,7 @@ export type Feed = {
   /**
    *
    * @example
-   * \\"https://github.com/organizations/github/octocat.private.atom?token=abc123\\"
+   * [\\"https://github.com/organizations/github/octocat.private.atom?token=abc123\\"]
    */
   current_user_organization_urls?: Array<string>;
 };
@@ -43514,10 +43521,10 @@ export type Hook = {
    * Determines what events the hook is triggered for. Default: ['push'].
    *
    * @example
-   * \\"push\\"
+   * [\\"push\\"]
    *
    * @example
-   * \\"pull_request\\"
+   * [\\"pull_request\\"]
    */
   events: Array<string>;
 
@@ -43837,10 +43844,10 @@ export type Issue = {
    * Labels to associate with this issue; pass one or more label names to replace the set of labels on this issue; send an empty array to clear all labels from the issue; note that the labels are silently dropped for users without push access to the repository
    *
    * @example
-   * \\"bug\\"
+   * [\\"bug\\"]
    *
    * @example
-   * \\"registration\\"
+   * [\\"registration\\"]
    */
   labels: Array<
     | string
@@ -44316,10 +44323,10 @@ export type GpgKey = {
   /**
    *
    * @example
-   * {
+   * [{
    *   \\"email\\": \\"octocat@users.noreply.github.com\\",
    *   \\"verified\\": true
-   * }
+   * }]
    */
   emails: Array<{
     email?: string;
@@ -44344,7 +44351,7 @@ export type GpgKey = {
   /**
    *
    * @example
-   * {
+   * [{
    *   \\"id\\": 4,
    *   \\"emails\\": [],
    *   \\"key_id\\": \\"4A595D4C72EE49C7\\",
@@ -44358,7 +44365,7 @@ export type GpgKey = {
    *   \\"primary_key_id\\": 3,
    *   \\"can_encrypt_comms\\": true,
    *   \\"can_encrypt_storage\\": true
-   * }
+   * }]
    */
   subkeys: Array<{
     id?: number;
@@ -44474,7 +44481,7 @@ export type License = {
   /**
    *
    * @example
-   * \\"include-copyright\\"
+   * [\\"include-copyright\\"]
    */
   conditions: Array<string>;
 
@@ -44488,26 +44495,26 @@ export type License = {
   /**
    *
    * @example
-   * \\"no-liability\\"
+   * [\\"no-liability\\"]
    */
   limitations: Array<string>;
 
   /**
    *
    * @example
-   * \\"commercial-use\\"
+   * [\\"commercial-use\\"]
    *
    * @example
-   * \\"modifications\\"
+   * [\\"modifications\\"]
    *
    * @example
-   * \\"distribution\\"
+   * [\\"distribution\\"]
    *
    * @example
-   * \\"sublicense\\"
+   * [\\"sublicense\\"]
    *
    * @example
-   * \\"private-use\\"
+   * [\\"private-use\\"]
    */
   permissions: Array<string>;
 
@@ -44892,7 +44899,7 @@ export type GitTree = {
    * Objects specifying a tree structure
    *
    * @example
-   * {
+   * [{
    *   \\"sha\\": \\"44b4fc6d56897b048c772eb4087f854f46256132\\",
    *   \\"url\\": \\"https://api.github.com/repos/octocat/Hello-World/git/blobs/44b4fc6d56897b048c772eb4087f854f46256132\\",
    *   \\"mode\\": \\"100644\\",
@@ -44927,7 +44934,7 @@ export type GitTree = {
    *       \\"type\\": \\"string\\"
    *     }
    *   }
-   * }
+   * }]
    */
   tree: Array<{
     /**
@@ -45103,10 +45110,10 @@ export type OrgHook = {
   /**
    *
    * @example
-   * \\"push\\"
+   * [\\"push\\"]
    *
    * @example
-   * \\"pull_request\\"
+   * [\\"pull_request\\"]
    */
   events: Array<string>;
 
@@ -45970,16 +45977,16 @@ export type ScimUser = {
    * user emails
    *
    * @example
-   * {
+   * [{
    *   \\"value\\": \\"someone@example.com\\",
    *   \\"primary\\": true
-   * }
+   * }]
    *
    * @example
-   * {
+   * [{
    *   \\"value\\": \\"another@example.com\\",
    *   \\"primary\\": false
-   * }
+   * }]
    */
   emails: Array<{
     value: string;
@@ -46016,12 +46023,12 @@ export type ScimUser = {
    * Set of operations to be performed
    *
    * @example
-   * {
+   * [{
    *   \\"op\\": \\"replace\\",
    *   \\"value\\": {
    *     \\"active\\": false
    *   }
-   * }
+   * }]
    */
   operations?: Array<{
     op: \\"add\\" | \\"remove\\" | \\"replace\\";
@@ -46224,7 +46231,7 @@ export type Dependency = {
    * Array of package-url (PURLs) of direct child dependencies.
    *
    * @example
-   * \\"@actions/http-client\\"
+   * [\\"@actions/http-client\\"]
    */
   dependencies?: Array<string>;
 
@@ -47837,10 +47844,10 @@ export type Integration = {
    * The list of events for the GitHub app
    *
    * @example
-   * \\"label\\"
+   * [\\"label\\"]
    *
    * @example
-   * \\"deployment\\"
+   * [\\"deployment\\"]
    */
   events: Array<string>;
 
@@ -48322,88 +48329,88 @@ export type ApiOverview = {
   /**
    *
    * @example
-   * \\"127.0.0.1/32\\"
+   * [\\"127.0.0.1/32\\"]
    */
   api?: Array<string>;
 
   /**
    *
    * @example
-   * \\"127.0.0.1/32\\"
+   * [\\"127.0.0.1/32\\"]
    */
   git?: Array<string>;
 
   /**
    *
    * @example
-   * \\"127.0.0.1/32\\"
+   * [\\"127.0.0.1/32\\"]
    */
   web?: Array<string>;
 
   /**
    *
    * @example
-   * \\"127.0.0.1/32\\"
+   * [\\"127.0.0.1/32\\"]
    */
   hooks?: Array<string>;
 
   /**
    *
    * @example
-   * \\"192.30.252.153/32\\"
+   * [\\"192.30.252.153/32\\"]
    *
    * @example
-   * \\"192.30.252.154/32\\"
+   * [\\"192.30.252.154/32\\"]
    */
   pages?: Array<string>;
 
   /**
    *
    * @example
-   * \\"13.64.0.0/16\\"
+   * [\\"13.64.0.0/16\\"]
    *
    * @example
-   * \\"13.65.0.0/16\\"
+   * [\\"13.65.0.0/16\\"]
    */
   actions?: Array<string>;
 
   /**
    *
    * @example
-   * \\"54.158.161.132\\"
+   * [\\"54.158.161.132\\"]
    *
    * @example
-   * \\"54.226.70.38\\"
+   * [\\"54.226.70.38\\"]
    */
   importer?: Array<string>;
 
   /**
    *
    * @example
-   * \\"13.65.0.0/16\\"
+   * [\\"13.65.0.0/16\\"]
    *
    * @example
-   * \\"157.55.204.33/32\\"
+   * [\\"157.55.204.33/32\\"]
    *
    * @example
-   * \\"2a01:111:f403:f90c::/62\\"
+   * [\\"2a01:111:f403:f90c::/62\\"]
    */
   packages?: Array<string>;
 
   /**
    *
    * @example
-   * \\"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl\\"
+   * [\\"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl\\"]
    */
   ssh_keys?: Array<string>;
 
   /**
    *
    * @example
-   * \\"192.168.7.15/32\\"
+   * [\\"192.168.7.15/32\\"]
    *
    * @example
-   * \\"192.168.7.16/32\\"
+   * [\\"192.168.7.16/32\\"]
    */
   dependabot?: Array<string>;
   ssh_key_fingerprints?: {
@@ -48803,10 +48810,10 @@ export type Installation = {
   /**
    *
    * @example
-   * \\"config.yml\\"
+   * [\\"config.yml\\"]
    *
    * @example
-   * \\".github/issue_TEMPLATE.md\\"
+   * [\\".github/issue_TEMPLATE.md\\"]
    */
   single_file_paths?: Array<string>;
 
@@ -50105,18 +50112,18 @@ export type GroupMapping = {
    * Array of groups to be mapped to this team
    *
    * @example
-   * {
+   * [{
    *   \\"group_id\\": \\"111a1a11-aaa1-1aaa-11a1-a1a1a1a1a1aa\\",
    *   \\"group_name\\": \\"saml-azuread-test\\",
    *   \\"group_description\\": \\"A group of Developers working on AzureAD SAML SSO\\"
-   * }
+   * }]
    *
    * @example
-   * {
+   * [{
    *   \\"group_id\\": \\"2bb2bb2b-bb22-22bb-2bb2-bb2bbb2bb2b2\\",
    *   \\"group_name\\": \\"saml-azuread-test2\\",
    *   \\"group_description\\": \\"Another group of Developers working on AzureAD SAML SSO\\"
-   * }
+   * }]
    */
   groups?: Array<{
     /**
@@ -50458,16 +50465,16 @@ export type ExternalGroup = {
    * An array of teams linked to this group
    *
    * @example
-   * {
+   * [{
    *   \\"team_id\\": 1,
    *   \\"team_name\\": \\"team-test\\"
-   * }
+   * }]
    *
    * @example
-   * {
+   * [{
    *   \\"team_id\\": 2,
    *   \\"team_name\\": \\"team-test2\\"
-   * }
+   * }]
    */
   teams: Array<{
     /**
@@ -50491,20 +50498,20 @@ export type ExternalGroup = {
    * An array of external members linked to this group
    *
    * @example
-   * {
+   * [{
    *   \\"member_id\\": 1,
    *   \\"member_name\\": \\"Mona Lisa\\",
    *   \\"member_email\\": \\"mona_lisa@github.com\\",
    *   \\"member_login\\": \\"mona-lisa_eocsaxrs\\"
-   * }
+   * }]
    *
    * @example
-   * {
+   * [{
    *   \\"member_id\\": 2,
    *   \\"member_name\\": \\"Octo Lisa\\",
    *   \\"member_email\\": \\"octo_lisa@github.com\\",
    *   \\"member_login\\": \\"octo-lisa_eocsaxrs\\"
-   * }
+   * }]
    */
   members: Array<{
     /**
@@ -51294,25 +51301,25 @@ export type CommitActivity = {
   /**
    *
    * @example
-   * 0
+   * [0]
    *
    * @example
-   * 3
+   * [3]
    *
    * @example
-   * 26
+   * [26]
    *
    * @example
-   * 20
+   * [20]
    *
    * @example
-   * 39
+   * [39]
    *
    * @example
-   * 1
+   * [1]
    *
    * @example
-   * 0
+   * [0]
    */
   days: Array<number>;
 
@@ -51394,18 +51401,18 @@ export type ExternalGroups = {
    * An array of external groups available to be mapped to a team
    *
    * @example
-   * {
+   * [{
    *   \\"group_id\\": 1,
    *   \\"group_name\\": \\"group-azuread-test\\",
    *   \\"updated_at\\": \\"2021-01-03 22:27:15:000 -700\\"
-   * }
+   * }]
    *
    * @example
-   * {
+   * [{
    *   \\"group_id\\": 2,
    *   \\"group_name\\": \\"group-azuread-test2\\",
    *   \\"updated_at\\": \\"2021-06-03 22:27:15:000 -700\\"
-   * }
+   * }]
    */
   groups?: Array<{
     /**
@@ -51475,16 +51482,16 @@ export type FullRepository = {
   /**
    *
    * @example
-   * \\"octocat\\"
+   * [\\"octocat\\"]
    *
    * @example
-   * \\"atom\\"
+   * [\\"atom\\"]
    *
    * @example
-   * \\"electron\\"
+   * [\\"electron\\"]
    *
    * @example
-   * \\"API\\"
+   * [\\"API\\"]
    */
   topics?: Array<string>;
 
@@ -53099,7 +53106,7 @@ export type ApplicationGrant = {
   /**
    *
    * @example
-   * \\"public_repo\\"
+   * [\\"public_repo\\"]
    */
   scopes: Array<string>;
 
@@ -54775,10 +54782,10 @@ export type InstallationToken = {
   /**
    *
    * @example
-   * \\"config.yml\\"
+   * [\\"config.yml\\"]
    *
    * @example
-   * \\".github/issue_TEMPLATE.md\\"
+   * [\\".github/issue_TEMPLATE.md\\"]
    */
   single_file_paths?: Array<string>;
   repository_selection?: \\"all\\" | \\"selected\\";
@@ -55944,10 +55951,10 @@ export type ScopedInstallation = {
   /**
    *
    * @example
-   * \\"config.yml\\"
+   * [\\"config.yml\\"]
    *
    * @example
-   * \\".github/issue_TEMPLATE.md\\"
+   * [\\".github/issue_TEMPLATE.md\\"]
    */
   single_file_paths?: Array<string>;
 
@@ -56017,7 +56024,7 @@ export type StatusCheckPolicy = {
   /**
    *
    * @example
-   * \\"continuous-integration/travis-ci\\"
+   * [\\"continuous-integration/travis-ci\\"]
    */
   contexts: Array<string>;
 
@@ -56152,12 +56159,12 @@ export type ContributorActivity = {
   /**
    *
    * @example
-   * {
+   * [{
    *   \\"a\\": 6898,
    *   \\"c\\": 10,
    *   \\"d\\": 77,
    *   \\"w\\": \\"1367712000\\"
-   * }
+   * }]
    */
   weeks: Array<{
     a?: number;
@@ -57128,10 +57135,10 @@ export type CodeSearchResultItem = {
   /**
    *
    * @example
-   * \\"73..77\\"
+   * [\\"73..77\\"]
    *
    * @example
-   * \\"77..78\\"
+   * [\\"77..78\\"]
    */
   line_numbers?: Array<string>;
   text_matches?: SearchResultTextMatches;
@@ -57200,10 +57207,10 @@ export type PagesHttpsCertificate = {
    * Array of the domain set and its alternate name (if it is configured)
    *
    * @example
-   * \\"example.com\\"
+   * [\\"example.com\\"]
    *
    * @example
-   * \\"www.example.com\\"
+   * [\\"www.example.com\\"]
    */
   domains: Array<string>;
   expires_at?: string;
@@ -57685,10 +57692,10 @@ export type CredentialAuthorization = {
    * List of oauth scopes the token has been granted.
    *
    * @example
-   * \\"user\\"
+   * [\\"user\\"]
    *
    * @example
-   * \\"repo\\"
+   * [\\"repo\\"]
    */
   scopes?: Array<string>;
 
@@ -57933,10 +57940,10 @@ export type MarketplaceListingPlan = {
   /**
    *
    * @example
-   * \\"Up to 25 private repositories\\"
+   * [\\"Up to 25 private repositories\\"]
    *
    * @example
-   * \\"11 concurrent builds\\"
+   * [\\"11 concurrent builds\\"]
    */
   bullets: Array<string>;
   unit_name: string;
@@ -62179,10 +62186,10 @@ export const reviewPendingDeploymentsForRun: ApiHeroEndpoint<
        * The list of environment ids to approve or reject
        *
        * @example
-       * 161171787
+       * [161171787]
        *
        * @example
-       * 161171795
+       * [161171795]
        */
       environment_ids: Array<number>;
     };
@@ -63799,7 +63806,7 @@ export const scopeToken: ApiHeroEndpoint<
        * The list of repository IDs to scope the user-to-server access token to. \`repository_ids\` may not be specified if \`repositories\` is specified.
        *
        * @example
-       * 1
+       * [1]
        */
       repository_ids?: Array<number>;
     };
@@ -63921,7 +63928,7 @@ export const createInstallationAccessToken: ApiHeroEndpoint<
        * List of repository IDs that the token should have access to
        *
        * @example
-       * 1
+       * [1]
        */
       repository_ids?: Array<number>;
     };
@@ -70597,9 +70604,16 @@ export const startForAuthenticatedUser: ApiHeroEndpoint<
        * Exclude attributes from the API response to improve performance
        *
        * @example
-       * \\"repositories\\"
+       * [\\"repositories\\"]
        */
       exclude?: Array<\\"repositories\\">;
+
+      /**
+       * Repository path, owner and name
+       *
+       * @example
+       * \\"acme/widgets\\"
+       */
       repositories: Array<string>;
 
       /**
@@ -71250,10 +71264,10 @@ export const createAuthorization: ApiHeroEndpoint<
        * A list of scopes that this authorization is in.
        *
        * @example
-       * \\"public_repo\\"
+       * [\\"public_repo\\"]
        *
        * @example
-       * \\"user\\"
+       * [\\"user\\"]
        */
       scopes?: Array<string>;
 
@@ -71388,10 +71402,10 @@ export const updateAuthorization: ApiHeroEndpoint<
        * A list of scopes that this authorization is in.
        *
        * @example
-       * \\"public_repo\\"
+       * [\\"public_repo\\"]
        *
        * @example
-       * \\"user\\"
+       * [\\"user\\"]
        */
       scopes?: Array<string>;
 
@@ -71454,10 +71468,10 @@ export const getOrCreateAuthorizationForApp: ApiHeroEndpoint<
        * A list of scopes that this authorization is in.
        *
        * @example
-       * \\"public_repo\\"
+       * [\\"public_repo\\"]
        *
        * @example
-       * \\"user\\"
+       * [\\"user\\"]
        */
       scopes?: Array<string>;
 
@@ -71516,10 +71530,10 @@ export const getOrCreateAuthorizationForAppAndFingerprint: ApiHeroEndpoint<
        * A list of scopes that this authorization is in.
        *
        * @example
-       * \\"public_repo\\"
+       * [\\"public_repo\\"]
        *
        * @example
-       * \\"user\\"
+       * [\\"user\\"]
        */
       scopes?: Array<string>;
 
@@ -80498,16 +80512,16 @@ export const provisionAndInviteUser: ApiHeroEndpoint<
        * user emails
        *
        * @example
-       * {
+       * [{
        *   \\"value\\": \\"someone@example.com\\",
        *   \\"primary\\": true
-       * }
+       * }]
        *
        * @example
-       * {
+       * [{
        *   \\"value\\": \\"another@example.com\\",
        *   \\"primary\\": false
-       * }
+       * }]
        */
       emails: Array<{
         type?: string;
@@ -80584,16 +80598,16 @@ export const setInformationForProvisionedUser: ApiHeroEndpoint<
        * user emails
        *
        * @example
-       * {
+       * [{
        *   \\"value\\": \\"someone@example.com\\",
        *   \\"primary\\": true
-       * }
+       * }]
        *
        * @example
-       * {
+       * [{
        *   \\"value\\": \\"another@example.com\\",
        *   \\"primary\\": false
-       * }
+       * }]
        */
       emails: Array<{
         type?: string;
@@ -80673,12 +80687,12 @@ export const updateAttributeForUser: ApiHeroEndpoint<
        * Set of operations to be performed
        *
        * @example
-       * {
+       * [{
        *   \\"op\\": \\"replace\\",
        *   \\"value\\": {
        *     \\"active\\": false
        *   }
-       * }
+       * }]
        */
       Operations: Array<{
         op: \\"add\\" | \\"remove\\" | \\"replace\\";
@@ -83771,16 +83785,16 @@ export type FullRepository = {
   /**
    *
    * @example
-   * \\"octocat\\"
+   * [\\"octocat\\"]
    *
    * @example
-   * \\"atom\\"
+   * [\\"atom\\"]
    *
    * @example
-   * \\"electron\\"
+   * [\\"electron\\"]
    *
    * @example
-   * \\"API\\"
+   * [\\"API\\"]
    */
   topics?: Array<string>;
 

@@ -274,6 +274,31 @@ class ClientGenerator {
   }
 
   private generateModelComments(m: Model) {
+    switch (m.export) {
+      case "array": {
+        return this.generateArrayModelComments(m);
+      }
+      default: {
+        return this.generateGenericModelComments(m);
+      }
+    }
+  }
+
+  private generateArrayModelComments(m: Model): string {
+    if (!m.description && !m.deprecated && (!m.examples || m.examples.length === 0)) {
+      return m.link ? this.generateModelComments(m.link) : "";
+    }
+
+    return (
+      "\n\n/** " +
+      (m.description ? `\n* ${m.description}` : "") +
+      (m.deprecated ? `\n* @deprecated` : "") +
+      this.generateModelExamples(m) +
+      "\n*/"
+    );
+  }
+
+  private generateGenericModelComments(m: Model) {
     if (!m.description && !m.deprecated && (!m.examples || m.examples.length === 0)) {
       return "";
     }
@@ -316,7 +341,15 @@ class ClientGenerator {
       }`;
     }
 
-    return `\n* @example\n* ${prettyPrintJSONInComment(JSON.stringify(example, null, 2))}`;
+    return `\n* @example\n* ${this.generateModelExampleContent(model, example)}`;
+  }
+
+  private generateModelExampleContent(model: Model, example: unknown): string {
+    if (model.export === "array" && !Array.isArray(example)) {
+      return `[${prettyPrintJSONInComment(JSON.stringify(example, null, 2))}]`;
+    }
+
+    return prettyPrintJSONInComment(JSON.stringify(example, null, 2));
   }
 
   private generateType(property: Model, parent?: Model) {

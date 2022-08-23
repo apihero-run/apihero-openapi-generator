@@ -31,3 +31,7 @@ test("listPublicEmails", async () => {
 test("addEmailAddress", async () => {
   expect(await generateTestCase("addEmailAddress")).toMatchSnapshot();
 });
+
+test("startUserMigration", async () => {
+  expect(await generateTestCase("startUserMigration")).toMatchSnapshot();
+});

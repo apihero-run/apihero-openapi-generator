@@ -286,10 +286,10 @@ export type Integration = {
    * The list of events for the GitHub app
    *
    * @example
-   * \\"label\\"
+   * [\\"label\\"]
    *
    * @example
-   * \\"deployment\\"
+   * [\\"deployment\\"]
    */
   events: Array<string>;
 
@@ -608,6 +608,1048 @@ export const listPublicEmailsForAuthenticatedUser: ApiHeroEndpoint<
   "index.ts" => "import * as users from \\"./users\\";
 
 export { users };
+
+export * from \\"./@types\\";
+",
+}
+`;
+
+exports[`startUserMigration 1`] = `
+Map {
+  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+  id: string;
+  [key: string]: string | number;
+};
+
+/**
+ * Basic Error
+ */
+export type BasicError = {
+  url?: string;
+  status?: string;
+  message?: string;
+  documentation_url?: string;
+};
+
+/**
+ * Validation Error
+ */
+export type ValidationError = {
+  errors?: Array<{
+    code: string;
+    field?: string;
+    index?: number;
+    value?: string | null | number | null | Array<string> | null;
+    message?: string;
+    resource?: string;
+  }>;
+  message: string;
+  documentation_url: string;
+};
+
+/**
+ * A migration.
+ */
+export type Migration = {
+  /**
+   *
+   * @example
+   * 79
+   */
+  id: number;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/orgs/octo-org/migrations/79\\"
+   */
+  url: string;
+
+  /**
+   *
+   * @example
+   * \\"0b989ba4-242f-11e5-81e1-c7b6966d2516\\"
+   */
+  guid: string;
+  owner: SimpleUser | null;
+
+  /**
+   *
+   * @example
+   * \\"pending\\"
+   */
+  state: string;
+  exclude?: Array<{}>;
+  node_id: string;
+
+  /**
+   *
+   * @example
+   * \\"2015-07-06T15:33:38-07:00\\"
+   */
+  created_at: string;
+
+  /**
+   *
+   * @example
+   * \\"2015-07-06T15:33:38-07:00\\"
+   */
+  updated_at: string;
+  archive_url?: string;
+  repositories: Array<Repository>;
+  exclude_git_data: boolean;
+  exclude_metadata: boolean;
+  exclude_releases: boolean;
+
+  /**
+   *
+   * @example
+   * true
+   */
+  lock_repositories: boolean;
+  org_metadata_only: boolean;
+  exclude_attachments: boolean;
+  exclude_owner_projects: boolean;
+};
+
+/**
+ * Simple User
+ */
+export type SimpleUser = {
+  /**
+   *
+   * @example
+   * 1
+   */
+  id: number;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat\\"
+   */
+  url: string;
+  name?: string;
+
+  /**
+   *
+   * @example
+   * \\"User\\"
+   */
+  type: string;
+  email?: string;
+
+  /**
+   *
+   * @example
+   * \\"octocat\\"
+   */
+  login: string;
+
+  /**
+   *
+   * @example
+   * \\"MDQ6VXNlcjE=\\"
+   */
+  node_id: string;
+
+  /**
+   *
+   * @example
+   * \\"https://github.com/octocat\\"
+   */
+  html_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/gists{/gist_id}\\"
+   */
+  gists_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/repos\\"
+   */
+  repos_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://github.com/images/error/octocat_happy.gif\\"
+   */
+  avatar_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/events{/privacy}\\"
+   */
+  events_url: string;
+  site_admin: boolean;
+
+  /**
+   *
+   * @example
+   * \\"\\\\\\"2020-07-09T00:17:55Z\\\\\\"\\"
+   */
+  starred_at?: string;
+
+  /**
+   *
+   * @example
+   * \\"41d064eb2195891e12d0413f63227ea7\\"
+   */
+  gravatar_id: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/starred{/owner}{/repo}\\"
+   */
+  starred_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/followers\\"
+   */
+  followers_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/following{/other_user}\\"
+   */
+  following_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/orgs\\"
+   */
+  organizations_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/subscriptions\\"
+   */
+  subscriptions_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/received_events\\"
+   */
+  received_events_url: string;
+};
+
+/**
+ * A git repository
+ */
+export type Repository = {
+  /**
+   * Unique identifier of the repository
+   *
+   * @example
+   * 42
+   */
+  id: number;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/repos/octocat/Hello-World\\"
+   */
+  url: string;
+  fork: boolean;
+
+  /**
+   * The name of the repository.
+   *
+   * @example
+   * \\"Team Environment\\"
+   */
+  name: string;
+
+  /**
+   *
+   * @example
+   * 108
+   */
+  size: number;
+  forks: number;
+  owner: SimpleUser;
+  topics?: Array<string>;
+
+  /**
+   *
+   * @example
+   * \\"git:github.com/octocat/Hello-World.git\\"
+   */
+  git_url: string;
+  license: LicenseSimple | null;
+
+  /**
+   *
+   * @example
+   * \\"MDEwOlJlcG9zaXRvcnkxMjk2MjY5\\"
+   */
+  node_id: string;
+
+  /**
+   * Whether the repository is private or public.
+   */
+  private: boolean;
+
+  /**
+   *
+   * @example
+   * \\"git@github.com:octocat/Hello-World.git\\"
+   */
+  ssh_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://svn.github.com/octocat/Hello-World\\"
+   */
+  svn_url: string;
+
+  /**
+   * Whether the repository is archived.
+   */
+  archived: boolean;
+
+  /**
+   * Returns whether or not this repository disabled.
+   */
+  disabled: boolean;
+
+  /**
+   * Whether the wiki is enabled.
+   *
+   * @example
+   * true
+   */
+  has_wiki: boolean;
+
+  /**
+   *
+   * @example
+   * \\"https://github.com\\"
+   */
+  homepage: string;
+
+  /**
+   *
+   * @example
+   * \\"https://github.com/octocat/Hello-World\\"
+   */
+  html_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/keys{/key_id}\\"
+   */
+  keys_url: string;
+  language: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/tags\\"
+   */
+  tags_url: string;
+  watchers: number;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/git/blobs{/sha}\\"
+   */
+  blobs_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://github.com/octocat/Hello-World.git\\"
+   */
+  clone_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/forks\\"
+   */
+  forks_url: string;
+
+  /**
+   *
+   * @example
+   * \\"octocat/Hello-World\\"
+   */
+  full_name: string;
+  has_pages: boolean;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/hooks\\"
+   */
+  hooks_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/pulls{/number}\\"
+   */
+  pulls_url: string;
+
+  /**
+   *
+   * @example
+   * \\"2011-01-26T19:06:43Z\\"
+   */
+  pushed_at: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/teams\\"
+   */
+  teams_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/git/trees{/sha}\\"
+   */
+  trees_url: string;
+
+  /**
+   *
+   * @example
+   * \\"2011-01-26T19:01:12Z\\"
+   */
+  created_at: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/events\\"
+   */
+  events_url: string;
+
+  /**
+   * Whether issues are enabled.
+   *
+   * @example
+   * true
+   */
+  has_issues: boolean;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/issues{/number}\\"
+   */
+  issues_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/labels{/name}\\"
+   */
+  labels_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/merges\\"
+   */
+  merges_url: string;
+
+  /**
+   *
+   * @example
+   * \\"git:git.example.com/octocat/Hello-World\\"
+   */
+  mirror_url: string;
+
+  /**
+   *
+   * @example
+   * \\"\\\\\\"2020-07-09T00:17:42Z\\\\\\"\\"
+   */
+  starred_at?: string;
+
+  /**
+   *
+   * @example
+   * \\"2011-01-26T19:14:43Z\\"
+   */
+  updated_at: string;
+
+  /**
+   * The repository visibility: public, private, or internal.
+   */
+  visibility?: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/{archive_format}{/ref}\\"
+   */
+  archive_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/commits{/sha}\\"
+   */
+  commits_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/compare/{base}...{head}\\"
+   */
+  compare_url: string;
+
+  /**
+   *
+   * @example
+   * \\"This your first repo!\\"
+   */
+  description: string;
+
+  /**
+   *
+   * @example
+   * 9
+   */
+  forks_count: number;
+
+  /**
+   * Whether this repository acts as a template that can be used to generate new repositories.
+   *
+   * @example
+   * true
+   */
+  is_template?: boolean;
+  open_issues: number;
+  permissions?: {
+    pull: boolean;
+    push: boolean;
+    admin: boolean;
+    triage?: boolean;
+    maintain?: boolean;
+  };
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/branches{/branch}\\"
+   */
+  branches_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/comments{/number}\\"
+   */
+  comments_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/contents/{+path}\\"
+   */
+  contents_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/git/refs{/sha}\\"
+   */
+  git_refs_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/git/tags{/sha}\\"
+   */
+  git_tags_url: string;
+
+  /**
+   * Whether projects are enabled.
+   *
+   * @example
+   * true
+   */
+  has_projects: boolean;
+  organization?: SimpleUser | null;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/releases{/id}\\"
+   */
+  releases_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/statuses/{sha}\\"
+   */
+  statuses_url: string;
+
+  /**
+   * Whether to allow forking this repo
+   */
+  allow_forking?: boolean;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/assignees{/user}\\"
+   */
+  assignees_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/downloads\\"
+   */
+  downloads_url: string;
+
+  /**
+   * Whether downloads are enabled.
+   *
+   * @example
+   * true
+   */
+  has_downloads: boolean;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/languages\\"
+   */
+  languages_url: string;
+  master_branch?: string;
+  network_count?: number;
+
+  /**
+   * The default branch of the repository.
+   *
+   * @example
+   * \\"master\\"
+   */
+  default_branch: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/milestones{/number}\\"
+   */
+  milestones_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/stargazers\\"
+   */
+  stargazers_url: string;
+
+  /**
+   *
+   * @example
+   * 80
+   */
+  watchers_count: number;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/deployments\\"
+   */
+  deployments_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/git/commits{/sha}\\"
+   */
+  git_commits_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/subscribers\\"
+   */
+  subscribers_url: string;
+
+  /**
+   * Whether to allow Auto-merge to be used on pull requests.
+   *
+   * @example
+   * false
+   */
+  allow_auto_merge?: boolean;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/contributors\\"
+   */
+  contributors_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/issues/events{/number}\\"
+   */
+  issue_events_url: string;
+
+  /**
+   *
+   * @example
+   * 80
+   */
+  stargazers_count: number;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/subscription\\"
+   */
+  subscription_url: string;
+  temp_clone_token?: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/collaborators{/collaborator}\\"
+   */
+  collaborators_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/issues/comments{/number}\\"
+   */
+  issue_comment_url: string;
+
+  /**
+   *
+   * @example
+   * \\"http://api.github.com/repos/octocat/Hello-World/notifications{?since,all,participating}\\"
+   */
+  notifications_url: string;
+
+  /**
+   *
+   * @example
+   * 0
+   */
+  open_issues_count: number;
+  subscribers_count?: number;
+
+  /**
+   * Whether to allow merge commits for pull requests.
+   *
+   * @example
+   * true
+   */
+  allow_merge_commit?: boolean;
+
+  /**
+   * Whether to allow rebase merges for pull requests.
+   *
+   * @example
+   * true
+   */
+  allow_rebase_merge?: boolean;
+
+  /**
+   * Whether to allow squash merges for pull requests.
+   *
+   * @example
+   * true
+   */
+  allow_squash_merge?: boolean;
+
+  /**
+   * Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
+   *
+   * @example
+   * false
+   */
+  allow_update_branch?: boolean;
+  template_repository?: {
+    id?: number;
+    url?: string;
+    fork?: boolean;
+    name?: string;
+    size?: number;
+    owner?: {
+      id?: number;
+      url?: string;
+      type?: string;
+      login?: string;
+      node_id?: string;
+      html_url?: string;
+      gists_url?: string;
+      repos_url?: string;
+      avatar_url?: string;
+      events_url?: string;
+      site_admin?: boolean;
+      gravatar_id?: string;
+      starred_url?: string;
+      followers_url?: string;
+      following_url?: string;
+      organizations_url?: string;
+      subscriptions_url?: string;
+      received_events_url?: string;
+    };
+    topics?: Array<string>;
+    git_url?: string;
+    node_id?: string;
+    private?: boolean;
+    ssh_url?: string;
+    svn_url?: string;
+    archived?: boolean;
+    disabled?: boolean;
+    has_wiki?: boolean;
+    homepage?: string;
+    html_url?: string;
+    keys_url?: string;
+    language?: string;
+    tags_url?: string;
+    blobs_url?: string;
+    clone_url?: string;
+    forks_url?: string;
+    full_name?: string;
+    has_pages?: boolean;
+    hooks_url?: string;
+    pulls_url?: string;
+    pushed_at?: string;
+    teams_url?: string;
+    trees_url?: string;
+    created_at?: string;
+    events_url?: string;
+    has_issues?: boolean;
+    issues_url?: string;
+    labels_url?: string;
+    merges_url?: string;
+    mirror_url?: string;
+    updated_at?: string;
+    visibility?: string;
+    archive_url?: string;
+    commits_url?: string;
+    compare_url?: string;
+    description?: string;
+    forks_count?: number;
+    is_template?: boolean;
+    permissions?: {
+      pull?: boolean;
+      push?: boolean;
+      admin?: boolean;
+      triage?: boolean;
+      maintain?: boolean;
+    };
+    branches_url?: string;
+    comments_url?: string;
+    contents_url?: string;
+    git_refs_url?: string;
+    git_tags_url?: string;
+    has_projects?: boolean;
+    releases_url?: string;
+    statuses_url?: string;
+    assignees_url?: string;
+    downloads_url?: string;
+    has_downloads?: boolean;
+    languages_url?: string;
+    network_count?: number;
+    default_branch?: string;
+    milestones_url?: string;
+    stargazers_url?: string;
+    watchers_count?: number;
+    deployments_url?: string;
+    git_commits_url?: string;
+    subscribers_url?: string;
+    allow_auto_merge?: boolean;
+    contributors_url?: string;
+    issue_events_url?: string;
+    stargazers_count?: number;
+    subscription_url?: string;
+    temp_clone_token?: string;
+    collaborators_url?: string;
+    issue_comment_url?: string;
+    notifications_url?: string;
+    open_issues_count?: number;
+    subscribers_count?: number;
+    allow_merge_commit?: boolean;
+    allow_rebase_merge?: boolean;
+    allow_squash_merge?: boolean;
+    allow_update_branch?: boolean;
+    delete_branch_on_merge?: boolean;
+    use_squash_pr_title_as_default?: boolean;
+  };
+
+  /**
+   * Whether to delete head branches when pull requests are merged
+   *
+   * @example
+   * false
+   */
+  delete_branch_on_merge?: boolean;
+
+  /**
+   * Whether a squash merge commit can use the pull request title as default.
+   */
+  use_squash_pr_title_as_default?: boolean;
+};
+
+/**
+ * License Simple
+ */
+export type LicenseSimple = {
+  /**
+   *
+   * @example
+   * \\"mit\\"
+   */
+  key: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/licenses/mit\\"
+   */
+  url: string;
+
+  /**
+   *
+   * @example
+   * \\"MIT License\\"
+   */
+  name: string;
+
+  /**
+   *
+   * @example
+   * \\"MDc6TGljZW5zZW1pdA==\\"
+   */
+  node_id: string;
+
+  /**
+   *
+   * @example
+   * \\"MIT\\"
+   */
+  spdx_id: string;
+  html_url?: string;
+};
+",
+  "migrations.ts" => "import { Migration, ApiHeroEndpoint } from \\"./@types\\";
+
+/** 
+* @see https://docs.github.com/rest/reference/migrations#start-a-user-migration
+
+
+* Start a user migration
+* Initiates the generation of a user migration archive. 
+*/
+export const startForAuthenticatedUser: ApiHeroEndpoint<
+  {
+    body: {
+      /**
+       * Exclude attributes from the API response to improve performance
+       *
+       * @example
+       * [\\"repositories\\"]
+       */
+      exclude?: Array<\\"repositories\\">;
+
+      /**
+       * Repository path, owner and name
+       *
+       * @example
+       * \\"acme/widgets\\"
+       */
+      repositories: Array<string>;
+
+      /**
+       * Indicates whether the repository git data should be excluded from the migration.
+       *
+       * @example
+       * true
+       */
+      exclude_git_data?: boolean;
+
+      /**
+       * Indicates whether metadata should be excluded and only git source should be included for the migration.
+       *
+       * @example
+       * true
+       */
+      exclude_metadata?: boolean;
+
+      /**
+       * Do not include releases in the migration
+       *
+       * @example
+       * true
+       */
+      exclude_releases?: boolean;
+
+      /**
+       * Lock the repositories being migrated at the start of the migration
+       *
+       * @example
+       * true
+       */
+      lock_repositories?: boolean;
+
+      /**
+       * Indicates whether this should only include organization metadata (repositories array should be empty and will ignore other flags).
+       *
+       * @example
+       * true
+       */
+      org_metadata_only?: boolean;
+
+      /**
+       * Do not include attachments in the migration
+       *
+       * @example
+       * true
+       */
+      exclude_attachments?: boolean;
+
+      /**
+       * Indicates whether projects owned by the organization or users should be excluded.
+       *
+       * @example
+       * true
+       */
+      exclude_owner_projects?: boolean;
+    };
+  },
+  Migration
+> = {
+  id: \\"migrations/start-for-authenticated-user\\",
+};
+",
+  "index.ts" => "import * as migrations from \\"./migrations\\";
+
+export { migrations };
 
 export * from \\"./@types\\";
 ",
