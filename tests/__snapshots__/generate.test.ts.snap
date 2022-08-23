@@ -2161,6 +2161,10 @@ export type RunnerGroupsEnterprise = {
 
   /**
    * List of workflows the runner group should be allowed to run. This setting will be ignored unless \`restricted_to_workflows\` is set to \`true\`.
+   * Name of workflow the runner group should be allowed to run. Note that a ref, tag, or long SHA is required.
+   *
+   * @example
+   * [\\"octo-org/octo-repo/.github/workflows/deploy.yaml@main\\"]
    */
   selected_workflows?: Array<string>;
 };
@@ -5951,6 +5955,10 @@ export type RunnerGroupsOrg = {
 
   /**
    * List of workflows the runner group should be allowed to run. This setting will be ignored unless \`restricted_to_workflows\` is set to \`true\`.
+   * Name of workflow the runner group should be allowed to run. Note that a ref, tag, or long SHA is required.
+   *
+   * @example
+   * [\\"octo-org/octo-repo/.github/workflows/deploy.yaml@main\\"]
    */
   selected_workflows?: Array<string>;
 };
@@ -17169,6 +17177,9 @@ export type ScimEnterpriseUser = {
 export type ScimUser = {
   /**
    * SCIM schema used.
+   *
+   * @example
+   * [\\"urn:ietf:params:scim:schemas:core:2.0:User\\"]
    */
   schemas: Array<string>;
 
@@ -17311,6 +17322,9 @@ export type ScimUser = {
 export type ScimUserList = {
   /**
    * SCIM schema used.
+   *
+   * @example
+   * [\\"urn:ietf:params:scim:api:messages:2.0:ListResponse\\"]
    */
   schemas: Array<string>;
 
@@ -18526,6 +18540,7 @@ export const setSelectedRepositoriesEnabledGithubActionsOrganization: ApiHeroEnd
     body: {
       /**
        * List of repository IDs to enable for GitHub Actions.
+       * Unique identifier of the repository.
        */
       selected_repository_ids: Array<number>;
     };
@@ -18697,11 +18712,13 @@ export const createSelfHostedRunnerGroupForOrg: ApiHeroEndpoint<
 
       /**
        * List of repository IDs that can access the runner group.
+       * Unique identifier of the repository.
        */
       selected_repository_ids?: Array<number>;
 
       /**
        * List of runner IDs to add to the runner group.
+       * Unique identifier of the runner.
        */
       runners?: Array<number>;
 
@@ -18717,6 +18734,10 @@ export const createSelfHostedRunnerGroupForOrg: ApiHeroEndpoint<
 
       /**
        * List of workflows the runner group should be allowed to run. This setting will be ignored unless \`restricted_to_workflows\` is set to \`true\`.
+       * Name of workflow the runner group should be allowed to run. Note that a ref, tag, or long SHA is required.
+       *
+       * @example
+       * [\\"octo-org/octo-repo/.github/workflows/deploy.yaml@main\\"]
        */
       selected_workflows?: Array<string>;
     };
@@ -18806,6 +18827,10 @@ export const updateSelfHostedRunnerGroupForOrg: ApiHeroEndpoint<
 
       /**
        * List of workflows the runner group should be allowed to run. This setting will be ignored unless \`restricted_to_workflows\` is set to \`true\`.
+       * Name of workflow the runner group should be allowed to run. Note that a ref, tag, or long SHA is required.
+       *
+       * @example
+       * [\\"octo-org/octo-repo/.github/workflows/deploy.yaml@main\\"]
        */
       selected_workflows?: Array<string>;
     };
@@ -18860,6 +18885,7 @@ export const setRepoAccessToSelfHostedRunnerGroupInOrg: ApiHeroEndpoint<
     body: {
       /**
        * List of repository IDs that can access the runner group.
+       * Unique identifier of the repository.
        */
       selected_repository_ids: Array<number>;
     };
@@ -18960,6 +18986,7 @@ export const setSelfHostedRunnersInGroupForOrg: ApiHeroEndpoint<
     body: {
       /**
        * List of runner IDs to add to the runner group.
+       * Unique identifier of the runner.
        */
       runners: Array<number>;
     };
@@ -22034,6 +22061,9 @@ export const createInstallationAccessToken: ApiHeroEndpoint<
     body?: {
       /**
        * List of repository names that the token should have access to
+       *
+       * @example
+       * [\\"rails\\"]
        */
       repositories?: Array<string>;
 
@@ -22213,6 +22243,9 @@ export const scopeToken: ApiHeroEndpoint<
 
       /**
        * The list of repository names to scope the user-to-server access token to. \`repositories\` may not be specified if \`repository_ids\` is specified.
+       *
+       * @example
+       * [\\"rails\\"]
        */
       repositories?: Array<string>;
 
@@ -25139,6 +25172,7 @@ export const setSelectedOrganizationsEnabledGithubActionsEnterprise: ApiHeroEndp
     body: {
       /**
        * List of organization IDs to enable for GitHub Actions.
+       * Unique identifier of the organization.
        */
       selected_organization_ids: Array<number>;
     };
@@ -25265,11 +25299,13 @@ export const createSelfHostedRunnerGroupForEnterprise: ApiHeroEndpoint<
 
       /**
        * List of organization IDs that can access the runner group.
+       * Unique identifier of the organization.
        */
       selected_organization_ids?: Array<number>;
 
       /**
        * List of runner IDs to add to the runner group.
+       * Unique identifier of the runner.
        */
       runners?: Array<number>;
 
@@ -25285,6 +25321,10 @@ export const createSelfHostedRunnerGroupForEnterprise: ApiHeroEndpoint<
 
       /**
        * List of workflows the runner group should be allowed to run. This setting will be ignored unless \`restricted_to_workflows\` is set to \`true\`.
+       * Name of workflow the runner group should be allowed to run. Note that a ref, tag, or long SHA is required.
+       *
+       * @example
+       * [\\"octo-org/octo-repo/.github/workflows/deploy.yaml@main\\"]
        */
       selected_workflows?: Array<string>;
     };
@@ -25368,6 +25408,10 @@ export const updateSelfHostedRunnerGroupForEnterprise: ApiHeroEndpoint<
 
       /**
        * List of workflows the runner group should be allowed to run. This setting will be ignored unless \`restricted_to_workflows\` is set to \`true\`.
+       * Name of workflow the runner group should be allowed to run. Note that a ref, tag, or long SHA is required.
+       *
+       * @example
+       * [\\"octo-org/octo-repo/.github/workflows/deploy.yaml@main\\"]
        */
       selected_workflows?: Array<string>;
     };
@@ -25418,6 +25462,7 @@ export const setOrgAccessToSelfHostedRunnerGroupInEnterprise: ApiHeroEndpoint<
     body: {
       /**
        * List of organization IDs that can access the runner group.
+       * Unique identifier of the organization.
        */
       selected_organization_ids: Array<number>;
     };
@@ -25507,6 +25552,7 @@ export const setSelfHostedRunnersInGroupForEnterprise: ApiHeroEndpoint<
     body: {
       /**
        * List of runner IDs to add to the runner group.
+       * Unique identifier of the runner.
        */
       runners: Array<number>;
     };
@@ -29625,6 +29671,7 @@ export const startForAuthenticatedUser: ApiHeroEndpoint<
 
       /**
        * Exclude attributes from the API response to improve performance
+       * Allowed values that can be passed to the exclude param.
        *
        * @example
        * [
@@ -41716,6 +41763,9 @@ export const deleteEmailForAuthenticatedUser: ApiHeroEndpoint<
       | {
           /**
            * Email addresses associated with the GitHub user account.
+           *
+           * @example
+           * [\\"username@example.com\\"]
            */
           emails: Array<string>;
         }
@@ -46000,6 +46050,9 @@ export type ScimUser = {
 
   /**
    * SCIM schema used.
+   *
+   * @example
+   * [\\"urn:ietf:params:scim:schemas:core:2.0:User\\"]
    */
   schemas: Array<string>;
 
@@ -50901,6 +50954,9 @@ export type ReviewComment = {
 export type ScimUserList = {
   /**
    * SCIM schema used.
+   *
+   * @example
+   * [\\"urn:ietf:params:scim:api:messages:2.0:ListResponse\\"]
    */
   schemas: Array<string>;
   Resources: Array<ScimUser>;
@@ -54129,6 +54185,10 @@ export type RunnerGroupsOrg = {
 
   /**
    * List of workflows the runner group should be allowed to run. This setting will be ignored unless \`restricted_to_workflows\` is set to \`true\`.
+   * Name of workflow the runner group should be allowed to run. Note that a ref, tag, or long SHA is required.
+   *
+   * @example
+   * [\\"octo-org/octo-repo/.github/workflows/deploy.yaml@main\\"]
    */
   selected_workflows?: Array<string>;
 
@@ -58000,6 +58060,10 @@ export type RunnerGroupsEnterprise = {
 
   /**
    * List of workflows the runner group should be allowed to run. This setting will be ignored unless \`restricted_to_workflows\` is set to \`true\`.
+   * Name of workflow the runner group should be allowed to run. Note that a ref, tag, or long SHA is required.
+   *
+   * @example
+   * [\\"octo-org/octo-repo/.github/workflows/deploy.yaml@main\\"]
    */
   selected_workflows?: Array<string>;
 
@@ -59946,6 +60010,7 @@ export const createSelfHostedRunnerGroupForOrg: ApiHeroEndpoint<
 
       /**
        * List of runner IDs to add to the runner group.
+       * Unique identifier of the runner.
        */
       runners?: Array<number>;
 
@@ -59956,6 +60021,10 @@ export const createSelfHostedRunnerGroupForOrg: ApiHeroEndpoint<
 
       /**
        * List of workflows the runner group should be allowed to run. This setting will be ignored unless \`restricted_to_workflows\` is set to \`true\`.
+       * Name of workflow the runner group should be allowed to run. Note that a ref, tag, or long SHA is required.
+       *
+       * @example
+       * [\\"octo-org/octo-repo/.github/workflows/deploy.yaml@main\\"]
        */
       selected_workflows?: Array<string>;
 
@@ -59966,6 +60035,7 @@ export const createSelfHostedRunnerGroupForOrg: ApiHeroEndpoint<
 
       /**
        * List of repository IDs that can access the runner group.
+       * Unique identifier of the repository.
        */
       selected_repository_ids?: Array<number>;
 
@@ -60602,6 +60672,7 @@ export const setSelectedRepositoriesEnabledGithubActionsOrganization: ApiHeroEnd
     body: {
       /**
        * List of repository IDs to enable for GitHub Actions.
+       * Unique identifier of the repository.
        */
       selected_repository_ids: Array<number>;
     };
@@ -61260,6 +61331,10 @@ export const updateSelfHostedRunnerGroupForOrg: ApiHeroEndpoint<
 
       /**
        * List of workflows the runner group should be allowed to run. This setting will be ignored unless \`restricted_to_workflows\` is set to \`true\`.
+       * Name of workflow the runner group should be allowed to run. Note that a ref, tag, or long SHA is required.
+       *
+       * @example
+       * [\\"octo-org/octo-repo/.github/workflows/deploy.yaml@main\\"]
        */
       selected_workflows?: Array<string>;
 
@@ -61975,6 +62050,7 @@ export const setSelfHostedRunnersInGroupForOrg: ApiHeroEndpoint<
     body: {
       /**
        * List of runner IDs to add to the runner group.
+       * Unique identifier of the runner.
        */
       runners: Array<number>;
     };
@@ -62244,6 +62320,7 @@ export const setRepoAccessToSelfHostedRunnerGroupInOrg: ApiHeroEndpoint<
     body: {
       /**
        * List of repository IDs that can access the runner group.
+       * Unique identifier of the repository.
        */
       selected_repository_ids: Array<number>;
     };
@@ -63799,6 +63876,9 @@ export const scopeToken: ApiHeroEndpoint<
 
       /**
        * The list of repository names to scope the user-to-server access token to. \`repositories\` may not be specified if \`repository_ids\` is specified.
+       *
+       * @example
+       * [\\"rails\\"]
        */
       repositories?: Array<string>;
 
@@ -63921,6 +64001,9 @@ export const createInstallationAccessToken: ApiHeroEndpoint<
 
       /**
        * List of repository names that the token should have access to
+       *
+       * @example
+       * [\\"rails\\"]
        */
       repositories?: Array<string>;
 
@@ -66809,6 +66892,7 @@ export const createSelfHostedRunnerGroupForEnterprise: ApiHeroEndpoint<
 
       /**
        * List of runner IDs to add to the runner group.
+       * Unique identifier of the runner.
        */
       runners?: Array<number>;
 
@@ -66819,6 +66903,10 @@ export const createSelfHostedRunnerGroupForEnterprise: ApiHeroEndpoint<
 
       /**
        * List of workflows the runner group should be allowed to run. This setting will be ignored unless \`restricted_to_workflows\` is set to \`true\`.
+       * Name of workflow the runner group should be allowed to run. Note that a ref, tag, or long SHA is required.
+       *
+       * @example
+       * [\\"octo-org/octo-repo/.github/workflows/deploy.yaml@main\\"]
        */
       selected_workflows?: Array<string>;
 
@@ -66829,6 +66917,7 @@ export const createSelfHostedRunnerGroupForEnterprise: ApiHeroEndpoint<
 
       /**
        * List of organization IDs that can access the runner group.
+       * Unique identifier of the organization.
        */
       selected_organization_ids?: Array<number>;
 
@@ -67226,6 +67315,7 @@ export const setSelectedOrganizationsEnabledGithubActionsEnterprise: ApiHeroEndp
     body: {
       /**
        * List of organization IDs to enable for GitHub Actions.
+       * Unique identifier of the organization.
        */
       selected_organization_ids: Array<number>;
     };
@@ -67485,6 +67575,10 @@ export const updateSelfHostedRunnerGroupForEnterprise: ApiHeroEndpoint<
 
       /**
        * List of workflows the runner group should be allowed to run. This setting will be ignored unless \`restricted_to_workflows\` is set to \`true\`.
+       * Name of workflow the runner group should be allowed to run. Note that a ref, tag, or long SHA is required.
+       *
+       * @example
+       * [\\"octo-org/octo-repo/.github/workflows/deploy.yaml@main\\"]
        */
       selected_workflows?: Array<string>;
 
@@ -67608,6 +67702,7 @@ export const setSelfHostedRunnersInGroupForEnterprise: ApiHeroEndpoint<
     body: {
       /**
        * List of runner IDs to add to the runner group.
+       * Unique identifier of the runner.
        */
       runners: Array<number>;
     };
@@ -67658,6 +67753,7 @@ export const setOrgAccessToSelfHostedRunnerGroupInEnterprise: ApiHeroEndpoint<
     body: {
       /**
        * List of organization IDs that can access the runner group.
+       * Unique identifier of the organization.
        */
       selected_organization_ids: Array<number>;
     };
@@ -70602,6 +70698,7 @@ export const startForAuthenticatedUser: ApiHeroEndpoint<
     body: {
       /**
        * Exclude attributes from the API response to improve performance
+       * Allowed values that can be passed to the exclude param.
        *
        * @example
        * [\\"repositories\\"]
@@ -83254,6 +83351,9 @@ export const addEmailForAuthenticatedUser: ApiHeroEndpoint<
       | {
           /**
            * Adds one or more email addresses to your GitHub account. Must contain at least one email address. **Note:** Alternatively, you can pass a single email address or an \`array\` of emails addresses directly, but we recommend that you pass an object using the \`emails\` key.
+           *
+           * @example
+           * [\\"username@example.com\\"]
            */
           emails: Array<string>;
         }
@@ -83278,6 +83378,9 @@ export const deleteEmailForAuthenticatedUser: ApiHeroEndpoint<
       | {
           /**
            * Email addresses associated with the GitHub user account.
+           *
+           * @example
+           * [\\"username@example.com\\"]
            */
           emails: Array<string>;
         }

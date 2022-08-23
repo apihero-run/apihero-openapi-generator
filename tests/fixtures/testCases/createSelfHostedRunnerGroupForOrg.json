@@ -1,0 +1,255 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "version": "1.1.4"
+  },
+  "tags": [
+    {
+      "name": "actions",
+      "description": "Endpoints to manage GitHub Actions using the REST API."
+    }
+  ],
+  "paths": {
+    "/orgs/{org}/actions/runner-groups": {
+      "post": {
+        "operationId": "actions/create-self-hosted-runner-group-for-org",
+        "summary": "Create a self-hosted runner group for an organization",
+        "description": "The self-hosted runner groups REST API is available with GitHub Enterprise Cloud and GitHub Enterprise Server. For more information, see \"[GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products).\"\n\nCreates a new self-hosted runner group for an organization.\n\nYou must authenticate using an access token with the `admin:org` scope to use this endpoint.",
+        "deprecated": false,
+        "externalDocs": {
+          "url": "https://docs.github.com/rest/reference/actions#create-a-self-hosted-runner-group-for-an-organization",
+          "description": "API method documentation"
+        },
+        "tags": [
+          "actions"
+        ],
+        "security": [
+          {
+            "oauth2": [
+              "admin:org"
+            ]
+          },
+          {
+            "installationToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/org",
+            "description": "The organization name. The name is not case sensitive."
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/runner-groups-org"
+                },
+                "examples": {
+                  "default": {
+                    "$ref": "#/components/examples/runner-group"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Name of the runner group."
+                  },
+                  "runners": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer",
+                      "description": "Unique identifier of the runner."
+                    },
+                    "description": "List of runner IDs to add to the runner group."
+                  },
+                  "visibility": {
+                    "enum": [
+                      "selected",
+                      "all",
+                      "private"
+                    ],
+                    "type": "string",
+                    "default": "all",
+                    "description": "Visibility of a runner group. You can select all repositories, select individual repositories, or limit access to private repositories."
+                  },
+                  "selected_workflows": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "examples": [
+                        "octo-org/octo-repo/.github/workflows/deploy.yaml@main"
+                      ],
+                      "description": "Name of workflow the runner group should be allowed to run. Note that a ref, tag, or long SHA is required."
+                    },
+                    "description": "List of workflows the runner group should be allowed to run. This setting will be ignored unless `restricted_to_workflows` is set to `true`."
+                  },
+                  "restricted_to_workflows": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "If `true`, the runner group will be restricted to running only the workflows specified in the `selected_workflows` array."
+                  },
+                  "selected_repository_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer",
+                      "description": "Unique identifier of the repository."
+                    },
+                    "description": "List of repository IDs that can access the runner group."
+                  },
+                  "allows_public_repositories": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Whether the runner group can be used by `public` repositories."
+                  }
+                }
+              },
+              "examples": {
+                "default": {
+                  "value": {
+                    "name": "Expensive hardware runners",
+                    "runners": [
+                      9,
+                      2
+                    ],
+                    "visibility": "selected",
+                    "selected_repository_ids": [
+                      32,
+                      91
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-github": {
+          "category": "actions",
+          "subcategory": "self-hosted-runner-groups",
+          "githubCloudOnly": false,
+          "enabledForGitHubApps": true
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "runner-groups-org": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "visibility",
+          "default",
+          "runners_url",
+          "inherited",
+          "allows_public_repositories"
+        ],
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          },
+          "default": {
+            "type": "boolean"
+          },
+          "inherited": {
+            "type": "boolean"
+          },
+          "visibility": {
+            "type": "string"
+          },
+          "runners_url": {
+            "type": "string"
+          },
+          "selected_workflows": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "examples": [
+                "octo-org/octo-repo/.github/workflows/deploy.yaml@main"
+              ],
+              "description": "Name of workflow the runner group should be allowed to run. Note that a ref, tag, or long SHA is required."
+            },
+            "description": "List of workflows the runner group should be allowed to run. This setting will be ignored unless `restricted_to_workflows` is set to `true`."
+          },
+          "restricted_to_workflows": {
+            "type": "boolean",
+            "default": false,
+            "description": "If `true`, the runner group will be restricted to running only the workflows specified in the `selected_workflows` array."
+          },
+          "selected_repositories_url": {
+            "type": "string",
+            "description": "Link to the selected repositories resource for this runner group. Not present unless visibility was set to `selected`"
+          },
+          "allows_public_repositories": {
+            "type": "boolean"
+          },
+          "workflow_restrictions_read_only": {
+            "type": "boolean",
+            "default": false,
+            "description": "If `true`, the `restricted_to_workflows` and `selected_workflows` fields cannot be modified."
+          },
+          "inherited_allows_public_repositories": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "responses": {},
+    "examples": {
+      "runner-group": {
+        "value": {
+          "id": 2,
+          "name": "octo-runner-group",
+          "default": false,
+          "inherited": false,
+          "visibility": "selected",
+          "runners_url": "https://api.github.com/orgs/octo-org/actions/runner_groups/2/runners",
+          "selected_workflows": [
+            "octo-org/octo-repo/.github/workflows/deploy.yaml@refs/heads/main"
+          ],
+          "restricted_to_workflows": true,
+          "selected_repositories_url": "https://api.github.com/orgs/octo-org/actions/runner-groups/2/repositories",
+          "allows_public_repositories": true,
+          "workflow_restrictions_read_only": false
+        }
+      }
+    },
+    "parameters": {
+      "org": {
+        "name": "org",
+        "in": "path",
+        "description": "The organization name. The name is not case sensitive.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "deprecated": false,
+        "allowEmptyValue": false,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false
+      }
+    },
+    "headers": {},
+    "requestBodies": {}
+  }
+}

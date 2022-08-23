@@ -289,11 +289,18 @@ class ClientGenerator {
       return m.link ? this.generateModelComments(m.link) : "";
     }
 
+    let modelExamples = this.generateModelExamples(m);
+
+    if (modelExamples.length === 0) {
+      modelExamples = m.link ? this.generateModelExamples({ ...m.link, export: "array" }) : "";
+    }
+
     return (
       "\n\n/** " +
       (m.description ? `\n* ${m.description}` : "") +
+      (m.link?.description ? `\n* ${m.link.description}` : "") +
       (m.deprecated ? `\n* @deprecated` : "") +
-      this.generateModelExamples(m) +
+      modelExamples +
       "\n*/"
     );
   }

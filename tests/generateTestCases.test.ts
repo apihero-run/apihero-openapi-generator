@@ -35,3 +35,7 @@ test("addEmailAddress", async () => {
 test("startUserMigration", async () => {
   expect(await generateTestCase("startUserMigration")).toMatchSnapshot();
 });
+
+test("createSelfHostedRunnerGroupForOrg", async () => {
+  expect(await generateTestCase("createSelfHostedRunnerGroupForOrg")).toMatchSnapshot();
+});
