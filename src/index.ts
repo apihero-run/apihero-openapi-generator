@@ -52,10 +52,14 @@ export function generateClientCode(
   return files;
 }
 
-export function generateOperationCode(doc: OpenAPI.Document, operationId: string): string {
+export function generateOperationCode(
+  doc: OpenAPI.Document,
+  operationId: string,
+  options?: GenerateClientOptions,
+): string {
   const client = generateClient(doc);
 
-  const code = generateOperationCodeFromClient(client, operationId);
+  const code = generateOperationCodeFromClient(client, operationId, options);
 
   return format(code, { parser: "typescript", printWidth: 100 });
 }

@@ -62,6 +62,16 @@ test("v3_1/github.json generateOperationCode repos/list-for-org", async () => {
   expect(code).toMatchSnapshot();
 });
 
+test("v3_1/github.json generateOperationCode codespaces/update-for-authenticated-user with custom bodyParamName", async () => {
+  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3_1/github.json");
+
+  const code = generateOperationCode(doc, "codespaces/update-for-authenticated-user", {
+    generation: { bodyParamName: "data" },
+  });
+
+  expect(code).toMatchSnapshot();
+});
+
 test("generatePackage", async () => {
   const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3/petstore.json");
 

@@ -3,6 +3,7 @@ import { Client, Model, Operation, OperationParameter, Service } from "../@types
 
 export type GenerationOptions = {
   noParamsType?: string;
+  bodyParamName?: string;
 };
 
 export type GenerateClientOptions = {
@@ -38,7 +39,11 @@ export function generateFromClient(
   return files;
 }
 
-export function generateOperationCodeFromClient(client: Client, operationId: string): string {
+export function generateOperationCodeFromClient(
+  client: Client,
+  operationId: string,
+  options?: GenerateClientOptions,
+): string {
   let operation: Operation | undefined;
 
   for (const service of client.services) {
@@ -56,7 +61,7 @@ export function generateOperationCodeFromClient(client: Client, operationId: str
 
   const models = getAllImportsRecursive(operation.imports, client.models);
 
-  const clientGenerator = new ClientGenerator(operationId, client);
+  const clientGenerator = new ClientGenerator(operationId, client, options);
 
   const modelCode = clientGenerator.generateModelSelection(models);
 
@@ -198,7 +203,15 @@ class ClientGenerator {
   }
 
   private generateOperationParameter(parameter: Operation["parameters"][0]): string {
-    return `${parameter.name}${parameter.isRequired ? "" : "?"}: ${this.generateType(parameter)}`;
+    return `${this.generateOperationParameterName(parameter)}${
+      parameter.isRequired ? "" : "?"
+    }: ${this.generateType(parameter)}`;
+  }
+
+  private generateOperationParameterName(parameter: Operation["parameters"][0]): string {
+    return parameter.in === "body"
+      ? this.options?.generation?.bodyParamName ?? parameter.name
+      : parameter.name;
   }
 
   private generateOperationParameterComments(
