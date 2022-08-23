@@ -39,3 +39,7 @@ test("startUserMigration", async () => {
 test("createSelfHostedRunnerGroupForOrg", async () => {
   expect(await generateTestCase("createSelfHostedRunnerGroupForOrg")).toMatchSnapshot();
 });
+
+test("getThreadSubscriptionForAuthenticatedUser", async () => {
+  expect(await generateTestCase("getThreadSubscriptionForAuthenticatedUser")).toMatchSnapshot();
+});

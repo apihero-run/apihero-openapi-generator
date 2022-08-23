@@ -43200,7 +43200,7 @@ export type Job = {
      * @example
      * \\"success\\"
      */
-    conclusion: string;
+    conclusion: string | null;
 
     /**
      * The time that the step started, in ISO 8601 format.
@@ -43208,7 +43208,7 @@ export type Job = {
      * @example
      * \\"2019-08-08T08:00:00-07:00\\"
      */
-    started_at?: string;
+    started_at?: string | null;
 
     /**
      * The time that the job finished, in ISO 8601 format.
@@ -43216,7 +43216,7 @@ export type Job = {
      * @example
      * \\"2019-08-08T08:00:00-07:00\\"
      */
-    completed_at?: string;
+    completed_at?: string | null;
   }>;
 
   /**
@@ -43276,7 +43276,7 @@ export type Job = {
    * @example
    * \\"https://github.com/github/hello-world/runs/4\\"
    */
-  html_url: string;
+  html_url: string | null;
 
   /**
    * The ID of the runner to which this job has been assigned. (If a runner hasn't yet been assigned, this will be null.)
@@ -43284,7 +43284,7 @@ export type Job = {
    * @example
    * 1
    */
-  runner_id: number;
+  runner_id: number | null;
 
   /**
    * The outcome of the job.
@@ -43292,7 +43292,7 @@ export type Job = {
    * @example
    * \\"success\\"
    */
-  conclusion: string;
+  conclusion: string | null;
 
   /**
    * The time that the job started, in ISO 8601 format.
@@ -43316,7 +43316,7 @@ export type Job = {
    * @example
    * \\"my runner\\"
    */
-  runner_name: string;
+  runner_name: string | null;
 
   /**
    * The time that the job finished, in ISO 8601 format.
@@ -43324,7 +43324,7 @@ export type Job = {
    * @example
    * \\"2019-08-08T08:00:00-07:00\\"
    */
-  completed_at: string;
+  completed_at: string | null;
 
   /**
    *
@@ -43339,7 +43339,7 @@ export type Job = {
    * @example
    * 2
    */
-  runner_group_id: number;
+  runner_group_id: number | null;
 
   /**
    * The name of the runner group to which this job has been assigned. (If a runner hasn't yet been assigned, this will be null.)
@@ -43347,7 +43347,7 @@ export type Job = {
    * @example
    * \\"my runner group\\"
    */
-  runner_group_name: string;
+  runner_group_name: string | null;
 };
 
 /**
@@ -43402,7 +43402,7 @@ export type Tag = {
 export type Blob = {
   sha: string;
   url: string;
-  size: number;
+  size: number | null;
   content: string;
   node_id: string;
   encoding: string;
@@ -43641,7 +43641,7 @@ export type Page = {
    * @example
    * \\"example.com\\"
    */
-  cname: string;
+  cname: string | null;
 
   /**
    * Whether the GitHub Pages site is publicly visible. If set to \`true\`, the site is accessible to anyone on the internet. If set to \`false\`, the site will only be accessible to users who have at least \`read\` access to the repository that published the site.
@@ -43658,7 +43658,7 @@ export type Page = {
    * @example
    * \\"built\\"
    */
-  status: \\"built\\" | \\"building\\" | \\"errored\\";
+  status: \\"built\\" | \\"building\\" | \\"errored\\" | null;
 
   /**
    * The web address the Page can be accessed from.
@@ -43674,7 +43674,7 @@ export type Page = {
    * @example
    * \\"legacy\\"
    */
-  build_type?: \\"legacy\\" | \\"workflow\\";
+  build_type?: \\"legacy\\" | \\"workflow\\" | null;
 
   /**
    * Whether the Page has a custom 404 page.
@@ -43699,12 +43699,12 @@ export type Page = {
    * @example
    * \\"pending\\"
    */
-  protected_domain_state?: \\"pending\\" | \\"verified\\" | \\"unverified\\";
+  protected_domain_state?: \\"pending\\" | \\"verified\\" | \\"unverified\\" | null;
 
   /**
    * The timestamp when a pending domain becomes unverified.
    */
-  pending_domain_unverified_at?: string;
+  pending_domain_unverified_at?: string | null;
 };
 
 export type Root = {
@@ -43762,7 +43762,7 @@ export type Team = {
    */
   html_url: string;
   permission: string;
-  description: string;
+  description: string | null;
   members_url: string;
   permissions?: {
     pull: boolean;
@@ -43782,7 +43782,7 @@ export type Actor = {
   url: string;
   login: string;
   avatar_url: string;
-  gravatar_id: string;
+  gravatar_id: string | null;
   display_login?: string;
 };
 
@@ -43816,7 +43816,7 @@ export type Email = {
    * @example
    * \\"public\\"
    */
-  visibility: string;
+  visibility: string | null;
 };
 
 /**
@@ -43830,7 +43830,7 @@ export type Event = {
     url: string;
     name: string;
   };
-  type: string;
+  type: string | null;
   actor: Actor;
   public: boolean;
   payload: {
@@ -43839,14 +43839,14 @@ export type Event = {
       sha?: string;
       title?: string;
       action?: string;
-      summary?: string;
+      summary?: string | null;
       html_url?: string;
       page_name?: string;
     }>;
     action?: string;
     comment?: IssueComment;
   };
-  created_at: string;
+  created_at: string | null;
 };
 
 /**
@@ -43870,7 +43870,7 @@ export type Issue = {
    * @example
    * \\"It looks like the new widget form is broken on Safari. When I try and create the widget, Safari crashes. This is reproducible on 10.8, but not 10.9. Maybe a browser bug?\\"
    */
-  body?: string;
+  body?: string | null;
   user: SimpleUser | null;
   draft?: boolean;
 
@@ -43905,10 +43905,10 @@ export type Issue = {
         id?: number;
         url?: string;
         name?: string;
-        color?: string;
+        color?: string | null;
         default?: boolean;
         node_id?: string;
-        description?: string;
+        description?: string | null;
       }
   >;
   locked: boolean;
@@ -43924,10 +43924,10 @@ export type Issue = {
   assignee: SimpleUser | null;
   comments: number;
   html_url: string;
-  assignees?: Array<SimpleUser>;
+  assignees?: Array<SimpleUser> | null;
   body_html?: string;
   body_text?: string;
-  closed_at: string;
+  closed_at: string | null;
   closed_by?: SimpleUser | null;
   milestone: Milestone | null;
   reactions?: ReactionRollup;
@@ -43938,11 +43938,11 @@ export type Issue = {
   updated_at: string;
   comments_url: string;
   pull_request?: {
-    url: string;
-    diff_url: string;
-    html_url: string;
-    merged_at?: string;
-    patch_url: string;
+    url: string | null;
+    diff_url: string | null;
+    html_url: string | null;
+    merged_at?: string | null;
+    patch_url: string | null;
   };
 
   /**
@@ -43951,10 +43951,10 @@ export type Issue = {
    * @example
    * \\"not_planned\\"
    */
-  state_reason?: string;
+  state_reason?: string | null;
   timeline_url?: string;
   repository_url: string;
-  active_lock_reason?: string;
+  active_lock_reason?: string | null;
   author_association: AuthorAssociation;
   performed_via_github_app?: Integration | null;
 };
@@ -44014,7 +44014,7 @@ export type Label = {
    * @example
    * \\"Something isn't working\\"
    */
-  description: string;
+  description: string | null;
 };
 
 /**
@@ -44142,7 +44142,7 @@ export type Commit = {
  */
 export type Import = {
   url: string;
-  vcs: string;
+  vcs: string | null;
   status:
     | \\"auth\\"
     | \\"error\\"
@@ -44171,14 +44171,14 @@ export type Import = {
   svc_root?: string;
   svn_root?: string;
   authors_url: string;
-  failed_step?: string;
-  status_text?: string;
-  commit_count?: number;
-  push_percent?: number;
+  failed_step?: string | null;
+  status_text?: string | null;
+  commit_count?: number | null;
+  push_percent?: number | null;
   tfvc_project?: string;
-  authors_count?: number;
-  error_message?: string;
-  import_percent?: number;
+  authors_count?: number | null;
+  error_message?: string | null;
+  import_percent?: number | null;
   repository_url: string;
   has_large_files?: boolean;
   project_choices?: Array<{
@@ -44241,11 +44241,11 @@ export type Status = {
   context: string;
   creator: SimpleUser | null;
   node_id: string;
-  avatar_url: string;
+  avatar_url: string | null;
   created_at: string;
-  target_url: string;
+  target_url: string | null;
   updated_at: string;
-  description: string;
+  description: string | null;
 };
 
 /**
@@ -44265,7 +44265,7 @@ export type Thread = {
   };
   repository: MinimalRepository;
   updated_at: string;
-  last_read_at: string;
+  last_read_at: string | null;
 
   /**
    *
@@ -44368,7 +44368,7 @@ export type GpgKey = {
    * @example
    * \\"Octocat's GPG Key\\"
    */
-  name?: string;
+  name?: string | null;
 
   /**
    *
@@ -44389,7 +44389,7 @@ export type GpgKey = {
    * \\"3262EFF25BA0D270\\"
    */
   key_id: string;
-  raw_key: string;
+  raw_key: string | null;
 
   /**
    *
@@ -44421,12 +44421,12 @@ export type GpgKey = {
     id?: number;
     emails?: Array<{}>;
     key_id?: string;
-    raw_key?: string;
+    raw_key?: string | null;
     revoked?: boolean;
     subkeys?: Array<{}>;
     can_sign?: boolean;
     created_at?: string;
-    expires_at?: string;
+    expires_at?: string | null;
     public_key?: string;
     can_certify?: boolean;
     primary_key_id?: number;
@@ -44447,7 +44447,7 @@ export type GpgKey = {
    * \\"2016-03-24T11:31:04-06:00\\"
    */
   created_at: string;
-  expires_at: string;
+  expires_at: string | null;
 
   /**
    *
@@ -44462,7 +44462,7 @@ export type GpgKey = {
    * true
    */
   can_certify: boolean;
-  primary_key_id: number;
+  primary_key_id: number | null;
   can_encrypt_comms: boolean;
   can_encrypt_storage: boolean;
 };
@@ -44484,7 +44484,7 @@ export type License = {
    * @example
    * \\"https://api.github.com/licenses/mit\\"
    */
-  url: string;
+  url: string | null;
 
   /**
    *
@@ -44512,7 +44512,7 @@ export type License = {
    * @example
    * \\"MIT\\"
    */
-  spdx_id: string;
+  spdx_id: string | null;
 
   /**
    *
@@ -44662,7 +44662,7 @@ export type Project = {
    * @example
    * \\"This project represents the sprint of the first week in January\\"
    */
-  body: string;
+  body: string | null;
 
   /**
    * Name of the project
@@ -44748,8 +44748,8 @@ export type Project = {
 export type Release = {
   id: number;
   url: string;
-  body?: string;
-  name: string;
+  body?: string | null;
+  name: string | null;
 
   /**
    * true to create a draft (unpublished) release, false to create a published one.
@@ -44784,9 +44784,9 @@ export type Release = {
    */
   prerelease: boolean;
   upload_url: string;
-  tarball_url: string;
-  zipball_url: string;
-  published_at: string;
+  tarball_url: string | null;
+  zipball_url: string | null;
+  published_at: string | null;
 
   /**
    * The URL of the release discussion.
@@ -44847,9 +44847,9 @@ export type Artifact = {
    * \\"MDEwOkNoZWNrU3VpdGU1\\"
    */
   node_id: string;
-  created_at: string;
-  expires_at: string;
-  updated_at: string;
+  created_at: string | null;
+  expires_at: string | null;
+  updated_at: string | null;
   workflow_run?: {
     /**
      *
@@ -44885,7 +44885,7 @@ export type Artifact = {
      * 42
      */
     head_repository_id?: number;
-  };
+  } | null;
 
   /**
    * The size in bytes of the artifact.
@@ -45445,7 +45445,7 @@ export type BaseGist = {
   created_at: string;
   updated_at: string;
   commits_url: string;
-  description: string;
+  description: string | null;
   comments_url: string;
   git_pull_url: string;
   git_push_url: string;
@@ -45480,9 +45480,9 @@ export type CheckRun = {
    */
   name: string;
   output: {
-    text: string;
-    title: string;
-    summary: string;
+    text: string | null;
+    title: string | null;
+    summary: string | null;
     annotations_url: string;
     annotations_count: number;
   };
@@ -45515,7 +45515,7 @@ export type CheckRun = {
    * @example
    * \\"https://github.com/github/hello-world/runs/4\\"
    */
-  html_url: string;
+  html_url: string | null;
 
   /**
    *
@@ -45529,7 +45529,8 @@ export type CheckRun = {
     | \\"cancelled\\"
     | \\"skipped\\"
     | \\"timed_out\\"
-    | \\"action_required\\";
+    | \\"action_required\\"
+    | null;
   deployment?: DeploymentSimple;
 
   /**
@@ -45537,31 +45538,31 @@ export type CheckRun = {
    * @example
    * \\"2018-05-04T01:14:52Z\\"
    */
-  started_at: string;
+  started_at: string | null;
   check_suite: {
     id: number;
-  };
+  } | null;
 
   /**
    *
    * @example
    * \\"https://example.com\\"
    */
-  details_url: string;
+  details_url: string | null;
 
   /**
    *
    * @example
    * \\"42\\"
    */
-  external_id: string;
+  external_id: string | null;
 
   /**
    *
    * @example
    * \\"2018-05-04T01:14:52Z\\"
    */
-  completed_at: string;
+  completed_at: string | null;
   pull_requests: Array<PullRequestMinimal>;
 };
 
@@ -45636,7 +45637,7 @@ export type Codespace = {
    * @example
    * false
    */
-  prebuild: boolean;
+  prebuild: boolean | null;
 
   /**
    * API URL to stop this codespace.
@@ -45646,7 +45647,7 @@ export type Codespace = {
   /**
    * API URL for the Pull Request associated with this codespace, if any.
    */
-  pulls_url: string;
+  pulls_url: string | null;
 
   /**
    * API URL to start this codespace.
@@ -45713,7 +45714,7 @@ export type Codespace = {
    * @example
    * \\"bookish space pancake\\"
    */
-  display_name?: string;
+  display_name?: string | null;
 
   /**
    * Last known time this codespace was started.
@@ -45735,7 +45736,7 @@ export type Codespace = {
    * @example
    * \\"26a7c758-7299-4a73-b978-5a92a7ae98a0\\"
    */
-  environment_id: string;
+  environment_id: string | null;
   recent_folders: Array<string>;
 
   /**
@@ -45744,22 +45745,22 @@ export type Codespace = {
    * @example
    * \\".devcontainer/example/devcontainer.json\\"
    */
-  devcontainer_path?: string;
+  devcontainer_path?: string | null;
 
   /**
    * Whether or not a codespace has a pending async operation. This would mean that the codespace is temporarily unavailable. The only thing that you can do with a codespace in this state is delete it.
    */
-  pending_operation?: boolean;
+  pending_operation?: boolean | null;
 
   /**
    * Text to show user when codespace idle timeout minutes has been overriden by an organization policy
    */
-  idle_timeout_notice?: string;
+  idle_timeout_notice?: string | null;
   runtime_constraints?: {
     /**
      * The privacy settings a user can select from when forwarding a port.
      */
-    allowed_port_privacy_settings?: Array<string>;
+    allowed_port_privacy_settings?: Array<string> | null;
   };
 
   /**
@@ -45768,12 +45769,12 @@ export type Codespace = {
    * @example
    * 60
    */
-  idle_timeout_minutes: number;
+  idle_timeout_minutes: number | null;
 
   /**
    * Text to show user when codespace is disabled by a pending operation
    */
-  pending_operation_disabled_reason?: string;
+  pending_operation_disabled_reason?: string | null;
 };
 
 /**
@@ -45893,7 +45894,7 @@ export type Milestone = {
    * @example
    * \\"2012-10-09T23:39:01Z\\"
    */
-  due_on: string;
+  due_on: string | null;
 
   /**
    * The number of the milestone.
@@ -45923,7 +45924,7 @@ export type Milestone = {
    * @example
    * \\"2013-02-12T13:22:01Z\\"
    */
-  closed_at: string;
+  closed_at: string | null;
 
   /**
    *
@@ -45951,7 +45952,7 @@ export type Milestone = {
    * @example
    * \\"Tracking milestone for version 1.0\\"
    */
-  description: string;
+  description: string | null;
 
   /**
    *
@@ -46010,9 +46011,9 @@ export type ScimUser = {
     resourceType?: string;
   };
   name: {
-    formatted?: string;
-    givenName: string;
-    familyName: string;
+    formatted?: string | null;
+    givenName: string | null;
+    familyName: string | null;
   };
 
   /**
@@ -46062,7 +46063,7 @@ export type ScimUser = {
    * @example
    * \\"someone@example.com\\"
    */
-  userName: string;
+  userName: string | null;
 
   /**
    * The ID of the User.
@@ -46070,7 +46071,7 @@ export type ScimUser = {
    * @example
    * \\"a7b0f98395\\"
    */
-  externalId: string;
+  externalId: string | null;
 
   /**
    * Set of operations to be performed
@@ -46095,7 +46096,7 @@ export type ScimUser = {
    * @example
    * \\"Jon Doe\\"
    */
-  displayName?: string;
+  displayName?: string | null;
 
   /**
    * The ID of the organization.
@@ -46205,7 +46206,7 @@ export type TeamFull = {
    * @example
    * \\"A great team.\\"
    */
-  description: string;
+  description: string | null;
 
   /**
    *
@@ -46382,7 +46383,7 @@ export type Deployment = {
    * @example
    * \\"Deploy request from hubot\\"
    */
-  description: string;
+  description: string | null;
 
   /**
    * Name for the target deployment environment.
@@ -46561,24 +46562,24 @@ export type Enterprise = {
    * @example
    * \\"2019-01-26T19:01:12Z\\"
    */
-  created_at: string;
+  created_at: string | null;
 
   /**
    *
    * @example
    * \\"2019-01-26T19:14:43Z\\"
    */
-  updated_at: string;
+  updated_at: string | null;
 
   /**
    * A short description of the enterprise.
    */
-  description?: string;
+  description?: string | null;
 
   /**
    * The enterprise's website URL.
    */
-  website_url?: string;
+  website_url?: string | null;
 };
 
 /**
@@ -46685,9 +46686,9 @@ export type GitCommit = {
   };
   verification: {
     reason: string;
-    payload: string;
+    payload: string | null;
     verified: boolean;
-    signature: string;
+    signature: string | null;
   };
 };
 
@@ -46706,7 +46707,7 @@ export type KeySimple = {
 export type PageBuild = {
   url: string;
   error: {
-    message: string;
+    message: string | null;
   };
   commit: string;
   pusher: SimpleUser | null;
@@ -46819,7 +46820,7 @@ export type Repository = {
    * @example
    * \\"https://github.com\\"
    */
-  homepage: string;
+  homepage: string | null;
 
   /**
    *
@@ -46834,7 +46835,7 @@ export type Repository = {
    * \\"http://api.github.com/repos/octocat/Hello-World/keys{/key_id}\\"
    */
   keys_url: string;
-  language: string;
+  language: string | null;
 
   /**
    *
@@ -46892,7 +46893,7 @@ export type Repository = {
    * @example
    * \\"2011-01-26T19:06:43Z\\"
    */
-  pushed_at: string;
+  pushed_at: string | null;
 
   /**
    *
@@ -46913,7 +46914,7 @@ export type Repository = {
    * @example
    * \\"2011-01-26T19:01:12Z\\"
    */
-  created_at: string;
+  created_at: string | null;
 
   /**
    *
@@ -46956,7 +46957,7 @@ export type Repository = {
    * @example
    * \\"git:git.example.com/octocat/Hello-World\\"
    */
-  mirror_url: string;
+  mirror_url: string | null;
 
   /**
    *
@@ -46970,7 +46971,7 @@ export type Repository = {
    * @example
    * \\"2011-01-26T19:14:43Z\\"
    */
-  updated_at: string;
+  updated_at: string | null;
 
   /**
    * The repository visibility: public, private, or internal.
@@ -47003,7 +47004,7 @@ export type Repository = {
    * @example
    * \\"This your first repo!\\"
    */
-  description: string;
+  description: string | null;
 
   /**
    *
@@ -47378,7 +47379,7 @@ export type Repository = {
     allow_update_branch?: boolean;
     delete_branch_on_merge?: boolean;
     use_squash_pr_title_as_default?: boolean;
-  };
+  } | null;
 
   /**
    * Whether to delete head branches when pull requests are merged
@@ -47398,12 +47399,12 @@ export type Repository = {
  * Scim Error
  */
 export type ScimError = {
-  detail?: string;
+  detail?: string | null;
   status?: number;
-  message?: string;
+  message?: string | null;
   schemas?: Array<string>;
-  scimType?: string;
-  documentation_url?: string;
+  scimType?: string | null;
+  documentation_url?: string | null;
 };
 
 /**
@@ -47450,28 +47451,28 @@ export type CheckSuite = {
    * @example
    * \\"https://api.github.com/repos/github/hello-world/check-suites/5\\"
    */
-  url: string;
+  url: string | null;
 
   /**
    *
    * @example
    * \\"d6fde92930d4715a2b49857d24b940956b26d2d3\\"
    */
-  after: string;
+  after: string | null;
 
   /**
    *
    * @example
    * \\"146e867f55c26428e5f9fade55a9bbf5e95a7912\\"
    */
-  before: string;
+  before: string | null;
 
   /**
    *
    * @example
    * \\"completed\\"
    */
-  status: \\"queued\\" | \\"in_progress\\" | \\"completed\\";
+  status: \\"queued\\" | \\"in_progress\\" | \\"completed\\" | null;
 
   /**
    *
@@ -47500,19 +47501,20 @@ export type CheckSuite = {
     | \\"cancelled\\"
     | \\"skipped\\"
     | \\"timed_out\\"
-    | \\"action_required\\";
-  created_at: string;
+    | \\"action_required\\"
+    | null;
+  created_at: string | null;
   repository: MinimalRepository;
-  updated_at: string;
+  updated_at: string | null;
 
   /**
    *
    * @example
    * \\"master\\"
    */
-  head_branch: string;
+  head_branch: string | null;
   head_commit: SimpleCommit;
-  pull_requests: Array<PullRequestMinimal>;
+  pull_requests: Array<PullRequestMinimal> | null;
   rerequestable?: boolean;
   check_runs_url: string;
   runs_rerequestable?: boolean;
@@ -47536,7 +47538,7 @@ export type Contributor = {
   avatar_url?: string;
   events_url?: string;
   site_admin?: boolean;
-  gravatar_id?: string;
+  gravatar_id?: string | null;
   starred_url?: string;
   contributions: number;
   followers_url?: string;
@@ -47715,9 +47717,9 @@ export type FileCommit = {
     };
     verification?: {
       reason?: string;
-      payload?: string;
+      payload?: string | null;
       verified?: boolean;
-      signature?: string;
+      signature?: string | null;
     };
   };
   content: {
@@ -47735,7 +47737,7 @@ export type FileCommit = {
     git_url?: string;
     html_url?: string;
     download_url?: string;
-  };
+  } | null;
 };
 
 /**
@@ -47776,7 +47778,7 @@ export type GistCommit = {
 export type GistSimple = {
   id?: string;
   url?: string;
-  user?: string;
+  user?: string | null;
   files?: Record<
     string,
     {
@@ -47799,7 +47801,7 @@ export type GistSimple = {
     user?: PublicUser;
     created_at?: string;
     updated_at?: string;
-  }>;
+  }> | null;
   owner?: SimpleUser;
   public?: boolean;
 
@@ -47832,16 +47834,16 @@ export type GistSimple = {
     created_at: string;
     updated_at: string;
     commits_url: string;
-    description: string;
+    description: string | null;
     comments_url: string;
     git_pull_url: string;
     git_push_url: string;
-  };
+  } | null;
 
   /**
    * @deprecated
    */
-  history?: Array<GistHistory>;
+  history?: Array<GistHistory> | null;
   node_id?: string;
   comments?: number;
   html_url?: string;
@@ -47850,7 +47852,7 @@ export type GistSimple = {
   created_at?: string;
   updated_at?: string;
   commits_url?: string;
-  description?: string;
+  description?: string | null;
   comments_url?: string;
   git_pull_url?: string;
   git_push_url?: string;
@@ -47944,7 +47946,7 @@ export type Integration = {
    * @example
    * \\"The description of the app.\\"
    */
-  description: string;
+  description: string | null;
 
   /**
    * The set of permissions for the GitHub app
@@ -47978,7 +47980,7 @@ export type Integration = {
    * @example
    * \\"\\\\\\"6fba8f2fc8a7e8f2cca5577eddd82ca7586b3b6b\\\\\\"\\"
    */
-  webhook_secret?: string;
+  webhook_secret?: string | null;
 
   /**
    * The number of installations associated with the GitHub app
@@ -48033,7 +48035,7 @@ export type IssueEvent = {
    * @example
    * \\"6dcb09b5b57875f334f61aebed695e2e4193db5e\\"
    */
-  commit_id: string;
+  commit_id: string | null;
   milestone?: IssueEventMilestone;
 
   /**
@@ -48041,7 +48043,7 @@ export type IssueEvent = {
    * @example
    * \\"https://api.github.com/repos/octocat/Hello-World/commits/6dcb09b5b57875f334f61aebed695e2e4193db5e\\"
    */
-  commit_url: string;
+  commit_url: string | null;
 
   /**
    *
@@ -48049,7 +48051,7 @@ export type IssueEvent = {
    * \\"2011-04-14T16:00:49Z\\"
    */
   created_at: string;
-  lock_reason?: string;
+  lock_reason?: string | null;
   project_card?: IssueEventProjectCard;
   requested_team?: Team;
   dismissed_review?: IssueEventDismissedReview;
@@ -48064,10 +48066,10 @@ export type IssueEvent = {
  */
 export type PublicUser = {
   id: number;
-  bio: string;
+  bio: string | null;
   url: string;
-  blog: string;
-  name: string;
+  blog: string | null;
+  name: string | null;
   plan?: {
     name: string;
     space: number;
@@ -48075,13 +48077,13 @@ export type PublicUser = {
     private_repos: number;
   };
   type: string;
-  email: string;
+  email: string | null;
   login: string;
-  company: string;
+  company: string | null;
   node_id: string;
-  hireable: boolean;
+  hireable: boolean | null;
   html_url: string;
-  location: string;
+  location: string | null;
   followers: number;
   following: number;
   gists_url: string;
@@ -48098,11 +48100,11 @@ export type PublicUser = {
   events_url: string;
   site_admin: boolean;
   updated_at: string;
-  gravatar_id: string;
+  gravatar_id: string | null;
   starred_url: string;
   public_gists: number;
   public_repos: number;
-  suspended_at?: string;
+  suspended_at?: string | null;
 
   /**
    *
@@ -48119,7 +48121,7 @@ export type PublicUser = {
    * 1
    */
   private_gists?: number;
-  twitter_username?: string;
+  twitter_username?: string | null;
   organizations_url: string;
   subscriptions_url: string;
 
@@ -48156,7 +48158,7 @@ export type SimpleUser = {
    * \\"https://api.github.com/users/octocat\\"
    */
   url: string;
-  name?: string;
+  name?: string | null;
 
   /**
    *
@@ -48164,7 +48166,7 @@ export type SimpleUser = {
    * \\"User\\"
    */
   type: string;
-  email?: string;
+  email?: string | null;
 
   /**
    *
@@ -48228,7 +48230,7 @@ export type SimpleUser = {
    * @example
    * \\"41d064eb2195891e12d0413f63227ea7\\"
    */
-  gravatar_id: string;
+  gravatar_id: string | null;
 
   /**
    *
@@ -48352,7 +48354,7 @@ export type TeamSimple = {
    * @example
    * \\"A great team.\\"
    */
-  description: string;
+  description: string | null;
 
   /**
    *
@@ -48510,7 +48512,7 @@ export type Collaborator = {
    * \\"https://api.github.com/users/octocat\\"
    */
   url: string;
-  name?: string;
+  name?: string | null;
 
   /**
    *
@@ -48518,7 +48520,7 @@ export type Collaborator = {
    * \\"User\\"
    */
   type: string;
-  email?: string;
+  email?: string | null;
 
   /**
    *
@@ -48582,7 +48584,7 @@ export type Collaborator = {
    * @example
    * \\"41d064eb2195891e12d0413f63227ea7\\"
    */
-  gravatar_id: string;
+  gravatar_id: string | null;
   permissions?: {
     pull: boolean;
     push: boolean;
@@ -48646,8 +48648,8 @@ export type ContentFile = {
   size: number;
   type: string;
   _links: {
-    git: string;
-    html: string;
+    git: string | null;
+    html: string | null;
     self: string;
   };
 
@@ -48658,10 +48660,10 @@ export type ContentFile = {
    */
   target?: string;
   content: string;
-  git_url: string;
+  git_url: string | null;
   encoding: string;
-  html_url: string;
-  download_url: string;
+  html_url: string | null;
+  download_url: string | null;
 
   /**
    *
@@ -48682,8 +48684,8 @@ export type ContentTree = {
   size: number;
   type: string;
   _links: {
-    git: string;
-    html: string;
+    git: string | null;
+    html: string | null;
     self: string;
   };
   entries?: Array<{
@@ -48694,18 +48696,18 @@ export type ContentTree = {
     size: number;
     type: string;
     _links: {
-      git: string;
-      html: string;
+      git: string | null;
+      html: string | null;
       self: string;
     };
     content?: string;
-    git_url: string;
-    html_url: string;
-    download_url: string;
+    git_url: string | null;
+    html_url: string | null;
+    download_url: string | null;
   }>;
-  git_url: string;
-  html_url: string;
-  download_url: string;
+  git_url: string | null;
+  html_url: string | null;
+  download_url: string | null;
 };
 
 /**
@@ -48829,7 +48831,7 @@ export type Installation = {
    * \\"Organization\\"
    */
   target_type: string;
-  suspended_at: string;
+  suspended_at: string | null;
   suspended_by: SimpleUser | null;
 
   /**
@@ -48837,7 +48839,7 @@ export type Installation = {
    * @example
    * \\"\\\\\\"test_13f1e99741e3e004@d7e1eb0bc0a1ba12.com\\\\\\"\\"
    */
-  contact_email?: string;
+  contact_email?: string | null;
 
   /**
    *
@@ -48851,7 +48853,7 @@ export type Installation = {
    * @example
    * \\"config.yaml\\"
    */
-  single_file_name: string;
+  single_file_name: string | null;
 
   /**
    *
@@ -48900,7 +48902,7 @@ export type PrivateUser = {
    * @example
    * \\"There once was...\\"
    */
-  bio: string;
+  bio: string | null;
 
   /**
    *
@@ -48914,14 +48916,14 @@ export type PrivateUser = {
    * @example
    * \\"https://github.com/blog\\"
    */
-  blog: string;
+  blog: string | null;
 
   /**
    *
    * @example
    * \\"monalisa octocat\\"
    */
-  name: string;
+  name: string | null;
   plan?: {
     name: string;
     space: number;
@@ -48941,7 +48943,7 @@ export type PrivateUser = {
    * @example
    * \\"octocat@github.com\\"
    */
-  email: string;
+  email: string | null;
 
   /**
    *
@@ -48955,7 +48957,7 @@ export type PrivateUser = {
    * @example
    * \\"GitHub\\"
    */
-  company: string;
+  company: string | null;
   ldap_dn?: string;
 
   /**
@@ -48964,7 +48966,7 @@ export type PrivateUser = {
    * \\"MDQ6VXNlcjE=\\"
    */
   node_id: string;
-  hireable: boolean;
+  hireable: boolean | null;
 
   /**
    *
@@ -48978,7 +48980,7 @@ export type PrivateUser = {
    * @example
    * \\"San Francisco\\"
    */
-  location: string;
+  location: string | null;
 
   /**
    *
@@ -49049,7 +49051,7 @@ export type PrivateUser = {
    * @example
    * \\"41d064eb2195891e12d0413f63227ea7\\"
    */
-  gravatar_id: string;
+  gravatar_id: string | null;
 
   /**
    *
@@ -49071,7 +49073,7 @@ export type PrivateUser = {
    * 2
    */
   public_repos: number;
-  suspended_at?: string;
+  suspended_at?: string | null;
   business_plus?: boolean;
 
   /**
@@ -49107,7 +49109,7 @@ export type PrivateUser = {
    * @example
    * \\"monalisa\\"
    */
-  twitter_username?: string;
+  twitter_username?: string | null;
 
   /**
    *
@@ -49177,7 +49179,7 @@ export type ProjectCard = {
    * @example
    * \\"Add payload for delete Project column\\"
    */
-  note: string;
+  note: string | null;
   creator: SimpleUser | null;
 
   /**
@@ -49273,7 +49275,7 @@ export type PullRequest = {
         avatar_url: string;
         events_url: string;
         site_admin: boolean;
-        gravatar_id: string;
+        gravatar_id: string | null;
         starred_url: string;
         followers_url: string;
         following_url: string;
@@ -49291,10 +49293,10 @@ export type PullRequest = {
       archived: boolean;
       disabled: boolean;
       has_wiki: boolean;
-      homepage: string;
+      homepage: string | null;
       html_url: string;
       keys_url: string;
-      language: string;
+      language: string | null;
       tags_url: string;
       watchers: number;
       blobs_url: string;
@@ -49313,7 +49315,7 @@ export type PullRequest = {
       issues_url: string;
       labels_url: string;
       merges_url: string;
-      mirror_url: string;
+      mirror_url: string | null;
       updated_at: string;
 
       /**
@@ -49323,7 +49325,7 @@ export type PullRequest = {
       archive_url: string;
       commits_url: string;
       compare_url: string;
-      description: string;
+      description: string | null;
       forks_count: number;
       is_template?: boolean;
       open_issues: number;
@@ -49380,7 +49382,7 @@ export type PullRequest = {
       avatar_url: string;
       events_url: string;
       site_admin: boolean;
-      gravatar_id: string;
+      gravatar_id: string | null;
       starred_url: string;
       followers_url: string;
       following_url: string;
@@ -49396,7 +49398,7 @@ export type PullRequest = {
    * @example
    * \\"Please pull these awesome changes\\"
    */
-  body: string;
+  body: string | null;
   head: {
     ref: string;
     sha: string;
@@ -49419,7 +49421,7 @@ export type PullRequest = {
         avatar_url: string;
         events_url: string;
         site_admin: boolean;
-        gravatar_id: string;
+        gravatar_id: string | null;
         starred_url: string;
         followers_url: string;
         following_url: string;
@@ -49431,11 +49433,11 @@ export type PullRequest = {
       git_url: string;
       license: {
         key: string;
-        url: string;
+        url: string | null;
         name: string;
         node_id: string;
-        spdx_id: string;
-      };
+        spdx_id: string | null;
+      } | null;
       node_id: string;
       private: boolean;
       ssh_url: string;
@@ -49443,10 +49445,10 @@ export type PullRequest = {
       archived: boolean;
       disabled: boolean;
       has_wiki: boolean;
-      homepage: string;
+      homepage: string | null;
       html_url: string;
       keys_url: string;
-      language: string;
+      language: string | null;
       tags_url: string;
       watchers: number;
       blobs_url: string;
@@ -49465,7 +49467,7 @@ export type PullRequest = {
       issues_url: string;
       labels_url: string;
       merges_url: string;
-      mirror_url: string;
+      mirror_url: string | null;
       updated_at: string;
 
       /**
@@ -49475,7 +49477,7 @@ export type PullRequest = {
       archive_url: string;
       commits_url: string;
       compare_url: string;
-      description: string;
+      description: string | null;
       forks_count: number;
       is_template?: boolean;
       open_issues: number;
@@ -49519,7 +49521,7 @@ export type PullRequest = {
       allow_merge_commit?: boolean;
       allow_rebase_merge?: boolean;
       allow_squash_merge?: boolean;
-    };
+    } | null;
     user: {
       id: number;
       url: string;
@@ -49532,7 +49534,7 @@ export type PullRequest = {
       avatar_url: string;
       events_url: string;
       site_admin: boolean;
-      gravatar_id: string;
+      gravatar_id: string | null;
       starred_url: string;
       followers_url: string;
       following_url: string;
@@ -49584,7 +49586,7 @@ export type PullRequest = {
     color: string;
     default: boolean;
     node_id: string;
-    description: string;
+    description: string | null;
   }>;
 
   /**
@@ -49645,14 +49647,14 @@ export type PullRequest = {
    * 100
    */
   additions: number;
-  assignees?: Array<SimpleUser>;
+  assignees?: Array<SimpleUser> | null;
 
   /**
    *
    * @example
    * \\"2011-01-26T19:01:12Z\\"
    */
-  closed_at: string;
+  closed_at: string | null;
 
   /**
    *
@@ -49673,14 +49675,14 @@ export type PullRequest = {
    * @example
    * true
    */
-  mergeable: boolean;
+  mergeable: boolean | null;
 
   /**
    *
    * @example
    * \\"2011-01-26T19:01:12Z\\"
    */
-  merged_at: string;
+  merged_at: string | null;
   merged_by: SimpleUser | null;
   milestone: Milestone | null;
 
@@ -49704,7 +49706,7 @@ export type PullRequest = {
    * @example
    * true
    */
-  rebaseable?: boolean;
+  rebaseable?: boolean | null;
 
   /**
    *
@@ -49747,7 +49749,7 @@ export type PullRequest = {
    * \\"clean\\"
    */
   mergeable_state: string;
-  requested_teams?: Array<TeamSimple>;
+  requested_teams?: Array<TeamSimple> | null;
 
   /**
    *
@@ -49761,14 +49763,14 @@ export type PullRequest = {
    * @example
    * \\"e5bd3914e2e596debea16f433f57875b5b90bcd6\\"
    */
-  merge_commit_sha: string;
+  merge_commit_sha: string | null;
 
   /**
    *
    * @example
    * \\"too heated\\"
    */
-  active_lock_reason?: string;
+  active_lock_reason?: string | null;
   author_association: AuthorAssociation;
 
   /**
@@ -49777,7 +49779,7 @@ export type PullRequest = {
    * \\"https://api.github.com/repos/octocat/Hello-World/pulls/comments{/number}\\"
    */
   review_comment_url: string;
-  requested_reviewers?: Array<SimpleUser>;
+  requested_reviewers?: Array<SimpleUser> | null;
 
   /**
    *
@@ -49836,7 +49838,7 @@ export type ShortBranch = {
 export type TeamProject = {
   id: number;
   url: string;
-  body: string;
+  body: string | null;
   name: string;
   state: string;
   number: number;
@@ -49866,9 +49868,9 @@ export type TeamProject = {
 
 export type Verification = {
   reason: string;
-  payload: string;
+  payload: string | null;
   verified: boolean;
-  signature: string;
+  signature: string | null;
 };
 
 /**
@@ -49919,7 +49921,7 @@ export type WorkflowRun = {
    * @example
    * \\"Build\\"
    */
-  name?: string;
+  name?: string | null;
 
   /**
    * The full path of the workflow
@@ -49942,7 +49944,7 @@ export type WorkflowRun = {
    * @example
    * \\"completed\\"
    */
-  status: string;
+  status: string | null;
 
   /**
    *
@@ -50003,7 +50005,7 @@ export type WorkflowRun = {
    * @example
    * \\"neutral\\"
    */
-  conclusion: string;
+  conclusion: string | null;
   created_at: string;
   repository: MinimalRepository;
 
@@ -50021,7 +50023,7 @@ export type WorkflowRun = {
    * @example
    * \\"master\\"
    */
-  head_branch: string;
+  head_branch: string | null;
   head_commit: SimpleCommit | null;
 
   /**
@@ -50055,7 +50057,7 @@ export type WorkflowRun = {
    * \\"https://api.github.com/repos/github/hello-world/actions/runs/5/rerun/artifacts\\"
    */
   artifacts_url: string;
-  pull_requests: Array<PullRequestMinimal>;
+  pull_requests: Array<PullRequestMinimal> | null;
 
   /**
    * The ID of the associated check suite.
@@ -50101,8 +50103,8 @@ export type WorkflowRun = {
    * @example
    * \\"https://api.github.com/repos/github/hello-world/actions/runs/5/attempts/3\\"
    */
-  previous_attempt_url?: string;
-  referenced_workflows?: Array<ReferencedWorkflow>;
+  previous_attempt_url?: string | null;
+  referenced_workflows?: Array<ReferencedWorkflow> | null;
 };
 
 /**
@@ -50117,22 +50119,22 @@ export type Authorization = {
     client_id: string;
   };
   url: string;
-  note: string;
+  note: string | null;
   user?: SimpleUser | null;
   token: string;
 
   /**
    * A list of scopes that this authorization is in.
    */
-  scopes: Array<string>;
-  note_url: string;
+  scopes: Array<string> | null;
+  note_url: string | null;
   created_at: string;
-  expires_at: string;
+  expires_at: string | null;
   updated_at: string;
-  fingerprint: string;
-  hashed_token: string;
+  fingerprint: string | null;
+  hashed_token: string | null;
   installation?: ScopedInstallation | null;
-  token_last_eight: string;
+  token_last_eight: string | null;
 };
 
 /**
@@ -50201,7 +50203,7 @@ export type GroupMapping = {
      * @example
      * \\"2019-06-03 22:27:15:000 -700\\"
      */
-    synced_at?: string;
+    synced_at?: string | null;
 
     /**
      * The name of the group
@@ -50264,7 +50266,7 @@ export type HookDelivery = {
    * @example
    * \\"opened\\"
    */
-  action: string;
+  action: string | null;
 
   /**
    * Description of the status of the attempted delivery
@@ -50277,12 +50279,12 @@ export type HookDelivery = {
     /**
      * The request headers sent with the webhook delivery.
      */
-    headers: {};
+    headers: {} | null;
 
     /**
      * The webhook payload.
      */
-    payload: {};
+    payload: {} | null;
   };
 
   /**
@@ -50296,12 +50298,12 @@ export type HookDelivery = {
     /**
      * The response headers received when the delivery was made.
      */
-    headers: {};
+    headers: {} | null;
 
     /**
      * The response payload received.
      */
-    payload: string;
+    payload: string | null;
   };
 
   /**
@@ -50334,7 +50336,7 @@ export type HookDelivery = {
    * @example
    * 123
    */
-  repository_id: number;
+  repository_id: number | null;
 
   /**
    * The id of the GitHub App installation associated with this event.
@@ -50342,13 +50344,13 @@ export type HookDelivery = {
    * @example
    * 123
    */
-  installation_id: number;
+  installation_id: number | null;
 };
 
 export type HookResponse = {
-  code: number;
-  status: string;
-  message: string;
+  code: number | null;
+  status: string | null;
+  message: string | null;
 };
 
 /**
@@ -50434,7 +50436,7 @@ export type ReleaseAsset = {
    */
   name: string;
   size: number;
-  label: string;
+  label: string | null;
 
   /**
    * State of the release asset.
@@ -50457,13 +50459,13 @@ export type SimpleCommit = {
   author: {
     name: string;
     email: string;
-  };
+  } | null;
   message: string;
   tree_id: string;
   committer: {
     name: string;
     email: string;
-  };
+  } | null;
   timestamp: string;
 };
 
@@ -50496,12 +50498,12 @@ export type CommitComment = {
   id: number;
   url: string;
   body: string;
-  line: number;
-  path: string;
+  line: number | null;
+  path: string | null;
   user: SimpleUser | null;
   node_id: string;
   html_url: string;
-  position: number;
+  position: number | null;
   commit_id: string;
   reactions?: ReactionRollup;
   created_at: string;
@@ -50641,7 +50643,7 @@ export type LicenseSimple = {
    * @example
    * \\"https://api.github.com/licenses/mit\\"
    */
-  url: string;
+  url: string | null;
 
   /**
    *
@@ -50662,7 +50664,7 @@ export type LicenseSimple = {
    * @example
    * \\"MIT\\"
    */
-  spdx_id: string;
+  spdx_id: string | null;
   html_url?: string;
 };
 
@@ -50849,7 +50851,7 @@ export type ReviewComment = {
    * @example
    * 1
    */
-  position: number;
+  position: number | null;
   body_html?: string;
   body_text?: string;
 
@@ -50881,12 +50883,12 @@ export type ReviewComment = {
    * @example
    * 2
    */
-  start_line?: number;
+  start_line?: number | null;
 
   /**
    * The side of the first line of the range for a multi-line comment.
    */
-  start_side?: \\"LEFT\\" | \\"RIGHT\\";
+  start_side?: \\"LEFT\\" | \\"RIGHT\\" | null;
 
   /**
    *
@@ -50938,14 +50940,14 @@ export type ReviewComment = {
    * @example
    * 2
    */
-  original_start_line?: number;
+  original_start_line?: number | null;
 
   /**
    *
    * @example
    * 42
    */
-  pull_request_review_id: number;
+  pull_request_review_id: number | null;
 };
 
 /**
@@ -51347,7 +51349,7 @@ export type CodeOfConduct = {
    * \\"Contributor Covenant\\"
    */
   name: string;
-  html_url: string;
+  html_url: string | null;
 };
 
 /**
@@ -51405,14 +51407,14 @@ export type ContentSymlink = {
   size: number;
   type: string;
   _links: {
-    git: string;
-    html: string;
+    git: string | null;
+    html: string | null;
     self: string;
   };
   target: string;
-  git_url: string;
-  html_url: string;
-  download_url: string;
+  git_url: string | null;
+  html_url: string | null;
+  download_url: string | null;
 };
 
 /**
@@ -51599,7 +51601,7 @@ export type FullRepository = {
    * @example
    * \\"https://github.com\\"
    */
-  homepage: string;
+  homepage: string | null;
 
   /**
    *
@@ -51614,7 +51616,7 @@ export type FullRepository = {
    * \\"http://api.github.com/repos/octocat/Hello-World/keys{/key_id}\\"
    */
   keys_url: string;
-  language: string;
+  language: string | null;
 
   /**
    *
@@ -51735,7 +51737,7 @@ export type FullRepository = {
    * @example
    * \\"git:git.example.com/octocat/Hello-World\\"
    */
-  mirror_url: string;
+  mirror_url: string | null;
 
   /**
    *
@@ -51778,7 +51780,7 @@ export type FullRepository = {
    * @example
    * \\"This your first repo!\\"
    */
-  description: string;
+  description: string | null;
 
   /**
    *
@@ -51986,7 +51988,7 @@ export type FullRepository = {
    * \\"http://api.github.com/repos/octocat/Hello-World/subscription\\"
    */
   subscription_url: string;
-  temp_clone_token?: string;
+  temp_clone_token?: string | null;
 
   /**
    *
@@ -52085,16 +52087,16 @@ export type LicenseContent = {
   size: number;
   type: string;
   _links: {
-    git: string;
-    html: string;
+    git: string | null;
+    html: string | null;
     self: string;
   };
   content: string;
-  git_url: string;
+  git_url: string | null;
   license: LicenseSimple | null;
   encoding: string;
-  html_url: string;
-  download_url: string;
+  html_url: string | null;
+  download_url: string | null;
 };
 
 /**
@@ -52361,7 +52363,7 @@ export type TeamDiscussion = {
    * 0
    */
   comments_count: number;
-  last_edited_at: string;
+  last_edited_at: string | null;
 };
 
 /**
@@ -52479,7 +52481,7 @@ export type TeamRepository = {
    * @example
    * \\"https://github.com\\"
    */
-  homepage: string;
+  homepage: string | null;
 
   /**
    *
@@ -52494,7 +52496,7 @@ export type TeamRepository = {
    * \\"http://api.github.com/repos/octocat/Hello-World/keys{/key_id}\\"
    */
   keys_url: string;
-  language: string;
+  language: string | null;
 
   /**
    *
@@ -52552,7 +52554,7 @@ export type TeamRepository = {
    * @example
    * \\"2011-01-26T19:06:43Z\\"
    */
-  pushed_at: string;
+  pushed_at: string | null;
 
   /**
    *
@@ -52580,7 +52582,7 @@ export type TeamRepository = {
    * @example
    * \\"2011-01-26T19:01:12Z\\"
    */
-  created_at: string;
+  created_at: string | null;
 
   /**
    *
@@ -52623,14 +52625,14 @@ export type TeamRepository = {
    * @example
    * \\"git:git.example.com/octocat/Hello-World\\"
    */
-  mirror_url: string;
+  mirror_url: string | null;
 
   /**
    *
    * @example
    * \\"2011-01-26T19:14:43Z\\"
    */
-  updated_at: string;
+  updated_at: string | null;
 
   /**
    * The repository visibility: public, private, or internal.
@@ -52663,7 +52665,7 @@ export type TeamRepository = {
    * @example
    * \\"This your first repo!\\"
    */
-  description: string;
+  description: string | null;
 
   /**
    *
@@ -52960,14 +52962,14 @@ export type CheckAnnotation = {
    * @example
    * \\"Spell Checker\\"
    */
-  title: string;
+  title: string | null;
 
   /**
    *
    * @example
    * \\"Check your spelling for 'banaas'.\\"
    */
-  message: string;
+  message: string | null;
 
   /**
    *
@@ -52982,7 +52984,7 @@ export type CheckAnnotation = {
    * @example
    * 10
    */
-  end_column: number;
+  end_column: number | null;
 
   /**
    *
@@ -52996,21 +52998,21 @@ export type CheckAnnotation = {
    * @example
    * \\"Do you mean 'bananas' or 'banana'?\\"
    */
-  raw_details: string;
+  raw_details: string | null;
 
   /**
    *
    * @example
    * 5
    */
-  start_column: number;
+  start_column: number | null;
 
   /**
    *
    * @example
    * \\"warning\\"
    */
-  annotation_level: string;
+  annotation_level: string | null;
 };
 
 /**
@@ -53304,7 +53306,7 @@ export type CodeownersErrors = {
      * @example
      * \\"The pattern \`/\` will never match anything, did you mean \`*\` instead?\\"
      */
-    suggestion?: string;
+    suggestion?: string | null;
   }>;
 };
 
@@ -53366,7 +53368,7 @@ export type CodespaceMachine = {
    * @example
    * \\"ready\\"
    */
-  prebuild_availability: \\"none\\" | \\"ready\\" | \\"in_progress\\";
+  prebuild_availability: \\"none\\" | \\"ready\\" | \\"in_progress\\" | null;
 };
 
 /**
@@ -53498,21 +53500,21 @@ export type CommunityProfile = {
    * @example
    * \\"2017-02-28T19:09:29Z\\"
    */
-  updated_at: string;
+  updated_at: string | null;
 
   /**
    *
    * @example
    * \\"My first repository on GitHub!\\"
    */
-  description: string;
+  description: string | null;
 
   /**
    *
    * @example
    * \\"example.com\\"
    */
-  documentation: string;
+  documentation: string | null;
 
   /**
    *
@@ -53540,14 +53542,14 @@ export type ContentDirectory = Array<{
   size: number;
   type: string;
   _links: {
-    git: string;
-    html: string;
+    git: string | null;
+    html: string | null;
     self: string;
   };
   content?: string;
-  git_url: string;
-  html_url: string;
-  download_url: string;
+  git_url: string | null;
+  html_url: string | null;
+  download_url: string | null;
 }>;
 
 /**
@@ -53561,13 +53563,13 @@ export type ContentSubmodule = {
   size: number;
   type: string;
   _links: {
-    git: string;
-    html: string;
+    git: string | null;
+    html: string | null;
     self: string;
   };
-  git_url: string;
-  html_url: string;
-  download_url: string;
+  git_url: string | null;
+  html_url: string | null;
+  download_url: string | null;
   submodule_git_url: string;
 };
 
@@ -53640,7 +53642,7 @@ export type DeploymentSimple = {
    * @example
    * \\"Deploy request from hubot\\"
    */
-  description: string;
+  description: string | null;
 
   /**
    * Name for the target deployment environment.
@@ -53813,8 +53815,8 @@ export type InteractionLimit = {
  * Issue Event Label
  */
 export type IssueEventLabel = {
-  name: string;
-  color: string;
+  name: string | null;
+  color: string | null;
 };
 
 /**
@@ -53953,7 +53955,7 @@ export type OrganizationFull = {
    * @example
    * 10000
    */
-  disk_usage?: number;
+  disk_usage?: number | null;
 
   /**
    *
@@ -53975,7 +53977,7 @@ export type OrganizationFull = {
    * @example
    * \\"A great organization\\"
    */
-  description: string;
+  description: string | null;
 
   /**
    *
@@ -54010,28 +54012,28 @@ export type OrganizationFull = {
    * @example
    * \\"org@example.com\\"
    */
-  billing_email?: string;
+  billing_email?: string | null;
 
   /**
    *
    * @example
    * 8
    */
-  collaborators?: number;
+  collaborators?: number | null;
 
   /**
    *
    * @example
    * 81
    */
-  private_gists?: number;
+  private_gists?: number | null;
 
   /**
    *
    * @example
    * \\"github\\"
    */
-  twitter_username?: string;
+  twitter_username?: string | null;
 
   /**
    *
@@ -54074,14 +54076,14 @@ export type OrganizationFull = {
    * true
    */
   has_organization_projects: boolean;
-  default_repository_permission?: string;
+  default_repository_permission?: string | null;
 
   /**
    *
    * @example
    * true
    */
-  two_factor_requirement_enabled?: boolean;
+  two_factor_requirement_enabled?: boolean | null;
 
   /**
    *
@@ -54095,7 +54097,7 @@ export type OrganizationFull = {
    * @example
    * true
    */
-  members_can_create_repositories?: boolean;
+  members_can_create_repositories?: boolean | null;
 
   /**
    *
@@ -54109,7 +54111,7 @@ export type OrganizationFull = {
    * @example
    * false
    */
-  members_can_fork_private_repositories?: boolean;
+  members_can_fork_private_repositories?: boolean | null;
 
   /**
    *
@@ -54405,7 +54407,7 @@ export type SimpleRepository = {
    * @example
    * \\"This your first repo!\\"
    */
-  description: string;
+  description: string | null;
 
   /**
    * A template for the API URL to get information about branches in the repository.
@@ -54763,7 +54765,7 @@ export type HookDeliveryItem = {
    * @example
    * \\"opened\\"
    */
-  action: string;
+  action: string | null;
 
   /**
    * Describes the response returned after attempting the delivery.
@@ -54811,7 +54813,7 @@ export type HookDeliveryItem = {
    * @example
    * 123
    */
-  repository_id: number;
+  repository_id: number | null;
 
   /**
    * The id of the GitHub App installation associated with this event.
@@ -54819,7 +54821,7 @@ export type HookDeliveryItem = {
    * @example
    * 123
    */
-  installation_id: number;
+  installation_id: number | null;
 };
 
 /**
@@ -54882,8 +54884,8 @@ export type LockedIssueEvent = {
   actor: SimpleUser;
   event: string;
   node_id: string;
-  commit_id: string;
-  commit_url: string;
+  commit_id: string | null;
+  commit_url: string | null;
   created_at: string;
 
   /**
@@ -54891,7 +54893,7 @@ export type LockedIssueEvent = {
    * @example
    * \\"\\\\\\"off-topic\\\\\\"\\"
    */
-  lock_reason: string;
+  lock_reason: string | null;
   performed_via_github_app: Integration | null;
 };
 
@@ -54938,7 +54940,7 @@ export type MinimalRepository = {
     name?: string;
     node_id?: string;
     spdx_id?: string;
-  };
+  } | null;
 
   /**
    *
@@ -54952,7 +54954,7 @@ export type MinimalRepository = {
   archived?: boolean;
   disabled?: boolean;
   has_wiki?: boolean;
-  homepage?: string;
+  homepage?: string | null;
 
   /**
    *
@@ -54967,7 +54969,7 @@ export type MinimalRepository = {
    * \\"http://api.github.com/repos/octocat/Hello-World/keys{/key_id}\\"
    */
   keys_url: string;
-  language?: string;
+  language?: string | null;
 
   /**
    *
@@ -55025,7 +55027,7 @@ export type MinimalRepository = {
    * @example
    * \\"2011-01-26T19:06:43Z\\"
    */
-  pushed_at?: string;
+  pushed_at?: string | null;
 
   /**
    *
@@ -55053,7 +55055,7 @@ export type MinimalRepository = {
    * @example
    * \\"2011-01-26T19:01:12Z\\"
    */
-  created_at?: string;
+  created_at?: string | null;
 
   /**
    *
@@ -55083,14 +55085,14 @@ export type MinimalRepository = {
    * \\"http://api.github.com/repos/octocat/Hello-World/merges\\"
    */
   merges_url: string;
-  mirror_url?: string;
+  mirror_url?: string | null;
 
   /**
    *
    * @example
    * \\"2011-01-26T19:14:43Z\\"
    */
-  updated_at?: string;
+  updated_at?: string | null;
   visibility?: string;
 
   /**
@@ -55119,7 +55121,7 @@ export type MinimalRepository = {
    * @example
    * \\"This your first repo!\\"
    */
-  description: string;
+  description: string | null;
   forks_count?: number;
   is_template?: boolean;
 
@@ -55306,63 +55308,63 @@ export type PagesHealthCheck = {
   domain?: {
     uri?: string;
     host?: string;
-    reason?: string;
+    reason?: string | null;
     is_valid?: boolean;
-    caa_error?: string;
-    is_proxied?: boolean;
-    https_error?: string;
-    is_a_record?: boolean;
+    caa_error?: string | null;
+    is_proxied?: boolean | null;
+    https_error?: string | null;
+    is_a_record?: boolean | null;
     nameservers?: string;
     dns_resolves?: boolean;
-    is_fastly_ip?: boolean;
+    is_fastly_ip?: boolean | null;
     enforces_https?: boolean;
     is_apex_domain?: boolean;
     is_pages_domain?: boolean;
     is_valid_domain?: boolean;
-    has_cname_record?: boolean;
-    is_cloudflare_ip?: boolean;
-    is_https_eligible?: boolean;
-    is_old_ip_address?: boolean;
+    has_cname_record?: boolean | null;
+    is_cloudflare_ip?: boolean | null;
+    is_https_eligible?: boolean | null;
+    is_old_ip_address?: boolean | null;
     responds_to_https?: boolean;
-    is_cname_to_fastly?: boolean;
-    is_served_by_pages?: boolean;
-    should_be_a_record?: boolean;
-    has_mx_records_present?: boolean;
-    is_pointed_to_github_pages_ip?: boolean;
-    is_cname_to_github_user_domain?: boolean;
-    is_non_github_pages_ip_present?: boolean;
-    is_cname_to_pages_dot_github_dot_com?: boolean;
+    is_cname_to_fastly?: boolean | null;
+    is_served_by_pages?: boolean | null;
+    should_be_a_record?: boolean | null;
+    has_mx_records_present?: boolean | null;
+    is_pointed_to_github_pages_ip?: boolean | null;
+    is_cname_to_github_user_domain?: boolean | null;
+    is_non_github_pages_ip_present?: boolean | null;
+    is_cname_to_pages_dot_github_dot_com?: boolean | null;
   };
   alt_domain?: {
     uri?: string;
     host?: string;
-    reason?: string;
+    reason?: string | null;
     is_valid?: boolean;
-    caa_error?: string;
-    is_proxied?: boolean;
-    https_error?: string;
-    is_a_record?: boolean;
+    caa_error?: string | null;
+    is_proxied?: boolean | null;
+    https_error?: string | null;
+    is_a_record?: boolean | null;
     nameservers?: string;
     dns_resolves?: boolean;
-    is_fastly_ip?: boolean;
+    is_fastly_ip?: boolean | null;
     enforces_https?: boolean;
     is_apex_domain?: boolean;
     is_pages_domain?: boolean;
     is_valid_domain?: boolean;
-    has_cname_record?: boolean;
-    is_cloudflare_ip?: boolean;
-    is_https_eligible?: boolean;
-    is_old_ip_address?: boolean;
+    has_cname_record?: boolean | null;
+    is_cloudflare_ip?: boolean | null;
+    is_https_eligible?: boolean | null;
+    is_old_ip_address?: boolean | null;
     responds_to_https?: boolean;
-    is_cname_to_fastly?: boolean;
-    is_served_by_pages?: boolean;
-    should_be_a_record?: boolean;
-    has_mx_records_present?: boolean;
-    is_pointed_to_github_pages_ip?: boolean;
-    is_cname_to_github_user_domain?: boolean;
-    is_non_github_pages_ip_present?: boolean;
-    is_cname_to_pages_dot_github_dot_com?: boolean;
-  };
+    is_cname_to_fastly?: boolean | null;
+    is_served_by_pages?: boolean | null;
+    should_be_a_record?: boolean | null;
+    has_mx_records_present?: boolean | null;
+    is_pointed_to_github_pages_ip?: boolean | null;
+    is_cname_to_github_user_domain?: boolean | null;
+    is_non_github_pages_ip_present?: boolean | null;
+    is_cname_to_pages_dot_github_dot_com?: boolean | null;
+  } | null;
 };
 
 /**
@@ -55429,7 +55431,7 @@ export type PendingDeployment = {
    * @example
    * \\"2020-11-23T22:00:40Z\\"
    */
-  wait_timer_started_at: string;
+  wait_timer_started_at: string | null;
 
   /**
    * Whether the currently authenticated user can approve the deployment
@@ -55546,8 +55548,8 @@ export type LabeledIssueEvent = {
     color: string;
   };
   node_id: string;
-  commit_id: string;
-  commit_url: string;
+  commit_id: string | null;
+  commit_url: string | null;
   created_at: string;
   performed_via_github_app: Integration | null;
 };
@@ -55556,10 +55558,10 @@ export type MarketplaceAccount = {
   id: number;
   url: string;
   type: string;
-  email?: string;
+  email?: string | null;
   login: string;
   node_id?: string;
-  organization_billing_email?: string;
+  organization_billing_email?: string | null;
 };
 
 /**
@@ -55634,7 +55636,7 @@ export type OrganizationSimple = {
    * @example
    * \\"A great organization\\"
    */
-  description: string;
+  description: string | null;
 
   /**
    *
@@ -55758,7 +55760,7 @@ export type PullRequestSimple = {
    * @example
    * \\"Please pull these awesome changes\\"
    */
-  body: string;
+  body: string | null;
   head: {
     ref: string;
     sha: string;
@@ -55844,14 +55846,14 @@ export type PullRequestSimple = {
    * \\"https://github.com/octocat/Hello-World/pull/1347\\"
    */
   html_url: string;
-  assignees?: Array<SimpleUser>;
+  assignees?: Array<SimpleUser> | null;
 
   /**
    *
    * @example
    * \\"2011-01-26T19:01:12Z\\"
    */
-  closed_at: string;
+  closed_at: string | null;
 
   /**
    *
@@ -55865,7 +55867,7 @@ export type PullRequestSimple = {
    * @example
    * \\"2011-01-26T19:01:12Z\\"
    */
-  merged_at: string;
+  merged_at: string | null;
   milestone: Milestone | null;
 
   /**
@@ -55910,21 +55912,21 @@ export type PullRequestSimple = {
    * \\"https://api.github.com/repos/octocat/Hello-World/statuses/6dcb09b5b57875f334f61aebed695e2e4193db5e\\"
    */
   statuses_url: string;
-  requested_teams?: Array<Team>;
+  requested_teams?: Array<Team> | null;
 
   /**
    *
    * @example
    * \\"e5bd3914e2e596debea16f433f57875b5b90bcd6\\"
    */
-  merge_commit_sha: string;
+  merge_commit_sha: string | null;
 
   /**
    *
    * @example
    * \\"too heated\\"
    */
-  active_lock_reason?: string;
+  active_lock_reason?: string | null;
   author_association: AuthorAssociation;
 
   /**
@@ -55933,7 +55935,7 @@ export type PullRequestSimple = {
    * \\"https://api.github.com/repos/octocat/Hello-World/pulls/comments{/number}\\"
    */
   review_comment_url: string;
-  requested_reviewers?: Array<SimpleUser>;
+  requested_reviewers?: Array<SimpleUser> | null;
 
   /**
    *
@@ -55984,8 +55986,8 @@ export type RenamedIssueEvent = {
     from: string;
   };
   node_id: string;
-  commit_id: string;
-  commit_url: string;
+  commit_id: string | null;
+  commit_url: string | null;
   created_at: string;
   performed_via_github_app: Integration | null;
 };
@@ -56006,7 +56008,7 @@ export type ScopedInstallation = {
    * @example
    * \\"config.yaml\\"
    */
-  single_file_name: string;
+  single_file_name: string | null;
 
   /**
    *
@@ -56064,7 +56066,7 @@ export type StatusCheckPolicy = {
    */
   url: string;
   checks: Array<{
-    app_id: number;
+    app_id: number | null;
 
     /**
      *
@@ -56107,7 +56109,7 @@ export type ThreadSubscription = {
    * \\"https://api.github.com/notifications/threads/1/subscription\\"
    */
   url: string;
-  reason: string;
+  reason: string | null;
   ignored: boolean;
 
   /**
@@ -56115,7 +56117,7 @@ export type ThreadSubscription = {
    * @example
    * \\"2012-10-06T21:34:12Z\\"
    */
-  created_at: string;
+  created_at: string | null;
 
   /**
    *
@@ -56150,8 +56152,8 @@ export type AssignedIssueEvent = {
   node_id: string;
   assignee: SimpleUser;
   assigner: SimpleUser;
-  commit_id: string;
-  commit_url: string;
+  commit_id: string | null;
+  commit_url: string | null;
   created_at: string;
   performed_via_github_app: Integration;
 };
@@ -56192,7 +56194,7 @@ export type AuthenticationToken = {
    * @example
    * \\"config.yaml\\"
    */
-  single_file?: string;
+  single_file?: string | null;
 
   /**
    * The repositories this token has access to
@@ -56248,25 +56250,25 @@ export type MarketplacePurchase = {
   id: number;
   url: string;
   type: string;
-  email?: string;
+  email?: string | null;
   login: string;
   marketplace_purchase: {
     plan?: MarketplaceListingPlan;
-    unit_count?: number;
+    unit_count?: number | null;
     updated_at?: string;
     is_installed?: boolean;
     billing_cycle?: string;
     on_free_trial?: boolean;
-    next_billing_date?: string;
-    free_trial_ends_on?: string;
+    next_billing_date?: string | null;
+    free_trial_ends_on?: string | null;
   };
   marketplace_pending_change?: {
     id?: number;
     plan?: MarketplaceListingPlan;
-    unit_count?: number;
+    unit_count?: number | null;
     is_installed?: boolean;
     effective_date?: string;
-  };
+  } | null;
   organization_billing_email?: string;
 };
 
@@ -56331,12 +56333,12 @@ export type SimpleCommitStatus = {
   state: string;
   context: string;
   node_id: string;
-  required?: boolean;
-  avatar_url: string;
+  required?: boolean | null;
+  avatar_url: string | null;
   created_at: string;
-  target_url: string;
+  target_url: string | null;
   updated_at: string;
-  description: string;
+  description: string | null;
 };
 
 export type ActionsBillingUsage = {
@@ -56520,7 +56522,7 @@ export type DependencyGraphDiff = Array<{
    * @example
    * \\"MIT\\"
    */
-  license: string;
+  license: string | null;
 
   /**
    *
@@ -56549,7 +56551,7 @@ export type DependencyGraphDiff = Array<{
    * @example
    * \\"pkg:/npm/%40actions/core@1.1.0\\"
    */
-  package_url: string;
+  package_url: string | null;
   vulnerabilities: Array<{
     /**
      *
@@ -56585,7 +56587,7 @@ export type DependencyGraphDiff = Array<{
    * @example
    * \\"https://github.com/github/actions\\"
    */
-  source_repository_url: string;
+  source_repository_url: string | null;
 }>;
 
 /**
@@ -56787,7 +56789,7 @@ export type ScimEnterpriseGroup = {
     display?: string;
   }>;
   schemas: Array<string>;
-  externalId?: string;
+  externalId?: string | null;
   displayName?: string;
 };
 
@@ -56808,7 +56810,7 @@ export type SecretScanningAlert = {
   /**
    * The time that the alert was resolved in ISO 8601 format: \`YYYY-MM-DDTHH:MM:SSZ\`.
    */
-  resolved_at?: string;
+  resolved_at?: string | null;
   resolved_by?: SimpleUser | null;
 
   /**
@@ -56824,7 +56826,7 @@ export type SecretScanningAlert = {
   /**
    * Whether push protection was bypassed for the detected secret.
    */
-  push_protection_bypassed?: boolean;
+  push_protection_bypassed?: boolean | null;
 
   /** 
 * User-friendly name for the detected secret, matching the \`secret_type\`.
@@ -56835,7 +56837,7 @@ For a list of built-in patterns, see \\"[Secret scanning patterns](https://docs.
   /**
    * The time that push protection was bypassed in ISO 8601 format: \`YYYY-MM-DDTHH:MM:SSZ\`.
    */
-  push_protection_bypassed_at?: string;
+  push_protection_bypassed_at?: string | null;
   push_protection_bypassed_by?: SimpleUser | null;
 };
 
@@ -56892,8 +56894,8 @@ export type UnlabeledIssueEvent = {
     color: string;
   };
   node_id: string;
-  commit_id: string;
-  commit_url: string;
+  commit_id: string | null;
+  commit_url: string | null;
   created_at: string;
   performed_via_github_app: Integration | null;
 };
@@ -56979,7 +56981,7 @@ export type CodeOfConductSimple = {
    * @example
    * \\"https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md\\"
    */
-  html_url: string;
+  html_url: string | null;
 };
 
 export type CodeScanningAnalysis = {
@@ -57064,11 +57066,11 @@ export type MilestonedIssueEvent = {
   actor: SimpleUser;
   event: string;
   node_id: string;
-  commit_id: string;
+  commit_id: string | null;
   milestone: {
     title: string;
   };
-  commit_url: string;
+  commit_url: string | null;
   created_at: string;
   performed_via_github_app: Integration | null;
 };
@@ -57171,8 +57173,8 @@ export type UnassignedIssueEvent = {
   node_id: string;
   assignee: SimpleUser;
   assigner: SimpleUser;
-  commit_id: string;
-  commit_url: string;
+  commit_id: string | null;
+  commit_url: string | null;
   created_at: string;
   performed_via_github_app: Integration | null;
 };
@@ -57188,7 +57190,7 @@ export type CodeSearchResultItem = {
   score: number;
   git_url: string;
   html_url: string;
-  language?: string;
+  language?: string | null;
   file_size?: number;
   repository: MinimalRepository;
 
@@ -57220,8 +57222,8 @@ export type OptOutOidcCustomSub = {
 export type OrganizationInvitation = {
   id: number;
   role: string;
-  email: string;
-  login: string;
+  email: string | null;
+  login: string | null;
   inviter: SimpleUser;
 
   /**
@@ -57230,10 +57232,10 @@ export type OrganizationInvitation = {
    * \\"\\\\\\"MDIyOk9yZ2FuaXphdGlvbkludml0YXRpb24x\\\\\\"\\"
    */
   node_id: string;
-  failed_at?: string;
+  failed_at?: string | null;
   created_at: string;
   team_count: number;
-  failed_reason?: string;
+  failed_reason?: string | null;
 
   /**
    *
@@ -57309,10 +57311,10 @@ export type RepoSearchResultItem = {
    */
   disabled: boolean;
   has_wiki: boolean;
-  homepage: string;
+  homepage: string | null;
   html_url: string;
   keys_url: string;
-  language: string;
+  language: string | null;
   tags_url: string;
   watchers: number;
   blobs_url: string;
@@ -57331,7 +57333,7 @@ export type RepoSearchResultItem = {
   issues_url: string;
   labels_url: string;
   merges_url: string;
-  mirror_url: string;
+  mirror_url: string | null;
   updated_at: string;
 
   /**
@@ -57341,7 +57343,7 @@ export type RepoSearchResultItem = {
   archive_url: string;
   commits_url: string;
   compare_url: string;
-  description: string;
+  description: string | null;
   forks_count: number;
   is_template?: boolean;
   open_issues: number;
@@ -57401,7 +57403,7 @@ export type RepositorySubscription = {
    * \\"https://api.github.com/repos/octocat/example/subscription\\"
    */
   url: string;
-  reason: string;
+  reason: string | null;
 
   /**
    * Determines if all notifications should be blocked from this repository.
@@ -57510,7 +57512,7 @@ export type TeamDiscussionComment = {
    * \\"https://api.github.com/organizations/1/team/2403582/discussions/1\\"
    */
   discussion_url: string;
-  last_edited_at: string;
+  last_edited_at: string | null;
 };
 
 /**
@@ -57531,7 +57533,7 @@ export type TimelineReviewedEvent = {
    * @example
    * \\"This looks great.\\"
    */
-  body: string;
+  body: string | null;
   user: SimpleUser;
   event: string;
 
@@ -57589,19 +57591,19 @@ export type TimelineReviewedEvent = {
  */
 export type UserSearchResultItem = {
   id: number;
-  bio?: string;
+  bio?: string | null;
   url: string;
-  blog?: string;
-  name?: string;
+  blog?: string | null;
+  name?: string | null;
   type: string;
-  email?: string;
+  email?: string | null;
   login: string;
   score: number;
-  company?: string;
+  company?: string | null;
   node_id: string;
-  hireable?: boolean;
+  hireable?: boolean | null;
   html_url: string;
-  location?: string;
+  location?: string | null;
   followers?: number;
   following?: number;
   gists_url: string;
@@ -57611,11 +57613,11 @@ export type UserSearchResultItem = {
   events_url: string;
   site_admin: boolean;
   updated_at?: string;
-  gravatar_id: string;
+  gravatar_id: string | null;
   starred_url: string;
   public_gists?: number;
   public_repos?: number;
-  suspended_at?: string;
+  suspended_at?: string | null;
   text_matches?: SearchResultTextMatches;
   followers_url: string;
   following_url: string;
@@ -57637,12 +57639,12 @@ export type CodeScanningAlertRule = {
   /**
    * A unique identifier for the rule used to detect the alert.
    */
-  id?: string;
+  id?: string | null;
 
   /**
    * Detailed documentation for the rule as GitHub Flavored Markdown.
    */
-  help?: string;
+  help?: string | null;
 
   /**
    * The name of the rule used to detect the alert.
@@ -57652,12 +57654,12 @@ export type CodeScanningAlertRule = {
   /**
    * A set of tags applicable for the rule.
    */
-  tags?: Array<string>;
+  tags?: Array<string> | null;
 
   /**
    * The severity of the alert.
    */
-  severity?: \\"none\\" | \\"note\\" | \\"warning\\" | \\"error\\";
+  severity?: \\"none\\" | \\"note\\" | \\"warning\\" | \\"error\\" | null;
 
   /**
    * A short description of the rule used to detect the alert.
@@ -57672,7 +57674,7 @@ export type CodeScanningAlertRule = {
   /**
    * The security severity of the alert.
    */
-  security_severity_level?: \\"low\\" | \\"medium\\" | \\"high\\" | \\"critical\\";
+  security_severity_level?: \\"low\\" | \\"medium\\" | \\"high\\" | \\"critical\\" | null;
 };
 
 /**
@@ -57693,7 +57695,7 @@ export type CodespaceExportDetails = {
    * @example
    * \\"fd95a81ca01e48ede9f39c799ecbcef817b8a3b2\\"
    */
-  sha?: string;
+  sha?: string | null;
 
   /**
    * State of the latest export
@@ -57701,7 +57703,7 @@ export type CodespaceExportDetails = {
    * @example
    * \\"succeeded | failed | in_progress\\"
    */
-  state?: string;
+  state?: string | null;
 
   /**
    * Name of the exported branch
@@ -57709,7 +57711,7 @@ export type CodespaceExportDetails = {
    * @example
    * \\"codespace-monalisa-octocat-hello-world-g4wpq6h95q\\"
    */
-  branch?: string;
+  branch?: string | null;
 
   /**
    * Web url for the exported branch
@@ -57717,7 +57719,7 @@ export type CodespaceExportDetails = {
    * @example
    * \\"https://github.com/octocat/hello-world/tree/:branch\\"
    */
-  html_url?: string;
+  html_url?: string | null;
 
   /**
    * Url for fetching export details
@@ -57733,7 +57735,7 @@ export type CodespaceExportDetails = {
    * @example
    * \\"2021-01-01T19:01:12Z\\"
    */
-  completed_at?: string;
+  completed_at?: string | null;
 };
 
 /**
@@ -57797,14 +57799,14 @@ export type CredentialAuthorization = {
    * @example
    * \\"2011-01-26T19:06:43Z\\"
    */
-  credential_accessed_at: string;
+  credential_accessed_at: string | null;
 
   /**
    *
    * @example
    * 12345678
    */
-  authorized_credential_id: number;
+  authorized_credential_id: number | null;
 
   /**
    * Date when the credential was authorized for use.
@@ -57820,7 +57822,7 @@ export type CredentialAuthorization = {
    * @example
    * \\"my token\\"
    */
-  authorized_credential_note?: string;
+  authorized_credential_note?: string | null;
 
   /**
    * The title given to the ssh key. This will only be present when the credential is an ssh key.
@@ -57828,12 +57830,12 @@ export type CredentialAuthorization = {
    * @example
    * \\"my ssh key\\"
    */
-  authorized_credential_title?: string;
+  authorized_credential_title?: string | null;
 
   /**
    * The expiry for the token. This will only be present when the credential is a token.
    */
-  authorized_credential_expires_at?: string;
+  authorized_credential_expires_at?: string | null;
 };
 
 /**
@@ -57845,11 +57847,11 @@ export type DemilestonedIssueEvent = {
   actor: SimpleUser;
   event: string;
   node_id: string;
-  commit_id: string;
+  commit_id: string | null;
   milestone: {
     title: string;
   };
-  commit_url: string;
+  commit_url: string | null;
   created_at: string;
   performed_via_github_app: Integration | null;
 };
@@ -57907,7 +57909,7 @@ export type IssueSearchResultItem = {
     color?: string;
     default?: boolean;
     node_id?: string;
-    description?: string;
+    description?: string | null;
   }>;
   locked: boolean;
   number: number;
@@ -57915,10 +57917,10 @@ export type IssueSearchResultItem = {
   assignee: SimpleUser | null;
   comments: number;
   html_url: string;
-  assignees?: Array<SimpleUser>;
+  assignees?: Array<SimpleUser> | null;
   body_html?: string;
   body_text?: string;
-  closed_at: string;
+  closed_at: string | null;
   milestone: Milestone | null;
   reactions?: ReactionRollup;
   created_at: string;
@@ -57928,17 +57930,17 @@ export type IssueSearchResultItem = {
   updated_at: string;
   comments_url: string;
   pull_request?: {
-    url: string;
-    diff_url: string;
-    html_url: string;
-    merged_at?: string;
-    patch_url: string;
+    url: string | null;
+    diff_url: string | null;
+    html_url: string | null;
+    merged_at?: string | null;
+    patch_url: string | null;
   };
-  state_reason?: string;
+  state_reason?: string | null;
   text_matches?: SearchResultTextMatches;
   timeline_url?: string;
   repository_url: string;
-  active_lock_reason?: string;
+  active_lock_reason?: string | null;
   author_association: AuthorAssociation;
   performed_via_github_app?: Integration | null;
 };
@@ -57954,7 +57956,7 @@ export type LabelSearchResultItem = {
   score: number;
   default: boolean;
   node_id: string;
-  description: string;
+  description: string | null;
   text_matches?: SearchResultTextMatches;
 };
 
@@ -58006,7 +58008,7 @@ export type MarketplaceListingPlan = {
    * [\\"11 concurrent builds\\"]
    */
   bullets: Array<string>;
-  unit_name: string;
+  unit_name: string | null;
 
   /**
    *
@@ -58100,10 +58102,10 @@ export type StateChangeIssueEvent = {
   actor: SimpleUser;
   event: string;
   node_id: string;
-  commit_id: string;
-  commit_url: string;
+  commit_id: string | null;
+  commit_url: string | null;
   created_at: string;
-  state_reason?: string;
+  state_reason?: string | null;
   performed_via_github_app: Integration | null;
 };
 
@@ -58211,9 +58213,9 @@ export type TimelineCommittedEvent = {
   };
   verification: {
     reason: string;
-    payload: string;
+    payload: string | null;
     verified: boolean;
-    signature: string;
+    signature: string | null;
   };
 };
 
@@ -58230,7 +58232,7 @@ export type TopicSearchResultItem = {
       topic_id?: number;
       relation_type?: string;
     };
-  }>;
+  }> | null;
   curated: boolean;
   related?: Array<{
     topic_relation?: {
@@ -58239,18 +58241,18 @@ export type TopicSearchResultItem = {
       topic_id?: number;
       relation_type?: string;
     };
-  }>;
+  }> | null;
   featured: boolean;
-  logo_url?: string;
-  released: string;
+  logo_url?: string | null;
+  released: string | null;
   created_at: string;
-  created_by: string;
+  created_by: string | null;
   updated_at: string;
-  description: string;
-  display_name: string;
+  description: string | null;
+  display_name: string | null;
   text_matches?: SearchResultTextMatches;
-  repository_count?: number;
-  short_description: string;
+  repository_count?: number | null;
+  short_description: string | null;
 };
 
 /**
@@ -58373,12 +58375,12 @@ export type BranchRestrictionPolicy = {
     url?: string;
     name?: string;
     slug?: string;
-    parent?: string;
+    parent?: string | null;
     node_id?: string;
     privacy?: string;
     html_url?: string;
     permission?: string;
-    description?: string;
+    description?: string | null;
     members_url?: string;
     repositories_url?: string;
   }>;
@@ -58514,14 +58516,14 @@ export type ScimUserListEnterprise = {
 export type UserMarketplacePurchase = {
   plan: MarketplaceListingPlan;
   account: MarketplaceAccount;
-  unit_count: number;
+  unit_count: number | null;
 
   /**
    *
    * @example
    * \\"2017-11-02T01:12:12Z\\"
    */
-  updated_at: string;
+  updated_at: string | null;
 
   /**
    *
@@ -58542,14 +58544,14 @@ export type UserMarketplacePurchase = {
    * @example
    * \\"2017-11-11T00:00:00Z\\"
    */
-  next_billing_date: string;
+  next_billing_date: string | null;
 
   /**
    *
    * @example
    * \\"2017-11-11T00:00:00Z\\"
    */
-  free_trial_ends_on: string;
+  free_trial_ends_on: string | null;
 };
 
 /**
@@ -58617,7 +58619,7 @@ export type ScimGroupListEnterprise = {
       display?: string;
     }>;
     schemas: Array<string>;
-    externalId?: string;
+    externalId?: string | null;
     displayName?: string;
   }>;
   startIndex: number;
@@ -58633,7 +58635,7 @@ export type SearchResultTextMatches = Array<{
   fragment?: string;
   property?: string;
   object_url?: string;
-  object_type?: string;
+  object_type?: string | null;
 }>;
 
 export type CodeScanningAnalysisTool = {
@@ -58646,12 +58648,12 @@ export type CodeScanningSarifsStatus = {
   /**
    * Any errors that ocurred during processing of the delivery.
    */
-  readonly errors?: Array<string>;
+  readonly errors?: Array<string> | null;
 
   /**
    * The REST API URL for getting the analyses associated with the upload.
    */
-  readonly analyses_url?: string;
+  readonly analyses_url?: string | null;
 
   /**
    * \`pending\` files have not yet been processed, while \`complete\` means results from the SARIF have been stored. \`failed\` files have either not been processed at all, or could only be partially processed.
@@ -58832,12 +58834,12 @@ export type PullRequestReviewComment = {
    * @example
    * 2
    */
-  start_line?: number;
+  start_line?: number | null;
 
   /**
    * The side of the first line of the range for a multi-line comment.
    */
-  start_side?: \\"LEFT\\" | \\"RIGHT\\";
+  start_side?: \\"LEFT\\" | \\"RIGHT\\" | null;
 
   /**
    *
@@ -58893,7 +58895,7 @@ export type PullRequestReviewComment = {
    * @example
    * 2
    */
-  original_start_line?: number;
+  original_start_line?: number | null;
 
   /**
    * The ID of the pull request review to which the comment belongs.
@@ -58901,7 +58903,7 @@ export type PullRequestReviewComment = {
    * @example
    * 42
    */
-  pull_request_review_id: number;
+  pull_request_review_id: number | null;
 };
 
 /**
@@ -58936,8 +58938,8 @@ export type AddedToProjectIssueEvent = {
   actor: SimpleUser;
   event: string;
   node_id: string;
-  commit_id: string;
-  commit_url: string;
+  commit_id: string | null;
+  commit_url: string | null;
   created_at: string;
   project_card?: {
     id: number;
@@ -58998,8 +59000,8 @@ export type CodeScanningSarifsReceipt = {
 export type IssueEventDismissedReview = {
   state: string;
   review_id: number;
-  dismissal_message: string;
-  dismissal_commit_id?: string;
+  dismissal_message: string | null;
+  dismissal_commit_id?: string | null;
 };
 
 export type MergeGroupChecksRequested = {
@@ -59024,13 +59026,13 @@ export type ReviewDismissedIssueEvent = {
   actor: SimpleUser;
   event: string;
   node_id: string;
-  commit_id: string;
-  commit_url: string;
+  commit_id: string | null;
+  commit_url: string | null;
   created_at: string;
   dismissed_review: {
     state: string;
     review_id: number;
-    dismissal_message: string;
+    dismissal_message: string | null;
     dismissal_commit_id?: string;
   };
   performed_via_github_app: Integration | null;
@@ -59045,8 +59047,8 @@ export type ReviewRequestedIssueEvent = {
   actor: SimpleUser;
   event: string;
   node_id: string;
-  commit_id: string;
-  commit_url: string;
+  commit_id: string | null;
+  commit_url: string | null;
   created_at: string;
   requested_team?: Team;
   review_requester: SimpleUser;
@@ -59069,8 +59071,8 @@ export type TimelineAssignedIssueEvent = {
   event: string;
   node_id: string;
   assignee: SimpleUser;
-  commit_id: string;
-  commit_url: string;
+  commit_id: string | null;
+  commit_url: string | null;
   created_at: string;
   performed_via_github_app: Integration | null;
 };
@@ -59147,12 +59149,12 @@ export type CodeScanningAnalysisDeletion = {
   /**
    * Next deletable analysis in chain, without last analysis deletion confirmation
    */
-  readonly next_analysis_url: string;
+  readonly next_analysis_url: string | null;
 
   /**
    * Next deletable analysis in chain, with last analysis deletion confirmation
    */
-  readonly confirm_delete_url: string;
+  readonly confirm_delete_url: string | null;
 };
 
 /**
@@ -59284,8 +59286,8 @@ export type TimelineUnassignedIssueEvent = {
   event: string;
   node_id: string;
   assignee: SimpleUser;
-  commit_id: string;
-  commit_url: string;
+  commit_id: string | null;
+  commit_url: string | null;
   created_at: string;
   performed_via_github_app: Integration | null;
 };
@@ -59310,7 +59312,7 @@ export type CodeScanningAlertRuleSummary = {
   /**
    * A unique identifier for the rule used to detect the alert.
    */
-  id?: string;
+  id?: string | null;
 
   /**
    * The name of the rule used to detect the alert.
@@ -59320,12 +59322,12 @@ export type CodeScanningAlertRuleSummary = {
   /**
    * A set of tags applicable for the rule.
    */
-  tags?: Array<string>;
+  tags?: Array<string> | null;
 
   /**
    * The severity of the alert.
    */
-  severity?: \\"none\\" | \\"note\\" | \\"warning\\" | \\"error\\";
+  severity?: \\"none\\" | \\"note\\" | \\"warning\\" | \\"error\\" | null;
 
   /**
    * A short description of the rule used to detect the alert.
@@ -59352,8 +59354,8 @@ export type RemovedFromProjectIssueEvent = {
   actor: SimpleUser;
   event: string;
   node_id: string;
-  commit_id: string;
-  commit_url: string;
+  commit_id: string | null;
+  commit_url: string | null;
   created_at: string;
   project_card?: {
     id: number;
@@ -59460,7 +59462,7 @@ export type OrganizationSecretScanningAlert = {
   /**
    * The time that the alert was resolved in ISO 8601 format: \`YYYY-MM-DDTHH:MM:SSZ\`.
    */
-  resolved_at?: string;
+  resolved_at?: string | null;
   resolved_by?: SimpleUser | null;
 
   /**
@@ -59476,7 +59478,7 @@ export type OrganizationSecretScanningAlert = {
   /**
    * Whether push protection was bypassed for the detected secret.
    */
-  push_protection_bypassed?: boolean;
+  push_protection_bypassed?: boolean | null;
 
   /** 
 * User-friendly name for the detected secret, matching the \`secret_type\`.
@@ -59487,7 +59489,7 @@ For a list of built-in patterns, see \\"[Secret scanning patterns](https://docs.
   /**
    * The time that push protection was bypassed in ISO 8601 format: \`YYYY-MM-DDTHH:MM:SSZ\`.
    */
-  push_protection_bypassed_at?: string;
+  push_protection_bypassed_at?: string | null;
   push_protection_bypassed_by?: SimpleUser | null;
 };
 
@@ -59515,8 +59517,8 @@ export type ReviewRequestRemovedIssueEvent = {
   actor: SimpleUser;
   event: string;
   node_id: string;
-  commit_id: string;
-  commit_url: string;
+  commit_id: string | null;
+  commit_url: string | null;
   created_at: string;
   requested_team?: Team;
   review_requester: SimpleUser;
@@ -59560,8 +59562,8 @@ export type ConvertedNoteToIssueIssueEvent = {
   actor: SimpleUser;
   event: string;
   node_id: string;
-  commit_id: string;
-  commit_url: string;
+  commit_id: string | null;
+  commit_url: string | null;
   created_at: string;
   project_card?: {
     id: number;
@@ -59583,8 +59585,8 @@ export type MovedColumnInProjectIssueEvent = {
   actor: SimpleUser;
   event: string;
   node_id: string;
-  commit_id: string;
-  commit_url: string;
+  commit_id: string | null;
+  commit_url: string | null;
   created_at: string;
   project_card?: {
     id: number;
@@ -59756,7 +59758,7 @@ export type CodeScanningOrganizationAlertItems = {
 export type ProtectedBranchRequiredStatusCheck = {
   url?: string;
   checks: Array<{
-    app_id: number;
+    app_id: number | null;
     context: string;
   }>;
   strict?: boolean;
@@ -63738,7 +63740,7 @@ export const createFromManifest: ApiHeroEndpoint<
     pem: string;
     client_id: string;
     client_secret: string;
-    webhook_secret: string;
+    webhook_secret: string | null;
   }
 > = {
   id: \\"apps/create-from-manifest\\",
@@ -65877,7 +65879,7 @@ export const preFlightWithRepoForAuthenticatedUser: ApiHeroEndpoint<
   {
     defaults?: {
       location: string;
-      devcontainer_path: string;
+      devcontainer_path: string | null;
     };
     billable_owner?: SimpleUser;
   }
@@ -68503,7 +68505,7 @@ export const update: ApiHeroEndpoint<
           /**
            * The new filename for the file
            */
-          filename?: string;
+          filename?: string | null;
         }
       >;
 
@@ -68920,7 +68922,7 @@ export const createTree: ApiHeroEndpoint<
   
 **Note:** Use either \`tree.sha\` or \`content\` to specify the contents of the entry. Using both \`tree.sha\` and \`content\` will return an error.
 */
-        sha?: string;
+        sha?: string | null;
 
         /**
          * The file mode; one of \`100644\` for file (blob), \`100755\` for executable (blob), \`040000\` for subdirectory (tree), \`160000\` for submodule (commit), or \`120000\` for a blob that specifies the path of a symlink.
@@ -69645,15 +69647,15 @@ export const create: ApiHeroEndpoint<
         | {
             id?: number;
             name?: string;
-            color?: string;
-            description?: string;
+            color?: string | null;
+            description?: string | null;
           }
       >;
 
       /**
        * Login for the user that this issue should be assigned to. _NOTE: Only users with push access can set the assignee for new issues. The assignee is silently dropped otherwise. **This field is deprecated.**_
        */
-      assignee?: string;
+      assignee?: string | null;
 
       /**
        * Logins for Users to assign to this issue. _NOTE: Only users with push access can set assignees for new issues. Assignees are silently dropped otherwise._
@@ -69986,7 +69988,7 @@ export const update: ApiHeroEndpoint<
       /**
        * The contents of the issue.
        */
-      body?: string;
+      body?: string | null;
 
       /**
        * State of the issue. Either \`open\` or \`closed\`.
@@ -70006,15 +70008,15 @@ export const update: ApiHeroEndpoint<
         | {
             id?: number;
             name?: string;
-            color?: string;
-            description?: string;
+            color?: string | null;
+            description?: string | null;
           }
       >;
 
       /**
        * Login for the user that this issue should be assigned to. **This field is deprecated.**
        */
-      assignee?: string;
+      assignee?: string | null;
 
       /**
        * Logins for Users to assign to this issue. Pass one or more user logins to _replace_ the set of assignees on this Issue. Send an empty array (\`[]\`) to clear all assignees from the Issue. _NOTE: Only users with push access can set assignees for new issues. Assignees are silently dropped otherwise._
@@ -71366,7 +71368,7 @@ export const createAuthorization: ApiHeroEndpoint<
        * @example
        * [\\"user\\"]
        */
-      scopes?: Array<string>;
+      scopes?: Array<string> | null;
 
       /**
        * A URL to remind you what app the OAuth token is for.
@@ -71504,7 +71506,7 @@ export const updateAuthorization: ApiHeroEndpoint<
        * @example
        * [\\"user\\"]
        */
-      scopes?: Array<string>;
+      scopes?: Array<string> | null;
 
       /**
        * A URL to remind you what app the OAuth token is for.
@@ -71570,7 +71572,7 @@ export const getOrCreateAuthorizationForApp: ApiHeroEndpoint<
        * @example
        * [\\"user\\"]
        */
-      scopes?: Array<string>;
+      scopes?: Array<string> | null;
 
       /**
        * A URL to remind you what app the OAuth token is for.
@@ -71632,7 +71634,7 @@ export const getOrCreateAuthorizationForAppAndFingerprint: ApiHeroEndpoint<
        * @example
        * [\\"user\\"]
        */
-      scopes?: Array<string>;
+      scopes?: Array<string> | null;
 
       /**
        * A URL to remind you what app the OAuth token is for.
@@ -73447,7 +73449,7 @@ export const createForAuthenticatedUser: ApiHeroEndpoint<
        * @example
        * \\"This project represents the sprint of the first week in January\\"
        */
-      body?: string;
+      body?: string | null;
 
       /**
        * Name of the project
@@ -73552,7 +73554,7 @@ export const update: ApiHeroEndpoint<
        * @example
        * \\"This project represents the sprint of the first week in January\\"
        */
-      body?: string;
+      body?: string | null;
 
       /**
        * Name of the project
@@ -73788,7 +73790,7 @@ export const updateCard: ApiHeroEndpoint<
        * @example
        * \\"Update all gems\\"
        */
-      note?: string;
+      note?: string | null;
 
       /**
        * Whether or not the card is archived
@@ -73845,7 +73847,7 @@ export const createCard: ApiHeroEndpoint<
            * @example
            * \\"Update all gems\\"
            */
-          note: string;
+          note: string | null;
         }
       | {
           /**
@@ -76207,7 +76209,7 @@ export const update: ApiHeroEndpoint<
            */
           status?: string;
         };
-      };
+      } | null;
 
       /**
        * Either \`true\` to allow automatically deleting head branches when pull requests are merged, or \`false\` to prevent automatic deletion.
@@ -76556,7 +76558,7 @@ export const updateInformationAboutPagesSite: ApiHeroEndpoint<
       /**
        * Specify a custom domain for the repository. Sending a \`null\` value will remove the custom domain. For more about custom domains, see \\"[Using a custom domain with GitHub Pages](https://docs.github.com/articles/using-a-custom-domain-with-github-pages/).\\"
        */
-      cname?: string;
+      cname?: string | null;
 
       /**
        * Configures access controls for the GitHub Pages site. If public is set to \`true\`, the site is accessible to anyone on the internet. If set to \`false\`, the site will only be accessible to users who have at least \`read\` access to the repository that published the site. This includes anyone in your Enterprise if the repository is set to \`internal\` visibility. This feature is only available to repositories in an organization on an Enterprise plan.
@@ -77161,7 +77163,7 @@ export const createDeployment: ApiHeroEndpoint<
       /**
        * Short description of the deployment.
        */
-      description?: string;
+      description?: string | null;
 
       /**
        * Name for the target deployment environment (e.g., \`production\`, \`staging\`, \`qa\`).
@@ -77571,12 +77573,12 @@ export const createCommitStatus: ApiHeroEndpoint<
 For example, if your continuous integration system is posting build status, you would want to provide the deep link for the build output for this specific SHA:  
 \`http://ci.example.com/user/repo/build/sha\`
 */
-      target_url?: string;
+      target_url?: string | null;
 
       /**
        * A short description of the status.
        */
-      description?: string;
+      description?: string | null;
     };
   },
   Status,
@@ -79182,12 +79184,12 @@ export const updateBranchProtection: ApiHeroEndpoint<
          * The list of user \`login\`s with push access
          */
         users: Array<string>;
-      };
+      } | null;
 
       /**
        * Enforce all configured restrictions for administrators. Set to \`true\` to enforce required status checks for repository administrators. Set to \`null\` to disable.
        */
-      enforce_admins: boolean;
+      enforce_admins: boolean | null;
 
       /**
        * Allows deletion of the protected branch by anyone with write access to the repository. Set to \`false\` to prevent deletion of the protected branch. Default: \`false\`. For more information, see \\"[Enabling force pushes to a protected branch](https://docs.github.com/en/github/administering-a-repository/enabling-force-pushes-to-a-protected-branch)\\" in the GitHub Help documentation.
@@ -79202,7 +79204,7 @@ export const updateBranchProtection: ApiHeroEndpoint<
       /**
        * Permits force pushes to the protected branch by anyone with write access to the repository. Set to \`true\` to allow force pushes. Set to \`false\` or \`null\` to block force pushes. Default: \`false\`. For more information, see \\"[Enabling force pushes to a protected branch](https://docs.github.com/en/github/administering-a-repository/enabling-force-pushes-to-a-protected-branch)\\" in the GitHub Help documentation.\\"
        */
-      allow_force_pushes?: boolean;
+      allow_force_pushes?: boolean | null;
 
       /**
        * Require status checks to pass before merging. Set to \`null\` to disable.
@@ -79234,7 +79236,7 @@ export const updateBranchProtection: ApiHeroEndpoint<
 * @deprecated
 */
         contexts: Array<string>;
-      };
+      } | null;
 
       /**
        * Enforces a linear commit Git history, which prevents anyone from pushing merge commits to a branch. Set to \`true\` to enforce a linear commit history. Set to \`false\` to disable a linear commit Git history. Your repository must allow squash merging or rebase merging before you can enable a linear commit history. Default: \`false\`. For more information, see \\"[Requiring a linear commit history](https://docs.github.com/github/administering-a-repository/requiring-a-linear-commit-history)\\" in the GitHub Help documentation.
@@ -79299,7 +79301,7 @@ export const updateBranchProtection: ApiHeroEndpoint<
          * Specify the number of reviewers required to approve pull requests. Use a number between 1 and 6 or 0 to not require reviewers.
          */
         required_approving_review_count?: number;
-      };
+      } | null;
 
       /**
        * Requires all conversations on code to be resolved before a pull request can be merged into a branch that matches this rule. Set to \`false\` to disable. Default: \`false\`.
@@ -79500,7 +79502,7 @@ export const createOrUpdateEnvironment: ApiHeroEndpoint<
          */
         id?: number;
         type?: DeploymentReviewerType;
-      }>;
+      }> | null;
       wait_timer?: WaitTimer;
       deployment_branch_policy?: DeploymentBranchPolicy;
     } | null;
@@ -80796,11 +80798,11 @@ export const updateAttributeForUser: ApiHeroEndpoint<
         path?: string;
         value?:
           | {
-              active?: boolean;
-              userName?: string;
-              givenName?: string;
-              externalId?: string;
-              familyName?: string;
+              active?: boolean | null;
+              userName?: string | null;
+              givenName?: string | null;
+              externalId?: string | null;
+              familyName?: string | null;
             }
           | string;
       }>;
@@ -81435,7 +81437,7 @@ export const updateLegacy: ApiHeroEndpoint<
       /**
        * The ID of a team to set as the parent team.
        */
-      parent_team_id?: number;
+      parent_team_id?: number | null;
     };
   },
   TeamFull
@@ -81802,7 +81804,7 @@ export const updateInOrg: ApiHeroEndpoint<
       /**
        * The ID of a team to set as the parent team.
        */
-      parent_team_id?: number;
+      parent_team_id?: number | null;
     };
   },
   TeamFull
@@ -83237,7 +83239,7 @@ export const updateAuthenticated: ApiHeroEndpoint<
        * @example
        * \\"therealomarj\\"
        */
-      twitter_username?: string;
+      twitter_username?: string | null;
     };
   },
   PrivateUser
@@ -83949,7 +83951,7 @@ export type FullRepository = {
    * @example
    * \\"https://github.com\\"
    */
-  homepage: string;
+  homepage: string | null;
 
   /**
    *
@@ -83964,7 +83966,7 @@ export type FullRepository = {
    * \\"http://api.github.com/repos/octocat/Hello-World/keys{/key_id}\\"
    */
   keys_url: string;
-  language: string;
+  language: string | null;
 
   /**
    *
@@ -84085,7 +84087,7 @@ export type FullRepository = {
    * @example
    * \\"git:git.example.com/octocat/Hello-World\\"
    */
-  mirror_url: string;
+  mirror_url: string | null;
 
   /**
    *
@@ -84128,7 +84130,7 @@ export type FullRepository = {
    * @example
    * \\"This your first repo!\\"
    */
-  description: string;
+  description: string | null;
 
   /**
    *
@@ -84336,7 +84338,7 @@ export type FullRepository = {
    * \\"http://api.github.com/repos/octocat/Hello-World/subscription\\"
    */
   subscription_url: string;
-  temp_clone_token?: string;
+  temp_clone_token?: string | null;
 
   /**
    *
@@ -84453,7 +84455,7 @@ export type CodeOfConductSimple = {
    * @example
    * \\"https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md\\"
    */
-  html_url: string;
+  html_url: string | null;
 };
 
 /**
@@ -84472,7 +84474,7 @@ export type LicenseSimple = {
    * @example
    * \\"https://api.github.com/licenses/mit\\"
    */
-  url: string;
+  url: string | null;
 
   /**
    *
@@ -84493,7 +84495,7 @@ export type LicenseSimple = {
    * @example
    * \\"MIT\\"
    */
-  spdx_id: string;
+  spdx_id: string | null;
   html_url?: string;
 };
 
@@ -84593,7 +84595,7 @@ export type Repository = {
    * @example
    * \\"https://github.com\\"
    */
-  homepage: string;
+  homepage: string | null;
 
   /**
    *
@@ -84608,7 +84610,7 @@ export type Repository = {
    * \\"http://api.github.com/repos/octocat/Hello-World/keys{/key_id}\\"
    */
   keys_url: string;
-  language: string;
+  language: string | null;
 
   /**
    *
@@ -84666,7 +84668,7 @@ export type Repository = {
    * @example
    * \\"2011-01-26T19:06:43Z\\"
    */
-  pushed_at: string;
+  pushed_at: string | null;
 
   /**
    *
@@ -84687,7 +84689,7 @@ export type Repository = {
    * @example
    * \\"2011-01-26T19:01:12Z\\"
    */
-  created_at: string;
+  created_at: string | null;
 
   /**
    *
@@ -84730,7 +84732,7 @@ export type Repository = {
    * @example
    * \\"git:git.example.com/octocat/Hello-World\\"
    */
-  mirror_url: string;
+  mirror_url: string | null;
 
   /**
    *
@@ -84744,7 +84746,7 @@ export type Repository = {
    * @example
    * \\"2011-01-26T19:14:43Z\\"
    */
-  updated_at: string;
+  updated_at: string | null;
 
   /**
    * The repository visibility: public, private, or internal.
@@ -84777,7 +84779,7 @@ export type Repository = {
    * @example
    * \\"This your first repo!\\"
    */
-  description: string;
+  description: string | null;
 
   /**
    *
@@ -85152,7 +85154,7 @@ export type Repository = {
     allow_update_branch?: boolean;
     delete_branch_on_merge?: boolean;
     use_squash_pr_title_as_default?: boolean;
-  };
+  } | null;
 
   /**
    * Whether to delete head branches when pull requests are merged
@@ -85197,7 +85199,7 @@ export type SimpleUser = {
    * \\"https://api.github.com/users/octocat\\"
    */
   url: string;
-  name?: string;
+  name?: string | null;
 
   /**
    *
@@ -85205,7 +85207,7 @@ export type SimpleUser = {
    * \\"User\\"
    */
   type: string;
-  email?: string;
+  email?: string | null;
 
   /**
    *
@@ -85269,7 +85271,7 @@ export type SimpleUser = {
    * @example
    * \\"41d064eb2195891e12d0413f63227ea7\\"
    */
-  gravatar_id: string;
+  gravatar_id: string | null;
 
   /**
    *
@@ -85385,7 +85387,7 @@ export type MinimalRepository = {
     name?: string;
     node_id?: string;
     spdx_id?: string;
-  };
+  } | null;
 
   /**
    *
@@ -85399,7 +85401,7 @@ export type MinimalRepository = {
   archived?: boolean;
   disabled?: boolean;
   has_wiki?: boolean;
-  homepage?: string;
+  homepage?: string | null;
 
   /**
    *
@@ -85414,7 +85416,7 @@ export type MinimalRepository = {
    * \\"http://api.github.com/repos/octocat/Hello-World/keys{/key_id}\\"
    */
   keys_url: string;
-  language?: string;
+  language?: string | null;
 
   /**
    *
@@ -85472,7 +85474,7 @@ export type MinimalRepository = {
    * @example
    * \\"2011-01-26T19:06:43Z\\"
    */
-  pushed_at?: string;
+  pushed_at?: string | null;
 
   /**
    *
@@ -85500,7 +85502,7 @@ export type MinimalRepository = {
    * @example
    * \\"2011-01-26T19:01:12Z\\"
    */
-  created_at?: string;
+  created_at?: string | null;
 
   /**
    *
@@ -85530,14 +85532,14 @@ export type MinimalRepository = {
    * \\"http://api.github.com/repos/octocat/Hello-World/merges\\"
    */
   merges_url: string;
-  mirror_url?: string;
+  mirror_url?: string | null;
 
   /**
    *
    * @example
    * \\"2011-01-26T19:14:43Z\\"
    */
-  updated_at?: string;
+  updated_at?: string | null;
   visibility?: string;
 
   /**
@@ -85566,7 +85568,7 @@ export type MinimalRepository = {
    * @example
    * \\"This your first repo!\\"
    */
-  description: string;
+  description: string | null;
   forks_count?: number;
   is_template?: boolean;
 
@@ -85777,7 +85779,7 @@ export type CodeOfConduct = {
    * \\"Contributor Covenant\\"
    */
   name: string;
-  html_url: string;
+  html_url: string | null;
 };
 
 /**
@@ -85876,7 +85878,7 @@ export type Repository = {
    * @example
    * \\"https://github.com\\"
    */
-  homepage: string;
+  homepage: string | null;
 
   /**
    *
@@ -85891,7 +85893,7 @@ export type Repository = {
    * \\"http://api.github.com/repos/octocat/Hello-World/keys{/key_id}\\"
    */
   keys_url: string;
-  language: string;
+  language: string | null;
 
   /**
    *
@@ -85949,7 +85951,7 @@ export type Repository = {
    * @example
    * \\"2011-01-26T19:06:43Z\\"
    */
-  pushed_at: string;
+  pushed_at: string | null;
 
   /**
    *
@@ -85970,7 +85972,7 @@ export type Repository = {
    * @example
    * \\"2011-01-26T19:01:12Z\\"
    */
-  created_at: string;
+  created_at: string | null;
 
   /**
    *
@@ -86013,7 +86015,7 @@ export type Repository = {
    * @example
    * \\"git:git.example.com/octocat/Hello-World\\"
    */
-  mirror_url: string;
+  mirror_url: string | null;
 
   /**
    *
@@ -86027,7 +86029,7 @@ export type Repository = {
    * @example
    * \\"2011-01-26T19:14:43Z\\"
    */
-  updated_at: string;
+  updated_at: string | null;
 
   /**
    * The repository visibility: public, private, or internal.
@@ -86060,7 +86062,7 @@ export type Repository = {
    * @example
    * \\"This your first repo!\\"
    */
-  description: string;
+  description: string | null;
 
   /**
    *
@@ -86435,7 +86437,7 @@ export type Repository = {
     allow_update_branch?: boolean;
     delete_branch_on_merge?: boolean;
     use_squash_pr_title_as_default?: boolean;
-  };
+  } | null;
 
   /**
    * Whether to delete head branches when pull requests are merged
@@ -86468,7 +86470,7 @@ export type SimpleUser = {
    * \\"https://api.github.com/users/octocat\\"
    */
   url: string;
-  name?: string;
+  name?: string | null;
 
   /**
    *
@@ -86476,7 +86478,7 @@ export type SimpleUser = {
    * \\"User\\"
    */
   type: string;
-  email?: string;
+  email?: string | null;
 
   /**
    *
@@ -86540,7 +86542,7 @@ export type SimpleUser = {
    * @example
    * \\"41d064eb2195891e12d0413f63227ea7\\"
    */
-  gravatar_id: string;
+  gravatar_id: string | null;
 
   /**
    *
@@ -86601,7 +86603,7 @@ export type LicenseSimple = {
    * @example
    * \\"https://api.github.com/licenses/mit\\"
    */
-  url: string;
+  url: string | null;
 
   /**
    *
@@ -86622,7 +86624,7 @@ export type LicenseSimple = {
    * @example
    * \\"MIT\\"
    */
-  spdx_id: string;
+  spdx_id: string | null;
   html_url?: string;
 };
 

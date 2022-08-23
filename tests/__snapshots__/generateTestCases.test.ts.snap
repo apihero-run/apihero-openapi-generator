@@ -63,7 +63,7 @@ export type Email = {
    * @example
    * \\"public\\"
    */
-  visibility: string;
+  visibility: string | null;
 };
 ",
   "users.ts" => "import { Email, ApiHeroEndpoint } from \\"./@types\\";
@@ -192,7 +192,7 @@ export type Label = {
    * @example
    * \\"Something isn't working\\"
    */
-  description: string;
+  description: string | null;
 };
 ",
   "issues.ts" => "import { Label, ApiHeroEndpoint } from \\"./@types\\";
@@ -452,7 +452,7 @@ export type Integration = {
    * @example
    * \\"The description of the app.\\"
    */
-  description: string;
+  description: string | null;
 
   /**
    * The set of permissions for the GitHub app
@@ -486,7 +486,7 @@ export type Integration = {
    * @example
    * \\"\\\\\\"6fba8f2fc8a7e8f2cca5577eddd82ca7586b3b6b\\\\\\"\\"
    */
-  webhook_secret?: string;
+  webhook_secret?: string | null;
 
   /**
    * The number of installations associated with the GitHub app
@@ -514,7 +514,7 @@ export type SimpleUser = {
    * \\"https://api.github.com/users/octocat\\"
    */
   url: string;
-  name?: string;
+  name?: string | null;
 
   /**
    *
@@ -522,7 +522,7 @@ export type SimpleUser = {
    * \\"User\\"
    */
   type: string;
-  email?: string;
+  email?: string | null;
 
   /**
    *
@@ -586,7 +586,7 @@ export type SimpleUser = {
    * @example
    * \\"41d064eb2195891e12d0413f63227ea7\\"
    */
-  gravatar_id: string;
+  gravatar_id: string | null;
 
   /**
    *
@@ -655,6 +655,94 @@ export * from \\"./@types\\";
 }
 `;
 
+exports[`getThreadSubscriptionForAuthenticatedUser 1`] = `
+Map {
+  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+  id: string;
+  [key: string]: string | number;
+};
+
+/**
+ * Basic Error
+ */
+export type BasicError = {
+  url?: string;
+  status?: string;
+  message?: string;
+  documentation_url?: string;
+};
+
+/**
+ * Thread Subscription
+ * @example @see https://apihero.run/integrations/getThreadSubscriptionForAuthenticatedUser/examples/thread-subscription
+ */
+export type ThreadSubscription = {
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/notifications/threads/1/subscription\\"
+   */
+  url: string;
+  reason: string | null;
+  ignored: boolean;
+
+  /**
+   *
+   * @example
+   * \\"2012-10-06T21:34:12Z\\"
+   */
+  created_at: string | null;
+
+  /**
+   *
+   * @example
+   * true
+   */
+  subscribed: boolean;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/notifications/threads/1\\"
+   */
+  thread_url?: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/repos/1\\"
+   */
+  repository_url?: string;
+};
+",
+  "activity.ts" => "import { ThreadSubscription, ApiHeroEndpoint } from \\"./@types\\";
+
+/** 
+* @see https://docs.github.com/rest/reference/activity#get-a-thread-subscription-for-the-authenticated-user
+
+
+* Get a thread subscription for the authenticated user
+* This checks to see if the current user is subscribed to a thread. You can also [get a repository subscription](https://docs.github.com/rest/reference/activity#get-a-repository-subscription).
+ * 
+ * Note that subscriptions are only generated if a user is participating in a conversation--for example, they've replied to the thread, were **@mentioned**, or manually subscribe to a thread.
+* @param threadId - The unique identifier of the pull request thread. 
+*/
+export const getThreadSubscriptionForAuthenticatedUser: ApiHeroEndpoint<
+  { threadId: number },
+  ThreadSubscription
+> = {
+  id: \\"activity/get-thread-subscription-for-authenticated-user\\",
+};
+",
+  "index.ts" => "import * as activity from \\"./activity\\";
+
+export { activity };
+
+export * from \\"./@types\\";
+",
+}
+`;
+
 exports[`listPublicEmails 1`] = `
 Map {
   "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
@@ -692,7 +780,7 @@ export type Email = {
    * @example
    * \\"public\\"
    */
-  visibility: string;
+  visibility: string | null;
 };
 
 /**
@@ -848,7 +936,7 @@ export type SimpleUser = {
    * \\"https://api.github.com/users/octocat\\"
    */
   url: string;
-  name?: string;
+  name?: string | null;
 
   /**
    *
@@ -856,7 +944,7 @@ export type SimpleUser = {
    * \\"User\\"
    */
   type: string;
-  email?: string;
+  email?: string | null;
 
   /**
    *
@@ -920,7 +1008,7 @@ export type SimpleUser = {
    * @example
    * \\"41d064eb2195891e12d0413f63227ea7\\"
    */
-  gravatar_id: string;
+  gravatar_id: string | null;
 
   /**
    *
@@ -1060,7 +1148,7 @@ export type Repository = {
    * @example
    * \\"https://github.com\\"
    */
-  homepage: string;
+  homepage: string | null;
 
   /**
    *
@@ -1075,7 +1163,7 @@ export type Repository = {
    * \\"http://api.github.com/repos/octocat/Hello-World/keys{/key_id}\\"
    */
   keys_url: string;
-  language: string;
+  language: string | null;
 
   /**
    *
@@ -1133,7 +1221,7 @@ export type Repository = {
    * @example
    * \\"2011-01-26T19:06:43Z\\"
    */
-  pushed_at: string;
+  pushed_at: string | null;
 
   /**
    *
@@ -1154,7 +1242,7 @@ export type Repository = {
    * @example
    * \\"2011-01-26T19:01:12Z\\"
    */
-  created_at: string;
+  created_at: string | null;
 
   /**
    *
@@ -1197,7 +1285,7 @@ export type Repository = {
    * @example
    * \\"git:git.example.com/octocat/Hello-World\\"
    */
-  mirror_url: string;
+  mirror_url: string | null;
 
   /**
    *
@@ -1211,7 +1299,7 @@ export type Repository = {
    * @example
    * \\"2011-01-26T19:14:43Z\\"
    */
-  updated_at: string;
+  updated_at: string | null;
 
   /**
    * The repository visibility: public, private, or internal.
@@ -1244,7 +1332,7 @@ export type Repository = {
    * @example
    * \\"This your first repo!\\"
    */
-  description: string;
+  description: string | null;
 
   /**
    *
@@ -1619,7 +1707,7 @@ export type Repository = {
     allow_update_branch?: boolean;
     delete_branch_on_merge?: boolean;
     use_squash_pr_title_as_default?: boolean;
-  };
+  } | null;
 
   /**
    * Whether to delete head branches when pull requests are merged
@@ -1651,7 +1739,7 @@ export type LicenseSimple = {
    * @example
    * \\"https://api.github.com/licenses/mit\\"
    */
-  url: string;
+  url: string | null;
 
   /**
    *
@@ -1672,7 +1760,7 @@ export type LicenseSimple = {
    * @example
    * \\"MIT\\"
    */
-  spdx_id: string;
+  spdx_id: string | null;
   html_url?: string;
 };
 ",

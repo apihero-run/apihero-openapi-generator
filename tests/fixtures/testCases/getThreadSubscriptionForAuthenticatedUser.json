@@ -1,0 +1,208 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "version": "1.1.4"
+  },
+  "tags": [
+    {
+      "name": "activity",
+      "description": "Activity APIs provide access to notifications, subscriptions, and timelines."
+    }
+  ],
+  "paths": {
+    "/notifications/threads/{thread_id}/subscription": {
+      "get": {
+        "operationId": "activity/get-thread-subscription-for-authenticated-user",
+        "summary": "Get a thread subscription for the authenticated user",
+        "description": "This checks to see if the current user is subscribed to a thread. You can also [get a repository subscription](https://docs.github.com/rest/reference/activity#get-a-repository-subscription).\n\nNote that subscriptions are only generated if a user is participating in a conversation--for example, they've replied to the thread, were **@mentioned**, or manually subscribe to a thread.",
+        "deprecated": false,
+        "externalDocs": {
+          "url": "https://docs.github.com/rest/reference/activity#get-a-thread-subscription-for-the-authenticated-user",
+          "description": "API method documentation"
+        },
+        "tags": [
+          "activity"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/thread-id",
+            "description": "The unique identifier of the pull request thread."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/thread-subscription"
+                },
+                "examples": {
+                  "default": {
+                    "$ref": "#/components/examples/thread-subscription"
+                  }
+                }
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/not_modified",
+            "description": "Not modified"
+          },
+          "401": {
+            "$ref": "#/components/responses/requires_authentication",
+            "description": "Requires authentication"
+          },
+          "403": {
+            "$ref": "#/components/responses/forbidden",
+            "description": "Forbidden"
+          }
+        },
+        "x-github": {
+          "category": "activity",
+          "subcategory": "notifications",
+          "githubCloudOnly": false,
+          "enabledForGitHubApps": false
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "basic-error": {
+        "type": "object",
+        "title": "Basic Error",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "documentation_url": {
+            "type": "string"
+          }
+        },
+        "description": "Basic Error"
+      },
+      "thread-subscription": {
+        "type": "object",
+        "title": "Thread Subscription",
+        "required": [
+          "created_at",
+          "ignored",
+          "reason",
+          "url",
+          "subscribed"
+        ],
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://api.github.com/notifications/threads/1/subscription"
+            ]
+          },
+          "reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ignored": {
+            "type": "boolean"
+          },
+          "created_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time",
+            "examples": [
+              "2012-10-06T21:34:12Z"
+            ]
+          },
+          "subscribed": {
+            "type": "boolean",
+            "examples": [
+              true
+            ]
+          },
+          "thread_url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://api.github.com/notifications/threads/1"
+            ]
+          },
+          "repository_url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://api.github.com/repos/1"
+            ]
+          }
+        },
+        "description": "Thread Subscription"
+      }
+    },
+    "responses": {
+      "not_modified": {
+        "description": "Not modified"
+      },
+      "requires_authentication": {
+        "description": "Requires authentication",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/basic-error"
+            }
+          }
+        }
+      },
+      "forbidden": {
+        "description": "Forbidden",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/basic-error"
+            }
+          }
+        }
+      }
+    },
+    "examples": {
+      "thread-subscription": {
+        "value": {
+          "url": "https://api.github.com/notifications/threads/1/subscription",
+          "reason": null,
+          "ignored": false,
+          "created_at": "2012-10-06T21:34:12Z",
+          "subscribed": true,
+          "thread_url": "https://api.github.com/notifications/threads/1"
+        }
+      }
+    },
+    "parameters": {
+      "thread-id": {
+        "name": "thread_id",
+        "in": "path",
+        "description": "The unique identifier of the pull request thread.",
+        "required": true,
+        "schema": {
+          "type": "integer"
+        },
+        "deprecated": false,
+        "allowEmptyValue": false,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false
+      }
+    },
+    "headers": {},
+    "requestBodies": {}
+  }
+}
