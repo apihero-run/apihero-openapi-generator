@@ -1,5 +1,5 @@
 import { OpenAPI } from "openapi-types";
-import { generateClientFiles } from "../src";
+import { generateClientFiles, GenerateClientOptions } from "../src";
 import { readFile } from "fs/promises";
 
 async function loadTestCase(testCaseId: string): Promise<OpenAPI.Document> {
@@ -11,7 +11,9 @@ async function loadTestCase(testCaseId: string): Promise<OpenAPI.Document> {
 async function generateTestCase(testCaseId: string): Promise<Map<string, string>> {
   const doc = await loadTestCase(testCaseId);
 
-  const code = generateClientFiles(doc, testCaseId);
+  const code = generateClientFiles(doc, testCaseId, {
+    generation: { inferRequestBodyParamName: true },
+  });
 
   return code;
 }
@@ -42,4 +44,8 @@ test("createSelfHostedRunnerGroupForOrg", async () => {
 
 test("getThreadSubscriptionForAuthenticatedUser", async () => {
   expect(await generateTestCase("getThreadSubscriptionForAuthenticatedUser")).toMatchSnapshot();
+});
+
+test("createForAuthenticatedUser", async () => {
+  expect(await generateTestCase("createForAuthenticatedUser")).toMatchSnapshot();
 });

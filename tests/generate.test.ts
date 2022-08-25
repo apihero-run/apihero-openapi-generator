@@ -46,6 +46,16 @@ test("v3_1/github.json", async () => {
   expect(code).toMatchSnapshot();
 });
 
+test("v3_1/github.json with inferRequestBodyName", async () => {
+  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3_1/github.json");
+
+  const code = generateClientFiles(doc, "github/v3.1", {
+    generation: { inferRequestBodyParamName: true },
+  });
+
+  expect(code).toMatchSnapshot();
+});
+
 test("v3_1/github.json generateOperationCode repos/get", async () => {
   const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3_1/github.json");
 

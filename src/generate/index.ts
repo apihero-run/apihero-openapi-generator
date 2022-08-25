@@ -1,9 +1,11 @@
 import { camelCase } from "camel-case";
+import { singular } from "pluralize";
 import { Client, Model, Operation, OperationParameter, Service } from "../@types";
 
 export type GenerationOptions = {
   noParamsType?: string;
   bodyParamName?: string;
+  inferRequestBodyParamName?: boolean;
 };
 
 export type GenerateClientOptions = {
@@ -198,20 +200,54 @@ class ClientGenerator {
     }
 
     return `{ ${operation.parameters
-      .map((param) => this.generateOperationParameter(param))
+      .map((param) => this.generateOperationParameter(operation, param))
       .join("; ")} }`;
   }
 
-  private generateOperationParameter(parameter: Operation["parameters"][0]): string {
-    return `${this.generateOperationParameterName(parameter)}${
+  private generateOperationParameter(
+    operation: Operation,
+    parameter: Operation["parameters"][0],
+  ): string {
+    return `${this.generateOperationParameterName(operation, parameter)}${
       parameter.isRequired ? "" : "?"
     }: ${this.generateType(parameter)}`;
   }
 
-  private generateOperationParameterName(parameter: Operation["parameters"][0]): string {
-    return parameter.in === "body"
-      ? this.options?.generation?.bodyParamName ?? parameter.name
-      : parameter.name;
+  private generateOperationParameterName(
+    operation: Operation,
+    parameter: Operation["parameters"][0],
+  ): string {
+    if (parameter.in === "body") {
+      if (this.options?.generation?.inferRequestBodyParamName) {
+        switch (operation.method) {
+          case "POST":
+          case "DELETE": {
+            const resourceName = operation.path.split("/").pop();
+
+            if (resourceName) {
+              return camelCase(singular(resourceName));
+            }
+
+            break;
+          }
+          case "PATCH":
+          case "PUT": {
+            // Get the second to last path segment
+            const resourceName = operation.path.split("/")[operation.path.split("/").length - 2];
+
+            if (resourceName) {
+              return camelCase(singular(resourceName));
+            }
+
+            break;
+          }
+        }
+      }
+
+      return this.options?.generation?.bodyParamName ?? parameter.name;
+    }
+
+    return parameter.name;
   }
 
   private generateOperationParameterComments(
