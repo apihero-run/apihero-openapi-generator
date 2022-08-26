@@ -1,0 +1,423 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "version": "1.1.4"
+  },
+  "tags": [
+    {
+      "name": "teams",
+      "description": "Interact with GitHub Teams."
+    }
+  ],
+  "paths": {
+    "/orgs/{org}/teams/{team_slug}/projects/{project_id}": {
+      "get": {
+        "operationId": "teams/check-permissions-for-project-in-org",
+        "summary": "Check team permissions for a project",
+        "description": "Checks whether a team has `read`, `write`, or `admin` permissions for an organization project. The response includes projects inherited from a parent team.\n\n**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/projects/{project_id}`.",
+        "deprecated": false,
+        "externalDocs": {
+          "url": "https://docs.github.com/rest/reference/teams#check-team-permissions-for-a-project",
+          "description": "API method documentation"
+        },
+        "tags": [
+          "teams"
+        ],
+        "security": [
+          {
+            "installationToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/org",
+            "description": "The organization name. The name is not case sensitive."
+          },
+          {
+            "$ref": "#/components/parameters/project-id",
+            "description": "The unique identifier of the project."
+          },
+          {
+            "$ref": "#/components/parameters/team-slug",
+            "description": "The slug of the team name."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/team-project"
+                },
+                "examples": {
+                  "default": {
+                    "$ref": "#/components/examples/team-project"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found if project is not managed by this team"
+          }
+        },
+        "x-github": {
+          "category": "teams",
+          "subcategory": null,
+          "githubCloudOnly": false,
+          "enabledForGitHubApps": true
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "team-project": {
+        "type": "object",
+        "title": "Team Project",
+        "required": [
+          "owner_url",
+          "url",
+          "html_url",
+          "columns_url",
+          "id",
+          "node_id",
+          "name",
+          "body",
+          "number",
+          "state",
+          "creator",
+          "created_at",
+          "updated_at",
+          "permissions"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "url": {
+            "type": "string"
+          },
+          "body": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "number": {
+            "type": "integer"
+          },
+          "creator": {
+            "$ref": "#/components/schemas/simple-user"
+          },
+          "node_id": {
+            "type": "string"
+          },
+          "private": {
+            "type": "boolean",
+            "description": "Whether the project is private or not. Only present when owner is an organization."
+          },
+          "html_url": {
+            "type": "string"
+          },
+          "owner_url": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string"
+          },
+          "columns_url": {
+            "type": "string"
+          },
+          "permissions": {
+            "type": "object",
+            "required": [
+              "read",
+              "write",
+              "admin"
+            ],
+            "properties": {
+              "read": {
+                "type": "boolean"
+              },
+              "admin": {
+                "type": "boolean"
+              },
+              "write": {
+                "type": "boolean"
+              }
+            }
+          },
+          "organization_permission": {
+            "type": "string",
+            "description": "The organization permission for this project. Only present when owner is an organization."
+          }
+        },
+        "description": "A team's access to a project."
+      },
+      "simple-user": {
+        "type": "object",
+        "title": "Simple User",
+        "required": [
+          "avatar_url",
+          "events_url",
+          "followers_url",
+          "following_url",
+          "gists_url",
+          "gravatar_id",
+          "html_url",
+          "id",
+          "node_id",
+          "login",
+          "organizations_url",
+          "received_events_url",
+          "repos_url",
+          "site_admin",
+          "starred_url",
+          "subscriptions_url",
+          "type",
+          "url"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "examples": [
+              1
+            ]
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://api.github.com/users/octocat"
+            ]
+          },
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "examples": [
+              "User"
+            ]
+          },
+          "email": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "login": {
+            "type": "string",
+            "examples": [
+              "octocat"
+            ]
+          },
+          "node_id": {
+            "type": "string",
+            "examples": [
+              "MDQ6VXNlcjE="
+            ]
+          },
+          "html_url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://github.com/octocat"
+            ]
+          },
+          "gists_url": {
+            "type": "string",
+            "examples": [
+              "https://api.github.com/users/octocat/gists{/gist_id}"
+            ]
+          },
+          "repos_url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://api.github.com/users/octocat/repos"
+            ]
+          },
+          "avatar_url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://github.com/images/error/octocat_happy.gif"
+            ]
+          },
+          "events_url": {
+            "type": "string",
+            "examples": [
+              "https://api.github.com/users/octocat/events{/privacy}"
+            ]
+          },
+          "site_admin": {
+            "type": "boolean"
+          },
+          "starred_at": {
+            "type": "string",
+            "examples": [
+              "\"2020-07-09T00:17:55Z\""
+            ]
+          },
+          "gravatar_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "examples": [
+              "41d064eb2195891e12d0413f63227ea7"
+            ]
+          },
+          "starred_url": {
+            "type": "string",
+            "examples": [
+              "https://api.github.com/users/octocat/starred{/owner}{/repo}"
+            ]
+          },
+          "followers_url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://api.github.com/users/octocat/followers"
+            ]
+          },
+          "following_url": {
+            "type": "string",
+            "examples": [
+              "https://api.github.com/users/octocat/following{/other_user}"
+            ]
+          },
+          "organizations_url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://api.github.com/users/octocat/orgs"
+            ]
+          },
+          "subscriptions_url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://api.github.com/users/octocat/subscriptions"
+            ]
+          },
+          "received_events_url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://api.github.com/users/octocat/received_events"
+            ]
+          }
+        },
+        "description": "Simple User"
+      }
+    },
+    "responses": {},
+    "examples": {
+      "team-project": {
+        "value": {
+          "id": 1002605,
+          "url": "https://api.github.com/projects/1002605",
+          "body": "High-level roadmap for the upcoming year.",
+          "name": "Organization Roadmap",
+          "state": "open",
+          "number": 1,
+          "creator": {
+            "id": 1,
+            "url": "https://api.github.com/users/octocat",
+            "type": "User",
+            "login": "octocat",
+            "node_id": "MDQ6VXNlcjE=",
+            "html_url": "https://github.com/octocat",
+            "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+            "repos_url": "https://api.github.com/users/octocat/repos",
+            "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+            "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+            "site_admin": false,
+            "gravatar_id": "",
+            "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+            "followers_url": "https://api.github.com/users/octocat/followers",
+            "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+            "organizations_url": "https://api.github.com/users/octocat/orgs",
+            "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+            "received_events_url": "https://api.github.com/users/octocat/received_events"
+          },
+          "node_id": "MDc6UHJvamVjdDEwMDI2MDU=",
+          "private": false,
+          "html_url": "https://github.com/orgs/api-playground/projects/1",
+          "owner_url": "https://api.github.com/orgs/octocat",
+          "created_at": "2011-04-11T20:09:31Z",
+          "updated_at": "2014-03-04T18:58:10Z",
+          "columns_url": "https://api.github.com/projects/1002605/columns",
+          "permissions": {
+            "read": true,
+            "admin": false,
+            "write": true
+          },
+          "organization_permission": "write"
+        }
+      }
+    },
+    "parameters": {
+      "org": {
+        "name": "org",
+        "in": "path",
+        "description": "The organization name. The name is not case sensitive.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "deprecated": false,
+        "allowEmptyValue": false,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false
+      },
+      "project-id": {
+        "name": "project_id",
+        "in": "path",
+        "description": "The unique identifier of the project.",
+        "required": true,
+        "schema": {
+          "type": "integer"
+        },
+        "deprecated": false,
+        "allowEmptyValue": false,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false
+      },
+      "team-slug": {
+        "name": "team_slug",
+        "in": "path",
+        "description": "The slug of the team name.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "deprecated": false,
+        "allowEmptyValue": false,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false
+      }
+    },
+    "headers": {},
+    "requestBodies": {}
+  }
+}

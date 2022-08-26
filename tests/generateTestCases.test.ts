@@ -53,3 +53,11 @@ test("createForAuthenticatedUser", async () => {
 test("createCommitStatus", async () => {
   expect(await generateTestCase("createCommitStatus")).toMatchSnapshot();
 });
+
+test("updateReference", async () => {
+  expect(await generateTestCase("updateReference")).toMatchSnapshot();
+});
+
+test("checkTeamPermissions", async () => {
+  expect(await generateTestCase("checkTeamPermissions")).toMatchSnapshot();
+});

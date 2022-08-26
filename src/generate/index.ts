@@ -263,7 +263,11 @@ class ClientGenerator {
           }
 
           if (resourceName) {
-            return camelCase(singular(resourceName));
+            return this.ensureUniqueNameWithFallbacks(
+              operation,
+              camelCase(singular(resourceName)),
+              ["payload", "data", "body", "request"],
+            );
           }
 
           break;
@@ -274,7 +278,11 @@ class ClientGenerator {
           const resourceName = operation.path.split("/")[operation.path.split("/").length - 2];
 
           if (resourceName) {
-            return camelCase(singular(resourceName));
+            return this.ensureUniqueNameWithFallbacks(
+              operation,
+              camelCase(singular(resourceName)),
+              ["payload", "data", "body", "request"],
+            );
           }
 
           break;
@@ -283,6 +291,24 @@ class ClientGenerator {
     }
 
     return this.options?.generation?.bodyParamName ?? parameter.name;
+  }
+
+  private ensureUniqueNameWithFallbacks(
+    operation: Operation,
+    name: string,
+    fallbacks: string[],
+  ): string {
+    const otherParamNames = operation.parameters.filter((p) => p.in !== "body").map((p) => p.name);
+
+    if (otherParamNames.includes(name)) {
+      const fallback = fallbacks.find((f) => !otherParamNames.includes(f));
+
+      if (fallback) {
+        return fallback;
+      }
+    }
+
+    return name;
   }
 
   private generateOperationParameterComments(

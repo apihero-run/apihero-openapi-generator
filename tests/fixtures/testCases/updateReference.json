@@ -1,0 +1,296 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "version": "1.1.4"
+  },
+  "tags": [
+    {
+      "name": "git",
+      "description": "Raw Git functionality."
+    }
+  ],
+  "paths": {
+    "/repos/{owner}/{repo}/git/refs/{ref}": {
+      "patch": {
+        "operationId": "git/update-ref",
+        "summary": "Update a reference",
+        "description": "",
+        "deprecated": false,
+        "externalDocs": {
+          "url": "https://docs.github.com/rest/reference/git#update-a-reference",
+          "description": "API method documentation"
+        },
+        "tags": [
+          "git"
+        ],
+        "security": [
+          {
+            "installationToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/repo",
+            "description": "The name of the repository. The name is not case sensitive."
+          },
+          {
+            "name": "ref",
+            "in": "path",
+            "description": "ref parameter",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false,
+            "allowEmptyValue": false,
+            "style": "simple",
+            "explode": false,
+            "allowReserved": false
+          },
+          {
+            "$ref": "#/components/parameters/owner",
+            "description": "The account owner of the repository. The name is not case sensitive."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/git-ref"
+                },
+                "examples": {
+                  "default": {
+                    "$ref": "#/components/examples/git-ref"
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "$ref": "#/components/responses/validation_failed",
+            "description": "Validation failed"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "sha"
+                ],
+                "properties": {
+                  "sha": {
+                    "type": "string",
+                    "description": "The SHA1 value to set this reference to"
+                  },
+                  "force": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Indicates whether to force the update or to make sure the update is a fast-forward update. Leaving this out or setting it to `false` will make sure you're not overwriting work."
+                  }
+                }
+              },
+              "examples": {
+                "default": {
+                  "value": {
+                    "sha": "aa218f56b14c9653891f9e74264a383fa43fefbd",
+                    "force": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-github": {
+          "category": "git",
+          "subcategory": "refs",
+          "githubCloudOnly": false,
+          "enabledForGitHubApps": true
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "validation-error": {
+        "type": "object",
+        "title": "Validation Error",
+        "required": [
+          "message",
+          "documentation_url"
+        ],
+        "properties": {
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "code"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "field": {
+                  "type": "string"
+                },
+                "index": {
+                  "type": "integer"
+                },
+                "value": {
+                  "oneOf": [
+                    {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    {
+                      "type": [
+                        "integer",
+                        "null"
+                      ]
+                    },
+                    {
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  ]
+                },
+                "message": {
+                  "type": "string"
+                },
+                "resource": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "message": {
+            "type": "string"
+          },
+          "documentation_url": {
+            "type": "string"
+          }
+        },
+        "description": "Validation Error"
+      },
+      "git-ref": {
+        "type": "object",
+        "title": "Git Reference",
+        "required": [
+          "ref",
+          "node_id",
+          "url",
+          "object"
+        ],
+        "properties": {
+          "ref": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "object": {
+            "type": "object",
+            "required": [
+              "type",
+              "sha",
+              "url"
+            ],
+            "properties": {
+              "sha": {
+                "type": "string",
+                "examples": [
+                  "7638417db6d59f3c431d3e1f261cc637155684cd"
+                ],
+                "maxLength": 40,
+                "minLength": 40,
+                "description": "SHA for the reference"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          },
+          "node_id": {
+            "type": "string"
+          }
+        },
+        "description": "Git references within a repository"
+      }
+    },
+    "responses": {
+      "validation_failed": {
+        "description": "Validation failed",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/validation-error"
+            }
+          }
+        }
+      }
+    },
+    "examples": {
+      "git-ref": {
+        "value": {
+          "ref": "refs/heads/featureA",
+          "url": "https://api.github.com/repos/octocat/Hello-World/git/refs/heads/featureA",
+          "object": {
+            "sha": "aa218f56b14c9653891f9e74264a383fa43fefbd",
+            "url": "https://api.github.com/repos/octocat/Hello-World/git/commits/aa218f56b14c9653891f9e74264a383fa43fefbd",
+            "type": "commit"
+          },
+          "node_id": "MDM6UmVmcmVmcy9oZWFkcy9mZWF0dXJlQQ=="
+        }
+      }
+    },
+    "parameters": {
+      "repo": {
+        "name": "repo",
+        "in": "path",
+        "description": "The name of the repository. The name is not case sensitive.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "deprecated": false,
+        "allowEmptyValue": false,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false
+      },
+      "owner": {
+        "name": "owner",
+        "in": "path",
+        "description": "The account owner of the repository. The name is not case sensitive.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "deprecated": false,
+        "allowEmptyValue": false,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false
+      }
+    },
+    "headers": {},
+    "requestBodies": {}
+  }
+}

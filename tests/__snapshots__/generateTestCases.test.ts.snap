@@ -114,6 +114,228 @@ export const addEmailForAuthenticatedUser: ApiHeroEndpoint<
 }
 `;
 
+exports[`checkTeamPermissions 1`] = `
+Object {
+  "files": Object {
+    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+  id: string;
+  [key: string]: string | number;
+};
+
+/**
+ * A team's access to a project.
+ * @example @see https://apihero.run/integrations/checkTeamPermissions/examples/team-project
+ */
+export type TeamProject = {
+  id: number;
+  url: string;
+  body: string | null;
+  name: string;
+  state: string;
+  number: number;
+  creator: SimpleUser;
+  node_id: string;
+
+  /**
+   * Whether the project is private or not. Only present when owner is an organization.
+   */
+  private?: boolean;
+  html_url: string;
+  owner_url: string;
+  created_at: string;
+  updated_at: string;
+  columns_url: string;
+  permissions: {
+    read: boolean;
+    admin: boolean;
+    write: boolean;
+  };
+
+  /**
+   * The organization permission for this project. Only present when owner is an organization.
+   */
+  organization_permission?: string;
+};
+
+/**
+ * Simple User
+ */
+export type SimpleUser = {
+  /**
+   *
+   * @example
+   * 1
+   */
+  id: number;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat\\"
+   */
+  url: string;
+  name?: string | null;
+
+  /**
+   *
+   * @example
+   * \\"User\\"
+   */
+  type: string;
+  email?: string | null;
+
+  /**
+   *
+   * @example
+   * \\"octocat\\"
+   */
+  login: string;
+
+  /**
+   *
+   * @example
+   * \\"MDQ6VXNlcjE=\\"
+   */
+  node_id: string;
+
+  /**
+   *
+   * @example
+   * \\"https://github.com/octocat\\"
+   */
+  html_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/gists{/gist_id}\\"
+   */
+  gists_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/repos\\"
+   */
+  repos_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://github.com/images/error/octocat_happy.gif\\"
+   */
+  avatar_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/events{/privacy}\\"
+   */
+  events_url: string;
+  site_admin: boolean;
+
+  /**
+   *
+   * @example
+   * \\"\\\\\\"2020-07-09T00:17:55Z\\\\\\"\\"
+   */
+  starred_at?: string;
+
+  /**
+   *
+   * @example
+   * \\"41d064eb2195891e12d0413f63227ea7\\"
+   */
+  gravatar_id: string | null;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/starred{/owner}{/repo}\\"
+   */
+  starred_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/followers\\"
+   */
+  followers_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/following{/other_user}\\"
+   */
+  following_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/orgs\\"
+   */
+  organizations_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/subscriptions\\"
+   */
+  subscriptions_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/received_events\\"
+   */
+  received_events_url: string;
+};
+",
+    "index.ts": "import * as teams from \\"./teams\\";
+
+export { teams };
+
+export * from \\"./@types\\";
+",
+    "teams.ts": "import { TeamProject, ApiHeroEndpoint } from \\"./@types\\";
+
+/** 
+* @see https://docs.github.com/rest/reference/teams#check-team-permissions-for-a-project
+
+
+* Check team permissions for a project
+* Checks whether a team has \`read\`, \`write\`, or \`admin\` permissions for an organization project. The response includes projects inherited from a parent team.
+ * 
+ * **Note:** You can also specify a team by \`org_id\` and \`team_id\` using the route \`GET /organizations/{org_id}/team/{team_id}/projects/{project_id}\`.
+* @param org - The organization name. The name is not case sensitive.
+* @param projectId - The unique identifier of the project.
+* @param teamSlug - The slug of the team name. 
+*/
+export const checkPermissionsForProjectInOrg: ApiHeroEndpoint<
+  { org: string; projectId: number; teamSlug: string },
+  TeamProject
+> = {
+  id: \\"teams/check-permissions-for-project-in-org\\",
+};
+",
+  },
+  "mappings": Object {
+    "teams/check-permissions-for-project-in-org": Array [
+      Object {
+        "mappedName": "projectId",
+        "name": "project_id",
+        "type": "parameter",
+      },
+      Object {
+        "mappedName": "teamSlug",
+        "name": "team_slug",
+        "type": "parameter",
+      },
+    ],
+  },
+}
+`;
+
 exports[`createCommitStatus 1`] = `
 Object {
   "files": Object {
@@ -3859,6 +4081,102 @@ export const startForAuthenticatedUser: ApiHeroEndpoint<
     "migrations/start-for-authenticated-user": Array [
       Object {
         "mappedName": "migration",
+        "type": "requestBody",
+      },
+    ],
+  },
+}
+`;
+
+exports[`updateReference 1`] = `
+Object {
+  "files": Object {
+    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+  id: string;
+  [key: string]: string | number;
+};
+
+/**
+ * Validation Error
+ */
+export type ValidationError = {
+  errors?: Array<{
+    code: string;
+    field?: string;
+    index?: number;
+    value?: string | null | number | null | Array<string> | null;
+    message?: string;
+    resource?: string;
+  }>;
+  message: string;
+  documentation_url: string;
+};
+
+/**
+ * Git references within a repository
+ * @example @see https://apihero.run/integrations/updateReference/examples/git-ref
+ */
+export type GitRef = {
+  ref: string;
+  url: string;
+  object: {
+    /**
+     * SHA for the reference
+     *
+     * @example
+     * \\"7638417db6d59f3c431d3e1f261cc637155684cd\\"
+     */
+    sha: string;
+    url: string;
+    type: string;
+  };
+  node_id: string;
+};
+",
+    "git.ts": "import { GitRef, ApiHeroEndpoint } from \\"./@types\\";
+
+/** 
+* @see https://docs.github.com/rest/reference/git#update-a-reference
+
+
+* Update a reference
+* @param repo - The name of the repository. The name is not case sensitive.
+* @param ref - ref parameter
+* @param owner - The account owner of the repository. The name is not case sensitive. 
+*/
+export const updateRef: ApiHeroEndpoint<
+  {
+    repo: string;
+    ref: string;
+    owner: string;
+    payload: {
+      /**
+       * The SHA1 value to set this reference to
+       */
+      sha: string;
+
+      /**
+       * Indicates whether to force the update or to make sure the update is a fast-forward update. Leaving this out or setting it to \`false\` will make sure you're not overwriting work.
+       */
+      force?: boolean;
+    };
+  },
+  GitRef
+> = {
+  id: \\"git/update-ref\\",
+};
+",
+    "index.ts": "import * as git from \\"./git\\";
+
+export { git };
+
+export * from \\"./@types\\";
+",
+  },
+  "mappings": Object {
+    "git/update-ref": Array [
+      Object {
+        "mappedName": "payload",
         "type": "requestBody",
       },
     ],
