@@ -1,4 +1,4 @@
-import { generateClientFiles, generatePackage } from "../src";
+import { generateClientFiles } from "../src";
 import { OpenAPI } from "openapi-types";
 import { readFile } from "fs/promises";
 
@@ -67,23 +67,4 @@ test("v3_1/github.json with inferRequestBodyName", async () => {
 
   expect(files).toMatchSnapshot();
   expect(mappings).toMatchSnapshot();
-});
-
-test("generatePackage", async () => {
-  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3/petstore.json");
-
-  await generatePackage(doc, "./tests/tmp/packages/petstore", {
-    name: "petstore",
-    version: { major: 1, minor: 0, patch: 0 },
-  });
-});
-
-test("generatePackage with a different noParamsType", async () => {
-  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3/petstore.json");
-
-  await generatePackage(doc, "./tests/tmp/packages/petstore-no-params", {
-    name: "petstore",
-    version: { major: 1, minor: 0, patch: 0 },
-    generation: { noParamsType: "void" },
-  });
 });
