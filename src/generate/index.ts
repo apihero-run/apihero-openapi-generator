@@ -568,7 +568,7 @@ ${model.additionalProperties ? this.generateAdditionalProperties(model.additiona
   }
 
   private generateAdditionalProperties(model: Model): string {
-    return `\n  [key: string]: ${this.generateType(model)}`;
+    return `\n  [key: string]: ${this.generateType(model)} | undefined;`;
   }
 
   private generateModelProperty(property: Model, parent?: Model): string {
