@@ -1,0 +1,449 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "version": "1.1.4"
+  },
+  "tags": [
+    {
+      "name": "repos",
+      "description": "Interact with GitHub Repos."
+    }
+  ],
+  "paths": {
+    "/repos/{owner}/{repo}/statuses/{sha}": {
+      "post": {
+        "operationId": "repos/create-commit-status",
+        "summary": "Create a commit status",
+        "description": "Users with push access in a repository can create commit statuses for a given SHA.\n\nNote: there is a limit of 1000 statuses per `sha` and `context` within a repository. Attempts to create more than 1000 statuses will result in a validation error.",
+        "deprecated": false,
+        "externalDocs": {
+          "url": "https://docs.github.com/rest/reference/repos#create-a-commit-status",
+          "description": "API method documentation"
+        },
+        "tags": [
+          "repos"
+        ],
+        "security": [
+          {
+            "installationToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/repo",
+            "description": "The name of the repository. The name is not case sensitive."
+          },
+          {
+            "name": "sha",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false,
+            "allowEmptyValue": false,
+            "style": "simple",
+            "explode": false,
+            "allowReserved": false
+          },
+          {
+            "$ref": "#/components/parameters/owner",
+            "description": "The account owner of the repository. The name is not case sensitive."
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/status"
+                },
+                "examples": {
+                  "default": {
+                    "$ref": "#/components/examples/status"
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Location": {
+                "required": false,
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false,
+                "style": "simple",
+                "explode": false,
+                "example": "https://api.github.com/repos/octocat/Hello-World/statuses/6dcb09b5b57875f334f61aebed695e2e4193db5e"
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "state"
+                ],
+                "properties": {
+                  "state": {
+                    "enum": [
+                      "error",
+                      "failure",
+                      "pending",
+                      "success"
+                    ],
+                    "type": "string",
+                    "description": "The state of the status."
+                  },
+                  "context": {
+                    "type": "string",
+                    "default": "default",
+                    "description": "A string label to differentiate this status from the status of other systems. This field is case-insensitive."
+                  },
+                  "target_url": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "description": "The target URL to associate with this status. This URL will be linked from the GitHub UI to allow users to easily see the source of the status.  \nFor example, if your continuous integration system is posting build status, you would want to provide the deep link for the build output for this specific SHA:  \n`http://ci.example.com/user/repo/build/sha`"
+                  },
+                  "description": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "description": "A short description of the status."
+                  }
+                }
+              },
+              "examples": {
+                "default": {
+                  "value": {
+                    "state": "success",
+                    "context": "continuous-integration/jenkins",
+                    "target_url": "https://example.com/build/status",
+                    "description": "The build succeeded!"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-github": {
+          "category": "repos",
+          "subcategory": "statuses",
+          "githubCloudOnly": false,
+          "enabledForGitHubApps": true
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "status": {
+        "type": "object",
+        "title": "Status",
+        "required": [
+          "url",
+          "avatar_url",
+          "id",
+          "node_id",
+          "state",
+          "description",
+          "target_url",
+          "context",
+          "created_at",
+          "updated_at",
+          "creator"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "url": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "context": {
+            "type": "string"
+          },
+          "creator": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/simple-user"
+              }
+            ]
+          },
+          "node_id": {
+            "type": "string"
+          },
+          "avatar_url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "target_url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "updated_at": {
+            "type": "string"
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "description": "The status of a commit."
+      },
+      "simple-user": {
+        "type": "object",
+        "title": "Simple User",
+        "required": [
+          "avatar_url",
+          "events_url",
+          "followers_url",
+          "following_url",
+          "gists_url",
+          "gravatar_id",
+          "html_url",
+          "id",
+          "node_id",
+          "login",
+          "organizations_url",
+          "received_events_url",
+          "repos_url",
+          "site_admin",
+          "starred_url",
+          "subscriptions_url",
+          "type",
+          "url"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "examples": [
+              1
+            ]
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://api.github.com/users/octocat"
+            ]
+          },
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "examples": [
+              "User"
+            ]
+          },
+          "email": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "login": {
+            "type": "string",
+            "examples": [
+              "octocat"
+            ]
+          },
+          "node_id": {
+            "type": "string",
+            "examples": [
+              "MDQ6VXNlcjE="
+            ]
+          },
+          "html_url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://github.com/octocat"
+            ]
+          },
+          "gists_url": {
+            "type": "string",
+            "examples": [
+              "https://api.github.com/users/octocat/gists{/gist_id}"
+            ]
+          },
+          "repos_url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://api.github.com/users/octocat/repos"
+            ]
+          },
+          "avatar_url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://github.com/images/error/octocat_happy.gif"
+            ]
+          },
+          "events_url": {
+            "type": "string",
+            "examples": [
+              "https://api.github.com/users/octocat/events{/privacy}"
+            ]
+          },
+          "site_admin": {
+            "type": "boolean"
+          },
+          "starred_at": {
+            "type": "string",
+            "examples": [
+              "\"2020-07-09T00:17:55Z\""
+            ]
+          },
+          "gravatar_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "examples": [
+              "41d064eb2195891e12d0413f63227ea7"
+            ]
+          },
+          "starred_url": {
+            "type": "string",
+            "examples": [
+              "https://api.github.com/users/octocat/starred{/owner}{/repo}"
+            ]
+          },
+          "followers_url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://api.github.com/users/octocat/followers"
+            ]
+          },
+          "following_url": {
+            "type": "string",
+            "examples": [
+              "https://api.github.com/users/octocat/following{/other_user}"
+            ]
+          },
+          "organizations_url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://api.github.com/users/octocat/orgs"
+            ]
+          },
+          "subscriptions_url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://api.github.com/users/octocat/subscriptions"
+            ]
+          },
+          "received_events_url": {
+            "type": "string",
+            "format": "uri",
+            "examples": [
+              "https://api.github.com/users/octocat/received_events"
+            ]
+          }
+        },
+        "description": "Simple User"
+      }
+    },
+    "responses": {},
+    "examples": {
+      "status": {
+        "value": {
+          "id": 1,
+          "url": "https://api.github.com/repos/octocat/Hello-World/statuses/6dcb09b5b57875f334f61aebed695e2e4193db5e",
+          "state": "success",
+          "context": "continuous-integration/jenkins",
+          "creator": {
+            "id": 1,
+            "url": "https://api.github.com/users/octocat",
+            "type": "User",
+            "login": "octocat",
+            "node_id": "MDQ6VXNlcjE=",
+            "html_url": "https://github.com/octocat",
+            "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+            "repos_url": "https://api.github.com/users/octocat/repos",
+            "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+            "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+            "site_admin": false,
+            "gravatar_id": "",
+            "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+            "followers_url": "https://api.github.com/users/octocat/followers",
+            "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+            "organizations_url": "https://api.github.com/users/octocat/orgs",
+            "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+            "received_events_url": "https://api.github.com/users/octocat/received_events"
+          },
+          "node_id": "MDY6U3RhdHVzMQ==",
+          "avatar_url": "https://github.com/images/error/hubot_happy.gif",
+          "created_at": "2012-07-20T01:19:13Z",
+          "target_url": "https://ci.example.com/1000/output",
+          "updated_at": "2012-07-20T01:19:13Z",
+          "description": "Build has completed successfully"
+        }
+      }
+    },
+    "parameters": {
+      "repo": {
+        "name": "repo",
+        "in": "path",
+        "description": "The name of the repository. The name is not case sensitive.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "deprecated": false,
+        "allowEmptyValue": false,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false
+      },
+      "owner": {
+        "name": "owner",
+        "in": "path",
+        "description": "The account owner of the repository. The name is not case sensitive.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "deprecated": false,
+        "allowEmptyValue": false,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false
+      }
+    },
+    "headers": {},
+    "requestBodies": {}
+  }
+}

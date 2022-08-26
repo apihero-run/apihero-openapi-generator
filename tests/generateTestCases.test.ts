@@ -49,3 +49,7 @@ test("getThreadSubscriptionForAuthenticatedUser", async () => {
 test("createForAuthenticatedUser", async () => {
   expect(await generateTestCase("createForAuthenticatedUser")).toMatchSnapshot();
 });
+
+test("createCommitStatus", async () => {
+  expect(await generateTestCase("createCommitStatus")).toMatchSnapshot();
+});

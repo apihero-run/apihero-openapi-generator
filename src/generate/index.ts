@@ -256,7 +256,11 @@ class ClientGenerator {
       switch (operation.method) {
         case "POST":
         case "DELETE": {
-          const resourceName = operation.path.split("/").pop();
+          let resourceName = operation.path.split("/").pop();
+
+          if (resourceName?.includes("{")) {
+            resourceName = operation.path.split("/")[operation.path.split("/").length - 2];
+          }
 
           if (resourceName) {
             return camelCase(singular(resourceName));

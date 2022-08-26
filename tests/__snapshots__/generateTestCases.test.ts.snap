@@ -114,6 +114,233 @@ export const addEmailForAuthenticatedUser: ApiHeroEndpoint<
 }
 `;
 
+exports[`createCommitStatus 1`] = `
+Object {
+  "files": Object {
+    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+  id: string;
+  [key: string]: string | number;
+};
+
+/**
+ * The status of a commit.
+ * @example @see https://apihero.run/integrations/createCommitStatus/examples/status
+ */
+export type Status = {
+  id: number;
+  url: string;
+  state: string;
+  context: string;
+  creator: SimpleUser | null;
+  node_id: string;
+  avatar_url: string | null;
+  created_at: string;
+  target_url: string | null;
+  updated_at: string;
+  description: string | null;
+};
+
+/**
+ * Simple User
+ */
+export type SimpleUser = {
+  /**
+   *
+   * @example
+   * 1
+   */
+  id: number;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat\\"
+   */
+  url: string;
+  name?: string | null;
+
+  /**
+   *
+   * @example
+   * \\"User\\"
+   */
+  type: string;
+  email?: string | null;
+
+  /**
+   *
+   * @example
+   * \\"octocat\\"
+   */
+  login: string;
+
+  /**
+   *
+   * @example
+   * \\"MDQ6VXNlcjE=\\"
+   */
+  node_id: string;
+
+  /**
+   *
+   * @example
+   * \\"https://github.com/octocat\\"
+   */
+  html_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/gists{/gist_id}\\"
+   */
+  gists_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/repos\\"
+   */
+  repos_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://github.com/images/error/octocat_happy.gif\\"
+   */
+  avatar_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/events{/privacy}\\"
+   */
+  events_url: string;
+  site_admin: boolean;
+
+  /**
+   *
+   * @example
+   * \\"\\\\\\"2020-07-09T00:17:55Z\\\\\\"\\"
+   */
+  starred_at?: string;
+
+  /**
+   *
+   * @example
+   * \\"41d064eb2195891e12d0413f63227ea7\\"
+   */
+  gravatar_id: string | null;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/starred{/owner}{/repo}\\"
+   */
+  starred_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/followers\\"
+   */
+  followers_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/following{/other_user}\\"
+   */
+  following_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/orgs\\"
+   */
+  organizations_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/subscriptions\\"
+   */
+  subscriptions_url: string;
+
+  /**
+   *
+   * @example
+   * \\"https://api.github.com/users/octocat/received_events\\"
+   */
+  received_events_url: string;
+};
+",
+    "index.ts": "import * as repos from \\"./repos\\";
+
+export { repos };
+
+export * from \\"./@types\\";
+",
+    "repos.ts": "import { Status, ApiHeroEndpoint } from \\"./@types\\";
+
+/** 
+* @see https://docs.github.com/rest/reference/repos#create-a-commit-status
+
+
+* Create a commit status
+* Users with push access in a repository can create commit statuses for a given SHA.
+ * 
+ * Note: there is a limit of 1000 statuses per \`sha\` and \`context\` within a repository. Attempts to create more than 1000 statuses will result in a validation error.
+* @param repo - The name of the repository. The name is not case sensitive.
+* @param sha 
+* @param owner - The account owner of the repository. The name is not case sensitive. 
+*/
+export const createCommitStatus: ApiHeroEndpoint<
+  {
+    repo: string;
+    sha: string;
+    owner: string;
+    status: {
+      /**
+       * The state of the status.
+       */
+      state: \\"error\\" | \\"failure\\" | \\"pending\\" | \\"success\\";
+
+      /**
+       * A string label to differentiate this status from the status of other systems. This field is case-insensitive.
+       */
+      context?: string;
+
+      /** 
+* The target URL to associate with this status. This URL will be linked from the GitHub UI to allow users to easily see the source of the status.  
+For example, if your continuous integration system is posting build status, you would want to provide the deep link for the build output for this specific SHA:  
+\`http://ci.example.com/user/repo/build/sha\`
+*/
+      target_url?: string | null;
+
+      /**
+       * A short description of the status.
+       */
+      description?: string | null;
+    };
+  },
+  Status,
+  { Location: string }
+> = {
+  id: \\"repos/create-commit-status\\",
+};
+",
+  },
+  "mappings": Object {
+    "repos/create-commit-status": Array [
+      Object {
+        "mappedName": "status",
+        "type": "requestBody",
+      },
+    ],
+  },
+}
+`;
+
 exports[`createForAuthenticatedUser 1`] = `
 Object {
   "files": Object {
