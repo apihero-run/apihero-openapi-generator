@@ -307,44 +307,34 @@ const getOperationResponse = (
       header.isRequired = resolvedHeader.required ?? false;
       header.deprecated = resolvedHeader.deprecated ?? false;
 
-      if ("$ref" in headerOrRef) {
-        const model = getType(headerOrRef.$ref);
+      const model = getModel(openApi, "", resolvedHeader.schema);
 
-        header.export = "reference";
-        header.type = model.type;
-        header.base = model.base;
-        header.template = model.template;
-        header.imports.push(...model.imports);
-      } else {
-        const model = getModel(openApi, "", resolvedHeader.schema);
-
-        header.export = model.export;
-        header.type = model.type;
-        header.base = model.base;
-        header.template = model.template;
-        header.link = model.link;
-        header.isReadOnly = model.isReadOnly;
-        header.isRequired = model.isRequired;
-        header.isNullable = model.isNullable;
-        header.format = model.format;
-        header.maximum = model.maximum;
-        header.exclusiveMaximum = model.exclusiveMaximum;
-        header.minimum = model.minimum;
-        header.exclusiveMinimum = model.exclusiveMinimum;
-        header.multipleOf = model.multipleOf;
-        header.maxLength = model.maxLength;
-        header.minLength = model.minLength;
-        header.maxItems = model.maxItems;
-        header.minItems = model.minItems;
-        header.uniqueItems = model.uniqueItems;
-        header.maxProperties = model.maxProperties;
-        header.minProperties = model.minProperties;
-        header.pattern = getPattern(model.pattern);
-        header.imports.push(...model.imports);
-        header.enum.push(...model.enum);
-        header.enums.push(...model.enums);
-        header.properties.push(...model.properties);
-      }
+      header.export = model.export;
+      header.type = model.type;
+      header.base = model.base;
+      header.template = model.template;
+      header.link = model.link;
+      header.isReadOnly = model.isReadOnly;
+      header.isRequired = model.isRequired;
+      header.isNullable = model.isNullable;
+      header.format = model.format;
+      header.maximum = model.maximum;
+      header.exclusiveMaximum = model.exclusiveMaximum;
+      header.minimum = model.minimum;
+      header.exclusiveMinimum = model.exclusiveMinimum;
+      header.multipleOf = model.multipleOf;
+      header.maxLength = model.maxLength;
+      header.minLength = model.minLength;
+      header.maxItems = model.maxItems;
+      header.minItems = model.minItems;
+      header.uniqueItems = model.uniqueItems;
+      header.maxProperties = model.maxProperties;
+      header.minProperties = model.minProperties;
+      header.pattern = getPattern(model.pattern);
+      header.imports.push(...model.imports);
+      header.enum.push(...model.enum);
+      header.enums.push(...model.enums);
+      header.properties.push(...model.properties);
 
       operationResponse.headers.push(header);
       operationResponse.imports.push(...header.imports);

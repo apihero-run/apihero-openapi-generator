@@ -61,3 +61,7 @@ test("updateReference", async () => {
 test("checkTeamPermissions", async () => {
   expect(await generateTestCase("checkTeamPermissions")).toMatchSnapshot();
 });
+
+test("renderMarkdown", async () => {
+  expect(await generateTestCase("renderMarkdown")).toMatchSnapshot();
+});

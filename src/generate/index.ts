@@ -79,7 +79,9 @@ class ClientGenerator {
   }
 
   generateServices(): Array<[string, string]> {
-    return this.client.services.map((service) => this.generateService(service));
+    return this.client.services
+      .map((service) => this.generateService(service))
+      .filter(Boolean) as Array<[string, string]>;
   }
 
   generateIndex(): string {
@@ -139,7 +141,11 @@ class ClientGenerator {
     return mappings;
   }
 
-  private generateService(service: Service): [string, string] {
+  private generateService(service: Service): [string, string] | undefined {
+    if (service.operations.length === 0) {
+      return;
+    }
+
     const serviceCode = this.generateServiceCode(service);
 
     return [service.name, serviceCode];
@@ -164,7 +170,7 @@ class ClientGenerator {
     const serviceImportsCode =
       service.imports.length > 0
         ? `import { ${service.imports.join(", ")}, ApiHeroEndpoint } from "./@types";`
-        : "";
+        : `import { ApiHeroEndpoint } from "./@types";`;
 
     return `${additionalImportsCode}\n${serviceImportsCode}`;
   }

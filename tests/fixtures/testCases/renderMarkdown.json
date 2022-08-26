@@ -1,0 +1,142 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "version": "1.1.4"
+  },
+  "tags": [
+    {
+      "name": "markdown",
+      "description": "Render GitHub flavored markdown"
+    }
+  ],
+  "paths": {
+    "/markdown": {
+      "post": {
+        "operationId": "markdown/render",
+        "summary": "Render a Markdown document",
+        "description": "",
+        "deprecated": false,
+        "externalDocs": {
+          "url": "https://docs.github.com/rest/reference/markdown#render-a-markdown-document",
+          "description": "API method documentation"
+        },
+        "tags": [
+          "markdown"
+        ],
+        "security": [
+          {
+            "installationToken": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "$ref": "#/components/headers/content-type"
+              },
+              "Content-Length": {
+                "required": false,
+                "schema": {
+                  "type": "string"
+                },
+                "deprecated": false,
+                "style": "simple",
+                "explode": false,
+                "example": "279"
+              },
+              "X-CommonMarker-Version": {
+                "$ref": "#/components/headers/x-common-marker-version"
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/not_modified",
+            "description": "Not modified"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "text"
+                ],
+                "properties": {
+                  "mode": {
+                    "enum": [
+                      "markdown",
+                      "gfm"
+                    ],
+                    "type": "string",
+                    "default": "markdown",
+                    "examples": [
+                      "markdown"
+                    ],
+                    "description": "The rendering mode. Can be either `markdown` or `gfm`."
+                  },
+                  "text": {
+                    "type": "string",
+                    "description": "The Markdown text to render in HTML."
+                  },
+                  "context": {
+                    "type": "string",
+                    "description": "The repository context to use when creating references in `gfm` mode.  For example, setting `context` to `octo-org/octo-repo` will change the text `#42` into an HTML link to issue 42 in the `octo-org/octo-repo` repository."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-github": {
+          "category": "markdown",
+          "subcategory": null,
+          "githubCloudOnly": false,
+          "enabledForGitHubApps": true
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {},
+    "responses": {
+      "not_modified": {
+        "description": "Not modified"
+      }
+    },
+    "examples": {},
+    "parameters": {},
+    "headers": {
+      "content-type": {
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "deprecated": false,
+        "style": "simple",
+        "explode": false,
+        "example": "text/html"
+      },
+      "x-common-marker-version": {
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "deprecated": false,
+        "style": "simple",
+        "explode": false,
+        "example": "0.17.4"
+      }
+    },
+    "requestBodies": {}
+  }
+}

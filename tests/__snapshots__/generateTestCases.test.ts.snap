@@ -3003,7 +3003,7 @@ export { users };
 
 export * from \\"./@types\\";
 ",
-    "users.ts": "import { Email, Link, ApiHeroEndpoint } from \\"./@types\\";
+    "users.ts": "import { Email, ApiHeroEndpoint } from \\"./@types\\";
 
 /** 
 * @see https://docs.github.com/rest/reference/users#list-public-email-addresses-for-the-authenticated-user
@@ -3017,7 +3017,7 @@ export * from \\"./@types\\";
 export const listPublicEmailsForAuthenticatedUser: ApiHeroEndpoint<
   { perPage?: number; page?: number },
   Array<Email>,
-  { Link: Link }
+  { Link: string }
 > = {
   id: \\"users/list-public-emails-for-authenticated-user\\",
 };
@@ -3029,6 +3029,68 @@ export const listPublicEmailsForAuthenticatedUser: ApiHeroEndpoint<
         "mappedName": "perPage",
         "name": "per_page",
         "type": "parameter",
+      },
+    ],
+  },
+}
+`;
+
+exports[`renderMarkdown 1`] = `
+Object {
+  "files": Object {
+    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+  id: string;
+  [key: string]: string | number;
+};
+",
+    "index.ts": "import * as markdown from \\"./markdown\\";
+
+export { markdown };
+
+export * from \\"./@types\\";
+",
+    "markdown.ts": "import { ApiHeroEndpoint } from \\"./@types\\";
+
+/** 
+* @see https://docs.github.com/rest/reference/markdown#render-a-markdown-document
+
+
+* Render a Markdown document 
+*/
+export const render: ApiHeroEndpoint<
+  {
+    markdown: {
+      /**
+       * The rendering mode. Can be either \`markdown\` or \`gfm\`.
+       *
+       * @example
+       * \\"markdown\\"
+       */
+      mode?: \\"markdown\\" | \\"gfm\\";
+
+      /**
+       * The Markdown text to render in HTML.
+       */
+      text: string;
+
+      /**
+       * The repository context to use when creating references in \`gfm\` mode.  For example, setting \`context\` to \`octo-org/octo-repo\` will change the text \`#42\` into an HTML link to issue 42 in the \`octo-org/octo-repo\` repository.
+       */
+      context?: string;
+    };
+  },
+  string,
+  { \\"Content-Type\\": string; \\"Content-Length\\": string; \\"X-CommonMarker-Version\\": string }
+> = {
+  id: \\"markdown/render\\",
+};
+",
+  },
+  "mappings": Object {
+    "markdown/render": Array [
+      Object {
+        "mappedName": "markdown",
+        "type": "requestBody",
       },
     ],
   },
