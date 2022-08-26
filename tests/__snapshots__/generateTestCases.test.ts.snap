@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`addEmailAddress 1`] = `
-Map {
-  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+Object {
+  "files": Object {
+    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
   id: string;
   [key: string]: string | number;
 };
@@ -66,7 +67,13 @@ export type Email = {
   visibility: string | null;
 };
 ",
-  "users.ts" => "import { Email, ApiHeroEndpoint } from \\"./@types\\";
+    "index.ts": "import * as users from \\"./users\\";
+
+export { users };
+
+export * from \\"./@types\\";
+",
+    "users.ts": "import { Email, ApiHeroEndpoint } from \\"./@types\\";
 
 /** 
 * @see https://docs.github.com/rest/reference/users#add-an-email-address-for-the-authenticated-user
@@ -95,18 +102,22 @@ export const addEmailForAuthenticatedUser: ApiHeroEndpoint<
   id: \\"users/add-email-for-authenticated-user\\",
 };
 ",
-  "index.ts" => "import * as users from \\"./users\\";
-
-export { users };
-
-export * from \\"./@types\\";
-",
+  },
+  "mappings": Object {
+    "users/add-email-for-authenticated-user": Array [
+      Object {
+        "mappedName": "email",
+        "type": "requestBody",
+      },
+    ],
+  },
 }
 `;
 
 exports[`createForAuthenticatedUser 1`] = `
-Map {
-  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+Object {
+  "files": Object {
+    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
   id: string;
   [key: string]: string | number;
 };
@@ -1674,7 +1685,7 @@ export type LicenseSimple = {
   html_url?: string;
 };
 ",
-  "codespaces.ts" => "import { Codespace, ApiHeroEndpoint } from \\"./@types\\";
+    "codespaces.ts": "import { Codespace, ApiHeroEndpoint } from \\"./@types\\";
 
 /** 
 * @see https://docs.github.com/rest/reference/codespaces#create-a-codespace-for-the-authenticated-user
@@ -1795,18 +1806,28 @@ export const createForAuthenticatedUser: ApiHeroEndpoint<
   id: \\"codespaces/create-for-authenticated-user\\",
 };
 ",
-  "index.ts" => "import * as codespaces from \\"./codespaces\\";
+    "index.ts": "import * as codespaces from \\"./codespaces\\";
 
 export { codespaces };
 
 export * from \\"./@types\\";
 ",
+  },
+  "mappings": Object {
+    "codespaces/create-for-authenticated-user": Array [
+      Object {
+        "mappedName": "codespace",
+        "type": "requestBody",
+      },
+    ],
+  },
 }
 `;
 
 exports[`createLabel 1`] = `
-Map {
-  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+Object {
+  "files": Object {
+    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
   id: string;
   [key: string]: string | number;
 };
@@ -1895,7 +1916,13 @@ export type Label = {
   description: string | null;
 };
 ",
-  "issues.ts" => "import { Label, ApiHeroEndpoint } from \\"./@types\\";
+    "index.ts": "import * as issues from \\"./issues\\";
+
+export { issues };
+
+export * from \\"./@types\\";
+",
+    "issues.ts": "import { Label, ApiHeroEndpoint } from \\"./@types\\";
 
 /** 
 * @see https://docs.github.com/rest/reference/issues#create-a-label
@@ -1932,18 +1959,22 @@ export const createLabel: ApiHeroEndpoint<
   id: \\"issues/create-label\\",
 };
 ",
-  "index.ts" => "import * as issues from \\"./issues\\";
-
-export { issues };
-
-export * from \\"./@types\\";
-",
+  },
+  "mappings": Object {
+    "issues/create-label": Array [
+      Object {
+        "mappedName": "label",
+        "type": "requestBody",
+      },
+    ],
+  },
 }
 `;
 
 exports[`createSelfHostedRunnerGroupForOrg 1`] = `
-Map {
-  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+Object {
+  "files": Object {
+    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
   id: string;
   [key: string]: string | number;
 };
@@ -1983,7 +2014,7 @@ export type RunnerGroupsOrg = {
   inherited_allows_public_repositories?: boolean;
 };
 ",
-  "actions.ts" => "import { RunnerGroupsOrg, ApiHeroEndpoint } from \\"./@types\\";
+    "actions.ts": "import { RunnerGroupsOrg, ApiHeroEndpoint } from \\"./@types\\";
 
 /** 
 * @see https://docs.github.com/rest/reference/actions#create-a-self-hosted-runner-group-for-an-organization
@@ -2048,18 +2079,28 @@ export const createSelfHostedRunnerGroupForOrg: ApiHeroEndpoint<
   id: \\"actions/create-self-hosted-runner-group-for-org\\",
 };
 ",
-  "index.ts" => "import * as actions from \\"./actions\\";
+    "index.ts": "import * as actions from \\"./actions\\";
 
 export { actions };
 
 export * from \\"./@types\\";
 ",
+  },
+  "mappings": Object {
+    "actions/create-self-hosted-runner-group-for-org": Array [
+      Object {
+        "mappedName": "runnerGroup",
+        "type": "requestBody",
+      },
+    ],
+  },
 }
 `;
 
 exports[`getAuthenticatedApp 1`] = `
-Map {
-  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+Object {
+  "files": Object {
+    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
   id: string;
   [key: string]: string | number;
 };
@@ -2331,7 +2372,7 @@ export type SimpleUser = {
   received_events_url: string;
 };
 ",
-  "apps.ts" => "import { Integration, ApiHeroEndpoint } from \\"./@types\\";
+    "apps.ts": "import { Integration, ApiHeroEndpoint } from \\"./@types\\";
 
 /** 
 * @see https://docs.github.com/rest/reference/apps#get-the-authenticated-app
@@ -2346,18 +2387,21 @@ export const getAuthenticated: ApiHeroEndpoint<never, Integration> = {
   id: \\"apps/get-authenticated\\",
 };
 ",
-  "index.ts" => "import * as apps from \\"./apps\\";
+    "index.ts": "import * as apps from \\"./apps\\";
 
 export { apps };
 
 export * from \\"./@types\\";
 ",
+  },
+  "mappings": Object {},
 }
 `;
 
 exports[`getThreadSubscriptionForAuthenticatedUser 1`] = `
-Map {
-  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+Object {
+  "files": Object {
+    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
   id: string;
   [key: string]: string | number;
 };
@@ -2415,7 +2459,7 @@ export type ThreadSubscription = {
   repository_url?: string;
 };
 ",
-  "activity.ts" => "import { ThreadSubscription, ApiHeroEndpoint } from \\"./@types\\";
+    "activity.ts": "import { ThreadSubscription, ApiHeroEndpoint } from \\"./@types\\";
 
 /** 
 * @see https://docs.github.com/rest/reference/activity#get-a-thread-subscription-for-the-authenticated-user
@@ -2434,18 +2478,29 @@ export const getThreadSubscriptionForAuthenticatedUser: ApiHeroEndpoint<
   id: \\"activity/get-thread-subscription-for-authenticated-user\\",
 };
 ",
-  "index.ts" => "import * as activity from \\"./activity\\";
+    "index.ts": "import * as activity from \\"./activity\\";
 
 export { activity };
 
 export * from \\"./@types\\";
 ",
+  },
+  "mappings": Object {
+    "activity/get-thread-subscription-for-authenticated-user": Array [
+      Object {
+        "mappedName": "threadId",
+        "name": "thread_id",
+        "type": "parameter",
+      },
+    ],
+  },
 }
 `;
 
 exports[`listPublicEmails 1`] = `
-Map {
-  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+Object {
+  "files": Object {
+    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
   id: string;
   [key: string]: string | number;
 };
@@ -2493,7 +2548,13 @@ export type BasicError = {
   documentation_url?: string;
 };
 ",
-  "users.ts" => "import { Email, Link, ApiHeroEndpoint } from \\"./@types\\";
+    "index.ts": "import * as users from \\"./users\\";
+
+export { users };
+
+export * from \\"./@types\\";
+",
+    "users.ts": "import { Email, Link, ApiHeroEndpoint } from \\"./@types\\";
 
 /** 
 * @see https://docs.github.com/rest/reference/users#list-public-email-addresses-for-the-authenticated-user
@@ -2512,18 +2573,23 @@ export const listPublicEmailsForAuthenticatedUser: ApiHeroEndpoint<
   id: \\"users/list-public-emails-for-authenticated-user\\",
 };
 ",
-  "index.ts" => "import * as users from \\"./users\\";
-
-export { users };
-
-export * from \\"./@types\\";
-",
+  },
+  "mappings": Object {
+    "users/list-public-emails-for-authenticated-user": Array [
+      Object {
+        "mappedName": "perPage",
+        "name": "per_page",
+        "type": "parameter",
+      },
+    ],
+  },
 }
 `;
 
 exports[`startUserMigration 1`] = `
-Map {
-  "@types.ts" => "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
+Object {
+  "files": Object {
+    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
   id: string;
   [key: string]: string | number;
 };
@@ -3464,7 +3530,13 @@ export type LicenseSimple = {
   html_url?: string;
 };
 ",
-  "migrations.ts" => "import { Migration, ApiHeroEndpoint } from \\"./@types\\";
+    "index.ts": "import * as migrations from \\"./migrations\\";
+
+export { migrations };
+
+export * from \\"./@types\\";
+",
+    "migrations.ts": "import { Migration, ApiHeroEndpoint } from \\"./@types\\";
 
 /** 
 * @see https://docs.github.com/rest/reference/migrations#start-a-user-migration
@@ -3555,11 +3627,14 @@ export const startForAuthenticatedUser: ApiHeroEndpoint<
   id: \\"migrations/start-for-authenticated-user\\",
 };
 ",
-  "index.ts" => "import * as migrations from \\"./migrations\\";
-
-export { migrations };
-
-export * from \\"./@types\\";
-",
+  },
+  "mappings": Object {
+    "migrations/start-for-authenticated-user": Array [
+      Object {
+        "mappedName": "migration",
+        "type": "requestBody",
+      },
+    ],
+  },
 }
 `;

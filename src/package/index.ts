@@ -11,7 +11,7 @@ export type GeneratePackageOptions = {
 };
 
 export async function generatePackageFromTypeScriptFiles(
-  files: Map<string, string>,
+  files: Record<string, string>,
   destination: string,
   options: GeneratePackageOptions,
 ) {
@@ -68,7 +68,7 @@ export async function generatePackageFromTypeScriptFiles(
 
   const filePaths = [];
 
-  for (const [file, content] of Array.from(files)) {
+  for (const [file, content] of Object.entries(files)) {
     const filePath = path.join(typescriptPath, file);
     console.log(`Writing ${filePath}`);
     await writeFile(filePath, content);

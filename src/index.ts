@@ -1,10 +1,6 @@
 import { OpenAPI } from "openapi-types";
 import { Client, Enum, Model, Operation, Service } from "./@types";
-import {
-  generateFromClient,
-  GenerateClientOptions,
-  generateOperationCodeFromClient,
-} from "./generate";
+import { generateFromClient, GenerateClientOptions, GenerateClientCodeResult } from "./generate";
 import { generatePackageFromTypeScriptFiles, GeneratePackageOptions } from "./package";
 import { parseSpec } from "./parse";
 import { format } from "prettier";
@@ -16,7 +12,7 @@ export async function generatePackage(
   destination: string,
   options: GeneratePackageOptions,
 ): Promise<void> {
-  const typescriptFiles = generateClientFiles(doc, `${options.name}/${options.version}`, {
+  const { files } = generateClientFiles(doc, `${options.name}/${options.version}`, {
     additionalData: {
       clientId: options.name,
       version: `${options.version.major}.${options.version.minor}.${options.version.patch}`,
@@ -24,14 +20,14 @@ export async function generatePackage(
     generation: options.generation,
   });
 
-  return generatePackageFromTypeScriptFiles(typescriptFiles, destination, options);
+  return generatePackageFromTypeScriptFiles(files, destination, options);
 }
 
 export function generateClientFiles(
   doc: OpenAPI.Document,
   identifier: string,
   options?: GenerateClientOptions,
-): Map<string, string> {
+) {
   const client = generateClient(doc);
 
   return generateClientCode(client, identifier, options);
@@ -41,27 +37,15 @@ export function generateClientCode(
   client: Client,
   identifier: string,
   options?: GenerateClientOptions,
-): Map<string, string> {
-  const files = generateFromClient(client, identifier, options);
+): GenerateClientCodeResult {
+  const { files, mappings } = generateFromClient(client, identifier, options);
 
   // Format each file
-  for (const [name, code] of Array.from(files)) {
-    files.set(name, format(code, { parser: "typescript", printWidth: 100 }));
+  for (const [name, code] of Object.entries(files)) {
+    files[name] = format(code, { parser: "typescript", printWidth: 100 });
   }
 
-  return files;
-}
-
-export function generateOperationCode(
-  doc: OpenAPI.Document,
-  operationId: string,
-  options?: GenerateClientOptions,
-): string {
-  const client = generateClient(doc);
-
-  const code = generateOperationCodeFromClient(client, operationId, options);
-
-  return format(code, { parser: "typescript", printWidth: 100 });
+  return { files, mappings };
 }
 
 export function generateClient(doc: OpenAPI.Document): Client {

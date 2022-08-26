@@ -1,5 +1,5 @@
 import { OpenAPI } from "openapi-types";
-import { generateClientFiles, GenerateClientOptions } from "../src";
+import { generateClientFiles } from "../src";
 import { readFile } from "fs/promises";
 
 async function loadTestCase(testCaseId: string): Promise<OpenAPI.Document> {
@@ -8,7 +8,7 @@ async function loadTestCase(testCaseId: string): Promise<OpenAPI.Document> {
   return JSON.parse(rawFile) as OpenAPI.Document;
 }
 
-async function generateTestCase(testCaseId: string): Promise<Map<string, string>> {
+async function generateTestCase(testCaseId: string) {
   const doc = await loadTestCase(testCaseId);
 
   const code = generateClientFiles(doc, testCaseId, {

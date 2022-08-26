@@ -15,61 +15,48 @@ export type GenerateClientOptions = {
   baseUrl?: string;
 };
 
+export type RequestBodyParameterMapping = {
+  type: "requestBody";
+  mappedName: string;
+};
+
+export type OperationParameterMapping = {
+  type: "parameter";
+  name: string;
+  mappedName: string;
+};
+
+export type Mapping = RequestBodyParameterMapping | OperationParameterMapping;
+
+export type GenerateClientCodeResult = {
+  files: Record<string, string>;
+  mappings: Record<string, Array<Mapping>>;
+};
+
 export function generateFromClient(
   client: Client,
   identifier: string,
   options?: GenerateClientOptions,
-): Map<string, string> {
-  const files = new Map<string, string>();
+): GenerateClientCodeResult {
+  const files: Record<string, string> = {};
 
   const clientGenerator = new ClientGenerator(identifier, client, options);
 
   const modelCode = clientGenerator.generateModels();
 
-  files.set("@types.ts", modelCode);
+  files["@types.ts"] = modelCode;
 
   const servicesCode = clientGenerator.generateServices();
 
   for (const [name, code] of servicesCode) {
-    files.set(`${name}.ts`, code);
+    files[`${name}.ts`] = code;
   }
 
   const indexCode = clientGenerator.generateIndex();
 
-  files.set("index.ts", indexCode);
+  files["index.ts"] = indexCode;
 
-  return files;
-}
-
-export function generateOperationCodeFromClient(
-  client: Client,
-  operationId: string,
-  options?: GenerateClientOptions,
-): string {
-  let operation: Operation | undefined;
-
-  for (const service of client.services) {
-    for (const op of service.operations) {
-      if (op.id === operationId) {
-        operation = op;
-        break;
-      }
-    }
-  }
-
-  if (!operation) {
-    throw new Error(`Operation with id ${operationId} not found`);
-  }
-
-  const models = getAllImportsRecursive(operation.imports, client.models);
-
-  const clientGenerator = new ClientGenerator(operationId, client, options);
-
-  const modelCode = clientGenerator.generateModelSelection(models);
-
-  const operationCode = clientGenerator.generateOperation(operation);
-
-  return `${modelCode}\n\n${operationCode}`;
+  return { files, mappings: clientGenerator.mappings() };
 }
 
 class ClientGenerator {
@@ -107,12 +94,49 @@ class ClientGenerator {
     return `${imports}\n\n${exports}\n\nexport * from "./@types";`;
   }
 
-  generateModelSelection(models: Array<Model>): string {
-    const endpointGenericCode = `export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = \n{ id: string;\n[key: string]: string | number;\n };`;
+  mappings(): Record<string, Array<Mapping>> {
+    const result: Record<string, Array<Mapping>> = {};
 
-    const modelsCode = models.map((model) => this.generateModel(model)).join("\n\n");
+    for (const [, service] of Object.entries(this.client.services)) {
+      for (const operation of service.operations) {
+        const mappings = this.generateOperationMappings(operation);
 
-    return `${endpointGenericCode}\n\n${modelsCode}`;
+        if (mappings.length > 0) {
+          result[operation.id] = mappings;
+        }
+      }
+    }
+
+    return result;
+  }
+
+  private generateOperationMappings(operation: Operation): Array<Mapping> {
+    const mappings: Array<Mapping> = [];
+
+    if (operation.parameters) {
+      for (const parameter of operation.parameters) {
+        if (parameter.in === "body") {
+          const mappedName = this.generateRequestBodyParameterName(operation, parameter);
+
+          if (mappedName && mappedName !== parameter.name) {
+            mappings.push({
+              type: "requestBody",
+              mappedName,
+            });
+          }
+        } else {
+          if (parameter.originalName && parameter.originalName !== parameter.name) {
+            mappings.push({
+              type: "parameter",
+              name: parameter.originalName,
+              mappedName: parameter.name,
+            });
+          }
+        }
+      }
+    }
+
+    return mappings;
   }
 
   private generateService(service: Service): [string, string] {
@@ -218,36 +242,43 @@ class ClientGenerator {
     parameter: Operation["parameters"][0],
   ): string {
     if (parameter.in === "body") {
-      if (this.options?.generation?.inferRequestBodyParamName) {
-        switch (operation.method) {
-          case "POST":
-          case "DELETE": {
-            const resourceName = operation.path.split("/").pop();
-
-            if (resourceName) {
-              return camelCase(singular(resourceName));
-            }
-
-            break;
-          }
-          case "PATCH":
-          case "PUT": {
-            // Get the second to last path segment
-            const resourceName = operation.path.split("/")[operation.path.split("/").length - 2];
-
-            if (resourceName) {
-              return camelCase(singular(resourceName));
-            }
-
-            break;
-          }
-        }
-      }
-
-      return this.options?.generation?.bodyParamName ?? parameter.name;
+      return this.generateRequestBodyParameterName(operation, parameter);
     }
 
     return parameter.name;
+  }
+
+  private generateRequestBodyParameterName(
+    operation: Operation,
+    parameter: Operation["parameters"][0],
+  ): string {
+    if (this.options?.generation?.inferRequestBodyParamName) {
+      switch (operation.method) {
+        case "POST":
+        case "DELETE": {
+          const resourceName = operation.path.split("/").pop();
+
+          if (resourceName) {
+            return camelCase(singular(resourceName));
+          }
+
+          break;
+        }
+        case "PATCH":
+        case "PUT": {
+          // Get the second to last path segment
+          const resourceName = operation.path.split("/")[operation.path.split("/").length - 2];
+
+          if (resourceName) {
+            return camelCase(singular(resourceName));
+          }
+
+          break;
+        }
+      }
+    }
+
+    return this.options?.generation?.bodyParamName ?? parameter.name;
   }
 
   private generateOperationParameterComments(

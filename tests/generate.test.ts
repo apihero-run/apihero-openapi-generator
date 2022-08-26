@@ -1,4 +1,4 @@
-import { generateClientFiles, generatePackage, generateOperationCode } from "../src";
+import { generateClientFiles, generatePackage } from "../src";
 import { OpenAPI } from "openapi-types";
 import { readFile } from "fs/promises";
 
@@ -13,7 +13,18 @@ test("v3/petstore.json", async () => {
 
   const code = generateClientFiles(doc, "petstore/v3");
 
-  expect(code).toMatchSnapshot();
+  expect(code.files).toMatchSnapshot();
+  expect(code.mappings).toMatchInlineSnapshot(`
+    Object {
+      "deletePet": Array [
+        Object {
+          "mappedName": "apiKey",
+          "name": "api_key",
+          "type": "parameter",
+        },
+      ],
+    }
+  `);
 });
 
 test("v3/petstore.json with additional options", async () => {
@@ -33,9 +44,10 @@ test("v3/petstore.json with additional options", async () => {
 test("v3/github.json", async () => {
   const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3/github.json");
 
-  const code = generateClientFiles(doc, "github/v3");
+  const { files, mappings } = generateClientFiles(doc, "github/v3");
 
-  expect(code).toMatchSnapshot();
+  expect(files).toMatchSnapshot();
+  expect(mappings).toMatchSnapshot();
 });
 
 test("v3_1/github.json", async () => {
@@ -49,37 +61,12 @@ test("v3_1/github.json", async () => {
 test("v3_1/github.json with inferRequestBodyName", async () => {
   const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3_1/github.json");
 
-  const code = generateClientFiles(doc, "github/v3.1", {
+  const { files, mappings } = generateClientFiles(doc, "github/v3.1", {
     generation: { inferRequestBodyParamName: true },
   });
 
-  expect(code).toMatchSnapshot();
-});
-
-test("v3_1/github.json generateOperationCode repos/get", async () => {
-  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3_1/github.json");
-
-  const code = generateOperationCode(doc, "repos/get");
-
-  expect(code).toMatchSnapshot();
-});
-
-test("v3_1/github.json generateOperationCode repos/list-for-org", async () => {
-  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3_1/github.json");
-
-  const code = generateOperationCode(doc, "repos/list-for-org");
-
-  expect(code).toMatchSnapshot();
-});
-
-test("v3_1/github.json generateOperationCode codespaces/update-for-authenticated-user with custom bodyParamName", async () => {
-  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3_1/github.json");
-
-  const code = generateOperationCode(doc, "codespaces/update-for-authenticated-user", {
-    generation: { bodyParamName: "data" },
-  });
-
-  expect(code).toMatchSnapshot();
+  expect(files).toMatchSnapshot();
+  expect(mappings).toMatchSnapshot();
 });
 
 test("generatePackage", async () => {
