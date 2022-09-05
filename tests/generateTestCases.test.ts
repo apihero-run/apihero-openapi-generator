@@ -65,3 +65,7 @@ test("checkTeamPermissions", async () => {
 test("renderMarkdown", async () => {
   expect(await generateTestCase("renderMarkdown")).toMatchSnapshot();
 });
+
+test("getRepo", async () => {
+  expect(await generateTestCase("getRepo")).toMatchSnapshot();
+});

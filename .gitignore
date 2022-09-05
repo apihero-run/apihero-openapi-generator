@@ -42,3 +42,4 @@ yarn.lock
 /tests/test.sqlite
 
 /tests/tmp
+.dccache

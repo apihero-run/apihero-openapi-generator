@@ -11,6 +11,7 @@ import {
 import { getRef } from "../common/v3_1";
 import { getModel, getModelDefault, getPattern, getType } from "../models/v3_1";
 import camelCase from "camelcase";
+import pluralize, { singular } from "pluralize";
 
 export function getServices(doc: OpenAPIV3_1.Document): Service[] {
   return (doc.tags || []).map((tag) => getService(doc, tag));
@@ -567,9 +568,9 @@ const getOperationName = (url: string, method: string, operationId?: string): st
       if (operationIdSplit.length > 1) {
         const suffix = operationIdSplit[0];
 
-        return camelCase(`${result}-${suffix}`);
+        return camelCase(`${result}-${correctCaseBasedOnUrl(url, suffix)}`);
       } else {
-        return camelCase(`${method}-${result}`);
+        return camelCase(`${method}-${correctCaseBasedOnUrl(url, result)}`);
       }
     } else {
       return result;
@@ -582,6 +583,18 @@ const getOperationName = (url: string, method: string, operationId?: string): st
     .replace(/\//g, "-");
 
   return camelCase(`${method}-${urlWithoutPlaceholders}`);
+};
+
+// If the last url segment is a variable, then we should singularize the name
+// if the last url segment is NOT a variable, then we should pluralize the name
+const correctCaseBasedOnUrl = (url: string, name: string): string => {
+  const lastSegment = url.split("/").pop();
+
+  if (lastSegment && lastSegment.startsWith("{")) {
+    return singular(name);
+  } else {
+    return pluralize(name);
+  }
 };
 
 const javascriptReservedWords = [

@@ -2583,7 +2583,7 @@ test("getService with GitHub repos service", async () => {
             "FullRepository",
           ],
           "method": "GET",
-          "name": "getRepos",
+          "name": "getRepo",
           "parameters": Array [
             Object {
               "base": "string",
@@ -2793,7 +2793,7 @@ test("getService with GitHub repos service", async () => {
           "id": "repos/delete",
           "imports": Array [],
           "method": "DELETE",
-          "name": "deleteRepos",
+          "name": "deleteRepo",
           "parameters": Array [
             Object {
               "base": "string",
