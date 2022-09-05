@@ -71,7 +71,7 @@ class ClientGenerator {
   }
 
   generateModels(): string {
-    const endpointGenericCode = `export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = \n{ id: string;\n[key: string]: string | number;\n };`;
+    const endpointGenericCode = `export type { ApiHeroEndpoint } from "@apihero/core";`;
 
     const modelsCode = this.client.models.map((model) => this.generateModel(model)).join("\n\n");
 

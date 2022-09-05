@@ -3,10 +3,7 @@
 exports[`addEmailAddress 1`] = `
 Object {
   "files": Object {
-    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
-  id: string;
-  [key: string]: string | number;
-};
+    "@types.ts": "export type { ApiHeroEndpoint } from \\"@apihero/core\\";
 
 /**
  * Basic Error
@@ -117,10 +114,7 @@ export const addEmailForAuthenticatedUser: ApiHeroEndpoint<
 exports[`checkTeamPermissions 1`] = `
 Object {
   "files": Object {
-    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
-  id: string;
-  [key: string]: string | number;
-};
+    "@types.ts": "export type { ApiHeroEndpoint } from \\"@apihero/core\\";
 
 /**
  * A team's access to a project.
@@ -339,10 +333,7 @@ export const checkPermissionsForProjectInOrg: ApiHeroEndpoint<
 exports[`createCommitStatus 1`] = `
 Object {
   "files": Object {
-    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
-  id: string;
-  [key: string]: string | number;
-};
+    "@types.ts": "export type { ApiHeroEndpoint } from \\"@apihero/core\\";
 
 /**
  * The status of a commit.
@@ -566,10 +557,7 @@ For example, if your continuous integration system is posting build status, you 
 exports[`createForAuthenticatedUser 1`] = `
 Object {
   "files": Object {
-    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
-  id: string;
-  [key: string]: string | number;
-};
+    "@types.ts": "export type { ApiHeroEndpoint } from \\"@apihero/core\\";
 
 /**
  * Basic Error
@@ -2276,10 +2264,7 @@ export * from \\"./@types\\";
 exports[`createLabel 1`] = `
 Object {
   "files": Object {
-    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
-  id: string;
-  [key: string]: string | number;
-};
+    "@types.ts": "export type { ApiHeroEndpoint } from \\"@apihero/core\\";
 
 /**
  * Basic Error
@@ -2423,10 +2408,7 @@ export const createLabel: ApiHeroEndpoint<
 exports[`createSelfHostedRunnerGroupForOrg 1`] = `
 Object {
   "files": Object {
-    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
-  id: string;
-  [key: string]: string | number;
-};
+    "@types.ts": "export type { ApiHeroEndpoint } from \\"@apihero/core\\";
 
 export type RunnerGroupsOrg = {
   id: number;
@@ -2549,10 +2531,7 @@ export * from \\"./@types\\";
 exports[`getAuthenticatedApp 1`] = `
 Object {
   "files": Object {
-    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
-  id: string;
-  [key: string]: string | number;
-};
+    "@types.ts": "export type { ApiHeroEndpoint } from \\"@apihero/core\\";
 
 /**
  * GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
@@ -2850,10 +2829,7 @@ export * from \\"./@types\\";
 exports[`getRepo 1`] = `
 Object {
   "files": Object {
-    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
-  id: string;
-  [key: string]: string | number;
-};
+    "@types.ts": "export type { ApiHeroEndpoint } from \\"@apihero/core\\";
 
 /**
  * Basic Error
@@ -4359,10 +4335,7 @@ export const getRepo: ApiHeroEndpoint<{ owner: string; repo: string }, FullRepos
 exports[`getThreadSubscriptionForAuthenticatedUser 1`] = `
 Object {
   "files": Object {
-    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
-  id: string;
-  [key: string]: string | number;
-};
+    "@types.ts": "export type { ApiHeroEndpoint } from \\"@apihero/core\\";
 
 /**
  * Basic Error
@@ -4458,10 +4431,7 @@ export * from \\"./@types\\";
 exports[`listPublicEmails 1`] = `
 Object {
   "files": Object {
-    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
-  id: string;
-  [key: string]: string | number;
-};
+    "@types.ts": "export type { ApiHeroEndpoint } from \\"@apihero/core\\";
 
 /**
  * Email
@@ -4547,10 +4517,7 @@ export const listPublicEmailsForAuthenticatedUser: ApiHeroEndpoint<
 exports[`renderMarkdown 1`] = `
 Object {
   "files": Object {
-    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
-  id: string;
-  [key: string]: string | number;
-};
+    "@types.ts": "export type { ApiHeroEndpoint } from \\"@apihero/core\\";
 ",
     "index.ts": "import * as markdown from \\"./markdown\\";
 
@@ -4609,10 +4576,7 @@ export const render: ApiHeroEndpoint<
 exports[`startUserMigration 1`] = `
 Object {
   "files": Object {
-    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
-  id: string;
-  [key: string]: string | number;
-};
+    "@types.ts": "export type { ApiHeroEndpoint } from \\"@apihero/core\\";
 
 /**
  * Basic Error
@@ -5662,10 +5626,7 @@ export const startForAuthenticatedUser: ApiHeroEndpoint<
 exports[`updateReference 1`] = `
 Object {
   "files": Object {
-    "@types.ts": "export type ApiHeroEndpoint<Params, ResponseBody, Headers = unknown> = {
-  id: string;
-  [key: string]: string | number;
-};
+    "@types.ts": "export type { ApiHeroEndpoint } from \\"@apihero/core\\";
 
 /**
  * Validation Error
