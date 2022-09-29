@@ -77,7 +77,15 @@ test("v3_1/cloudRenderer.json", async () => {
   expect(code).toMatchSnapshot();
 });
 
-test("v3/twitter.json", async () => {
+test("v3/twitterLabs.json", async () => {
+  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3/twitterLabs.json");
+
+  const code = generateClientFiles(doc, "twitterLabs/v3");
+
+  expect(code).toMatchSnapshot();
+});
+
+test("v3/twitterFull.json", async () => {
   const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3/twitter.json");
 
   const code = generateClientFiles(doc, "twitter/v3");

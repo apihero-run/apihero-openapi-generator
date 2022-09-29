@@ -231,13 +231,17 @@ const getOperationResponses = (
 
   // Iterate over each response code and get the
   // status code and response message (if any).
+  const responseCodes = Object.entries(responses)
+    .map(([code]) => parseResponseCode(code))
+    .filter(Boolean) as number[];
+
   for (const [code, responseOrReference] of Object.entries(responses)) {
     const response = getRef<OpenAPIV3.ResponseObject>(
       openApi,
       responseOrReference as OpenAPIV3.ResponseObject & OpenAPIV3.ReferenceObject,
     );
 
-    const responseCode = getOperationResponseCode(code);
+    const responseCode = getOperationResponseCode(code, responseCodes);
 
     if (responseCode) {
       const operationResponse = getOperationResponse(openApi, response, responseCode);
@@ -424,22 +428,35 @@ const getOperationResponse = (
   return operationResponse;
 };
 
-const getOperationResponseCode = (value: string | "default"): number | null => {
+const getOperationResponseCode = (
+  value: string | "default",
+  otherCodes: number[],
+): number | null => {
   // You can specify a "default" response, this is treated as HTTP code 200
   if (value === "default") {
+    if (otherCodes.includes(200) || otherCodes.includes(204) || otherCodes.includes(201)) {
+      return 500;
+    }
+
     return 200;
   }
 
   // Check if we can parse the code and return of successful.
   if (/[0-9]+/g.test(value)) {
-    const code = parseInt(value);
-    if (Number.isInteger(code)) {
-      return Math.abs(code);
-    }
+    return parseResponseCode(value);
   }
 
   return null;
 };
+
+function parseResponseCode(value: string): number | null {
+  const code = parseInt(value);
+  if (Number.isInteger(code)) {
+    return Math.abs(code);
+  }
+
+  return null;
+}
 
 const getOperationRequestBody = (
   openApi: OpenAPIV3.Document,
