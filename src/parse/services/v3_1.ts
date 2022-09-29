@@ -336,6 +336,7 @@ const getOperationResponse = (
       header.enum.push(...model.enum);
       header.enums.push(...model.enums);
       header.properties.push(...model.properties);
+      header.additionalProperties = model.additionalProperties;
 
       operationResponse.headers.push(header);
       operationResponse.imports.push(...header.imports);
@@ -387,6 +388,7 @@ const getOperationResponse = (
         operationResponse.enum.push(...model.enum);
         operationResponse.enums.push(...model.enums);
         operationResponse.properties.push(...model.properties);
+        operationResponse.additionalProperties = model.additionalProperties;
         return operationResponse;
       }
     }
@@ -493,6 +495,7 @@ const getOperationRequestBody = (
         requestBody.enum.push(...model.enum);
         requestBody.enums.push(...model.enums);
         requestBody.properties.push(...model.properties);
+        requestBody.additionalProperties = model.additionalProperties;
         return requestBody;
       }
     }
@@ -832,6 +835,7 @@ export const getOperationParameter = (
         operationParameter.enum.push(...model.enum);
         operationParameter.enums.push(...model.enums);
         operationParameter.properties.push(...model.properties);
+        operationParameter.additionalProperties = model.additionalProperties;
         return operationParameter;
       }
     }

@@ -130,7 +130,12 @@ function getSchemaModel(
     } else {
       const arrayItems = getModel(doc, "", schema.items);
 
-      model.export = "array";
+      if (schema.minItems && schema.maxItems && schema.minItems === schema.maxItems) {
+        model.export = "tuple";
+      } else {
+        model.export = "array";
+      }
+
       model.type = arrayItems.type;
       model.base = arrayItems.base;
       model.template = arrayItems.template;
@@ -199,13 +204,16 @@ function getSchemaModel(
     return model;
   }
 
-  if (schema.type === "object") {
+  if (
+    schema.type === "object" ||
+    (!schema.type && (schema.properties || schema.additionalProperties))
+  ) {
     model.export = "interface";
     model.type = "any";
     model.base = "any";
 
     if (schema.properties) {
-      const modelProperties = getModelProperties(doc, schema);
+      const modelProperties = getModelProperties(doc, schema as OpenAPIV3.NonArraySchemaObject);
 
       modelProperties.forEach((modelProperty) => {
         model.imports.push(...modelProperty.imports);
@@ -263,6 +271,8 @@ function getSchemaModel(
 
       model.additionalProperties = additionalPropertiesModel;
       model.imports.push(...additionalPropertiesModel.imports);
+    } else if (typeof schema.additionalProperties === "boolean") {
+      model.additionalProperties = schema.additionalProperties;
     }
 
     return model;

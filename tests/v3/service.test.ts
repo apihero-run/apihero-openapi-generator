@@ -202,6 +202,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listForOrg",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -239,6 +240,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -319,6 +321,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -381,6 +384,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -431,6 +435,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -468,6 +473,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -511,6 +517,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -550,6 +557,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -630,6 +638,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -692,6 +701,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -742,6 +752,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -779,6 +790,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -820,6 +832,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "MinimalRepository",
               "code": 200,
               "description": "Response",
@@ -909,6 +922,7 @@ test("getService with GitHub repos service", async () => {
           "name": "createInOrg",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -946,6 +960,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -1702,6 +1717,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -2461,6 +2477,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -2511,6 +2528,7 @@ test("getService with GitHub repos service", async () => {
               "export": "reference",
               "headers": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": false,
                   "description": null,
@@ -2586,6 +2604,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getRepo",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -2623,6 +2642,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -2666,6 +2686,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -2703,6 +2724,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -2796,6 +2818,7 @@ test("getService with GitHub repos service", async () => {
           "name": "deleteRepo",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -2833,6 +2856,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -2876,6 +2900,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -2913,6 +2938,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -3007,6 +3033,7 @@ test("getService with GitHub repos service", async () => {
           "name": "update",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -3044,6 +3071,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -3081,6 +3109,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -4080,6 +4109,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -5082,6 +5112,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -5119,6 +5150,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -5200,6 +5232,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listAutolinks",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -5237,6 +5270,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -5274,6 +5308,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -5317,6 +5352,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -5354,6 +5390,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -5393,6 +5430,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -5434,6 +5472,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Autolink",
               "code": 200,
               "description": "Response",
@@ -5490,6 +5529,7 @@ test("getService with GitHub repos service", async () => {
           "name": "createAutolink",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -5527,6 +5567,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -5564,6 +5605,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -5669,6 +5711,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -5777,6 +5820,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -5814,6 +5858,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -5864,6 +5909,7 @@ test("getService with GitHub repos service", async () => {
               "export": "reference",
               "headers": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": false,
                   "description": null,
@@ -5933,6 +5979,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getAutolink",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -5970,6 +6017,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -6007,6 +6055,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -6050,6 +6099,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -6087,6 +6137,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -6124,6 +6175,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -6208,6 +6260,7 @@ test("getService with GitHub repos service", async () => {
           "name": "deleteAutolink",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -6245,6 +6298,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -6282,6 +6336,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -6325,6 +6380,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -6362,6 +6418,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -6399,6 +6456,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -6474,6 +6532,7 @@ test("getService with GitHub repos service", async () => {
           "name": "enableAutomatedSecurityFixes",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -6511,6 +6570,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -6554,6 +6614,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -6591,6 +6652,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -6666,6 +6728,7 @@ test("getService with GitHub repos service", async () => {
           "name": "disableAutomatedSecurityFixes",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -6703,6 +6766,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -6746,6 +6810,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -6783,6 +6848,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -6866,6 +6932,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listBranches",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -6903,6 +6970,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -6940,6 +7008,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "boolean",
               "default": undefined,
               "deprecated": false,
@@ -6977,6 +7046,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -7014,6 +7084,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -7057,6 +7128,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -7094,6 +7166,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -7133,6 +7206,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "boolean",
               "default": undefined,
               "deprecated": false,
@@ -7170,6 +7244,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -7207,6 +7282,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -7248,6 +7324,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "ShortBranch",
               "code": 200,
               "description": "Response",
@@ -7330,6 +7407,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getBranch",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -7367,6 +7445,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -7404,6 +7483,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -7447,6 +7527,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -7484,6 +7565,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -7521,6 +7603,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -7605,6 +7688,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getBranchProtection",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -7642,6 +7726,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -7679,6 +7764,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -7722,6 +7808,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -7759,6 +7846,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -7796,6 +7884,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -7894,6 +7983,7 @@ test("getService with GitHub repos service", async () => {
           "name": "updateBranchProtection",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -7931,6 +8021,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -7968,6 +8059,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -8005,6 +8097,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -9363,6 +9456,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -10724,6 +10818,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -10761,6 +10856,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -10798,6 +10894,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -10880,6 +10977,7 @@ test("getService with GitHub repos service", async () => {
           "name": "deleteBranchProtection",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -10917,6 +11015,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -10954,6 +11053,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -10997,6 +11097,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11034,6 +11135,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11071,6 +11173,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11148,6 +11251,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getAdminBranchProtection",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11185,6 +11289,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11222,6 +11327,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11265,6 +11371,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11302,6 +11409,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11339,6 +11447,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11420,6 +11529,7 @@ test("getService with GitHub repos service", async () => {
           "name": "setAdminBranchProtection",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11457,6 +11567,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11494,6 +11605,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11537,6 +11649,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11574,6 +11687,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11611,6 +11725,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11695,6 +11810,7 @@ test("getService with GitHub repos service", async () => {
           "name": "deleteAdminBranchProtection",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11732,6 +11848,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11769,6 +11886,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11812,6 +11930,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11849,6 +11968,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11886,6 +12006,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -11963,6 +12084,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getPullRequestReviewProtection",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -12000,6 +12122,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -12037,6 +12160,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -12080,6 +12204,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -12117,6 +12242,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -12154,6 +12280,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -12236,6 +12363,7 @@ test("getService with GitHub repos service", async () => {
           "name": "deletePullRequestReviewProtection",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -12273,6 +12401,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -12310,6 +12439,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -12353,6 +12483,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -12390,6 +12521,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -12427,6 +12559,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -12513,6 +12646,7 @@ test("getService with GitHub repos service", async () => {
           "name": "updatePullRequestReviewProtection",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -12550,6 +12684,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -12587,6 +12722,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -12624,6 +12760,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -13235,6 +13372,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -13849,6 +13987,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -13886,6 +14025,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -13923,6 +14063,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14011,6 +14152,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getCommitSignatureProtection",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14048,6 +14190,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14085,6 +14228,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14128,6 +14272,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14165,6 +14310,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14202,6 +14348,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14288,6 +14435,7 @@ test("getService with GitHub repos service", async () => {
           "name": "createCommitSignatureProtection",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14325,6 +14473,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14362,6 +14511,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14405,6 +14555,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14442,6 +14593,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14479,6 +14631,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14563,6 +14716,7 @@ test("getService with GitHub repos service", async () => {
           "name": "deleteCommitSignatureProtection",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14600,6 +14754,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14637,6 +14792,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14680,6 +14836,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14717,6 +14874,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14754,6 +14912,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14836,6 +14995,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getStatusChecksProtection",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14873,6 +15033,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14910,6 +15071,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14953,6 +15115,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -14990,6 +15153,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -15027,6 +15191,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -15104,6 +15269,7 @@ test("getService with GitHub repos service", async () => {
           "name": "removeStatusCheckProtection",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -15141,6 +15307,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -15178,6 +15345,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -15221,6 +15389,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -15258,6 +15427,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -15295,6 +15465,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -15383,6 +15554,7 @@ test("getService with GitHub repos service", async () => {
           "name": "updateStatusCheckProtection",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -15420,6 +15592,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -15457,6 +15630,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -15494,6 +15668,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -15768,6 +15943,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -16045,6 +16221,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -16082,6 +16259,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -16119,6 +16297,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -16201,6 +16380,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getAllStatusCheckContexts",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -16238,6 +16418,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -16275,6 +16456,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -16318,6 +16500,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -16355,6 +16538,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -16392,6 +16576,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -16434,6 +16619,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "code": 200,
               "description": "Response",
@@ -16527,6 +16713,7 @@ test("getService with GitHub repos service", async () => {
           "name": "addStatusCheckContexts",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -16564,6 +16751,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -16601,6 +16789,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -16638,6 +16827,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -16848,6 +17038,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -17061,6 +17252,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -17098,6 +17290,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -17135,6 +17328,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -17177,6 +17371,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "code": 200,
               "description": "Response",
@@ -17266,6 +17461,7 @@ test("getService with GitHub repos service", async () => {
           "name": "setStatusCheckContexts",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -17303,6 +17499,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -17340,6 +17537,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -17377,6 +17575,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -17587,6 +17786,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -17800,6 +18000,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -17837,6 +18038,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -17874,6 +18076,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -17916,6 +18119,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "code": 200,
               "description": "Response",
@@ -18005,6 +18209,7 @@ test("getService with GitHub repos service", async () => {
           "name": "removeStatusCheckContexts",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -18042,6 +18247,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -18079,6 +18285,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -18116,6 +18323,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -18326,6 +18534,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -18539,6 +18748,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -18576,6 +18786,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -18613,6 +18824,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -18655,6 +18867,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "code": 200,
               "description": "Response",
@@ -18746,6 +18959,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getAccessRestrictions",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -18783,6 +18997,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -18820,6 +19035,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -18863,6 +19079,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -18900,6 +19117,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -18937,6 +19155,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -19016,6 +19235,7 @@ test("getService with GitHub repos service", async () => {
           "name": "deleteAccessRestrictions",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -19053,6 +19273,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -19090,6 +19311,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -19133,6 +19355,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -19170,6 +19393,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -19207,6 +19431,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -19291,6 +19516,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getAppsWithAccessToProtectedBranch",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -19328,6 +19554,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -19365,6 +19592,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -19408,6 +19636,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -19445,6 +19674,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -19482,6 +19712,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -19524,6 +19755,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Integration",
               "code": 200,
               "description": "Response",
@@ -19586,6 +19818,7 @@ test("getService with GitHub repos service", async () => {
           "name": "addAppAccessRestrictions",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -19623,6 +19856,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -19660,6 +19894,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -19697,6 +19932,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -19907,6 +20143,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -20120,6 +20357,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -20157,6 +20395,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -20194,6 +20433,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -20236,6 +20476,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Integration",
               "code": 200,
               "description": "Response",
@@ -20298,6 +20539,7 @@ test("getService with GitHub repos service", async () => {
           "name": "setAppAccessRestrictions",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -20335,6 +20577,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -20372,6 +20615,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -20409,6 +20653,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -20619,6 +20864,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -20832,6 +21078,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -20869,6 +21116,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -20906,6 +21154,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -20948,6 +21197,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Integration",
               "code": 200,
               "description": "Response",
@@ -21010,6 +21260,7 @@ test("getService with GitHub repos service", async () => {
           "name": "removeAppAccessRestrictions",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -21047,6 +21298,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -21084,6 +21336,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -21121,6 +21374,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -21331,6 +21585,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -21544,6 +21799,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -21581,6 +21837,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -21618,6 +21875,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -21660,6 +21918,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Integration",
               "code": 200,
               "description": "Response",
@@ -21718,6 +21977,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getTeamsWithAccessToProtectedBranch",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -21755,6 +22015,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -21792,6 +22053,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -21835,6 +22097,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -21872,6 +22135,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -21909,6 +22173,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -21951,6 +22216,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Team",
               "code": 200,
               "description": "Response",
@@ -22013,6 +22279,7 @@ test("getService with GitHub repos service", async () => {
           "name": "addTeamAccessRestrictions",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -22050,6 +22317,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -22087,6 +22355,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -22124,6 +22393,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -22334,6 +22604,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -22547,6 +22818,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -22584,6 +22856,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -22621,6 +22894,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -22663,6 +22937,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Team",
               "code": 200,
               "description": "Response",
@@ -22725,6 +23000,7 @@ test("getService with GitHub repos service", async () => {
           "name": "setTeamAccessRestrictions",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -22762,6 +23038,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -22799,6 +23076,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -22836,6 +23114,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -23046,6 +23325,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -23259,6 +23539,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -23296,6 +23577,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -23333,6 +23615,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -23375,6 +23658,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Team",
               "code": 200,
               "description": "Response",
@@ -23437,6 +23721,7 @@ test("getService with GitHub repos service", async () => {
           "name": "removeTeamAccessRestrictions",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -23474,6 +23759,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -23511,6 +23797,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -23548,6 +23835,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -23758,6 +24046,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -23971,6 +24260,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -24008,6 +24298,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -24045,6 +24336,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -24087,6 +24379,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Team",
               "code": 200,
               "description": "Response",
@@ -24145,6 +24438,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getUsersWithAccessToProtectedBranch",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -24182,6 +24476,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -24219,6 +24514,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -24262,6 +24558,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -24299,6 +24596,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -24336,6 +24634,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -24378,6 +24677,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "SimpleUser",
               "code": 200,
               "description": "Response",
@@ -24440,6 +24740,7 @@ test("getService with GitHub repos service", async () => {
           "name": "addUserAccessRestrictions",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -24477,6 +24778,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -24514,6 +24816,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -24551,6 +24854,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -24761,6 +25065,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -24974,6 +25279,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -25011,6 +25317,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -25048,6 +25355,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -25090,6 +25398,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "SimpleUser",
               "code": 200,
               "description": "Response",
@@ -25152,6 +25461,7 @@ test("getService with GitHub repos service", async () => {
           "name": "setUserAccessRestrictions",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -25189,6 +25499,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -25226,6 +25537,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -25263,6 +25575,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -25473,6 +25786,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -25686,6 +26000,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -25723,6 +26038,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -25760,6 +26076,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -25802,6 +26119,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "SimpleUser",
               "code": 200,
               "description": "Response",
@@ -25864,6 +26182,7 @@ test("getService with GitHub repos service", async () => {
           "name": "removeUserAccessRestrictions",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -25901,6 +26220,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -25938,6 +26258,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -25975,6 +26296,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -26185,6 +26507,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -26398,6 +26721,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -26435,6 +26759,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -26472,6 +26797,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -26514,6 +26840,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "SimpleUser",
               "code": 200,
               "description": "Response",
@@ -26592,6 +26919,7 @@ test("getService with GitHub repos service", async () => {
           "name": "renameBranch",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -26629,6 +26957,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -26666,6 +26995,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -26703,6 +27033,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -26774,6 +27105,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -26848,6 +27180,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -26885,6 +27218,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -26922,6 +27256,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -27010,6 +27345,7 @@ test("getService with GitHub repos service", async () => {
           "name": "codeownersErrors",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -27047,6 +27383,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -27084,6 +27421,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -27127,6 +27465,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -27164,6 +27503,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -27203,6 +27543,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -27294,6 +27635,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listCollaborators",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -27331,6 +27673,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -27368,6 +27711,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -27424,6 +27768,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -27461,6 +27806,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -27504,6 +27850,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -27541,6 +27888,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -27580,6 +27928,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -27636,6 +27985,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -27673,6 +28023,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -27714,6 +28065,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Collaborator",
               "code": 200,
               "description": "Response",
@@ -27796,6 +28148,7 @@ test("getService with GitHub repos service", async () => {
           "name": "checkCollaborator",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -27833,6 +28186,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -27870,6 +28224,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -27913,6 +28268,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -27950,6 +28306,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -27987,6 +28344,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -28093,6 +28451,7 @@ test("getService with GitHub repos service", async () => {
           "name": "addCollaborator",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -28130,6 +28489,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -28167,6 +28527,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -28204,6 +28565,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -28372,6 +28734,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -28543,6 +28906,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -28580,6 +28944,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -28617,6 +28982,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -28694,6 +29060,7 @@ test("getService with GitHub repos service", async () => {
           "name": "removeCollaborator",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -28731,6 +29098,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -28768,6 +29136,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -28811,6 +29180,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -28848,6 +29218,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -28885,6 +29256,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -28967,6 +29339,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getCollaboratorPermissionLevel",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -29004,6 +29377,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -29041,6 +29415,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -29084,6 +29459,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -29121,6 +29497,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -29158,6 +29535,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -29240,6 +29618,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listCommitCommentsForRepo",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -29277,6 +29656,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -29314,6 +29694,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -29351,6 +29732,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -29394,6 +29776,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -29431,6 +29814,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -29470,6 +29854,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -29507,6 +29892,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -29548,6 +29934,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "CommitComment",
               "code": 200,
               "description": "Response",
@@ -29626,6 +30013,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getCommitComment",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -29663,6 +30051,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -29700,6 +30089,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -29743,6 +30133,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -29780,6 +30171,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -29817,6 +30209,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -29899,6 +30292,7 @@ test("getService with GitHub repos service", async () => {
           "name": "deleteCommitComment",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -29936,6 +30330,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -29973,6 +30368,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -30016,6 +30412,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -30053,6 +30450,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -30090,6 +30488,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -30172,6 +30571,7 @@ test("getService with GitHub repos service", async () => {
           "name": "updateCommitComment",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -30209,6 +30609,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -30246,6 +30647,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -30283,6 +30685,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -30354,6 +30757,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -30428,6 +30832,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -30465,6 +30870,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -30502,6 +30908,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -30626,6 +31033,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listCommits",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -30663,6 +31071,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -30700,6 +31109,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -30737,6 +31147,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -30774,6 +31185,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -30811,6 +31223,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -30848,6 +31261,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -30885,6 +31299,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -30922,6 +31337,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -30965,6 +31381,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31002,6 +31419,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31041,6 +31459,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31078,6 +31497,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31115,6 +31535,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31152,6 +31573,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31189,6 +31611,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31226,6 +31649,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -31263,6 +31687,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -31304,6 +31729,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Commit",
               "code": 200,
               "description": "Response",
@@ -31384,6 +31810,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listBranchesForHeadCommit",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31421,6 +31848,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31458,6 +31886,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31501,6 +31930,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31538,6 +31968,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31575,6 +32006,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31617,6 +32049,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "BranchShort",
               "code": 200,
               "description": "Response",
@@ -31669,6 +32102,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listCommentsForCommit",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31706,6 +32140,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31743,6 +32178,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31780,6 +32216,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -31817,6 +32254,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -31860,6 +32298,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31897,6 +32336,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31934,6 +32374,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -31973,6 +32414,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -32010,6 +32452,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -32051,6 +32494,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "CommitComment",
               "code": 200,
               "description": "Response",
@@ -32135,6 +32579,7 @@ test("getService with GitHub repos service", async () => {
           "name": "createCommitComment",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -32172,6 +32617,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -32209,6 +32655,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -32246,6 +32693,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -32419,6 +32867,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -32595,6 +33044,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -32632,6 +33082,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -32669,6 +33120,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -32719,6 +33171,7 @@ test("getService with GitHub repos service", async () => {
               "export": "reference",
               "headers": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": false,
                   "description": null,
@@ -32782,6 +33235,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listPullRequestsAssociatedWithCommit",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -32819,6 +33273,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -32856,6 +33311,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -32893,6 +33349,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -32930,6 +33387,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -32973,6 +33431,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -33010,6 +33469,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -33047,6 +33507,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -33086,6 +33547,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -33123,6 +33585,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -33164,6 +33627,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "PullRequestSimple",
               "code": 200,
               "description": "Response",
@@ -33285,6 +33749,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getCommit",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -33322,6 +33787,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -33359,6 +33825,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -33396,6 +33863,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -33433,6 +33901,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -33476,6 +33945,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -33513,6 +33983,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -33550,6 +34021,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -33589,6 +34061,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -33626,6 +34099,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -33716,6 +34190,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getCombinedStatusForRef",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -33753,6 +34228,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -33790,6 +34266,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -33827,6 +34304,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -33864,6 +34342,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -33907,6 +34386,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -33944,6 +34424,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -33981,6 +34462,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -34020,6 +34502,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -34057,6 +34540,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -34143,6 +34627,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listCommitStatusesForRef",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -34180,6 +34665,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -34217,6 +34703,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -34254,6 +34741,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -34291,6 +34779,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -34334,6 +34823,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -34371,6 +34861,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -34408,6 +34899,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -34447,6 +34939,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -34484,6 +34977,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -34525,6 +35019,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Status",
               "code": 200,
               "description": "Response",
@@ -34609,6 +35104,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getCommunityProfileMetrics",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -34646,6 +35142,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -34689,6 +35186,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -34726,6 +35224,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -34853,6 +35352,7 @@ test("getService with GitHub repos service", async () => {
           "name": "compareCommits",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -34890,6 +35390,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -34927,6 +35428,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -34964,6 +35466,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -35001,6 +35504,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -35044,6 +35548,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -35081,6 +35586,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -35118,6 +35624,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -35157,6 +35664,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -35194,6 +35702,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -35324,6 +35833,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getContent",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -35361,6 +35871,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -35398,6 +35909,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -35435,6 +35947,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -35478,6 +35991,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -35515,6 +36029,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -35552,6 +36067,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -35591,6 +36107,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -35632,6 +36149,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "code": 200,
               "description": "Response",
@@ -35776,6 +36294,7 @@ test("getService with GitHub repos service", async () => {
           "name": "createOrUpdateFileContents",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -35813,6 +36332,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -35850,6 +36370,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -35887,6 +36408,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -36338,6 +36860,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -36792,6 +37315,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -36829,6 +37353,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -36866,6 +37391,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -36968,6 +37494,7 @@ test("getService with GitHub repos service", async () => {
           "name": "deleteFile",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -37005,6 +37532,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -37042,6 +37570,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -37079,6 +37608,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -37424,6 +37954,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -37772,6 +38303,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -37809,6 +38341,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -37846,6 +38379,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -37937,6 +38471,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listContributors",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -37974,6 +38509,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -38011,6 +38547,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -38048,6 +38585,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -38085,6 +38623,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -38128,6 +38667,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -38165,6 +38705,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -38204,6 +38745,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -38241,6 +38783,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -38278,6 +38821,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -38319,6 +38863,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Contributor",
               "code": 200,
               "description": "if repository contains content",
@@ -38393,6 +38938,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listDeployments",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -38430,6 +38976,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -38467,6 +39014,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": "'none'",
               "deprecated": false,
@@ -38504,6 +39052,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": "'none'",
               "deprecated": false,
@@ -38541,6 +39090,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": "'none'",
               "deprecated": false,
@@ -38578,6 +39128,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": "'none'",
               "deprecated": false,
@@ -38615,6 +39166,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -38652,6 +39204,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -38695,6 +39248,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -38732,6 +39286,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -38771,6 +39326,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": "'none'",
               "deprecated": false,
@@ -38808,6 +39364,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": "'none'",
               "deprecated": false,
@@ -38845,6 +39402,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": "'none'",
               "deprecated": false,
@@ -38882,6 +39440,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": "'none'",
               "deprecated": false,
@@ -38919,6 +39478,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -38956,6 +39516,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -38997,6 +39558,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Deployment",
               "code": 200,
               "description": "Response",
@@ -39123,6 +39685,7 @@ test("getService with GitHub repos service", async () => {
           "name": "createDeployment",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -39160,6 +39723,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -39197,6 +39761,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -39608,6 +40173,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -40022,6 +40588,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -40059,6 +40626,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -40123,6 +40691,7 @@ test("getService with GitHub repos service", async () => {
               "type": "Deployment",
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "code": 202,
               "description": "Merged branch response",
@@ -40212,6 +40781,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getDeployment",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -40249,6 +40819,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -40286,6 +40857,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -40329,6 +40901,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -40366,6 +40939,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -40403,6 +40977,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -40496,6 +41071,7 @@ test("getService with GitHub repos service", async () => {
           "name": "deleteDeployment",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -40533,6 +41109,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -40570,6 +41147,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -40613,6 +41191,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -40650,6 +41229,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -40687,6 +41267,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -40770,6 +41351,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listDeploymentStatuses",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -40807,6 +41389,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -40844,6 +41427,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -40881,6 +41465,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -40918,6 +41503,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -40961,6 +41547,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -40998,6 +41585,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -41035,6 +41623,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -41074,6 +41663,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -41111,6 +41701,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -41152,6 +41743,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "DeploymentStatus",
               "code": 200,
               "description": "Response",
@@ -41232,6 +41824,7 @@ test("getService with GitHub repos service", async () => {
           "name": "createDeploymentStatus",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -41269,6 +41862,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -41306,6 +41900,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -41343,6 +41938,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -41811,6 +42407,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -42282,6 +42879,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -42319,6 +42917,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -42356,6 +42955,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -42406,6 +43006,7 @@ test("getService with GitHub repos service", async () => {
               "export": "reference",
               "headers": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": false,
                   "description": null,
@@ -42473,6 +43074,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getDeploymentStatus",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -42510,6 +43112,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -42547,6 +43150,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -42584,6 +43188,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -42627,6 +43232,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -42664,6 +43270,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -42701,6 +43308,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -42738,6 +43346,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -42829,6 +43438,7 @@ test("getService with GitHub repos service", async () => {
           "name": "createDispatchEvent",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -42866,6 +43476,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -42903,6 +43514,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -42968,7 +43580,7 @@ test("getService with GitHub repos service", async () => {
                   "uniqueItems": undefined,
                 },
                 Object {
-                  "additionalProperties": undefined,
+                  "additionalProperties": true,
                   "base": "any",
                   "deprecated": undefined,
                   "description": "JSON payload with extra information about the webhook event that your action or workflow may use.",
@@ -43008,6 +43620,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -43073,7 +43686,7 @@ test("getService with GitHub repos service", async () => {
                 "uniqueItems": undefined,
               },
               Object {
-                "additionalProperties": undefined,
+                "additionalProperties": true,
                 "base": "any",
                 "deprecated": undefined,
                 "description": "JSON payload with extra information about the webhook event that your action or workflow may use.",
@@ -43116,6 +43729,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -43153,6 +43767,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -43232,6 +43847,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getAllEnvironments",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -43269,6 +43885,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -43306,6 +43923,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -43343,6 +43961,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -43386,6 +44005,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -43423,6 +44043,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -43462,6 +44083,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -43499,6 +44121,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -43540,6 +44163,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "code": 200,
               "description": "Response",
@@ -43664,6 +44288,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getEnvironment",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -43701,6 +44326,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -43738,6 +44364,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -43781,6 +44408,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -43818,6 +44446,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -43855,6 +44484,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -43948,6 +44578,7 @@ test("getService with GitHub repos service", async () => {
           "name": "createOrUpdateEnvironment",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -43985,6 +44616,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -44022,6 +44654,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -44059,6 +44692,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": false,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -44264,6 +44898,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": false,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -44472,6 +45107,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -44509,6 +45145,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -44546,6 +45183,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -44623,6 +45261,7 @@ test("getService with GitHub repos service", async () => {
           "name": "deleteAnEnvironment",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -44660,6 +45299,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -44697,6 +45337,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -44740,6 +45381,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -44777,6 +45419,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -44814,6 +45457,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -44897,6 +45541,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listForks",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -44934,6 +45579,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -44971,6 +45617,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -45033,6 +45680,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -45070,6 +45718,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -45113,6 +45762,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -45150,6 +45800,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -45189,6 +45840,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -45251,6 +45903,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -45288,6 +45941,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -45329,6 +45983,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "MinimalRepository",
               "code": 200,
               "description": "Response",
@@ -45421,6 +46076,7 @@ test("getService with GitHub repos service", async () => {
           "name": "createFork",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -45458,6 +46114,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -45495,6 +46152,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -45600,6 +46258,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -45708,6 +46367,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -45745,6 +46405,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -45830,6 +46491,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listWebhooks",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -45867,6 +46529,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -45904,6 +46567,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -45941,6 +46605,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -45984,6 +46649,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -46021,6 +46687,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -46060,6 +46727,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -46097,6 +46765,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -46138,6 +46807,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Hook",
               "code": 200,
               "description": "Response",
@@ -46229,6 +46899,7 @@ test("getService with GitHub repos service", async () => {
           "name": "createWebhook",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -46266,6 +46937,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -46303,6 +46975,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": false,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -46668,6 +47341,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": false,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -47036,6 +47710,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -47073,6 +47748,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -47123,6 +47799,7 @@ test("getService with GitHub repos service", async () => {
               "export": "reference",
               "headers": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": false,
                   "description": null,
@@ -47190,6 +47867,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getWebhook",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -47227,6 +47905,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -47264,6 +47943,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -47307,6 +47987,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -47344,6 +48025,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -47381,6 +48063,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -47463,6 +48146,7 @@ test("getService with GitHub repos service", async () => {
           "name": "deleteWebhook",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -47500,6 +48184,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -47537,6 +48222,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -47580,6 +48266,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -47617,6 +48304,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -47654,6 +48342,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -47744,6 +48433,7 @@ test("getService with GitHub repos service", async () => {
           "name": "updateWebhook",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -47781,6 +48471,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -47818,6 +48509,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -47855,6 +48547,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -48320,6 +49013,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -48788,6 +49482,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -48825,6 +49520,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -48862,6 +49558,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -48943,6 +49640,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getWebhookConfigForRepo",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -48980,6 +49678,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -49017,6 +49716,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -49060,6 +49760,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -49097,6 +49798,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -49134,6 +49836,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -49219,6 +49922,7 @@ test("getService with GitHub repos service", async () => {
           "name": "updateWebhookConfigForRepo",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -49256,6 +49960,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -49293,6 +49998,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -49330,6 +50036,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": false,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -49448,6 +50155,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": false,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -49569,6 +50277,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -49606,6 +50315,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -49643,6 +50353,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -49731,6 +50442,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listWebhookDeliveries",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -49768,6 +50480,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -49805,6 +50518,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -49842,6 +50556,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -49879,6 +50594,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -49922,6 +50638,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -49959,6 +50676,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -49996,6 +50714,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -50035,6 +50754,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -50072,6 +50792,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -50113,6 +50834,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "HookDeliveryItem",
               "code": 200,
               "description": "Response",
@@ -50173,6 +50895,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getWebhookDelivery",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -50210,6 +50933,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -50247,6 +50971,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -50284,6 +51009,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -50327,6 +51053,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -50364,6 +51091,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -50401,6 +51129,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -50438,6 +51167,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -50524,6 +51254,7 @@ test("getService with GitHub repos service", async () => {
           "name": "redeliverWebhookDelivery",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -50561,6 +51292,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -50598,6 +51330,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -50635,6 +51368,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -50678,6 +51412,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -50715,6 +51450,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -50752,6 +51488,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -50789,6 +51526,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -50831,6 +51569,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "code": 202,
               "description": "Accepted",
@@ -50883,6 +51622,7 @@ test("getService with GitHub repos service", async () => {
           "name": "pingWebhook",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -50920,6 +51660,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -50957,6 +51698,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -51000,6 +51742,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -51037,6 +51780,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -51074,6 +51818,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -51156,6 +51901,7 @@ test("getService with GitHub repos service", async () => {
           "name": "testPushWebhook",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -51193,6 +51939,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -51230,6 +51977,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -51273,6 +52021,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -51310,6 +52059,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -51347,6 +52097,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -51425,6 +52176,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listInvitations",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -51462,6 +52214,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -51499,6 +52252,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -51536,6 +52290,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -51579,6 +52334,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -51616,6 +52372,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -51655,6 +52412,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -51692,6 +52450,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -51733,6 +52492,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "RepositoryInvitation",
               "code": 200,
               "description": "Response",
@@ -51804,6 +52564,7 @@ test("getService with GitHub repos service", async () => {
           "name": "deleteInvitation",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -51841,6 +52602,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -51878,6 +52640,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -51921,6 +52684,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -51958,6 +52722,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -51995,6 +52760,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -52072,6 +52838,7 @@ test("getService with GitHub repos service", async () => {
           "name": "updateInvitation",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -52109,6 +52876,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -52146,6 +52914,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -52183,6 +52952,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -52351,6 +53121,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -52522,6 +53293,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -52559,6 +53331,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -52596,6 +53369,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -52676,6 +53450,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listDeployKeys",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -52713,6 +53488,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -52750,6 +53526,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -52787,6 +53564,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -52830,6 +53608,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -52867,6 +53646,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -52906,6 +53686,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -52943,6 +53724,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -52984,6 +53766,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "DeployKey",
               "code": 200,
               "description": "Response",
@@ -53062,6 +53845,7 @@ test("getService with GitHub repos service", async () => {
           "name": "createDeployKey",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -53099,6 +53883,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -53136,6 +53921,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -53277,6 +54063,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -53421,6 +54208,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -53458,6 +54246,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -53508,6 +54297,7 @@ test("getService with GitHub repos service", async () => {
               "export": "reference",
               "headers": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": false,
                   "description": null,
@@ -53575,6 +54365,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getDeployKey",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -53612,6 +54403,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -53649,6 +54441,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -53692,6 +54485,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -53729,6 +54523,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -53766,6 +54561,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -53843,6 +54639,7 @@ test("getService with GitHub repos service", async () => {
           "name": "deleteDeployKey",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -53880,6 +54677,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -53917,6 +54715,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -53960,6 +54759,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -53997,6 +54797,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -54034,6 +54835,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -54111,6 +54913,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listLanguages",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -54148,6 +54951,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -54191,6 +54995,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -54228,6 +55033,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -54314,6 +55120,7 @@ test("getService with GitHub repos service", async () => {
           "name": "enableLfsForRepo",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -54351,6 +55158,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -54394,6 +55202,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -54431,6 +55240,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -54473,6 +55283,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "code": 202,
               "description": "Accepted",
@@ -54520,6 +55331,7 @@ test("getService with GitHub repos service", async () => {
           "name": "disableLfsForRepo",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -54557,6 +55369,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -54600,6 +55413,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -54637,6 +55451,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -54723,6 +55538,7 @@ test("getService with GitHub repos service", async () => {
           "name": "mergeUpstream",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -54760,6 +55576,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -54797,6 +55614,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -54868,6 +55686,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -54942,6 +55761,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -54979,6 +55799,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -55075,6 +55896,7 @@ test("getService with GitHub repos service", async () => {
           "name": "merge",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -55112,6 +55934,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -55149,6 +55972,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -55288,6 +56112,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -55430,6 +56255,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -55467,6 +56293,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -55551,6 +56378,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getPages",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -55588,6 +56416,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -55631,6 +56460,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -55668,6 +56498,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -55756,6 +56587,7 @@ test("getService with GitHub repos service", async () => {
           "name": "createPagesSite",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -55793,6 +56625,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -55830,6 +56663,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -56097,6 +56931,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -56367,6 +57202,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -56404,6 +57240,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -56490,6 +57327,7 @@ test("getService with GitHub repos service", async () => {
           "name": "updateInformationAboutPagesSite",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -56527,6 +57365,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -56564,6 +57403,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -57067,6 +57907,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -57573,6 +58414,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -57610,6 +58452,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -57694,6 +58537,7 @@ test("getService with GitHub repos service", async () => {
           "name": "deletePagesSite",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -57731,6 +58575,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -57774,6 +58619,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -57811,6 +58657,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -57889,6 +58736,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listPagesBuilds",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -57926,6 +58774,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -57963,6 +58812,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -58000,6 +58850,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -58043,6 +58894,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -58080,6 +58932,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -58119,6 +58972,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -58156,6 +59010,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -58197,6 +59052,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "PageBuild",
               "code": 200,
               "description": "Response",
@@ -58272,6 +59128,7 @@ test("getService with GitHub repos service", async () => {
           "name": "requestPagesBuild",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -58309,6 +59166,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -58352,6 +59210,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -58389,6 +59248,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -58468,6 +59328,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getLatestPagesBuild",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -58505,6 +59366,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -58548,6 +59410,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -58585,6 +59448,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -58664,6 +59528,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getPagesBuild",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -58701,6 +59566,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -58738,6 +59604,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -58781,6 +59648,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -58818,6 +59686,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -58855,6 +59724,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -58952,6 +59822,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getPagesHealthCheck",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -58989,6 +59860,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59032,6 +59904,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59069,6 +59942,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59181,6 +60055,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getReadme",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59218,6 +60093,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59255,6 +60131,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59298,6 +60175,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59335,6 +60213,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59374,6 +60253,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59463,6 +60343,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getReadmeInDirectory",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59500,6 +60381,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59537,6 +60419,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59574,6 +60457,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59617,6 +60501,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59654,6 +60539,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59691,6 +60577,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59730,6 +60617,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59816,6 +60704,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listReleases",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59853,6 +60742,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -59890,6 +60780,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -59927,6 +60818,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -59970,6 +60862,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -60007,6 +60900,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -60046,6 +60940,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -60083,6 +60978,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -60124,6 +61020,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Release",
               "code": 200,
               "description": "Response",
@@ -60208,6 +61105,7 @@ test("getService with GitHub repos service", async () => {
           "name": "createRelease",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -60245,6 +61143,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -60282,6 +61181,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -60591,6 +61491,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -60903,6 +61804,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -60940,6 +61842,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -60990,6 +61893,7 @@ test("getService with GitHub repos service", async () => {
               "export": "reference",
               "headers": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": false,
                   "description": null,
@@ -61061,6 +61965,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getReleaseAsset",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -61098,6 +62003,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -61135,6 +62041,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -61178,6 +62085,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -61215,6 +62123,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -61252,6 +62161,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -61329,6 +62239,7 @@ test("getService with GitHub repos service", async () => {
           "name": "deleteReleaseAsset",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -61366,6 +62277,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -61403,6 +62315,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -61446,6 +62359,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -61483,6 +62397,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -61520,6 +62435,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -61597,6 +62513,7 @@ test("getService with GitHub repos service", async () => {
           "name": "updateReleaseAsset",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -61634,6 +62551,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -61671,6 +62589,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -61708,6 +62627,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -61849,6 +62769,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -61993,6 +62914,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -62030,6 +62952,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -62067,6 +62990,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -62151,6 +63075,7 @@ test("getService with GitHub repos service", async () => {
           "name": "generateReleaseNotes",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -62188,6 +63113,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -62225,6 +63151,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -62398,6 +63325,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -62574,6 +63502,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -62611,6 +63540,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -62692,6 +63622,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getLatestRelease",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -62729,6 +63660,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -62772,6 +63704,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -62809,6 +63742,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -62893,6 +63827,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getReleaseByTag",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -62930,6 +63865,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -62967,6 +63903,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -63010,6 +63947,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -63047,6 +63985,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -63084,6 +64023,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -63168,6 +64108,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getRelease",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -63205,6 +64146,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -63242,6 +64184,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -63285,6 +64228,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -63322,6 +64266,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -63359,6 +64304,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -63436,6 +64382,7 @@ test("getService with GitHub repos service", async () => {
           "name": "deleteRelease",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -63473,6 +64420,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -63510,6 +64458,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -63553,6 +64502,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -63590,6 +64540,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -63627,6 +64578,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -63709,6 +64661,7 @@ test("getService with GitHub repos service", async () => {
           "name": "updateRelease",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -63746,6 +64699,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -63783,6 +64737,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -63820,6 +64775,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -64095,6 +65051,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -64373,6 +65330,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -64410,6 +65368,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -64447,6 +65406,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -64527,6 +65487,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listReleaseAssets",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -64564,6 +65525,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -64601,6 +65563,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -64638,6 +65601,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -64675,6 +65639,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -64718,6 +65683,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -64755,6 +65721,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -64792,6 +65759,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -64831,6 +65799,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -64868,6 +65837,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -64909,6 +65879,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "ReleaseAsset",
               "code": 200,
               "description": "Response",
@@ -65004,6 +65975,7 @@ test("getService with GitHub repos service", async () => {
           "name": "uploadReleaseAsset",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -65041,6 +66013,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -65078,6 +66051,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -65115,6 +66089,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -65152,6 +66127,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -65189,6 +66165,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "description": null,
@@ -65225,6 +66202,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "string",
             "default": undefined,
             "description": null,
@@ -65264,6 +66242,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -65301,6 +66280,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -65338,6 +66318,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -65377,6 +66358,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -65414,6 +66396,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -65492,6 +66475,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getCodeFrequencyStats",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -65529,6 +66513,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -65572,6 +66557,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -65609,6 +66595,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -65651,6 +66638,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "CodeFrequencyStat",
               "code": 200,
               "description": "Returns a weekly aggregate of the number of additions and deletions pushed to a repository.",
@@ -65687,6 +66675,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "code": 202,
               "description": "Accepted",
@@ -65736,6 +66725,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getCommitActivityStats",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -65773,6 +66763,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -65816,6 +66807,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -65853,6 +66845,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -65895,6 +66888,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "CommitActivity",
               "code": 200,
               "description": "Response",
@@ -65931,6 +66925,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "code": 202,
               "description": "Accepted",
@@ -65986,6 +66981,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getContributorsStats",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -66023,6 +67019,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -66066,6 +67063,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -66103,6 +67101,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -66145,6 +67144,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "ContributorActivity",
               "code": 200,
               "description": "*   \`w\` - Start of the week, given as a [Unix timestamp](http://en.wikipedia.org/wiki/Unix_time).
@@ -66184,6 +67184,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "code": 202,
               "description": "Accepted",
@@ -66240,6 +67241,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getParticipationStats",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -66277,6 +67279,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -66320,6 +67323,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -66357,6 +67361,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -66442,6 +67447,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getPunchCardStats",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -66479,6 +67485,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -66522,6 +67529,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -66559,6 +67567,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -66601,6 +67610,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "CodeFrequencyStat",
               "code": 200,
               "description": "For example, \`[2, 14, 25]\` indicates that there were 25 total commits, during the 2:00pm hour on Tuesdays. All times are based on the time zone of individual commits.",
@@ -66654,6 +67664,7 @@ test("getService with GitHub repos service", async () => {
           "name": "createCommitStatus",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -66691,6 +67702,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -66728,6 +67740,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -66765,6 +67778,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -67025,6 +68039,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -67288,6 +68303,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -67325,6 +68341,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -67362,6 +68379,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -67412,6 +68430,7 @@ test("getService with GitHub repos service", async () => {
               "export": "reference",
               "headers": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": false,
                   "description": null,
@@ -67475,6 +68494,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listTags",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -67512,6 +68532,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -67549,6 +68570,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -67586,6 +68608,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -67629,6 +68652,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -67666,6 +68690,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -67705,6 +68730,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -67742,6 +68768,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -67783,6 +68810,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Tag",
               "code": 200,
               "description": "Response",
@@ -67867,6 +68895,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listTagProtection",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -67904,6 +68933,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -67947,6 +68977,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -67984,6 +69015,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -68026,6 +69058,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "TagProtection",
               "code": 200,
               "description": "Response",
@@ -68087,6 +69120,7 @@ test("getService with GitHub repos service", async () => {
           "name": "createTagProtection",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -68124,6 +69158,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -68161,6 +69196,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -68232,6 +69268,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -68306,6 +69343,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -68343,6 +69381,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -68430,6 +69469,7 @@ test("getService with GitHub repos service", async () => {
           "name": "deleteTagProtection",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -68467,6 +69507,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -68504,6 +69545,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -68547,6 +69589,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -68584,6 +69627,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -68621,6 +69665,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -68704,6 +69749,7 @@ test("getService with GitHub repos service", async () => {
           "name": "downloadTarballArchive",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -68741,6 +69787,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -68778,6 +69825,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -68821,6 +69869,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -68858,6 +69907,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -68895,6 +69945,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -68973,6 +70024,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listTeams",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -69010,6 +70062,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -69047,6 +70100,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -69084,6 +70138,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -69127,6 +70182,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -69164,6 +70220,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -69203,6 +70260,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -69240,6 +70298,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -69281,6 +70340,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Team",
               "code": 200,
               "description": "Response",
@@ -69359,6 +70419,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getAllTopics",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -69396,6 +70457,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -69433,6 +70495,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -69470,6 +70533,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -69513,6 +70577,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -69550,6 +70615,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -69589,6 +70655,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -69626,6 +70693,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -69713,6 +70781,7 @@ test("getService with GitHub repos service", async () => {
           "name": "replaceAllTopics",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -69750,6 +70819,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -69787,6 +70857,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -69891,6 +70962,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -69998,6 +71070,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70035,6 +71108,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70119,6 +71193,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getClones",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70156,6 +71231,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70193,6 +71269,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70255,6 +71332,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70292,6 +71370,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70331,6 +71410,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70433,6 +71513,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getTopPaths",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70470,6 +71551,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70513,6 +71595,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70550,6 +71633,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70592,6 +71676,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "ContentTraffic",
               "code": 200,
               "description": "Response",
@@ -70648,6 +71733,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getTopReferrers",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70685,6 +71771,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70728,6 +71815,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70765,6 +71853,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70807,6 +71896,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "ReferrerTraffic",
               "code": 200,
               "description": "Response",
@@ -70863,6 +71953,7 @@ test("getService with GitHub repos service", async () => {
           "name": "getViews",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70900,6 +71991,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70937,6 +72029,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -70999,6 +72092,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -71036,6 +72130,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -71075,6 +72170,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -71172,6 +72268,7 @@ test("getService with GitHub repos service", async () => {
           "name": "transfer",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -71209,6 +72306,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -71246,6 +72344,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -71384,6 +72483,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -71525,6 +72625,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -71562,6 +72663,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -71644,6 +72746,7 @@ test("getService with GitHub repos service", async () => {
           "name": "checkVulnerabilityAlerts",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -71681,6 +72784,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -71724,6 +72828,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -71761,6 +72866,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -71836,6 +72942,7 @@ test("getService with GitHub repos service", async () => {
           "name": "enableVulnerabilityAlerts",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -71873,6 +72980,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -71916,6 +73024,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -71953,6 +73062,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -72028,6 +73138,7 @@ test("getService with GitHub repos service", async () => {
           "name": "disableVulnerabilityAlerts",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -72065,6 +73176,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -72108,6 +73220,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -72145,6 +73258,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -72228,6 +73342,7 @@ test("getService with GitHub repos service", async () => {
           "name": "downloadZipballArchive",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -72265,6 +73380,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -72302,6 +73418,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -72345,6 +73462,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -72382,6 +73500,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -72419,6 +73538,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -72503,6 +73623,7 @@ test("getService with GitHub repos service", async () => {
           "name": "createUsingTemplate",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -72540,6 +73661,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -72577,6 +73699,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -72784,6 +73907,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -72994,6 +74118,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -73031,6 +74156,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -73081,6 +74207,7 @@ test("getService with GitHub repos service", async () => {
               "export": "reference",
               "headers": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": false,
                   "description": null,
@@ -73156,6 +74283,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listPublic",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -73200,6 +74328,7 @@ test("getService with GitHub repos service", async () => {
           "parametersPath": Array [],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -73241,6 +74370,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "MinimalRepository",
               "code": 200,
               "description": "Response",
@@ -73252,6 +74382,7 @@ test("getService with GitHub repos service", async () => {
               "format": undefined,
               "headers": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": false,
                   "description": null,
@@ -73344,6 +74475,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listForAuthenticatedUser",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -73400,6 +74532,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": "'owner,collaborator,organization_member'",
               "deprecated": false,
@@ -73440,6 +74573,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -73508,6 +74642,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -73570,6 +74705,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -73620,6 +74756,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -73657,6 +74794,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -73694,6 +74832,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -73731,6 +74870,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -73775,6 +74915,7 @@ test("getService with GitHub repos service", async () => {
           "parametersPath": Array [],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -73831,6 +74972,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": "'owner,collaborator,organization_member'",
               "deprecated": false,
@@ -73871,6 +75013,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -73939,6 +75082,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -74001,6 +75145,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -74051,6 +75196,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -74088,6 +75234,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -74125,6 +75272,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -74162,6 +75310,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -74203,6 +75352,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "Repository",
               "code": 200,
               "description": "Response",
@@ -74286,6 +75436,7 @@ test("getService with GitHub repos service", async () => {
           "name": "createForAuthenticatedUser",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "any",
               "default": undefined,
               "description": null,
@@ -74957,6 +76108,7 @@ test("getService with GitHub repos service", async () => {
             },
           ],
           "parametersBody": Object {
+            "additionalProperties": undefined,
             "base": "any",
             "default": undefined,
             "description": null,
@@ -75643,6 +76795,7 @@ test("getService with GitHub repos service", async () => {
               "export": "reference",
               "headers": Array [
                 Object {
+                  "additionalProperties": undefined,
                   "base": "string",
                   "deprecated": false,
                   "description": null,
@@ -75723,6 +76876,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listInvitationsForAuthenticatedUser",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -75760,6 +76914,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -75804,6 +76959,7 @@ test("getService with GitHub repos service", async () => {
           "parametersPath": Array [],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -75841,6 +76997,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -75882,6 +77039,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "RepositoryInvitation",
               "code": 200,
               "description": "Response",
@@ -75970,6 +77128,7 @@ test("getService with GitHub repos service", async () => {
           "name": "declineInvitationForAuthenticatedUser",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -76013,6 +77172,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -76105,6 +77265,7 @@ test("getService with GitHub repos service", async () => {
           "name": "acceptInvitationForAuthenticatedUser",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -76148,6 +77309,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": undefined,
               "deprecated": false,
@@ -76226,6 +77388,7 @@ test("getService with GitHub repos service", async () => {
           "name": "listForUser",
           "parameters": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -76263,6 +77426,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -76319,6 +77483,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -76381,6 +77546,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -76431,6 +77597,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -76468,6 +77635,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -76511,6 +77679,7 @@ test("getService with GitHub repos service", async () => {
           "parametersHeader": Array [],
           "parametersPath": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -76550,6 +77719,7 @@ test("getService with GitHub repos service", async () => {
           ],
           "parametersQuery": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -76606,6 +77776,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -76668,6 +77839,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "string",
               "default": undefined,
               "deprecated": false,
@@ -76718,6 +77890,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 30,
               "deprecated": false,
@@ -76755,6 +77928,7 @@ test("getService with GitHub repos service", async () => {
               "uniqueItems": undefined,
             },
             Object {
+              "additionalProperties": undefined,
               "base": "number",
               "default": 1,
               "deprecated": false,
@@ -76796,6 +77970,7 @@ test("getService with GitHub repos service", async () => {
           "responseHeader": null,
           "results": Array [
             Object {
+              "additionalProperties": undefined,
               "base": "MinimalRepository",
               "code": 200,
               "description": "Response",

@@ -488,6 +488,8 @@ class ClientGenerator {
         return this.generateTypeGeneric(property, parent);
       case "enum":
         return this.generateTypeEnum(property, parent);
+      case "tuple":
+        return this.generateTypeTuple(property, parent);
       case "array":
         return this.generateTypeArray(property, parent);
       case "reference":
@@ -542,6 +544,18 @@ class ClientGenerator {
     return `${property.base}${generateIsNullable(property)}`;
   }
 
+  private generateTypeTuple(property: Model, parent?: Model): string {
+    if (property.link) {
+      return `[${Array(property.minItems)
+        .fill(this.generateType(property.link))
+        .join(", ")}]${generateIsNullable(property)}`;
+    } else {
+      return `[${Array(property.minItems).fill(property.base).join(", ")}]${generateIsNullable(
+        property,
+      )}`;
+    }
+  }
+
   private generateTypeArray(property: Model, parent?: Model): string {
     if (property.link) {
       return `Array<${this.generateType(property.link)}>${generateIsNullable(property)}`;
@@ -563,8 +577,15 @@ class ClientGenerator {
   }
 
   private generateTypeInterface(model: Model, parent?: Model): string {
-    if (!model.properties) {
-      return "any";
+    const hasProperties = model.properties && model.properties.length > 0;
+    const strictlyNoAdditionalProperties =
+      model.additionalProperties === false ||
+      (typeof model.properties === "object" && model.properties.length === 0);
+
+    if (!hasProperties) {
+      return strictlyNoAdditionalProperties
+        ? `{}${generateIsNullable(model)}`
+        : `any${generateIsNullable(model)}`;
     } else {
       return `{
 ${model.properties.map((p) => this.generateModelProperty(p, parent)).join("")}
@@ -573,7 +594,11 @@ ${model.additionalProperties ? this.generateAdditionalProperties(model.additiona
     }
   }
 
-  private generateAdditionalProperties(model: Model): string {
+  private generateAdditionalProperties(model: boolean | Model): string {
+    if (typeof model === "boolean") {
+      return "";
+    }
+
     return `\n  [key: string]: ${this.generateType(model)} | undefined;`;
   }
 

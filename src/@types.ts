@@ -13,6 +13,7 @@ export type Model = Schema & {
     | "generic"
     | "enum"
     | "array"
+    | "tuple"
     | "dictionary"
     | "interface"
     | "one-of"
@@ -29,7 +30,7 @@ export type Model = Schema & {
   enum: Enum[];
   enums: Model[];
   properties: Model[];
-  additionalProperties?: Model;
+  additionalProperties?: boolean | Model;
 };
 
 export type Example = {

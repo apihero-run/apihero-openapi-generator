@@ -68,3 +68,19 @@ test("v3_1/github.json with inferRequestBodyName", async () => {
   expect(files).toMatchSnapshot();
   expect(mappings).toMatchSnapshot();
 });
+
+test("v3_1/cloudRenderer.json", async () => {
+  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3_1/cloudRenderer.json");
+
+  const code = generateClientFiles(doc, "cloudRenderer/v3.1");
+
+  expect(code).toMatchSnapshot();
+});
+
+test("v3/twitter.json", async () => {
+  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3/twitter.json");
+
+  const code = generateClientFiles(doc, "twitter/v3");
+
+  expect(code).toMatchSnapshot();
+});

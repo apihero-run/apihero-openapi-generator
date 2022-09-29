@@ -1,0 +1,427 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Stickies Cloud Renderer API",
+    "version": "1.0.0"
+  },
+  "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
+  "servers": [
+    {
+      "url": "https://renderer.stickies.wtf/api/v1"
+    }
+  ],
+  "tags": [
+    {
+      "name": "stickies"
+    }
+  ],
+  "security": [
+    {
+      "apiKey": []
+    }
+  ],
+  "paths": {
+    "renders/character": {
+      "post": {
+        "operationId": "renderCharacter",
+        "tags": [
+          "stickies"
+        ],
+        "summary": "Render a Stickies character image",
+        "description": "Render a Stickies character image, based on the character, and asset, in a specific pose",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/render",
+            "description": "Successful response"
+          },
+          "400": {
+            "$ref": "#/components/responses/badRequest",
+            "description": "Bad request"
+          },
+          "403": {
+            "$ref": "#/components/responses/requiresAuthentication",
+            "description": "Requires authentication"
+          }
+        },
+        "requestBody": {
+          "$ref": "#/components/requestBodies/renderCharacter"
+        }
+      }
+    },
+    "renders/sticker": {
+      "post": {
+        "operationId": "renderSticker",
+        "tags": [
+          "stickies"
+        ],
+        "summary": "Render a Stickies image",
+        "description": "Render a Stickies image, based on the sticker, character, and asset, in a specific pose",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/render",
+            "description": "Successful response"
+          },
+          "400": {
+            "$ref": "#/components/responses/badRequest",
+            "description": "Bad request"
+          },
+          "403": {
+            "$ref": "#/components/responses/requiresAuthentication",
+            "description": "Requires authentication"
+          }
+        },
+        "requestBody": {
+          "$ref": "#/components/requestBodies/renderSticker"
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "character": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "skeletonWidth": {
+            "type": "integer"
+          },
+          "skeletonHeight": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "skeletonWidth",
+          "skeletonHeight"
+        ]
+      },
+      "characterSkin": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "skinGroup": {
+            "type": "string"
+          },
+          "requiredProperties": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type",
+                "category",
+                "value"
+              ]
+            }
+          }
+        },
+        "required": [
+          "name",
+          "skinGroup",
+          "requiredProperties"
+        ]
+      },
+      "assetProperty": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "isGlobal": {
+            "type": "boolean"
+          },
+          "locked": {
+            "type": "boolean"
+          },
+          "characterId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "category",
+          "value",
+          "type",
+          "isGlobal",
+          "locked",
+          "characterId"
+        ]
+      },
+      "asset": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "tokenId": {
+            "type": "integer"
+          },
+          "properties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/assetProperty"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "tokenId",
+          "properties"
+        ]
+      },
+      "renderStickerPayload": {
+        "type": "object",
+        "properties": {
+          "sticker": {
+            "$ref": "#/components/schemas/sticker"
+          },
+          "character": {
+            "$ref": "#/components/schemas/character"
+          },
+          "characterSkins": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/characterSkin"
+            }
+          },
+          "asset": {
+            "$ref": "#/components/schemas/asset"
+          },
+          "skeletonUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "bundleUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "selectedPoses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/pose"
+            }
+          },
+          "characterTemplate": {
+            "$ref": "#/components/schemas/characterTemplate"
+          }
+        },
+        "required": [
+          "sticker",
+          "character",
+          "characterSkins",
+          "asset",
+          "skeletonUrl",
+          "bundleUrl",
+          "selectedPoses",
+          "characterTemplate"
+        ]
+      },
+      "sticker": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "template": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "id",
+              "width",
+              "height"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "template"
+        ]
+      },
+      "pose": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "rules": {
+            "type": "array",
+            "items": false
+          }
+        },
+        "required": [
+          "name",
+          "category",
+          "rules"
+        ]
+      },
+      "characterTemplate": {
+        "type": "object",
+        "properties": {
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          },
+          "scale": {
+            "type": "number"
+          },
+          "rotation": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "x",
+          "y",
+          "scale",
+          "rotation"
+        ]
+      },
+      "basic-error": {
+        "type": "object",
+        "title": "Basic Error",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        },
+        "description": "Basic Error"
+      },
+      "renderCharacterPayload": {
+        "type": "object",
+        "properties": {
+          "character": {
+            "$ref": "#/components/schemas/character"
+          },
+          "characterSkins": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/characterSkin"
+            }
+          },
+          "asset": {
+            "$ref": "#/components/schemas/asset"
+          },
+          "skeletonUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "selectedPoses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/pose"
+            }
+          }
+        },
+        "required": [
+          "character",
+          "characterSkins",
+          "asset",
+          "skeletonUrl",
+          "selectedPoses"
+        ]
+      }
+    },
+    "requestBodies": {
+      "renderSticker": {
+        "description": "The request body for the render/sticker endpoint",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/renderStickerPayload"
+            }
+          }
+        },
+        "required": true
+      },
+      "renderCharacter": {
+        "description": "The request body for the render/character endpoint",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/renderCharacterPayload"
+            }
+          }
+        },
+        "required": true
+      }
+    },
+    "responses": {
+      "render": {
+        "description": "The render endpoint response",
+        "content": {
+          "image/png": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        }
+      },
+      "requiresAuthentication": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/basic-error"
+            }
+          }
+        },
+        "description": "Requires authentication"
+      },
+      "badRequest": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/basic-error"
+            }
+          }
+        },
+        "description": "Invalid request"
+      }
+    },
+    "securitySchemes": {
+      "apiKey": {
+        "type": "apiKey",
+        "description": "Authenticate using an API Key",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  }
+}
