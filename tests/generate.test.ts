@@ -92,3 +92,11 @@ test("v3/twitterFull.json", async () => {
 
   expect(code).toMatchSnapshot();
 });
+
+test("v3/stripe.json", async () => {
+  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3/stripe.json");
+
+  const code = generateClientFiles(doc, "stripe/v3");
+
+  expect(code).toMatchSnapshot();
+});
