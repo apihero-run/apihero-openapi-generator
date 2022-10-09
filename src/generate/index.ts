@@ -8,11 +8,14 @@ export type GenerationOptions = {
   inferRequestBodyParamName?: boolean;
 };
 
+export type GenerationStyle = "unbundled" | "bundled";
+
 export type GenerateClientOptions = {
   additionalImports?: Array<{ imports: string[]; name: string }>;
   additionalData?: Record<string, string | number>;
   generation?: GenerationOptions;
   baseUrl?: string;
+  style?: GenerationStyle;
 };
 
 export type RequestBodyParameterMapping = {
@@ -38,9 +41,15 @@ export function generateFromClient(
   identifier: string,
   options?: GenerateClientOptions,
 ): GenerateClientCodeResult {
+  const defaultOptions: GenerateClientOptions = {
+    style: "unbundled",
+  };
+
+  const opts = { ...defaultOptions, ...options };
+
   const files: Record<string, string> = {};
 
-  const clientGenerator = new ClientGenerator(identifier, client, options);
+  const clientGenerator = new ClientGenerator(identifier, client, opts);
 
   const modelCode = clientGenerator.generateModels();
 
@@ -88,7 +97,7 @@ class ClientGenerator {
     const servicesCode = this.generateServices();
 
     const imports = servicesCode
-      .map(([name]) => `import * as ${camelCase(name)} from "./${name}";`)
+      .map(([name]) => `import * as ${camelCase(name)} from "./${camelCase(name)}";`)
       .join("\n");
 
     const exports = `export { ${servicesCode.map(([name]) => camelCase(name)).join(", ")} };`;
@@ -148,7 +157,7 @@ class ClientGenerator {
 
     const serviceCode = this.generateServiceCode(service);
 
-    return [service.name, serviceCode];
+    return [camelCase(service.name), serviceCode];
   }
 
   private generateServiceCode(service: Service): string {

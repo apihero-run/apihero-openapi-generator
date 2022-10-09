@@ -100,3 +100,11 @@ test("v3/stripe.json", async () => {
 
   expect(code).toMatchSnapshot();
 });
+
+test("v3_1/sendgrid.json", async () => {
+  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3_1/sendgrid.json");
+
+  const code = generateClientFiles(doc, "sendgrid/v3_1");
+
+  expect(code).toMatchSnapshot();
+});
