@@ -249,7 +249,24 @@ class ClientGenerator {
   ): string {
     return `${this.generateOperationParameterName(operation, parameter)}${
       parameter.isRequired ? "" : "?"
-    }: ${this.generateType(parameter)}`;
+    }: ${this.generateOperationParameterType(operation, parameter)}`;
+  }
+
+  private generateOperationParameterType(
+    operation: Operation,
+    parameter: Operation["parameters"][0],
+  ): string {
+    if (
+      operationIsWrite(operation) &&
+      parameter.readOnlyProperties &&
+      parameter.readOnlyProperties.length > 0
+    ) {
+      return `Omit<${this.generateType(parameter)}, "${parameter.readOnlyProperties.join(
+        '" | "',
+      )}">`;
+    }
+
+    return this.generateType(parameter);
   }
 
   private generateOperationParameterName(
@@ -672,4 +689,8 @@ const escapeComment = (value: string): string => {
     .replace(/\*\//g, "*")
     .replace(/\/\*/g, "*")
     .replace(/\r?\n(.*)/g, (_, w) => `\n * ${w.trim()}`);
+};
+
+const operationIsWrite = (operation: Operation): boolean => {
+  return operation.method.toLowerCase() === "post" || operation.method.toLowerCase() === "put";
 };

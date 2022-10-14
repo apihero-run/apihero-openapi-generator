@@ -14,7 +14,52 @@ import camelCase from "camelcase";
 import pluralize, { singular } from "pluralize";
 
 export function getServices(doc: OpenAPIV3_1.Document): Service[] {
+  if (!doc.tags) {
+    return [getMainService(doc)];
+  }
+
   return (doc.tags || []).map((tag) => getService(doc, tag));
+}
+
+function getMainService(doc: OpenAPIV3_1.Document): Service {
+  const service: Service = {
+    name: "endpoints",
+    description: doc.info.description,
+    operations: [],
+    imports: [],
+  };
+
+  for (const [path, pathObject] of Object.entries(doc.paths ?? {})) {
+    if (!pathObject) {
+      continue;
+    }
+
+    const pathParams = getOperationParameters(doc, pathObject.parameters || []);
+
+    const operations = {
+      get: pathObject.get,
+      post: pathObject.post,
+      put: pathObject.put,
+      delete: pathObject.delete,
+      patch: pathObject.patch,
+      options: pathObject.options,
+      head: pathObject.head,
+    };
+
+    for (const [method, op] of Object.entries(operations)) {
+      if (!op) {
+        continue;
+      }
+
+      const operation = getOperation(doc, path, method, op, pathParams);
+
+      // Push the operation in the service
+      service.operations.push(operation);
+      service.imports.push(...operation.imports);
+    }
+  }
+
+  return service;
 }
 
 export function getService(doc: OpenAPIV3_1.Document, tag: OpenAPIV3_1.TagObject): Service {
@@ -483,6 +528,14 @@ const getOperationRequestBody = (
         requestBody.base = model.base;
         requestBody.template = model.template;
         requestBody.imports.push(...model.imports);
+
+        const schemaObject = getRef<OpenAPIV3_1.SchemaObject>(openApi, content.schema);
+        const schemaModel = getModel(openApi, "", schemaObject);
+
+        requestBody.readOnlyProperties = schemaModel.properties
+          .filter((p) => p.isReadOnly && p.name.length > 0)
+          .map((p) => p.name);
+
         return requestBody;
       } else {
         const model = getModel(openApi, "", content.schema);

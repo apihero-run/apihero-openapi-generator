@@ -1,0 +1,479 @@
+# Code generated. DO NOT EDIT.
+# Instead, edit the docs inside ./src and regenerate.
+
+openapi: 3.0.3
+info:
+  title: Mergent API
+  version: v2
+  description: Please see https://docs.mergent.co for more details.
+  contact:
+    name: Mergent
+    email: support@mergent.co
+    url: https://mergent.co
+  termsOfService: https://mergent.co/terms
+servers:
+  - url: https://api.mergent.co/v2
+    description: Mergent Cloud
+paths:
+  /tasks:
+    get:
+      operationId: getTasks
+      summary: Get Tasks
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/task'
+    post:
+      operationId: createTask
+      summary: Create Task
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/task'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/task'
+        '409':
+          description: Conflict
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+        '422':
+          description: Unprocessable Content
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /tasks/{task_id}:
+    get:
+      operationId: getTask
+      summary: Get Task
+      parameters:
+        - in: path
+          name: task_id
+          required: true
+          description: Task ID
+          schema:
+            $ref: '#/components/schemas/id'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/task'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+    patch:
+      operationId: updateTask
+      summary: Update Task
+      parameters:
+        - in: path
+          name: task_id
+          required: true
+          description: Task ID
+          schema:
+            $ref: '#/components/schemas/id'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/task'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/task'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+        '409':
+          description: Conflict
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+        '422':
+          description: Unprocessable Content
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+    delete:
+      operationId: deleteTask
+      summary: Delete Task
+      parameters:
+        - in: path
+          name: task_id
+          required: true
+          description: Task ID
+          schema:
+            $ref: '#/components/schemas/id'
+      responses:
+        '204':
+          description: No Content
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /schedules:
+    get:
+      operationId: getSchedules
+      summary: Get Schedules
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/schedule'
+    post:
+      operationId: createSchedule
+      summary: Create Schedule
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/schedule'
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/schedule'
+        '422':
+          description: Unprocessable Content
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /schedules/{schedule_id}:
+    get:
+      operationId: getSchedule
+      summary: Get Schedule
+      parameters:
+        - in: path
+          name: schedule_id
+          required: true
+          description: Schedule ID
+          schema:
+            $ref: '#/components/schemas/id'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/schedule'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+    patch:
+      operationId: updateSchedule
+      summary: Update Schedule
+      parameters:
+        - in: path
+          name: schedule_id
+          required: true
+          description: Schedule ID
+          schema:
+            $ref: '#/components/schemas/id'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/schedule'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/schedule'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+        '422':
+          description: Unprocessable Content
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+    delete:
+      operationId: deleteSchedule
+      summary: Delete Schedule
+      parameters:
+        - in: path
+          name: schedule_id
+          required: true
+          description: Schedule ID
+          schema:
+            $ref: '#/components/schemas/id'
+      responses:
+        '204':
+          description: No Content
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+security:
+  - Basic: []
+  - Bearer: []
+components:
+  securitySchemes:
+    Bearer:
+      type: http
+      scheme: bearer
+      description: >
+        The Mergent API uses API keys to authenticate requests.
+
+
+        All API requests must be made over HTTPS. Calls made over plain HTTP
+        will
+
+        fail. API requests without authentication will also fail.
+    Basic:
+      type: http
+      scheme: basic
+      description: >
+        The Mergent API uses API keys to authenticate requests.
+
+
+        All API requests must be made over HTTPS. Calls made over plain HTTP
+        will
+
+        fail. API requests without authentication will also fail.
+  schemas:
+    id:
+      type: string
+      format: uuid
+      readOnly: true
+      description: A unique ID assigned upon creation.
+    request:
+      title: Request
+      required:
+        - url
+      additionalProperties: false
+      properties:
+        url:
+          type: string
+          format: uri
+          description: >
+            The URL that the POST request will be sent to.
+
+
+            For localhost development, use something like ngrok to get a
+            publicly
+
+            accessible URL for your local service. See https://docs.mergent.co
+            for
+
+            more info.
+        headers:
+          type: object
+          nullable: true
+          additionalProperties:
+            type: string
+          description: |
+            The headers that will accompany any Task's HTTP request. For
+            example, you can use this to set Content-Type to "application/json"
+            or "application/octet-stream".
+        body:
+          type: string
+          nullable: true
+          description: The HTTP request body as a string.
+    created_at:
+      type: string
+      format: date-time
+      readOnly: true
+      description: >-
+        The [ISO 8601
+        timestamp](https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations)
+        representing when the object was created.
+    task:
+      title: Task
+      additionalProperties: false
+      properties:
+        id:
+          $ref: '#/components/schemas/id'
+        name:
+          type: string
+          nullable: true
+          pattern: ^[a-zA-Z0-9_-]+$
+          description: >
+            An optional name of the Task. This string must not contain more than
+            500
+
+            characters.
+        status:
+          type: string
+          enum:
+            - queued
+            - working
+            - success
+            - failure
+          readOnly: true
+          description: The status of this Task.
+        request:
+          $ref: '#/components/schemas/request'
+        scheduled_for:
+          type: string
+          format: date-time
+          description: >
+            The [ISO 8601
+            timestamp](https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations)
+
+            for when the Task is scheduled to be executed. Example:
+
+            "2021-10-01T15:53:05Z".
+
+
+            When not present, the Task will be scheduled for immediate
+            execution.
+        delay:
+          type: string
+          format: duration
+          nullable: true
+          writeOnly: true
+          description: >
+            The [ISO 8601
+            duration](https://en.wikipedia.org/wiki/ISO_8601#Durations)
+
+            for the time to wait before the Task is executed. Example: "PT1M"
+            for a
+
+            delay of 1 minute.
+
+
+            When both `delay` and `scheduled_for` are present, `delay` will be
+            added
+
+            to `scheduled_for`.
+        created_at:
+          $ref: '#/components/schemas/created_at'
+    error:
+      title: Error
+      readOnly: true
+      additionalProperties: false
+      properties:
+        message:
+          type: string
+          description: A human-readable message providing more details about the error.
+    schedule:
+      title: Schedule
+      additionalProperties: false
+      properties:
+        id:
+          $ref: '#/components/schemas/id'
+        description:
+          type: string
+          nullable: true
+          description: >
+            An optional description of the Schedule. This string must not
+            contain more
+
+            than 500 characters.
+        cron:
+          type: string
+          nullable: true
+          description: >
+            A [cron expression](https://crontab.guru/examples.html) describing
+            the
+
+            Schedule on which Tasks will run (UTC).
+
+
+            Note: execution n + 1 of a Task will not begin until execution n has
+
+            completed successfully.
+
+
+            You must pass either `cron` or `rrule` when creating a new Schedule.
+        rrule:
+          type: string
+          nullable: true
+          description: >
+            An [iCal RRule
+            expression](https://icalendar.org/iCalendar-RFC-5545/3-8-5-3-recurrence-rule.html)
+
+            describing the Schedule on which Tasks will run (UTC). The time of
+
+            Schedule creation will be used as the start of the recurrence
+            interval
+
+            (i.e. `DTSTART`).
+
+
+            Note: execution n + 1 of a Task will not begin until execution n has
+
+            completed successfully.
+
+
+            You must pass either `cron` or `rrule` when creating a new Schedule.
+        dtstart:
+          type: string
+          format: date-time
+          nullable: true
+          description: >
+            The [ISO 8601
+            timestamp](https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations)
+
+            denoting the start of an RRULE schedule. Example:
+            "2021-10-01T15:53:05Z".
+
+
+            When not set, it will be set to the current time, and the first Task
+            will
+
+            be scheduled immediately.
+
+
+            Ignored for `cron`-type Schedules.
+        paused:
+          type: boolean
+          description: >
+            If `true`, the Schedule will be paused immediately. If `false`, a
+            paused
+
+            Schedule will be resumed.
+        request:
+          $ref: '#/components/schemas/request'
+        created_at:
+          $ref: '#/components/schemas/created_at'

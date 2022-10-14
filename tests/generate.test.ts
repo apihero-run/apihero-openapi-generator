@@ -1,11 +1,30 @@
 import { generateClientFiles } from "../src";
 import { OpenAPI } from "openapi-types";
 import { readFile } from "fs/promises";
+import { load } from "js-yaml";
+
+function parseYamlOrJson(type: "yaml" | "json", rawValue: string): OpenAPI.Document {
+  if (type === "yaml") {
+    return load(rawValue) as OpenAPI.Document;
+  }
+
+  return JSON.parse(rawValue) as OpenAPI.Document;
+}
+
+function detectFileType(filePath: string): "json" | "yaml" {
+  const extension = filePath.split(".").pop();
+
+  if (extension === "json") {
+    return "json";
+  }
+
+  return "yaml";
+}
 
 async function loadSpecFromFixtureFile(filePath: string): Promise<OpenAPI.Document> {
   const rawFile = await readFile(filePath, "utf8");
 
-  return JSON.parse(rawFile) as OpenAPI.Document;
+  return parseYamlOrJson(detectFileType(filePath), rawFile);
 }
 
 test("v3/petstore.json", async () => {
@@ -93,7 +112,7 @@ test("v3/twitterFull.json", async () => {
   expect(code).toMatchSnapshot();
 });
 
-test("v3/stripe.json", async () => {
+test.skip("v3/stripe.json", async () => {
   const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3/stripe.json");
 
   const code = generateClientFiles(doc, "stripe/v3");
@@ -105,6 +124,14 @@ test("v3_1/sendgrid.json", async () => {
   const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3_1/sendgrid.json");
 
   const code = generateClientFiles(doc, "sendgrid/v3_1");
+
+  expect(code).toMatchSnapshot();
+});
+
+test("v3/mergent.yaml", async () => {
+  const doc = await loadSpecFromFixtureFile("./tests/fixtures/specs/v3/mergent.yaml");
+
+  const code = generateClientFiles(doc, "v3/mergent");
 
   expect(code).toMatchSnapshot();
 });

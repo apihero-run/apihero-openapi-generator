@@ -75,6 +75,7 @@ export type OperationParameter = Model & {
   in: "path" | "query" | "header" | "formData" | "body" | "cookie";
   prop: string;
   mediaType: string | null;
+  readOnlyProperties?: string[];
 };
 
 export type OperationParameters = {
