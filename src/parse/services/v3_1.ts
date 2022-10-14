@@ -14,7 +14,7 @@ import camelCase from "camelcase";
 import pluralize, { singular } from "pluralize";
 
 export function getServices(doc: OpenAPIV3_1.Document): Service[] {
-  if (!doc.tags) {
+  if (!doc.tags || doc.tags.length === 0) {
     return [getMainService(doc)];
   }
 

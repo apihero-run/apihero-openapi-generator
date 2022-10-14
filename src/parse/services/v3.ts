@@ -15,7 +15,7 @@ import { singular } from "pluralize";
 import pluralize from "pluralize";
 
 export function getServices(doc: OpenAPIV3.Document): Service[] {
-  if (!doc.tags) {
+  if (!doc.tags || doc.tags.length === 0) {
     return [getMainService(doc)];
   }
 
